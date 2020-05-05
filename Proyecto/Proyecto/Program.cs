@@ -1,12 +1,16 @@
 ﻿using System;
+using System.Threading;
 
 namespace Proyecto
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            Console.WriteLine("Hello World!");
+            Input_Output ip = new Input_Output();
+            ALAINID al = new ALAINID(ip);
+            al.Operar();
+            Thread.Sleep(1000);
         }
     }
 }
