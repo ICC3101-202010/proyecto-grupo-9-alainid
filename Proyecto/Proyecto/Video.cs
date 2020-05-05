@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Proyecto
 {
-    class Video
+    public class Video
     {
         private string nombre_video;
         private float duracion;
