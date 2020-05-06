@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
 
 namespace Proyecto
 {
@@ -31,6 +32,7 @@ namespace Proyecto
 
             listausuarios.Add(u1);
             Console.WriteLine("Usuario correctamente registrado");
+            Thread.Sleep(2000);
             return true;
         }
 
@@ -61,7 +63,8 @@ namespace Proyecto
                 }
                 else
                 {
-                    Console.WriteLine("Ingresando a Netxpot...");
+                    Console.WriteLine("Ingresando a ALAINID...");
+
 
                 }
 

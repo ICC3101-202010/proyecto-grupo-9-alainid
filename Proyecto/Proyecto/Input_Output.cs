@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
 
 namespace Proyecto
 {
@@ -12,17 +13,20 @@ namespace Proyecto
             Admin a = new Admin();
             Console.WriteLine("Bienvendio a ALAINID");
             Console.WriteLine("========================");
-            Console.WriteLine("Seleccione una opción: \n");
-            Console.WriteLine("1. Registrarse \n");
-            Console.WriteLine("2. Ingresar a la app \n");
-            Console.WriteLine("3. Salir del programa\n");
+
+            
             string accion = null;
             while (accion != "3")
             {
+                Console.WriteLine("Seleccione una opción: \n");
+                Console.WriteLine("1. Registrarse \n");
+                Console.WriteLine("2. Ingresar a la app \n");
+                Console.WriteLine("3. Salir del programa\n");
                 accion = Console.ReadLine();
                 switch (accion)
                 {
                     case "1":
+                        Console.Clear();
                         Console.WriteLine("=====================");
                         Console.WriteLine("Crear usuario");
                         Console.WriteLine("=====================");
@@ -42,6 +46,7 @@ namespace Proyecto
                         r.Agregarusuarioalalista(u1);
                         break;
                     case "2":
+                        Console.Clear();
                         string email2 = "";
                         string password2 = "";
                         Console.WriteLine("Ingrese email:");
@@ -51,10 +56,11 @@ namespace Proyecto
                         r.Ingresaralaapp(email2, password2);
                         if (r.Ingresaralaapp(email2, password2) == true)
                         {
-                            Console.WriteLine("Inicio de ession exitoso");
+                            Console.WriteLine("Inicio de sesion exitoso");
                             Console.WriteLine("========================");
                             Console.WriteLine("Seleccione una opción: \n");
-                            Console.WriteLine("1. hacer busqueda \n");
+                            Console.WriteLine("1. Hacer busqueda \n");
+                            Console.WriteLine("2.");
                             Console.WriteLine("3. Salir del programa\n");
                             string accion2 = null;
                             while (accion2 != "3")
@@ -73,15 +79,20 @@ namespace Proyecto
                         }
                         break;
                     case "1h3hdjs83hr8d7dtwisos":
+                        Console.Clear();
                         Console.WriteLine("Ingresando como admin....");
                         break;
                     case "3":
+                        Console.Clear();
                         Console.WriteLine("Has salido del programa");
                         break;
                     default:
+                        Console.Clear();
                         Console.WriteLine("No se ha seleccionado ninguna opción válida");
                         break;
                 }
+                Thread.Sleep(2000);
+                Console.Clear();
             }
         }
     }
