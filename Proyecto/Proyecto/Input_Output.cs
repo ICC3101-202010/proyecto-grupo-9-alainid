@@ -47,28 +47,39 @@ namespace Proyecto
                         break;
                     case "2":
                         Console.Clear();
+                        bool bol = false;
                         string email2 = "";
                         string password2 = "";
                         Console.WriteLine("Ingrese email:");
                         email2 = Console.ReadLine();
                         Console.WriteLine("Ingrese contraseña");
                         password2 = Console.ReadLine();
-                        r.Ingresaralaapp(email2, password2);
-                        if (r.Ingresaralaapp(email2, password2) == true)
+                        bol = r.Ingresaralaapp(email2, password2);
+                        if (bol == true)
                         {
-                            Console.WriteLine("Inicio de sesion exitoso");
-                            Console.WriteLine("========================");
-                            Console.WriteLine("Seleccione una opción: \n");
-                            Console.WriteLine("1. Hacer busqueda \n");
-                            Console.WriteLine("2.");
-                            Console.WriteLine("3. Salir del programa\n");
                             string accion2 = null;
-                            while (accion2 != "3")
+                            while (accion2 != "8")
                             {
+                                Console.Clear();
+                                Console.WriteLine("========================");
+                                Console.WriteLine(" ");
+                                //METODOS QUE LE MUESTREN AL USUARIO COSAS DE SU CUENTA
+                                //MENU DE OPCIONES
+                                Console.WriteLine("Seleccione una opción: \n");
+                                Console.WriteLine("========================");
+                                Console.WriteLine("1. BUSCAR ");
+                                Console.WriteLine("2. PLAYLISTS");
+                                Console.WriteLine("3. FAVORITOS");
+                                Console.WriteLine("4. KARAOKE");
+                                Console.WriteLine("5. SOCIAL");
+                                Console.WriteLine("6. TU HISTORIAL");
+                                Console.WriteLine("7. PREMIUM");
+                                Console.WriteLine("8. CERRAR SESION\n");
                                 accion2 = Console.ReadLine();
                                 switch (accion)
                                 {
                                     case "1":
+                                        
                                         break;
                                     case "3":
                                         Console.WriteLine("Has salido del programa");

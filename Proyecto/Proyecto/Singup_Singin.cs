@@ -47,8 +47,9 @@ namespace Proyecto
                 {
                     usuarioencontrado = true;
                     break;
-                    
+
                 }
+
 
 
             }
@@ -64,8 +65,10 @@ namespace Proyecto
                 else
                 {
                     Console.WriteLine("Ingresando a ALAINID...");
-
-
+                    Thread.Sleep(2000);
+                    Console.WriteLine("Bievenido" + "\n" + ui.Nombre);
+                    Thread.Sleep(3000);
+                    return true;
                 }
 
             }
@@ -75,7 +78,7 @@ namespace Proyecto
                 return false;
             }
 
-            return true;
+
         }
     }
 }
