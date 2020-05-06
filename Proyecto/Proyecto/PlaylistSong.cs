@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Proyecto
 {
-    class PlaylistSong
+    public class PlaylistSong
     {
         public string NombrePlaylist;
         public List<Song> listplay = new List<Song>();

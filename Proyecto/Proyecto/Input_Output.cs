@@ -29,7 +29,6 @@ namespace Proyecto
                         string idusuario = "";
                         string nombre = "";
                         string email = "";
-                        string nacimiento = "";
                         string password = "";
                         Console.WriteLine("Ingrese su nombre de usuario");
                         idusuario = Console.ReadLine();
@@ -39,8 +38,6 @@ namespace Proyecto
                         password = Console.ReadLine();
                         Console.WriteLine("Ingrese su nombre completo");
                         nombre = Console.ReadLine();
-                        Console.WriteLine("Ingrese su fecha de nacimiento: (DD/MM/AA)");
-                        nacimiento = Console.ReadLine();
                         User u1 = new User(nombre, idusuario, email, password);
                         r.Agregarusuarioalalista(u1);
                         break;
@@ -52,10 +49,31 @@ namespace Proyecto
                         Console.WriteLine("Ingrese contraseña");
                         password2 = Console.ReadLine();
                         r.Ingresaralaapp(email2, password2);
+                        if (r.Ingresaralaapp(email2, password2) == true)
+                        {
+                            Console.WriteLine("Inicio de ession exitoso");
+                            Console.WriteLine("========================");
+                            Console.WriteLine("Seleccione una opción: \n");
+                            Console.WriteLine("1. hacer busqueda \n");
+                            Console.WriteLine("3. Salir del programa\n");
+                            string accion2 = null;
+                            while (accion2 != "3")
+                            {
+                                accion2 = Console.ReadLine();
+                                switch (accion)
+                                {
+                                    case "1":
+                                        break;
+                                    case "3":
+                                        Console.WriteLine("Has salido del programa");
+                                        accion = "3";
+                                        break;
+                                }
+                            }
+                        }
                         break;
                     case "1h3hdjs83hr8d7dtwisos":
                         Console.WriteLine("Ingresando como admin....");
-
                         break;
                     case "3":
                         Console.WriteLine("Has salido del programa");
