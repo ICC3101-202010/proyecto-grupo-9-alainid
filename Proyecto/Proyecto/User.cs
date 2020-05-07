@@ -83,7 +83,7 @@ namespace Proyecto
             return informacion;
         }
 
-
+        /*
         public List<Song> Busqueda_filtrada(string _criterio, string _valor)
         {
             listafiltrada = new List<Song>();
@@ -130,7 +130,7 @@ namespace Proyecto
         listafiltrada = new List<Cancion>();
 
        
-        return listafiltrada;
+        return listafiltrada;*/
         
 
 }

@@ -76,15 +76,95 @@ namespace Proyecto
                                 Console.WriteLine("7. PREMIUM");
                                 Console.WriteLine("8. CERRAR SESION\n");
                                 accion2 = Console.ReadLine();
-                                switch (accion)
+                                switch (accion2)
                                 {
                                     case "1":
-                                        
+                                        string accion3 = null;
+                                        while (accion3 != "3")
+                                        {
+                                            Console.Clear();
+                                            Console.WriteLine("========================");
+                                            Console.WriteLine(" ");
+                                            Console.WriteLine("1. BUSQUEDA SIMPLE ");
+                                            Console.WriteLine("2. BUSQUEDA FILTRADA");
+                                            Console.WriteLine("3. ATRAS");
+                                            accion3 = Console.ReadLine();
+                                            switch (accion3)
+                                            {
+                                                case "1":
+                                                    //METODO BUSQUEDA SIMPLE
+                                                    break;
+                                                case "2":
+                                                    //METODO BUSQUEDA FILTRADA
+                                                    break;
+                                                case "3":
+                                                    break;
+                                            }
+                                        }
+                                        break;
+
+
+                                    case "2":
+                                        string accion4 = null;
+                                        while (accion4 != "5")
+                                        {
+                                            Console.Clear();
+                                            Console.WriteLine("=================================");
+                                            Console.WriteLine(" ");
+                                            Console.WriteLine("1. VER TUS PLAYLISTS DE CANCIONES");
+                                            Console.WriteLine("2. VER TUS PLAYLISTS DE VIDEOS");
+                                            Console.WriteLine("3. CREAR PLAYLIST DE CANCIONES");
+                                            Console.WriteLine("4. CREAR PLAYLIST DE VIDEOS");
+                                            Console.WriteLine("5. ATRAS");
+                                            accion4 = Console.ReadLine();
+                                            switch (accion4)
+                                            {
+                                                case "1":
+                                                    //METODO VER PLAYLIST CANCIONES
+                                                    break;
+                                                case "2":
+                                                    //METODO VER PLAYLIST VIDEOS
+                                                    break;
+                                                case "3":
+                                                    //METODO CREAR PLAYLIST CANCIONES
+                                                    break;
+                                                case "4":
+                                                    //METODO CREAR PLAYLIST CANCIONES
+                                                    break;
+                                                case "5":
+                                                    break;
+                                            }
+                                        }
                                         break;
                                     case "3":
-                                        Console.WriteLine("Has salido del programa");
-                                        accion = "3";
+                                        string accion5 = null;
+                                        while (accion5 != "3")
+                                        {
+                                            Console.Clear();
+                                            Console.WriteLine("==================================");
+                                            Console.WriteLine(" ");
+                                            Console.WriteLine("1. VER TUS CANCIONES FAVORITAS");
+                                            Console.WriteLine("2. VER TUS VIDEOS FAVORITOS");
+                                            Console.WriteLine("3. ATRAS");
+
+                                            accion5 = Console.ReadLine();
+                                            switch (accion5)
+                                            {
+                                                case "1":
+                                                    //METODO VER CANCIONES FAVORITAS
+                                                    break;
+                                                case "2":
+                                                    //METODO VER CANCIONES VIDEOS
+                                                    break;
+                                                case "3":
+                                                   
+                                                    break;
+
+                                            }
+                                        }
                                         break;
+
+
                                 }
                             }
                         }
@@ -109,6 +189,6 @@ namespace Proyecto
     }
 }
         
-
+//holacomoestas
         
    
