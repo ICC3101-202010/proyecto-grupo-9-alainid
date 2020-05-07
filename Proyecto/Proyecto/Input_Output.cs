@@ -99,14 +99,11 @@ namespace Proyecto
                                                     break;
                                                 case "3":
                                                     break;
-<<<<<<< HEAD
                                                 default:
                                                     Console.Clear();
                                                     Console.WriteLine("No se ha seleccionado ninguna opción válida");
                                                     Thread.Sleep(2000);
                                                     break;
-=======
->>>>>>> 0e40985b8d0637e2c736a6c9fd029b5895e1b5d8
                                             }
                                         }
                                         break;
@@ -141,14 +138,11 @@ namespace Proyecto
                                                     break;
                                                 case "5":
                                                     break;
-<<<<<<< HEAD
                                                 default:
                                                     Console.Clear();
                                                     Console.WriteLine("No se ha seleccionado ninguna opción válida");
                                                     Thread.Sleep(2000);
                                                     break;
-=======
->>>>>>> 0e40985b8d0637e2c736a6c9fd029b5895e1b5d8
                                             }
                                         }
                                         break;
@@ -173,16 +167,11 @@ namespace Proyecto
                                                     //METODO VER CANCIONES VIDEOS
                                                     break;
                                                 case "3":
-<<<<<<< HEAD
-
                                                     break;
                                                 default:
                                                     Console.Clear();
                                                     Console.WriteLine("No se ha seleccionado ninguna opción válida");
                                                     Thread.Sleep(2000);
-=======
-                                                   
->>>>>>> 0e40985b8d0637e2c736a6c9fd029b5895e1b5d8
                                                     break;
 
                                             }

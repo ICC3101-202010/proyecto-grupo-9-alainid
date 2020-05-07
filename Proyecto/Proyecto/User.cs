@@ -83,10 +83,10 @@ namespace Proyecto
             return informacion;
         }
 
-<<<<<<< HEAD
+
 
        
-=======
+
         /*
         public List<Song> Busqueda_filtrada(string _criterio, string _valor)
         {
@@ -136,7 +136,6 @@ namespace Proyecto
        
         return listafiltrada;*/
         
->>>>>>> 0e40985b8d0637e2c736a6c9fd029b5895e1b5d8
 
 }
 }
