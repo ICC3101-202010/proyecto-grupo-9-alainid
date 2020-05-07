@@ -83,8 +83,60 @@ namespace Proyecto
             return informacion;
         }
 
+<<<<<<< HEAD
 
        
+=======
+        /*
+        public List<Song> Busqueda_filtrada(string _criterio, string _valor)
+        {
+            listafiltrada = new List<Song>();
+
+
+        public bool crear_Playlist(string criterio, string valorCriterio, string nombrePlaylist)
+        {
+               
+            List<Song> listplay = Busqueda_filtrada(criterio, valorCriterio);
+            if (listplay.Count == 0)
+            {
+                Console.WriteLine("Por ende, no ha sido posible  crear la playlist");
+                return false;
+            }
+
+            for (int i = 0; i < listplay2.Count; i++)
+            {
+                if (listplay2[i].NombrePlaylist == nombrePlaylist)
+                {
+                    Console.WriteLine("La playlist ya existe");
+                    return false;
+                }
+            }
+        }
+        
+        Playlist listplay3 = new Playlist(nombrePlaylist, listplay);
+        listplay2.Add(listplay3);
+        Console.WriteLine("===============================");
+        Console.WriteLine("Playlist exitosamente agregada");
+        Console.WriteLine("===============================");
+        Console.WriteLine(listplay3.informationPLN());
+        Console.WriteLine(listplay3.informationPLL());
+        Console.WriteLine("===============================");
+        return true;
+
+
+
+
+
+
+
+        public List<Cancion> Busqueda_filtrada(string _criterio, string _valor)
+        {
+        listafiltrada = new List<Cancion>();
+
+       
+        return listafiltrada;*/
+        
+>>>>>>> 0e40985b8d0637e2c736a6c9fd029b5895e1b5d8
 
 }
 }
