@@ -24,3 +24,6 @@ C:\Users\User\Desktop\pollo\ICC3101-202010\proyecto-grupo-9-alainid\Proyecto\Pro
 C:\Users\User\Desktop\pollo\ICC3101-202010\proyecto-grupo-9-alainid\Proyecto\Proyecto\bin\Debug\netcoreapp3.1\Proyecto.dll
 C:\Users\User\Desktop\pollo\ICC3101-202010\proyecto-grupo-9-alainid\Proyecto\Proyecto\bin\Debug\netcoreapp3.1\Proyecto.pdb
 C:\Users\User\Desktop\pollo\ICC3101-202010\proyecto-grupo-9-alainid\Proyecto\Proyecto\obj\Debug\netcoreapp3.1\Proyecto.genruntimeconfig.cache
+C:\Users\rvarg\Desktop\Proyecto POO\proyecto-grupo-9-alainid\Proyecto\Proyecto\bin\Debug\netcoreapp3.1\Interop.WMPLib.dll
+C:\Users\rvarg\Desktop\Proyecto POO\proyecto-grupo-9-alainid\Proyecto\Proyecto\obj\Debug\netcoreapp3.1\Interop.WMPLib.dll
+C:\Users\rvarg\Desktop\Proyecto POO\proyecto-grupo-9-alainid\Proyecto\Proyecto\obj\Debug\netcoreapp3.1\Proyecto.csproj.ResolveComReference.cache

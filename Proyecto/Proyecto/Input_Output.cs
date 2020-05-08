@@ -5,12 +5,11 @@ using System.Threading;
 
 namespace Proyecto
 {
-    public static class Input_Output 
+    public static class Input_Output
     {
-        
+
         public static void Comenzar_app()
         {
-            
             Funciones funciones = new Funciones();
             Admin a = new Admin();
             Console.WriteLine("Bienvendio a ALAINID");
@@ -45,6 +44,7 @@ namespace Proyecto
                         Console.WriteLine("Ingrese su nombre completo");
                         nombre = Console.ReadLine();
                         User u1 = new User(nombre, idusuario, email, password);
+                        ALAINID.Activarlista();
                         ALAINID.Agregarusuarioalalista(u1);
                         break;
                     case 2:
@@ -56,7 +56,9 @@ namespace Proyecto
                         email2 = Console.ReadLine();
                         Console.WriteLine("Ingrese contraseña");
                         password2 = Console.ReadLine();
+                        ALAINID.Activarlista();
                         bol = ALAINID.Ingresaralaapp(email2, password2);
+                        
                         if (bol == true)
                         {
                             int accion2 = '\0';
@@ -204,7 +206,3 @@ namespace Proyecto
         }
     }
 }
-
-
-
-

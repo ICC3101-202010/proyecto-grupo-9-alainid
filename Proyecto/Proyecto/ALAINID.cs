@@ -14,11 +14,6 @@ namespace Proyecto
         public static List<User> listausuarios = new List<User>();
 
 
-
-
-
-
-
         static void Almacenar(List<User> u)      //Serializamos
         {
             IFormatter formatter = new BinaryFormatter();
@@ -32,63 +27,12 @@ namespace Proyecto
             Stream stream2 = new FileStream("Usuarios2.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
             List<User> p = (List<User>)formatter2.Deserialize(stream2);
             stream2.Close();
-            VerPersonas(p);
+            
             return p;
-
-
-
         }
+
         public static bool Agregarusuarioalalista(User u1)
         {
-            static void Almacenar(List<User> u)      //Serializamos
-            {
-                IFormatter formatter = new BinaryFormatter();
-                Stream stream = new FileStream("Usuarios2.bin", FileMode.Create, FileAccess.Write, FileShare.None);
-                formatter.Serialize(stream, u);
-                stream.Close();
-            }
-            static List<User> Cargar()
-            {
-                IFormatter formatter2 = new BinaryFormatter();
-                Stream stream2 = new FileStream("Usuarios2.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
-                List<User> p = (List<User>)formatter2.Deserialize(stream2);
-                stream2.Close();
-                VerPersonas(p);
-                return p;
-
-
-
-            }
-            static bool Agregarusuarioalalista(User u1)
-            {
-                listausuarios = Cargar();
-
-                for (int i = 0; i < listausuarios.Count; i++)
-                {
-
-                    User ui = listausuarios[i];
-
-                    if (ui.Email == u1.Email)
-                    {
-                        Console.WriteLine("Ya existe una cuenta con este email");
-                        return false;
-                    }
-                    if (ui.NombreUsuario == u1.NombreUsuario)
-                    {
-                        Console.WriteLine("Ya existe este nombre de usuario, pruebe con otro");
-                        return false;
-                    }
-
-                }
-
-                listausuarios.Add(u1);
-                Console.WriteLine("Usuario correctamente registrado");
-                Almacenar(listausuarios);
-                listausuarios = Cargar();
-                Thread.Sleep(2000);
-                return true;
-            }
-
             for (int i = 0; i < listausuarios.Count; i++)
             {
 
@@ -108,12 +52,11 @@ namespace Proyecto
             }
 
             listausuarios.Add(u1);
-            Console.WriteLine("Usuario correctamente registrado");
             Almacenar(listausuarios);
-            listausuarios = Cargar();
-            Thread.Sleep(2000);
+            Console.WriteLine("Usuario correctamente registrado");
             return true;
         }
+
         public static bool Ingresaralaapp(string email, string password)
         {
 
@@ -128,18 +71,13 @@ namespace Proyecto
                     break;
 
                 }
-
-
-
             }
             if (usuarioencontrado == true)
             {
                 if (ui.Password != password)
                 {
                     Console.WriteLine("Incorrect Password");
-
                     return false;
-
                 }
                 else
                 {
@@ -149,15 +87,12 @@ namespace Proyecto
                     Thread.Sleep(3000);
                     return true;
                 }
-
             }
             else
             {
                 Console.WriteLine("Email not found");
                 return false;
             }
-
-
         }
         static void VerPersonas(List<User> lista)
         {
@@ -165,7 +100,6 @@ namespace Proyecto
             {
                 Console.WriteLine("No hay personas agregadas aún");
             }
-
             else
             {
                 for (int i = 0; i < lista.Count; i++)
@@ -181,6 +115,14 @@ namespace Proyecto
 
 
         }
+        public static void Activarlista()
+        {
+            listausuarios = Cargar();
+        }
+
     }
 
 }
+
+
+
