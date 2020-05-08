@@ -10,6 +10,7 @@ namespace Proyecto
         
         public static void Comenzar_app()
         {
+            
             Funciones funciones = new Funciones();
             Admin a = new Admin();
             Console.WriteLine("Bienvendio a ALAINID");

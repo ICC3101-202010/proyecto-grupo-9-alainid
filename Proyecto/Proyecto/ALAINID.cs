@@ -12,29 +12,19 @@ namespace Proyecto
     public static class ALAINID
     {
         public static List<User> listausuarios = new List<User>();
-
-
-
-
-
-
-
         static void Almacenar(List<User> u)      //Serializamos
         {
-            BinaryFormatter formatter = new BinaryFormatter();
+            IFormatter formatter = new BinaryFormatter();
             Stream stream = new FileStream("Usuarios2.dat", FileMode.Create, FileAccess.Write, FileShare.None);
             formatter.Serialize(stream, u);
             stream.Close();
         }
         static void Cargar(List<User> p)
         {
-            BinaryFormatter formatter = new BinaryFormatter();
-            Stream stream = new FileStream("Usuarios2.dat", FileMode.Open, FileAccess.Read, FileShare.None);
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream("Usuarios2.dat", FileMode.Open, FileAccess.Read, FileShare.Read);
             p = (List<User>)formatter.Deserialize(stream);
             stream.Close();
-
-
-
         }
         public static bool Agregarusuarioalalista(User u1)
         {
@@ -58,8 +48,8 @@ namespace Proyecto
 
             listausuarios.Add(u1);
             Console.WriteLine("Usuario correctamente registrado");
-            Almacenar(listausuarios);
             Cargar(listausuarios);
+            Almacenar(listausuarios);
             Thread.Sleep(2000);
             return true;
         }
