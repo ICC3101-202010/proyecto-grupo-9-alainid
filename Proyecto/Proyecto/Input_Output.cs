@@ -62,7 +62,7 @@ namespace Proyecto
                         if (bol == true)
                         {
                             int accion2 = '\0';
-                            while (accion2 != 8)
+                            while (accion2 != 9)
                             {
                                 Console.Clear();
                                 Console.WriteLine("========================");
@@ -78,8 +78,9 @@ namespace Proyecto
                                 Console.WriteLine("5. SOCIAL");
                                 Console.WriteLine("6. TU HISTORIAL");
                                 Console.WriteLine("7. PREMIUM");
-                                Console.WriteLine("8. CERRAR SESION\n");
-                                accion2 = funciones.Numero(8);
+                                Console.WriteLine("8. EDITAR PERFIL");
+                                Console.WriteLine("9. CERRAR SESION\n");
+                                accion2 = funciones.Numero(9);
                                 switch (accion2)
                                 {
                                     case 1:
@@ -181,6 +182,53 @@ namespace Proyecto
                                             }
                                         }
                                         break;
+                                    case 8:
+                                        int accion8 = '\0';
+                                        while (accion8 != 3)
+                                        {
+                                            Console.Clear();
+                                            Console.WriteLine("========================");
+                                            Console.WriteLine(" ");
+                                            Console.WriteLine("1. CAMBIAR CONTRASENA ");
+                                            Console.WriteLine("2. ");
+                                            Console.WriteLine("3. ATRAS");
+                                            accion8 = funciones.Numero(3);
+                                            switch (accion8)
+                                            {
+                                                case 1:
+                                                    Console.WriteLine("Escriba su usuario: ");
+                                                    string usuario = Console.ReadLine();
+                                                    Console.WriteLine("Escriba su contrasena actual: ");
+                                                    string contrasena = Console.ReadLine();
+                                                    Console.WriteLine("Escriba su nueva contrasena: ");
+                                                    string nuevacontrasena = Console.ReadLine();
+                                                    bool bol8= ALAINID.Cambiarcontrasena(usuario,contrasena,nuevacontrasena);
+                                                    if (bol8 == true)
+                                                    {
+                                                        Console.WriteLine("Contrasena exitosamente cambiada");
+                                                        Thread.Sleep(2000);
+                                                    }
+                                                    else
+                                                    {
+                                                        Console.WriteLine("Usuario o contrasena actual incorrecta");
+                                                        Thread.Sleep(2000);
+                                                    }
+                                                    //METODO Contrasena
+                                                    break;
+                                                case 2:
+                                                    //METODO cambiar nombre
+                                                    break;
+                                                case 3:
+                                                    break;
+                                                default:
+                                                    Console.Clear();
+                                                    Console.WriteLine("No se ha seleccionado ninguna opción válida");
+                                                    Thread.Sleep(2000);
+                                                    break;
+                                            }
+                                        }
+                                        break;
+
 
 
                                 }

@@ -119,6 +119,43 @@ namespace Proyecto
         {
             listausuarios = Cargar();
         }
+        public static bool Cambiarcontrasena(string nombre, string contrasena, string nuevacontrasena)
+        {
+            string funko = "";
+            for (int i = 0; i < listausuarios.Count; i++)
+            {
+                if (listausuarios[i].Nombre == nombre)
+                {
+                    if (listausuarios[i].password == contrasena)
+                    {
+                        listausuarios[i].password = nuevacontrasena;
+                        funko = "correcto";
+                        Almacenar(listausuarios);
+
+                    }
+                    else
+                    {
+                        funko = "noup";
+                    }
+                        
+                }
+                else
+                {
+                    funko = "noup";
+                }
+
+            }
+            if (funko == "correcto")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+            
+                
+        }
 
     }
 
