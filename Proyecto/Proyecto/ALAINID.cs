@@ -27,7 +27,7 @@ namespace Proyecto
             Stream stream2 = new FileStream("Usuarios2.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
             List<User> p = (List<User>)formatter2.Deserialize(stream2);
             stream2.Close();
-            
+
             return p;
         }
 
@@ -119,25 +119,23 @@ namespace Proyecto
         {
             listausuarios = Cargar();
         }
-        public static bool Cambiarcontrasena(string nombre, string contrasena, string nuevacontrasena)
+        public static bool Cambiarcontrasena(string email, string contrasena, string nuevacontrasena)
         {
             string funko = "";
             for (int i = 0; i < listausuarios.Count; i++)
             {
-                if (listausuarios[i].Nombre == nombre)
+                if (listausuarios[i].email == email)
                 {
                     if (listausuarios[i].password == contrasena)
                     {
                         listausuarios[i].password = nuevacontrasena;
                         funko = "correcto";
                         Almacenar(listausuarios);
-
                     }
                     else
                     {
                         funko = "noup";
                     }
-                        
                 }
                 else
                 {
@@ -153,10 +151,70 @@ namespace Proyecto
             {
                 return false;
             }
-            
+        }
+        public static string Verinformacion(string email)
+        {
+            string funko = "";
+            string info = "No hay info";
+            for (int j = 0; j < listausuarios.Count; j++)
+            {
                 
+                if (listausuarios[j].Email == email)
+                {
+                    info = listausuarios[j].InformacionUsuario();              
+                    funko = "correcto";
+                }               
+            }
+            if (funko == "correcto")
+            {
+                return info;
+            }
+            else
+            {
+                return info;
+            }
+
+
+
+        }
+
+
+
+
+
+        public static bool Cambiarnombreusuario(string email, string contrasena, string nuevonombre)
+        {
+            string funko = "";
+            for (int i = 0; i < listausuarios.Count; i++)
+            {
+                if (listausuarios[i].email == email)
+                {
+                    if (listausuarios[i].password == contrasena)
+                    {
+                        listausuarios[i].nombreusuario = nuevonombre;
+                        funko = "correcto";
+                        Almacenar(listausuarios);
+                    }
+                    else
+                    {
+                        funko = "noup";
+                    }
+                }
+                else
+                {
+                    funko = "noup";
+                }
+
+            }
+            if (funko == "correcto")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
     }
-
 }
