@@ -8,26 +8,87 @@ using System.Collections.Generic;
 
 namespace Proyecto
 {
-    
+
     public static class ALAINID
     {
         public static List<User> listausuarios = new List<User>();
+
+
+
+
+
+
+
         static void Almacenar(List<User> u)      //Serializamos
         {
             IFormatter formatter = new BinaryFormatter();
-            Stream stream = new FileStream("Usuarios2.dat", FileMode.Create, FileAccess.Write, FileShare.None);
+            Stream stream = new FileStream("Usuarios2.bin", FileMode.Create, FileAccess.Write, FileShare.None);
             formatter.Serialize(stream, u);
             stream.Close();
         }
-        static void Cargar(List<User> p)
+        static List<User> Cargar()
         {
-            IFormatter formatter = new BinaryFormatter();
-            Stream stream = new FileStream("Usuarios2.dat", FileMode.Open, FileAccess.Read, FileShare.Read);
-            p = (List<User>)formatter.Deserialize(stream);
-            stream.Close();
+            IFormatter formatter2 = new BinaryFormatter();
+            Stream stream2 = new FileStream("Usuarios2.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
+            List<User> p = (List<User>)formatter2.Deserialize(stream2);
+            stream2.Close();
+            VerPersonas(p);
+            return p;
+
+
+
         }
         public static bool Agregarusuarioalalista(User u1)
         {
+            static void Almacenar(List<User> u)      //Serializamos
+            {
+                IFormatter formatter = new BinaryFormatter();
+                Stream stream = new FileStream("Usuarios2.bin", FileMode.Create, FileAccess.Write, FileShare.None);
+                formatter.Serialize(stream, u);
+                stream.Close();
+            }
+            static List<User> Cargar()
+            {
+                IFormatter formatter2 = new BinaryFormatter();
+                Stream stream2 = new FileStream("Usuarios2.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
+                List<User> p = (List<User>)formatter2.Deserialize(stream2);
+                stream2.Close();
+                VerPersonas(p);
+                return p;
+
+
+
+            }
+            static bool Agregarusuarioalalista(User u1)
+            {
+                listausuarios = Cargar();
+
+                for (int i = 0; i < listausuarios.Count; i++)
+                {
+
+                    User ui = listausuarios[i];
+
+                    if (ui.Email == u1.Email)
+                    {
+                        Console.WriteLine("Ya existe una cuenta con este email");
+                        return false;
+                    }
+                    if (ui.NombreUsuario == u1.NombreUsuario)
+                    {
+                        Console.WriteLine("Ya existe este nombre de usuario, pruebe con otro");
+                        return false;
+                    }
+
+                }
+
+                listausuarios.Add(u1);
+                Console.WriteLine("Usuario correctamente registrado");
+                Almacenar(listausuarios);
+                listausuarios = Cargar();
+                Thread.Sleep(2000);
+                return true;
+            }
+
             for (int i = 0; i < listausuarios.Count; i++)
             {
 
@@ -48,13 +109,14 @@ namespace Proyecto
 
             listausuarios.Add(u1);
             Console.WriteLine("Usuario correctamente registrado");
-            Cargar(listausuarios);
             Almacenar(listausuarios);
+            listausuarios = Cargar();
             Thread.Sleep(2000);
             return true;
         }
         public static bool Ingresaralaapp(string email, string password)
         {
+
             bool usuarioencontrado = false;
             User ui = null;
             for (int j = 0; j < listausuarios.Count; j++)
@@ -122,4 +184,3 @@ namespace Proyecto
     }
 
 }
-

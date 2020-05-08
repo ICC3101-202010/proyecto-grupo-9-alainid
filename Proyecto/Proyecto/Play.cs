@@ -8,7 +8,5 @@ namespace Proyecto
     //{
         //public List<Video>=new Video;
         //public List<Sing>= new Song;
-        
-
     //}
 }
