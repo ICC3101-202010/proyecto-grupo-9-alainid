@@ -129,18 +129,20 @@ namespace Proyecto
                     if (listausuarios[i].password == contrasena)
                     {
                         listausuarios[i].password = nuevacontrasena;
-                        funko = "correcto";
                         Almacenar(listausuarios);
+                        funko = "correcto";
                     }
                     else
                     {
                         funko = "noup";
                     }
+                    break;
                 }
                 else
                 {
                     funko = "noup";
                 }
+                
 
             }
             if (funko == "correcto")
@@ -173,25 +175,52 @@ namespace Proyecto
             {
                 return info;
             }
-
-
-
         }
-
-
-
-
-
         public static bool Cambiarnombreusuario(string email, string contrasena, string nuevonombre)
         {
-            string funko = "";
+            string funko = "correcto";
             for (int i = 0; i < listausuarios.Count; i++)
             {
                 if (listausuarios[i].email == email)
                 {
                     if (listausuarios[i].password == contrasena)
                     {
-                        listausuarios[i].nombreusuario = nuevonombre;
+                        listausuarios[i].nombreusuario = nuevonombre;                    
+                        Almacenar(listausuarios);
+                        funko = "correcto";
+                    }
+                    else
+                    {
+                        funko = "noup";
+                    }
+                    break;
+                }
+                else
+                {
+                    funko = "noup";
+                }
+
+            }
+            if (funko == "correcto")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public static bool Cambiarnombre(string email, string contrasena, string nuevonombre)
+        {
+            string funko = "correcto";
+            for (int i = 0; i < listausuarios.Count; i++)
+            {
+                if (listausuarios[i].email == email)
+                {
+                    if (listausuarios[i].password == contrasena)
+                    {
+                        listausuarios[i].nombre = nuevonombre;
                         funko = "correcto";
                         Almacenar(listausuarios);
                     }
@@ -199,6 +228,8 @@ namespace Proyecto
                     {
                         funko = "noup";
                     }
+                    break;
+
                 }
                 else
                 {

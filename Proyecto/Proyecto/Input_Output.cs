@@ -215,24 +215,25 @@ namespace Proyecto
 
                                                 case 2:
                                                     int accion9 = '\0';
-                                                    while (accion9 != 3)
+                                                    while (accion9 != 4)
                                                     {
                                                         Console.Clear();
                                                         Console.WriteLine("1. CAMBIAR CONTRASEÑA ");
                                                         Console.WriteLine("2. CAMBIAR NOMBRE DE USUARIO");
-                                                        Console.WriteLine("3. ATRAS");
-                                                        accion9 = funciones.Numero(3);
+                                                        Console.WriteLine("3. CAMBIAR NOMBRE");
+                                                        Console.WriteLine("4. ATRAS");
+                                                        accion9 = funciones.Numero(4);
                                                         switch (accion9)
                                                         {
                                                             case 1:
                                                                 Console.Clear();
                                                                 Console.WriteLine("Escriba su email: ");
-                                                                string usuario = Console.ReadLine();
+                                                                string emaile = Console.ReadLine();
                                                                 Console.WriteLine("Escriba su contrasena actual: ");
                                                                 string contrasena = Console.ReadLine();
                                                                 Console.WriteLine("Escriba su nueva contrasena: ");
                                                                 string nuevacontrasena = Console.ReadLine();
-                                                                bool bol8 = ALAINID.Cambiarcontrasena(usuario, contrasena, nuevacontrasena);
+                                                                bool bol8 = ALAINID.Cambiarcontrasena(emaile, contrasena, nuevacontrasena);
                                                                 if (bol8 == true)
                                                                 {
                                                                     Console.WriteLine("Contrasena exitosamente cambiada");
@@ -245,7 +246,7 @@ namespace Proyecto
                                                                 }
                                                                 break;
                                                             case 2:
-                                                                //cambiar nombre
+                                                                //cambiar nombre usuario
                                                                 Console.Clear();
                                                                 Console.WriteLine("Escriba su email: ");
                                                                 email = Console.ReadLine();
@@ -266,9 +267,31 @@ namespace Proyecto
                                                                 }
                                                                 
                                                                 break;
-                                                                
-                                                             
+
                                                             case 3:
+                                                                //cambiar nombre
+                                                                Console.Clear();
+                                                                Console.WriteLine("Escriba su email: ");
+                                                                email = Console.ReadLine();
+                                                                Console.WriteLine("Escriba su contrasena actual: ");
+                                                                contrasena = Console.ReadLine();
+                                                                Console.WriteLine("Escriba su nuevo nombre: ");
+                                                                nuevonombre = Console.ReadLine();
+                                                                bol = ALAINID.Cambiarnombre(email, contrasena, nuevonombre);
+                                                                if (bol == true)
+                                                                {
+                                                                    Console.WriteLine("Nombre exitosamente cambiado");
+                                                                    Thread.Sleep(2000);
+                                                                }
+                                                                else
+                                                                {
+                                                                    Console.WriteLine("email o contrasena actual incorrecta");
+                                                                    Thread.Sleep(2000);
+                                                                }
+                                                                break;
+
+
+                                                            case 4:
                                                                 break;
                                                             default:
                                                                 Console.Clear();
