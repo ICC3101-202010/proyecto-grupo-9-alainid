@@ -13,7 +13,7 @@ namespace Proyecto
         public string Password;
         public string Nombre;
         private List<PlaylistSong> lista_playlistusuario = new List<PlaylistSong>();
-
+        public bool Premium = false;
 
         public string nombreusuario
         {
@@ -48,7 +48,7 @@ namespace Proyecto
                 Email = value;
             }
         }
-        public bool Premium
+        public bool premium
         {
             get
             {

@@ -12,6 +12,10 @@ namespace Proyecto
     public static class ALAINID
     {
         public static List<User> listausuarios = new List<User>();
+        public static List<Song> todas_las_canciones = new List<Song>();            //nuevo
+        public static List<Video> todos_los_videos = new List<Video>();                 // nuevo
+        public static List<Artista> lista_artistas = new List<Artista>();            // nuevo
+
 
 
         static void Almacenar(List<User> u)      //Serializamos

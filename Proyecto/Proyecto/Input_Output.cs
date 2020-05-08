@@ -201,7 +201,8 @@ namespace Proyecto
                                                     {
                                                         Console.Clear();
                                                         Console.WriteLine(ALAINID.Verinformacion(email2));
-                                                        Console.WriteLine("======================================");
+                                                        Console.WriteLine("========================");
+                                                        Console.WriteLine(" ");
                                                         Console.WriteLine("1.  ATRÁS");
                                                         accion10 = funciones.Numero(1);
                                                         switch (accion10)
@@ -218,6 +219,8 @@ namespace Proyecto
                                                     while (accion9 != 4)
                                                     {
                                                         Console.Clear();
+                                                        Console.WriteLine("========================");
+                                                        Console.WriteLine(" ");
                                                         Console.WriteLine("1. CAMBIAR CONTRASEÑA ");
                                                         Console.WriteLine("2. CAMBIAR NOMBRE DE USUARIO");
                                                         Console.WriteLine("3. CAMBIAR NOMBRE");
@@ -265,9 +268,7 @@ namespace Proyecto
                                                                     Console.WriteLine("email o contrasena actual incorrecta");
                                                                     Thread.Sleep(2000);
                                                                 }
-                                                                
                                                                 break;
-
                                                             case 3:
                                                                 //cambiar nombre
                                                                 Console.Clear();
