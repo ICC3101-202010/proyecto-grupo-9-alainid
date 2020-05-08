@@ -3,13 +3,16 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace Proyecto
+
 {
-    class User
+    [Serializable]
+    public class User
     {
         public string NombreUsuario;
         public string Email;
         public string Password;
         public string Nombre;
+        private List<PlaylistSong> lista_playlistusuario = new List<PlaylistSong>();
 
 
         public string nombreusuario
@@ -23,7 +26,6 @@ namespace Proyecto
                 NombreUsuario = value;
             }
         }
-
         public string nombre
         {
             get
@@ -68,7 +70,8 @@ namespace Proyecto
                 Password = value;
             }
         }
-        public List<PlaylistSong> lista_playlistusuario = new List<PlaylistSong>();
+
+        public List<PlaylistSong> Lista_playlistusuario { get => lista_playlistusuario; set => lista_playlistusuario = value; }
 
         public User(string _nombre_, string _nomusuario_, string _email_, string _password_)
         {
@@ -84,44 +87,53 @@ namespace Proyecto
         }
 
 
-
-       
-
-        /*
-        public List<Song> Busqueda_filtrada(string _criterio, string _valor)
+        public void Crear_playlist(string nombre)
         {
-            listafiltrada = new List<Song>();
+            PlaylistSong playlistSong = new PlaylistSong(nombre);
+            Lista_playlistusuario.Add(playlistSong);
+        }
 
-
-        public bool crear_Playlist(string criterio, string valorCriterio, string nombrePlaylist)
+        public void Agregar_cancion(Song song)
         {
-               
-            List<Song> listplay = Busqueda_filtrada(criterio, valorCriterio);
-            if (listplay.Count == 0)
+            
+        }
+
+
+    /*
+    public List<Song> Busqueda_filtrada(string _criterio, string _valor)
+    {
+        listafiltrada = new List<Song>();
+
+
+    public bool crear_Playlist(string criterio, string valorCriterio, string nombrePlaylist)
+    {
+
+        List<Song> listplay = Busqueda_filtrada(criterio, valorCriterio);
+        if (listplay.Count == 0)
+        {
+            Console.WriteLine("Por ende, no ha sido posible  crear la playlist");
+            return false;
+        }
+
+        for (int i = 0; i < listplay2.Count; i++)
+        {
+            if (listplay2[i].NombrePlaylist == nombrePlaylist)
             {
-                Console.WriteLine("Por ende, no ha sido posible  crear la playlist");
+                Console.WriteLine("La playlist ya existe");
                 return false;
             }
-
-            for (int i = 0; i < listplay2.Count; i++)
-            {
-                if (listplay2[i].NombrePlaylist == nombrePlaylist)
-                {
-                    Console.WriteLine("La playlist ya existe");
-                    return false;
-                }
-            }
         }
-        
-        Playlist listplay3 = new Playlist(nombrePlaylist, listplay);
-        listplay2.Add(listplay3);
-        Console.WriteLine("===============================");
-        Console.WriteLine("Playlist exitosamente agregada");
-        Console.WriteLine("===============================");
-        Console.WriteLine(listplay3.informationPLN());
-        Console.WriteLine(listplay3.informationPLL());
-        Console.WriteLine("===============================");
-        return true;
+    }
+
+    Playlist listplay3 = new Playlist(nombrePlaylist, listplay);
+    listplay2.Add(listplay3);
+    Console.WriteLine("===============================");
+    Console.WriteLine("Playlist exitosamente agregada");
+    Console.WriteLine("===============================");
+    Console.WriteLine(listplay3.informationPLN());
+    Console.WriteLine(listplay3.informationPLL());
+    Console.WriteLine("===============================");
+    return true;
 
 
 
@@ -129,13 +141,13 @@ namespace Proyecto
 
 
 
-        public List<Cancion> Busqueda_filtrada(string _criterio, string _valor)
-        {
-        listafiltrada = new List<Cancion>();
+    public List<Cancion> Busqueda_filtrada(string _criterio, string _valor)
+    {
+    listafiltrada = new List<Cancion>();
 
-       
-        return listafiltrada;*/
-        
+
+    return listafiltrada;*/
+
 
 }
 }

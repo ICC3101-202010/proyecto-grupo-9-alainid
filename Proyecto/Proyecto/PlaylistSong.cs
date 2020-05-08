@@ -4,18 +4,24 @@ using System.Text;
 
 namespace Proyecto
 {
+    [Serializable]
     public class PlaylistSong
     {
         public string NombrePlaylist;
         public List<Song> listplay = new List<Song>();
 
-        public PlaylistSong(string _nombrepl, List<Song> listacancion)
+        public PlaylistSong(string _nombrepl)
         {
-
             this.NombrePlaylist = _nombrepl;
-            this.listplay = listacancion;
-
         }
+
+
+
+        public void Agregar_cancion(Song song)
+        {
+            listplay.Add(song);
+        }
+
         public string informationPLL()
         {
             string stringaux1 = " ";
@@ -38,8 +44,13 @@ namespace Proyecto
 
                 }
                 return stringaux1;
+
             }
+
+
+
         }
     }
 
 }
+

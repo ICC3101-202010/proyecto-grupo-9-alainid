@@ -7,9 +7,8 @@ namespace Proyecto
     {
         static void Main()
         {
-            Input_Output ip = new Input_Output();
-            ALAINID al = new ALAINID(ip);
-            al.Operar();
+
+            Input_Output.Comenzar_app();
             Thread.Sleep(1000);
         }
     }

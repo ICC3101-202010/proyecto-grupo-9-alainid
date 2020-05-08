@@ -5,27 +5,28 @@ using System.Threading;
 
 namespace Proyecto
 {
-    public class Input_Output : Control
+    public static class Input_Output 
     {
-        public void Comenzar_app()
+        
+        public static void Comenzar_app()
         {
-            Singup_Singin r = new Singup_Singin();
+            Funciones funciones = new Funciones();
             Admin a = new Admin();
             Console.WriteLine("Bienvendio a ALAINID");
             Console.WriteLine("========================");
 
-            
-            string accion = null;
-            while (accion != "3")
+
+            int accion = '\0';
+            while (accion != 3)
             {
                 Console.WriteLine("Seleccione una opción: \n");
                 Console.WriteLine("1. Registrarse \n");
                 Console.WriteLine("2. Ingresar a la app \n");
                 Console.WriteLine("3. Salir del programa\n");
-                accion = Console.ReadLine();
+                accion = funciones.Numero(3);
                 switch (accion)
                 {
-                    case "1":
+                    case 1:
                         Console.Clear();
                         Console.WriteLine("=====================");
                         Console.WriteLine("Crear usuario");
@@ -43,9 +44,9 @@ namespace Proyecto
                         Console.WriteLine("Ingrese su nombre completo");
                         nombre = Console.ReadLine();
                         User u1 = new User(nombre, idusuario, email, password);
-                        r.Agregarusuarioalalista(u1);
+                        ALAINID.Agregarusuarioalalista(u1);
                         break;
-                    case "2":
+                    case 2:
                         Console.Clear();
                         bool bol = false;
                         string email2 = "";
@@ -54,11 +55,11 @@ namespace Proyecto
                         email2 = Console.ReadLine();
                         Console.WriteLine("Ingrese contraseña");
                         password2 = Console.ReadLine();
-                        bol = r.Ingresaralaapp(email2, password2);
+                        bol = ALAINID.Ingresaralaapp(email2, password2);
                         if (bol == true)
                         {
-                            string accion2 = null;
-                            while (accion2 != "8")
+                            int accion2 = '\0';
+                            while (accion2 != 8)
                             {
                                 Console.Clear();
                                 Console.WriteLine("========================");
@@ -75,12 +76,12 @@ namespace Proyecto
                                 Console.WriteLine("6. TU HISTORIAL");
                                 Console.WriteLine("7. PREMIUM");
                                 Console.WriteLine("8. CERRAR SESION\n");
-                                accion2 = Console.ReadLine();
+                                accion2 = funciones.Numero(8);
                                 switch (accion2)
                                 {
-                                    case "1":
-                                        string accion3 = null;
-                                        while (accion3 != "3")
+                                    case 1:
+                                        int accion3 = '\0';
+                                        while (accion3 != 3)
                                         {
                                             Console.Clear();
                                             Console.WriteLine("========================");
@@ -88,16 +89,16 @@ namespace Proyecto
                                             Console.WriteLine("1. BUSQUEDA SIMPLE ");
                                             Console.WriteLine("2. BUSQUEDA FILTRADA");
                                             Console.WriteLine("3. ATRAS");
-                                            accion3 = Console.ReadLine();
+                                            accion3 = funciones.Numero(3);
                                             switch (accion3)
                                             {
-                                                case "1":
+                                                case 1:
                                                     //METODO BUSQUEDA SIMPLE
                                                     break;
-                                                case "2":
+                                                case 2:
                                                     //METODO BUSQUEDA FILTRADA
                                                     break;
-                                                case "3":
+                                                case 3:
                                                     break;
                                                 default:
                                                     Console.Clear();
@@ -109,9 +110,9 @@ namespace Proyecto
                                         break;
 
 
-                                    case "2":
-                                        string accion4 = null;
-                                        while (accion4 != "5")
+                                    case 2:
+                                        int accion4 = '\0';
+                                        while (accion4 != 5)
                                         {
                                             Console.Clear();
                                             Console.WriteLine("=================================");
@@ -121,22 +122,22 @@ namespace Proyecto
                                             Console.WriteLine("3. CREAR PLAYLIST DE CANCIONES");
                                             Console.WriteLine("4. CREAR PLAYLIST DE VIDEOS");
                                             Console.WriteLine("5. ATRAS");
-                                            accion4 = Console.ReadLine();
+                                            accion4 = funciones.Numero(5);
                                             switch (accion4)
                                             {
-                                                case "1":
+                                                case 1:
                                                     //METODO VER PLAYLIST CANCIONES
                                                     break;
-                                                case "2":
+                                                case 2:
                                                     //METODO VER PLAYLIST VIDEOS
                                                     break;
-                                                case "3":
+                                                case 3:
                                                     //METODO CREAR PLAYLIST CANCIONES
                                                     break;
-                                                case "4":
+                                                case 4:
                                                     //METODO CREAR PLAYLIST CANCIONES
                                                     break;
-                                                case "5":
+                                                case 5:
                                                     break;
                                                 default:
                                                     Console.Clear();
@@ -146,9 +147,9 @@ namespace Proyecto
                                             }
                                         }
                                         break;
-                                    case "3":
-                                        string accion5 = null;
-                                        while (accion5 != "3")
+                                    case 3:
+                                        int accion5 = '\0';
+                                        while (accion5 != 3)
                                         {
                                             Console.Clear();
                                             Console.WriteLine("==================================");
@@ -157,16 +158,16 @@ namespace Proyecto
                                             Console.WriteLine("2. VER TUS VIDEOS FAVORITOS");
                                             Console.WriteLine("3. ATRAS");
 
-                                            accion5 = Console.ReadLine();
+                                            accion5 = funciones.Numero(3);
                                             switch (accion5)
                                             {
-                                                case "1":
+                                                case 1:
                                                     //METODO VER CANCIONES FAVORITAS
                                                     break;
-                                                case "2":
+                                                case 2:
                                                     //METODO VER CANCIONES VIDEOS
                                                     break;
-                                                case "3":
+                                                case 3:
                                                     break;
                                                 default:
                                                     Console.Clear();
@@ -183,11 +184,11 @@ namespace Proyecto
                             }
                         }
                         break;
-                    case "1h3hdjs83hr8d7dtwisos":
+                    case 29846455:
                         Console.Clear();
                         Console.WriteLine("Ingresando como admin....");
                         break;
-                    case "3":
+                    case 3:
                         Console.Clear();
                         Console.WriteLine("Has salido del programa");
                         break;
@@ -202,7 +203,7 @@ namespace Proyecto
         }
     }
 }
-        
-//holacomoestas
-        
-   
+
+
+
+
