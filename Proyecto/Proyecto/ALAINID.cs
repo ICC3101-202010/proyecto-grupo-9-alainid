@@ -106,6 +106,7 @@ namespace Proyecto
         public static void Activarlista()
         {
             listausuarios = Cargar();
+            
         }
         public static bool Cambiarcontrasena(string email, string contrasena, string nuevacontrasena)
         {
@@ -226,6 +227,21 @@ namespace Proyecto
             {
                 return false;
             }
+        }
+        static void AlmacenarCanciones(List<Song> s)      //Serializamos
+        {
+            IFormatter formatter3 = new BinaryFormatter();
+            Stream stream3 = new FileStream("Canciones.bin", FileMode.Create, FileAccess.Write, FileShare.None);
+            formatter3.Serialize(stream3, s);
+            stream3.Close();
+        }
+        static List<Song> CargarCancion()
+        {
+            IFormatter formatter4 = new BinaryFormatter();
+            Stream stream4 = new FileStream("Usuarios2.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
+            List<Song> s = (List<Song>)formatter4.Deserialize(stream4);
+            stream4.Close();
+            return s;
         }
     }
 }

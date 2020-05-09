@@ -43,6 +43,7 @@ namespace Proyecto
             tipoarchivo = tipodearchivo1;
             tamano = tamano1;
             calidad = calidad1;
+           
 
         }
         public string Informacioncancion()

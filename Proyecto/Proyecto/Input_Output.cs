@@ -98,8 +98,31 @@ namespace Proyecto
                                             switch (accion3)
                                             {
                                                 case 1:
-                                                    //METODO BUSQUEDA SIMPLE
+                                                    int swbus = '\0';
+                                                    while (swbus!=3)
+                                                    {
+                                                        Console.WriteLine("1.BUSCAR CANCION POR NOMBRE");
+                                                        Console.WriteLine("2.BUSCAR VIDEO POR NOMBRE");
+                                                        Console.WriteLine("3.SALIR");
+                                                        int opcion = funciones.Numero(3);
+                                                        switch (opcion)
+                                                        {
+                                                            case 1:
+                                                                Console.WriteLine("1.INGRESE NOMBRE CANCION");
+                                                                string nombrecancion = Console.ReadLine();
+                                                                pla.Playsong("Canciones/" + nombrecancion + ".mp3");
+                                                                break;
+                                                            case 2:
+                                                                break;
+                                                            case 3:
+                                                                break;
+
+                                                        }
+                                                        
+                                                        
+                                                    }
                                                     break;
+                                                    
                                                 case 2:
                                                     //METODO BUSQUEDA FILTRADA
                                                     break;
