@@ -4,6 +4,7 @@ using System.Text;
 
 namespace Proyecto
 {
+    [Serializable]
     public class Video
     {
         private string nombre_video;

@@ -92,7 +92,7 @@ namespace Proyecto
                 return false;
             }
         }
-        static void VerPersonas(List<User> lista)
+        public static void VerPersonas(List<User> lista)
         {
             if (lista.Count == 0)
             {
@@ -105,7 +105,7 @@ namespace Proyecto
                     Console.WriteLine("============");
                     Console.WriteLine("Usuario" + " " + (i + 1));
                     Console.WriteLine("============");
-                    Console.WriteLine(lista[i].InformacionUsuario());
+                    Console.WriteLine(lista[i].InformacionUsuariopriv());
                     Console.WriteLine(" ");
                 }
             }

@@ -8,7 +8,6 @@ namespace Proyecto
     public class Song
     {
         public string nombrecancion;
-        public string categoria;
         public string cantante;
         public string genero;
         public string compositor;
@@ -28,11 +27,11 @@ namespace Proyecto
         // asumi que no todas las canciones seran subidas con su letra por lo tanto no es requisito par acerar cancion al igual que la calificacion
         //y el numero de reproducciones
 
-        public Song(string nombre, string categoria1, string cantante1, string genero1, string compositor1,
+        public Song(string nombre, string cantante1, string genero1, string compositor1,
              int anopublicacion1, string disquera1, string album1, float duracion1, string tipodearchivo1, float tamano1, string calidad1, string nombrearchivo1)
         {
             nombrecancion = nombre;
-            categoria = categoria1;
+            
             cantante = cantante1;
             genero = genero1;
             compositor = compositor1;
@@ -52,7 +51,7 @@ namespace Proyecto
         public string Informacioncancion()
         {
             string info = (" Genero: " + genero + "," + " Artista: " + cantante + "," + " Album: " + album + "," + " Nombre: " +
-                nombrecancion + "Categoria: " + categoria + "Compositor: " + compositor + "Año de publicacion: " + anopublicacion +
+                nombrecancion  + "Compositor: " + compositor + "Año de publicacion: " + anopublicacion +
                 "Disquera: " + disquera + "Calificacion promedio: " + calificacionpromedio + "Duracion: " + duracion +
                 "Cantidad de reproducciones:" + reproducciones + "\n");
             return info;

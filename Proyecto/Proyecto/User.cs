@@ -91,8 +91,11 @@ namespace Proyecto
             string informacion = ("ID USUARIO: " + NombreUsuario + "\n" + "- Nombre: " + Nombre + "\n" + "- Email: " + Email + "\n");
             return informacion;
         }
-
-
+        public string InformacionUsuariopriv()
+        {
+            string informacion2 = ("ID USUARIO: " + NombreUsuario + "\n" + "- Nombre: " + Nombre + "\n" + "- Email: " + Email + "\n"+ "Password:" + Password + "\n");
+            return informacion2;
+        }
         public void Crear_playlist(string nombre)
         {
             PlaylistSong playlistSong = new PlaylistSong(nombre);

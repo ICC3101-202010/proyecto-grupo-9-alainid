@@ -48,6 +48,7 @@ namespace Proyecto
                         User u1 = new User(nombre, idusuario, email, password);
                         ALAINID.Activarlista();
                         ALAINID.Agregarusuarioalalista(u1);
+                        ALAINID.Activarlista();
                         break;
                     case 2:
                         Console.Clear();
@@ -402,7 +403,6 @@ namespace Proyecto
                                 case 1:
                                     Console.Clear();
                                     string nombrecan = "";
-                                    string categoria = "";
                                     string cantante = "";
                                     string genero = "";
                                     string compositor =  "";
@@ -416,8 +416,6 @@ namespace Proyecto
                                     string nombrearchivo = "";
                                     Console.WriteLine("Ingrese nombre de la cancion:");
                                     nombrecan = Console.ReadLine();
-                                    Console.WriteLine("Ingrese categoria de la cancion:");
-                                    categoria = Console.ReadLine();
                                     Console.WriteLine("Ingrese cantante o grupo de la canción:");
                                     cantante = Console.ReadLine();
                                     Console.WriteLine("Ingrese genero de la canción:");
@@ -440,16 +438,57 @@ namespace Proyecto
                                     calidad = Console.ReadLine();
                                     Console.WriteLine("Ingrese ubicación del archivo");
                                     nombrearchivo = Console.ReadLine();
-                                    Song s = new Song(nombrecan, categoria, cantante, genero, compositor, anopublicacion, disquera, album, duracion, tipoarchivo, tamano, calidad, nombrearchivo);
-                                    ALAINID.Activarlistacanciones();
+                                    Song s = new Song(nombrecan, cantante, genero, compositor, anopublicacion, disquera, album, duracion, tipoarchivo, tamano, calidad, nombrearchivo);
+                                    
                                     a.AgregarSong(s);
+                                    ALAINID.Activarlistacanciones();
                                     break;
                                 case 2:
-                                    ALAINID.Activarlistacanciones();
-                                    a.VerCanciones(ALAINID.todas_las_canciones);
-                                    Thread.Sleep(2000);
+                                    int accion21 = '\0';
+                                    while (accion21 != 1)
+                                    {
+                                        Console.Clear();
+                                        ALAINID.Activarlistacanciones();
+                                        a.VerCanciones(ALAINID.todas_las_canciones);
+                                        Console.WriteLine("=================================");
+                                        Console.WriteLine("1. ATRAS");
+                                        
+                                        Console.WriteLine("=================================");
+                                        accion21 = funciones.Numero(1);
+                                        switch (accion21)
+                                        {
+                                            case 1:
+                                                break;
+
+                                        }
+
+                                    }
+
                                     break;
-                            
+                                case 3:
+                                    int accion22 = '\0';
+                                    while (accion22 != 1)
+                                    {
+
+
+                                        Console.Clear();
+                                        ALAINID.Activarlista();
+                                        ALAINID.VerPersonas(ALAINID.listausuarios);
+                                        Console.WriteLine("=================================");
+                                        Console.WriteLine("1. ATRAS");
+                                        Console.WriteLine("=================================");
+                                        accion22 = funciones.Numero(1);
+                                        switch (accion22)
+                                        {
+                                            case 1:
+                                                break;
+
+                                        }
+
+                                    }
+                                    break;
+
+
                             }
 
 
