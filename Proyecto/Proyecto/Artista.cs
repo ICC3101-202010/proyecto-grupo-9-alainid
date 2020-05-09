@@ -7,5 +7,10 @@ namespace Proyecto
     public class Artista
     {
         public string name;
+        public string last;
+        public int age;
+        public string nacionality;
+
+       
     }
 }

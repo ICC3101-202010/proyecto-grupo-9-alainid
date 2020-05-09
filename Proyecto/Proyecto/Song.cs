@@ -22,12 +22,13 @@ namespace Proyecto
         public string tipoarchivo;
         public float tamano;
         public string calidad;
+        public string nombrearchivo;
 
         // asumi que no todas las canciones seran subidas con su letra por lo tanto no es requisito par acerar cancion al igual que la calificacion
         //y el numero de reproducciones
 
         public Song(string nombre, string categoria1, string cantante1, string genero1, string compositor1,
-             string anopublicacion1, string disquera1, string album1, float duracion1, string tipodearchivo1, float tamano1, string calidad1)
+             string anopublicacion1, string disquera1, string album1, float duracion1, string tipodearchivo1, float tamano1, string calidad1, string nombrearchivo1)
         {
             nombrecancion = nombre;
             categoria = categoria1;
@@ -43,6 +44,7 @@ namespace Proyecto
             tipoarchivo = tipodearchivo1;
             tamano = tamano1;
             calidad = calidad1;
+            nombrearchivo = nombrearchivo1;
            
 
         }

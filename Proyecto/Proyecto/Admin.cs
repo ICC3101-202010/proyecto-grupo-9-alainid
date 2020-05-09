@@ -17,30 +17,25 @@ namespace Proyecto
             }
         }
 
-        public void Subir_cancion(string nombre, string categoria1, string cantante1, string genero1, string compositor1,
-             string anopublicacion1, string disquera1, string album1, float duracion1, string tipodearchivo1, float tamano1, string calidad1)
+        public bool AgregarSong(Song s)
         {
-            bool ver1 = true;
-            foreach (Song song in ALAINID.todas_las_canciones)
+            for (int i = 0; i < ALAINID.todas_las_canciones.Count; i++)
             {
-                if (song.nombrecancion == nombre & song.cantante == cantante1 & song.calidad == calidad1)
+                Song si = ALAINID.todas_las_canciones[i];
+                if ((si.nombrecancion == s.nombrecancion) && (si.cantante == s.cantante) && (si.calidad == s.calidad))
+                
                 {
-                    ver1 = false;
-                    break;
+                    Console.WriteLine("Cancion ya estaba antes agregada");
+                    return false;
                 }
 
             }
-            if (ver1 == true)
-            {
-                Song song1 = new Song(nombre, categoria1, cantante1, genero1, compositor1, anopublicacion1, disquera1, album1, duracion1, tipodearchivo1, tamano1, calidad1);
-                ALAINID.todas_las_canciones.Add(song1);
-            }
-            else
-            {
-                Console.WriteLine("La cancion que intenta cargar ya existe");
-            }
 
-
+            ALAINID.todas_las_canciones.Add(s);
+            Console.WriteLine("Canción agregada");
+            Console.WriteLine("================");
+            ALAINID.Partir();
+            return true;
         }
 
         public void Subir_video(string nombre_video, float duracion, string categoria, string director, string genero, string anio_publicacion, string tipo_archivo, string calidad, string film_studio, float tamanio)
@@ -65,7 +60,7 @@ namespace Proyecto
 
                     Console.WriteLine("Ingrese el nombre del actor: ");
                     string nombre_actor = Console.ReadLine();
-                    foreach (Artista art in ALAINID.lista_artistas)
+                    foreach (Artista art in ALAINID.lista_actores)
                     {
                         if (art.name == nombre_actor)
                         {

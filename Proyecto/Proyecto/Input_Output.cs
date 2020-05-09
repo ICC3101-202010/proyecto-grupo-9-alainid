@@ -98,18 +98,50 @@ namespace Proyecto
                                             switch (accion3)
                                             {
                                                 case 1:
-                                                    int swbus = '\0';
-                                                    while (swbus!=3)
+                                                    int opcion = '\0';
+                                                    while (opcion!=3)
                                                     {
+                                                        Console.Clear();
+                                                        Console.WriteLine("========================");
+                                                        Console.WriteLine(" ");
                                                         Console.WriteLine("1.BUSCAR CANCION POR NOMBRE");
                                                         Console.WriteLine("2.BUSCAR VIDEO POR NOMBRE");
                                                         Console.WriteLine("3.SALIR");
-                                                        int opcion = funciones.Numero(3);
+                                                        opcion = funciones.Numero(3);
                                                         switch (opcion)
                                                         {
                                                             case 1:
-                                                                Console.WriteLine("1.INGRESE NOMBRE CANCION");
+                                                                Console.Clear();
+                                                                Console.WriteLine("========================");
+                                                                Console.WriteLine(" ");
+                                                                Console.WriteLine("INGRESE NOMBRE CANCION");
                                                                 string nombrecancion = Console.ReadLine();
+
+                                                                //AQUI TIENE QUE HABER UN VERIFICADOR DE SI ESTA CANCION EXISTE                                                            
+
+                                                                int opcion2 = '\0';
+                                                                while (opcion2 != 3)
+                                                                {
+                                                                    Console.Clear();
+                                                                    Console.WriteLine("========================");
+                                                                    Console.WriteLine(" ");
+                                                                    Console.WriteLine("1.PLAY");
+                                                                    Console.WriteLine("2.PAUSA");
+                                                                    Console.WriteLine("3.PARAR");
+                                                                    opcion2 = funciones.Numero(3);
+                                                                    switch(opcion2)
+                                                                    {
+                                                                        case 1:
+                                                                            pla.Playsong("Canciones/" + nombrecancion + ".mp3");
+                                                                            break;
+                                                                        case 2:
+                                                                            pla.PauseSong();
+                                                                            break;
+                                                                        case 3:
+                                                                            pla.StopSong();
+                                                                            break;
+                                                                    }
+                                                                }
                                                                 pla.Playsong("Canciones/" + nombrecancion + ".mp3");
                                                                 break;
                                                             case 2:
@@ -348,6 +380,29 @@ namespace Proyecto
                     case 29846455:
                         Console.Clear();
                         Console.WriteLine("Ingresando como admin....");
+                        Thread.Sleep(2000);
+                        int accion20 = '\0';
+                        while (accion20 != 3)
+                        {
+                            Console.Clear();
+                            Console.WriteLine("SELECCIONE UNA OPCION:");
+                            Console.WriteLine("======================");
+                            Console.WriteLine("1. AGREGAR CANCION");
+                            Console.WriteLine("2. VER CANCIONES DE LA APP");
+                            Console.WriteLine("3. VER LISTA DE USUARIOS DE LA APP");
+                            Console.WriteLine("4. CERRAR SESION");
+                            accion20 = funciones.Numero(4);
+                            switch (accion20)
+                            {
+                                case 1:
+                                    
+                                    break;
+
+                            }
+
+                        }
+                            
+
                         break;
                     case 3:
                         Console.Clear();

@@ -11,9 +11,15 @@ namespace Proyecto
     public static class ALAINID
     {
         public static List<User> listausuarios = new List<User>();
-        public static List<Song> todas_las_canciones = new List<Song>();            //nuevo
-        public static List<Video> todos_los_videos = new List<Video>();                 // nuevo
-        public static List<Artista> lista_artistas = new List<Artista>();            // nuevo
+        public static List<Song> todas_las_canciones = new List<Song>();
+        public static List<Video> todos_los_videos = new List<Video>();
+        public static List<Artista> lista_actores = new List<Artista>();
+        public static List<Artista> lista_directores = new List<Artista>();
+        public static List<Artista> lista_cantanes = new List<Artista>();
+        public static List<Artista> lista_compositores = new List<Artista>();
+
+
+
         static void Almacenar(List<User> u)      //Serializamos
         {
             IFormatter formatter = new BinaryFormatter();
@@ -102,6 +108,10 @@ namespace Proyecto
                     Console.WriteLine(" ");
                 }
             }
+        }
+        public static void Partir()
+        {
+            AlmacenarCanciones(todas_las_canciones);
         }
         public static void Activarlista()
         {
@@ -238,7 +248,7 @@ namespace Proyecto
         static List<Song> CargarCancion()
         {
             IFormatter formatter4 = new BinaryFormatter();
-            Stream stream4 = new FileStream("Usuarios2.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
+            Stream stream4 = new FileStream("Canciones.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
             List<Song> s = (List<Song>)formatter4.Deserialize(stream4);
             stream4.Close();
             return s;
