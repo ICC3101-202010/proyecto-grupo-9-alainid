@@ -119,6 +119,11 @@ namespace Proyecto
             listausuarios = Cargar();
             
         }
+        public static void Activarlistacanciones()
+        {
+            todas_las_canciones = CargarCancion();
+        }
+
         public static bool Cambiarcontrasena(string email, string contrasena, string nuevacontrasena)
         {
             string funko = "";
@@ -249,10 +254,10 @@ namespace Proyecto
         static List<Song> CargarCancion()
         {
             IFormatter formatter4 = new BinaryFormatter();
-            Stream stream4 = new FileStream("Canciones.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
-            List<Song> s = (List<Song>)formatter4.Deserialize(stream4);
+            Stream stream4 = new FileStream("Canciones.bin", FileMode.OpenOrCreate, FileAccess.ReadWrite , FileShare.None);
+            List<Song> s2 = (List<Song>)formatter4.Deserialize(stream4);
             stream4.Close();
-            return s;
+            return s2;
         }
     }
 }

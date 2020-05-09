@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading;
@@ -24,7 +25,7 @@ namespace Proyecto
                 Console.WriteLine("1. Registrarse \n");
                 Console.WriteLine("2. Ingresar a la app \n");
                 Console.WriteLine("3. Salir del programa\n");
-                accion = funciones.Numero(3);
+                accion = int.Parse(Console.ReadLine());
                 switch (accion)
                 {
                     case 1:
@@ -381,7 +382,7 @@ namespace Proyecto
                             }
                         }
                         break;
-                    case 29846455:
+                    case 202023:
                         Console.Clear();
                         Console.WriteLine("Ingresando como admin....");
                         Thread.Sleep(2000);
@@ -405,7 +406,7 @@ namespace Proyecto
                                     string cantante =  "";
                                     string genero =  "";
                                     string compositor ="";
-                                    int añopublicacion = 0;
+                                    int anopublicacion = 0;
                                     string disquera = "";
                                     string album = "";
                                     float duracion = 0;
@@ -424,8 +425,24 @@ namespace Proyecto
                                     Console.WriteLine("Ingrese el compositor de la cancion:");
                                     compositor = Console.ReadLine();
                                     Console.WriteLine("Ingrese año de la publicación de la canción");
-                                    añopublicacion= Convert.ToInt32(Console.ReadLine());
+                                    anopublicacion= Convert.ToInt32(Console.ReadLine());
                                     Console.WriteLine("Ingrese disquera de la canción");
+                                    disquera = Console.ReadLine();
+                                    Console.WriteLine("Ingrese album al que pertenece la cancion");
+                                    album = Console.ReadLine();
+                                    Console.WriteLine("Ingrese duracion de la canción");
+                                    duracion = float.Parse(Console.ReadLine());
+                                    Console.WriteLine("Ingrese tipo archivo de la canción");
+                                    tipoarchivo  = Console.ReadLine();
+                                    Console.WriteLine("Ingrese tamaño del archivo de la canción");
+                                    tamano = float.Parse(Console.ReadLine());
+                                    Console.WriteLine("Ingrese la calidade del archivo de la canción");
+                                    calidad = Console.ReadLine();
+                                    Console.WriteLine("Ingrese ubicación del archivo");
+                                    nombrearchivo  = Console.ReadLine();
+                                    Song s = new Song(nombrecan, categoria, cantante, genero, compositor, anopublicacion, disquera, album, duracion, tipoarchivo, tamano, calidad, nombrearchivo);;
+                                    ALAINID.Activarlistacanciones();
+                                    a.AgregarSong(s);
                                     break;
 
                             }

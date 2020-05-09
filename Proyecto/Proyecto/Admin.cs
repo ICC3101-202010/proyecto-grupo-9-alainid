@@ -23,7 +23,7 @@ namespace Proyecto
             {
                 Song si = ALAINID.todas_las_canciones[i];
                 if ((si.nombrecancion == s.nombrecancion) && (si.cantante == s.cantante) && (si.calidad == s.calidad))
-                
+
                 {
                     Console.WriteLine("Cancion ya estaba antes agregada");
                     return false;
@@ -35,6 +35,7 @@ namespace Proyecto
             Console.WriteLine("Canción agregada");
             Console.WriteLine("================");
             ALAINID.Partir();
+            VerCanciones(ALAINID.todas_las_canciones);
             return true;
         }
 
@@ -85,6 +86,25 @@ namespace Proyecto
             }
 
         }
+        public void VerCanciones(List<Song> lista)
+        {
+            if (lista.Count == 0)
+            {
+                Console.WriteLine("No hay canciones agregadas aún");
+            }
 
+            else
+            {
+                for (int i = 0; i < lista.Count; i++)
+                {
+                    Console.WriteLine("============");
+                    Console.WriteLine("Canción" + " " + (i + 1));
+                    Console.WriteLine("============");
+                    Console.WriteLine(lista[i].Informacioncancion());
+                    Console.WriteLine(" ");
+
+                }
+            }
+        }
     }
 }

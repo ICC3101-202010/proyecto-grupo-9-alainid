@@ -11,7 +11,7 @@ namespace Proyecto
         public string cantante;
         public string genero;
         public string compositor;
-        public string anopublicacion;
+        public int anopublicacion;
         public string disquera;
         public string album;
         public string letra = null;           //CAMBIE AQUI
@@ -28,7 +28,7 @@ namespace Proyecto
         //y el numero de reproducciones
 
         public Song(string nombre, string categoria1, string cantante1, string genero1, string compositor1,
-             string anopublicacion1, string disquera1, string album1, float duracion1, string tipodearchivo1, float tamano1, string calidad1, string nombrearchivo1)
+             int anopublicacion1, string disquera1, string album1, float duracion1, string tipodearchivo1, float tamano1, string calidad1, string nombrearchivo1)
         {
             nombrecancion = nombre;
             categoria = categoria1;
