@@ -8,16 +8,12 @@ using System.Collections.Generic;
 
 namespace Proyecto
 {
-
     public static class ALAINID
     {
         public static List<User> listausuarios = new List<User>();
         public static List<Song> todas_las_canciones = new List<Song>();            //nuevo
         public static List<Video> todos_los_videos = new List<Video>();                 // nuevo
         public static List<Artista> lista_artistas = new List<Artista>();            // nuevo
-
-
-
         static void Almacenar(List<User> u)      //Serializamos
         {
             IFormatter formatter = new BinaryFormatter();
@@ -31,17 +27,13 @@ namespace Proyecto
             Stream stream2 = new FileStream("Usuarios2.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
             List<User> p = (List<User>)formatter2.Deserialize(stream2);
             stream2.Close();
-
             return p;
         }
-
         public static bool Agregarusuarioalalista(User u1)
         {
             for (int i = 0; i < listausuarios.Count; i++)
             {
-
                 User ui = listausuarios[i];
-
                 if (ui.Email == u1.Email)
                 {
                     Console.WriteLine("Ya existe una cuenta con este email");
@@ -52,18 +44,14 @@ namespace Proyecto
                     Console.WriteLine("Ya existe este nombre de usuario, pruebe con otro");
                     return false;
                 }
-
             }
-
             listausuarios.Add(u1);
             Almacenar(listausuarios);
             Console.WriteLine("Usuario correctamente registrado");
             return true;
         }
-
         public static bool Ingresaralaapp(string email, string password)
         {
-
             bool usuarioencontrado = false;
             User ui = null;
             for (int j = 0; j < listausuarios.Count; j++)
@@ -73,7 +61,6 @@ namespace Proyecto
                 {
                     usuarioencontrado = true;
                     break;
-
                 }
             }
             if (usuarioencontrado == true)
@@ -113,11 +100,8 @@ namespace Proyecto
                     Console.WriteLine("============");
                     Console.WriteLine(lista[i].InformacionUsuario());
                     Console.WriteLine(" ");
-
                 }
             }
-
-
         }
         public static void Activarlista()
         {
@@ -146,8 +130,6 @@ namespace Proyecto
                 {
                     funko = "noup";
                 }
-                
-
             }
             if (funko == "correcto")
             {
@@ -164,7 +146,6 @@ namespace Proyecto
             string info = "No hay info";
             for (int j = 0; j < listausuarios.Count; j++)
             {
-                
                 if (listausuarios[j].Email == email)
                 {
                     info = listausuarios[j].InformacionUsuario();              
@@ -203,7 +184,6 @@ namespace Proyecto
                 {
                     funko = "noup";
                 }
-
             }
             if (funko == "correcto")
             {
@@ -214,7 +194,6 @@ namespace Proyecto
                 return false;
             }
         }
-
         public static bool Cambiarnombre(string email, string contrasena, string nuevonombre)
         {
             string funko = "correcto";
@@ -233,13 +212,11 @@ namespace Proyecto
                         funko = "noup";
                     }
                     break;
-
                 }
                 else
                 {
                     funko = "noup";
                 }
-
             }
             if (funko == "correcto")
             {
@@ -250,6 +227,5 @@ namespace Proyecto
                 return false;
             }
         }
-
     }
 }

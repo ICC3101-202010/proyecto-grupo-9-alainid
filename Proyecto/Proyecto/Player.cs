@@ -4,9 +4,9 @@ using System.Text;
 
 namespace Proyecto
 {
-    //class Play:Video,Song
-    //{
+    class Player
+    {
         //public List<Video>=new Video;
         //public List<Sing>= new Song;
-    //}
+    }
 }

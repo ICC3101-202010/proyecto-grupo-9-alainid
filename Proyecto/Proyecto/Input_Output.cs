@@ -12,6 +12,7 @@ namespace Proyecto
         {
             Funciones funciones = new Funciones();
             Admin a = new Admin();
+            Player pla = new Player();
             Console.WriteLine("Bienvendio a ALAINID");
             Console.WriteLine("========================");
 
