@@ -120,15 +120,16 @@ namespace Proyecto
                                                                 //AQUI TIENE QUE HABER UN VERIFICADOR DE SI ESTA CANCION EXISTE                                                            
 
                                                                 int opcion2 = '\0';
-                                                                while (opcion2 != 3)
+                                                                while (opcion2 != 4)
                                                                 {
                                                                     Console.Clear();
                                                                     Console.WriteLine("========================");
                                                                     Console.WriteLine(" ");
                                                                     Console.WriteLine("1.PLAY");
                                                                     Console.WriteLine("2.PAUSA");
-                                                                    Console.WriteLine("3.PARAR");
-                                                                    opcion2 = funciones.Numero(3);
+                                                                    Console.WriteLine("3.REANUDAR");
+                                                                    Console.WriteLine("4.PARAR");
+                                                                    opcion2 = funciones.Numero(4);
                                                                     switch(opcion2)
                                                                     {
                                                                         case 1:
@@ -138,11 +139,14 @@ namespace Proyecto
                                                                             pla.PauseSong();
                                                                             break;
                                                                         case 3:
+                                                                            pla.ResumeSong();
+                                                                            break;
+                                                                        case 4:
                                                                             pla.StopSong();
                                                                             break;
                                                                     }
                                                                 }
-                                                                pla.Playsong("Canciones/" + nombrecancion + ".mp3");
+                                                                
                                                                 break;
                                                             case 2:
                                                                 break;
@@ -395,7 +399,33 @@ namespace Proyecto
                             switch (accion20)
                             {
                                 case 1:
-                                    
+                                    Console.Clear();
+                                    string nombrecan  =  "";
+                                    string categoria = "";
+                                    string cantante =  "";
+                                    string genero =  "";
+                                    string compositor ="";
+                                    int añopublicacion = 0;
+                                    string disquera = "";
+                                    string album = "";
+                                    float duracion = 0;
+                                    string tipoarchivo = "";
+                                    float tamano = 0;
+                                    string calidad = "";
+                                    string nombrearchivo = "";
+                                    Console.WriteLine("Ingrese nombre de la cancion:");
+                                    nombrecan = Console.ReadLine();
+                                    Console.WriteLine("Ingrese categoria de la cancion:");
+                                    categoria = Console.ReadLine();
+                                    Console.WriteLine("Ingrese cantante o grupo de la canción:");
+                                    cantante  = Console.ReadLine();
+                                    Console.WriteLine("Ingrese genero de la canción:");
+                                    genero = Console.ReadLine();
+                                    Console.WriteLine("Ingrese el compositor de la cancion:");
+                                    compositor = Console.ReadLine();
+                                    Console.WriteLine("Ingrese año de la publicación de la canción");
+                                    añopublicacion= Convert.ToInt32(Console.ReadLine());
+                                    Console.WriteLine("Ingrese disquera de la canción");
                                     break;
 
                             }

@@ -72,6 +72,12 @@ namespace Proyecto
         }
 
         public List<PlaylistSong> Lista_playlistusuario { get => lista_playlistusuario; set => lista_playlistusuario = value; }
+        public List<PlaylistSong> playlistcanciones_seguidas = new List<PlaylistSong>();
+        public List<Video> videos_seguidos = new List<Video>();
+        public List<Artista> artistas_seguidas = new List<Artista>();
+        public List<User> user_seguidas = new List<User>();
+
+
 
         public User(string _nombre_, string _nomusuario_, string _email_, string _password_)
         {
@@ -93,63 +99,66 @@ namespace Proyecto
             Lista_playlistusuario.Add(playlistSong);
         }
 
-        public void Agregar_cancion(Song song)
+        public void Agregar_cancion_favoritos(Song song)
         {
-            
+            ALAINID.favorite_songs.Add(song);
+        }
+        public void Agregar_video_favoritos(Video video)
+        {
+            ALAINID.favorite_videos.Add(video);
         }
 
-        
 
 
-    /*
-    public List<Song> Busqueda_filtrada(string _criterio, string _valor)
-    {
-        listafiltrada = new List<Song>();
-
-
-    public bool crear_Playlist(string criterio, string valorCriterio, string nombrePlaylist)
-    {
-
-        List<Song> listplay = Busqueda_filtrada(criterio, valorCriterio);
-        if (listplay.Count == 0)
+        /*
+        public List<Song> Busqueda_filtrada(string _criterio, string _valor)
         {
-            Console.WriteLine("Por ende, no ha sido posible  crear la playlist");
-            return false;
-        }
+            listafiltrada = new List<Song>();
 
-        for (int i = 0; i < listplay2.Count; i++)
+
+        public bool crear_Playlist(string criterio, string valorCriterio, string nombrePlaylist)
         {
-            if (listplay2[i].NombrePlaylist == nombrePlaylist)
+
+            List<Song> listplay = Busqueda_filtrada(criterio, valorCriterio);
+            if (listplay.Count == 0)
             {
-                Console.WriteLine("La playlist ya existe");
+                Console.WriteLine("Por ende, no ha sido posible  crear la playlist");
                 return false;
             }
+
+            for (int i = 0; i < listplay2.Count; i++)
+            {
+                if (listplay2[i].NombrePlaylist == nombrePlaylist)
+                {
+                    Console.WriteLine("La playlist ya existe");
+                    return false;
+                }
+            }
         }
+
+        Playlist listplay3 = new Playlist(nombrePlaylist, listplay);
+        listplay2.Add(listplay3);
+        Console.WriteLine("===============================");
+        Console.WriteLine("Playlist exitosamente agregada");
+        Console.WriteLine("===============================");
+        Console.WriteLine(listplay3.informationPLN());
+        Console.WriteLine(listplay3.informationPLL());
+        Console.WriteLine("===============================");
+        return true;
+
+
+
+
+
+
+
+        public List<Cancion> Busqueda_filtrada(string _criterio, string _valor)
+        {
+        listafiltrada = new List<Cancion>();
+
+
+        return listafiltrada;*/
+
+
     }
-
-    Playlist listplay3 = new Playlist(nombrePlaylist, listplay);
-    listplay2.Add(listplay3);
-    Console.WriteLine("===============================");
-    Console.WriteLine("Playlist exitosamente agregada");
-    Console.WriteLine("===============================");
-    Console.WriteLine(listplay3.informationPLN());
-    Console.WriteLine(listplay3.informationPLL());
-    Console.WriteLine("===============================");
-    return true;
-
-
-
-
-
-
-
-    public List<Cancion> Busqueda_filtrada(string _criterio, string _valor)
-    {
-    listafiltrada = new List<Cancion>();
-
-
-    return listafiltrada;*/
-
-
-}
 }

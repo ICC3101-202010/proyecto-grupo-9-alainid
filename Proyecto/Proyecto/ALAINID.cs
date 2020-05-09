@@ -17,7 +17,8 @@ namespace Proyecto
         public static List<Artista> lista_directores = new List<Artista>();
         public static List<Artista> lista_cantanes = new List<Artista>();
         public static List<Artista> lista_compositores = new List<Artista>();
-
+        public static List<Song> favorite_songs = new List<Song>();
+        public static List<Video> favorite_videos = new List<Video>();
 
 
         static void Almacenar(List<User> u)      //Serializamos

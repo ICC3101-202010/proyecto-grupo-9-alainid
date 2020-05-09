@@ -20,6 +20,14 @@ namespace Proyecto
             wmp.URL = archivocancion;
             wmp.controls.play();
             currpos = 0;
+            foreach (Song so in ALAINID.todas_las_canciones)
+            {
+               if ( so.nombrearchivo == archivocancion)
+               {
+                    so.reproducciones++;
+               }
+            }
+ 
         }
         public void StopSong()
         {
