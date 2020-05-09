@@ -4,6 +4,7 @@ using System.Text;
 
 namespace Proyecto
 {
+    [Serializable]
     public class Song
     {
         public string nombrecancion;

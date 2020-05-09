@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
 
 namespace Proyecto
 {
@@ -26,6 +27,7 @@ namespace Proyecto
 
                 {
                     Console.WriteLine("Cancion ya estaba antes agregada");
+                    Thread.Sleep(2000);
                     return false;
                 }
 
@@ -36,6 +38,7 @@ namespace Proyecto
             Console.WriteLine("================");
             ALAINID.Partir();
             VerCanciones(ALAINID.todas_las_canciones);
+            Thread.Sleep(2000);
             return true;
         }
 

@@ -401,11 +401,11 @@ namespace Proyecto
                             {
                                 case 1:
                                     Console.Clear();
-                                    string nombrecan  =  "";
+                                    string nombrecan = "";
                                     string categoria = "";
-                                    string cantante =  "";
-                                    string genero =  "";
-                                    string compositor ="";
+                                    string cantante = "";
+                                    string genero = "";
+                                    string compositor =  "";
                                     int anopublicacion = 0;
                                     string disquera = "";
                                     string album = "";
@@ -419,13 +419,13 @@ namespace Proyecto
                                     Console.WriteLine("Ingrese categoria de la cancion:");
                                     categoria = Console.ReadLine();
                                     Console.WriteLine("Ingrese cantante o grupo de la canción:");
-                                    cantante  = Console.ReadLine();
+                                    cantante = Console.ReadLine();
                                     Console.WriteLine("Ingrese genero de la canción:");
                                     genero = Console.ReadLine();
                                     Console.WriteLine("Ingrese el compositor de la cancion:");
                                     compositor = Console.ReadLine();
                                     Console.WriteLine("Ingrese año de la publicación de la canción");
-                                    anopublicacion= Convert.ToInt32(Console.ReadLine());
+                                    anopublicacion  = Convert.ToInt32(Console.ReadLine());
                                     Console.WriteLine("Ingrese disquera de la canción");
                                     disquera = Console.ReadLine();
                                     Console.WriteLine("Ingrese album al que pertenece la cancion");
@@ -433,24 +433,35 @@ namespace Proyecto
                                     Console.WriteLine("Ingrese duracion de la canción");
                                     duracion = float.Parse(Console.ReadLine());
                                     Console.WriteLine("Ingrese tipo archivo de la canción");
-                                    tipoarchivo  = Console.ReadLine();
+                                    tipoarchivo = Console.ReadLine();
                                     Console.WriteLine("Ingrese tamaño del archivo de la canción");
                                     tamano = float.Parse(Console.ReadLine());
                                     Console.WriteLine("Ingrese la calidade del archivo de la canción");
                                     calidad = Console.ReadLine();
                                     Console.WriteLine("Ingrese ubicación del archivo");
-                                    nombrearchivo  = Console.ReadLine();
-                                    Song s = new Song(nombrecan, categoria, cantante, genero, compositor, anopublicacion, disquera, album, duracion, tipoarchivo, tamano, calidad, nombrearchivo);;
+                                    nombrearchivo = Console.ReadLine();
+                                    Song s = new Song(nombrecan, categoria, cantante, genero, compositor, anopublicacion, disquera, album, duracion, tipoarchivo, tamano, calidad, nombrearchivo);
                                     ALAINID.Activarlistacanciones();
                                     a.AgregarSong(s);
                                     break;
-
+                                case 2:
+                                    ALAINID.Activarlistacanciones();
+                                    a.VerCanciones(ALAINID.todas_las_canciones);
+                                    Thread.Sleep(2000);
+                                    break;
+                            
                             }
 
+
+
+
+                        
+
                         }
+                        break;
                             
 
-                        break;
+                        
                     case 3:
                         Console.Clear();
                         Console.WriteLine("Has salido del programa");
