@@ -12,7 +12,7 @@ namespace Proyecto
         private string categoria;
         private string director;
         private string genero;
-        private string anio_publicacion;
+        private int anio_publicacion;
         private string descripcion;
         private string tipo_archivo;
         private string calidad;
@@ -29,7 +29,7 @@ namespace Proyecto
         public string Categoria { get => categoria; set => categoria = value; }
         public string Director { get => director; set => director = value; }
         public string Genero { get => genero; set => genero = value; }
-        public string Anio_publicacion { get => anio_publicacion; set => anio_publicacion = value; }
+        public int Anio_publicacion { get => anio_publicacion; set => anio_publicacion = value; }
         public string Descripcion { get => descripcion; set => descripcion = value; }
         public string Tipo_archivo { get => tipo_archivo; set => tipo_archivo = value; }
         public string Calidad { get => calidad; set => calidad = value; }
@@ -40,7 +40,7 @@ namespace Proyecto
 
         // asumi que tanto la descripcion como la calificacion promedio, no son requisitos para subir una cancion
 
-        public Video(string nombre_video, float duracion, string categoria, string director, string genero, string anio_publicacion, string tipo_archivo, string calidad, string film_studio, float tamanio)
+        public Video(string nombre_video, float duracion, string categoria, string director, string genero, int anio_publicacion, string tipo_archivo, string calidad, string film_studio, float tamanio)
         {
             this.nombre_video = nombre_video;
             this.duracion = duracion;

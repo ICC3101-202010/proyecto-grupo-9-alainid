@@ -388,7 +388,7 @@ namespace Proyecto
                         Console.WriteLine("Ingresando como admin....");
                         Thread.Sleep(2000);
                         int accion20 = '\0';
-                        while (accion20 != 3)
+                        while (accion20 != 6)
                         {
                             Console.Clear();
                             Console.WriteLine("SELECCIONE UNA OPCION:");
@@ -396,8 +396,10 @@ namespace Proyecto
                             Console.WriteLine("1. AGREGAR CANCION");
                             Console.WriteLine("2. VER CANCIONES DE LA APP");
                             Console.WriteLine("3. VER LISTA DE USUARIOS DE LA APP");
-                            Console.WriteLine("4. CERRAR SESION");
-                            accion20 = funciones.Numero(4);
+                            Console.WriteLine("4. AGREGAR VIDEO");
+                            Console.WriteLine("5. VER LISTA VIDEOS DE LA APP");
+                            Console.WriteLine("6. CERRAR SESION");
+                            accion20 = funciones.Numero(6);
                             switch (accion20)
                             {
                                 case 1:
@@ -486,6 +488,47 @@ namespace Proyecto
                                         }
 
                                     }
+                                    break;
+                                case 4:
+                                    string nombre_video = "";
+                                    float duracion2  =  0;
+                                    string categoria = "";
+                                    string director = "";
+                                    string genero2 = "";
+                                    int anio_publicacion =  0;
+                                    string tipo_archivo = "";
+                                    string calidad2 = "";
+                                    string film_studio =  "";
+                                    float tamanio = 0;
+                                    Console.WriteLine("Ingrese nombre del video:");
+                                    nombre_video = Console.ReadLine();
+                                    Console.WriteLine("Ingrese duracion del video:");
+                                    duracion2 = float.Parse(Console.ReadLine());
+                                    Console.WriteLine("Ingrese genero del video:");
+                                    genero2 = Console.ReadLine();
+                                    Console.WriteLine("Ingrese la categoria del video");
+                                    categoria = Console.ReadLine();
+                                    Console.WriteLine("Ingrese el director del video:");
+                                    director = Console.ReadLine();
+                                    Console.WriteLine("Ingrese el Film Studio del video:");
+                                    film_studio = Console.ReadLine();
+                                    Console.WriteLine("Ingrese año de la publicación del video");
+                                    anio_publicacion = Convert.ToInt32(Console.ReadLine());
+                                    Console.WriteLine("Ingrese el tipo de archivo del video");
+                                    tipo_archivo = Console.ReadLine();
+                                    Console.WriteLine("Ingrese el tamaño de archivo del video");
+                                    tamanio = float.Parse(Console.ReadLine());
+                                    Console.WriteLine("Ingrese la calidad del archivo de video");
+                                    calidad2= Console.ReadLine();
+
+
+                                    break;
+                                case 5:
+                                    break;
+                                case 6:
+                                    break;
+                                default:
+                                    Console.WriteLine("No se ha seleccionado ninguna opción válida");
                                     break;
 
 

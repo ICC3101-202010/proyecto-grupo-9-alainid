@@ -259,5 +259,21 @@ namespace Proyecto
             stream4.Close();
             return s2;
         }
+
+        static void AlmacenarVideos(List<Video> u)      //Serializamos
+        {
+            IFormatter formatter5 = new BinaryFormatter();
+            Stream stream5 = new FileStream("Videos.bin", FileMode.Create, FileAccess.Write, FileShare.None);
+            formatter5.Serialize(stream5, u);
+            stream5.Close();
+        }
+        static List<Video> CargarVideos()
+        {
+            IFormatter formatter6 = new BinaryFormatter();
+            Stream stream6 = new FileStream("Videos.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
+            List<Video> v = (List<Video>)formatter6.Deserialize(stream6);
+            stream6.Close();
+            return v;
+        }
     }
 }
