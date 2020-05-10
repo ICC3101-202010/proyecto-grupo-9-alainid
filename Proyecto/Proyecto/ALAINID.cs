@@ -17,8 +17,9 @@ namespace Proyecto
         public static List<Artista> lista_directores = new List<Artista>();        // TODOS LOS DIRECTORES EN ALAINID
         public static List<Artista> lista_cantantes = new List<Artista>();        // TODOS LOS CANTANTES EN ALAINID
         public static List<Artista> lista_compositores = new List<Artista>();        // TODOS LOS COMPOSITORES EN ALAINID
-       
+
         public static List<Song> listafiltrada = new List<Song>();       // ?? ESTO NO SE Q ES????
+        public static List<User> listafiltradausuarios = new List<User>();
         public static List<string> lista_generos_canciones = new List<string>();       // TODOS LOS GENEROS DE CANCIONES QUE EXISTEN DE ALAINID
         public static List<string> lista_generos_peliculas = new List<string>();       // TODOS LOS GENEROS DE VIDEOS QUE EXISTEN DE ALAINID
         public static List<string> lista_categoria = new List<string>();       // CATEGORIAS DE PELICULAS- VIDEOS EN ALAINID
@@ -39,7 +40,7 @@ namespace Proyecto
             stream2.Close();
             return p;
         }
-        public static bool Hacerplaylist(string mail,string nombrepl)
+        public static bool Hacerplaylist(string mail, string nombrepl)
         {
             string funkaa = "";
             for (int i = 0; i < listausuarios.Count; i++)
@@ -50,8 +51,8 @@ namespace Proyecto
                     listausuarios[i].Lista_playlistusuario.Add(plysu);
                     Almacenar(listausuarios);
                     funkaa += "si";
-                    
-                }      
+
+                }
             }
             if (funkaa != "")
             {
@@ -61,7 +62,7 @@ namespace Proyecto
             {
                 return false;
             }
-                
+
         }
         public static string Vernombresplaylist(string email)
         {
@@ -109,7 +110,27 @@ namespace Proyecto
             {
 
                 User ui = listausuarios[i];
-                
+                if (ui.Email == "")
+                {
+                    Console.WriteLine("No se puede dejar vacio el mail");
+                    return false;
+                }
+                if (u1.NombreUsuario == "")
+                {
+                    Console.WriteLine("No se puede dejar vacio el nombre de usuario");
+                    return false;
+                }
+                if (u1.Password == "")
+                {
+                    Console.WriteLine("No se puede dejar vacia la contraseña");
+                    return false;
+                }
+                if (u1.Nombre == "")
+                {
+                    Console.WriteLine("No se puede dejar vacio el nombre");
+                    return false;
+                }
+
                 if (ui.Email == u1.Email)
                 {
                     Console.WriteLine("Ya existe una cuenta con este email");
@@ -137,6 +158,14 @@ namespace Proyecto
                 {
                     usuarioencontrado = true;
                     break;
+                }
+                if (email == "")
+                {
+                    Console.WriteLine("No puede dejar el mail vacio");
+                }
+                if (password == "")
+                {
+                    Console.WriteLine("No puede dejar la contraseña vacia");
                 }
             }
             if (usuarioencontrado == true)
@@ -297,7 +326,7 @@ namespace Proyecto
                 return info;
             }
         }
-        
+
         public static bool Cambiarnombreusuario(string email, string contrasena, string nuevonombre)
         {
             string funko = "correcto";
@@ -566,18 +595,203 @@ namespace Proyecto
                 for (int i = 0; i < s.Count; i++)
                 {
                     Console.WriteLine("============");
-                    Console.WriteLine(i+1+"-" + "Canción" + " " + (i + 1));
+                    Console.WriteLine(i + 1 + "-" + "Canción" + " " + (i + 1));
                     Console.WriteLine("============");
                     Console.WriteLine(s[i].nombrecancion);
                     Console.WriteLine(s[i].cantante);
                     Console.WriteLine(" ");
-                    
+
 
                 }
             }
         }
-        
+        public static List<User> UsuariosPorCriterio(string _criterio, string _valor)
+        {
+            listafiltradausuarios.Clear();
 
+            switch (_criterio)
+            {
+                case "Nombre":
+                    foreach (User _filtro in listausuarios)
+                    {
+                        if ((_filtro.nombre == _valor) && (_filtro.perfipublico == "publico"))
+                        {
+                            listafiltradausuarios.Add(_filtro);
+                        }
+                    }
+                    break;
+                case "nombre":
+                    foreach (User _filtro in listausuarios)
+                    {
+                        if ((_filtro.nombre == _valor) && (_filtro.perfipublico == "publico"))
+                        {
+                            listafiltradausuarios.Add(_filtro);
+                        }
+                    }
+                    break;
+                case "Email":
+                    foreach (User _filtro in listausuarios)
+                    {
+                        if ((_filtro.email == _valor) && (_filtro.perfipublico == "publico"))
+                        {
+                            listafiltradausuarios.Add(_filtro);
+                        }
+                    }
+                    break;
+                case "email":
+                    foreach (User _filtro in listausuarios)
+                    {
+                        if ((_filtro.email == _valor) && (_filtro.perfipublico == "publico"))
+                        {
+                            listafiltradausuarios.Add(_filtro);
+                        }
+                    }
+                    break;
+                case "Id":
+                    foreach (User _filtro in listausuarios)
+                    {
+                        if ((_filtro.nombreusuario == _valor) && (_filtro.perfipublico == "publico"))
+                        {
+                            listafiltradausuarios.Add(_filtro);
+                        }
+                    }
+                    break;
+                case "id":
+                    foreach (User _filtro in listausuarios)
+                    {
+                        if ((_filtro.nombreusuario == _valor) && (_filtro.perfipublico == "publico"))
+                        {
+                            listafiltradausuarios.Add(_filtro);
+                        }
+                    }
+
+                    break;
+
+
+
+                default:
+                    Console.WriteLine("No existen PUBLICOS que cumplas con el criterio y valor seleccionado");
+                    break;
+            }
+
+            return listafiltradausuarios;
+
+
+        }
+        public static void VerUsuariosbusqueda(List<User> s)
+
+        {
+
+            if (s.Count == 0)
+            {
+                Console.WriteLine("Usuarios no encontrados ");
+            }
+
+            else
+            {
+                for (int i = 0; i < s.Count; i++)
+                {
+                    Console.WriteLine("============");
+                    Console.WriteLine(i + 1 + "-" + "Usuario" + " " + (i + 1));
+                    Console.WriteLine("============");
+                    Console.WriteLine(s[i].nombreusuario);
+                    Console.WriteLine(s[i].nombre);
+                    Console.WriteLine(" ");
+
+
+                }
+            }
+        }
+        public static bool Cambiarprivacidadaprivado(string email, string contrasena)
+        {
+            string funko = "correcto";
+            for (int i = 0; i < listausuarios.Count; i++)
+            {
+                if (listausuarios[i].email == email)
+                {
+                    if (listausuarios[i].password == contrasena)
+                    {
+                        if (listausuarios[i].perfipublico == "privado")
+                        {
+                            Console.Clear();
+                            Console.WriteLine("Ya eras privado anteriormente");
+                            Thread.Sleep(2000);
+                            funko = "noup";
+                            break;
+                        }
+                        else
+                        {
+                            listausuarios[i].perfipublico = "privado";
+                            funko = "correcto";
+                            Almacenar(listausuarios);
+                        }
+
+                    }
+                    else
+                    {
+                        funko = "noup";
+                    }
+                    break;
+                }
+                else
+                {
+                    funko = "noup";
+                }
+            }
+            if (funko == "correcto")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public static bool Cambiarprivacidapublico(string email, string contrasena)
+        {
+            string funko = "correcto";
+            for (int i = 0; i < listausuarios.Count; i++)
+            {
+                if (listausuarios[i].email == email)
+                {
+                    if (listausuarios[i].password == contrasena)
+                    {
+                        if (listausuarios[i].perfipublico == "publico")
+                        {
+                            Console.Clear();
+                            Console.WriteLine("Ya eras publico anteriormente");
+                            Thread.Sleep(2000);
+                            funko = "noup";
+                            break;
+                        }
+                        else
+                        {
+                            listausuarios[i].perfipublico = "publico";
+                            funko = "correcto";
+                            Almacenar(listausuarios);
+                        }
+
+                    }
+                    else
+                    {
+                        funko = "noup";
+                    }
+                    break;
+                }
+                else
+                {
+                    funko = "noup";
+                }
+            }
+            if (funko == "correcto")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
 
     }
 }

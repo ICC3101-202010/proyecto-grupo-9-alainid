@@ -40,8 +40,9 @@ namespace Proyecto
 
         }
 
-        public void ResumeSong()
+        public void ResumeSong(string archivocancion)
         {
+            wmp.URL = archivocancion;
             wmp.controls.currentPosition = currpos;
             wmp.controls.play();
         }

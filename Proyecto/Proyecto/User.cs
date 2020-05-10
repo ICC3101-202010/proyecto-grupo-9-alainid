@@ -14,16 +14,17 @@ namespace Proyecto
         public string Nombre;
         private List<PlaylistSong> lista_playlistusuario = new List<PlaylistSong>();
         public bool Premium = false;
-        public  List<Song> favorite_songs = new List<Song>();        // LISTA FAVORITOS CANCIONES DE CADA USUARIO
-        public  List<Video> favorite_videos = new List<Video>();         // LISTA FAVORITOS VIDEOS DE CADA USUARIO
-        public bool PerfilPublico = true;
+        public List<Song> favorite_songs = new List<Song>();        // LISTA FAVORITOS CANCIONES DE CADA USUARIO
+        public List<Video> favorite_videos = new List<Video>();         // LISTA FAVORITOS VIDEOS DE CADA USUARIO
+        public string PerfilPublico;
         public string Ultimareproduccion;
-        public string nombreusuario{get{return NombreUsuario;}set{NombreUsuario = value;}}
-        public string nombre{get{return Nombre;}set{Nombre = value;}}
-        public string email{get{return Email;}set{Email = value;}}
-        public bool premium{get{return Premium;}set{Premium = false;}}
-        public string password{get{return Password;}set{Password = value;}}
+        public string nombreusuario { get { return NombreUsuario; } set { NombreUsuario = value; } }
+        public string nombre { get { return Nombre; } set { Nombre = value; } }
+        public string email { get { return Email; } set { Email = value; } }
+        public bool premium { get { return Premium; } set { Premium = false; } }
+        public string password { get { return Password; } set { Password = value; } }
         public string ultimareproduccion { get { return Ultimareproduccion; } set { Ultimareproduccion = value; } }
+        public string perfipublico { get { return PerfilPublico; } set { PerfilPublico = value; } }
         public List<PlaylistSong> Lista_playlistusuario { get => lista_playlistusuario; set => lista_playlistusuario = value; }
         public List<PlaylistSong> playlistcanciones_seguidas = new List<PlaylistSong>();
         public List<Video> videos_seguidos = new List<Video>();
@@ -32,13 +33,14 @@ namespace Proyecto
 
 
 
-        public User(string _nombre_, string _nomusuario_, string _email_, string _password_,string _ultimareproduccion)
+        public User(string _nombre_, string _nomusuario_, string _email_, string _password_, string _ultimareproduccion, string _privacidad)
         {
             this.email = _email_;
             this.nombre = _nombre_;
             this.password = _password_;
             this.nombreusuario = _nomusuario_;
             this.ultimareproduccion = _ultimareproduccion;
+            this.perfipublico = _privacidad;
         }
         public string InformacionUsuario()
         {
@@ -47,7 +49,7 @@ namespace Proyecto
         }
         public string InformacionUsuariopriv()
         {
-            string informacion2 = ("ID USUARIO: " + NombreUsuario + "\n" + "- Nombre: " + Nombre + "\n" + "- Email: " + Email + "\n"+ "Password:" + Password + "\n");
+            string informacion2 = ("ID USUARIO: " + NombreUsuario + "\n" + "- Nombre: " + Nombre + "\n" + "- Email: " + Email + "\n" + "- Password: " + Password + "\n" + "-Privacidad: " + PerfilPublico);
             return informacion2;
         }
         public void Crear_playlist(string nombre)
