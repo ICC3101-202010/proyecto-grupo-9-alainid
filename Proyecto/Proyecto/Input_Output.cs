@@ -58,6 +58,7 @@ namespace Proyecto
                         password2 = Console.ReadLine();
                         ALAINID.Activarlista();
                         bol = ALAINID.Ingresaralaapp(email2, password2);
+                        ALAINID.UltimaReproduccion(email2);
                         if (bol == true){
                             int accion2 = '\0';
                             while (accion2 != 9)
@@ -135,7 +136,7 @@ namespace Proyecto
                                                                 switch (opcion10){
                                                                     case 1:
                                                                         pla.Playsong(u);
-                                                                        ALAINID.Ultimareproduccion(email2, u);
+                                                                        ALAINID.GuardarUltimareproduccion(email2, u);
                                                                         break;
                                                                     case 2:
                                                                         pla.PauseSong();
@@ -185,6 +186,7 @@ namespace Proyecto
                                         break;
                                     case 2:
                                         int accion4 = '\0';
+                                        ALAINID.Activarlistacanciones();
                                         while (accion4 != 5){
                                             Console.Clear();
                                             Console.WriteLine("=================================");
@@ -384,7 +386,7 @@ namespace Proyecto
                                         Console.WriteLine("=================================");
                                         break;
                                     case 10:
-                                        pla.Playsong(ALAINID.listausuarios[0].ultimareproduccion);
+                                        pla.Playsong(ALAINID.UltimaReproduccion(email2));
                                         break;
                                     case 11:
                                         pla.PauseSong();

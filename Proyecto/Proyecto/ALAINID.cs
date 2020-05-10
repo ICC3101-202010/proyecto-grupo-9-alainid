@@ -230,7 +230,7 @@ namespace Proyecto
                 return false;
             }
         }
-        public static bool Ultimareproduccion(string email, string ultimareproduccion)
+        public static bool GuardarUltimareproduccion(string email, string ultimareproduccion)
         {
             string funko = "";
             for (int i = 0; i < listausuarios.Count; i++)
@@ -238,7 +238,9 @@ namespace Proyecto
                 if (listausuarios[i].email == email)
                 {
                     listausuarios[i].ultimareproduccion = ultimareproduccion;
-                   
+                    Almacenar(listausuarios);
+                    funko = "correcto";
+
                 }
                 else
                 {
@@ -253,6 +255,26 @@ namespace Proyecto
             {
                 return false;
             }
+        }
+        public static string UltimaReproduccion(string email)
+        {
+            string funko;
+            for (int i = 0; i < listausuarios.Count; i++)
+            {
+                if (listausuarios[i].email == email)
+                {
+                    funko = listausuarios[i].ultimareproduccion;
+                    return funko;
+                }
+                else
+                {
+
+                }
+
+            }
+            return "";
+
+
         }
         public static string Verinformacion(string email)
         {
