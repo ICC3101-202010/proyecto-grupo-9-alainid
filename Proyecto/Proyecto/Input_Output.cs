@@ -196,9 +196,9 @@ namespace Proyecto
                                                     string criterio2 = "";
                                                     string valor2 = "";
                                                     Console.WriteLine("Ingrese el criterio por el cual desea buscar al usuario");
-                                                    criterio = Console.ReadLine();
+                                                    criterio2 = Console.ReadLine();
                                                     Console.WriteLine("Ingrese el valor de ese criterio");
-                                                    valor = Console.ReadLine();
+                                                    valor2 = Console.ReadLine();
                                                     int opcion56 = '\0';
                                                     while (opcion56 != 2)
                                                     {
