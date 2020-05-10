@@ -5,7 +5,7 @@ using WMPLib;
 
 namespace Proyecto
 {
-    class Player
+    public class Player
     {
         WindowsMediaPlayer wmp;
         double currpos;

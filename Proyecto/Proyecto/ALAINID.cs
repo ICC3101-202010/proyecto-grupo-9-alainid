@@ -15,10 +15,11 @@ namespace Proyecto
         public static List<Video> todos_los_videos = new List<Video>();
         public static List<Artista> lista_actores = new List<Artista>();
         public static List<Artista> lista_directores = new List<Artista>();
-        public static List<Artista> lista_cantanes = new List<Artista>();
+        public static List<Artista> lista_cantantes = new List<Artista>();
         public static List<Artista> lista_compositores = new List<Artista>();
         public static List<Song> favorite_songs = new List<Song>();
         public static List<Video> favorite_videos = new List<Video>();
+        public static List<Song> listafiltrada = new List<Song>();
 
 
         static void Almacenar(List<User> u)      //Serializamos
@@ -117,11 +118,15 @@ namespace Proyecto
         public static void Activarlista()
         {
             listausuarios = Cargar();
-            
+
         }
         public static void Activarlistacanciones()
         {
             todas_las_canciones = CargarCancion();
+        }
+        public static void Activarlistavideos()
+        {
+            todos_los_videos = CargarVideos();
         }
 
         public static bool Cambiarcontrasena(string email, string contrasena, string nuevacontrasena)
@@ -165,9 +170,9 @@ namespace Proyecto
             {
                 if (listausuarios[j].Email == email)
                 {
-                    info = listausuarios[j].InformacionUsuario();              
+                    info = listausuarios[j].InformacionUsuario();
                     funko = "correcto";
-                }               
+                }
             }
             if (funko == "correcto")
             {
@@ -187,7 +192,7 @@ namespace Proyecto
                 {
                     if (listausuarios[i].password == contrasena)
                     {
-                        listausuarios[i].nombreusuario = nuevonombre;                    
+                        listausuarios[i].nombreusuario = nuevonombre;
                         Almacenar(listausuarios);
                         funko = "correcto";
                     }
@@ -254,20 +259,20 @@ namespace Proyecto
         static List<Song> CargarCancion()
         {
             IFormatter formatter4 = new BinaryFormatter();
-            Stream stream4 = new FileStream("Canciones.bin", FileMode.OpenOrCreate, FileAccess.ReadWrite , FileShare.None);
+            Stream stream4 = new FileStream("Canciones.bin", FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.None);
             List<Song> s2 = (List<Song>)formatter4.Deserialize(stream4);
             stream4.Close();
             return s2;
         }
 
-        static void AlmacenarVideos(List<Video> u)      //Serializamos
+        public static void AlmacenarVideos(List<Video> u)      //Serializamos
         {
             IFormatter formatter5 = new BinaryFormatter();
             Stream stream5 = new FileStream("Videos.bin", FileMode.Create, FileAccess.Write, FileShare.None);
             formatter5.Serialize(stream5, u);
             stream5.Close();
         }
-        static List<Video> CargarVideos()
+        public static List<Video> CargarVideos()
         {
             IFormatter formatter6 = new BinaryFormatter();
             Stream stream6 = new FileStream("Videos.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
@@ -275,5 +280,192 @@ namespace Proyecto
             stream6.Close();
             return v;
         }
+        public static void AlmacenarCantante(List<Artista> a)      //Serializamos
+        {
+            IFormatter formatter7 = new BinaryFormatter();
+            Stream stream7 = new FileStream("Cantantes.bin", FileMode.Create, FileAccess.Write, FileShare.None);
+            formatter7.Serialize(stream7, a);
+            stream7.Close();
+        }
+        public static List<Artista> CargarCantantes()
+        {
+            IFormatter formatter8 = new BinaryFormatter();
+            Stream stream8 = new FileStream("Cantantes.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
+            List<Artista> ar = (List<Artista>)formatter8.Deserialize(stream8);
+            stream8.Close();
+            return ar;
+        }
+        public static List<Song> CancionesPorCriterio(string _criterio, string _valor)
+        {
+            listafiltrada.Clear();
+
+            switch (_criterio)
+            {
+                case "Genero":
+                    foreach (Song _filtro in todas_las_canciones)
+                    {
+                        if (_filtro.genero == _valor)
+                        {
+                            listafiltrada.Add(_filtro);
+                        }
+                    }
+                    break;
+                case "genero":
+                    foreach (Song _filtro in todas_las_canciones)
+                    {
+                        if (_filtro.genero == _valor)
+                        {
+                            listafiltrada.Add(_filtro);
+                        }
+                    }
+                    break;
+                case "Cantante":
+                    foreach (Song _filtro in todas_las_canciones)
+                    {
+                        if (_filtro.cantante == _valor)
+                        {
+                            listafiltrada.Add(_filtro);
+                        }
+                    }
+                    break;
+                case "cantante":
+                    foreach (Song _filtro in todas_las_canciones)
+                    {
+                        if (_filtro.cantante == _valor)
+                        {
+                            listafiltrada.Add(_filtro);
+                        }
+                    }
+                    break;
+                case "Album":
+                    foreach (Song _filtro in todas_las_canciones)
+                    {
+                        if (_filtro.album == _valor)
+                        {
+                            listafiltrada.Add(_filtro);
+                        }
+                    }
+                    break;
+                case "album":
+                    foreach (Song _filtro in todas_las_canciones)
+                    {
+                        if (_filtro.album == _valor)
+                        {
+                            listafiltrada.Add(_filtro);
+                        }
+                    }
+                    break;
+                case "Nombre":
+                    foreach (Song _filtro in todas_las_canciones)
+                    {
+                        if (_filtro.nombrecancion == _valor)
+                        {
+                            listafiltrada.Add(_filtro);
+                        }
+                    }
+                    break;
+                case "nombre":
+                    foreach (Song _filtro in todas_las_canciones)
+                    {
+                        if (_filtro.nombrecancion == _valor)
+                        {
+                            listafiltrada.Add(_filtro);
+                        }
+                    }
+                    break;
+                case "Disquera":
+                    foreach (Song _filtro in todas_las_canciones)
+                    {
+                        if (_filtro.disquera == _valor)
+                        {
+                            listafiltrada.Add(_filtro);
+                        }
+                    }
+                    break;
+                case "disquera":
+                    foreach (Song _filtro in todas_las_canciones)
+                    {
+                        if (_filtro.disquera == _valor)
+                        {
+                            listafiltrada.Add(_filtro);
+                        }
+                    }
+                    break;
+                case "Compositor":
+                    foreach (Song _filtro in todas_las_canciones)
+                    {
+                        if (_filtro.compositor == _valor)
+                        {
+                            listafiltrada.Add(_filtro);
+                        }
+                    }
+                    break;
+                case "compositor":
+                    foreach (Song _filtro in todas_las_canciones)
+                    {
+                        if (_filtro.compositor == _valor)
+                        {
+                            listafiltrada.Add(_filtro);
+                        }
+                    }
+                    break;
+                case "Año":
+                    foreach (Song _filtro in todas_las_canciones)
+                    {
+                        if (_filtro.anopublicacion == _valor)
+                        {
+                            listafiltrada.Add(_filtro);
+                        }
+                    }
+                    break;
+                case "año":
+                    foreach (Song _filtro in todas_las_canciones)
+                    {
+                        if (_filtro.anopublicacion == _valor)
+                        {
+                            listafiltrada.Add(_filtro);
+                        }
+                    }
+                    break;
+
+
+                default:
+                    Console.WriteLine("No existen canciones que cumplan con el criterio y valor seleccionado");
+                    break;
+            }
+
+            return listafiltrada;
+
+        }
+        public static void Vercancionesparareproduccion(List<Song> s)
+
+        {
+
+            if (s.Count == 0)
+            {
+                Console.WriteLine("No hay canciones agregadas aún");
+            }
+
+            else
+            {
+                for (int i = 0; i < s.Count; i++)
+                {
+                    Console.WriteLine("============");
+                    Console.WriteLine(i+1+"-" + "Canción" + " " + (i + 1));
+                    Console.WriteLine("============");
+                    Console.WriteLine(s[i].nombrecancion);
+                    Console.WriteLine(" ");
+                    
+
+                }
+            }
+        }
+
+
     }
 }
+
+
+
+
+

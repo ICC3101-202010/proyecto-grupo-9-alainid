@@ -73,9 +73,9 @@ namespace Proyecto
         }
         public string Ver_informacion()
         {
-            string info = (" Genero: " + genero + "," + " Director: " + director + "," + " Actores: " + actores + "," + " Nombre: " + nombre_video +
-                " Categoria: " + categoria + "Año de publicacion: " + anio_publicacion + "Descripcion: " + descripcion + "Tipo Archivo: " + tipo_archivo +
-                "Tamanio: " + tamanio + "Calidad: " + calidad + "Film Studio: " + film_studio + "Calificacion Promedio: " + Calificacion_promedio + "Duracion: " + duracion + "\n");
+            string info = (" Genero: " + genero + "\n" + " Director: " + director + "\n" + " Actores: " + actores + "\n" + " Nombre: " + nombre_video + "\n" +
+                " Categoria: " + categoria + "\n" + "Año de publicacion: " + anio_publicacion + "\n" + "Descripcion: " + descripcion + "\n" + "Tipo Archivo: " + tipo_archivo + "\n" +
+                "Tamanio: " + tamanio + "\n" + "Calidad: " + calidad + "\n" + "Film Studio: " + film_studio + "\n" + "Calificacion Promedio: " + Calificacion_promedio + "\n" + "Duracion: " + duracion + "\n");
             return info;
         }
 

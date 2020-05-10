@@ -14,25 +14,33 @@ namespace Proyecto
             foreach (User user in ALAINID.listausuarios)
             {
                 Console.WriteLine(user.InformacionUsuario());
-
             }
         }
 
         public bool AgregarSong(Song s)
         {
-            for (int i = 0; i < ALAINID.todas_las_canciones.Count; i++)
-            {
-                Song si = ALAINID.todas_las_canciones[i];
-                if ((si.nombrecancion == s.nombrecancion) && (si.cantante == s.cantante) && (si.calidad == s.calidad))
-
-                {
+            int n1  =  0, n2  =  0;
+            foreach (Song si in ALAINID.todas_las_canciones){
+                if ((si.nombrecancion == s.nombrecancion) && (si.cantante == s.cantante) && (si.calidad == s.calidad)){
                     Console.WriteLine("Cancion ya estaba antes agregada");
                     Thread.Sleep(2000);
                     return false;
                 }
-
+                foreach (Artista art in ALAINID.lista_cantantes){
+                    if (s.cantante == art.name)
+{
+                        break;
+                    }
+                    else{
+                        Console.WriteLine("El cantante ingresado no existe, que desea hacer:" +
+                            "1--> Crear un perfil para el cantante" +
+                            "2--> No Agregar la cancion");
+                        n2 = funciones.Numero(2);
+                        if (n2 == 1) { funciones.Crear_cantante(); }
+                        else { return false; } 
+                    }
+                }
             }
-
             ALAINID.todas_las_canciones.Add(s);
             Console.WriteLine("Canción agregada");
             Console.WriteLine("================");
@@ -77,11 +85,16 @@ namespace Proyecto
                             break;
                         }
                     }
-                    Console.WriteLine("1-> Desea Ingresar otro actor" +
+                    Console.WriteLine("1-> Desea Ingresar otro actor" +" "+
                     "2-> Terminar");
                     n = funciones.Numero(2);
                 } while (n == 1);
                 ALAINID.todos_los_videos.Add(video1);
+                Console.WriteLine("=======================================");
+                Console.WriteLine("Video Agregado existosamente");
+                Console.WriteLine("=======================================");
+                ALAINID.AlmacenarVideos(ALAINID.todos_los_videos);
+                Thread.Sleep(2000);
             }
             else
             {
@@ -104,6 +117,26 @@ namespace Proyecto
                     Console.WriteLine("Canción" + " " + (i + 1));
                     Console.WriteLine("============");
                     Console.WriteLine(lista[i].Informacioncancion());
+                    Console.WriteLine(" ");
+
+                }
+            }
+        }
+        public void VerVideos(List<Video> lista)
+        {
+            if (lista.Count == 0)
+            {
+                Console.WriteLine("No hay videos agregados aún");
+            }
+
+            else
+            {
+                for (int i = 0; i < lista.Count; i++)
+                {
+                    Console.WriteLine("============");
+                    Console.WriteLine("Video" + " " + (i + 1));
+                    Console.WriteLine("============");
+                    Console.WriteLine(lista[i].Ver_informacion());
                     Console.WriteLine(" ");
 
                 }

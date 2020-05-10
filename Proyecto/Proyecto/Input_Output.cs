@@ -25,7 +25,7 @@ namespace Proyecto
                 Console.WriteLine("1. Registrarse \n");
                 Console.WriteLine("2. Ingresar a la app \n");
                 Console.WriteLine("3. Salir del programa\n");
-                accion = int.Parse(Console.ReadLine());
+                accion =funciones.Acceso_inicial();
                 switch (accion)
                 {
                     case 1:
@@ -93,74 +93,100 @@ namespace Proyecto
                                             Console.Clear();
                                             Console.WriteLine("========================");
                                             Console.WriteLine(" ");
-                                            Console.WriteLine("1. BUSQUEDA SIMPLE ");
-                                            Console.WriteLine("2. BUSQUEDA FILTRADA");
+                                            Console.WriteLine("1. BUSQUEDA FILTRADA CANCION CON UN CRITERIO");
+                                            Console.WriteLine("2. BUSQUEDA FILTRADA CANCION CON MÁS DE UN CRITERIO");
                                             Console.WriteLine("3. ATRAS");
                                             accion3 = funciones.Numero(3);
                                             switch (accion3)
                                             {
                                                 case 1:
                                                     int opcion = '\0';
-                                                    while (opcion!=3)
+                                                    while (opcion != 2)
                                                     {
                                                         Console.Clear();
+                                                        string criterio = "";
+                                                        string valor = "";
+                                                        Console.WriteLine("Ingrese el criterio por el cual desea buscar una canción");
+                                                        criterio = Console.ReadLine();
+                                                        Console.WriteLine("Ingrese el valor de ese criterio");
+                                                        valor = Console.ReadLine();
+                                                        Console.Clear();
+                                                        Console.WriteLine("Seleccione canción que desea ver");
+                                                        ALAINID.CancionesPorCriterio(criterio, valor);
+                                                        ALAINID.Vercancionesparareproduccion(ALAINID.listafiltrada);
                                                         Console.WriteLine("========================");
                                                         Console.WriteLine(" ");
-                                                        Console.WriteLine("1.BUSCAR CANCION POR NOMBRE");
-                                                        Console.WriteLine("2.BUSCAR VIDEO POR NOMBRE");
-                                                        Console.WriteLine("3.SALIR");
-                                                        opcion = funciones.Numero(3);
-                                                        switch (opcion)
+                                                        Console.WriteLine("INGRESE NUMERO DE LA CANCIÓN QUE DESEA ESCUCHAR");
+                                                        Console.WriteLine("0 PARA SALIR");
+                                                        int numerocancion = Convert.ToInt32(Console.ReadLine());
+                                                        if ((numerocancion >= 1) && (numerocancion <= ALAINID.listafiltrada.Count))
                                                         {
-                                                            case 1:
+                                                            string u  =  "";
+                                                            u = ALAINID.listafiltrada[numerocancion - 1].nombrearchivo;
+                                                            int opcion10 = '\0';
+                                                            while (opcion10 != 8)
+                                                            {
                                                                 Console.Clear();
-                                                                Console.WriteLine("========================");
-                                                                Console.WriteLine(" ");
-                                                                Console.WriteLine("INGRESE NOMBRE CANCION");
-                                                                string nombrecancion = Console.ReadLine();
-
-                                                                //AQUI TIENE QUE HABER UN VERIFICADOR DE SI ESTA CANCION EXISTE                                                            
-
-                                                                int opcion2 = '\0';
-                                                                while (opcion2 != 4)
+                                                                //ALAINID.listafiltrada[numerocancion - 1].nombrearchivo;
+                                                                Console.WriteLine("1. COMENZAR REPRODUCCION");
+                                                                Console.WriteLine("2. PAUSAR REPRODUCCION");
+                                                                Console.WriteLine("3. REANUDAR REPRODUCCIÓN");
+                                                                Console.WriteLine("4. PARAR REPRODUCCIÓN");
+                                                                Console.WriteLine("5. VER INFORMACIÓN DE LA CANCIÓN ");
+                                                                Console.WriteLine("6. AGREGAR A PLAYLIST ");
+                                                                Console.WriteLine("7. AGREGAR A FAVORITOS ");
+                                                                Console.WriteLine("8. SALIR");
+                                                                opcion10 = funciones.Numero(8);
+                                                                switch (opcion10)
                                                                 {
-                                                                    Console.Clear();
-                                                                    Console.WriteLine("========================");
-                                                                    Console.WriteLine(" ");
-                                                                    Console.WriteLine("1.PLAY");
-                                                                    Console.WriteLine("2.PAUSA");
-                                                                    Console.WriteLine("3.REANUDAR");
-                                                                    Console.WriteLine("4.PARAR");
-                                                                    opcion2 = funciones.Numero(4);
-                                                                    switch(opcion2)
-                                                                    {
-                                                                        case 1:
-                                                                            pla.Playsong("Canciones/" + nombrecancion + ".mp3");
-                                                                            break;
-                                                                        case 2:
-                                                                            pla.PauseSong();
-                                                                            break;
-                                                                        case 3:
-                                                                            pla.ResumeSong();
-                                                                            break;
-                                                                        case 4:
-                                                                            pla.StopSong();
-                                                                            break;
-                                                                    }
+                                                                    case 1:
+                                                                        pla.Playsong(u);
+                                                                        break;
+                                                                    case 2:
+                                                                        pla.PauseSong();
+                                                                        break;
+                                                                    case 3:
+                                                                        pla.ResumeSong();
+                                                                        break;
+                                                                    case 4:
+                                                                        pla.StopSong();
+                                                                        break;
+                                                                    case 5:
+                                                                        break;
+                                                                    case 6:
+                                                                        break;
+                                                                    case 7:
+                                                                        break;
+                                                                    case 8:
+                                                                        break;
+                                                                    default:
+                                                                        Console.WriteLine("SELECCIONA UNA OPCION VALIDA");
+                                                                        break;
+
+
+
                                                                 }
-                                                                
-                                                                break;
-                                                            case 2:
-                                                                break;
-                                                            case 3:
-                                                                break;
+
+
+                                                            }
+
 
                                                         }
-                                                        
-                                                        
+                                                        else
+                                                        {
+                                                            if (numerocancion == 0)
+                                                            {
+                                                                break;
+                                                            }
+
+                                                        }
+
+
+
+
                                                     }
                                                     break;
-                                                    
+                                                      
                                                 case 2:
                                                     //METODO BUSQUEDA FILTRADA
                                                     break;
@@ -376,6 +402,13 @@ namespace Proyecto
                                             }
                                         }
                                         break;
+                                    case 9:
+                                        Console.WriteLine("=================================");
+                                        Console.WriteLine("CERRANDO SESION....");
+
+                                        Console.WriteLine("=================================");
+                                        break;
+                                      
 
 
 
@@ -408,7 +441,7 @@ namespace Proyecto
                                     string cantante = "";
                                     string genero = "";
                                     string compositor =  "";
-                                    int anopublicacion = 0;
+                                    string anopublicacion = "";
                                     string disquera = "";
                                     string album = "";
                                     float duracion = 0;
@@ -425,7 +458,7 @@ namespace Proyecto
                                     Console.WriteLine("Ingrese el compositor de la cancion:");
                                     compositor = Console.ReadLine();
                                     Console.WriteLine("Ingrese año de la publicación de la canción");
-                                    anopublicacion  = Convert.ToInt32(Console.ReadLine());
+                                    anopublicacion  = Console.ReadLine();
                                     Console.WriteLine("Ingrese disquera de la canción");
                                     disquera = Console.ReadLine();
                                     Console.WriteLine("Ingrese album al que pertenece la cancion");
@@ -520,12 +553,37 @@ namespace Proyecto
                                     tamanio = float.Parse(Console.ReadLine());
                                     Console.WriteLine("Ingrese la calidad del archivo de video");
                                     calidad2= Console.ReadLine();
-
-
+                                    Console.Clear();
+                                    a.Subir_video(nombre_video,  duracion2,  categoria, director, genero2, anio_publicacion,  tipo_archivo, calidad2, film_studio,  tamanio);
+                                    ALAINID.Activarlistavideos();
                                     break;
                                 case 5:
+                                    int accion25 = '\0';
+                                    while (accion25 != 1)
+                                    {
+                                        Console.Clear();
+                                        ALAINID.Activarlistavideos();
+                                        a.VerVideos(ALAINID.todos_los_videos);
+                                        Console.WriteLine("=================================");
+                                        Console.WriteLine("1. ATRAS");
+
+                                        Console.WriteLine("=================================");
+                                        accion25 = funciones.Numero(1);
+                                        switch (accion25)
+                                        {
+                                            case 1:
+                                                break;
+
+                                        }
+
+                                    }
                                     break;
                                 case 6:
+                                    Console.WriteLine("=================================");
+                                    Console.WriteLine("CERRANDO SESION....");
+                                    
+                                    Console.WriteLine("=================================");
+                                    Thread.Sleep(2000);
                                     break;
                                 default:
                                     Console.WriteLine("No se ha seleccionado ninguna opción válida");
