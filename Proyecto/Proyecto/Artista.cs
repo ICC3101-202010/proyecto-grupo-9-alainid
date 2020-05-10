@@ -11,14 +11,16 @@ namespace Proyecto
         public string last;
         public int age;
         public string nacionality;
+        public string sexo;
         public List<PlaylistSong> lista_album = new List<PlaylistSong>();
 
 
-        public Artista(string name, string last, int age, string nacionality)
+        public Artista(string name, string last, int age, string sexo, string nacionality)
         {
             this.name = name;
             this.last = last;
             this.age = age;
+            this.sexo = sexo;
             this.nacionality = nacionality;
         }
     }

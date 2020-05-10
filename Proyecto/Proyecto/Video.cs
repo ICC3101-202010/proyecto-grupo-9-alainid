@@ -9,17 +9,17 @@ namespace Proyecto
     {
         private string nombre_video;
         private float duracion;
-        private string categoria;
-        private string director;
-        private string genero;
+        private string categoria;  //tiene que estar en la lista de categorias
+        private object director; // tiene que estar en la lista de directores
+        private string genero; // tiene q estar en la lista de generos 
         private int anio_publicacion;
         private string descripcion;
         private string tipo_archivo;
         private string calidad;
-        private string film_studio;
+        private string film_studio; // tiene que estar en la lista de estudios de pelicula
         private float tamanio;
         private float calificacion_promedio;
-        public List<Artista> actores = new List<Artista>();
+        public List<Artista> actores = new List<Artista>(); // ACTORES DE CADA PELICULA- VIDEO
 
 
         //public float calificacion_personal; 
@@ -27,7 +27,7 @@ namespace Proyecto
         public string Nombre_video { get => nombre_video; set => nombre_video = value; }
         public float Duracion { get => duracion; set => duracion = value; }
         public string Categoria { get => categoria; set => categoria = value; }
-        public string Director { get => director; set => director = value; }
+        public object Director { get => director; set => director = value; }
         public string Genero { get => genero; set => genero = value; }
         public int Anio_publicacion { get => anio_publicacion; set => anio_publicacion = value; }
         public string Descripcion { get => descripcion; set => descripcion = value; }
@@ -40,7 +40,7 @@ namespace Proyecto
 
         // asumi que tanto la descripcion como la calificacion promedio, no son requisitos para subir una cancion
 
-        public Video(string nombre_video, float duracion, string categoria, string director, string genero, int anio_publicacion, string tipo_archivo, string calidad, string film_studio, float tamanio)
+        public Video(string nombre_video, float duracion, string categoria, object director, string genero, int anio_publicacion, string tipo_archivo, string calidad, string film_studio, float tamanio)
         {
             this.nombre_video = nombre_video;
             this.duracion = duracion;
@@ -59,6 +59,11 @@ namespace Proyecto
         public void Agregar_actores(Artista actor)
         {
             bool ver2 = true;
+            foreach (Artista acto in ALAINID.lista_actores)
+            {
+                if (acto == actor) { ver2 = true; break; }
+                else { ver2 = true; }
+            }
             foreach (Artista ac in actores)
             {
                 if (ac == actor) { ver2 = false; break; }
@@ -67,7 +72,7 @@ namespace Proyecto
             if (ver2 == true) { actores.Add(actor); }
             else
             {
-                Console.WriteLine("El artista que intentas ingresar, ya fue ingresado");
+                Console.WriteLine("El artista que intentas ingresar, ya fue ingresado o no existe");
             }
 
         }

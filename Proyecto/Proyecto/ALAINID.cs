@@ -10,16 +10,18 @@ namespace Proyecto
 {
     public static class ALAINID
     {
-        public static List<User> listausuarios = new List<User>();
-        public static List<Song> todas_las_canciones = new List<Song>();
-        public static List<Video> todos_los_videos = new List<Video>();
-        public static List<Artista> lista_actores = new List<Artista>();
-        public static List<Artista> lista_directores = new List<Artista>();
-        public static List<Artista> lista_cantantes = new List<Artista>();
-        public static List<Artista> lista_compositores = new List<Artista>();
-        public static List<Song> favorite_songs = new List<Song>();
-        public static List<Video> favorite_videos = new List<Video>();
-        public static List<Song> listafiltrada = new List<Song>();
+        public static List<User> listausuarios = new List<User>();       // TODOS LOS USUARIOS DE ALAINID
+        public static List<Song> todas_las_canciones = new List<Song>();        // TODAS LAS CANCIONES EN ALAINID
+        public static List<Video> todos_los_videos = new List<Video>();        // TODOS LOS VIDEOS EN ALAINID
+        public static List<Artista> lista_actores = new List<Artista>();        // TODOS LOS ACTORES EN ALAINID
+        public static List<Artista> lista_directores = new List<Artista>();        // TODOS LOS DIRECTORES EN ALAINID
+        public static List<Artista> lista_cantantes = new List<Artista>();        // TODOS LOS CANTANTES EN ALAINID
+        public static List<Artista> lista_compositores = new List<Artista>();        // TODOS LOS COMPOSITORES EN ALAINID
+       
+        public static List<Song> listafiltrada = new List<Song>();       // ?? ESTO NO SE Q ES????
+        public static List<string> lista_generos_canciones = new List<string>();       // TODOS LOS GENEROS DE CANCIONES QUE EXISTEN DE ALAINID
+        public static List<string> lista_generos_peliculas = new List<string>();       // TODOS LOS GENEROS DE VIDEOS QUE EXISTEN DE ALAINID
+        public static List<string> lista_categoria = new List<string>();       // CATEGORIAS DE PELICULAS- VIDEOS EN ALAINID
 
 
         static void Almacenar(List<User> u)      //Serializamos
@@ -37,11 +39,77 @@ namespace Proyecto
             stream2.Close();
             return p;
         }
+        public static bool Hacerplaylist(string mail,string nombrepl)
+        {
+            string funkaa = "";
+            for (int i = 0; i < listausuarios.Count; i++)
+            {
+                if (listausuarios[i].Email == mail)
+                {
+                    PlaylistSong plysu = new PlaylistSong(nombrepl);
+                    listausuarios[i].Lista_playlistusuario.Add(plysu);
+                    Almacenar(listausuarios);
+                    funkaa += "si";
+                    
+                }      
+            }
+            if (funkaa != "")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+                
+        }
+        public static string Vernombresplaylist(string email)
+        {
+            string info = "No hay Playlist";
+            for (int j = 0; j < listausuarios.Count; j++)
+            {
+                if (listausuarios[j].Email == email)
+                {
+                    info = "Nombres de tus playlist: \n";
+                    for (int i = 0; i < listausuarios[j].Lista_playlistusuario.Count; i++)
+                    {
+                        info += i + 1 + ". " + listausuarios[j].Lista_playlistusuario[i].NombrePlaylist + "\n";
+                    }
+                }
+            }
+            return info;
+        }
+        public static string VerinformacionPlaylist(string email, string nombreply)
+        {
+            string info = "No hay info";
+            for (int j = 0; j < listausuarios.Count; j++)
+            {
+                if (listausuarios[j].Email == email)
+                {
+                    if (listausuarios[j].Lista_playlistusuario.Count > 0)
+                    {
+                        for (int i = 0; i < listausuarios[j].Lista_playlistusuario.Count; i++)
+                        {
+                            if (listausuarios[j].Lista_playlistusuario[i].NombrePlaylist == nombreply)
+                            {
+                                info = listausuarios[j].Lista_playlistusuario[i].InformationPLL();
+                            }
+
+                        }
+                    }
+                }
+            }
+            return info;
+
+        }
+
         public static bool Agregarusuarioalalista(User u1)
         {
             for (int i = 0; i < listausuarios.Count; i++)
             {
+
                 User ui = listausuarios[i];
+                
                 if (ui.Email == u1.Email)
                 {
                     Console.WriteLine("Ya existe una cuenta con este email");
@@ -162,6 +230,30 @@ namespace Proyecto
                 return false;
             }
         }
+        public static bool Ultimareproduccion(string email, string ultimareproduccion)
+        {
+            string funko = "";
+            for (int i = 0; i < listausuarios.Count; i++)
+            {
+                if (listausuarios[i].email == email)
+                {
+                    listausuarios[i].ultimareproduccion = ultimareproduccion;
+                   
+                }
+                else
+                {
+                    funko = "noup";
+                }
+            }
+            if (funko == "correcto")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
         public static string Verinformacion(string email)
         {
             string funko = "";
@@ -183,6 +275,7 @@ namespace Proyecto
                 return info;
             }
         }
+        
         public static bool Cambiarnombreusuario(string email, string contrasena, string nuevonombre)
         {
             string funko = "correcto";
@@ -454,12 +547,14 @@ namespace Proyecto
                     Console.WriteLine(i+1+"-" + "Canción" + " " + (i + 1));
                     Console.WriteLine("============");
                     Console.WriteLine(s[i].nombrecancion);
+                    Console.WriteLine(s[i].cantante);
                     Console.WriteLine(" ");
                     
 
                 }
             }
         }
+        
 
 
     }

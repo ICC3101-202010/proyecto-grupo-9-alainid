@@ -8,9 +8,9 @@ namespace Proyecto
     public class Song
     {
         public string nombrecancion;
-        public string cantante;
-        public string genero;
-        public string compositor;
+        public object cantante;
+        public string genero; // este tiene q estar en la lista con los generos
+        public object compositor;
         public string anopublicacion;
         public string disquera;
         public string album;
@@ -27,11 +27,10 @@ namespace Proyecto
         // asumi que no todas las canciones seran subidas con su letra por lo tanto no es requisito par acerar cancion al igual que la calificacion
         //y el numero de reproducciones
 
-        public Song(string nombre, string cantante1, string genero1, string compositor1,
+        public Song(string nombre, object cantante1, string genero1, object compositor1,
              string anopublicacion1, string disquera1, string album1, float duracion1, string tipodearchivo1, float tamano1, string calidad1, string nombrearchivo1)
         {
             nombrecancion = nombre;
-            
             cantante = cantante1;
             genero = genero1;
             compositor = compositor1;

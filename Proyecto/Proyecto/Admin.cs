@@ -21,26 +21,53 @@ namespace Proyecto
         {
             int n1  =  0, n2  =  0;
             foreach (Song si in ALAINID.todas_las_canciones){
-                if ((si.nombrecancion == s.nombrecancion) && (si.cantante == s.cantante) && (si.calidad == s.calidad)){
-                    Console.WriteLine("Cancion ya estaba antes agregada");
+                if (si==s){
+                    Console.WriteLine("esta cancion ya existe en ALAINID");
                     Thread.Sleep(2000);
                     return false;
                 }
-                foreach (Artista art in ALAINID.lista_cantantes){
-                    if (s.cantante == art.name)
-{
+            }
+            int h = 0;
+            foreach (Artista art in ALAINID.lista_cantantes){
+                if (s.cantante == art.name){
+                    h=1;
+                    s.cantante = art;
+                    break;
+                }
+            }
+            if (h == 0){
+                Console.WriteLine("El cantante ingresado no existe, que desea hacer:\n" +
+                              "1--> Crear un perfil para el cantante\n" +
+                              "2--> No Agregar la cancion\n");
+                n2 = funciones.Numero(2);
+                if (n2 == 1){
+                    funciones.Crear_cantante();
+                    h = 2;
+                }
+                else{ 
+                    return false; 
+                }
+            }
+            if (h == 2){
+                Console.WriteLine("Ingrese el nombre del cantante recien aniadido: ");
+                string cc = Console.ReadLine();
+                foreach (Artista art in ALAINID.lista_cantantes)
+                {
+                    if (s.cantante == art){
+                        s.cantante = art;
                         break;
-                    }
-                    else{
-                        Console.WriteLine("El cantante ingresado no existe, que desea hacer:" +
-                            "1--> Crear un perfil para el cantante" +
-                            "2--> No Agregar la cancion");
-                        n2 = funciones.Numero(2);
-                        if (n2 == 1) { funciones.Crear_cantante(); }
-                        else { return false; } 
                     }
                 }
             }
+            foreach (Artista art in ALAINID.lista_cantantes){
+                if (s.cantante == art.name)
+                {
+                    h = 1;
+                    s.cantante = art;
+                    break;
+                }
+            }
+
             ALAINID.todas_las_canciones.Add(s);
             Console.WriteLine("Canción agregada");
             Console.WriteLine("================");
@@ -50,37 +77,26 @@ namespace Proyecto
             return true;
         }
 
-        public void Subir_video(string nombre_video, float duracion, string categoria, string director, string genero, int anio_publicacion, string tipo_archivo, string calidad, string film_studio, float tamanio)
-        {
+        public void Subir_video(string nombre_video, float duracion, string categoria, string director, string genero, int anio_publicacion, string tipo_archivo, string calidad, string film_studio, float tamanio){
             bool ver2 = true;
-            foreach (Video video in ALAINID.todos_los_videos)
-            {
-                if (video.Nombre_video == nombre_video & video.Director == director & video.Calidad == calidad)
-                {
+            Video video1 = new Video(nombre_video, duracion, categoria, director, genero, anio_publicacion, tipo_archivo, calidad, film_studio, tamanio);
+
+            foreach (Video video in ALAINID.todos_los_videos){
+                if (video==video1){
                     ver2 = false;
                     break;
                 }
             }
-
-            if (ver2 == true)
-            {
-                Video video1 = new Video(nombre_video, duracion, categoria, director, genero, anio_publicacion, tipo_archivo, calidad, film_studio, tamanio);
-
+            if (ver2 == true){
                 int n;
-                do
-                {
-
+                do{
                     Console.WriteLine("Ingrese el nombre del actor: ");
                     string nombre_actor = Console.ReadLine();
-                    foreach (Artista art in ALAINID.lista_actores)
-                    {
-                        if (art.name == nombre_actor)
-                        {
+                    foreach (Artista art in ALAINID.lista_actores){
+                        if (art.name == nombre_actor){
                             video1.Agregar_actores(art);
                             break;
-                        }
-                        else
-                        {
+                        }else{
                             Console.WriteLine("El Artista ingresado no existe");
                             break;
                         }
