@@ -23,6 +23,11 @@ namespace Proyecto
         public static List<User> listafiltradausuarios = new List<User>();
         public static List<string> lista_generos_canciones = new List<string>();       // TODOS LOS GENEROS DE CANCIONES QUE EXISTEN DE ALAINID
         public static List<string> lista_generos_peliculas = new List<string>();       // TODOS LOS GENEROS DE VIDEOS QUE EXISTEN DE ALAINID
+        public static List<string> lista_calidad_cancion = new List<string>();       // TODAS LAS CALIDADES POSIBLES DE CANCIONES EN  ALAINID
+        public static List<string> lista_tipoarchivo_cancion = new List<string>();       // TODOS TIPOS DE ARCHIVO DE CANCIONES QUE SOPORTA  ALAINID
+        public static List<string> lista_calidad_pelicula = new List<string>();       // TODOS LOS GENEROS DE VIDEOS QUE EXISTEN DE ALAINID
+        public static List<string> lista_tipoarchivo_pelicula = new List<string>();       // TODOS LOS GENEROS DE VIDEOS QUE EXISTEN DE ALAINID
+
         public static List<string> lista_categoria = new List<string>();       // CATEGORIAS DE PELICULAS- VIDEOS EN ALAINID
 
         public static string Todo_a_minuscula(string pal){
@@ -31,13 +36,14 @@ namespace Proyecto
             return pal_minuscula;
         }
 
-        
 
         // Metodo para mostrar las opciones posibles
-        public static string ShowOptions(List<string> options){
+        public static string ShowOptions(List<string> options)
+        {
             int i = 0;
-            Console.WriteLine("\n\nSelecciona una opcion:");
-            foreach (string option in options){
+            Console.WriteLine(">Selecciona una opcion:");
+            foreach (string option in options)
+            {
                 Console.WriteLine(Convert.ToString(i) + ". " + option);
                 i += 1;
             }
@@ -111,9 +117,10 @@ namespace Proyecto
             }
 
         }
+        public static string cachativa;
         public static void Retornaplaylistusuario(string email, string nombreply)
         {
-            listafiltrada2.Clear();
+            cachativa = "";
             for (int j = 0; j < listausuarios.Count; j++)
             {
                 if (listausuarios[j].Email == email)
@@ -125,11 +132,13 @@ namespace Proyecto
                             if (listausuarios[j].Lista_playlistusuario[i].NombrePlaylist == nombreply)
                             {
                                 listafiltrada2 = listausuarios[j].Lista_playlistusuario[i].listplay;
+                                cachativa = "si";
                             }
                         }
                     }
                 }
             }
+
         }
         public static string Vernombresplaylist(string email)
         {
