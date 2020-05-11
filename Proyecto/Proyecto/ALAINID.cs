@@ -23,10 +23,10 @@ namespace Proyecto
         public static List<User> listafiltradausuarios = new List<User>();
         public static List<string> lista_generos_canciones = new List<string>();       // TODOS LOS GENEROS DE CANCIONES QUE EXISTEN DE ALAINID
         public static List<string> lista_generos_peliculas = new List<string>();       // TODOS LOS GENEROS DE VIDEOS QUE EXISTEN DE ALAINID
-        public static List<string> lista_calidad_cancion = new List<string>();       // TODAS LAS CALIDADES POSIBLES DE CANCIONES EN  ALAINID
+        public static List<string> lista_calidad_cancion = new List<string>();       // TODAS LAS CALIDADES DE CANCIONES QUE SOPORTA EN  ALAINID
         public static List<string> lista_tipoarchivo_cancion = new List<string>();       // TODOS TIPOS DE ARCHIVO DE CANCIONES QUE SOPORTA  ALAINID
-        public static List<string> lista_calidad_pelicula = new List<string>();       // TODOS LOS GENEROS DE VIDEOS QUE EXISTEN DE ALAINID
-        public static List<string> lista_tipoarchivo_pelicula = new List<string>();       // TODOS LOS GENEROS DE VIDEOS QUE EXISTEN DE ALAINID
+        public static List<string> lista_calidad_pelicula = new List<string>();      // TODAS LAS CALIDADES DE VIEOS QUE SOPORTA EN  ALAINID
+        public static List<string> lista_tipoarchivo_pelicula = new List<string>();        // TODOS TIPOS DE ARCHIVO DE VIDEOS QUE SOPORTA  ALAINID
 
         public static List<string> lista_categoria = new List<string>();       // CATEGORIAS DE PELICULAS- VIDEOS EN ALAINID
 

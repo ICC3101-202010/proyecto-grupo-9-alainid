@@ -699,7 +699,7 @@ namespace Proyecto
                                     Console.WriteLine("Ingrese duracion de la canción");
                                     duracion = float.Parse(Console.ReadLine());
                                     Console.WriteLine("Ingrese tipo archivo de la canción");
-                                    tipoarchivo = Console.ReadLine();
+                                    tipoarchivo = ALAINID.ShowOptions(ALAINID.lista_tipoarchivo_cancion);
                                     Console.WriteLine("Ingrese tamaño del archivo de la canción");
                                     tamano = float.Parse(Console.ReadLine());
                                     Console.WriteLine("Ingrese la calidad del archivo de la canción");
