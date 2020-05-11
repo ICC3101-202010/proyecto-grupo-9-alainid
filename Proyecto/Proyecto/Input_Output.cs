@@ -177,6 +177,7 @@ namespace Proyecto
                                                                         Console.WriteLine(ALAINID.Vernombresplaylist(email2));
                                                                         string nply = Console.ReadLine();
                                                                         Console.WriteLine(ALAINID.Agregarcancionaply(email2,nply,ALAINID.listafiltrada[numerocancion - 1]));
+                                                                        Thread.Sleep(2000);
                                                                         break;
                                                                     case 7:
                                                                         break;
@@ -307,7 +308,7 @@ namespace Proyecto
                                                     Console.WriteLine("\nINGRESE EL NOMBRE DE LA PLAYIST QUE QUIERE VER");
                                                     string nombreply = Console.ReadLine();
                                                     Console.WriteLine(ALAINID.VerinformacionPlaylist(email2, nombreply));
-
+                                                    ALAINID.Retornaplaylistusuario(email2,nombreply);
                                                     Console.WriteLine("\nINGRESE 1 PARA IR AL REPRODUCTOR DE LA PLAYLIST, Y CON CUALQUIER OTRO VALOR PARA VOLVER ATRAS");
                                                     string respuesta = Console.ReadLine();
                                                     if (respuesta=="1")
@@ -336,6 +337,7 @@ namespace Proyecto
                                                                 opcion10 = ALAINID.Numero(9);
                                                                 switch (opcion10)
                                                                 {
+                                                                    
                                                                     case 1:
                                                                         pla.Playsong(archivo);
                                                                         ALAINID.GuardarUltimareproduccion(email2, archivo); //CAMBIO
@@ -354,7 +356,7 @@ namespace Proyecto
                                                                         while (opcion60 != 1)
                                                                         {
                                                                             Console.Clear();
-                                                                            ALAINID.Verinfodeunacancion(ALAINID.listafiltrada[numerocancion2 - 1]);
+                                                                            ALAINID.Verinfodeunacancion(ALAINID.listafiltrada2[numerocancion2 - 1]);
                                                                             Console.WriteLine("======================================");
                                                                             Console.WriteLine("1. ATRAS");
                                                                             opcion60 = ALAINID.Numero(1);
@@ -369,7 +371,7 @@ namespace Proyecto
                                                                         Console.WriteLine("INGRESE EL NUMERO DE LA PLAYLIST QUE A LA QUE DESEA AGREGAR");
                                                                         Console.WriteLine(ALAINID.Vernombresplaylist(email2));
                                                                         string nply = Console.ReadLine();
-                                                                        Console.WriteLine(ALAINID.Agregarcancionaply(email2, nply, ALAINID.listafiltrada[numerocancion2 - 1]));
+                                                                        Console.WriteLine(ALAINID.Agregarcancionaply(email2, nply, ALAINID.listafiltrada2[numerocancion2 - 1]));
                                                                         break;
                                                                     case 7:
                                                                         break;

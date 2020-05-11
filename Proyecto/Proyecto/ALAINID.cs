@@ -18,7 +18,7 @@ namespace Proyecto
         public static List<Artista> lista_directores = new List<Artista>();        // TODOS LOS DIRECTORES EN ALAINID
         public static List<Artista> lista_cantantes = new List<Artista>();        // TODOS LOS CANTANTES EN ALAINID
         public static List<Artista> lista_compositores = new List<Artista>();        // TODOS LOS COMPOSITORES EN ALAINID
-
+        public static List<Song> listafiltrada2 = new List<Song>();
         public static List<Song> listafiltrada = new List<Song>();       // ?? ESTO NO SE Q ES????
         public static List<User> listafiltradausuarios = new List<User>();
         public static List<string> lista_generos_canciones = new List<string>();       // TODOS LOS GENEROS DE CANCIONES QUE EXISTEN DE ALAINID
@@ -103,7 +103,7 @@ namespace Proyecto
         }
         public static void Retornaplaylistusuario(string email, string nombreply)
         {
-            listafiltrada.Clear();
+            listafiltrada2.Clear();
             for (int j = 0; j < listausuarios.Count; j++)
             {
                 if (listausuarios[j].Email == email)
@@ -114,14 +114,12 @@ namespace Proyecto
                         {
                             if (listausuarios[j].Lista_playlistusuario[i].NombrePlaylist == nombreply)
                             {
-                                listafiltrada = listausuarios[j].Lista_playlistusuario[i].listplay;
+                                listafiltrada2 = listausuarios[j].Lista_playlistusuario[i].listplay;
                             }
-
                         }
                     }
                 }
             }
-
         }
         public static string Vernombresplaylist(string email)
         {
@@ -139,7 +137,7 @@ namespace Proyecto
             }
             return info;
         }
-        public static string Agregarcancionaply(string email,string nombreply, Song cancion)
+        public static string Agregarcancionaply(string email,string posicion, Song cancion)
         {
             string info = "No se pudo agregar la cancion a la playlist";
             string funko = "";
@@ -147,9 +145,9 @@ namespace Proyecto
             {
                 if (listausuarios[j].Email == email)
                 {
-                    if(listausuarios[j].Lista_playlistusuario.Count> int.Parse(nombreply) - 1)
+                    if(listausuarios[j].Lista_playlistusuario.Count> int.Parse(posicion) - 1)
                     {
-                        listausuarios[j].Lista_playlistusuario[int.Parse(nombreply) - 1].listplay.Add(cancion);
+                        listausuarios[j].Lista_playlistusuario[int.Parse(posicion) - 1].listplay.Add(cancion);
                         Almacenar(listausuarios);
                         funko = "si";
                     }
@@ -176,7 +174,6 @@ namespace Proyecto
                             if (listausuarios[j].Lista_playlistusuario[i].NombrePlaylist == nombreply)
                             {
                                 info = listausuarios[j].Lista_playlistusuario[i].InformationPLL();
-                                
                             }
 
                         }
@@ -1124,6 +1121,30 @@ namespace Proyecto
                 lista_actores.Add(actor);
                 Console.WriteLine("Perfil del Actor fue creado exitosamente.\n");
             }
+        }
+
+        public static bool Verificar_existencia_actor(string actor){
+            int h = 0, n2;
+            foreach (Artista ac in lista_actores){
+                if (ac.name == actor){
+                    h = 1;
+                    return true;
+                }
+            }
+            if (h == 0)
+            {
+                Console.WriteLine("El Actor ingresado no existe, que desea hacer:\n" +
+                              "1--> Crear un perfil para el Actor\n" +
+                              "2--> No Agregar la cancion\n");
+                n2 = Numero(2);
+                if (n2 == 1){
+                    Crear_director();
+                    return true;
+                }else{
+                    return false;
+                }
+            }
+            return false;
         }
 
     }

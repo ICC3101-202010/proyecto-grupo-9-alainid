@@ -54,35 +54,25 @@ namespace Proyecto
             this.tamanio = tamanio;
         }
 
-        // arreglar infromacion de actores
-
         public void Agregar_actores(Artista actor){
             bool ver1  = true,  ver2 = true;
             int v = 0, n2=0;
-            foreach (Artista acto in ALAINID.lista_actores){
-                if (acto == actor) { ver2 = true; break; }
-                else { ver2 = false; }
-            }
-            if (ver2 == true) { v=1; }
-            else if (ver2 == false){
-                Console.WriteLine("El Actor ingresado no existe, que desea hacer:\n" +
-                             "1--> Crear un perfil para el Actor\n" +
-                             "2--> No Agregar la cancion\n");
-                n2 = ALAINID.Numero(2);
-                if (n2 == 1){
-                    ALAINID.Crear_actor();
-                }else if (n2 == 2){
-                    
+            ver1= ALAINID.Verificar_existencia_actor(actor.name);
+            if (ver1){
+                foreach (Artista ac in actores){
+                    if (ac == actor) { 
+                        Console.WriteLine("El artista que intentas ingresar, ya fue ingresado");
+                        ver2  =  false;
+                        break;
+                    }
                 }
-
+                if (ver2){
+                    actores.Add(actor);
+                }
             }
-            foreach (Artista ac in actores){
-                if (ac == actor) { ver1 = false; break; }
-                else { ver1 = true; }
+            else {Console.WriteLine("Lo sentimos, el artista que intentas ingresar no existe en ALAINID\n,"+
+                " verifica los datos para intentar nuevamente.");
             }
-            if (ver2 == true) { actores.Add(actor); }
-            else{Console.WriteLine("El artista que intentas ingresar, ya fue ingresado o no existe");}
-
         }
         public string Ver_informacion()
         {
