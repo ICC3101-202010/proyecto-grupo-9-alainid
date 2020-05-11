@@ -31,29 +31,10 @@ namespace Proyecto
             return pal_minuscula;
         }
 
-        // Controla la ejecucion mientras el usuario no quiera salir
-        bool exec = true;
-        while (exec){ // Pedimos al usuario una de las opciones
-            string chosen = ShowOptions(new List<string>() { "Registrarse", "Cambiar contrasena", "Salir" });
-            switch (chosen){
-            case "Registrarse":
-                Console.Clear();
-                server.Register();
-                break;
-            case "Cambiar contrasena":
-                Console.Clear();
-                server.ChangePassword();
-                 break;
-                    case "Salir":
-                        exec = false;
-                        break;
-                }
-                Thread.Sleep(2000);
-                Console.Clear();
-            }
+        
 
-// Metodo para mostrar las opciones posibles
-public static string ShowOptions(List<string> options){
+        // Metodo para mostrar las opciones posibles
+        public static string ShowOptions(List<string> options){
             int i = 0;
             Console.WriteLine("\n\nSelecciona una opcion:");
             foreach (string option in options){
