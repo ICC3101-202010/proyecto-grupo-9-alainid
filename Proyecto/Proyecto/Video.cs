@@ -12,7 +12,7 @@ namespace Proyecto
         private string categoria;  //tiene que estar en la lista de categorias
         private object director; // tiene que estar en la lista de directores
         private string genero; // tiene q estar en la lista de generos 
-        private int anio_publicacion;
+        private string anio_publicacion;
         private string descripcion;
         private string tipo_archivo;
         private string calidad;
@@ -29,7 +29,7 @@ namespace Proyecto
         public string Categoria { get => categoria; set => categoria = value; }
         public object Director { get => director; set => director = value; }
         public string Genero { get => genero; set => genero = value; }
-        public int Anio_publicacion { get => anio_publicacion; set => anio_publicacion = value; }
+        public string Anio_publicacion { get => anio_publicacion; set => anio_publicacion = value; }
         public string Descripcion { get => descripcion; set => descripcion = value; }
         public string Tipo_archivo { get => tipo_archivo; set => tipo_archivo = value; }
         public string Calidad { get => calidad; set => calidad = value; }
@@ -40,7 +40,7 @@ namespace Proyecto
 
         // asumi que tanto la descripcion como la calificacion promedio, no son requisitos para subir una cancion
 
-        public Video(string nombre_video, float duracion, string categoria, object director, string genero, int anio_publicacion, string tipo_archivo, string calidad, string film_studio, float tamanio)
+        public Video(string nombre_video, float duracion, string categoria, object director, string genero, string anio_publicacion, string tipo_archivo, string calidad, string film_studio, float tamanio)
         {
             this.nombre_video = nombre_video;
             this.duracion = duracion;
@@ -56,24 +56,32 @@ namespace Proyecto
 
         // arreglar infromacion de actores
 
-        public void Agregar_actores(Artista actor)
-        {
-            bool ver2 = true;
-            foreach (Artista acto in ALAINID.lista_actores)
-            {
+        public void Agregar_actores(Artista actor){
+            bool ver1  = true,  ver2 = true;
+            int v = 0, n2=0;
+            foreach (Artista acto in ALAINID.lista_actores){
                 if (acto == actor) { ver2 = true; break; }
-                else { ver2 = true; }
+                else { ver2 = false; }
             }
-            foreach (Artista ac in actores)
-            {
-                if (ac == actor) { ver2 = false; break; }
-                else { ver2 = true; }
+            if (ver2 == true) { v=1; }
+            else if (ver2 == false){
+                Console.WriteLine("El Actor ingresado no existe, que desea hacer:\n" +
+                             "1--> Crear un perfil para el Actor\n" +
+                             "2--> No Agregar la cancion\n");
+                n2 = ALAINID.Numero(2);
+                if (n2 == 1){
+                    ALAINID.Crear_actor();
+                }else if (n2 == 2){
+                    
+                }
+
+            }
+            foreach (Artista ac in actores){
+                if (ac == actor) { ver1 = false; break; }
+                else { ver1 = true; }
             }
             if (ver2 == true) { actores.Add(actor); }
-            else
-            {
-                Console.WriteLine("El artista que intentas ingresar, ya fue ingresado o no existe");
-            }
+            else{Console.WriteLine("El artista que intentas ingresar, ya fue ingresado o no existe");}
 
         }
         public string Ver_informacion()

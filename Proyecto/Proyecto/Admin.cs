@@ -7,7 +7,7 @@ namespace Proyecto
 {
     class Admin    // todo es nuevo
     {
-        Funciones funciones = new Funciones();
+        
 
         public void Ver_info_usuarios()
         {
@@ -17,59 +17,40 @@ namespace Proyecto
             }
         }
 
-        public bool AgregarSong(Song s)
+        public bool AgregarSong(string nombrecan, string cantante, string genero, string compositor, string anopublicacion, string disquera, string album, float duracion, string tipoarchivo, float tamano, string calidad, string nombrearchivo)
         {
             int n1  =  0, n2  =  0;
-            foreach (Song si in ALAINID.todas_las_canciones){
-                if (si==s){
-                    Console.WriteLine("esta cancion ya existe en ALAINID");
-                    Thread.Sleep(2000);
-                    return false;
-                }
-            }
-            int h = 0;
+            int c = 0;
             foreach (Artista art in ALAINID.lista_cantantes){
-                if (s.cantante == art.name){
-                    h=1;
-                    s.cantante = art;
+                if (cantante == art.name){
+                    c=1;
                     break;
                 }
             }
-            if (h == 0){
+            if (c == 0){                // creo que esto esta de mas y es redudante con una funcion que ya esta en ALAINID------------
                 Console.WriteLine("El cantante ingresado no existe, que desea hacer:\n" +
                               "1--> Crear un perfil para el cantante\n" +
                               "2--> No Agregar la cancion\n");
-                n2 = funciones.Numero(2);
+                n2 = ALAINID.Numero(2);
                 if (n2 == 1){
-                    funciones.Crear_cantante();
-                    h = 2;
+                    ALAINID.Crear_cantante();
+                    c = 2;
                 }
                 else{ 
                     return false; 
                 }
             }
-            if (h == 2){
-                Console.WriteLine("Ingrese el nombre del cantante recien aniadido: ");
-                string cc = Console.ReadLine();
-                foreach (Artista art in ALAINID.lista_cantantes)
-                {
-                    if (s.cantante == art){
-                        s.cantante = art;
-                        break;
-                    }
+            Song s = new Song(nombrecan, cantante, genero, compositor, anopublicacion, disquera, album, duracion, tipoarchivo, tamano, calidad, nombrearchivo);
+            foreach (Song si in ALAINID.todas_las_canciones){
+                if (si == s){
+                    Console.WriteLine("esta cancion ya existe en ALAINID");
+                    Thread.Sleep(2000);
+                    return false;
                 }
             }
-            foreach (Artista art in ALAINID.lista_cantantes){
-                if (s.cantante == art.name)
-                {
-                    h = 1;
-                    s.cantante = art;
-                    break;
-                }
-            }
-
             ALAINID.todas_las_canciones.Add(s);
-            Console.WriteLine("Canción agregada");
+            Console.WriteLine("================");
+            Console.WriteLine("Canción agregada exitosamente");
             Console.WriteLine("================");
             ALAINID.Partir();
             VerCanciones(ALAINID.todas_las_canciones);
@@ -77,7 +58,7 @@ namespace Proyecto
             return true;
         }
 
-        public void Subir_video(string nombre_video, float duracion, string categoria, string director, string genero, int anio_publicacion, string tipo_archivo, string calidad, string film_studio, float tamanio){
+        public void Subir_video(string nombre_video, float duracion, string categoria, string director, string genero, string anio_publicacion, string tipo_archivo, string calidad, string film_studio, float tamanio){
             bool ver2 = true;
             Video video1 = new Video(nombre_video, duracion, categoria, director, genero, anio_publicacion, tipo_archivo, calidad, film_studio, tamanio);
 
@@ -97,13 +78,13 @@ namespace Proyecto
                             video1.Agregar_actores(art);
                             break;
                         }else{
-                            Console.WriteLine("El Artista ingresado no existe");
+                            Console.WriteLine("El Actor ingresado no existe");
                             break;
                         }
                     }
                     Console.WriteLine("1-> Desea Ingresar otro actor" +" "+
                     "2-> Terminar");
-                    n = funciones.Numero(2);
+                    n = ALAINID.Numero(2);
                 } while (n == 1);
                 ALAINID.todos_los_videos.Add(video1);
                 Console.WriteLine("=======================================");

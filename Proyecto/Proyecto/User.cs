@@ -31,6 +31,8 @@ namespace Proyecto
         public List<Artista> artistas_seguidas = new List<Artista>();
         public List<User> user_seguidas = new List<User>();
 
+        
+
 
 
         public User(string _nombre_, string _nomusuario_, string _email_, string _password_, string _ultimareproduccion, string _privacidad)

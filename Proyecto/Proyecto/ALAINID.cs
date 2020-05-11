@@ -10,6 +10,7 @@ namespace Proyecto
 {
     public static class ALAINID
     {
+        
         public static List<User> listausuarios = new List<User>();       // TODOS LOS USUARIOS DE ALAINID
         public static List<Song> todas_las_canciones = new List<Song>();        // TODAS LAS CANCIONES EN ALAINID
         public static List<Video> todos_los_videos = new List<Video>();        // TODOS LOS VIDEOS EN ALAINID
@@ -24,6 +25,42 @@ namespace Proyecto
         public static List<string> lista_generos_peliculas = new List<string>();       // TODOS LOS GENEROS DE VIDEOS QUE EXISTEN DE ALAINID
         public static List<string> lista_categoria = new List<string>();       // CATEGORIAS DE PELICULAS- VIDEOS EN ALAINID
 
+        public static string todo_a_minuscula(string pal){
+            string pal_minuscula;
+            pal_minuscula = pal.ToLower();
+            return pal_minuscula;
+        }
+
+
+
+        public static int Acceso_inicial() // verifica que el input  sea un numero dentro del rango requerido
+        {
+            int n;
+            bool aux1 = true;
+            bool aux2 = true;
+            do{
+                aux2 = int.TryParse(Console.ReadLine(), out n);
+                if (n == 1) { aux1 = false; }
+                else if (n == 2) { aux1 = false; }
+                else if (n == 3) { aux1 = false; }
+                else if (n == 202023) { aux1 = false; }
+                else { Console.WriteLine("---ERROR: INGRESE SOLO NUMEROS del 1 al {0}---", 3); }
+            } while (aux1);
+            return n;
+        }
+        public static int Numero(int o) // verifica que el input  sea un numero dentro del rango requerido
+        {
+            int n;
+            bool aux0;
+            do{
+                string p;
+                p = Console.ReadLine();
+                aux0 = int.TryParse(p, out n);
+                if (aux0 == false || n > o) { Console.WriteLine("---ERROR: INGRESE SOLO NUMEROS del 1 al {0}---", o); }
+            } while (!aux0 || n > o);
+
+            return n;
+        }
 
         static void Almacenar(List<User> u)      //Serializamos
         {
@@ -64,6 +101,28 @@ namespace Proyecto
             }
 
         }
+        public static void Retornaplaylistusuario(string email, string nombreply)
+        {
+            listafiltrada.Clear();
+            for (int j = 0; j < listausuarios.Count; j++)
+            {
+                if (listausuarios[j].Email == email)
+                {
+                    if (listausuarios[j].Lista_playlistusuario.Count > 0)
+                    {
+                        for (int i = 0; i < listausuarios[j].Lista_playlistusuario.Count; i++)
+                        {
+                            if (listausuarios[j].Lista_playlistusuario[i].NombrePlaylist == nombreply)
+                            {
+                                listafiltrada = listausuarios[j].Lista_playlistusuario[i].listplay;
+                            }
+
+                        }
+                    }
+                }
+            }
+
+        }
         public static string Vernombresplaylist(string email)
         {
             string info = "No hay Playlist";
@@ -77,6 +136,29 @@ namespace Proyecto
                         info += i + 1 + ". " + listausuarios[j].Lista_playlistusuario[i].NombrePlaylist + "\n";
                     }
                 }
+            }
+            return info;
+        }
+        public static string Agregarcancionaply(string email,string nombreply, Song cancion)
+        {
+            string info = "No se pudo agregar la cancion a la playlist";
+            string funko = "";
+            for (int j = 0; j < listausuarios.Count; j++)
+            {
+                if (listausuarios[j].Email == email)
+                {
+                    if(listausuarios[j].Lista_playlistusuario.Count> int.Parse(nombreply) - 1)
+                    {
+                        listausuarios[j].Lista_playlistusuario[int.Parse(nombreply) - 1].listplay.Add(cancion);
+                        Almacenar(listausuarios);
+                        funko = "si";
+                    }
+                    
+                }
+            }
+            if (funko == "si")
+            {
+                info = "Cancion correctamente agregada a la playlist";
             }
             return info;
         }
@@ -94,6 +176,7 @@ namespace Proyecto
                             if (listausuarios[j].Lista_playlistusuario[i].NombrePlaylist == nombreply)
                             {
                                 info = listausuarios[j].Lista_playlistusuario[i].InformationPLL();
+                                
                             }
 
                         }
@@ -102,6 +185,30 @@ namespace Proyecto
             }
             return info;
 
+        }
+        public static string Archivoreproducirply(string email, string nombreply, int posicion)
+        {
+            string info = "No hay info";
+            for (int j = 0; j < listausuarios.Count; j++)
+            {
+                if (listausuarios[j].Email == email)
+                {
+                    if (listausuarios[j].Lista_playlistusuario.Count > 0)
+                    {
+                        for (int i = 0; i < listausuarios[j].Lista_playlistusuario.Count; i++)
+                        {
+                            if (listausuarios[j].Lista_playlistusuario[i].NombrePlaylist == nombreply)
+                            {
+                                info = listausuarios[j].Lista_playlistusuario[i].listplay[posicion-1].nombrearchivo;
+                            }
+                        }
+                    }
+                }
+            }
+            return info;
+
+
+            
         }
 
         public static bool Agregarusuarioalalista(User u1)
@@ -285,25 +392,15 @@ namespace Proyecto
                 return false;
             }
         }
-        public static string UltimaReproduccion(string email)
-        {
+        public static string UltimaReproduccion(string email){
             string funko;
-            for (int i = 0; i < listausuarios.Count; i++)
-            {
-                if (listausuarios[i].email == email)
-                {
+            for (int i = 0; i < listausuarios.Count; i++){
+                if (listausuarios[i].email == email){
                     funko = listausuarios[i].ultimareproduccion;
                     return funko;
                 }
-                else
-                {
-
-                }
-
             }
             return "";
-
-
         }
         public static string Verinformacion(string email)
         {
@@ -442,7 +539,6 @@ namespace Proyecto
         public static List<Song> CancionesPorCriterio(string _criterio, string _valor)
         {
             listafiltrada.Clear();
-
             switch (_criterio)
             {
                 case "Genero":
@@ -464,20 +560,31 @@ namespace Proyecto
                     }
                     break;
                 case "Cantante":
-                    foreach (Song _filtro in todas_las_canciones)
-                    {
-                        if (_filtro.cantante == _valor)
+                    foreach (Song _filtro in todas_las_canciones){
+                        foreach (Artista ar in lista_cantantes)
                         {
-                            listafiltrada.Add(_filtro);
+                            if (ar.name == _valor)
+                            {
+                                if (_filtro.cantante == ar)
+                                {
+                                    listafiltrada.Add(_filtro);
+                                }
+                            }
                         }
+                        
                     }
                     break;
                 case "cantante":
-                    foreach (Song _filtro in todas_las_canciones)
-                    {
-                        if (_filtro.cantante == _valor)
+                    foreach (Song _filtro in todas_las_canciones){
+                        foreach (Artista ar in lista_cantantes)
                         {
-                            listafiltrada.Add(_filtro);
+                            if (ar.name == _valor)
+                            {
+                                if (_filtro.cantante == ar)
+                                {
+                                    listafiltrada.Add(_filtro);
+                                }
+                            }
                         }
                     }
                     break;
@@ -536,20 +643,24 @@ namespace Proyecto
                     }
                     break;
                 case "Compositor":
-                    foreach (Song _filtro in todas_las_canciones)
-                    {
-                        if (_filtro.compositor == _valor)
-                        {
-                            listafiltrada.Add(_filtro);
+                    foreach (Song _filtro in todas_las_canciones){
+                        foreach (Artista ar in lista_compositores){
+                            if (_filtro.compositor == ar)
+                            {
+                                listafiltrada.Add(_filtro);
+                            }
                         }
                     }
                     break;
                 case "compositor":
                     foreach (Song _filtro in todas_las_canciones)
                     {
-                        if (_filtro.compositor == _valor)
+                        foreach (Artista ar in lista_compositores)
                         {
-                            listafiltrada.Add(_filtro);
+                            if (_filtro.compositor == ar)
+                            {
+                                listafiltrada.Add(_filtro);
+                            }
                         }
                     }
                     break;
@@ -604,6 +715,21 @@ namespace Proyecto
 
                 }
             }
+        }
+        public static string Seguirusuario(string email,User u)
+        {
+            string info = "error";
+            for (int i = 0; i < listausuarios.Count; i++)
+            {
+                if (listausuarios[i].email==email)
+                {
+                    listausuarios[i].user_seguidas.Add(u);
+                    info = "Usuario seguido";
+                    Almacenar(listausuarios);
+                }
+            }
+
+            return info;
         }
         public static List<User> UsuariosPorCriterio(string _criterio, string _valor)
         {
@@ -790,6 +916,213 @@ namespace Proyecto
             else
             {
                 return false;
+            }
+        }
+
+        public static void Verinfodeunusuario(User u2)
+        {
+            Console.WriteLine(u2.InformacionUsuario());
+        }
+        public static void Verinfodeunacancion(Song s2)
+        {
+            Console.WriteLine(s2.Informacioncancion());
+        }
+
+        public static void Crear_cantante(){
+            int h = 0;
+            Console.WriteLine("Ingrese el nombre:");
+            string nombre = Console.ReadLine();
+            Console.WriteLine("Ingrese el Apellido:");
+            string apellido = Console.ReadLine();
+            Console.WriteLine("Ingrese la edad:");
+            int edad = int.Parse(Console.ReadLine());
+            Console.WriteLine("Ingrese la nacionalidad:");
+            string nacion = Console.ReadLine();
+            Console.WriteLine("Ingrese el Genero:\n" +
+                 "1-> Masculino\n" +
+                 "2-> Femenino\n");
+            int gen = Numero(2); string genero = "";
+            if (gen == 1) { genero = "Masculino"; }
+            else if (gen == 2) { genero = "Femenino"; }
+            Artista cantante = new Artista(nombre, apellido, edad, genero, nacion);
+            foreach (Artista cant in lista_cantantes){
+                if (cant == cantante){
+                    Console.WriteLine("Este cantante ya existe\n");
+                    h = 1;
+                    break;
+                }
+            }
+            if (h == 0){
+                lista_cantantes.Add(cantante);
+                AlmacenarCantante(lista_cantantes);
+                Console.WriteLine("Perfil del Cantante fue creado exitosamente.\n");
+            }
+        }
+
+        public static bool Verificar_existencia_cantante(string cantante){
+            int h=0, n2;
+            foreach (Artista art in lista_cantantes){
+                if (art.name == cantante){
+                    h = 1;
+                    return true;
+                }
+            }
+            if (h == 0){
+                Console.WriteLine("El cantante ingresado no existe, que desea hacer:\n" +
+                              "1--> Crear un perfil para el cantante\n" +
+                              "2--> No Agregar la cancion\n");
+                n2 = Numero(2);
+                if (n2 == 1){
+                    Crear_cantante();
+                    return true;
+                }else{
+                    return false;
+                }
+            }
+            return false;
+        }
+
+        public static void Crear_compositor(){
+            int h = 0;
+            Console.WriteLine("Ingrese el nombre:");
+            string nombre = Console.ReadLine();
+            Console.WriteLine("Ingrese el Apellido:");
+            string apellido = Console.ReadLine();
+            Console.WriteLine("Ingrese la edad:");
+            int edad = int.Parse(Console.ReadLine());
+            Console.WriteLine("Ingrese la nacionalidad:");
+            string nacion = Console.ReadLine();
+            Console.WriteLine("Ingrese el Genero:\n" +
+                "1-> Masculino\n" +
+                "2-> Femenino\n");
+            int gen = Numero(2); string genero = "";
+            if (gen == 1) { genero = "Masculino"; }
+            else if (gen == 2) { genero = "Femenino"; }
+            Artista compositor = new Artista(nombre, apellido, edad, genero, nacion);
+            foreach (Artista comp in lista_compositores){
+                if (comp == compositor){
+                    Console.WriteLine("Este compositor ya existe\n");
+                    h = 1;
+                    break;
+                }
+            }
+            if (h == 0){
+                lista_compositores.Add(compositor);
+                Console.WriteLine("Perfil del Compositor fue creado exitosamente.\n");
+            }
+        }
+
+        public static bool Verificar_existencia_compositor(string compositor){
+            int h = 0, n2;
+            foreach (Artista comp in lista_compositores){
+                if (comp.name == compositor){
+                    h = 1;
+                    return true;
+                }
+            }
+            if (h == 0){
+                Console.WriteLine("El compositor ingresado no existe, que desea hacer:\n" +
+                              "1--> Crear un perfil para el Compositor\n" +
+                              "2--> No Agregar la cancion\n");
+                n2 = Numero(2);
+                if (n2 == 1){
+                    Crear_compositor();
+                    return true;
+                }else{
+                    return false;
+                }
+            }
+            return false;
+        }
+
+        public static void Crear_director(){
+            int h = 0;
+            Console.WriteLine("Ingrese el nombre:");
+            string nombre = Console.ReadLine();
+            Console.WriteLine("Ingrese el Apellido:");
+            string apellido = Console.ReadLine();
+            Console.WriteLine("Ingrese la edad:");
+            int edad = int.Parse(Console.ReadLine());
+            Console.WriteLine("Ingrese la nacionalidad:");
+            string nacion = Console.ReadLine();
+            Console.WriteLine("Ingrese el Genero:\n"+
+                "1-> Masculino\n"+
+                "2-> Femenino\n");
+            int gen = Numero(2); string genero="";
+            if (gen == 1) { genero  = "Masculino";  }
+            else if (gen == 2) { genero = "Femenino";  }
+            Artista director = new Artista(nombre, apellido, edad, genero, nacion);
+            foreach (Artista dir in lista_directores){
+                if (dir == director){
+                    Console.WriteLine("Este director ya existe\n");
+                    h = 1;
+                    break;
+                }
+            }
+            if (h == 0){
+                lista_directores.Add(director);
+                Console.WriteLine("Perfil del Director fue creado exitosamente.\n");
+            }
+        }
+
+        public static bool Verificar_existencia_director(string director){
+            int h = 0, n2;
+            foreach (Artista dire in lista_directores){
+                if (dire.name == director){
+                    h = 1;
+                    return true;
+                }
+            }
+            if (h == 0)
+            {
+                Console.WriteLine("El Director ingresado no existe, que desea hacer:\n" +
+                              "1--> Crear un perfil para el Director\n" +
+                              "2--> No Agregar la cancion\n");
+                n2 = Numero(2);
+                if (n2 == 1)
+                {
+                    Crear_director();
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            return false;
+        }
+
+        public static void Crear_actor()
+        {
+            int h = 0;
+            Console.WriteLine("Ingrese el nombre:");
+            string nombre = Console.ReadLine();
+            Console.WriteLine("Ingrese el Apellido:");
+            string apellido = Console.ReadLine();
+            Console.WriteLine("Ingrese la edad:");
+            int edad = int.Parse(Console.ReadLine());
+            Console.WriteLine("Ingrese la nacionalidad:");
+            string nacion = Console.ReadLine();
+            Console.WriteLine("Ingrese el Genero:\n" +
+                 "1-> Masculino\n" +
+                 "2-> Femenino\n");
+            int gen = Numero(2); string genero = "";
+            if (gen == 1) { genero = "Masculino"; }
+            else if (gen == 2) { genero = "Femenino"; }
+            Artista actor = new Artista(nombre, apellido, edad, genero, nacion);
+            foreach (Artista act in lista_actores)
+            {
+                if (act == actor)
+                {
+                    Console.WriteLine("Este Actor ya existe");
+                    h = 1;
+                    break;
+                }
+            }
+            if (h == 0)
+            {
+                lista_actores.Add(actor);
+                Console.WriteLine("Perfil del Actor fue creado exitosamente.\n");
             }
         }
 

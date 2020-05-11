@@ -12,6 +12,7 @@ namespace Proyecto
         public int age;
         public string nacionality;
         public string sexo;
+        public bool seguir= false;
         public List<PlaylistSong> lista_album = new List<PlaylistSong>();
 
 
