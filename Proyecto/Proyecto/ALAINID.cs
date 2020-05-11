@@ -10,7 +10,7 @@ namespace Proyecto
 {
     public static class ALAINID
     {
-        
+
         public static List<User> listausuarios = new List<User>();       // TODOS LOS USUARIOS DE ALAINID
         public static List<Song> todas_las_canciones = new List<Song>();        // TODAS LAS CANCIONES EN ALAINID
         public static List<Video> todos_los_videos = new List<Video>();        // TODOS LOS VIDEOS EN ALAINID
@@ -19,18 +19,24 @@ namespace Proyecto
         public static List<Artista> lista_cantantes = new List<Artista>();        // TODOS LOS CANTANTES EN ALAINID
         public static List<Artista> lista_compositores = new List<Artista>();        // TODOS LOS COMPOSITORES EN ALAINID
         public static List<Song> listafiltrada2 = new List<Song>();
+        public static List<Video> listafiltrada3 = new List<Video>();
         public static List<Song> listafiltrada = new List<Song>();       // ?? ESTO NO SE Q ES????
         public static List<User> listafiltradausuarios = new List<User>();
-        public static List<string> lista_generos_canciones = new List<string>();       // TODOS LOS GENEROS DE CANCIONES QUE EXISTEN DE ALAINID
+        public static List<string> lista_generos_canciones = new List<string>();// TODOS LOS GENEROS DE CANCIONES QUE EXISTEN DE ALAINID
+        public static List<string> lista_disquera = new List<string>();
         public static List<string> lista_generos_peliculas = new List<string>();       // TODOS LOS GENEROS DE VIDEOS QUE EXISTEN DE ALAINID
         public static List<string> lista_calidad_cancion = new List<string>();       // TODAS LAS CALIDADES DE CANCIONES QUE SOPORTA EN  ALAINID
         public static List<string> lista_tipoarchivo_cancion = new List<string>();       // TODOS TIPOS DE ARCHIVO DE CANCIONES QUE SOPORTA  ALAINID
         public static List<string> lista_calidad_pelicula = new List<string>();      // TODAS LAS CALIDADES DE VIEOS QUE SOPORTA EN  ALAINID
         public static List<string> lista_tipoarchivo_pelicula = new List<string>();        // TODOS TIPOS DE ARCHIVO DE VIDEOS QUE SOPORTA  ALAINID
-
         public static List<string> lista_categoria = new List<string>();       // CATEGORIAS DE PELICULAS- VIDEOS EN ALAINID
+        public static List<string> lista_criterios_filtro = new List<string>();       // CRITERIOS PARA FILTRAR LAS CANCIONES 
+        public static List<string> lista_criterios_usuarios = new List<string>();       // CRITERIOS PARA BUSCAR USUARIOS
+        public static List<PlaylistSong> todos_los_albumes = new List<PlaylistSong>();   // TODOS LOS ALBUMES DE ALAINID
+        public static List<string> anios = new List<string>();
 
-        public static string Todo_a_minuscula(string pal){
+        public static string Todo_a_minuscula(string pal)
+        {
             string pal_minuscula;
             pal_minuscula = pal.ToLower();
             return pal_minuscula;
@@ -50,11 +56,13 @@ namespace Proyecto
             return options[Convert.ToInt16(Console.ReadLine())];
         }
 
-        public static int Acceso_inicial(){  // verifica que el input  sea un numero dentro del rango requerido
+        public static int Acceso_inicial()
+        {  // verifica que el input  sea un numero dentro del rango requerido
             int n;
             bool aux1 = true;
             bool aux2 = true;
-            do{
+            do
+            {
                 aux2 = int.TryParse(Console.ReadLine(), out n);
                 if (n == 1) { aux1 = false; }
                 else if (n == 2) { aux1 = false; }
@@ -68,7 +76,8 @@ namespace Proyecto
         {
             int n;
             bool aux0;
-            do{
+            do
+            {
                 string p;
                 p = Console.ReadLine();
                 aux0 = int.TryParse(p, out n);
@@ -93,7 +102,7 @@ namespace Proyecto
             stream2.Close();
             return p;
         }
-        public static bool Hacerplaylist(string mail, string nombrepl)
+        public static bool Hacerplaylistsong(string mail, string nombrepl)
         {
             string funkaa = "";
             for (int i = 0; i < listausuarios.Count; i++)
@@ -102,6 +111,27 @@ namespace Proyecto
                 {
                     PlaylistSong plysu = new PlaylistSong(nombrepl);
                     listausuarios[i].Lista_playlistusuario.Add(plysu);
+                    Almacenar(listausuarios);
+                    funkaa += "si";
+
+                }
+            }
+            if (funkaa != ""){
+                return true;
+            }else{
+                return false;
+            }
+
+        }
+        public static bool Hacerplaylistvideo(string mail, string nombrepl)
+        {
+            string funkaa = "";
+            for (int i = 0; i < listausuarios.Count; i++)
+            {
+                if (listausuarios[i].Email == mail)
+                {
+                    PlaylistVideo playlist2 = new PlaylistVideo(nombrepl);
+                    listausuarios[i].Lista_playlistvideousuario.Add(playlist2);
                     Almacenar(listausuarios);
                     funkaa += "si";
 
@@ -140,46 +170,113 @@ namespace Proyecto
             }
 
         }
-        public static string Vernombresplaylist(string email)
+        public static void Retornaplaylistvideousuario(string email, string nombreply)
         {
-            string info = "No hay Playlist";
+            cachativa = "";
             for (int j = 0; j < listausuarios.Count; j++)
             {
                 if (listausuarios[j].Email == email)
                 {
-                    if (listausuarios[j].Lista_playlistusuario.Count>0)
+                    if (listausuarios[j].Lista_playlistvideousuario.Count > 0)
                     {
-                        info = "Nombres de tus playlist: \n";
-                        for (int i = 0; i < listausuarios[j].Lista_playlistusuario.Count; i++)
+                        for (int i = 0; i < listausuarios[j].Lista_playlistvideousuario.Count; i++)
                         {
-                            info += i + 1 + ". " + listausuarios[j].Lista_playlistusuario[i].NombrePlaylist + "\n";
+                            if (listausuarios[j].Lista_playlistvideousuario[i].NombrePlaylist == nombreply)
+                            {
+                                listafiltrada3 = listausuarios[j].Lista_playlistvideousuario[i].listplayvideo;
+                                cachativa = "si";
+                            }
                         }
                     }
-                    
                 }
             }
-            return info;
+
         }
-        public static string Agregarcancionaply(string email,string posicion, Song cancion)
+        public static List<string> Vernombresplaylistcancion(string email)
+        {
+            List<String> lplaylist = new List<string>();
+            //string info = "No hay Playlist";
+            for (int j = 0; j < listausuarios.Count; j++)
+            {
+                if (listausuarios[j].Email == email)
+                {
+                    if (listausuarios[j].Lista_playlistusuario.Count > 0)
+                    {
+                        //info = "Nombres de tus playlist: \n";
+                        for (int i = 0; i < listausuarios[j].Lista_playlistusuario.Count; i++)
+                        {
+                            lplaylist.Add(listausuarios[j].Lista_playlistusuario[i].NombrePlaylist);
+                            //info += i + 1 + ". " + listausuarios[j].Lista_playlistusuario[i].NombrePlaylist + "\n";
+                        }
+                    }
+
+                }
+            }
+            return lplaylist;
+        }
+        public static List<string> Vernombresplaylistvideo(string email)
+        {
+            List<String> lplaylist = new List<string>();
+            //string info = "No hay Playlist";
+            for (int j = 0; j < listausuarios.Count; j++)
+            {
+                if (listausuarios[j].Email == email)
+                {
+                    if (listausuarios[j].Lista_playlistvideousuario.Count > 0)
+                    {
+                        //info = "Nombres de tus playlist: \n";
+                        for (int i = 0; i < listausuarios[j].Lista_playlistvideousuario.Count; i++)
+                        {
+                            lplaylist.Add(listausuarios[j].Lista_playlistvideousuario[i].NombrePlaylist);
+                            //info += i + 1 + ". " + listausuarios[j].Lista_playlistusuario[i].NombrePlaylist + "\n";
+                        }
+                    }
+
+                }
+            }
+            return lplaylist;
+        }
+        public static string Agregarcancionaply(string email, string posicion, Song cancion)
         {
             string info = "No se pudo agregar la cancion a la playlist";
             string funko = "";
-            for (int j = 0; j < listausuarios.Count; j++)
-            {
+            for (int j = 0; j < listausuarios.Count; j++){
                 if (listausuarios[j].Email == email)
                 {
-                    if(listausuarios[j].Lista_playlistusuario.Count> int.Parse(posicion) - 1)
+                    if (listausuarios[j].Lista_playlistusuario.Count > int.Parse(posicion) - 1)
                     {
                         listausuarios[j].Lista_playlistusuario[int.Parse(posicion) - 1].listplay.Add(cancion);
                         Almacenar(listausuarios);
                         funko = "si";
                     }
-                    
+
                 }
             }
             if (funko == "si")
             {
                 info = "Cancion correctamente agregada a la playlist";
+            }
+            return info;
+        }
+        public static string Agregarvideoaply(string email, string posicion, Video video)
+        {
+            string info = "No se pudo agregar el video a la playlist";
+            string funko = "";
+            for (int j = 0; j < listausuarios.Count; j++)
+            {
+                if (listausuarios[j].Email == email)
+                {
+                    if (listausuarios[j].Lista_playlistvideousuario.Count > int.Parse(posicion) - 1)
+                    {
+                        listausuarios[j].Lista_playlistvideousuario[int.Parse(posicion) - 1].listplayvideo.Add(video);
+                        Almacenar(listausuarios);
+                        funko = "si";
+                    }
+                }
+            }
+            if (funko == "si")
+            {
+                info = "Video correctamente agregado a la playlist";
             }
             return info;
         }
@@ -206,6 +303,29 @@ namespace Proyecto
             return info;
 
         }
+        public static string VerinformacionPlaylistVideo(string email, string nombreply)
+        {
+            string info = "No hay info";
+            for (int j = 0; j < listausuarios.Count; j++)
+            {
+                if (listausuarios[j].Email == email)
+                {
+                    if (listausuarios[j].Lista_playlistvideousuario.Count > 0)
+                    {
+                        for (int i = 0; i < listausuarios[j].Lista_playlistvideousuario.Count; i++)
+                        {
+                            if (listausuarios[j].Lista_playlistvideousuario[i].NombrePlaylist == nombreply)
+                            {
+                                info = listausuarios[j].Lista_playlistvideousuario[i].InformationPLL();
+                            }
+
+                        }
+                    }
+                }
+            }
+            return info;
+
+        }
         public static string Archivoreproducirply(string email, string nombreply, int posicion)
         {
             string info = "No hay info";
@@ -219,7 +339,29 @@ namespace Proyecto
                         {
                             if (listausuarios[j].Lista_playlistusuario[i].NombrePlaylist == nombreply)
                             {
-                                info = listausuarios[j].Lista_playlistusuario[i].listplay[posicion-1].nombrearchivo;
+                                info = listausuarios[j].Lista_playlistusuario[i].listplay[posicion - 1].nombrearchivo;
+                            }
+                        }
+                    }
+                }
+            }
+            return info;
+        }
+
+        public static string Archivoreproducirplyvideo(string email, string nombreply, int posicion)
+        {
+            string info = "No hay info";
+            for (int j = 0; j < listausuarios.Count; j++)
+            {
+                if (listausuarios[j].Email == email)
+                {
+                    if (listausuarios[j].Lista_playlistvideousuario.Count > 0)
+                    {
+                        for (int i = 0; i < listausuarios[j].Lista_playlistvideousuario.Count; i++)
+                        {
+                            if (listausuarios[j].Lista_playlistvideousuario[i].NombrePlaylist == nombreply)
+                            {
+                                info = listausuarios[j].Lista_playlistvideousuario[i].listplayvideo[posicion - 1].nombrearchivovideo;
                             }
                         }
                     }
@@ -228,7 +370,7 @@ namespace Proyecto
             return info;
 
 
-            
+
         }
 
         public static bool Agregarusuarioalalista(User u1)
@@ -304,9 +446,9 @@ namespace Proyecto
                 }
                 else
                 {
-                    Console.WriteLine("Ingresando a ALAINID...");
+                    Console.WriteLine("\nIngresando a ALAINID...");
                     Thread.Sleep(2000);
-                    Console.WriteLine("Bievenido" + "\n" + ui.Nombre);
+                    Console.WriteLine("Bievenido" + " " + ui.Nombre);
                     Thread.Sleep(3000);
                     return true;
                 }
@@ -339,6 +481,7 @@ namespace Proyecto
         {
             AlmacenarCanciones(todas_las_canciones);
         }
+
         public static void Activarlista()
         {
             listausuarios = Cargar();
@@ -412,10 +555,13 @@ namespace Proyecto
                 return false;
             }
         }
-        public static string UltimaReproduccion(string email){
+        public static string UltimaReproduccion(string email)
+        {
             string funko;
-            for (int i = 0; i < listausuarios.Count; i++){
-                if (listausuarios[i].email == email){
+            for (int i = 0; i < listausuarios.Count; i++)
+            {
+                if (listausuarios[i].email == email)
+                {
                     funko = listausuarios[i].ultimareproduccion;
                     return funko;
                 }
@@ -541,6 +687,7 @@ namespace Proyecto
             stream6.Close();
             return v;
         }
+        //======================================================BINARIOCANTANTES=====================================================================================0000
         public static void AlmacenarCantante(List<Artista> a)      //Serializamos
         {
             IFormatter formatter7 = new BinaryFormatter();
@@ -555,172 +702,129 @@ namespace Proyecto
             List<Artista> ar = (List<Artista>)formatter8.Deserialize(stream8);
             stream8.Close();
             return ar;
+
         }
-        public static List<Song> CancionesPorCriterio(string _criterio, string _valor)
+        public static void Activarlistacantantes()
         {
-            listafiltrada.Clear();
-            switch (_criterio)
+            lista_cantantes = CargarCantantes();
+        }
+        //============================================================================================================================================================
+        public static List<string> Lista_nombres_cantantes(){
+            List<string> nombr = new List<string>();
+            foreach (Artista cantante in lista_cantantes){
+                nombr.Add(cantante.name);
+            }
+            return nombr;
+        }
+        public static List<string> Lista_nombres_canciones(){
+            List<string> canc = new List<string>();
+            foreach (Song cancion in todas_las_canciones){
+                canc.Add(cancion.nombrecancion);
+            }
+            return canc;
+        }
+
+        public static List<string> Lista_nombres_albums(){
+            List<string> alb = new List<string>();
+            foreach (PlaylistSong album in todos_los_albumes){
+                alb.Add(album.NombrePlaylist);
+            }
+            return alb;
+        }
+        public static List<string> Lista_nombres_compositores(){
+            List<string> nombrc = new List<string>();
+            foreach (Artista compositor in lista_compositores)
             {
+                nombrc.Add(compositor.name);
+            }
+            return nombrc;
+        }
+
+
+        public static List<Song> CancionesPorCriterio(string _criterio, string _valor){      //----------------37
+            listafiltrada.Clear();
+            switch (_criterio){
                 case "Genero":
-                    foreach (Song _filtro in todas_las_canciones)
-                    {
-                        if (_filtro.genero == _valor)
-                        {
-                            listafiltrada.Add(_filtro);
-                        }
-                    }
-                    break;
-                case "genero":
-                    foreach (Song _filtro in todas_las_canciones)
-                    {
-                        if (_filtro.genero == _valor)
-                        {
-                            listafiltrada.Add(_filtro);
+                    foreach (Song can in todas_las_canciones){
+                        if (can.genero == _valor){
+                            listafiltrada.Add(can);
                         }
                     }
                     break;
                 case "Cantante":
-                    foreach (Song _filtro in todas_las_canciones){
-                        foreach (Artista ar in lista_cantantes)
-                        {
-                            if (ar.name == _valor)
-                            {
-                                if (_filtro.cantante == ar)
-                                {
-                                    listafiltrada.Add(_filtro);
-                                }
-                            }
-                        }
-                        
-                    }
-                    break;
-                case "cantante":
-                    foreach (Song _filtro in todas_las_canciones){
-                        foreach (Artista ar in lista_cantantes)
-                        {
-                            if (ar.name == _valor)
-                            {
-                                if (_filtro.cantante == ar)
-                                {
-                                    listafiltrada.Add(_filtro);
-                                }
+                    foreach (Artista art in lista_cantantes){
+                        if (art.name== _valor){
+                            foreach  (Song can in art.lista_canciones){
+                                listafiltrada.Add(can);
                             }
                         }
                     }
                     break;
                 case "Album":
-                    foreach (Song _filtro in todas_las_canciones)
-                    {
-                        if (_filtro.album == _valor)
-                        {
-                            listafiltrada.Add(_filtro);
-                        }
-                    }
-                    break;
-                case "album":
-                    foreach (Song _filtro in todas_las_canciones)
-                    {
-                        if (_filtro.album == _valor)
-                        {
-                            listafiltrada.Add(_filtro);
-                        }
-                    }
-                    break;
-                case "Nombre":
-                    foreach (Song _filtro in todas_las_canciones)
-                    {
-                        if (_filtro.nombrecancion == _valor)
-                        {
-                            listafiltrada.Add(_filtro);
-                        }
-                    }
-                    break;
-                case "nombre":
-                    foreach (Song _filtro in todas_las_canciones)
-                    {
-                        if (_filtro.nombrecancion == _valor)
-                        {
-                            listafiltrada.Add(_filtro);
-                        }
-                    }
-                    break;
-                case "Disquera":
-                    foreach (Song _filtro in todas_las_canciones)
-                    {
-                        if (_filtro.disquera == _valor)
-                        {
-                            listafiltrada.Add(_filtro);
-                        }
-                    }
-                    break;
-                case "disquera":
-                    foreach (Song _filtro in todas_las_canciones)
-                    {
-                        if (_filtro.disquera == _valor)
-                        {
-                            listafiltrada.Add(_filtro);
-                        }
-                    }
-                    break;
-                case "Compositor":
-                    foreach (Song _filtro in todas_las_canciones){
-                        foreach (Artista ar in lista_compositores){
-                            if (_filtro.compositor == ar)
-                            {
-                                listafiltrada.Add(_filtro);
+                    foreach (PlaylistSong al in todos_los_albumes){
+                        if (al.NombrePlaylist == _valor){
+                            foreach  (Song can in al.listplay) { 
+                                listafiltrada.Add(can); 
                             }
                         }
                     }
                     break;
-                case "compositor":
-                    foreach (Song _filtro in todas_las_canciones)
-                    {
-                        foreach (Artista ar in lista_compositores)
-                        {
-                            if (_filtro.compositor == ar)
-                            {
-                                listafiltrada.Add(_filtro);
+                case "Nombre":
+                    foreach (Song canc in todas_las_canciones){
+                        if (canc.nombrecancion == _valor){
+                            listafiltrada.Add(canc);
+                        }
+                    }
+                    break;
+                case "Disquera":
+                    foreach (Song canc in todas_las_canciones){
+                        if (canc.disquera == _valor){
+                            listafiltrada.Add(canc);
+                        }
+                    }
+                    break;
+                case "Compositor":
+                    foreach (Artista art in lista_compositores){
+                        if (art.name == _valor){
+                            foreach (Song can in art.lista_canciones){
+                                listafiltrada.Add(can);
                             }
                         }
                     }
                     break;
                 case "Año":
-                    foreach (Song _filtro in todas_las_canciones)
-                    {
-                        if (_filtro.anopublicacion == _valor)
-                        {
-                            listafiltrada.Add(_filtro);
+                    foreach (Song canc in todas_las_canciones){
+                        if (canc.anopublicacion == _valor){
+                            listafiltrada.Add(canc);
                         }
                     }
                     break;
-                case "año":
-                    foreach (Song _filtro in todas_las_canciones)
-                    {
-                        if (_filtro.anopublicacion == _valor)
-                        {
-                            listafiltrada.Add(_filtro);
-                        }
-                    }
-                    break;
-
-
                 default:
                     Console.WriteLine("No existen canciones que cumplan con el criterio y valor seleccionado");
                     break;
             }
-
             return listafiltrada;
-
         }
-        public static void Vercancionesparareproduccion(List<Song> s)
-
+        /*
+        public static List<string> Criterios_multiples()
         {
 
+        }
+        */
+        public static List<Song> Buqueda_multiple_canciones(string _criterio, string _valor)
+        {
+            List<Song> canciones_filtradas  = new List<Song>();
+
+
+            //--------------------------------------------aqui arreglar
+            return canciones_filtradas;
+        }
+            public static void Vercancionesparareproduccion(List<Song> s)
+        {
             if (s.Count == 0)
             {
                 Console.WriteLine("No hay canciones agregadas aún");
             }
-
             else
             {
                 for (int i = 0; i < s.Count; i++)
@@ -736,12 +840,12 @@ namespace Proyecto
                 }
             }
         }
-        public static string Seguirusuario(string email,User u)
+        public static string Seguirusuario(string email, User u)
         {
             string info = "error";
             for (int i = 0; i < listausuarios.Count; i++)
             {
-                if (listausuarios[i].email==email)
+                if (listausuarios[i].email == email)
                 {
                     listausuarios[i].user_seguidas.Add(u);
                     info = "Usuario seguido";
@@ -754,19 +858,9 @@ namespace Proyecto
         public static List<User> UsuariosPorCriterio(string _criterio, string _valor)
         {
             listafiltradausuarios.Clear();
-
             switch (_criterio)
             {
                 case "Nombre":
-                    foreach (User _filtro in listausuarios)
-                    {
-                        if ((_filtro.nombre == _valor) && (_filtro.perfipublico == "publico"))
-                        {
-                            listafiltradausuarios.Add(_filtro);
-                        }
-                    }
-                    break;
-                case "nombre":
                     foreach (User _filtro in listausuarios)
                     {
                         if ((_filtro.nombre == _valor) && (_filtro.perfipublico == "publico"))
@@ -784,15 +878,6 @@ namespace Proyecto
                         }
                     }
                     break;
-                case "email":
-                    foreach (User _filtro in listausuarios)
-                    {
-                        if ((_filtro.email == _valor) && (_filtro.perfipublico == "publico"))
-                        {
-                            listafiltradausuarios.Add(_filtro);
-                        }
-                    }
-                    break;
                 case "Id":
                     foreach (User _filtro in listausuarios)
                     {
@@ -802,37 +887,18 @@ namespace Proyecto
                         }
                     }
                     break;
-                case "id":
-                    foreach (User _filtro in listausuarios)
-                    {
-                        if ((_filtro.nombreusuario == _valor) && (_filtro.perfipublico == "publico"))
-                        {
-                            listafiltradausuarios.Add(_filtro);
-                        }
-                    }
-
-                    break;
-
-
-
                 default:
-                    Console.WriteLine("No existen PUBLICOS que cumplas con el criterio y valor seleccionado");
+                    Console.WriteLine("No existen Usuarioa PUBLICOS que cumplas con el criterio y valor seleccionado");
                     break;
             }
-
             return listafiltradausuarios;
-
-
         }
         public static void VerUsuariosbusqueda(List<User> s)
-
         {
-
             if (s.Count == 0)
             {
                 Console.WriteLine("Usuarios no encontrados ");
             }
-
             else
             {
                 for (int i = 0; i < s.Count; i++)
@@ -843,8 +909,6 @@ namespace Proyecto
                     Console.WriteLine(s[i].nombreusuario);
                     Console.WriteLine(s[i].nombre);
                     Console.WriteLine(" ");
-
-
                 }
             }
         }
@@ -871,7 +935,6 @@ namespace Proyecto
                             funko = "correcto";
                             Almacenar(listausuarios);
                         }
-
                     }
                     else
                     {
@@ -916,7 +979,6 @@ namespace Proyecto
                             funko = "correcto";
                             Almacenar(listausuarios);
                         }
-
                     }
                     else
                     {
@@ -938,7 +1000,6 @@ namespace Proyecto
                 return false;
             }
         }
-
         public static void Verinfodeunusuario(User u2)
         {
             Console.WriteLine(u2.InformacionUsuario());
@@ -947,13 +1008,16 @@ namespace Proyecto
         {
             Console.WriteLine(s2.Informacioncancion());
         }
+        public static void Verinfodeunvideo(Video s2)
+        {
+            Console.WriteLine(s2.Ver_informacion());
+        }
 
-        public static void Crear_cantante(){
+        public static void Crear_cantante()
+        {
             int h = 0;
-            Console.WriteLine("Ingrese el nombre:");
+            Console.WriteLine("Ingrese el nombre completo");
             string nombre = Console.ReadLine();
-            Console.WriteLine("Ingrese el Apellido:");
-            string apellido = Console.ReadLine();
             Console.WriteLine("Ingrese la edad:");
             int edad = int.Parse(Console.ReadLine());
             Console.WriteLine("Ingrese la nacionalidad:");
@@ -964,50 +1028,59 @@ namespace Proyecto
             int gen = Numero(2); string genero = "";
             if (gen == 1) { genero = "Masculino"; }
             else if (gen == 2) { genero = "Femenino"; }
-            Artista cantante = new Artista(nombre, apellido, edad, genero, nacion);
-            foreach (Artista cant in lista_cantantes){
-                if (cant == cantante){
+            Artista cantante = new Artista(nombre, edad, genero, nacion);
+            foreach (Artista cant in lista_cantantes)
+            {
+                if (cant == cantante)
+                {
                     Console.WriteLine("Este cantante ya existe\n");
                     h = 1;
                     break;
                 }
             }
-            if (h == 0){
+            if (h == 0)
+            {
                 lista_cantantes.Add(cantante);
                 AlmacenarCantante(lista_cantantes);
                 Console.WriteLine("Perfil del Cantante fue creado exitosamente.\n");
             }
         }
 
-        public static bool Verificar_existencia_cantante(string cantante){
-            int h=0, n2;
-            foreach (Artista art in lista_cantantes){
-                if (art.name == cantante){
+        public static bool Verificar_existencia_cantante(string cantante)
+        {
+            int h = 0, n2;
+            foreach (Artista art in lista_cantantes)
+            {
+                if (art.name == cantante)
+                {
                     h = 1;
                     return true;
                 }
             }
-            if (h == 0){
+            if (h == 0)
+            {
                 Console.WriteLine("El cantante ingresado no existe, que desea hacer:\n" +
                               "1--> Crear un perfil para el cantante\n" +
                               "2--> No Agregar la cancion\n");
                 n2 = Numero(2);
-                if (n2 == 1){
+                if (n2 == 1)
+                {
                     Crear_cantante();
                     return true;
-                }else{
+                }
+                else
+                {
                     return false;
                 }
             }
             return false;
         }
 
-        public static void Crear_compositor(){
+        public static void Crear_compositor()
+        {
             int h = 0;
-            Console.WriteLine("Ingrese el nombre:");
+            Console.WriteLine("Ingrese el nombre completo");
             string nombre = Console.ReadLine();
-            Console.WriteLine("Ingrese el Apellido:");
-            string apellido = Console.ReadLine();
             Console.WriteLine("Ingrese la edad:");
             int edad = int.Parse(Console.ReadLine());
             Console.WriteLine("Ingrese la nacionalidad:");
@@ -1018,77 +1091,94 @@ namespace Proyecto
             int gen = Numero(2); string genero = "";
             if (gen == 1) { genero = "Masculino"; }
             else if (gen == 2) { genero = "Femenino"; }
-            Artista compositor = new Artista(nombre, apellido, edad, genero, nacion);
-            foreach (Artista comp in lista_compositores){
-                if (comp == compositor){
+            Artista compositor = new Artista(nombre, edad, genero, nacion);
+            foreach (Artista comp in lista_compositores)
+            {
+                if (comp == compositor)
+                {
                     Console.WriteLine("Este compositor ya existe\n");
                     h = 1;
                     break;
                 }
             }
-            if (h == 0){
+            if (h == 0)
+            {
                 lista_compositores.Add(compositor);
+                AlmacenarCompositores(lista_compositores);
                 Console.WriteLine("Perfil del Compositor fue creado exitosamente.\n");
             }
         }
 
-        public static bool Verificar_existencia_compositor(string compositor){
+        public static bool Verificar_existencia_compositor(string compositor)
+        {
             int h = 0, n2;
-            foreach (Artista comp in lista_compositores){
-                if (comp.name == compositor){
+            foreach (Artista comp in lista_compositores)
+            {
+                if (comp.name == compositor)
+                {
                     h = 1;
                     return true;
                 }
             }
-            if (h == 0){
+            if (h == 0)
+            {
                 Console.WriteLine("El compositor ingresado no existe, que desea hacer:\n" +
                               "1--> Crear un perfil para el Compositor\n" +
                               "2--> No Agregar la cancion\n");
                 n2 = Numero(2);
-                if (n2 == 1){
+                if (n2 == 1)
+                {
                     Crear_compositor();
                     return true;
-                }else{
+                }
+                else
+                {
                     return false;
                 }
             }
             return false;
         }
 
-        public static void Crear_director(){
+        public static void Crear_director()
+        {
             int h = 0;
-            Console.WriteLine("Ingrese el nombre:");
+            Console.WriteLine("Ingrese el nombre completo");
             string nombre = Console.ReadLine();
-            Console.WriteLine("Ingrese el Apellido:");
-            string apellido = Console.ReadLine();
             Console.WriteLine("Ingrese la edad:");
             int edad = int.Parse(Console.ReadLine());
             Console.WriteLine("Ingrese la nacionalidad:");
             string nacion = Console.ReadLine();
-            Console.WriteLine("Ingrese el Genero:\n"+
-                "1-> Masculino\n"+
+            Console.WriteLine("Ingrese el Genero:\n" +
+                "1-> Masculino\n" +
                 "2-> Femenino\n");
-            int gen = Numero(2); string genero="";
-            if (gen == 1) { genero  = "Masculino";  }
-            else if (gen == 2) { genero = "Femenino";  }
-            Artista director = new Artista(nombre, apellido, edad, genero, nacion);
-            foreach (Artista dir in lista_directores){
-                if (dir == director){
+            int gen = Numero(2); string genero = "";
+            if (gen == 1) { genero = "Masculino"; }
+            else if (gen == 2) { genero = "Femenino"; }
+            Artista director = new Artista(nombre, edad, genero, nacion);
+            foreach (Artista dir in lista_directores)
+            {
+                if (dir == director)
+                {
                     Console.WriteLine("Este director ya existe\n");
                     h = 1;
                     break;
                 }
             }
-            if (h == 0){
+            if (h == 0)
+            {
                 lista_directores.Add(director);
+                AlmacenarDirectores(lista_directores);
                 Console.WriteLine("Perfil del Director fue creado exitosamente.\n");
             }
         }
 
-        public static bool Verificar_existencia_director(string director){
+        public static bool Verificar_existencia_director(string director)
+        {
             int h = 0, n2;
-            foreach (Artista dire in lista_directores){
-                if (dire.name == director){
+            foreach (Artista dire in lista_directores)
+            {
+                if (dire.name == director)
+                {
                     h = 1;
                     return true;
                 }
@@ -1115,10 +1205,8 @@ namespace Proyecto
         public static void Crear_actor()
         {
             int h = 0;
-            Console.WriteLine("Ingrese el nombre:");
+            Console.WriteLine("Ingrese el nombre completo");
             string nombre = Console.ReadLine();
-            Console.WriteLine("Ingrese el Apellido:");
-            string apellido = Console.ReadLine();
             Console.WriteLine("Ingrese la edad:");
             int edad = int.Parse(Console.ReadLine());
             Console.WriteLine("Ingrese la nacionalidad:");
@@ -1129,7 +1217,7 @@ namespace Proyecto
             int gen = Numero(2); string genero = "";
             if (gen == 1) { genero = "Masculino"; }
             else if (gen == 2) { genero = "Femenino"; }
-            Artista actor = new Artista(nombre, apellido, edad, genero, nacion);
+            Artista actor = new Artista(nombre, edad, genero, nacion);
             foreach (Artista act in lista_actores)
             {
                 if (act == actor)
@@ -1142,14 +1230,18 @@ namespace Proyecto
             if (h == 0)
             {
                 lista_actores.Add(actor);
+                AlmacenarActores(lista_actores);
                 Console.WriteLine("Perfil del Actor fue creado exitosamente.\n");
             }
         }
 
-        public static bool Verificar_existencia_actor(string actor){
+        public static bool Verificar_existencia_actor(string actor)
+        {
             int h = 0, n2;
-            foreach (Artista ac in lista_actores){
-                if (ac.name == actor){
+            foreach (Artista ac in lista_actores)
+            {
+                if (ac.name == actor)
+                {
                     h = 1;
                     return true;
                 }
@@ -1160,18 +1252,351 @@ namespace Proyecto
                               "1--> Crear un perfil para el Actor\n" +
                               "2--> No Agregar la cancion\n");
                 n2 = Numero(2);
-                if (n2 == 1){
+                if (n2 == 1)
+                {
                     Crear_director();
                     return true;
-                }else{
+                }
+                else
+                {
                     return false;
                 }
             }
             return false;
         }
 
+        public static void Crear_Album()
+        {
+            Console.WriteLine("Ingrese el nombre del Album:");
+            string nombre = Console.ReadLine();
+            PlaylistSong album = new PlaylistSong(nombre);
+            todos_los_albumes.Add(album);
+            AlmacenarAlbum(todos_los_albumes);
+        }
+
+        public static bool Verificar_exisitencia_Album(string nombre_album, string nombre_cantante)
+        {
+            int h = 0, n2;
+            foreach (Artista cantante in lista_cantantes)
+            {
+                if (cantante.name == nombre_cantante)
+                {
+                    foreach (PlaylistSong album in cantante.lista_album)
+                    {
+                        if (album.NombrePlaylist == nombre_album)
+                        {
+                            h = 1;
+                            return true;
+                        }
+                    }
+                }
+                if (h == 0)
+                {
+                    Console.WriteLine("El Album ingresado no existe, que desea hacer:\n" +
+                                  "1--> Crear un Album para {0}\n" +
+                                  "2--> No Agregar la cancion\n", cantante.name);
+                    n2 = Numero(2);
+                    if (n2 == 1)
+                    {
+                        Crear_Album();
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+            }
+            return false;
+        }
+        //=======================PREMIUM======================================================================================================0
+        public static bool VolversePremium(string email, string contrasena)
+        {
+            string funko = "correcto";
+            for (int i = 0; i < listausuarios.Count; i++)
+            {
+                if (listausuarios[i].email == email)
+                {
+                    if (listausuarios[i].password == contrasena)
+                    {
+                        if (listausuarios[i].premium == "premium")
+                        {
+                            Console.Clear();
+                            Console.WriteLine("Ya estabas registrado como premium");
+                            Thread.Sleep(2000);
+                            funko = "noup";
+                            break;
+                        }
+                        else
+                        {
+                            listausuarios[i].premium = "premium";
+                            funko = "correcto";
+                            Almacenar(listausuarios);
+                        }
+
+                    }
+                    else
+                    {
+                        funko = "noup";
+                    }
+                    break;
+                }
+                else
+                {
+                    funko = "noup";
+                }
+            }
+            if (funko == "correcto")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public static void AlmacenarCompositores(List<Artista> u)      //Serializamos
+        {
+            IFormatter formatter5 = new BinaryFormatter();
+            Stream stream5 = new FileStream("Compositores.bin", FileMode.Create, FileAccess.Write, FileShare.None);
+            formatter5.Serialize(stream5, u);
+            stream5.Close();
+        }
+        public static List<Artista> CargarCompositores()
+        {
+            IFormatter formatter6 = new BinaryFormatter();
+            Stream stream6 = new FileStream("Compositores.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
+            List<Artista> v = (List<Artista>)formatter6.Deserialize(stream6);
+            stream6.Close();
+            return v;
+        }
+        public static void Partirlistacompositores()
+        {
+            lista_compositores = CargarCompositores();
+        }
+        public static void AlmacenarDirectores(List<Artista> u)      //Serializamos
+        {
+            IFormatter formatter5 = new BinaryFormatter();
+            Stream stream5 = new FileStream("Directores.bin", FileMode.Create, FileAccess.Write, FileShare.None);
+            formatter5.Serialize(stream5, u);
+            stream5.Close();
+        }
+        public static List<Artista> CargarDirectores()
+        {
+            IFormatter formatter6 = new BinaryFormatter();
+            Stream stream6 = new FileStream("Directores.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
+            List<Artista> v = (List<Artista>)formatter6.Deserialize(stream6);
+            stream6.Close();
+            return v;
+        }
+        public static void Partirlistadirectores()
+        {
+            lista_directores = CargarDirectores();
+        }
+        public static void AlmacenarActores(List<Artista> u)      //Serializamos
+        {
+            IFormatter formatter5 = new BinaryFormatter();
+            Stream stream5 = new FileStream("Actores.bin", FileMode.Create, FileAccess.Write, FileShare.None);
+            formatter5.Serialize(stream5, u);
+            stream5.Close();
+        }
+        public static List<Artista> CargarActores()
+        {
+            IFormatter formatter6 = new BinaryFormatter();
+            Stream stream6 = new FileStream("Actores.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
+            List<Artista> v = (List<Artista>)formatter6.Deserialize(stream6);
+            stream6.Close();
+            return v;
+        }
+        public static void Partirlistaactores()
+        {
+            lista_actores = CargarActores();
+        }
+        public static void AlmacenarAlbum(List<PlaylistSong> u)      //Serializamos
+        {
+            IFormatter formatter5 = new BinaryFormatter();
+            Stream stream5 = new FileStream("Albums.bin", FileMode.Create, FileAccess.Write, FileShare.None);
+            formatter5.Serialize(stream5, u);
+            stream5.Close();
+        }
+        public static List<PlaylistSong> CargarAlbum()
+        {
+            IFormatter formatter6 = new BinaryFormatter();
+            Stream stream6 = new FileStream("Albums.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
+            List<PlaylistSong> v = (List<PlaylistSong>)formatter6.Deserialize(stream6);
+            stream6.Close();
+            return v;
+        }
+        public static void Partirlistaalbumes()
+        {
+            todos_los_albumes = CargarAlbum();
+        }
+        public static void Agregar_a_favoritos(string email, Song s)
+        {
+            string funka = "";
+            for (int i = 0; i < listausuarios.Count; i++)
+            {
+                if (listausuarios[i].Email == email)
+                {
+                    listausuarios[i].Canciones_favoritas.Add(s);
+                    Almacenar(listausuarios);
+                    funka += "si";
+
+                }
+            }
+            if (funka != "")
+            {
+                Console.WriteLine("CANCION AGREGADA CORRECTAMENTE A FAVORITOS");
+                Thread.Sleep(2000);
+            }
+            else
+            {
+                Console.WriteLine("LA CANCION NO PUDO AGREGARSE A FAVORITOS");
+                Thread.Sleep(2000);
+            }
+        }
+        public static void Agregar_video_a_favoritos(string email, Video s)
+        {
+            string funka = "";
+            for (int i = 0; i < listausuarios.Count; i++)
+            {
+                if (listausuarios[i].Email == email)
+                {
+                    listausuarios[i].Videos_favoritos.Add(s);
+                    Almacenar(listausuarios);
+                    funka += "si";
+
+                }
+            }
+            if (funka != "")
+            {
+                Console.WriteLine("CANCION AGREGADA CORRECTAMENTE A FAVORITOS");
+                Thread.Sleep(2000);
+            }
+            else
+            {
+                Console.WriteLine("LA CANCION NO PUDO AGREGARSE A FAVORITOS");
+                Thread.Sleep(2000);
+            }
+        }
+        public static bool Aumentarreproduccion(string nombrecancion, int reproduccion)
+        {
+
+            for (int i = 0; i < todas_las_canciones.Count; i++)
+            {
+                if (todas_las_canciones[i].nombrecancion == nombrecancion)
+                {
+                    todas_las_canciones[i].reproducciones += 1;
+                    AlmacenarCanciones(todas_las_canciones);
+                    return true;
+                }
+            }
+            return false;
+        }
+        public static string Nombrereproducirply(string email, string nombreply, int posicion)
+        {
+            string info = "No hay info";
+            for (int j = 0; j < listausuarios.Count; j++)
+            {
+                if (listausuarios[j].Email == email)
+                {
+                    if (listausuarios[j].Lista_playlistusuario.Count > 0)
+                    {
+                        for (int i = 0; i < listausuarios[j].Lista_playlistusuario.Count; i++)
+                        {
+                            if (listausuarios[j].Lista_playlistusuario[i].NombrePlaylist == nombreply)
+                            {
+                                info = listausuarios[j].Lista_playlistusuario[i].listplay[posicion - 1].nombrecancion;
+                            }
+                        }
+                    }
+                }
+            }
+            return info;
+
+
+
+        }
+        public static string Nombrereproducirplyvideo(string email, string nombreply, int posicion)
+        {
+            string info = "No hay info";
+            for (int j = 0; j < listausuarios.Count; j++)
+            {
+                if (listausuarios[j].Email == email)
+                {
+                    if (listausuarios[j].Lista_playlistvideousuario.Count > 0)
+                    {
+                        for (int i = 0; i < listausuarios[j].Lista_playlistvideousuario.Count; i++)
+                        {
+                            if (listausuarios[j].Lista_playlistvideousuario[i].NombrePlaylist == nombreply)
+                            {
+                                info = listausuarios[j].Lista_playlistvideousuario[i].listplayvideo[posicion - 1].nombre_video;
+                            }
+                        }
+                    }
+                }
+            }
+            return info;
+
+
+
+        }
+        public static int Reproduccionreproducirply(string email, string nombreply, int posicion)
+        {
+            int info = 0;
+            for (int j = 0; j < listausuarios.Count; j++)
+            {
+                if (listausuarios[j].Email == email)
+                {
+                    if (listausuarios[j].Lista_playlistusuario.Count > 0)
+                    {
+                        for (int i = 0; i < listausuarios[j].Lista_playlistusuario.Count; i++)
+                        {
+                            if (listausuarios[j].Lista_playlistusuario[i].NombrePlaylist == nombreply)
+                            {
+                                info = listausuarios[j].Lista_playlistusuario[i].listplay[posicion - 1].reproducciones;
+                                ;
+                            }
+                        }
+                    }
+                }
+            }
+            return info;
+            //========================================================================================================================================
+        }
+        /*
+        public static int Reproduccionreproducirplyvideo(string email, string nombreply, int posicion)
+        {
+            int info = 0;
+            for (int j = 0; j < listausuarios.Count; j++)
+            {
+                if (listausuarios[j].Email == email)
+                {
+                    if (listausuarios[j].Lista_playlistvideousuario.Count > 0)
+                    {
+                        for (int i = 0; i < listausuarios[j].Lista_playlistvideousuario.Count; i++)
+                        {
+                            if (listausuarios[j].Lista_playlistvideousuario[i].NombrePlaylist == nombreply)
+                            {
+                                info = listausuarios[j].Lista_playlistvideousuario[i].listplayvideo[posicion - 1].reproducciones;
+                                ;
+                            }
+                        }
+                    }
+                }
+            }
+            return info;
+            //========================================================================================================================================
+        }
+        */
     }
+
 }
+
+
+
+    
+
 
 
 

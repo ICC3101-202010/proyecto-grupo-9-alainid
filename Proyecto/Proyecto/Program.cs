@@ -8,9 +8,9 @@ namespace Proyecto
 
         static void Main()
         {
-            ALAINID.lista_generos_canciones.Add("Electronica");ALAINID.lista_generos_canciones.Add("Rock");ALAINID.lista_generos_canciones.Add("Jazz");
+            ALAINID.lista_generos_canciones.Add("Electronica"); ALAINID.lista_generos_canciones.Add("Rock"); ALAINID.lista_generos_canciones.Add("Jazz");
             ALAINID.lista_generos_canciones.Add("Heavy Metal"); ALAINID.lista_generos_canciones.Add("Indie Rock");
-            ALAINID.lista_generos_canciones.Add("House");ALAINID.lista_generos_canciones.Add("Hip-Hop");ALAINID.lista_generos_canciones.Add("R&B");
+            ALAINID.lista_generos_canciones.Add("House"); ALAINID.lista_generos_canciones.Add("Hip-Hop"); ALAINID.lista_generos_canciones.Add("R&B");
             ALAINID.lista_generos_canciones.Add("Techno"); ALAINID.lista_generos_canciones.Add("Country"); ALAINID.lista_generos_canciones.Add("Pop");
             ALAINID.lista_generos_canciones.Add("Disco"); ALAINID.lista_generos_canciones.Add("Blues"); ALAINID.lista_generos_canciones.Add("K-Pop");
             ALAINID.lista_generos_canciones.Add("Folklorica"); ALAINID.lista_generos_canciones.Add("Urban"); ALAINID.lista_generos_canciones.Add("Punk");
@@ -31,14 +31,29 @@ namespace Proyecto
             ALAINID.lista_calidad_pelicula.Add("144p"); ALAINID.lista_calidad_pelicula.Add("240p"); ALAINID.lista_calidad_pelicula.Add("360p");
             ALAINID.lista_calidad_pelicula.Add("480p"); ALAINID.lista_calidad_pelicula.Add("720p");
 
-
-
             ALAINID.lista_tipoarchivo_cancion.Add("WAV"); ALAINID.lista_tipoarchivo_cancion.Add("AIFF"); ALAINID.lista_tipoarchivo_cancion.Add("FLAC");
             ALAINID.lista_tipoarchivo_cancion.Add("MP3"); ALAINID.lista_tipoarchivo_cancion.Add("WavPack");
 
             ALAINID.lista_tipoarchivo_pelicula.Add("AVI"); ALAINID.lista_tipoarchivo_pelicula.Add("MP4"); ALAINID.lista_tipoarchivo_pelicula.Add("MKV");
             ALAINID.lista_tipoarchivo_pelicula.Add("FLV"); ALAINID.lista_tipoarchivo_pelicula.Add("MOV"); ALAINID.lista_tipoarchivo_pelicula.Add("WMV");
 
+
+            //---------37 PA ABAJO
+            ALAINID.lista_criterios_filtro.Add("Genero"); ALAINID.lista_criterios_filtro.Add("Cantante"); ALAINID.lista_criterios_filtro.Add("Album");
+            ALAINID.lista_criterios_filtro.Add("Nombre"); ALAINID.lista_criterios_filtro.Add("Disquera"); ALAINID.lista_criterios_filtro.Add("Compositor"); ALAINID.lista_criterios_filtro.Add("Año");
+
+            ALAINID.lista_criterios_usuarios.Add("Nombre"); ALAINID.lista_criterios_usuarios.Add("Email"); ALAINID.lista_criterios_usuarios.Add("Id");
+            ALAINID.lista_disquera.Add("Sony Music"); ALAINID.lista_disquera.Add(" Universal Music"); ALAINID.lista_disquera.Add(" Warner Music "); ALAINID.lista_disquera.Add(" Warner Music "); ALAINID.lista_disquera.Add("YG Entertainment");
+            ALAINID.lista_disquera.Add("YG Entertainment"); ALAINID.lista_disquera.Add("SM Entretainment");
+            
+                
+            for(int i=1900; i <= 2020; i++)
+            {
+                ALAINID.anios.Add(i.ToString());
+            }
+                
+                
+            
             Input_Output.Comenzar_app();
             Thread.Sleep(1000);
         }

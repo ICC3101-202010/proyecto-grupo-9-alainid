@@ -18,7 +18,7 @@ namespace Proyecto
         //public float calificacionpersonal;
         public float calificacionpromedio;
         public float duracion;
-        public int reproducciones = 0;            //CAMBIE AQU
+        public int reproducciones;            //CAMBIE AQU
         public string tipoarchivo;
         public float tamano;
         public string calidad;
@@ -28,7 +28,7 @@ namespace Proyecto
         //y el numero de reproducciones
 
         public Song(string nombre, object cantante1, string genero1, object compositor1,
-             string anopublicacion1, string disquera1, string album1, float duracion1, string tipodearchivo1, float tamano1, string calidad1, string nombrearchivo1)
+             string anopublicacion1, string disquera1, string album1, float duracion1, string tipodearchivo1, float tamano1, string calidad1, string nombrearchivo1, int reproducciones1)
         {
             nombrecancion = nombre;
             cantante = cantante1;
@@ -44,6 +44,8 @@ namespace Proyecto
             tamano = tamano1;
             calidad = calidad1;
             nombrearchivo = nombrearchivo1;
+            reproducciones = reproducciones1;
+ 
            
 
         }

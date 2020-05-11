@@ -5,18 +5,19 @@ using System.Text;
 namespace Proyecto
 {
     [Serializable]
-    class PlaylistVideo
+    public class PlaylistVideo
     {
           
         public string NombrePlaylist;
         public List<Video> listplayvideo = new List<Video>();
 
-        public PlaylistVideo(string _nombreplv, List<Video> listavideo)
+        public PlaylistVideo(string _nombreplv)
         {
-
             this.NombrePlaylist = _nombreplv;
-            this.listplayvideo = listavideo;
-
+        }
+        public void Agregar_video(Video video)
+        {
+            listplayvideo.Add(video);
         }
         public string InformationPLL()
         {

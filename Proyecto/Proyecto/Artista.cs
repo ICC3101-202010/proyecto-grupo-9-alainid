@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.IO;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace Proyecto
 {
@@ -8,21 +11,22 @@ namespace Proyecto
     public class Artista
     {
         public string name;
-        public string last;
         public int age;
         public string nacionality;
         public string sexo;
-        public bool seguir= false;
+        public bool seguir = false;
         public List<PlaylistSong> lista_album = new List<PlaylistSong>();
+        public List<Video> lista_peliculas = new List<Video>();
+        public List<Song> lista_canciones = new List<Song>();
 
 
-        public Artista(string name, string last, int age, string sexo, string nacionality)
+        public Artista(string name, int age, string sexo, string nacionality)
         {
             this.name = name;
-            this.last = last;
             this.age = age;
             this.sexo = sexo;
             this.nacionality = nacionality;
         }
+
     }
 }
