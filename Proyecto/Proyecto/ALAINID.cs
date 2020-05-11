@@ -25,16 +25,45 @@ namespace Proyecto
         public static List<string> lista_generos_peliculas = new List<string>();       // TODOS LOS GENEROS DE VIDEOS QUE EXISTEN DE ALAINID
         public static List<string> lista_categoria = new List<string>();       // CATEGORIAS DE PELICULAS- VIDEOS EN ALAINID
 
-        public static string todo_a_minuscula(string pal){
+        public static string Todo_a_minuscula(string pal){
             string pal_minuscula;
             pal_minuscula = pal.ToLower();
             return pal_minuscula;
         }
 
+        // Controla la ejecucion mientras el usuario no quiera salir
+        bool exec = true;
+        while (exec){ // Pedimos al usuario una de las opciones
+            string chosen = ShowOptions(new List<string>() { "Registrarse", "Cambiar contrasena", "Salir" });
+            switch (chosen){
+            case "Registrarse":
+                Console.Clear();
+                server.Register();
+                break;
+            case "Cambiar contrasena":
+                Console.Clear();
+                server.ChangePassword();
+                 break;
+                    case "Salir":
+                        exec = false;
+                        break;
+                }
+                Thread.Sleep(2000);
+                Console.Clear();
+            }
 
+// Metodo para mostrar las opciones posibles
+public static string ShowOptions(List<string> options){
+            int i = 0;
+            Console.WriteLine("\n\nSelecciona una opcion:");
+            foreach (string option in options){
+                Console.WriteLine(Convert.ToString(i) + ". " + option);
+                i += 1;
+            }
+            return options[Convert.ToInt16(Console.ReadLine())];
+        }
 
-        public static int Acceso_inicial() // verifica que el input  sea un numero dentro del rango requerido
-        {
+        public static int Acceso_inicial(){  // verifica que el input  sea un numero dentro del rango requerido
             int n;
             bool aux1 = true;
             bool aux2 = true;
@@ -128,11 +157,15 @@ namespace Proyecto
             {
                 if (listausuarios[j].Email == email)
                 {
-                    info = "Nombres de tus playlist: \n";
-                    for (int i = 0; i < listausuarios[j].Lista_playlistusuario.Count; i++)
+                    if (listausuarios[j].Lista_playlistusuario.Count>0)
                     {
-                        info += i + 1 + ". " + listausuarios[j].Lista_playlistusuario[i].NombrePlaylist + "\n";
+                        info = "Nombres de tus playlist: \n";
+                        for (int i = 0; i < listausuarios[j].Lista_playlistusuario.Count; i++)
+                        {
+                            info += i + 1 + ". " + listausuarios[j].Lista_playlistusuario[i].NombrePlaylist + "\n";
+                        }
                     }
+                    
                 }
             }
             return info;
