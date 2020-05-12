@@ -86,11 +86,12 @@ namespace Proyecto
                                 Console.WriteLine("7. PREMIUM");
                                 Console.WriteLine("8. PERFIL");
                                 Console.WriteLine("9. CANCIONES DESCARGADAS");
-                                Console.WriteLine("10. CERRAR SESION\n\n");
-                                Console.WriteLine("11. ESCUCHA TU ULTIMA REPRODUCCION");
-                                Console.WriteLine("12. PAUSA");
-                                Console.WriteLine("13. PLAY (ESCUCHAR DONDE HABIAS QUEDADO)");
-                                Console.WriteLine("14. STOP");
+                                Console.WriteLine("10. EN COLA");
+                                Console.WriteLine("11. CERRAR SESION\n\n");
+                                Console.WriteLine("12. ESCUCHA TU ULTIMA REPRODUCCION");
+                                Console.WriteLine("13. PAUSA");
+                                Console.WriteLine("14. PLAY (ESCUCHAR DONDE HABIAS QUEDADO)");
+                                Console.WriteLine("15. STOP");
                                 accion2 = ALAINID.Numero(14);
                                 switch (accion2)
                                 {
@@ -145,6 +146,7 @@ namespace Proyecto
                                                                 if (anio == v)  {
                                                                     valor = anio;
                                                                     si  =  false;
+                                                                    break;
                                                                 }
                                                                 else{
                                                                     Console.WriteLine("El año ingresado no es valido, vuelva a intentar");
@@ -375,11 +377,10 @@ namespace Proyecto
                                                     string accion34 = "2";
                                                     if (ALAINID.Vernombresplaylistcancion(email2) != "No hay Playlist")
                                                     {
-
                                                         Console.WriteLine("\nINGRESE EL NUMERO DE LA PLAYLIST QUE QUIERE VER");
                                                         Console.WriteLine(ALAINID.Vernombresplaylistcancion(email2));
-                                                        string numero = Console.ReadLine();
-                                                        string nombreply = ALAINID.Numeroplaylistcancion(email2, int.Parse(numero));
+                                                        int numero = ALAINID.Numero(ALAINID.Cuantasplaylistcancion(email2));
+                                                        string nombreply = ALAINID.Numeroplaylistcancion(email2, numero);
                                                         ALAINID.Retornaplaylistusuario(email2, nombreply);
                                                         if (ALAINID.cachativa != ""){
                                                             while (accion34 != "0")
@@ -484,7 +485,7 @@ namespace Proyecto
                                                         }
                                                         else
                                                         {
-                                                            Console.WriteLine("ESA PLAYLIST NO EXISTE");
+                                                            Console.WriteLine("ESA PLAYLIST ESTA VACIA");
                                                             Thread.Sleep(2000);
                                                         }
 
@@ -682,10 +683,10 @@ namespace Proyecto
                                             switch (accion5)
                                             {
                                                 case 1:
-                                                    //METODO VER CANCIONES FAVORITAS
+                                                    ALAINID.Verinformacionfavoritoscancion(email2);
                                                     break;
                                                 case 2:
-                                                    //METODO VER CANCIONES VIDEOS
+                                                    ALAINID.Verinformacionfavoritosvideos(email2);
                                                     break;
                                                 case 3:
                                                     break;
@@ -873,22 +874,34 @@ namespace Proyecto
                                         ALAINID.Verinformaciondescargas(email2);
                                         break;
                                     case 10:
+                                        int accion47 = '\0';
+                                        while(accion47 != 3)
+                                        {
+                                            Console.Clear();
+                                            Console.WriteLine("1. VER COLA CANCIONES");
+                                            Console.WriteLine("2. VER COLA VIDEOS");
+                                            Console.WriteLine("3. ATRAS");
+
+                                        }
+
+                                        break;
+                                    case 11:
                                         Console.WriteLine("=================================");
                                         Console.WriteLine("CERRANDO SESION....");
                                         pla.PauseSong();
                                         Console.WriteLine("=================================");
                                         break;
-                                    case 11:
+                                    case 12:
                                         pla.Playsong(ALAINID.UltimaReproduccion(email2));
 
                                         break;
-                                    case 12:
+                                    case 13:
                                         pla.PauseSong();
                                         break;
-                                    case 13:
+                                    case 14:
                                         pla.ResumeSong(ALAINID.UltimaReproduccion(email2));
                                         break;
-                                    case 14:
+                                    case 15:
                                         pla.StopSong();
                                         break;
                                 }

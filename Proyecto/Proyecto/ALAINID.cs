@@ -1191,7 +1191,7 @@ namespace Proyecto
                 case "Año":
                     foreach (Song canc in todas_las_canciones){
                         if (canc.anopublicacion == _valor){
-                            listafiltrada.Add(canc);
+                            listafiltrada.Add(canc);// ver 
                         }
                     }
 
@@ -2119,10 +2119,72 @@ namespace Proyecto
 
                     
                 }
+
             }
 
         }
+        public static void Verinformacionfavoritoscancion(string email)
+        {
 
+            for (int j = 0; j < listausuarios.Count; j++)
+            {
+                if (listausuarios[j].email == email)
+                {
+                    if (listausuarios[j].Favorite_songs.Count == 0)
+                    {
+                        Console.WriteLine("No hay canciones agregadas aún");
+                    }
+                    else
+                    {
+                        for (int i = 0; i < listausuarios[j].Favorite_songs.Count; i++)
+                        {
+
+                            Console.WriteLine("============");
+                            Console.WriteLine("Canción" + " " + (i + 1));
+                            Console.WriteLine("============");
+                            Console.WriteLine(listausuarios[j].Favorite_songs[i].Informacioncancion());
+                            Console.WriteLine(" ");
+                        }
+
+                    }
+
+
+                }
+
+            }
+
+        }
+        public static void Verinformacionfavoritosvideos(string email)
+        {
+
+            for (int j = 0; j < listausuarios.Count; j++)
+            {
+                if (listausuarios[j].email == email)
+                {
+                    if (listausuarios[j].Favorite_videos.Count == 0)
+                    {
+                        Console.WriteLine("No hay canciones agregadas aún");
+                    }
+                    else
+                    {
+                        for (int i = 0; i < listausuarios[j].Favorite_videos.Count; i++)
+                        {
+
+                            Console.WriteLine("============");
+                            Console.WriteLine("Canción" + " " + (i + 1));
+                            Console.WriteLine("============");
+                            Console.WriteLine(listausuarios[j].Favorite_videos[i].Ver_informacion());
+                            Console.WriteLine(" ");
+                        }
+
+                    }
+
+
+                }
+
+            }
+
+        }
         /*
         public static int Reproduccionreproducirplyvideo(string email, string nombreply, int posicion)
         {
