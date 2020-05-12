@@ -40,14 +40,22 @@ namespace Proyecto
 
             //---------37 PA ABAJO
             ALAINID.lista_criterios_filtro.Add("Genero"); ALAINID.lista_criterios_filtro.Add("Cantante"); ALAINID.lista_criterios_filtro.Add("Album");
-            ALAINID.lista_criterios_filtro.Add("Nombre"); ALAINID.lista_criterios_filtro.Add("Disquera"); ALAINID.lista_criterios_filtro.Add("Compositor"); ALAINID.lista_criterios_filtro.Add("Año");
+            ALAINID.lista_criterios_filtro.Add("Nombre"); ALAINID.lista_criterios_filtro.Add("Disquera"); ALAINID.lista_criterios_filtro.Add("Compositor"); 
+            ALAINID.lista_criterios_filtro.Add("Año");ALAINID.lista_criterios_filtro.Add("Sexo"); ALAINID.lista_criterios_filtro.Add("Edad");
+            ALAINID.lista_criterios_filtro.Add("Calidad/Resolucion"); ALAINID.lista_criterios_filtro.Add("Evaluacion");
 
             ALAINID.lista_criterios_usuarios.Add("Nombre"); ALAINID.lista_criterios_usuarios.Add("Email"); ALAINID.lista_criterios_usuarios.Add("Id");
             ALAINID.lista_disquera.Add("Sony Music"); ALAINID.lista_disquera.Add(" Universal Music"); ALAINID.lista_disquera.Add(" Warner Music "); ALAINID.lista_disquera.Add(" Warner Music "); ALAINID.lista_disquera.Add("YG Entertainment");
             ALAINID.lista_disquera.Add("YG Entertainment"); ALAINID.lista_disquera.Add("SM Entretainment");
-            
-                
-            for(int i=1900; i <= 2020; i++)
+
+            ALAINID.sexo.Add("Masculino"); ALAINID.sexo.Add("Femenino");
+
+            ALAINID.edades.Add("Menores de 25 años"); ALAINID.edades.Add("De 25 a 40 años"); ALAINID.edades.Add("De 40 a 60 años");
+            ALAINID.edades.Add("Mayores de 60");
+
+
+
+            for (int i=1900; i <= 2020; i++)
             {
                 ALAINID.anios.Add(i.ToString());
             }

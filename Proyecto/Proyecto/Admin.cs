@@ -16,7 +16,7 @@ namespace Proyecto
                 Console.WriteLine(user.InformacionUsuario());
             }
         }
-        public bool AgregarSong(string nombrecan, string cantante, string genero, string compositor, string anopublicacion, string disquera, string album, float duracion, string tipoarchivo, float tamano, string calidad, string nombrearchivo, int reproduccion)
+        public bool AgregarSong(string nombrecan, string cantante, string genero, string compositor, string anopublicacion, string disquera, string album, float duracion, string tipoarchivo, float tamano, string calidad, string nombrearchivo, int reproduccion, string letra)
         {
             /*
             int n1  =  0, n2  =  0;
@@ -41,7 +41,7 @@ namespace Proyecto
                     return false; 
                 }
             }*/
-            Song s = new Song(nombrecan, cantante, genero, compositor, anopublicacion, disquera, album, duracion, tipoarchivo, tamano, calidad, nombrearchivo, reproduccion);
+            Song s = new Song(nombrecan, cantante, genero, compositor, anopublicacion, disquera, album, duracion, tipoarchivo, tamano, calidad, nombrearchivo, reproduccion, letra);
             foreach (Song si in ALAINID.todas_las_canciones)
             {
                 if (si == s)

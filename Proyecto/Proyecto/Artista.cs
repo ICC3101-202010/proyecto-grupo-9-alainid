@@ -27,6 +27,10 @@ namespace Proyecto
             this.sexo = sexo;
             this.nacionality = nacionality;
         }
-
+        /*public string InformacionArtista()
+        {
+            string informacion = ("ID USUARIO: " + name + "\n" + "- Nombre: " + Nombre + "\n" + "- Email: " + Email + "\n");
+            return informacion;
+        }*/
     }
 }

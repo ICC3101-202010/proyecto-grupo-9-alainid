@@ -14,7 +14,7 @@ namespace Proyecto
         public string anopublicacion;
         public string disquera;
         public string album;
-        public string letra = null;           //CAMBIE AQUI
+        public string letra;      //CAMBIE AQUI
         //public float calificacionpersonal;
         public float calificacionpromedio;
         public float duracion;
@@ -23,12 +23,13 @@ namespace Proyecto
         public float tamano;
         public string calidad;
         public string nombrearchivo;
+        
 
         // asumi que no todas las canciones seran subidas con su letra por lo tanto no es requisito par acerar cancion al igual que la calificacion
         //y el numero de reproducciones
 
         public Song(string nombre, object cantante1, string genero1, object compositor1,
-             string anopublicacion1, string disquera1, string album1, float duracion1, string tipodearchivo1, float tamano1, string calidad1, string nombrearchivo1, int reproducciones1)
+             string anopublicacion1, string disquera1, string album1, float duracion1, string tipodearchivo1, float tamano1, string calidad1, string nombrearchivo1, int reproducciones1, string letra1)
         {
             nombrecancion = nombre;
             cantante = cantante1;
@@ -45,6 +46,7 @@ namespace Proyecto
             calidad = calidad1;
             nombrearchivo = nombrearchivo1;
             reproducciones = reproducciones1;
+            letra = letra1;
  
            
 
