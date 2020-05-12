@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using WMPLib;
+using System.Threading;
 
 
 
@@ -16,13 +17,9 @@ namespace Proyecto
         {
             wmp = new WindowsMediaPlayer();
             playlistcola = wmp.playlistCollection.newPlaylist("playliscola");
-
-
-
         }
         public void Playsong(string archivocancion)
         {
-
             wmp.URL = archivocancion;
             wmp.controls.play();
             currpos = 0;
@@ -33,7 +30,6 @@ namespace Proyecto
                     so.reproducciones++;
                 }
             }
-
         }
         public void StopSong()
         {
@@ -43,9 +39,7 @@ namespace Proyecto
         {
             currpos = wmp.controls.currentPosition;
             wmp.controls.pause();
-
         }
-
         public void ResumeSong(string archivocancion)
         {
             wmp.URL = archivocancion;
@@ -58,6 +52,8 @@ namespace Proyecto
             media = wmp.newMedia(nombrearchivo);
             playlistcola.appendItem(media);
             Console.WriteLine("Canción agregada a la cola");
+            Thread.Sleep(2000);
+
         }
         public void playcola()
         {
@@ -72,17 +68,11 @@ namespace Proyecto
         public void siguiente()
         {
             wmp.controls.next();
-
         }
 
         public void previa()
         {
             wmp.controls.previous();
         }
-
-
-
-
-
     }
 }

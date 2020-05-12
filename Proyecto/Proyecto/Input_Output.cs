@@ -1303,7 +1303,9 @@ namespace Proyecto
                                         }
                                         break;
                                     case 9:
+                                        Console.Clear();
                                         ALAINID.Verinformaciondescargas(email2);
+                                        Thread.Sleep(2000);
                                         break;
 
 
