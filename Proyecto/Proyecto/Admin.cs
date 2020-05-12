@@ -8,7 +8,7 @@ namespace Proyecto
     class Admin
     {
 
-        
+
         public void Ver_info_usuarios()
         {
             foreach (User user in ALAINID.listausuarios)
@@ -121,7 +121,7 @@ namespace Proyecto
                         {
                             video1.Agregar_actores(art);
                             art.lista_peliculas.Add(video1);
-                            ALAINID.AlmacenarActores(ALAINID.lista_actores); 
+                            ALAINID.AlmacenarActores(ALAINID.lista_actores);
                             break;
                         }
                         else
@@ -132,8 +132,10 @@ namespace Proyecto
                     }
                     Console.WriteLine("1-> Desea Ingresar otro actor" + " " +
                     "2-> Terminar");
+                    
                     n = ALAINID.Numero(2);
                 } while (n == 1);
+                ALAINID.AlmacenarActores(ALAINID.lista_actores);
                 foreach (Artista dir in ALAINID.lista_directores)
                 {
                     dir.lista_peliculas.Add(video1);

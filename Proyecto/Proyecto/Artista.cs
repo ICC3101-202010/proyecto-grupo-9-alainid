@@ -27,10 +27,23 @@ namespace Proyecto
             this.sexo = sexo;
             this.nacionality = nacionality;
         }
-        /*public string InformacionArtista()
+        public string InformacionArtista()
         {
-            string informacion = ("ID USUARIO: " + name + "\n" + "- Nombre: " + Nombre + "\n" + "- Email: " + Email + "\n");
+            string informacion = ("- Nombre: " + name + "\n" + "- Edad: " + age.ToString() + "\n" + "- Nacionalidad: " + nacionality + "\n" + "- Sexo: " + sexo + "\n");
+            informacion += "Albums:\n";
+            foreach (PlaylistSong alb in lista_album)
+            {
+                informacion += "-" + alb.NombrePlaylist + "\n";
+            }
+            foreach (Video v in lista_peliculas)
+            {
+                informacion += "-" + v.nombre_video + "\n";
+            }
+            foreach (Song s in lista_canciones)
+            {
+                informacion += "-" + s.nombrecancion + "\n";
+            }
             return informacion;
-        }*/
+        }
     }
 }

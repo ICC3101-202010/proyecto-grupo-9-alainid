@@ -18,6 +18,10 @@ namespace Proyecto
         public List<Song> favorite_songs = new List<Song>();        // LISTA FAVORITOS CANCIONES DE CADA USUARIO
         public List<Video> favorite_videos = new List<Video>();
         public List<Song> descargas = new List<Song>();
+        public List<Song> canciones_seguidas = new List<Song>();
+        public List<Artista> cantantes_seguidos = new List<Artista>();
+        public List<User> usuarios_seguidos = new List<User>();
+        
         public string PerfilPublico;
         public string Ultimareproduccion;
         
@@ -34,6 +38,10 @@ namespace Proyecto
         public List<Song> Descargas { get => descargas; set => descargas = value; }
         public List<PlaylistSong> Lista_playlistusuario { get => lista_playlistusuario; set => lista_playlistusuario = value; }
         public List<PlaylistVideo> Lista_playlistvideousuario { get => lista_playlistvideousuario; set => lista_playlistvideousuario = value; }
+        public List<Song> Canciones_seguidas { get => canciones_seguidas; set => canciones_seguidas = value; }
+        public List<Artista> Cantantes_seguidos { get => cantantes_seguidos; set => cantantes_seguidos = value; }
+        public List<User> Usuarios_seguidos { get => usuarios_seguidos; set => usuarios_seguidos = value; }
+
         public List<PlaylistSong> playlistcanciones_seguidas = new List<PlaylistSong>();
         public List<Video> videos_seguidos = new List<Video>();
         public List<Artista> artistas_seguidas = new List<Artista>();
