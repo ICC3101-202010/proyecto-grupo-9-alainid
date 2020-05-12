@@ -14,10 +14,6 @@ namespace Proyecto
         {
             this.NombrePlaylist = _nombrepl;
         }
-        public void Agregar_cancion(Song song)
-        {
-            listplay.Add(song);
-        }
         public string InformationPLL()
         {
             string stringaux1 = " ";

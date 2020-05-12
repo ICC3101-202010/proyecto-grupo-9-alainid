@@ -53,6 +53,11 @@ namespace Proyecto
             ALAINID.edades.Add("Menores de 25 años"); ALAINID.edades.Add("De 25 a 40 años"); ALAINID.edades.Add("De 40 a 60 años");
             ALAINID.edades.Add("Mayores de 60");
 
+            ALAINID.lista_criterios_filtro2.Add("Genero");
+            ALAINID.lista_criterios_filtro2.Add("Disquera");
+            ALAINID.lista_criterios_filtro2.Add("Año Publicacion"); ALAINID.lista_criterios_filtro2.Add("Sexo del Artista"); ALAINID.lista_criterios_filtro2.Add("Edad del Artista");
+            ALAINID.lista_criterios_filtro2.Add("Calidad/Resolucion"); ALAINID.lista_criterios_filtro2.Add("Evaluacion");
+
 
 
             for (int i=1900; i <= 2020; i++)

@@ -7,8 +7,6 @@ namespace Proyecto
 {
     class Admin
     {
-
-
         public void Ver_info_usuarios()
         {
             foreach (User user in ALAINID.listausuarios)
@@ -18,29 +16,6 @@ namespace Proyecto
         }
         public bool AgregarSong(string nombrecan, string cantante, string genero, string compositor, string anopublicacion, string disquera, string album, float duracion, string tipoarchivo, float tamano, string calidad, string nombrearchivo, int reproduccion, string letra)
         {
-            /*
-            int n1  =  0, n2  =  0;
-            int c = 0;
-            foreach (Artista art in ALAINID.lista_cantantes){
-                if (cantante == art.name){
-                    c=1;
-                    ar = art;
-                    break;
-                }
-            }
-            if (c == 0){                // creo que esto esta de mas y es redudante con una funcion que ya esta en ALAINID------------
-                Console.WriteLine("El cantante ingresado no existe, que desea hacer:\n" +
-                              "1--> Crear un perfil para el cantante\n" +
-                              "2--> No Agregar la cancion\n");
-                n2 = ALAINID.Numero(2);
-                if (n2 == 1){
-                    ALAINID.Crear_cantante();
-                    c = 2;
-                }
-                else{ 
-                    return false; 
-                }
-            }*/
             Song s = new Song(nombrecan, cantante, genero, compositor, anopublicacion, disquera, album, duracion, tipoarchivo, tamano, calidad, nombrearchivo, reproduccion, letra);
             foreach (Song si in ALAINID.todas_las_canciones)
             {
@@ -95,10 +70,10 @@ namespace Proyecto
             return true;
         }
 
-        public void Subir_video(string nombre_video, float duracion, string categoria, string director, string genero, string anio_publicacion, string tipo_archivo, string calidad, string film_studio, float tamanio, string nombrearchivovideo)
+        public void Subir_video(string nombre_video, float duracion, string categoria, string director, string genero, string anio_publicacion, string tipo_archivo, string calidad, string film_studio, float tamanio, string nombrearchivovideo, int reproduccion1)
         {
             bool ver2 = true;
-            Video video1 = new Video(nombre_video, duracion, categoria, director, genero, anio_publicacion, tipo_archivo, calidad, film_studio, tamanio, nombrearchivovideo);
+            Video video1 = new Video(nombre_video, duracion, categoria, director, genero, anio_publicacion, tipo_archivo, calidad, film_studio, tamanio, nombrearchivovideo, reproduccion1);
 
             foreach (Video video in ALAINID.todos_los_videos)
             {
@@ -132,7 +107,7 @@ namespace Proyecto
                     }
                     Console.WriteLine("1-> Desea Ingresar otro actor" + " " +
                     "2-> Terminar");
-                    
+
                     n = ALAINID.Numero(2);
                 } while (n == 1);
                 ALAINID.AlmacenarActores(ALAINID.lista_actores);
@@ -193,6 +168,25 @@ namespace Proyecto
 
                 }
             }
+        }
+        public bool AgregarSongKaraoke(string nombrecan, string cantante, string genero, string compositor, string anopublicacion, string disquera, string album, float duracion, string tipoarchivo, float tamano, string calidad, string nombrearchivo, int reproduccion, string letra)
+        {
+            Song s = new Song(nombrecan, cantante, genero, compositor, anopublicacion, disquera, album, duracion, tipoarchivo, tamano, calidad, nombrearchivo, reproduccion, letra);
+            foreach (Song si in ALAINID.todas_las_cancioneskaraoke)
+            {
+                if (si == s)
+                {
+                    Console.WriteLine("esta cancion ya existe en ALAINID");
+                    Thread.Sleep(2000);
+                    return false;
+                }
+            }
+            ALAINID.todas_las_cancioneskaraoke.Add(s);
+            ALAINID.Partirkaraoke();
+            Console.WriteLine("================");
+            Console.WriteLine("Canción agregada exitosamente A CANTAAR!");
+            Console.WriteLine("================");
+            return true;
         }
     }
 }

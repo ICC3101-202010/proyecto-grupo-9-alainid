@@ -20,6 +20,7 @@ namespace Proyecto
         public float tamanio;
         public float calificacion_promedio;
         public string nombrearchivovideo;
+        public int reproduccion;
         public List<Artista> actores = new List<Artista>(); // ACTORES DE CADA PELICULA- VIDEO
 
 
@@ -29,7 +30,7 @@ namespace Proyecto
 
         // asumi que tanto la descripcion como la calificacion promedio, no son requisitos para subir una cancion
 
-        public Video(string nombre_video, float duracion, string categoria, object director, string genero, string anio_publicacion, string tipo_archivo, string calidad, string film_studio, float tamanio, string nombrearchivovideo)
+        public Video(string nombre_video, float duracion, string categoria, object director, string genero, string anio_publicacion, string tipo_archivo, string calidad, string film_studio, float tamanio, string nombrearchivovideo,int _reproduccion)
         {
             this.nombre_video = nombre_video;
             this.duracion = duracion;
@@ -42,6 +43,7 @@ namespace Proyecto
             this.film_studio = film_studio;
             this.tamanio = tamanio;
             this.nombrearchivovideo = nombrearchivovideo;
+            this.reproduccion = _reproduccion;
         }
 
         public void Agregar_actores(Artista actor){
