@@ -41,7 +41,7 @@ namespace Proyecto
             //---------37 PA ABAJO
             ALAINID.lista_criterios_filtro.Add("Genero"); ALAINID.lista_criterios_filtro.Add("Cantante"); ALAINID.lista_criterios_filtro.Add("Album");
             ALAINID.lista_criterios_filtro.Add("Nombre"); ALAINID.lista_criterios_filtro.Add("Disquera"); ALAINID.lista_criterios_filtro.Add("Compositor"); 
-            ALAINID.lista_criterios_filtro.Add("Año");ALAINID.lista_criterios_filtro.Add("Sexo"); ALAINID.lista_criterios_filtro.Add("Edad");
+            ALAINID.lista_criterios_filtro.Add("Año Publicacion");ALAINID.lista_criterios_filtro.Add("Sexo del Artista"); ALAINID.lista_criterios_filtro.Add("Edad del Artista");
             ALAINID.lista_criterios_filtro.Add("Calidad/Resolucion"); ALAINID.lista_criterios_filtro.Add("Evaluacion");
 
             ALAINID.lista_criterios_usuarios.Add("Nombre"); ALAINID.lista_criterios_usuarios.Add("Email"); ALAINID.lista_criterios_usuarios.Add("Id");

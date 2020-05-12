@@ -69,7 +69,7 @@ namespace Proyecto
                         if (alb.NombrePlaylist == album)
                         {
                             alb.listplay.Add(s);
-                            ALAINID.AlmacenarCantante(ALAINID.lista_cantantes);
+                            ALAINID.AlmacenarAlbum(ALAINID.todos_los_albumes);
 
                         }
                     }

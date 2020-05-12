@@ -3,15 +3,21 @@ using System.Collections.Generic;
 using System.Text;
 using WMPLib;
 
+
+
 namespace Proyecto
 {
     public class Player
     {
         WindowsMediaPlayer wmp;
         double currpos;
+        WMPLib.IWMPPlaylist playlistcola;
         public Player()
         {
             wmp = new WindowsMediaPlayer();
+            playlistcola = wmp.playlistCollection.newPlaylist("playliscola");
+
+
 
         }
         public void Playsong(string archivocancion)
@@ -22,12 +28,12 @@ namespace Proyecto
             currpos = 0;
             foreach (Song so in ALAINID.todas_las_canciones)
             {
-               if ( so.nombrearchivo == archivocancion)
-               {
+                if (so.nombrearchivo == archivocancion)
+                {
                     so.reproducciones++;
-               }
+                }
             }
- 
+
         }
         public void StopSong()
         {
@@ -46,5 +52,37 @@ namespace Proyecto
             wmp.controls.currentPosition = currpos;
             wmp.controls.play();
         }
+        public void Agregarcancionacola(string nombrearchivo)
+        {
+            WMPLib.IWMPMedia media;
+            media = wmp.newMedia(nombrearchivo);
+            playlistcola.appendItem(media);
+            Console.WriteLine("Canción agregada a la cola");
+        }
+        public void playcola()
+        {
+            wmp.currentPlaylist = playlistcola;
+            wmp.controls.play();
+        }
+        public void limpiacola()
+        {
+            playlistcola.clear();
+            wmp.controls.play();
+        }
+        public void siguiente()
+        {
+            wmp.controls.next();
+
+        }
+
+        public void previa()
+        {
+            wmp.controls.previous();
+        }
+
+
+
+
+
     }
 }
