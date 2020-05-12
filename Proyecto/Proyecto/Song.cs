@@ -58,6 +58,13 @@ namespace Proyecto
                 "Cantidad de reproducciones:" + reproducciones + "\n");
             return info;
         }
+        public string InformacioncancionKaraoke()
+        {
+            string info = (" Nombre: " + nombrecancion + "\n" + " Genero: " + genero + "\n" + " Artista: " + cantante + "\n" + " Album: " + album + "\n" + "Compositor: " + compositor + "\n" + "Año de publicacion: " + anopublicacion + "\n" +
+                "Disquera: " + disquera + "\n" + "Calificacion promedio: " + calificacionpromedio + "\n" + "Duracion: " + duracion + "\n" +
+                "Cantidad de reproducciones:" + reproducciones + "\n" + "Letra: " + "\n" + letra);
+            return info;
+        }
         //public float Calificacion()
         //{
         //}

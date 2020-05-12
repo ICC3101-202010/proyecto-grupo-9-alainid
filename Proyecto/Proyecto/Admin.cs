@@ -169,9 +169,9 @@ namespace Proyecto
                 }
             }
         }
-        public bool AgregarSongKaraoke(string nombrecan, string cantante, string genero, string compositor, string anopublicacion, string disquera, string album, float duracion, string tipoarchivo, float tamano, string calidad, string nombrearchivo, int reproduccion, string letra)
+        public bool AgregarSongKaraoke(string nombrecan2, string cantante2, string genero2, string compositor2, string anopublicacion2, string disquera2, string album2, float duracion2, string tipoarchivo2, float tamano2, string calidad2, string nombrearchivo2, int reproduccion2, string letra2)
         {
-            Song s = new Song(nombrecan, cantante, genero, compositor, anopublicacion, disquera, album, duracion, tipoarchivo, tamano, calidad, nombrearchivo, reproduccion, letra);
+            Song s = new Song(nombrecan2, cantante2, genero2, compositor2, anopublicacion2, disquera2, album2, duracion2, tipoarchivo2, tamano2, calidad2, nombrearchivo2, reproduccion2, letra2);
             foreach (Song si in ALAINID.todas_las_cancioneskaraoke)
             {
                 if (si == s)
