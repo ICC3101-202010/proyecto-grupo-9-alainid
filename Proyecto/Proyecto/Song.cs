@@ -23,6 +23,7 @@ namespace Proyecto
         public float tamano;
         public string calidad;
         public string nombrearchivo;
+        public List<int> todas_las_calificaciones= new List<int>();
         
 
         // asumi que no todas las canciones seran subidas con su letra por lo tanto no es requisito par acerar cancion al igual que la calificacion

@@ -15,6 +15,7 @@ namespace Proyecto
         public string Premium;
         public string PerfilPublico;
         public string Ultimareproduccion;
+        public string Valorcriterio;
         public List<PlaylistSong> lista_playlistusuario = new List<PlaylistSong>();
         public List<PlaylistVideo> lista_playlistvideousuario = new List<PlaylistVideo>();
         public List<Song> favorite_songs = new List<Song>();        // LISTA FAVORITOS CANCIONES DE CADA USUARIO
@@ -25,6 +26,7 @@ namespace Proyecto
         public List<User> usuarios_seguidos = new List<User>();
         public List<Song> historial_canciones = new List<Song>();
         public List<Video> historial_videos = new List<Video>();
+        public List<Song> lista_inteligente = new List<Song>();
 
         public string nombreusuario { get { return NombreUsuario; } set { NombreUsuario = value; } }
         public string nombre { get { return Nombre; } set { Nombre = value; } }
@@ -33,7 +35,7 @@ namespace Proyecto
         public string ultimareproduccion { get { return Ultimareproduccion; } set { Ultimareproduccion = value; } }
         public string perfipublico { get { return PerfilPublico; } set { PerfilPublico = value; } }
         public string premium { get { return Premium; } set { Premium = value; } }
-
+        public string valorcriterio { get { return Valorcriterio; } set { Valorcriterio = value; } }
         public List<Song> Historial_canciones { get => historial_canciones; set => historial_canciones = value; }
         public List<Video> Historial_videos { get => historial_videos; set => historial_videos = value; }
         public List<Song> Favorite_songs { get => favorite_songs; set => favorite_songs = value; }
@@ -47,10 +49,11 @@ namespace Proyecto
         public List<PlaylistSong> playlistcanciones_seguidas = new List<PlaylistSong>();
         public List<Video> videos_seguidos = new List<Video>();
         public List<Artista> artistas_seguidas = new List<Artista>();
-        
+        public List<Song> Lista_inteligente = new List<Song>();
 
 
-        public User(string _nombre_, string _nomusuario_, string _email_, string _password_, string _ultimareproduccion, string _privacidad, string _premium)
+
+        public User(string _nombre_, string _nomusuario_, string _email_, string _password_, string _ultimareproduccion, string _privacidad, string _premium, string valorcriterio)
         {
             this.email = _email_;
             this.nombre = _nombre_;
@@ -59,9 +62,10 @@ namespace Proyecto
             this.ultimareproduccion = _ultimareproduccion;
             this.perfipublico = _privacidad;
             this.premium = _premium;
+            this.valorcriterio = valorcriterio;
         }
 
-        
+
 
         public string InformacionUsuario()
         {
@@ -70,19 +74,21 @@ namespace Proyecto
         }
         public string InformacionUsuariopriv()
         {
-            string informacion2 = ("ID USUARIO: " + NombreUsuario + "\n" + "- Nombre: " + Nombre + "\n" + "- Email: " + Email + "\n" + "- Password: " + Password + "\n" + "- Privacidad: " + PerfilPublico+"\n"+"- Privilegio: "+Premium);
+            string informacion2 = ("ID USUARIO: " + NombreUsuario + "\n" + "- Nombre: " + Nombre + "\n" + "- Email: " + Email + "\n" + "- Password: " + Password + "\n" + "- Privacidad: " + PerfilPublico + "\n" + "- Privilegio: " + Premium);
             return informacion2;
         }
         //public void Crear_playlist(string nombre)
         //{
-            //PlaylistSong playlistSong = new PlaylistSong(nombre);
-            //Lista_playlistusuario.Add(playlistSong);
+        //PlaylistSong playlistSong = new PlaylistSong(nombre);
+        //Lista_playlistusuario.Add(playlistSong);
         //}
 
-        public void Agregar_cancion_favoritos(Song song){
+        public void Agregar_cancion_favoritos(Song song)
+        {
             favorite_songs.Add(song);
         }
-        public void Agregar_video_favoritos(Video video){
+        public void Agregar_video_favoritos(Video video)
+        {
             favorite_videos.Add(video);
         }
 

@@ -21,6 +21,7 @@ namespace Proyecto
         public float calificacion_promedio;
         public string nombrearchivovideo;
         public int reproduccion;
+        public List<int> todas_las_calificaciones = new List<int>();
         public List<Artista> actores = new List<Artista>(); // ACTORES DE CADA PELICULA- VIDEO
 
 

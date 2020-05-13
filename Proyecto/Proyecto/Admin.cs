@@ -60,6 +60,7 @@ namespace Proyecto
                 }
             }
             ALAINID.todas_las_canciones.Add(s);
+            ALAINID.Agregarcancioneslistainteligente(s);
             ALAINID.Partir();
             Console.WriteLine("================");
             Console.WriteLine("Canción agregada exitosamente");
