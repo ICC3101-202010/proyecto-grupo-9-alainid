@@ -1499,52 +1499,55 @@ namespace Proyecto
             }
             return listafiltrada;
         }
-
+        public static List<Song> cancionporevaluacion()
+        {
+            Console.WriteLine("Ingrese una nota del 1 al 10, se le mostraran todos los Videos que tengan una nota superior");
+            float _valor = float.Parse(Console.ReadLine());
+            foreach (Song canc in todas_las_canciones)
+            {
+                if (canc.calificacionpromedio >= _valor)
+                {
+                    listafiltrada.Add(canc);
+                }
+            }
+            return listafiltrada;
+        }
         public static List<Song> filtocriteriomultiple(string criterio)
         {
             lista_filtrando.Clear();
             switch (criterio)
             {
                 case "Genero":
-                    Console.WriteLine("ENTRE A GENERO");
-                    Thread.Sleep(2000);
+                   
 
                     lista_filtrando = CancionesporGenero();
                     break;
                 case "Disquera":
-                    Console.WriteLine("ENTRE A DISQUERA");
-                    Thread.Sleep(2000);
+                   
 
                     lista_filtrando = Cancionespordisquera();
 
                     break;
                 case "Año Publicacion":
-                    Console.WriteLine("ENTRE A AÑO PUBLICACION");
-                    Thread.Sleep(2000);
-
+                    
                     lista_filtrando = Cancionesporaniopublicacion();
 
                     break;
                 case "Sexo del Artista":
-                    Console.WriteLine("ENTRE A SEXO ARTISTA");
-                    Thread.Sleep(2000);
+                   
                     lista_filtrando = Cancionesporsexodelcantante();
 
                     break;
                 case "Edad del Artista":
-                    Console.WriteLine("ENTRE A EDAD ARTISTA");
-                    Thread.Sleep(2000);
+                   
                     lista_filtrando = Cancionesporedaddelcantante();
 
                     break;
                 case "Calidad/Resolucion":
-                    Console.WriteLine("ENTRE A RESOLUCION");
                     lista_filtrando = Cancionesporcalidadcancion();
-                    Thread.Sleep(2000);
 
                     break;
                 case "Evaluacion":
-                    Console.WriteLine("ENTRE A EVALUACION");
 
                     Console.WriteLine("Lo sentimos pero este metodo aun esta en construccion");
                     Thread.Sleep(2000);

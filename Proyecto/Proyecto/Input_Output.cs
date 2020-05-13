@@ -100,7 +100,7 @@ namespace Proyecto
                                 {
                                     case 1:
                                         int accion3 = '\0';
-                                        while (accion3 != 5)
+                                        while (accion3 != 8)
                                         {
                                             Console.Clear();
                                             Console.WriteLine("========================");
