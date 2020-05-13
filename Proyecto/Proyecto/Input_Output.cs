@@ -109,9 +109,9 @@ namespace Proyecto
                                             Console.WriteLine("2. BUSQUEDA FILTRADA CANCION QUE CUMPLA CON ALMENOS UNO DE LOS CRITERIOS SELECCIONADOS");
                                             Console.WriteLine("3. BUSQUEDA DE USUARIOS");
                                             Console.WriteLine("4. BUSQUEDA FILTRADA CANCION QUE CUMPLA CON TODOS LOS CRITERIOS SELECCIONADOS");
-                                            Console.WriteLine("5. BUSQUEDA FILTRADA CANCION CON UN CRITERIO");
-                                            Console.WriteLine("6. BUSQUEDA FILTRADA CANCION QUE CUMPLA CON ALMENOS UNO DE LOS CRITERIOS SELECCIONADOS");
-                                            Console.WriteLine("7. BUSQUEDA FILTRADA CANCION QUE CUMPLA CON TODOS LOS CRITERIOS SELECCIONADOS");
+                                            Console.WriteLine("5. BUSQUEDA FILTRADA VIDEO CON UN CRITERIO");
+                                            Console.WriteLine("6. BUSQUEDA FILTRADA VIDEO QUE CUMPLA CON ALMENOS UNO DE LOS CRITERIOS SELECCIONADOS");
+                                            Console.WriteLine("7. BUSQUEDA FILTRADA VIDEO QUE CUMPLA CON TODOS LOS CRITERIOS SELECCIONADOS");
                                             Console.WriteLine("8. ATRAS");
                                             accion3 = ALAINID.Numero(8);
                                             switch (accion3)

@@ -1548,8 +1548,7 @@ namespace Proyecto
 
                     break;
                 case "Evaluacion":
-
-                    Console.WriteLine("Lo sentimos pero este metodo aun esta en construccion");
+                    lista_filtrando  =  cancionporevaluacion();
                     Thread.Sleep(2000);
 
                     //TERMINAR
@@ -2168,7 +2167,7 @@ namespace Proyecto
                     listafiltrada = Lista_por_calidad_cancion(_valor);
                     break;
                 case "Evaluacion":
-                    //TERMINAR
+                    //listafiltrada = cancionesporevaluacion();
                     break;
                 default:
                     Console.WriteLine("No existen canciones que cumplan con el criterio y valor seleccionado");
