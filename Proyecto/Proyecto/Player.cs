@@ -51,7 +51,7 @@ namespace Proyecto
             WMPLib.IWMPMedia media;
             media = wmp.newMedia(nombrearchivo);
             playlistcola.appendItem(media);
-            Console.WriteLine("Canción agregada a la cola");
+            Console.WriteLine("Agregada a la cola");
             Thread.Sleep(2000);
 
         }
