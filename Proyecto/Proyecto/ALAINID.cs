@@ -1290,6 +1290,7 @@ namespace Proyecto
         public static List<Artista> lista_artistas_filtromiltiple = new List<Artista>();        //     
         public static List<Song> lista_filtrando = new List<Song>();        //    
         public static List<Song> canciones_filtradas = new List<Song>();
+        public static List<Song> lista_filtrando2 = new List<Song>();        //    
 
 
 
@@ -1488,7 +1489,6 @@ namespace Proyecto
                 interna5.Add(cc);
             }
             string _valor = ShowOptions(lista_calidad_cancion);
-            listafiltrada = Lista_por_calidad_cancion(_valor);
             foreach (Song ca in interna5)
             {
                 if (ca.calidad == _valor)
@@ -1611,11 +1611,15 @@ namespace Proyecto
             }
             foreach (String crit in criterios_seleccionados)
             {
-                filtocriteriomultiple(crit);
-                foreach (Song ccc in lista_filtrando)
+
+                lista_filtrando2.Clear();
+                foreach (Song ss in filtocriteriomultiple(crit))
+                {
+                    lista_filtrando2.Add(ss);
+                }
+                foreach (Song ccc in lista_filtrando2)
                 {
                     canciones_filtradas.Add(ccc);
-
                 }
             }
             return canciones_filtradas;

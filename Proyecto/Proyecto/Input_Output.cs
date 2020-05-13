@@ -332,7 +332,7 @@ namespace Proyecto
                                                     while (opcion00 != 2)
                                                     {
                                                         Console.Clear();
-                                                        //ALAINID.Vercancionesparareproduccion(ALAINID.canciones_filtradas);
+                                                        ALAINID.Vercancionesparareproduccion(ALAINID.canciones_filtradas);
                                                         Console.WriteLine("========================");
                                                         Console.WriteLine(" ");
                                                         Console.WriteLine("INGRESE NUMERO DE LA CANCIÓN QUE DESEA ESCUCHAR");
@@ -2224,7 +2224,7 @@ namespace Proyecto
                                     tamano = float.Parse(Console.ReadLine());
                                     Console.WriteLine("Ingrese la calidad del archivo de la canción");
                                     calidad = ALAINID.ShowOptions(ALAINID.lista_calidad_cancion);       // -------------------37
-                                    Console.WriteLine("Igrese el nombre exacto como esta guardado (El archivo debera estar guardado en la carpeta CANCIONES)");
+                                    Console.WriteLine("Igrese el nombre exacto como esta guardado en la carpeta Canciones/");
                                     string nom = Console.ReadLine();
                                     nombrearchivo = "Canciones/" + nom + "." + ALAINID.Todo_a_minuscula(tipoarchivo);
                                     Console.Clear();
@@ -2314,7 +2314,7 @@ namespace Proyecto
                                     film_studio = Console.ReadLine();
                                     Console.WriteLine("Ingrese año de la publicación del video");
                                     anio_publicacion = Console.ReadLine();
-                                    Console.WriteLine("Ingrese la ubicacion exacta del archivo  (Videos/nombrearchivo.mp4");
+                                    Console.WriteLine("Ingrese la ubicacion exacta del archivo  (EJEMPLO = Videos/nombrearchivo.mp4");
                                     nombrearchivovideo = Console.ReadLine();
                                     Console.WriteLine("Ingrese el tipo de archivo del video");
                                     tipo_archivo = Console.ReadLine();
@@ -2492,7 +2492,7 @@ namespace Proyecto
                                     tamano3 = float.Parse(Console.ReadLine());
                                     Console.WriteLine("Ingrese la calidad del archivo de la canción");
                                     calidad3 = ALAINID.ShowOptions(ALAINID.lista_calidad_cancion);       // -------------------37
-                                    Console.WriteLine("Igrese el nombre exacto como esta guardado EJEMPLO: CancionesKaraoke/nombrearchivo.mp3");
+                                    Console.WriteLine("Igrese el nombre exacto como esta guardado en la carpeta CancionesKaraoke/");
                                     string nom3 = Console.ReadLine();
                                     nombrearchivo3 = "CancionesKaraoke/" + nom3 + "." + ALAINID.Todo_a_minuscula(tipoarchivo3);
                                     ALAINID.activark();

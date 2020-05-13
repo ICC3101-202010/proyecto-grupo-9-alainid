@@ -186,6 +186,7 @@ namespace Proyecto
             Console.WriteLine("================");
             Console.WriteLine("Canción agregada exitosamente A CANTAAR!");
             Console.WriteLine("================");
+            Thread.Sleep(2000);
             return true;
         }
     }
