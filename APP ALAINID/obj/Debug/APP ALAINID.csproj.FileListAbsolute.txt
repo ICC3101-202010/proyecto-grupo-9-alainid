@@ -1,0 +1,12 @@
+C:\Users\cvera\Desktop\PROYECTO ALAINID\APP ALAINID\APP ALAINID\bin\Debug\APP ALAINID.exe.config
+C:\Users\cvera\Desktop\PROYECTO ALAINID\APP ALAINID\APP ALAINID\bin\Debug\APP ALAINID.exe
+C:\Users\cvera\Desktop\PROYECTO ALAINID\APP ALAINID\APP ALAINID\bin\Debug\APP ALAINID.pdb
+C:\Users\cvera\Desktop\PROYECTO ALAINID\APP ALAINID\APP ALAINID\obj\Debug\APP ALAINID.csprojAssemblyReference.cache
+C:\Users\cvera\Desktop\PROYECTO ALAINID\APP ALAINID\APP ALAINID\obj\Debug\APP_ALAINID.Bienvenido_alainid.resources
+C:\Users\cvera\Desktop\PROYECTO ALAINID\APP ALAINID\APP ALAINID\obj\Debug\APP_ALAINID.Iniciar_sesion.resources
+C:\Users\cvera\Desktop\PROYECTO ALAINID\APP ALAINID\APP ALAINID\obj\Debug\APP_ALAINID.Properties.Resources.resources
+C:\Users\cvera\Desktop\PROYECTO ALAINID\APP ALAINID\APP ALAINID\obj\Debug\APP_ALAINID.Registrarme.resources
+C:\Users\cvera\Desktop\PROYECTO ALAINID\APP ALAINID\APP ALAINID\obj\Debug\APP ALAINID.csproj.GenerateResource.cache
+C:\Users\cvera\Desktop\PROYECTO ALAINID\APP ALAINID\APP ALAINID\obj\Debug\APP ALAINID.csproj.CoreCompileInputs.cache
+C:\Users\cvera\Desktop\PROYECTO ALAINID\APP ALAINID\APP ALAINID\obj\Debug\APP ALAINID.exe
+C:\Users\cvera\Desktop\PROYECTO ALAINID\APP ALAINID\APP ALAINID\obj\Debug\APP ALAINID.pdb
