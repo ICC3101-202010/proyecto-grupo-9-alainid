@@ -65,18 +65,18 @@ namespace Proyecto
         // asumi que no todas las canciones seran subidas con su letra por lo tanto no es requisito par acerar cancion al igual que la calificacion
         //y el numero de reproducciones
 
-        
+
         public string Informacioncancion()
         {
-            string info = (" Nombre: " + nombrecancion + "\n"+ " Genero: " + genero + "\n" + " Artista: " + cantante + "\n" + " Album: " + album + "\n" + "Compositor: " + compositor + "\n" + "Año de publicacion: " + anopublicacion + "\n" +
-                "Disquera: " + disquera + "\n" + "Calificacion promedio: " + calificacionpromedio + "\n" + "Duracion: " + duracion + "\n" +
-                "Cantidad de reproducciones:" + reproducciones + "\n");
+            string info = (" Nombre: " + nombrecancion + "\n" + " Genero: " + genero + "\n" + " Artista: " + cantante + "\n" + " Album: " + album + "\n" + "Compositor: " + compositor + "\n" + "Año de publicacion: " + anopublicacion + "\n" +
+                "Disquera: " + disquera + "\n" + "Calificacion promedio: " + calificacionpromedio + "\n" + "Duracion: " + duracion + "\n" + "Tamaño Archivo: " + tamano + "MB \n" +
+               "Cantidad de reproducciones:" + reproducciones + "\n");
             return info;
         }
         public string InformacioncancionKaraoke()
         {
             string info = (" Nombre: " + nombrecancion + "\n" + " Genero: " + genero + "\n" + " Artista: " + cantante + "\n" + " Album: " + album + "\n" + "Compositor: " + compositor + "\n" + "Año de publicacion: " + anopublicacion + "\n" +
-                "Disquera: " + disquera + "\n" + "Calificacion promedio: " + calificacionpromedio + "\n" + "Duracion: " + duracion + "\n" +
+                "Disquera: " + disquera + "\n" + "Calificacion promedio: " + calificacionpromedio + "\n" + "Duracion: " + duracion + "\n" + "Tamaño Archivo: " + tamano + "MB \n" +
                 "Cantidad de reproducciones:" + reproducciones + "\n" + "Letra: " + "\n" + letra);
             return info;
         }

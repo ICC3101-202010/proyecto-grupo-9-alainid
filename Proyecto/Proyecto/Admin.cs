@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 using System.Threading;
 
@@ -16,7 +17,10 @@ namespace Proyecto
         }
         public bool AgregarSong(string nombrecan, object cantante, string genero, object compositor, string anopublicacion, string disquera, string album, float duracion, string tipoarchivo, float tamano, string calidad, string nombrearchivo, int reproduccion, string letra)
         {
+            FileInfo fileInfo = new FileInfo(nombrearchivo);
+            tamano = (fileInfo.Length) / 1000000;
             Song s = new Song(nombrecan, cantante, genero, compositor, anopublicacion, disquera, album, letra, duracion, tipoarchivo, tamano, calidad, nombrearchivo);
+
             foreach (Song si in ALAINID.todas_las_canciones)
             {
                 if (si == s)
@@ -73,6 +77,8 @@ namespace Proyecto
 
         public void Subir_video(string nombre_video, float duracion, string categoria, object director, string genero, string anio_publicacion, string tipo_archivo, string calidad, string film_studio, float tamanio, string nombrearchivovideo, int reproduccion1)
         {
+            FileInfo fileInfo = new FileInfo(nombrearchivovideo);
+            tamanio = (fileInfo.Length) / 1000000;
             bool ver2 = true;
             Video video1 = new Video(nombre_video, duracion, categoria, director, genero, anio_publicacion, tipo_archivo, calidad, film_studio, tamanio, nombrearchivovideo, reproduccion1);
 

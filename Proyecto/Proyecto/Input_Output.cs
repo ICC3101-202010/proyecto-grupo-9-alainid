@@ -2858,8 +2858,7 @@ namespace Proyecto
                                     duracion = float.Parse(Console.ReadLine());
                                     Console.WriteLine("Ingrese tipo archivo de la canción");
                                     tipoarchivo = ALAINID.ShowOptions(ALAINID.lista_tipoarchivo_cancion);       // -------------------37
-                                    Console.WriteLine("Ingrese tamaño del archivo de la canción");
-                                    tamano = float.Parse(Console.ReadLine());
+                                    
                                     Console.WriteLine("Ingrese la calidad del archivo de la canción");
                                     calidad = ALAINID.ShowOptions(ALAINID.lista_calidad_cancion);       // -------------------37
                                     Console.WriteLine("Igrese el nombre exacto como esta guardado en la carpeta Canciones/");
@@ -2956,8 +2955,7 @@ namespace Proyecto
                                     nombrearchivovideo = Console.ReadLine();
                                     Console.WriteLine("Ingrese el tipo de archivo del video");
                                     tipo_archivo = Console.ReadLine();
-                                    Console.WriteLine("Ingrese el tamaño de archivo del video");
-                                    tamanio = float.Parse(Console.ReadLine());
+                                   
                                     Console.WriteLine("Ingrese la calidad del archivo de video");
                                     calidad2 = ALAINID.ShowOptions(ALAINID.lista_tipoarchivo_pelicula);      // -------------------37
                                     Console.Clear();

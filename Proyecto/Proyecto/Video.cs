@@ -87,8 +87,7 @@ namespace Proyecto
         public string Ver_informacion()
         {
             string info = (" Genero: " + genero + "\n" + " Director: " + director + "\n" + " Actores: " + actores + "\n" + " Nombre: " + nombre_video + "\n" +
-                " Categoria: " + categoria + "\n" + "Año de publicacion: " + anio_publicacion + "\n" + "Descripcion: " + descripcion + "\n" + "Tipo Archivo: " + tipo_archivo + "\n" +
-                "Tamanio: " + tamanio + "\n" + "Calidad: " + calidad + "\n" + "Film Studio: " + film_studio + "\n" + "Calificacion Promedio: " + calificacion_promedio + "\n" + "Duracion: " + duracion + "\n");
+                " Categoria: " + categoria + "\n" + "Año de publicacion: " + anio_publicacion + "\n" + "Descripcion: " + descripcion + "\n" + "Tipo Archivo: " + tipo_archivo + "\n" + "Tamaño Archivo: " + tamanio + "MB \n" + "Calidad: " + calidad + "\n" + "Film Studio: " + film_studio + "\n" + "Calificacion Promedio: " + calificacion_promedio + "\n" + "Duracion: " + duracion + "\n");
             return info;
         }
 
