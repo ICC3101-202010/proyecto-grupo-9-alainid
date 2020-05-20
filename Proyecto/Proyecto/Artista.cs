@@ -37,11 +37,11 @@ namespace Proyecto
             }
             foreach (Video v in lista_peliculas)
             {
-                informacion += "-" + v.nombre_video + "\n";
+                informacion += "-" + v.Nombre_video + "\n";
             }
             foreach (Song s in lista_canciones)
             {
-                informacion += "-" + s.nombrecancion + "\n";
+                informacion += "-" + s.Nombrecancion + "\n";
             }
             return informacion;
         }

@@ -7,27 +7,44 @@ namespace Proyecto
     [Serializable]
     public class Video
     {
-        public string nombre_video;
-        public float duracion;
-        public string categoria;  //tiene que estar en la lista de categorias
-        public object director; // tiene que estar en la lista de directores
-        public string genero; // tiene q estar en la lista de generos 
-        public string anio_publicacion;
-        public string descripcion;
-        public string tipo_archivo;
-        public string calidad;
-        public string film_studio; // tiene que estar en la lista de estudios de pelicula
-        public float tamanio;
-        public float calificacion_promedio;
-        public string nombrearchivovideo;
-        public int reproduccion;
-        public List<int> todas_las_calificaciones = new List<int>();
-        public List<Artista> actores = new List<Artista>(); // ACTORES DE CADA PELICULA- VIDEO
+        private string nombre_video;
+        private float duracion;
+        private string categoria;  //tiene que estar en la lista de categorias
+        private object director; // tiene que estar en la lista de directores
+        private string genero; // tiene q estar en la lista de generos 
+        private string anio_publicacion;
+        private string descripcion;
+        private string tipo_archivo;
+        private string calidad;
+        private string film_studio; // tiene que estar en la lista de estudios de pelicula
+        private float tamanio;
+        private float calificacion_promedio;
+        private string nombrearchivovideo;
+        private int reproduccion;
+        private List<int> todas_las_calificaciones = new List<int>();
+        private List<Artista> actores = new List<Artista>(); // ACTORES DE CADA PELICULA- VIDEO
+
+        public string Nombre_video { get => nombre_video; set => nombre_video = value; }
+        public float Duracion { get => duracion; set => duracion = value; }
+        public string Categoria { get => categoria; set => categoria = value; }
+        public object Director { get => director; set => director = value; }
+        public string Genero { get => genero; set => genero = value; }
+        public string Anio_publicacion { get => anio_publicacion; set => anio_publicacion = value; }
+        public string Descripcion { get => descripcion; set => descripcion = value; }
+        public string Tipo_archivo { get => tipo_archivo; set => tipo_archivo = value; }
+        public string Calidad { get => calidad; set => calidad = value; }
+        public string Film_studio { get => film_studio; set => film_studio = value; }
+        public float Tamanio { get => tamanio; set => tamanio = value; }
+        public float Calificacion_promedio { get => calificacion_promedio; set => calificacion_promedio = value; }
+        public string Nombrearchivovideo { get => nombrearchivovideo; set => nombrearchivovideo = value; }
+        public int Reproduccion { get => reproduccion; set => reproduccion = value; }
+        public List<int> Todas_las_calificaciones { get => todas_las_calificaciones; set => todas_las_calificaciones = value; }
+        public List<Artista> Actores { get => actores; set => actores = value; }
 
 
         //public float calificacion_personal; 
 
-        
+
 
         // asumi que tanto la descripcion como la calificacion promedio, no son requisitos para subir una cancion
 

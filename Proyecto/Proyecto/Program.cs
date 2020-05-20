@@ -58,7 +58,9 @@ namespace Proyecto
             ALAINID.lista_criterios_filtro2.Add("Año Publicacion"); ALAINID.lista_criterios_filtro2.Add("Sexo del Artista"); ALAINID.lista_criterios_filtro2.Add("Edad del Artista");
             ALAINID.lista_criterios_filtro2.Add("Calidad/Resolucion"); ALAINID.lista_criterios_filtro2.Add("Evaluacion");
 
-
+            ALAINID.lista_criterios_filtro2v.Add("Genero"); ALAINID.lista_criterios_filtro2v.Add("Film Studio");ALAINID.lista_criterios_filtro2v.Add("Categoria"); ALAINID.lista_criterios_filtro2v.Add("Nombre");
+            ALAINID.lista_criterios_filtro2v.Add("Año Publicacion"); ALAINID.lista_criterios_filtro2v.Add("Calidad/Resolucion");ALAINID.lista_criterios_filtro2v.Add("Actores"); ALAINID.lista_criterios_filtro2v.Add("Director");
+            ALAINID.lista_criterios_filtro2v.Add("Evaluacion");
 
             for (int i=1900; i <= 2020; i++)
             {

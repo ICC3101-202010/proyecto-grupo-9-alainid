@@ -8,73 +8,72 @@ namespace Proyecto
     [Serializable]
     public class User
     {
-        public string NombreUsuario;
-        public string Email;
-        public string Password;
-        public string Nombre;
-        public string Premium;
-        public string PerfilPublico;
-        public string Ultimareproduccion;
-        public string Valorcriterio;
-        public List<PlaylistSong> lista_playlistusuario = new List<PlaylistSong>();
-        public List<PlaylistVideo> lista_playlistvideousuario = new List<PlaylistVideo>();
-        public List<Song> favorite_songs = new List<Song>();        // LISTA FAVORITOS CANCIONES DE CADA USUARIO
-        public List<Video> favorite_videos = new List<Video>();
-        public List<Song> descargas = new List<Song>();
-        public List<Song> canciones_seguidas = new List<Song>();
-        public List<Artista> cantantes_seguidos = new List<Artista>();
-        public List<User> usuarios_seguidos = new List<User>();
-        public List<Song> historial_canciones = new List<Song>();
-        public List<Video> historial_videos = new List<Video>();
-        public List<Song> lista_inteligente = new List<Song>();
+        private string nombreUsuario;
+        private string email_;
+        private string password_;
+        private string nombre_;
+        private string premium_;
+        private string perfilpublico_;
+        private string ultimareproduccion_;
+        private string valorcriterio_;
+        private List<PlaylistSong> lista_playlistusuario_ = new List<PlaylistSong>();
+        private List<PlaylistVideo> lista_playlistvideousuario_ = new List<PlaylistVideo>();
+        private List<Song> favorite_songs_ = new List<Song>();        // LISTA FAVORITOS CANCIONES DE CADA USUARIO
+        private List<Video> favorite_videos_ = new List<Video>();
+        private List<Song> descargas_ = new List<Song>();
+        //private List<Artista> cantantes_seguidos_ = new List<Artista>();
+        //private List<PlaylistSong> playlistcanciones_seguidas = new List<PlaylistSong>();
+        private List<User> usuarios_seguidos_ = new List<User>();
+        private List<Song> historial_canciones_ = new List<Song>();
+        private List<Video> historial_videos_ = new List<Video>();
+        private List<Song> lista_inteligente = new List<Song>();
 
-        public string nombreusuario { get { return NombreUsuario; } set { NombreUsuario = value; } }
-        public string nombre { get { return Nombre; } set { Nombre = value; } }
-        public string email { get { return Email; } set { Email = value; } }
-        public string password { get { return Password; } set { Password = value; } }
-        public string ultimareproduccion { get { return Ultimareproduccion; } set { Ultimareproduccion = value; } }
-        public string perfipublico { get { return PerfilPublico; } set { PerfilPublico = value; } }
-        public string premium { get { return Premium; } set { Premium = value; } }
-        public string valorcriterio { get { return Valorcriterio; } set { Valorcriterio = value; } }
-        public List<Song> Historial_canciones { get => historial_canciones; set => historial_canciones = value; }
-        public List<Video> Historial_videos { get => historial_videos; set => historial_videos = value; }
-        public List<Song> Favorite_songs { get => favorite_songs; set => favorite_songs = value; }
-        public List<Video> Favorite_videos { get => favorite_videos; set => favorite_videos = value; }
-        public List<Song> Descargas { get => descargas; set => descargas = value; }
-        public List<PlaylistSong> Lista_playlistusuario { get => lista_playlistusuario; set => lista_playlistusuario = value; }
-        public List<PlaylistVideo> Lista_playlistvideousuario { get => lista_playlistvideousuario; set => lista_playlistvideousuario = value; }
-        public List<Song> Canciones_seguidas { get => canciones_seguidas; set => canciones_seguidas = value; }
-        public List<Artista> Cantantes_seguidos { get => cantantes_seguidos; set => cantantes_seguidos = value; }
-        public List<User> Usuarios_seguidos { get => usuarios_seguidos; set => usuarios_seguidos = value; }
-        public List<PlaylistSong> playlistcanciones_seguidas = new List<PlaylistSong>();
-        public List<Video> videos_seguidos = new List<Video>();
-        public List<Artista> artistas_seguidas = new List<Artista>();
-        public List<Song> Lista_inteligente = new List<Song>();
+        public string Nombreusuario { get { return nombreUsuario; } set { nombreUsuario = value; } }
+        public string Nombre_ { get { return nombre_; } set { nombre_ = value; } }
+        public string Email_ { get { return email_; } set { email_ = value; } }
+        public string Password_ { get { return password_; } set { password_ = value; } }
+        public string Ultimareproduccion_ { get { return ultimareproduccion_; } set { ultimareproduccion_ = value; } }
+        public string Perfipublico_ { get { return perfilpublico_; } set { perfilpublico_ = value; } }
+        public string Premium_ { get { return premium_; } set { premium_ = value; } }
+        public string Valorcriterio_ { get { return valorcriterio_; } set { valorcriterio_ = value; } }
+        public List<Song> Historial_canciones_ { get => historial_canciones_; set => historial_canciones_ = value; }
+        public List<Video> Historial_videos_ { get => historial_videos_; set => historial_videos_ = value; }
+        public List<Song> Favorite_songs_ { get => favorite_songs_; set => favorite_songs_ = value; }
+        public List<Video> Favorite_videos_ { get => favorite_videos_; set => favorite_videos_ = value; }
+        public List<Song> Descargas_ { get => descargas_; set => descargas_ = value; }
+        public List<PlaylistSong> Lista_playlistusuario_ { get => lista_playlistusuario_; set => lista_playlistusuario_ = value; }
+        public List<PlaylistVideo> Lista_playlistvideousuario_ { get => lista_playlistvideousuario_; set => lista_playlistvideousuario_ = value; }
+        public List<User> Usuarios_seguidos_ { get => usuarios_seguidos_; set => usuarios_seguidos_ = value; }
+        public List<Song> Lista_inteligente { get => lista_inteligente; set => lista_inteligente = value; }
+        //public List<Artista> Cantantes_seguidos_ { get => cantantes_seguidos_; set => cantantes_seguidos_ = value; }
+
+
+
 
 
 
         public User(string _nombre_, string _nomusuario_, string _email_, string _password_, string _ultimareproduccion, string _privacidad, string _premium, string valorcriterio)
         {
-            this.email = _email_;
-            this.nombre = _nombre_;
-            this.password = _password_;
-            this.nombreusuario = _nomusuario_;
-            this.ultimareproduccion = _ultimareproduccion;
-            this.perfipublico = _privacidad;
-            this.premium = _premium;
-            this.valorcriterio = valorcriterio;
+            this.Email_ = _email_;
+            this.Nombre_ = _nombre_;
+            this.Password_ = _password_;
+            this.Nombreusuario = _nomusuario_;
+            this.Ultimareproduccion_ = _ultimareproduccion;
+            this.Perfipublico_ = _privacidad;
+            this.Premium_ = _premium;
+            this.Valorcriterio_ = valorcriterio;
         }
 
 
 
         public string InformacionUsuario()
         {
-            string informacion = ("ID USUARIO: " + NombreUsuario + "\n" + "- Nombre: " + Nombre + "\n" + "- Email: " + Email + "\n");
+            string informacion = ("ID USUARIO: " + nombreUsuario + "\n" + "- Nombre: " + nombre_ + "\n" + "- Email: " + email_ + "\n");
             return informacion;
         }
         public string InformacionUsuariopriv()
         {
-            string informacion2 = ("ID USUARIO: " + NombreUsuario + "\n" + "- Nombre: " + Nombre + "\n" + "- Email: " + Email + "\n" + "- Password: " + Password + "\n" + "- Privacidad: " + PerfilPublico + "\n" + "- Privilegio: " + Premium);
+            string informacion2 = ("ID USUARIO: " + nombreUsuario + "\n" + "- Nombre: " + nombre_ + "\n" + "- Email: " + email_ + "\n" + "- Password: " + password_ + "\n" + "- Privacidad: " + perfilpublico_ + "\n" + "- Privilegio: " + Premium_);
             return informacion2;
         }
         //public void Crear_playlist(string nombre)
@@ -85,11 +84,11 @@ namespace Proyecto
 
         public void Agregar_cancion_favoritos(Song song)
         {
-            favorite_songs.Add(song);
+            Favorite_songs_.Add(song);
         }
         public void Agregar_video_favoritos(Video video)
         {
-            favorite_videos.Add(video);
+            Favorite_videos_.Add(video);
         }
 
 

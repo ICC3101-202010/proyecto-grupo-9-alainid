@@ -7,51 +7,65 @@ namespace Proyecto
     [Serializable]
     public class Song
     {
-        public string nombrecancion;
-        public object cantante;
-        public string genero; // este tiene q estar en la lista con los generos
-        public object compositor;
-        public string anopublicacion;
-        public string disquera;
-        public string album;
-        public string letra;      //CAMBIE AQUI
+        private string nombrecancion;
+        private object cantante;
+        private string genero; // este tiene q estar en la lista con los generos
+        private object compositor;
+        private string anopublicacion;
+        private string disquera;
+        private string album;
+        private string letra;      //CAMBIE AQUI
         //public float calificacionpersonal;
-        public float calificacionpromedio;
-        public float duracion;
-        public int reproducciones;            //CAMBIE AQU
-        public string tipoarchivo;
-        public float tamano;
-        public string calidad;
-        public string nombrearchivo;
-        public List<int> todas_las_calificaciones= new List<int>();
-        
+        private float calificacionpromedio;
+        private float duracion;
+        private int reproducciones;            //CAMBIE AQU
+        private string tipoarchivo;
+        private float tamano;
+        private string calidad;
+        private string nombrearchivo;
+        private List<int> todas_las_calificaciones = new List<int>();
+
+        public Song(string nombrecancion, object cantante, string genero, object compositor, string anopublicacion, string disquera, string album, string letra, float duracion, string tipoarchivo, float tamano, string calidad, string nombrearchivo)
+        {
+            this.Nombrecancion = nombrecancion;
+            this.Cantante = cantante;
+            this.Genero = genero;
+            this.Compositor = compositor;
+            this.Anopublicacion = anopublicacion;
+            this.Disquera = disquera;
+            this.Album = album;
+            this.Letra = letra;
+            this.Duracion = duracion;
+            this.Tipoarchivo = tipoarchivo;
+            this.Tamano = tamano;
+            this.Calidad = calidad;
+            this.Nombrearchivo = nombrearchivo;
+        }
+
+        public string Nombrecancion { get => nombrecancion; set => nombrecancion = value; }
+        public object Cantante { get => cantante; set => cantante = value; }
+        public string Genero { get => genero; set => genero = value; }
+        public object Compositor { get => compositor; set => compositor = value; }
+        public string Anopublicacion { get => anopublicacion; set => anopublicacion = value; }
+        public string Disquera { get => disquera; set => disquera = value; }
+        public string Album { get => album; set => album = value; }
+        public string Letra { get => letra; set => letra = value; }
+        public float Calificacionpromedio { get => calificacionpromedio; set => calificacionpromedio = value; }
+        public float Duracion { get => duracion; set => duracion = value; }
+        public int Reproducciones { get => reproducciones; set => reproducciones = value; }
+        public string Tipoarchivo { get => tipoarchivo; set => tipoarchivo = value; }
+        public float Tamano { get => tamano; set => tamano = value; }
+        public string Calidad { get => calidad; set => calidad = value; }
+        public string Nombrearchivo { get => nombrearchivo; set => nombrearchivo = value; }
+        public List<int> Todas_las_calificaciones { get => todas_las_calificaciones; set => todas_las_calificaciones = value; }
+
+
+
 
         // asumi que no todas las canciones seran subidas con su letra por lo tanto no es requisito par acerar cancion al igual que la calificacion
         //y el numero de reproducciones
 
-        public Song(string nombre, object cantante1, string genero1, object compositor1,
-             string anopublicacion1, string disquera1, string album1, float duracion1, string tipodearchivo1, float tamano1, string calidad1, string nombrearchivo1, int reproducciones1, string letra1)
-        {
-            nombrecancion = nombre;
-            cantante = cantante1;
-            genero = genero1;
-            compositor = compositor1;
-            anopublicacion = anopublicacion1;
-            disquera = disquera1;
-            album = album1;
-            duracion = duracion1;
-            reproducciones = 0;
-            duracion = duracion1;
-            tipoarchivo = tipodearchivo1;
-            tamano = tamano1;
-            calidad = calidad1;
-            nombrearchivo = nombrearchivo1;
-            reproducciones = reproducciones1;
-            letra = letra1;
- 
-           
-
-        }
+        
         public string Informacioncancion()
         {
             string info = (" Nombre: " + nombrecancion + "\n"+ " Genero: " + genero + "\n" + " Artista: " + cantante + "\n" + " Album: " + album + "\n" + "Compositor: " + compositor + "\n" + "Año de publicacion: " + anopublicacion + "\n" +

@@ -25,9 +25,9 @@ namespace Proyecto
             currpos = 0;
             foreach (Song so in ALAINID.todas_las_canciones)
             {
-                if (so.nombrearchivo == archivocancion)
+                if (so.Nombrearchivo == archivocancion)
                 {
-                    so.reproducciones++;
+                    so.Reproducciones++;
                 }
             }
         }

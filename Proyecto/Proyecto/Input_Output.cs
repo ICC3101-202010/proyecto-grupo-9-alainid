@@ -51,9 +51,6 @@ namespace Proyecto
                         User u1 = new User(nombre, idusuario, email, password, ultimareproduccion, perfilpublico, premium, valorcriterio);
                         ALAINID.Activarlista();
                         ALAINID.Agregarusuarioalalista(u1);
-                        
-
-
                         break;
                     case 2:
                         Console.Clear();
@@ -188,9 +185,9 @@ namespace Proyecto
                                                             string u = "";
                                                             string w = "";
                                                             int v;
-                                                            u = ALAINID.listafiltrada[numerocancion - 1].nombrearchivo;
-                                                            v = ALAINID.listafiltrada[numerocancion - 1].reproducciones;
-                                                            w = ALAINID.listafiltrada[numerocancion - 1].nombrecancion;
+                                                            u = ALAINID.listafiltrada[numerocancion - 1].Nombrearchivo;
+                                                            v = ALAINID.listafiltrada[numerocancion - 1].Reproducciones;
+                                                            w = ALAINID.listafiltrada[numerocancion - 1].Nombrecancion;
                                                             int opcion10 = '\0';
                                                             while (opcion10 != 13)
                                                             {
@@ -349,9 +346,9 @@ namespace Proyecto
                                                             string u = "";
                                                             string w = "";
                                                             int v;
-                                                            u = ALAINID.canciones_filtradas[numerocancion - 1].nombrearchivo;
-                                                            v = ALAINID.canciones_filtradas[numerocancion - 1].reproducciones;
-                                                            w = ALAINID.canciones_filtradas[numerocancion - 1].nombrecancion;
+                                                            u = ALAINID.canciones_filtradas[numerocancion - 1].Nombrearchivo;
+                                                            v = ALAINID.canciones_filtradas[numerocancion - 1].Reproducciones;
+                                                            w = ALAINID.canciones_filtradas[numerocancion - 1].Nombrecancion;
                                                             int opcion10 = '\0';
                                                             while (opcion10 != 13)
                                                             {
@@ -378,7 +375,7 @@ namespace Proyecto
                                                                         pla.Playsong(u);
                                                                         ALAINID.GuardarUltimareproduccion(email2, u);
                                                                         ALAINID.Aumentarreproduccion(w, v);
-                                                                        //CAMBIO
+                                                                        
 
                                                                         break;
                                                                     case 2:
@@ -584,9 +581,9 @@ namespace Proyecto
                                                             string u = "";
                                                             string w = "";
                                                             int v;
-                                                            u = ALAINID.canciones_filtradas[numerocancion - 1].nombrearchivo;
-                                                            v = ALAINID.canciones_filtradas[numerocancion - 1].reproducciones;
-                                                            w = ALAINID.canciones_filtradas[numerocancion - 1].nombrecancion;
+                                                            u = ALAINID.canciones_filtradas[numerocancion - 1].Nombrearchivo;
+                                                            v = ALAINID.canciones_filtradas[numerocancion - 1].Reproducciones;
+                                                            w = ALAINID.canciones_filtradas[numerocancion - 1].Nombrecancion;
                                                             int opcion10 = '\0';
                                                             while (opcion10 != 12)
                                                             {
@@ -736,9 +733,9 @@ namespace Proyecto
                                                             string u = "";
                                                             string w = "";
                                                             int v;
-                                                            u = ALAINID.listafiltradav[numerocancion - 1].nombrearchivovideo;
-                                                            v = ALAINID.listafiltradav[numerocancion - 1].reproduccion;
-                                                            w = ALAINID.listafiltradav[numerocancion - 1].nombre_video;
+                                                            u = ALAINID.listafiltradav[numerocancion - 1].Nombrearchivovideo;
+                                                            v = ALAINID.listafiltradav[numerocancion - 1].Reproduccion;
+                                                            w = ALAINID.listafiltradav[numerocancion - 1].Nombre_video;
                                                             int opcion10 = '\0';
                                                             while (opcion10 != 13)
                                                             {
@@ -1696,9 +1693,9 @@ namespace Proyecto
                                                 string u = "";
                                                 string w = "";
                                                 int v;
-                                                u = ALAINID.todas_las_cancioneskaraoke[numerocancion2 - 1].nombrearchivo;
-                                                v = ALAINID.todas_las_cancioneskaraoke[numerocancion2 - 1].reproducciones;
-                                                w = ALAINID.todas_las_cancioneskaraoke[numerocancion2 - 1].nombrecancion;
+                                                u = ALAINID.todas_las_cancioneskaraoke[numerocancion2 - 1].Nombrearchivo;
+                                                v = ALAINID.todas_las_cancioneskaraoke[numerocancion2 - 1].Reproducciones;
+                                                w = ALAINID.todas_las_cancioneskaraoke[numerocancion2 - 1].Nombrecancion;
                                                 int opcion11 = '\0';
                                                 while (opcion11 != 13)
                                                 {

@@ -14,9 +14,9 @@ namespace Proyecto
                 Console.WriteLine(user.InformacionUsuario());
             }
         }
-        public bool AgregarSong(string nombrecan, string cantante, string genero, string compositor, string anopublicacion, string disquera, string album, float duracion, string tipoarchivo, float tamano, string calidad, string nombrearchivo, int reproduccion, string letra)
+        public bool AgregarSong(string nombrecan, object cantante, string genero, object compositor, string anopublicacion, string disquera, string album, float duracion, string tipoarchivo, float tamano, string calidad, string nombrearchivo, int reproduccion, string letra)
         {
-            Song s = new Song(nombrecan, cantante, genero, compositor, anopublicacion, disquera, album, duracion, tipoarchivo, tamano, calidad, nombrearchivo, reproduccion, letra);
+            Song s = new Song(nombrecan, cantante, genero, compositor, anopublicacion, disquera, album, letra, duracion, tipoarchivo, tamano, calidad, nombrearchivo);
             foreach (Song si in ALAINID.todas_las_canciones)
             {
                 if (si == s)
@@ -28,7 +28,7 @@ namespace Proyecto
             }
             foreach (Artista art in ALAINID.lista_cantantes)
             {
-                if (art.name == cantante)
+                if (art == cantante)
                 {
                     art.lista_canciones.Add(s);
                     ALAINID.AlmacenarCantante(ALAINID.lista_cantantes);
@@ -37,7 +37,7 @@ namespace Proyecto
             }
             foreach (Artista art in ALAINID.lista_cantantes)
             {
-                if (art.name == cantante)
+                if (art == cantante)
                 {
                     foreach (PlaylistSong alb in art.lista_album)
                     {
@@ -52,7 +52,7 @@ namespace Proyecto
             }
             foreach (Artista co in ALAINID.lista_compositores)
             {
-                if (co.name == compositor)
+                if (co == compositor)
                 {
                     co.lista_canciones.Add(s);
                     ALAINID.AlmacenarCompositores(ALAINID.lista_compositores);
@@ -71,7 +71,7 @@ namespace Proyecto
             return true;
         }
 
-        public void Subir_video(string nombre_video, float duracion, string categoria, string director, string genero, string anio_publicacion, string tipo_archivo, string calidad, string film_studio, float tamanio, string nombrearchivovideo, int reproduccion1)
+        public void Subir_video(string nombre_video, float duracion, string categoria, object director, string genero, string anio_publicacion, string tipo_archivo, string calidad, string film_studio, float tamanio, string nombrearchivovideo, int reproduccion1)
         {
             bool ver2 = true;
             Video video1 = new Video(nombre_video, duracion, categoria, director, genero, anio_publicacion, tipo_archivo, calidad, film_studio, tamanio, nombrearchivovideo, reproduccion1);
@@ -170,9 +170,9 @@ namespace Proyecto
                 }
             }
         }
-        public bool AgregarSongKaraoke(string nombrecan2, string cantante2, string genero2, string compositor2, string anopublicacion2, string disquera2, string album2, float duracion2, string tipoarchivo2, float tamano2, string calidad2, string nombrearchivo2, int reproduccion2, string letra2)
+        public bool AgregarSongKaraoke(string nombrecan2, object cantante2, string genero2, object compositor2, string anopublicacion2, string disquera2, string album2, float duracion2, string tipoarchivo2, float tamano2, string calidad2, string nombrearchivo2, int reproduccion2, string letra2)
         {
-            Song s = new Song(nombrecan2, cantante2, genero2, compositor2, anopublicacion2, disquera2, album2, duracion2, tipoarchivo2, tamano2, calidad2, nombrearchivo2, reproduccion2, letra2);
+            Song s = new Song(nombrecan2, cantante2, genero2, compositor2, anopublicacion2, disquera2, album2, letra2, duracion2, tipoarchivo2, tamano2, calidad2, nombrearchivo2);
             foreach (Song si in ALAINID.todas_las_cancioneskaraoke)
             {
                 if (si == s)

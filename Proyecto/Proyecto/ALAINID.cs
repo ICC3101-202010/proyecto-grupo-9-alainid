@@ -137,10 +137,10 @@ namespace Proyecto
             string funkaa = "";
             for (int i = 0; i < listausuarios.Count; i++)
             {
-                if (listausuarios[i].Email == mail)
+                if (listausuarios[i].Email_ == mail)
                 {
                     PlaylistSong plysu = new PlaylistSong(nombrepl);
-                    listausuarios[i].Lista_playlistusuario.Add(plysu);
+                    listausuarios[i].Lista_playlistusuario_.Add(plysu);
                     Almacenar(listausuarios);
                     funkaa += "si";
 
@@ -161,10 +161,10 @@ namespace Proyecto
             string funkaa = "";
             for (int i = 0; i < listausuarios.Count; i++)
             {
-                if (listausuarios[i].Email == mail)
+                if (listausuarios[i].Email_ == mail)
                 {
                     PlaylistVideo playlist2 = new PlaylistVideo(nombrepl);
-                    listausuarios[i].Lista_playlistvideousuario.Add(playlist2);
+                    listausuarios[i].Lista_playlistvideousuario_.Add(playlist2);
                     Almacenar(listausuarios);
                     funkaa += "si";
 
@@ -186,16 +186,16 @@ namespace Proyecto
             cachativa = "";
             for (int j = 0; j < listausuarios.Count; j++)
             {
-                if (listausuarios[j].Email == email)
+                if (listausuarios[j].Email_ == email)
                 {
-                    if (listausuarios[j].Lista_playlistusuario.Count > 0)
+                    if (listausuarios[j].Lista_playlistusuario_.Count > 0)
                     {
-                        for (int i = 0; i < listausuarios[j].Lista_playlistusuario.Count; i++)
+                        for (int i = 0; i < listausuarios[j].Lista_playlistusuario_.Count; i++)
                         {
-                            if (listausuarios[j].Lista_playlistusuario[i].NombrePlaylist == nombreply)
+                            if (listausuarios[j].Lista_playlistusuario_[i].NombrePlaylist == nombreply)
                             {
-                                listafiltrada2 = listausuarios[j].Lista_playlistusuario[i].listplay;
-                                if (listausuarios[j].Lista_playlistusuario[i].listplay.Count > 0)
+                                listafiltrada2 = listausuarios[j].Lista_playlistusuario_[i].listplay;
+                                if (listausuarios[j].Lista_playlistusuario_[i].listplay.Count > 0)
                                 {
                                     cachativa = "si";
                                 }
@@ -212,16 +212,16 @@ namespace Proyecto
             cachativa = "";
             for (int j = 0; j < listausuarios.Count; j++)
             {
-                if (listausuarios[j].Email == email)
+                if (listausuarios[j].Email_ == email)
                 {
-                    if (listausuarios[j].Lista_playlistvideousuario.Count > 0)
+                    if (listausuarios[j].Lista_playlistvideousuario_.Count > 0)
                     {
-                        for (int i = 0; i < listausuarios[j].Lista_playlistvideousuario.Count; i++)
+                        for (int i = 0; i < listausuarios[j].Lista_playlistvideousuario_.Count; i++)
                         {
-                            if (listausuarios[j].Lista_playlistvideousuario[i].NombrePlaylist == nombreply)
+                            if (listausuarios[j].Lista_playlistvideousuario_[i].NombrePlaylist == nombreply)
                             {
-                                listafiltrada3 = listausuarios[j].Lista_playlistvideousuario[i].listplayvideo;
-                                if (listausuarios[j].Lista_playlistvideousuario[i].listplayvideo.Count > 0)
+                                listafiltrada3 = listausuarios[j].Lista_playlistvideousuario_[i].listplayvideo;
+                                if (listausuarios[j].Lista_playlistvideousuario_[i].listplayvideo.Count > 0)
                                 {
                                     cachativa = "si";
                                 }
@@ -238,15 +238,15 @@ namespace Proyecto
             string info = "No hay Playlist";
             for (int j = 0; j < listausuarios.Count; j++)
             {
-                if (listausuarios[j].Email == email)
+                if (listausuarios[j].Email_ == email)
                 {
-                    if (listausuarios[j].Lista_playlistusuario.Count > 0)
+                    if (listausuarios[j].Lista_playlistusuario_.Count > 0)
                     {
                         info = "Nombres de tus playlist: \n";
-                        for (int i = 0; i < listausuarios[j].Lista_playlistusuario.Count; i++)
+                        for (int i = 0; i < listausuarios[j].Lista_playlistusuario_.Count; i++)
                         {
                             //lplaylist.Add(listausuarios[j].Lista_playlistusuario[i].NombrePlaylist);
-                            info += i + 1 + ". " + listausuarios[j].Lista_playlistusuario[i].NombrePlaylist + "\n";
+                            info += i + 1 + ". " + listausuarios[j].Lista_playlistusuario_[i].NombrePlaylist + "\n";
                         }
                     }
 
@@ -260,15 +260,15 @@ namespace Proyecto
             string info = "No hay Playlist";
             for (int j = 0; j < listausuarios.Count; j++)
             {
-                if (listausuarios[j].Email == email)
+                if (listausuarios[j].Email_ == email)
                 {
-                    if (listausuarios[j].Lista_playlistvideousuario.Count > 0)
+                    if (listausuarios[j].Lista_playlistvideousuario_.Count > 0)
                     {
                         info = "Nombres de tus playlist: \n";
-                        for (int i = 0; i < listausuarios[j].Lista_playlistvideousuario.Count; i++)
+                        for (int i = 0; i < listausuarios[j].Lista_playlistvideousuario_.Count; i++)
                         {
                             //lplaylist.Add(listausuarios[j].Lista_playlistvideousuario[i].NombrePlaylist);
-                            info += i + 1 + ". " + listausuarios[j].Lista_playlistvideousuario[i].NombrePlaylist + "\n";
+                            info += i + 1 + ". " + listausuarios[j].Lista_playlistvideousuario_[i].NombrePlaylist + "\n";
                         }
                     }
 
@@ -281,11 +281,11 @@ namespace Proyecto
             string info = "";
             for (int j = 0; j < listausuarios.Count; j++)
             {
-                if (listausuarios[j].Email == email)
+                if (listausuarios[j].Email_ == email)
                 {
-                    if (listausuarios[j].Lista_playlistusuario.Count > 0)
+                    if (listausuarios[j].Lista_playlistusuario_.Count > 0)
                     {
-                        info = listausuarios[j].Lista_playlistusuario[numerolista - 1].NombrePlaylist;
+                        info = listausuarios[j].Lista_playlistusuario_[numerolista - 1].NombrePlaylist;
 
                     }
 
@@ -298,11 +298,11 @@ namespace Proyecto
             int info = 0;
             for (int j = 0; j < listausuarios.Count; j++)
             {
-                if (listausuarios[j].Email == email)
+                if (listausuarios[j].Email_ == email)
                 {
-                    if (listausuarios[j].Lista_playlistusuario.Count > 0)
+                    if (listausuarios[j].Lista_playlistusuario_.Count > 0)
                     {
-                        info = listausuarios[j].Lista_playlistusuario.Count;
+                        info = listausuarios[j].Lista_playlistusuario_.Count;
                     }
                 }
             }
@@ -313,11 +313,11 @@ namespace Proyecto
             int info = 0;
             for (int j = 0; j < listausuarios.Count; j++)
             {
-                if (listausuarios[j].Email == email)
+                if (listausuarios[j].Email_ == email)
                 {
-                    if (listausuarios[j].favorite_songs.Count > 0)
+                    if (listausuarios[j].Favorite_songs_.Count > 0)
                     {
-                        info = listausuarios[j].favorite_songs.Count;
+                        info = listausuarios[j].Favorite_songs_.Count;
                     }
                 }
             }
@@ -330,11 +330,11 @@ namespace Proyecto
             int info = 0;
             for (int j = 0; j < listausuarios.Count; j++)
             {
-                if (listausuarios[j].Email == email)
+                if (listausuarios[j].Email_ == email)
                 {
-                    if (listausuarios[j].Descargas.Count > 0)
+                    if (listausuarios[j].Descargas_.Count > 0)
                     {
-                        info = listausuarios[j].Descargas.Count;
+                        info = listausuarios[j].Descargas_.Count;
                     }
                 }
             }
@@ -345,26 +345,27 @@ namespace Proyecto
             int info = 0;
             for (int j = 0; j < listausuarios.Count; j++)
             {
-                if (listausuarios[j].Email == email)
+                if (listausuarios[j].Email_ == email)
                 {
-                    if (listausuarios[j].Historial_canciones.Count > 0)
+                    if (listausuarios[j].Historial_canciones_.Count > 0)
                     {
-                        info = listausuarios[j].Historial_canciones.Count;
+                        info = listausuarios[j].Historial_canciones_.Count;
                     }
                 }
             }
             return info;
         }
+
         public static int Cuantashistorialvideo(string email)
         {
             int info = 0;
             for (int j = 0; j < listausuarios.Count; j++)
             {
-                if (listausuarios[j].Email == email)
+                if (listausuarios[j].Email_ == email)
                 {
-                    if (listausuarios[j].Historial_videos.Count > 0)
+                    if (listausuarios[j].Historial_videos_.Count > 0)
                     {
-                        info = listausuarios[j].Historial_videos.Count;
+                        info = listausuarios[j].Historial_videos_.Count;
                     }
                 }
             }
@@ -375,11 +376,11 @@ namespace Proyecto
             int info = 0;
             for (int j = 0; j < listausuarios.Count; j++)
             {
-                if (listausuarios[j].Email == email)
+                if (listausuarios[j].Email_ == email)
                 {
-                    if (listausuarios[j].favorite_videos.Count > 0)
+                    if (listausuarios[j].Favorite_videos_.Count > 0)
                     {
-                        info = listausuarios[j].favorite_videos.Count;
+                        info = listausuarios[j].Favorite_videos_.Count;
                     }
                 }
             }
@@ -389,7 +390,7 @@ namespace Proyecto
         {
             for (int j = 0; j < todas_las_canciones.Count; j++)
             {
-                if (todas_las_canciones[j].nombrearchivo == archivo)
+                if (todas_las_canciones[j].Nombrearchivo == archivo)
                 {
                     cancionfavoritabuscada.Clear();
                     cancionfavoritabuscada.Add(todas_las_canciones[j]);
@@ -400,7 +401,7 @@ namespace Proyecto
         {
             for (int j = 0; j < todos_los_videos.Count; j++)
             {
-                if (todos_los_videos[j].nombrearchivovideo == archivo)
+                if (todos_los_videos[j].Nombrearchivovideo == archivo)
                 {
                     videofavoritobuscado.Clear();
                     videofavoritobuscado.Add(todos_los_videos[j]);
@@ -412,11 +413,11 @@ namespace Proyecto
             int info = 0;
             for (int j = 0; j < listausuarios.Count; j++)
             {
-                if (listausuarios[j].Email == email)
+                if (listausuarios[j].Email_ == email)
                 {
-                    if (listausuarios[j].Lista_playlistvideousuario.Count > 0)
+                    if (listausuarios[j].Lista_playlistvideousuario_.Count > 0)
                     {
-                        info = listausuarios[j].Lista_playlistvideousuario.Count;
+                        info = listausuarios[j].Lista_playlistvideousuario_.Count;
                     }
                 }
             }
@@ -427,11 +428,11 @@ namespace Proyecto
             string info = "";
             for (int j = 0; j < listausuarios.Count; j++)
             {
-                if (listausuarios[j].Email == email)
+                if (listausuarios[j].Email_ == email)
                 {
-                    if (listausuarios[j].Lista_playlistvideousuario.Count > 0)
+                    if (listausuarios[j].Lista_playlistvideousuario_.Count > 0)
                     {
-                        info = listausuarios[j].Lista_playlistvideousuario[numerolista - 1].NombrePlaylist;
+                        info = listausuarios[j].Lista_playlistvideousuario_[numerolista - 1].NombrePlaylist;
 
                     }
                 }
@@ -446,11 +447,11 @@ namespace Proyecto
             string funko = "";
             for (int j = 0; j < listausuarios.Count; j++)
             {
-                if (listausuarios[j].Email == email)
+                if (listausuarios[j].Email_ == email)
                 {
-                    if (listausuarios[j].Lista_playlistusuario.Count > int.Parse(posicion) - 1)
+                    if (listausuarios[j].Lista_playlistusuario_.Count > int.Parse(posicion) - 1)
                     {
-                        listausuarios[j].Lista_playlistusuario[int.Parse(posicion) - 1].listplay.Add(cancion);
+                        listausuarios[j].Lista_playlistusuario_[int.Parse(posicion) - 1].listplay.Add(cancion);
                         Almacenar(listausuarios);
                         funko = "si";
                     }
@@ -469,11 +470,11 @@ namespace Proyecto
             string funko = "";
             for (int j = 0; j < listausuarios.Count; j++)
             {
-                if (listausuarios[j].Email == email)
+                if (listausuarios[j].Email_ == email)
                 {
-                    if (listausuarios[j].Lista_playlistvideousuario.Count > int.Parse(posicion) - 1)
+                    if (listausuarios[j].Lista_playlistvideousuario_.Count > int.Parse(posicion) - 1)
                     {
-                        listausuarios[j].Lista_playlistvideousuario[int.Parse(posicion) - 1].listplayvideo.Add(video);
+                        listausuarios[j].Lista_playlistvideousuario_[int.Parse(posicion) - 1].listplayvideo.Add(video);
                         Almacenar(listausuarios);
                         funko = "si";
                     }
@@ -490,15 +491,15 @@ namespace Proyecto
             string info = "No hay info";
             for (int j = 0; j < listausuarios.Count; j++)
             {
-                if (listausuarios[j].Email == email)
+                if (listausuarios[j].Email_ == email)
                 {
-                    if (listausuarios[j].Lista_playlistusuario.Count > 0)
+                    if (listausuarios[j].Lista_playlistusuario_.Count > 0)
                     {
-                        for (int i = 0; i < listausuarios[j].Lista_playlistusuario.Count; i++)
+                        for (int i = 0; i < listausuarios[j].Lista_playlistusuario_.Count; i++)
                         {
-                            if (listausuarios[j].Lista_playlistusuario[i].NombrePlaylist == nombreply)
+                            if (listausuarios[j].Lista_playlistusuario_[i].NombrePlaylist == nombreply)
                             {
-                                info = listausuarios[j].Lista_playlistusuario[i].InformationPLL();
+                                info = listausuarios[j].Lista_playlistusuario_[i].InformationPLL();
                             }
 
                         }
@@ -513,15 +514,15 @@ namespace Proyecto
             string info = "No hay info";
             for (int j = 0; j < listausuarios.Count; j++)
             {
-                if (listausuarios[j].Email == email)
+                if (listausuarios[j].Email_ == email)
                 {
-                    if (listausuarios[j].Lista_playlistvideousuario.Count > 0)
+                    if (listausuarios[j].Lista_playlistvideousuario_.Count > 0)
                     {
-                        for (int i = 0; i < listausuarios[j].Lista_playlistvideousuario.Count; i++)
+                        for (int i = 0; i < listausuarios[j].Lista_playlistvideousuario_.Count; i++)
                         {
-                            if (listausuarios[j].Lista_playlistvideousuario[i].NombrePlaylist == nombreply)
+                            if (listausuarios[j].Lista_playlistvideousuario_[i].NombrePlaylist == nombreply)
                             {
-                                info = listausuarios[j].Lista_playlistvideousuario[i].InformationPLL();
+                                info = listausuarios[j].Lista_playlistvideousuario_[i].InformationPLL();
                             }
 
                         }
@@ -536,15 +537,15 @@ namespace Proyecto
             string info = "No hay info";
             for (int j = 0; j < listausuarios.Count; j++)
             {
-                if (listausuarios[j].Email == email)
+                if (listausuarios[j].Email_ == email)
                 {
-                    if (listausuarios[j].Lista_playlistusuario.Count > 0)
+                    if (listausuarios[j].Lista_playlistusuario_.Count > 0)
                     {
-                        for (int i = 0; i < listausuarios[j].Lista_playlistusuario.Count; i++)
+                        for (int i = 0; i < listausuarios[j].Lista_playlistusuario_.Count; i++)
                         {
-                            if (listausuarios[j].Lista_playlistusuario[i].NombrePlaylist == nombreply)
+                            if (listausuarios[j].Lista_playlistusuario_[i].NombrePlaylist == nombreply)
                             {
-                                info = listausuarios[j].Lista_playlistusuario[i].listplay[posicion - 1].nombrearchivo;
+                                info = listausuarios[j].Lista_playlistusuario_[i].listplay[posicion - 1].Nombrearchivo;
                             }
                         }
                     }
@@ -557,11 +558,11 @@ namespace Proyecto
             string info = "No hay info";
             for (int j = 0; j < listausuarios.Count; j++)
             {
-                if (listausuarios[j].Email == email)
+                if (listausuarios[j].Email_ == email)
                 {
-                    if (listausuarios[j].Favorite_songs.Count > 0)
+                    if (listausuarios[j].Favorite_songs_.Count > 0)
                     {
-                        info = listausuarios[j].Favorite_songs[posicion - 1].nombrearchivo;
+                        info = listausuarios[j].Favorite_songs_[posicion - 1].Nombrearchivo;
                     }
                 }
             }
@@ -572,11 +573,11 @@ namespace Proyecto
             string info = "No hay info";
             for (int j = 0; j < listausuarios.Count; j++)
             {
-                if (listausuarios[j].Email == email)
+                if (listausuarios[j].Email_ == email)
                 {
-                    if (listausuarios[j].Historial_canciones.Count > 0)
+                    if (listausuarios[j].Historial_canciones_.Count > 0)
                     {
-                        info = listausuarios[j].Historial_canciones[posicion - 1].nombrearchivo;
+                        info = listausuarios[j].Historial_canciones_[posicion - 1].Nombrearchivo;
                     }
                 }
             }
@@ -587,11 +588,11 @@ namespace Proyecto
             string info = "No hay info";
             for (int j = 0; j < listausuarios.Count; j++)
             {
-                if (listausuarios[j].Email == email)
+                if (listausuarios[j].Email_ == email)
                 {
-                    if (listausuarios[j].Historial_videos.Count > 0)
+                    if (listausuarios[j].Historial_videos_.Count > 0)
                     {
-                        info = listausuarios[j].Historial_videos[posicion - 1].nombrearchivovideo;
+                        info = listausuarios[j].Historial_videos_[posicion - 1].Nombrearchivovideo;
                     }
                 }
             }
@@ -602,11 +603,11 @@ namespace Proyecto
             string info = "No hay info";
             for (int j = 0; j < listausuarios.Count; j++)
             {
-                if (listausuarios[j].Email == email)
+                if (listausuarios[j].Email_ == email)
                 {
-                    if (listausuarios[j].favorite_videos.Count > 0)
+                    if (listausuarios[j].Favorite_videos_.Count > 0)
                     {
-                        info = listausuarios[j].favorite_videos[posicion - 1].nombrearchivovideo;
+                        info = listausuarios[j].Favorite_videos_[posicion - 1].Nombrearchivovideo;
                     }
                 }
             }
@@ -617,59 +618,54 @@ namespace Proyecto
             string info = "No hay info";
             for (int j = 0; j < listausuarios.Count; j++)
             {
-                if (listausuarios[j].Email == email)
+                if (listausuarios[j].Email_ == email)
                 {
-                    if (listausuarios[j].Lista_playlistvideousuario.Count > 0)
+                    if (listausuarios[j].Lista_playlistvideousuario_.Count > 0)
                     {
-                        for (int i = 0; i < listausuarios[j].Lista_playlistvideousuario.Count; i++)
+                        for (int i = 0; i < listausuarios[j].Lista_playlistvideousuario_.Count; i++)
                         {
-                            if (listausuarios[j].Lista_playlistvideousuario[i].NombrePlaylist == nombreply)
+                            if (listausuarios[j].Lista_playlistvideousuario_[i].NombrePlaylist == nombreply)
                             {
-                                info = listausuarios[j].Lista_playlistvideousuario[i].listplayvideo[posicion - 1].nombrearchivovideo;
+                                info = listausuarios[j].Lista_playlistvideousuario_[i].listplayvideo[posicion - 1].Nombrearchivovideo;
                             }
                         }
                     }
                 }
             }
             return info;
-
-
-
         }
-
         public static bool Agregarusuarioalalista(User u1)
         {
             for (int i = 0; i < listausuarios.Count; i++)
             {
-
                 User ui = listausuarios[i];
-                if (ui.Email == "")
+                if (ui.Email_ == "")
                 {
                     Console.WriteLine("No se puede dejar vacio el mail");
                     return false;
                 }
-                if (u1.NombreUsuario == "")
+                if (u1.Nombreusuario == "")
                 {
                     Console.WriteLine("No se puede dejar vacio el nombre de usuario");
                     return false;
                 }
-                if (u1.Password == "")
+                if (u1.Password_ == "")
                 {
                     Console.WriteLine("No se puede dejar vacia la contraseña");
                     return false;
                 }
-                if (u1.Nombre == "")
+                if (u1.Nombre_ == "")
                 {
                     Console.WriteLine("No se puede dejar vacio el nombre");
                     return false;
                 }
 
-                if (ui.Email == u1.Email)
+                if (ui.Email_ == u1.Email_)
                 {
                     Console.WriteLine("Ya existe una cuenta con este email");
                     return false;
                 }
-                if (ui.NombreUsuario == u1.NombreUsuario)
+                if (ui.Nombreusuario == u1.Nombreusuario)
                 {
                     Console.WriteLine("Ya existe este nombre de usuario, pruebe con otro");
                     return false;
@@ -687,7 +683,7 @@ namespace Proyecto
             for (int j = 0; j < listausuarios.Count; j++)
             {
                 ui = listausuarios[j];
-                if (ui.Email == email)
+                if (ui.Email_ == email)
                 {
                     usuarioencontrado = true;
                     break;
@@ -703,7 +699,7 @@ namespace Proyecto
             }
             if (usuarioencontrado == true)
             {
-                if (ui.Password != password)
+                if (ui.Password_ != password)
                 {
                     Console.WriteLine("Incorrect Password");
                     return false;
@@ -712,7 +708,7 @@ namespace Proyecto
                 {
                     Console.WriteLine("\nIngresando a ALAINID...");
                     Thread.Sleep(2000);
-                    Console.WriteLine("Bievenido" + " " + ui.Nombre);
+                    Console.WriteLine("Bievenido" + " " + ui.Nombre_);
                     Thread.Sleep(3000);
                     return true;
                 }
@@ -765,11 +761,11 @@ namespace Proyecto
             string funko = "";
             for (int i = 0; i < listausuarios.Count; i++)
             {
-                if (listausuarios[i].email == email)
+                if (listausuarios[i].Email_ == email)
                 {
-                    if (listausuarios[i].password == contrasena)
+                    if (listausuarios[i].Password_ == contrasena)
                     {
-                        listausuarios[i].password = nuevacontrasena;
+                        listausuarios[i].Password_ = nuevacontrasena;
                         Almacenar(listausuarios);
                         funko = "correcto";
                     }
@@ -798,9 +794,9 @@ namespace Proyecto
             string funko = "";
             for (int i = 0; i < listausuarios.Count; i++)
             {
-                if (listausuarios[i].email == email)
+                if (listausuarios[i].Email_ == email)
                 {
-                    listausuarios[i].ultimareproduccion = ultimareproduccion;
+                    listausuarios[i].Ultimareproduccion_ = ultimareproduccion;
                     Almacenar(listausuarios);
                     funko = "correcto";
 
@@ -824,9 +820,9 @@ namespace Proyecto
             string funko;
             for (int i = 0; i < listausuarios.Count; i++)
             {
-                if (listausuarios[i].email == email)
+                if (listausuarios[i].Email_ == email)
                 {
-                    funko = listausuarios[i].ultimareproduccion;
+                    funko = listausuarios[i].Ultimareproduccion_;
                     return funko;
                 }
             }
@@ -838,7 +834,7 @@ namespace Proyecto
             string info = "No hay info";
             for (int j = 0; j < listausuarios.Count; j++)
             {
-                if (listausuarios[j].Email == email)
+                if (listausuarios[j].Email_ == email)
                 {
                     info = listausuarios[j].InformacionUsuario();
                     funko = "correcto";
@@ -859,11 +855,11 @@ namespace Proyecto
             string funko = "correcto";
             for (int i = 0; i < listausuarios.Count; i++)
             {
-                if (listausuarios[i].email == email)
+                if (listausuarios[i].Email_ == email)
                 {
-                    if (listausuarios[i].password == contrasena)
+                    if (listausuarios[i].Password_ == contrasena)
                     {
-                        listausuarios[i].nombreusuario = nuevonombre;
+                        listausuarios[i].Nombreusuario = nuevonombre;
                         Almacenar(listausuarios);
                         funko = "correcto";
                     }
@@ -892,11 +888,11 @@ namespace Proyecto
             string funko = "correcto";
             for (int i = 0; i < listausuarios.Count; i++)
             {
-                if (listausuarios[i].email == email)
+                if (listausuarios[i].Email_ == email)
                 {
-                    if (listausuarios[i].password == contrasena)
+                    if (listausuarios[i].Password_ == contrasena)
                     {
-                        listausuarios[i].nombre = nuevonombre;
+                        listausuarios[i].Nombre_ = nuevonombre;
                         funko = "correcto";
                         Almacenar(listausuarios);
                     }
@@ -987,7 +983,7 @@ namespace Proyecto
             List<string> canc = new List<string>();
             foreach (Song cancion in todas_las_canciones)
             {
-                canc.Add(cancion.nombrecancion);
+                canc.Add(cancion.Nombrecancion);
             }
             return canc;
         }
@@ -1207,7 +1203,7 @@ namespace Proyecto
             List<Song> cali_ca = new List<Song>();
             foreach (Song ca in todas_las_canciones)
             {
-                if (ca.calidad == calidad)
+                if (ca.Calidad == calidad)
                 {
                     cali_ca.Add(ca);
                 }
@@ -1221,9 +1217,9 @@ namespace Proyecto
             List<string> cali_v = new List<string>();
             foreach (Video v in todos_los_videos)
             {
-                if (v.calidad == calidad)
+                if (v.Calidad == calidad)
                 {
-                    cali_v.Add(v.nombre_video);
+                    cali_v.Add(v.Nombre_video);
                 }
 
             }
@@ -1235,9 +1231,9 @@ namespace Proyecto
             List<string> cat_v = new List<string>();
             foreach (Video v in todos_los_videos)
             {
-                if (v.categoria == categoria)
+                if (v.Categoria == categoria)
                 {
-                    cat_v.Add(v.nombre_video);
+                    cat_v.Add(v.Nombre_video);
                 }
             }
             return cat_v;
@@ -1248,9 +1244,9 @@ namespace Proyecto
             List<string> gen_v = new List<string>();
             foreach (Video v in todos_los_videos)
             {
-                if (v.genero == genero)
+                if (v.Genero == genero)
                 {
-                    gen_v.Add(v.nombre_video);
+                    gen_v.Add(v.Nombre_video);
                 }
             }
             return gen_v;
@@ -1261,9 +1257,9 @@ namespace Proyecto
             List<string> gen_c = new List<string>();
             foreach (Song s in todas_las_canciones)
             {
-                if (s.genero == genero)
+                if (s.Genero == genero)
                 {
-                    gen_c.Add(s.nombrecancion);
+                    gen_c.Add(s.Nombrecancion);
                 }
             }
             return gen_c;
@@ -1303,7 +1299,7 @@ namespace Proyecto
             }
             foreach (Song can in interna)
             {
-                if (can.genero == _valor)
+                if (can.Genero == _valor)
                 {
                     listafiltrada.Add(can);
                     lista_canciones_filtromiltiple.Remove(can);
@@ -1323,7 +1319,7 @@ namespace Proyecto
             }
             foreach (Song canc in interna1)
             {
-                if (canc.disquera == _valor)
+                if (canc.Disquera == _valor)
                 {
                     listafiltrada.Add(canc);
                     lista_canciones_filtromiltiple.Remove(canc);
@@ -1345,7 +1341,7 @@ namespace Proyecto
             string _valor = Console.ReadLine();
             foreach (Song canc in interna2)
             {
-                if (int.Parse(canc.anopublicacion) == int.Parse(_valor))
+                if (int.Parse(canc.Anopublicacion) == int.Parse(_valor))
                 {
                     listafiltrada.Add(canc);// ver 
                     lista_canciones_filtromiltiple.Remove(canc);
@@ -1376,7 +1372,7 @@ namespace Proyecto
                 {
                     foreach (Song canc in interna3)
                     {
-                        if (canc.cantante == can)
+                        if (canc.Cantante == can)
                         {
                             listafiltrada.Add(canc);
                             lista_canciones_filtromiltiple.Remove(canc);
@@ -1412,7 +1408,7 @@ namespace Proyecto
                         {
                             foreach (Song canc in interna4)
                             {
-                                if (canc.cantante == can)
+                                if (canc.Cantante == can)
                                 {
                                     listafiltrada.Add(canc);
                                     lista_canciones_filtromiltiple.Remove(canc);
@@ -1430,7 +1426,7 @@ namespace Proyecto
                         {
                             foreach (Song canc in interna4)
                             {
-                                if (canc.cantante == can)
+                                if (canc.Cantante == can)
                                 {
                                     listafiltrada.Add(canc);
                                     lista_canciones_filtromiltiple.Remove(canc);
@@ -1447,7 +1443,7 @@ namespace Proyecto
                         {
                             foreach (Song canc in interna4)
                             {
-                                if (canc.cantante == can)
+                                if (canc.Cantante == can)
                                 {
                                     listafiltrada.Add(canc);
                                     lista_canciones_filtromiltiple.Remove(canc);
@@ -1464,7 +1460,7 @@ namespace Proyecto
                         {
                             foreach (Song canc in interna4)
                             {
-                                if (canc.cantante == can)
+                                if (canc.Cantante == can)
                                 {
                                     listafiltrada.Add(canc);
                                     lista_canciones_filtromiltiple.Remove(canc);
@@ -1489,7 +1485,7 @@ namespace Proyecto
             string _valor = ShowOptions(lista_calidad_cancion);
             foreach (Song ca in interna5)
             {
-                if (ca.calidad == _valor)
+                if (ca.Calidad == _valor)
                 {
                     listafiltrada.Add(ca);
                     lista_canciones_filtromiltiple.Remove(ca);
@@ -1505,7 +1501,7 @@ namespace Proyecto
             float _valor = float.Parse(Console.ReadLine());
             foreach (Song canc in todas_las_canciones)
             {
-                if (canc.calificacionpromedio >= _valor)
+                if (canc.Calificacionpromedio >= _valor)
                 {
                     listafiltrada.Add(canc);
                 }
@@ -1549,9 +1545,8 @@ namespace Proyecto
                     break;
                 case "Evaluacion":
                     lista_filtrando  =  cancionporevaluacion();
-                    Thread.Sleep(2000);
 
-                    //TERMINAR
+                    
                     break;
                 default:
                     Console.WriteLine("No existen canciones que cumplan con el criterio y valor seleccionado");
@@ -1644,7 +1639,7 @@ namespace Proyecto
             }
             foreach (Song can in interna)
             {
-                if (can.genero == _valor)
+                if (can.Genero == _valor)
                 {
 
                     listafiltrada.Add(can);
@@ -1664,7 +1659,7 @@ namespace Proyecto
             }
             foreach (Song canc in interna1)
             {
-                if (canc.disquera == _valor)
+                if (canc.Disquera == _valor)
                 {
                     listafiltrada.Add(canc);
 
@@ -1685,7 +1680,7 @@ namespace Proyecto
             string _valor = Console.ReadLine();
             foreach (Song canc in interna2)
             {
-                if (int.Parse(canc.anopublicacion) == int.Parse(_valor))
+                if (int.Parse(canc.Anopublicacion) == int.Parse(_valor))
                 {
                     listafiltrada.Add(canc);// ver 
 
@@ -1715,7 +1710,7 @@ namespace Proyecto
                 {
                     foreach (Song canc in interna3)
                     {
-                        if (canc.cantante == can)
+                        if (canc.Cantante == can)
                         {
                             listafiltrada.Add(canc);
                             lista_artistas_filtromiltiple.Remove(can);
@@ -1750,7 +1745,7 @@ namespace Proyecto
                         {
                             foreach (Song canc in interna4)
                             {
-                                if (canc.cantante == can)
+                                if (canc.Cantante == can)
                                 {
                                     listafiltrada.Add(canc);
                                     lista_artistas_filtromiltiple.Remove(can);
@@ -1767,7 +1762,7 @@ namespace Proyecto
                         {
                             foreach (Song canc in interna4)
                             {
-                                if (canc.cantante == can)
+                                if (canc.Cantante == can)
                                 {
                                     listafiltrada.Add(canc);
                                     lista_artistas_filtromiltiple.Remove(can);
@@ -1783,7 +1778,7 @@ namespace Proyecto
                         {
                             foreach (Song canc in interna4)
                             {
-                                if (canc.cantante == can)
+                                if (canc.Cantante == can)
                                 {
                                     listafiltrada.Add(canc);
                                     lista_artistas_filtromiltiple.Remove(can);
@@ -1799,7 +1794,7 @@ namespace Proyecto
                         {
                             foreach (Song canc in interna4)
                             {
-                                if (canc.cantante == can)
+                                if (canc.Cantante == can)
                                 {
                                     listafiltrada.Add(canc);
                                     lista_artistas_filtromiltiple.Remove(can);
@@ -1823,7 +1818,7 @@ namespace Proyecto
             string _valor = ShowOptions(lista_calidad_cancion);
             foreach (Song ca in interna5)
             {
-                if (ca.calidad == _valor)
+                if (ca.Calidad == _valor)
                 {
                     listafiltrada.Add(ca);
 
@@ -1840,45 +1835,34 @@ namespace Proyecto
             switch (criterio)
             {
                 case "Genero":
-                    Console.WriteLine("ENTRE A GENERO");
-                    Thread.Sleep(2000);
-
+                  
                     lista_filtrando = CancionesporGeneroand();
                     break;
                 case "Disquera":
-                    Console.WriteLine("ENTRE A DISQUERA");
-                    Thread.Sleep(2000);
 
                     lista_filtrando = Cancionespordisqueraand();
 
                     break;
                 case "Año Publicacion":
-                    Console.WriteLine("ENTRE A AÑO PUBLICACION");
-                    Thread.Sleep(2000);
 
                     lista_filtrando = Cancionesporaniopublicacionand();
 
                     break;
                 case "Sexo del Artista":
-                    Console.WriteLine("ENTRE A SEXO ARTISTA");
-                    Thread.Sleep(2000);
+
                     lista_filtrando = Cancionesporsexodelcantanteand();
 
                     break;
                 case "Edad del Artista":
-                    Console.WriteLine("ENTRE A EDAD ARTISTA");
-                    Thread.Sleep(2000);
+
                     lista_filtrando = Cancionesporedaddelcantanteand();
 
                     break;
                 case "Calidad/Resolucion":
-                    Console.WriteLine("ENTRE A RESOLUCION");
                     lista_filtrando = Cancionesporcalidadcancionand();
-                    Thread.Sleep(2000);
 
                     break;
                 case "Evaluacion":
-                    Console.WriteLine("ENTRE A EVALUACION");
 
                     Console.WriteLine("Lo sentimos pero este metodo aun esta en construccion");
                     Thread.Sleep(2000);
@@ -2008,7 +1992,7 @@ namespace Proyecto
                 case "Genero":
                     foreach (Song can in todas_las_canciones)
                     {
-                        if (can.genero == _valor)
+                        if (can.Genero == _valor)
                         {
                             listafiltrada.Add(can);
                         }
@@ -2033,7 +2017,7 @@ namespace Proyecto
                         {
                             foreach (Song canc in todas_las_canciones)
                             {
-                                if (canc.album == alb.NombrePlaylist)
+                                if (canc.Album == alb.NombrePlaylist)
                                 {
                                     listafiltrada.Add(canc);
                                 }
@@ -2046,7 +2030,7 @@ namespace Proyecto
                 case "Nombre":
                     foreach (Song canc in todas_las_canciones)
                     {
-                        if (canc.nombrecancion == _valor)
+                        if (canc.Nombrecancion == _valor)
                         {
                             listafiltrada.Add(canc);
                         }
@@ -2055,7 +2039,7 @@ namespace Proyecto
                 case "Disquera":
                     foreach (Song canc in todas_las_canciones)
                     {
-                        if (canc.disquera == _valor)
+                        if (canc.Disquera == _valor)
                         {
                             listafiltrada.Add(canc);
                         }
@@ -2076,7 +2060,7 @@ namespace Proyecto
                 case "Año Publicacion":
                     foreach (Song canc in todas_las_canciones)
                     {
-                        if (int.Parse(canc.anopublicacion) == int.Parse(_valor))
+                        if (int.Parse(canc.Anopublicacion) == int.Parse(_valor))
                         {
                             listafiltrada.Add(canc);// ver 
                         }
@@ -2089,7 +2073,7 @@ namespace Proyecto
                         {
                             foreach (Song canc in todas_las_canciones)
                             {
-                                if (canc.cantante == can)
+                                if (canc.Cantante == can)
                                 {
                                     listafiltrada.Add(canc);
                                 }
@@ -2107,7 +2091,7 @@ namespace Proyecto
                                 {
                                     foreach (Song canc in todas_las_canciones)
                                     {
-                                        if (canc.cantante == can)
+                                        if (canc.Cantante == can)
                                         {
                                             listafiltrada.Add(canc);
                                         }
@@ -2123,7 +2107,7 @@ namespace Proyecto
                                 {
                                     foreach (Song canc in todas_las_canciones)
                                     {
-                                        if (canc.cantante == can)
+                                        if (canc.Cantante == can)
                                         {
                                             listafiltrada.Add(canc);
                                         }
@@ -2138,7 +2122,7 @@ namespace Proyecto
                                 {
                                     foreach (Song canc in todas_las_canciones)
                                     {
-                                        if (canc.cantante == can)
+                                        if (canc.Cantante == can)
                                         {
                                             listafiltrada.Add(canc);
                                         }
@@ -2153,7 +2137,7 @@ namespace Proyecto
                                 {
                                     foreach (Song canc in todas_las_canciones)
                                     {
-                                        if (canc.cantante == can)
+                                        if (canc.Cantante == can)
                                         {
                                             listafiltrada.Add(canc);
                                         }
@@ -2189,8 +2173,8 @@ namespace Proyecto
                     Console.WriteLine("============");
                     Console.WriteLine(i + 1 + "-" + "Canción" + " " + (i + 1));
                     Console.WriteLine("============");
-                    Console.WriteLine(s[i].nombrecancion);
-                    Console.WriteLine(s[i].cantante);
+                    Console.WriteLine(s[i].Nombrecancion);
+                    Console.WriteLine(s[i].Cantante);
                     Console.WriteLine(" ");
 
 
@@ -2210,8 +2194,8 @@ namespace Proyecto
                     Console.WriteLine("============");
                     Console.WriteLine(i + 1 + "-" + "Video" + " " + (i + 1));
                     Console.WriteLine("============");
-                    Console.WriteLine(s[i].nombre_video);
-                    Console.WriteLine(s[i].director);
+                    Console.WriteLine(s[i].Nombre_video);
+                    Console.WriteLine(s[i].Director);
                     Console.WriteLine(" ");
 
 
@@ -2227,7 +2211,7 @@ namespace Proyecto
                 case "Nombre":
                     foreach (User _filtro in listausuarios)
                     {
-                        if ((_filtro.nombre == _valor) && (_filtro.perfipublico == "publico"))
+                        if ((_filtro.Nombre_ == _valor) && (_filtro.Perfipublico_ == "publico"))
                         {
                             listafiltradausuarios.Add(_filtro);
                         }
@@ -2236,7 +2220,7 @@ namespace Proyecto
                 case "Email":
                     foreach (User _filtro in listausuarios)
                     {
-                        if ((_filtro.email == _valor) && (_filtro.perfipublico == "publico"))
+                        if ((_filtro.Email_ == _valor) && (_filtro.Perfipublico_ == "publico"))
                         {
                             listafiltradausuarios.Add(_filtro);
                         }
@@ -2245,7 +2229,7 @@ namespace Proyecto
                 case "Id":
                     foreach (User _filtro in listausuarios)
                     {
-                        if ((_filtro.nombreusuario == _valor) && (_filtro.perfipublico == "publico"))
+                        if ((_filtro.Nombreusuario == _valor) && (_filtro.Perfipublico_ == "publico"))
                         {
                             listafiltradausuarios.Add(_filtro);
                         }
@@ -2270,8 +2254,8 @@ namespace Proyecto
                     Console.WriteLine("============");
                     Console.WriteLine(i + 1 + "-" + "Usuario" + " " + (i + 1));
                     Console.WriteLine("============");
-                    Console.WriteLine(s[i].nombreusuario);
-                    Console.WriteLine(s[i].nombre);
+                    Console.WriteLine(s[i].Nombreusuario);
+                    Console.WriteLine(s[i].Nombre_);
                     Console.WriteLine(" ");
                 }
             }
@@ -2281,11 +2265,11 @@ namespace Proyecto
             string funko = "correcto";
             for (int i = 0; i < listausuarios.Count; i++)
             {
-                if (listausuarios[i].email == email)
+                if (listausuarios[i].Email_ == email)
                 {
-                    if (listausuarios[i].password == contrasena)
+                    if (listausuarios[i].Password_ == contrasena)
                     {
-                        if (listausuarios[i].perfipublico == "privado")
+                        if (listausuarios[i].Perfipublico_ == "privado")
                         {
                             Console.Clear();
                             Console.WriteLine("Ya eras privado anteriormente");
@@ -2295,7 +2279,7 @@ namespace Proyecto
                         }
                         else
                         {
-                            listausuarios[i].perfipublico = "privado";
+                            listausuarios[i].Perfipublico_ = "privado";
                             funko = "correcto";
                             Almacenar(listausuarios);
                         }
@@ -2325,11 +2309,11 @@ namespace Proyecto
             string funko = "correcto";
             for (int i = 0; i < listausuarios.Count; i++)
             {
-                if (listausuarios[i].email == email)
+                if (listausuarios[i].Email_ == email)
                 {
-                    if (listausuarios[i].password == contrasena)
+                    if (listausuarios[i].Password_ == contrasena)
                     {
-                        if (listausuarios[i].perfipublico == "publico")
+                        if (listausuarios[i].Perfipublico_ == "publico")
                         {
                             Console.Clear();
                             Console.WriteLine("Ya eras publico anteriormente");
@@ -2339,7 +2323,7 @@ namespace Proyecto
                         }
                         else
                         {
-                            listausuarios[i].perfipublico = "publico";
+                            listausuarios[i].Perfipublico_ = "publico";
                             funko = "correcto";
                             Almacenar(listausuarios);
                         }
@@ -2683,11 +2667,11 @@ namespace Proyecto
             string funko = "correcto";
             for (int i = 0; i < listausuarios.Count; i++)
             {
-                if (listausuarios[i].email == email)
+                if (listausuarios[i].Email_ == email)
                 {
-                    if (listausuarios[i].password == contrasena)
+                    if (listausuarios[i].Password_ == contrasena)
                     {
-                        if (listausuarios[i].premium == "premium")
+                        if (listausuarios[i].Premium_ == "premium")
                         {
                             Console.Clear();
                             Console.WriteLine("Ya estabas registrado como premium");
@@ -2697,7 +2681,7 @@ namespace Proyecto
                         }
                         else
                         {
-                            listausuarios[i].premium = "premium";
+                            listausuarios[i].Premium_ = "premium";
                             funko = "correcto";
                             Almacenar(listausuarios);
                         }
@@ -2804,9 +2788,9 @@ namespace Proyecto
             string funka = "";
             for (int i = 0; i < listausuarios.Count; i++)
             {
-                if (listausuarios[i].Email == email)
+                if (listausuarios[i].Email_ == email)
                 {
-                    listausuarios[i].favorite_songs.Add(s);
+                    listausuarios[i].Favorite_songs_.Add(s);
                     Almacenar(listausuarios);
                     funka += "si";
 
@@ -2828,9 +2812,9 @@ namespace Proyecto
             string funka = "";
             for (int i = 0; i < listausuarios.Count; i++)
             {
-                if (listausuarios[i].Email == email)
+                if (listausuarios[i].Email_ == email)
                 {
-                    listausuarios[i].favorite_videos.Add(s);
+                    listausuarios[i].Favorite_videos_.Add(s);
                     Almacenar(listausuarios);
                     funka += "si";
 
@@ -2854,9 +2838,9 @@ namespace Proyecto
 
             for (int i = 0; i < todas_las_canciones.Count; i++)
             {
-                if (todas_las_cancioneskaraoke[i].nombrecancion == nombrecancion)
+                if (todas_las_cancioneskaraoke[i].Nombrecancion == nombrecancion)
                 {
-                    todas_las_cancioneskaraoke[i].reproducciones += 1;
+                    todas_las_cancioneskaraoke[i].Reproducciones += 1;
                     AlmacenarCanciones(todas_las_cancioneskaraoke);
                     return true;
                 }
@@ -2868,9 +2852,9 @@ namespace Proyecto
 
             for (int i = 0; i < todas_las_canciones.Count; i++)
             {
-                if (todos_los_videos[i].nombre_video == nombrevideo)
+                if (todos_los_videos[i].Nombre_video == nombrevideo)
                 {
-                    todos_los_videos[i].reproduccion += 1;
+                    todos_los_videos[i].Reproduccion += 1;
                     AlmacenarVideos(todos_los_videos);
                     return true;
                 }
@@ -2882,15 +2866,15 @@ namespace Proyecto
             string info = "No hay info";
             for (int j = 0; j < listausuarios.Count; j++)
             {
-                if (listausuarios[j].Email == email)
+                if (listausuarios[j].Email_ == email)
                 {
-                    if (listausuarios[j].Lista_playlistusuario.Count > 0)
+                    if (listausuarios[j].Lista_playlistusuario_.Count > 0)
                     {
-                        for (int i = 0; i < listausuarios[j].Lista_playlistusuario.Count; i++)
+                        for (int i = 0; i < listausuarios[j].Lista_playlistusuario_.Count; i++)
                         {
-                            if (listausuarios[j].Lista_playlistusuario[i].NombrePlaylist == nombreply)
+                            if (listausuarios[j].Lista_playlistusuario_[i].NombrePlaylist == nombreply)
                             {
-                                info = listausuarios[j].Lista_playlistusuario[i].listplay[posicion - 1].nombrecancion;
+                                info = listausuarios[j].Lista_playlistusuario_[i].listplay[posicion - 1].Nombrecancion;
                             }
                         }
                     }
@@ -2906,11 +2890,11 @@ namespace Proyecto
             string info = "No hay info";
             for (int j = 0; j < listausuarios.Count; j++)
             {
-                if (listausuarios[j].Email == email)
+                if (listausuarios[j].Email_ == email)
                 {
-                    if (listausuarios[j].Favorite_songs.Count > 0)
+                    if (listausuarios[j].Favorite_songs_.Count > 0)
                     {
-                        info = listausuarios[j].Favorite_songs[posicion - 1].nombrecancion;
+                        info = listausuarios[j].Favorite_songs_[posicion - 1].Nombrecancion;
 
 
                     }
@@ -2923,11 +2907,11 @@ namespace Proyecto
             string info = "No hay info";
             for (int j = 0; j < listausuarios.Count; j++)
             {
-                if (listausuarios[j].Email == email)
+                if (listausuarios[j].Email_ == email)
                 {
-                    if (listausuarios[j].Historial_canciones.Count > 0)
+                    if (listausuarios[j].Historial_canciones_.Count > 0)
                     {
-                        info = listausuarios[j].Historial_canciones[posicion - 1].nombrecancion;
+                        info = listausuarios[j].Historial_canciones_[posicion - 1].Nombrecancion;
                     }
                 }
             }
@@ -2938,11 +2922,11 @@ namespace Proyecto
             string info = "No hay info";
             for (int j = 0; j < listausuarios.Count; j++)
             {
-                if (listausuarios[j].Email == email)
+                if (listausuarios[j].Email_ == email)
                 {
-                    if (listausuarios[j].Historial_videos.Count > 0)
+                    if (listausuarios[j].Historial_videos_.Count > 0)
                     {
-                        info = listausuarios[j].Historial_videos[posicion - 1].nombre_video;
+                        info = listausuarios[j].Historial_videos_[posicion - 1].Nombre_video;
                     }
                 }
             }
@@ -2953,11 +2937,11 @@ namespace Proyecto
             string info = "No hay info";
             for (int j = 0; j < listausuarios.Count; j++)
             {
-                if (listausuarios[j].Email == email)
+                if (listausuarios[j].Email_ == email)
                 {
-                    if (listausuarios[j].Favorite_videos.Count > 0)
+                    if (listausuarios[j].Favorite_videos_.Count > 0)
                     {
-                        info = listausuarios[j].Favorite_videos[posicion - 1].nombre_video;
+                        info = listausuarios[j].Favorite_videos_[posicion - 1].Nombre_video;
 
 
                     }
@@ -2973,11 +2957,11 @@ namespace Proyecto
             int info = 0;
             for (int j = 0; j < listausuarios.Count; j++)
             {
-                if (listausuarios[j].Email == email)
+                if (listausuarios[j].Email_ == email)
                 {
-                    if (listausuarios[j].Favorite_songs.Count > 0)
+                    if (listausuarios[j].Favorite_songs_.Count > 0)
                     {
-                        info = listausuarios[j].Favorite_songs[posicion - 1].reproducciones;
+                        info = listausuarios[j].Favorite_songs_[posicion - 1].Reproducciones;
 
 
                     }
@@ -2991,11 +2975,11 @@ namespace Proyecto
             int info = 0;
             for (int j = 0; j < listausuarios.Count; j++)
             {
-                if (listausuarios[j].Email == email)
+                if (listausuarios[j].Email_ == email)
                 {
-                    if (listausuarios[j].Historial_canciones.Count > 0)
+                    if (listausuarios[j].Historial_canciones_.Count > 0)
                     {
-                        info = listausuarios[j].Historial_canciones[posicion - 1].reproducciones;
+                        info = listausuarios[j].Historial_canciones_[posicion - 1].Reproducciones;
                     }
                 }
             }
@@ -3007,11 +2991,11 @@ namespace Proyecto
             int info = 0;
             for (int j = 0; j < listausuarios.Count; j++)
             {
-                if (listausuarios[j].Email == email)
+                if (listausuarios[j].Email_ == email)
                 {
-                    if (listausuarios[j].Historial_videos.Count > 0)
+                    if (listausuarios[j].Historial_videos_.Count > 0)
                     {
-                        info = listausuarios[j].Historial_videos[posicion - 1].reproduccion;
+                        info = listausuarios[j].Historial_videos_[posicion - 1].Reproduccion;
                     }
                 }
             }
@@ -3024,11 +3008,11 @@ namespace Proyecto
             int info = 0;
             for (int j = 0; j < listausuarios.Count; j++)
             {
-                if (listausuarios[j].Email == email)
+                if (listausuarios[j].Email_ == email)
                 {
-                    if (listausuarios[j].Favorite_videos.Count > 0)
+                    if (listausuarios[j].Favorite_videos_.Count > 0)
                     {
-                        info = listausuarios[j].Favorite_videos[posicion - 1].reproduccion;
+                        info = listausuarios[j].Favorite_videos_[posicion - 1].Reproduccion;
 
 
                     }
@@ -3046,15 +3030,15 @@ namespace Proyecto
             string info = "No hay info";
             for (int j = 0; j < listausuarios.Count; j++)
             {
-                if (listausuarios[j].Email == email)
+                if (listausuarios[j].Email_ == email)
                 {
-                    if (listausuarios[j].Lista_playlistvideousuario.Count > 0)
+                    if (listausuarios[j].Lista_playlistvideousuario_.Count > 0)
                     {
-                        for (int i = 0; i < listausuarios[j].Lista_playlistvideousuario.Count; i++)
+                        for (int i = 0; i < listausuarios[j].Lista_playlistvideousuario_.Count; i++)
                         {
-                            if (listausuarios[j].Lista_playlistvideousuario[i].NombrePlaylist == nombreply)
+                            if (listausuarios[j].Lista_playlistvideousuario_[i].NombrePlaylist == nombreply)
                             {
-                                info = listausuarios[j].Lista_playlistvideousuario[i].listplayvideo[posicion - 1].nombre_video;
+                                info = listausuarios[j].Lista_playlistvideousuario_[i].listplayvideo[posicion - 1].Nombre_video;
                             }
                         }
                     }
@@ -3070,15 +3054,15 @@ namespace Proyecto
             int info = 0;
             for (int j = 0; j < listausuarios.Count; j++)
             {
-                if (listausuarios[j].Email == email)
+                if (listausuarios[j].Email_ == email)
                 {
-                    if (listausuarios[j].Lista_playlistusuario.Count > 0)
+                    if (listausuarios[j].Lista_playlistusuario_.Count > 0)
                     {
-                        for (int i = 0; i < listausuarios[j].Lista_playlistusuario.Count; i++)
+                        for (int i = 0; i < listausuarios[j].Lista_playlistusuario_.Count; i++)
                         {
-                            if (listausuarios[j].Lista_playlistusuario[i].NombrePlaylist == nombreply)
+                            if (listausuarios[j].Lista_playlistusuario_[i].NombrePlaylist == nombreply)
                             {
-                                info = listausuarios[j].Lista_playlistusuario[i].listplay[posicion - 1].reproducciones;
+                                info = listausuarios[j].Lista_playlistusuario_[i].listplay[posicion - 1].Reproducciones;
                                 ;
                             }
                         }
@@ -3093,11 +3077,11 @@ namespace Proyecto
             string info = "No hay info";
             for (int j = 0; j < listausuarios.Count; j++)
             {
-                if (listausuarios[j].Email == email)
+                if (listausuarios[j].Email_ == email)
                 {
-                    if (listausuarios[j].Descargas.Count > 0)
+                    if (listausuarios[j].Descargas_.Count > 0)
                     {
-                        info = listausuarios[j].Descargas[posicion - 1].nombrearchivo;
+                        info = listausuarios[j].Descargas_[posicion - 1].Nombrearchivo;
                     }
                 }
             }
@@ -3109,11 +3093,11 @@ namespace Proyecto
             string funka = "";
             for (int i = 0; i < listausuarios.Count; i++)
             {
-                if (listausuarios[i].email == email)
+                if (listausuarios[i].Email_ == email)
                 {
-                    if (listausuarios[i].premium == "premium")
+                    if (listausuarios[i].Premium_ == "premium")
                     {
-                        listausuarios[i].Descargas.Add(s);
+                        listausuarios[i].Descargas_.Add(s);
                         Almacenar(listausuarios);
                         funka += "si";
                     }
@@ -3141,9 +3125,9 @@ namespace Proyecto
 
             for (int i = 0; i < todas_las_canciones.Count; i++)
             {
-                if (todas_las_canciones[i].nombrecancion == nombrecancion)
+                if (todas_las_canciones[i].Nombrecancion == nombrecancion)
                 {
-                    todas_las_canciones[i].reproducciones += 1;
+                    todas_las_canciones[i].Reproducciones += 1;
                     AlmacenarCanciones(todas_las_canciones);
                     return true;
                 }
@@ -3155,21 +3139,21 @@ namespace Proyecto
             string info = "";
             for (int j = 0; j < listausuarios.Count; j++)
             {
-                if (listausuarios[j].email == email)
+                if (listausuarios[j].Email_ == email)
                 {
-                    if (listausuarios[j].Descargas.Count == 0)
+                    if (listausuarios[j].Descargas_.Count == 0)
                     {
                         info = "No hay canciones agregadas aún";
                     }
                     else
                     {
-                        for (int i = 0; i < listausuarios[j].Descargas.Count; i++)
+                        for (int i = 0; i < listausuarios[j].Descargas_.Count; i++)
                         {
 
                             Console.WriteLine("============");
                             Console.WriteLine("Canción" + " " + (i + 1));
                             Console.WriteLine("============");
-                            Console.WriteLine(listausuarios[j].Descargas[i].Informacioncancion());
+                            Console.WriteLine(listausuarios[j].Descargas_[i].Informacioncancion());
                             Console.WriteLine(" ");
                         }
 
@@ -3186,17 +3170,17 @@ namespace Proyecto
             string info = "";
             for (int j = 0; j < listausuarios.Count; j++)
             {
-                if (listausuarios[j].email == email)
+                if (listausuarios[j].Email_ == email)
                 {
-                    if (listausuarios[j].Favorite_songs.Count == 0)
+                    if (listausuarios[j].Favorite_songs_.Count == 0)
                     {
                         info = "No hay canciones agregadas aún";
                     }
                     else
                     {
-                        for (int i = 0; i < listausuarios[j].Favorite_songs.Count; i++)
+                        for (int i = 0; i < listausuarios[j].Favorite_songs_.Count; i++)
                         {
-                            info += "============\nCanción" + " " + (i + 1) + "============" + listausuarios[j].Favorite_songs[i].Informacioncancion() + " ";
+                            info += "============\nCanción" + " " + (i + 1) + "============" + listausuarios[j].Favorite_songs_[i].Informacioncancion() + " ";
                         }
                     }
                 }
@@ -3208,17 +3192,17 @@ namespace Proyecto
             string info = "";
             for (int j = 0; j < listausuarios.Count; j++)
             {
-                if (listausuarios[j].email == email)
+                if (listausuarios[j].Email_ == email)
                 {
-                    if (listausuarios[j].favorite_videos.Count == 0)
+                    if (listausuarios[j].Favorite_videos_.Count == 0)
                     {
                         info = "No hay videos agregadas aún";
                     }
                     else
                     {
-                        for (int i = 0; i < listausuarios[j].favorite_videos.Count; i++)
+                        for (int i = 0; i < listausuarios[j].Favorite_videos_.Count; i++)
                         {
-                            info += "============\nCanción" + " " + (i + 1) + "============" + listausuarios[j].favorite_videos[i].Ver_informacion() + " ";
+                            info += "============\nCanción" + " " + (i + 1) + "============" + listausuarios[j].Favorite_videos_[i].Ver_informacion() + " ";
                         }
                     }
                 }
@@ -3230,17 +3214,17 @@ namespace Proyecto
             string info = "";
             for (int j = 0; j < listausuarios.Count; j++)
             {
-                if (listausuarios[j].email == email)
+                if (listausuarios[j].Email_ == email)
                 {
-                    if (listausuarios[j].Historial_canciones.Count == 0)
+                    if (listausuarios[j].Historial_canciones_.Count == 0)
                     {
                         info = "No hay canciones agregadas aún";
                     }
                     else
                     {
-                        for (int i = 0; i < listausuarios[j].Historial_canciones.Count; i++)
+                        for (int i = 0; i < listausuarios[j].Historial_canciones_.Count; i++)
                         {
-                            info += "============\nCanción" + " " + (i + 1) + "============" + listausuarios[j].Historial_canciones[i].Informacioncancion() + " ";
+                            info += "============\nCanción" + " " + (i + 1) + "============" + listausuarios[j].Historial_canciones_[i].Informacioncancion() + " ";
                         }
                     }
                 }
@@ -3252,17 +3236,17 @@ namespace Proyecto
             string info = "";
             for (int j = 0; j < listausuarios.Count; j++)
             {
-                if (listausuarios[j].email == email)
+                if (listausuarios[j].Email_ == email)
                 {
-                    if (listausuarios[j].Historial_videos.Count == 0)
+                    if (listausuarios[j].Historial_videos_.Count == 0)
                     {
                         info = "No hay videos agregadas aún";
                     }
                     else
                     {
-                        for (int i = 0; i < listausuarios[j].Historial_videos.Count; i++)
+                        for (int i = 0; i < listausuarios[j].Historial_videos_.Count; i++)
                         {
-                            info += "============\nCanción" + " " + (i + 1) + "============" + listausuarios[j].Historial_videos[i].Ver_informacion() + " ";
+                            info += "============\nCanción" + " " + (i + 1) + "============" + listausuarios[j].Historial_videos_[i].Ver_informacion() + " ";
                         }
                     }
                 }
@@ -3298,12 +3282,12 @@ namespace Proyecto
         {
             for (int i = 0; i < listausuarios.Count; i++)
             {
-                if (listausuarios[i].Email == email)
+                if (listausuarios[i].Email_ == email)
                 {
                     for (int j = 0; j < todas_las_canciones.Count; j++)
-                        if (todas_las_canciones[j].nombrearchivo == archivo)
+                        if (todas_las_canciones[j].Nombrearchivo == archivo)
                         {
-                            listausuarios[i].Historial_canciones.Add(todas_las_canciones[j]);
+                            listausuarios[i].Historial_canciones_.Add(todas_las_canciones[j]);
                         }
                 }
             }
@@ -3312,12 +3296,12 @@ namespace Proyecto
         {
             for (int i = 0; i < listausuarios.Count; i++)
             {
-                if (listausuarios[i].Email == email)
+                if (listausuarios[i].Email_ == email)
                 {
                     for (int j = 0; j < todos_los_videos.Count; j++)
-                        if (todos_los_videos[j].nombrearchivovideo == archivo)
+                        if (todos_los_videos[j].Nombrearchivovideo == archivo)
                         {
-                            listausuarios[i].Historial_videos.Add(todos_los_videos[j]);
+                            listausuarios[i].Historial_videos_.Add(todos_los_videos[j]);
                         }
                 }
             }
@@ -3328,18 +3312,18 @@ namespace Proyecto
             string yalosigues = "";
             for (int i = 0; i < listausuarios.Count; i++)
             {
-                if (listausuarios[i].email == email)
+                if (listausuarios[i].Email_ == email)
                 {
-                    for (int j = 0; j < listausuarios[i].Usuarios_seguidos.Count; j++)
+                    for (int j = 0; j < listausuarios[i].Usuarios_seguidos_.Count; j++)
                     {
-                        if (listausuarios[i].Usuarios_seguidos[j].NombreUsuario == u.NombreUsuario)
+                        if (listausuarios[i].Usuarios_seguidos_[j].Nombreusuario == u.Nombreusuario)
                         {
                             yalosigues = "si";
                         }
                     }
                     if (yalosigues != "si")
                     {
-                        listausuarios[i].Usuarios_seguidos.Add(u);
+                        listausuarios[i].Usuarios_seguidos_.Add(u);
                         Almacenar(listausuarios);
                         funka += "si";
                     }
@@ -3361,21 +3345,21 @@ namespace Proyecto
 
             for (int j = 0; j < listausuarios.Count; j++)
             {
-                if (listausuarios[j].email == email)
+                if (listausuarios[j].Email_ == email)
                 {
-                    if (listausuarios[j].Usuarios_seguidos.Count == 0)
+                    if (listausuarios[j].Usuarios_seguidos_.Count == 0)
                     {
                         Console.WriteLine("No sigues a ningun usuario aún");
                     }
                     else
                     {
-                        for (int i = 0; i < listausuarios[j].Usuarios_seguidos.Count; i++)
+                        for (int i = 0; i < listausuarios[j].Usuarios_seguidos_.Count; i++)
                         {
 
                             Console.WriteLine("============");
                             Console.WriteLine("Usuario" + " " + (i + 1));
                             Console.WriteLine("============");
-                            Console.WriteLine(listausuarios[j].Usuarios_seguidos[i].InformacionUsuario());
+                            Console.WriteLine(listausuarios[j].Usuarios_seguidos_[i].InformacionUsuario());
                             Console.WriteLine(" ");
                         }
 
@@ -3391,9 +3375,9 @@ namespace Proyecto
         {
             for (int i = 0; i < todas_las_canciones.Count; i++)
             {
-                if (todas_las_canciones[i].nombrearchivo == archivo)
+                if (todas_las_canciones[i].Nombrearchivo == archivo)
                 {
-                    todas_las_canciones[i].todas_las_calificaciones.Add(calificacion);
+                    todas_las_canciones[i].Todas_las_calificaciones.Add(calificacion);
                     AlmacenarCanciones(todas_las_canciones);
                 }
 
@@ -3404,9 +3388,9 @@ namespace Proyecto
         {
             for (int i = 0; i < todos_los_videos.Count; i++)
             {
-                if (todos_los_videos[i].nombrearchivovideo == archivo)
+                if (todos_los_videos[i].Nombrearchivovideo == archivo)
                 {
-                    todos_los_videos[i].todas_las_calificaciones.Add(calificacion);
+                    todos_los_videos[i].Todas_las_calificaciones.Add(calificacion);
                     AlmacenarVideos(todos_los_videos);
                 }
 
@@ -3417,13 +3401,13 @@ namespace Proyecto
             int total = 0;
             for (int i = 0; i < todas_las_canciones.Count; i++)
             {
-                if (todas_las_canciones[i].nombrearchivo == archivo)
+                if (todas_las_canciones[i].Nombrearchivo == archivo)
                 {
-                    for (int j = 0; j < todas_las_canciones[i].todas_las_calificaciones.Count; j++)
+                    for (int j = 0; j < todas_las_canciones[i].Todas_las_calificaciones.Count; j++)
                     {
-                        total += todas_las_canciones[i].todas_las_calificaciones[j];
+                        total += todas_las_canciones[i].Todas_las_calificaciones[j];
                     }
-                    todas_las_canciones[i].calificacionpromedio = total / todas_las_canciones[i].todas_las_calificaciones.Count;
+                    todas_las_canciones[i].Calificacionpromedio = total / todas_las_canciones[i].Todas_las_calificaciones.Count;
                     AlmacenarCanciones(todas_las_canciones);
                 }
             }
@@ -3433,13 +3417,13 @@ namespace Proyecto
             int total = 0;
             for (int i = 0; i < todos_los_videos.Count; i++)
             {
-                if (todos_los_videos[i].nombrearchivovideo == archivo)
+                if (todos_los_videos[i].Nombrearchivovideo == archivo)
                 {
-                    for (int j = 0; j < todos_los_videos[i].todas_las_calificaciones.Count; j++)
+                    for (int j = 0; j < todos_los_videos[i].Todas_las_calificaciones.Count; j++)
                     {
-                        total += todos_los_videos[i].todas_las_calificaciones[j];
+                        total += todos_los_videos[i].Todas_las_calificaciones[j];
                     }
-                    todos_los_videos[i].calificacion_promedio = total / todos_los_videos[i].todas_las_calificaciones.Count;
+                    todos_los_videos[i].Calificacion_promedio = total / todos_los_videos[i].Todas_las_calificaciones.Count;
                     AlmacenarVideos(todos_los_videos);
                 }
             }
@@ -3470,11 +3454,11 @@ namespace Proyecto
             string funko = "correcto";
             for (int i = 0; i < listausuarios.Count; i++)
             {
-                if (listausuarios[i].email == email)
+                if (listausuarios[i].Email_ == email)
                 {
-                    if (listausuarios[i].password == contrasena)
+                    if (listausuarios[i].Password_ == contrasena)
                     {
-                        listausuarios[i].valorcriterio = valorcriterio;
+                        listausuarios[i].Valorcriterio_ = valorcriterio;
                         Almacenar(listausuarios);
                         funko = "correcto";
                     }
@@ -3502,7 +3486,7 @@ namespace Proyecto
         {
             for (int i = 0; i < listausuarios.Count; i++)
             {
-                if (listausuarios[i].valorcriterio == s.nombrecancion)
+                if (listausuarios[i].Valorcriterio_ == s.Nombrecancion)
                 {
                     listausuarios[i].Lista_inteligente.Add(s);
                     Almacenar(listausuarios);
@@ -3511,9 +3495,9 @@ namespace Proyecto
                 }
                 foreach (Artista c in lista_cantantes)
                 {
-                    if (c == s.cantante)
+                    if (c == s.Cantante)
                     {
-                        if (listausuarios[i].valorcriterio == c.name)
+                        if (listausuarios[i].Valorcriterio_ == c.name)
                         {
                             listausuarios[i].Lista_inteligente.Add(s);
 
@@ -3521,16 +3505,16 @@ namespace Proyecto
                         }
                     }
                 }
-                if (listausuarios[i].valorcriterio == s.genero)
+                if (listausuarios[i].Valorcriterio_ == s.Genero)
                 {
                     listausuarios[i].Lista_inteligente.Add(s);
                     Almacenar(listausuarios);
                 }
                 foreach (Artista c in lista_compositores)
                 {
-                    if (c == s.compositor)
+                    if (c == s.Compositor)
                     {
-                        if (listausuarios[i].valorcriterio == c.name)
+                        if (listausuarios[i].Valorcriterio_ == c.name)
                         {
                             listausuarios[i].Lista_inteligente.Add(s);
                             Almacenar(listausuarios);
@@ -3538,17 +3522,17 @@ namespace Proyecto
                     }
                 }
 
-                if (listausuarios[i].valorcriterio == s.anopublicacion)
+                if (listausuarios[i].Valorcriterio_ == s.Anopublicacion)
                 {
                     listausuarios[i].Lista_inteligente.Add(s);
                     Almacenar(listausuarios);
                 }
-                if (listausuarios[i].valorcriterio == s.disquera)
+                if (listausuarios[i].Valorcriterio_ == s.Disquera)
                 {
                     listausuarios[i].Lista_inteligente.Add(s);
                     Almacenar(listausuarios);
                 }
-                if (listausuarios[i].valorcriterio == s.album)
+                if (listausuarios[i].Valorcriterio_ == s.Album)
                 {
                     listausuarios[i].Lista_inteligente.Add(s);
                     Almacenar(listausuarios);
@@ -3588,7 +3572,7 @@ namespace Proyecto
             string info = "";
             for (int j = 0; j < listausuarios.Count; j++)
             {
-                if (listausuarios[j].email == email)
+                if (listausuarios[j].Email_ == email)
                 {
                     if (listausuarios[j].Lista_inteligente.Count == 0)
                     {
@@ -3619,7 +3603,7 @@ namespace Proyecto
             int info = 0;
             for (int j = 0; j < listausuarios.Count; j++)
             {
-                if (listausuarios[j].Email == email)
+                if (listausuarios[j].Email_ == email)
                 {
                     if (listausuarios[j].Lista_inteligente.Count > 0)
                     {
@@ -3634,11 +3618,11 @@ namespace Proyecto
             string info = "No hay info";
             for (int j = 0; j < listausuarios.Count; j++)
             {
-                if (listausuarios[j].Email == email)
+                if (listausuarios[j].Email_ == email)
                 {
                     if (listausuarios[j].Lista_inteligente.Count > 0)
                     {
-                        info = listausuarios[j].Lista_inteligente[posicion - 1].nombrearchivo;
+                        info = listausuarios[j].Lista_inteligente[posicion - 1].Nombrearchivo;
                     }
                 }
             }
@@ -3668,7 +3652,7 @@ namespace Proyecto
             }
             foreach (Video can in interna)
             {
-                if (can.genero == _valor)
+                if (can.Genero == _valor)
                 {
                     listafiltradav.Add(can);
                     lista_canciones_filtromiltiplev.Remove(can);
@@ -3688,7 +3672,7 @@ namespace Proyecto
             }
             foreach (Video canc in interna1)
             {
-                if (canc.film_studio == _valor)
+                if (canc.Film_studio == _valor)
                 {
                     listafiltradav.Add(canc);
                     lista_canciones_filtromiltiplev.Remove(canc);
@@ -3710,7 +3694,7 @@ namespace Proyecto
             string _valor = Console.ReadLine();
             foreach (Video canc in interna2)
             {
-                if (int.Parse(canc.anio_publicacion) == int.Parse(_valor))
+                if (int.Parse(canc.Anio_publicacion) == int.Parse(_valor))
                 {
                     listafiltradav.Add(canc);// ver 
                     lista_canciones_filtromiltiplev.Remove(canc);
@@ -3728,10 +3712,10 @@ namespace Proyecto
             {
                 interna5.Add(cc);
             }
-            string _valor = ShowOptions(lista_calidad_cancion);
+            string _valor = ShowOptions(lista_calidad_pelicula);
             foreach (Video ca in interna5)
             {
-                if (ca.calidad == _valor)
+                if (ca.Calidad == _valor)
                 {
                     listafiltradav.Add(ca);
                     lista_canciones_filtromiltiplev.Remove(ca);
@@ -3779,7 +3763,7 @@ namespace Proyecto
             List<string> canc = new List<string>();
             foreach (Video cancion in todos_los_videos)
             {
-                canc.Add(cancion.nombre_video);
+                canc.Add(cancion.Nombre_video);
             }
             return canc;
         }
@@ -3790,7 +3774,7 @@ namespace Proyecto
             string _valor = ShowOptions(Lista_nombres_videos());
             foreach (Video canc in todos_los_videos)
             {
-                if (canc.nombre_video == _valor)
+                if (canc.Nombre_video == _valor)
                 {
                     listafiltradav.Add(canc);
                 }
@@ -3803,7 +3787,7 @@ namespace Proyecto
             string _valor = ShowOptions(lista_categoria);
             foreach (Video canc in todos_los_videos)
             {
-                if (canc.categoria == _valor)
+                if (canc.Categoria == _valor)
                 {
                     listafiltradav.Add(canc);
                 }
@@ -3817,7 +3801,7 @@ namespace Proyecto
             float _valor = float.Parse(Console.ReadLine());
             foreach (Video canc in todos_los_videos)
             {
-                if (canc.calificacion_promedio >= _valor)
+                if (canc.Calificacion_promedio >= _valor)
                 {
                     listafiltradav.Add(canc);
                 }
@@ -3841,7 +3825,7 @@ namespace Proyecto
                     lista_filtrandov = Videosporfilmstudio();
 
                     break;
-                case "Actore":
+                case "Actores":
                     lista_filtrandov = Videopornombre_actor();
                     break;
                 case "Director":
@@ -3902,13 +3886,5 @@ namespace Proyecto
 
             return lista_filtrando2v;
         }
-
-
-
-
-
-
     }
-
-
 }    
