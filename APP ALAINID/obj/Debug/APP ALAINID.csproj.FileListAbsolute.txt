@@ -23,6 +23,7 @@ C:\Users\cvera\Desktop\proyecto-grupo-9-alainid\APP ALAINID\obj\Debug\APP_ALAINI
 C:\Users\cvera\Desktop\proyecto-grupo-9-alainid\APP ALAINID\obj\Debug\APP_ALAINID.correo_usadp.resources
 C:\Users\cvera\Desktop\proyecto-grupo-9-alainid\APP ALAINID\obj\Debug\APP_ALAINID.Form1.resources
 C:\Users\cvera\Desktop\proyecto-grupo-9-alainid\APP ALAINID\obj\Debug\APP_ALAINID.Usuario_ya_Existe.resources
+<<<<<<< HEAD
 C:\Users\rvarg\Desktop\Proyecto POO\proyecto-grupo-9-alainid\APP ALAINID\obj\Debug\APP ALAINID.csprojAssemblyReference.cache
 C:\Users\rvarg\Desktop\Proyecto POO\proyecto-grupo-9-alainid\APP ALAINID\obj\Debug\APP_ALAINID.Bienvenido_alainid.resources
 C:\Users\rvarg\Desktop\Proyecto POO\proyecto-grupo-9-alainid\APP ALAINID\obj\Debug\APP_ALAINID.Consola_Usuario.resources
@@ -36,3 +37,5 @@ C:\Users\rvarg\Desktop\Proyecto POO\proyecto-grupo-9-alainid\APP ALAINID\obj\Deb
 C:\Users\rvarg\Desktop\Proyecto POO\proyecto-grupo-9-alainid\APP ALAINID\obj\Debug\APP ALAINID.csproj.CoreCompileInputs.cache
 C:\Users\rvarg\Desktop\Proyecto POO\proyecto-grupo-9-alainid\APP ALAINID\obj\Debug\APP ALAINID.exe
 C:\Users\rvarg\Desktop\Proyecto POO\proyecto-grupo-9-alainid\APP ALAINID\obj\Debug\APP ALAINID.pdb
+=======
+>>>>>>> 3dc67e9b61e917a1faea4bd4ccdcab2a6eb5e725
