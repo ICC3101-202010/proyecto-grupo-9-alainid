@@ -1,0 +1,38 @@
+C:\Users\cvera\Desktop\PROYECTO ALAINID\APP ALAINID\APP ALAINID\bin\Debug\APP ALAINID.exe.config
+C:\Users\cvera\Desktop\PROYECTO ALAINID\APP ALAINID\APP ALAINID\bin\Debug\APP ALAINID.exe
+C:\Users\cvera\Desktop\PROYECTO ALAINID\APP ALAINID\APP ALAINID\bin\Debug\APP ALAINID.pdb
+C:\Users\cvera\Desktop\PROYECTO ALAINID\APP ALAINID\APP ALAINID\obj\Debug\APP ALAINID.csprojAssemblyReference.cache
+C:\Users\cvera\Desktop\PROYECTO ALAINID\APP ALAINID\APP ALAINID\obj\Debug\APP_ALAINID.Bienvenido_alainid.resources
+C:\Users\cvera\Desktop\PROYECTO ALAINID\APP ALAINID\APP ALAINID\obj\Debug\APP_ALAINID.Iniciar_sesion.resources
+C:\Users\cvera\Desktop\PROYECTO ALAINID\APP ALAINID\APP ALAINID\obj\Debug\APP_ALAINID.Properties.Resources.resources
+C:\Users\cvera\Desktop\PROYECTO ALAINID\APP ALAINID\APP ALAINID\obj\Debug\APP_ALAINID.Registrarme.resources
+C:\Users\cvera\Desktop\PROYECTO ALAINID\APP ALAINID\APP ALAINID\obj\Debug\APP ALAINID.csproj.GenerateResource.cache
+C:\Users\cvera\Desktop\PROYECTO ALAINID\APP ALAINID\APP ALAINID\obj\Debug\APP ALAINID.csproj.CoreCompileInputs.cache
+C:\Users\cvera\Desktop\PROYECTO ALAINID\APP ALAINID\APP ALAINID\obj\Debug\APP ALAINID.exe
+C:\Users\cvera\Desktop\PROYECTO ALAINID\APP ALAINID\APP ALAINID\obj\Debug\APP ALAINID.pdb
+C:\Users\cvera\Desktop\proyecto-grupo-9-alainid\APP ALAINID\obj\Debug\APP ALAINID.csprojAssemblyReference.cache
+C:\Users\cvera\Desktop\proyecto-grupo-9-alainid\APP ALAINID\obj\Debug\APP_ALAINID.Bienvenido_alainid.resources
+C:\Users\cvera\Desktop\proyecto-grupo-9-alainid\APP ALAINID\obj\Debug\APP_ALAINID.Iniciar_sesion.resources
+C:\Users\cvera\Desktop\proyecto-grupo-9-alainid\APP ALAINID\obj\Debug\APP_ALAINID.Properties.Resources.resources
+C:\Users\cvera\Desktop\proyecto-grupo-9-alainid\APP ALAINID\obj\Debug\APP_ALAINID.Registrarme.resources
+C:\Users\cvera\Desktop\proyecto-grupo-9-alainid\APP ALAINID\obj\Debug\APP ALAINID.csproj.GenerateResource.cache
+C:\Users\cvera\Desktop\proyecto-grupo-9-alainid\APP ALAINID\obj\Debug\APP ALAINID.csproj.CoreCompileInputs.cache
+C:\Users\cvera\Desktop\proyecto-grupo-9-alainid\APP ALAINID\obj\Debug\APP ALAINID.exe
+C:\Users\cvera\Desktop\proyecto-grupo-9-alainid\APP ALAINID\obj\Debug\APP ALAINID.pdb
+C:\Users\cvera\Desktop\proyecto-grupo-9-alainid\APP ALAINID\obj\Debug\APP_ALAINID.Consola_Usuario.resources
+C:\Users\cvera\Desktop\proyecto-grupo-9-alainid\APP ALAINID\obj\Debug\APP_ALAINID.correo_usadp.resources
+C:\Users\cvera\Desktop\proyecto-grupo-9-alainid\APP ALAINID\obj\Debug\APP_ALAINID.Form1.resources
+C:\Users\cvera\Desktop\proyecto-grupo-9-alainid\APP ALAINID\obj\Debug\APP_ALAINID.Usuario_ya_Existe.resources
+C:\Users\rvarg\Desktop\Proyecto POO\proyecto-grupo-9-alainid\APP ALAINID\obj\Debug\APP ALAINID.csprojAssemblyReference.cache
+C:\Users\rvarg\Desktop\Proyecto POO\proyecto-grupo-9-alainid\APP ALAINID\obj\Debug\APP_ALAINID.Bienvenido_alainid.resources
+C:\Users\rvarg\Desktop\Proyecto POO\proyecto-grupo-9-alainid\APP ALAINID\obj\Debug\APP_ALAINID.Consola_Usuario.resources
+C:\Users\rvarg\Desktop\Proyecto POO\proyecto-grupo-9-alainid\APP ALAINID\obj\Debug\APP_ALAINID.correo_usadp.resources
+C:\Users\rvarg\Desktop\Proyecto POO\proyecto-grupo-9-alainid\APP ALAINID\obj\Debug\APP_ALAINID.Form1.resources
+C:\Users\rvarg\Desktop\Proyecto POO\proyecto-grupo-9-alainid\APP ALAINID\obj\Debug\APP_ALAINID.Iniciar_sesion.resources
+C:\Users\rvarg\Desktop\Proyecto POO\proyecto-grupo-9-alainid\APP ALAINID\obj\Debug\APP_ALAINID.Properties.Resources.resources
+C:\Users\rvarg\Desktop\Proyecto POO\proyecto-grupo-9-alainid\APP ALAINID\obj\Debug\APP_ALAINID.Registrarme.resources
+C:\Users\rvarg\Desktop\Proyecto POO\proyecto-grupo-9-alainid\APP ALAINID\obj\Debug\APP_ALAINID.Usuario_ya_Existe.resources
+C:\Users\rvarg\Desktop\Proyecto POO\proyecto-grupo-9-alainid\APP ALAINID\obj\Debug\APP ALAINID.csproj.GenerateResource.cache
+C:\Users\rvarg\Desktop\Proyecto POO\proyecto-grupo-9-alainid\APP ALAINID\obj\Debug\APP ALAINID.csproj.CoreCompileInputs.cache
+C:\Users\rvarg\Desktop\Proyecto POO\proyecto-grupo-9-alainid\APP ALAINID\obj\Debug\APP ALAINID.exe
+C:\Users\rvarg\Desktop\Proyecto POO\proyecto-grupo-9-alainid\APP ALAINID\obj\Debug\APP ALAINID.pdb
