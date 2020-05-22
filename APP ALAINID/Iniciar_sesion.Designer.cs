@@ -55,6 +55,7 @@
             this.label1.Size = new System.Drawing.Size(210, 31);
             this.label1.TabIndex = 1;
             this.label1.Text = "Ingresar a ALAINID";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -101,6 +102,7 @@
             this.boton_iniciosesion.TabIndex = 6;
             this.boton_iniciosesion.Text = "Iniciar Sesion";
             this.boton_iniciosesion.UseVisualStyleBackColor = true;
+            this.boton_iniciosesion.Click += new System.EventHandler(this.boton_iniciosesion_Click);
             // 
             // Iniciar_sesion
             // 

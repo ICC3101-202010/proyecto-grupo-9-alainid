@@ -42,6 +42,7 @@
             this.registro_contraseña = new System.Windows.Forms.TextBox();
             this.boton_crearcuenta = new System.Windows.Forms.Button();
             this.boton_cancelar = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -178,11 +179,21 @@
             this.boton_cancelar.UseVisualStyleBackColor = true;
             this.boton_cancelar.Click += new System.EventHandler(this.boton_cancelar_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(273, 278);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(8, 8);
+            this.button1.TabIndex = 15;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // Registrarme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(460, 324);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.boton_cancelar);
             this.Controls.Add(this.boton_crearcuenta);
             this.Controls.Add(this.registro_contraseña);
@@ -221,5 +232,6 @@
         private System.Windows.Forms.TextBox registro_contraseña;
         private System.Windows.Forms.Button boton_crearcuenta;
         private System.Windows.Forms.Button boton_cancelar;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -32,9 +32,21 @@ namespace APP_ALAINID
         {
             string nombre = registro_nombre.Text + " " + registro_apellido.Text;
             User user = new User(nombre, registro_nombre_usuario.Text, registro_correo.Text, registro_contraseña.Text);
+           
+            foreach (User user1 in ALAINID.listausuarios)
+            {
+                if (user.Nombreusuario == user1.Nombreusuario)
+                {
+                    Usuario_ya_Existe usuario_Ya_Existe = new Usuario_ya_Existe();
+                }
+                else if (user.Email_ == user1.Email_)
+                {
+                    correo_usadp correo_Usadp = new correo_usadp();
+                }
+
+            }
             ALAINID.Activarlista();
             ALAINID.Agregarusuarioalalista(user);
-
         }
     }
 }
