@@ -1,0 +1,29 @@
+C:\Users\rvarg\Desktop\Proyecto POO\proyecto-grupo-9-alainid\Proyecto\Proyecto\bin\Debug\netcoreapp3.1\Proyecto.exe
+C:\Users\rvarg\Desktop\Proyecto POO\proyecto-grupo-9-alainid\Proyecto\Proyecto\bin\Debug\netcoreapp3.1\Proyecto.deps.json
+C:\Users\rvarg\Desktop\Proyecto POO\proyecto-grupo-9-alainid\Proyecto\Proyecto\bin\Debug\netcoreapp3.1\Proyecto.runtimeconfig.json
+C:\Users\rvarg\Desktop\Proyecto POO\proyecto-grupo-9-alainid\Proyecto\Proyecto\bin\Debug\netcoreapp3.1\Proyecto.runtimeconfig.dev.json
+C:\Users\rvarg\Desktop\Proyecto POO\proyecto-grupo-9-alainid\Proyecto\Proyecto\bin\Debug\netcoreapp3.1\Proyecto.dll
+C:\Users\rvarg\Desktop\Proyecto POO\proyecto-grupo-9-alainid\Proyecto\Proyecto\bin\Debug\netcoreapp3.1\Proyecto.pdb
+C:\Users\rvarg\Desktop\Proyecto POO\proyecto-grupo-9-alainid\Proyecto\Proyecto\obj\Debug\netcoreapp3.1\Proyecto.csprojAssemblyReference.cache
+C:\Users\rvarg\Desktop\Proyecto POO\proyecto-grupo-9-alainid\Proyecto\Proyecto\obj\Debug\netcoreapp3.1\Proyecto.csproj.CoreCompileInputs.cache
+C:\Users\rvarg\Desktop\Proyecto POO\proyecto-grupo-9-alainid\Proyecto\Proyecto\obj\Debug\netcoreapp3.1\Proyecto.AssemblyInfoInputs.cache
+C:\Users\rvarg\Desktop\Proyecto POO\proyecto-grupo-9-alainid\Proyecto\Proyecto\obj\Debug\netcoreapp3.1\Proyecto.AssemblyInfo.cs
+C:\Users\rvarg\Desktop\Proyecto POO\proyecto-grupo-9-alainid\Proyecto\Proyecto\obj\Debug\netcoreapp3.1\Proyecto.dll
+C:\Users\rvarg\Desktop\Proyecto POO\proyecto-grupo-9-alainid\Proyecto\Proyecto\obj\Debug\netcoreapp3.1\Proyecto.pdb
+C:\Users\rvarg\Desktop\Proyecto POO\proyecto-grupo-9-alainid\Proyecto\Proyecto\obj\Debug\netcoreapp3.1\Proyecto.genruntimeconfig.cache
+C:\Users\User\Desktop\pollo\ICC3101-202010\proyecto-grupo-9-alainid\Proyecto\Proyecto\obj\Debug\netcoreapp3.1\Proyecto.csprojAssemblyReference.cache
+C:\Users\User\Desktop\pollo\ICC3101-202010\proyecto-grupo-9-alainid\Proyecto\Proyecto\obj\Debug\netcoreapp3.1\Proyecto.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\pollo\ICC3101-202010\proyecto-grupo-9-alainid\Proyecto\Proyecto\obj\Debug\netcoreapp3.1\Proyecto.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\pollo\ICC3101-202010\proyecto-grupo-9-alainid\Proyecto\Proyecto\obj\Debug\netcoreapp3.1\Proyecto.AssemblyInfo.cs
+C:\Users\User\Desktop\pollo\ICC3101-202010\proyecto-grupo-9-alainid\Proyecto\Proyecto\obj\Debug\netcoreapp3.1\Proyecto.dll
+C:\Users\User\Desktop\pollo\ICC3101-202010\proyecto-grupo-9-alainid\Proyecto\Proyecto\obj\Debug\netcoreapp3.1\Proyecto.pdb
+C:\Users\User\Desktop\pollo\ICC3101-202010\proyecto-grupo-9-alainid\Proyecto\Proyecto\bin\Debug\netcoreapp3.1\Proyecto.exe
+C:\Users\User\Desktop\pollo\ICC3101-202010\proyecto-grupo-9-alainid\Proyecto\Proyecto\bin\Debug\netcoreapp3.1\Proyecto.deps.json
+C:\Users\User\Desktop\pollo\ICC3101-202010\proyecto-grupo-9-alainid\Proyecto\Proyecto\bin\Debug\netcoreapp3.1\Proyecto.runtimeconfig.json
+C:\Users\User\Desktop\pollo\ICC3101-202010\proyecto-grupo-9-alainid\Proyecto\Proyecto\bin\Debug\netcoreapp3.1\Proyecto.runtimeconfig.dev.json
+C:\Users\User\Desktop\pollo\ICC3101-202010\proyecto-grupo-9-alainid\Proyecto\Proyecto\bin\Debug\netcoreapp3.1\Proyecto.dll
+C:\Users\User\Desktop\pollo\ICC3101-202010\proyecto-grupo-9-alainid\Proyecto\Proyecto\bin\Debug\netcoreapp3.1\Proyecto.pdb
+C:\Users\User\Desktop\pollo\ICC3101-202010\proyecto-grupo-9-alainid\Proyecto\Proyecto\obj\Debug\netcoreapp3.1\Proyecto.genruntimeconfig.cache
+C:\Users\rvarg\Desktop\Proyecto POO\proyecto-grupo-9-alainid\Proyecto\Proyecto\bin\Debug\netcoreapp3.1\Interop.WMPLib.dll
+C:\Users\rvarg\Desktop\Proyecto POO\proyecto-grupo-9-alainid\Proyecto\Proyecto\obj\Debug\netcoreapp3.1\Interop.WMPLib.dll
+C:\Users\rvarg\Desktop\Proyecto POO\proyecto-grupo-9-alainid\Proyecto\Proyecto\obj\Debug\netcoreapp3.1\Proyecto.csproj.ResolveComReference.cache
