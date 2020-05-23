@@ -7,9 +7,12 @@ namespace Proyecto
     [Serializable]
     public class PlaylistVideo
     {
-          
-        public string NombrePlaylist;
-        public List<Video> listplayvideo = new List<Video>();
+
+        private string nombrePlaylist;
+        private List<Video> listplayvideo = new List<Video>();
+
+        public string NombrePlaylist { get => nombrePlaylist; set => nombrePlaylist = value; }
+        public List<Video> Listplayvideo { get => listplayvideo; set => listplayvideo = value; }
 
         public PlaylistVideo(string _nombreplv)
         {
@@ -17,12 +20,12 @@ namespace Proyecto
         }
         public void Agregar_video(Video video)
         {
-            listplayvideo.Add(video);
+            Listplayvideo.Add(video);
         }
         public string InformationPLL()
         {
             string stringaux1 = " ";
-            if (listplayvideo.Count == 0)
+            if (Listplayvideo.Count == 0)
             {
                 return "No hay videos en la playlist";
 
@@ -30,11 +33,11 @@ namespace Proyecto
 
             else
             {
-                for (int i = 0; i < listplayvideo.Count; i++)
+                for (int i = 0; i < Listplayvideo.Count; i++)
                 {
                     stringaux1 += "Video" + " " + (i + 1) + "\n";
                     stringaux1 += "============ \n";
-                    stringaux1 += listplayvideo[i].Ver_informacion() + "\n";
+                    stringaux1 += Listplayvideo[i].Ver_informacion() + "\n";
 
                     stringaux1 += " ";
 

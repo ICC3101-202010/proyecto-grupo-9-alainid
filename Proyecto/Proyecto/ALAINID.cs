@@ -12,7 +12,6 @@ namespace Proyecto
 {
     public static class ALAINID
     {
-
         public static List<User> listausuarios = new List<User>();       // TODOS LOS USUARIOS DE ALAINID
         public static List<Song> todas_las_canciones = new List<Song>();        // TODAS LAS CANCIONES EN ALAINID
         public static List<Video> todos_los_videos = new List<Video>();
@@ -41,7 +40,11 @@ namespace Proyecto
         public static List<string> anios = new List<string>();
         public static List<string> sexo = new List<string>();
         public static List<string> edades = new List<string>();
-        public static List<Song> lista_filtrada_final = new List<Song>();        //    
+        public static List<Song> lista_filtrada_final = new List<Song>();
+        public static List<String> lista_disqueravideo = new List<String>();
+
+        
+        //    
 
         //===============================================TODO LO QUE ES SERIALIZATION================================================================
         //===============================================TODO LO QUE ES SERIALIZATION================================================================
@@ -185,7 +188,7 @@ namespace Proyecto
         public static void AlmacenarVideos(List<Video> u)      //Serializamos
         {
             IFormatter formatter5 = new BinaryFormatter();
-            Stream stream5 = new FileStream("Videos.bin", FileMode.OpenOrCreate, FileAccess.Write, FileShare.None);
+            Stream stream5 = new FileStream("Videos.bin", FileMode.Create, FileAccess.Write, FileShare.None);
             formatter5.Serialize(stream5, u);
             stream5.Close();
         }
@@ -267,6 +270,7 @@ namespace Proyecto
                 Console.WriteLine(Convert.ToString(i) + ". " + option);
                 i += 1;
             }
+            
             return options[Convert.ToInt16(Console.ReadLine())];
         }
 
@@ -365,8 +369,8 @@ namespace Proyecto
                         {
                             if (listausuarios[j].Lista_playlistusuario_[i].NombrePlaylist == nombreply)
                             {
-                                listafiltrada2 = listausuarios[j].Lista_playlistusuario_[i].listplay;
-                                if (listausuarios[j].Lista_playlistusuario_[i].listplay.Count > 0)
+                                listafiltrada2 = listausuarios[j].Lista_playlistusuario_[i].Listplay;
+                                if (listausuarios[j].Lista_playlistusuario_[i].Listplay.Count > 0)
                                 {
                                     cachativa = "si";
                                 }
@@ -391,8 +395,8 @@ namespace Proyecto
                         {
                             if (listausuarios[j].Lista_playlistvideousuario_[i].NombrePlaylist == nombreply)
                             {
-                                listafiltrada3 = listausuarios[j].Lista_playlistvideousuario_[i].listplayvideo;
-                                if (listausuarios[j].Lista_playlistvideousuario_[i].listplayvideo.Count > 0)
+                                listafiltrada3 = listausuarios[j].Lista_playlistvideousuario_[i].Listplayvideo;
+                                if (listausuarios[j].Lista_playlistvideousuario_[i].Listplayvideo.Count > 0)
                                 {
                                     cachativa = "si";
                                 }
@@ -622,7 +626,7 @@ namespace Proyecto
                 {
                     if (listausuarios[j].Lista_playlistusuario_.Count > int.Parse(posicion) - 1)
                     {
-                        listausuarios[j].Lista_playlistusuario_[int.Parse(posicion) - 1].listplay.Add(cancion);
+                        listausuarios[j].Lista_playlistusuario_[int.Parse(posicion) - 1].Listplay.Add(cancion);
                         Almacenar(listausuarios);
                         funko = "si";
                     }
@@ -645,7 +649,7 @@ namespace Proyecto
                 {
                     if (listausuarios[j].Lista_playlistvideousuario_.Count > int.Parse(posicion) - 1)
                     {
-                        listausuarios[j].Lista_playlistvideousuario_[int.Parse(posicion) - 1].listplayvideo.Add(video);
+                        listausuarios[j].Lista_playlistvideousuario_[int.Parse(posicion) - 1].Listplayvideo.Add(video);
                         Almacenar(listausuarios);
                         funko = "si";
                     }
@@ -716,7 +720,7 @@ namespace Proyecto
                         {
                             if (listausuarios[j].Lista_playlistusuario_[i].NombrePlaylist == nombreply)
                             {
-                                info = listausuarios[j].Lista_playlistusuario_[i].listplay[posicion - 1].Nombrearchivo;
+                                info = listausuarios[j].Lista_playlistusuario_[i].Listplay[posicion - 1].Nombrearchivo;
                             }
                         }
                     }
@@ -797,7 +801,7 @@ namespace Proyecto
                         {
                             if (listausuarios[j].Lista_playlistvideousuario_[i].NombrePlaylist == nombreply)
                             {
-                                info = listausuarios[j].Lista_playlistvideousuario_[i].listplayvideo[posicion - 1].Nombrearchivovideo;
+                                info = listausuarios[j].Lista_playlistvideousuario_[i].Listplayvideo[posicion - 1].Nombrearchivovideo;
                             }
                         }
                     }
@@ -1077,7 +1081,7 @@ namespace Proyecto
             List<string> nombr = new List<string>();
             foreach (Artista cantante in lista_cantantes)
             {
-                nombr.Add(cantante.name);
+                nombr.Add(cantante.Name);
             }
             return nombr;
         }
@@ -1105,7 +1109,7 @@ namespace Proyecto
             List<string> nombrc = new List<string>();
             foreach (Artista compositor in lista_compositores)
             {
-                nombrc.Add(compositor.name);
+                nombrc.Add(compositor.Name);
             }
             return nombrc;
         }
@@ -1115,7 +1119,7 @@ namespace Proyecto
             List<string> nom_dir = new List<string>();
             foreach (Artista director in lista_directores)
             {
-                nom_dir.Add(director.name);
+                nom_dir.Add(director.Name);
             }
             return nom_dir;
         }
@@ -1125,7 +1129,7 @@ namespace Proyecto
             List<string> nom_act = new List<string>();
             foreach (Artista actor in lista_actores)
             {
-                nom_act.Add(actor.name);
+                nom_act.Add(actor.Name);
             }
             return nom_act;
         }
@@ -1135,28 +1139,28 @@ namespace Proyecto
             List<Artista> per_jov = new List<Artista>();
             foreach (Artista actor in lista_actores)
             {
-                if (actor.age < 25)
+                if (actor.Age < 25)
                 {
                     per_jov.Add(actor);
                 }
             }
             foreach (Artista director in lista_directores)
             {
-                if (director.age < 25)
+                if (director.Age < 25)
                 {
                     per_jov.Add(director);
                 }
             }
             foreach (Artista cantante in lista_cantantes)
             {
-                if (cantante.age < 25)
+                if (cantante.Age < 25)
                 {
                     per_jov.Add(cantante);
                 }
             }
             foreach (Artista compositor in lista_compositores)
             {
-                if (compositor.age < 25)
+                if (compositor.Age < 25)
                 {
                     per_jov.Add(compositor);
                 }
@@ -1169,28 +1173,28 @@ namespace Proyecto
             List<Artista> per_jov = new List<Artista>();
             foreach (Artista actor in lista_actores)
             {
-                if (actor.age >= 25 && actor.age < 40)
+                if (actor.Age >= 25 && actor.Age < 40)
                 {
                     per_jov.Add(actor);
                 }
             }
             foreach (Artista director in lista_directores)
             {
-                if (director.age >= 25 && director.age < 40)
+                if (director.Age >= 25 && director.Age < 40)
                 {
                     per_jov.Add(director);
                 }
             }
             foreach (Artista cantante in lista_cantantes)
             {
-                if (cantante.age >= 25 && cantante.age < 40)
+                if (cantante.Age >= 25 && cantante.Age < 40)
                 {
                     per_jov.Add(cantante);
                 }
             }
             foreach (Artista compositor in lista_compositores)
             {
-                if (compositor.age >= 25 && compositor.age < 40)
+                if (compositor.Age >= 25 && compositor.Age < 40)
                 {
                     per_jov.Add(compositor);
                 }
@@ -1203,28 +1207,28 @@ namespace Proyecto
             List<Artista> per_jov = new List<Artista>();
             foreach (Artista actor in lista_actores)
             {
-                if (actor.age >= 40 && actor.age < 60)
+                if (actor.Age >= 40 && actor.Age < 60)
                 {
                     per_jov.Add(actor);
                 }
             }
             foreach (Artista director in lista_directores)
             {
-                if (director.age >= 40 && director.age < 60)
+                if (director.Age >= 40 && director.Age < 60)
                 {
                     per_jov.Add(director);
                 }
             }
             foreach (Artista cantante in lista_cantantes)
             {
-                if (cantante.age >= 40 && cantante.age < 60)
+                if (cantante.Age >= 40 && cantante.Age < 60)
                 {
                     per_jov.Add(cantante);
                 }
             }
             foreach (Artista compositor in lista_compositores)
             {
-                if (compositor.age >= 40 && compositor.age < 60)
+                if (compositor.Age >= 40 && compositor.Age < 60)
                 {
                     per_jov.Add(compositor);
                 }
@@ -1237,28 +1241,28 @@ namespace Proyecto
             List<Artista> per_jov = new List<Artista>();
             foreach (Artista actor in lista_actores)
             {
-                if (actor.age >= 60)
+                if (actor.Age >= 60)
                 {
                     per_jov.Add(actor);
                 }
             }
             foreach (Artista director in lista_directores)
             {
-                if (director.age >= 60)
+                if (director.Age >= 60)
                 {
                     per_jov.Add(director);
                 }
             }
             foreach (Artista cantante in lista_cantantes)
             {
-                if (cantante.age >= 60)
+                if (cantante.Age >= 60)
                 {
                     per_jov.Add(cantante);
                 }
             }
             foreach (Artista compositor in lista_compositores)
             {
-                if (compositor.age >= 60)
+                if (compositor.Age >= 60)
                 {
                     per_jov.Add(compositor);
                 }
@@ -1271,21 +1275,21 @@ namespace Proyecto
             List<Artista> per_jov = new List<Artista>();
             foreach (Artista actor in lista_actores)
             {
-                if (actor.sexo == _valor)
+                if (actor.Sexo == _valor)
                 {
                     per_jov.Add(actor);
                 }
             }
             foreach (Artista director in lista_directores)
             {
-                if (director.sexo == _valor)
+                if (director.Sexo == _valor)
                 {
                     per_jov.Add(director);
                 }
             }
             foreach (Artista cantante in lista_cantantes)
             {
-                if (cantante.sexo == _valor)
+                if (cantante.Sexo == _valor)
                 {
                     per_jov.Add(cantante);
                 }
@@ -1471,7 +1475,7 @@ namespace Proyecto
 
             foreach (Artista can in interna33)
             {
-                if (can.sexo == _valor)
+                if (can.Sexo == _valor)
                 {
                     foreach (Song canc in interna3)
                     {
@@ -1507,7 +1511,7 @@ namespace Proyecto
                 case "Menores de 25 años":
                     foreach (Artista can in interna44)
                     {
-                        if (can.age <= 25)
+                        if (can.Age <= 25)
                         {
                             foreach (Song canc in interna4)
                             {
@@ -1525,7 +1529,7 @@ namespace Proyecto
                 case "De 25 a 40 años":
                     foreach (Artista can in interna44)
                     {
-                        if (can.age > 25 && can.age <= 40)
+                        if (can.Age > 25 && can.Age <= 40)
                         {
                             foreach (Song canc in interna4)
                             {
@@ -1542,7 +1546,7 @@ namespace Proyecto
                 case "De 40 a 60 años":
                     foreach (Artista can in interna44)
                     {
-                        if (can.age > 40 && can.age <= 60)
+                        if (can.Age > 40 && can.Age <= 60)
                         {
                             foreach (Song canc in interna4)
                             {
@@ -1559,7 +1563,7 @@ namespace Proyecto
                 case "Mayores de 60":
                     foreach (Artista can in interna44)
                     {
-                        if (can.age > 60)
+                        if (can.Age > 60)
                         {
                             foreach (Song canc in interna4)
                             {
@@ -1809,7 +1813,7 @@ namespace Proyecto
 
             foreach (Artista can in interna33)
             {
-                if (can.sexo == _valor)
+                if (can.Sexo == _valor)
                 {
                     foreach (Song canc in interna3)
                     {
@@ -1844,7 +1848,7 @@ namespace Proyecto
                 case "Menores de 25 años":
                     foreach (Artista can in interna44)
                     {
-                        if (can.age <= 25)
+                        if (can.Age <= 25)
                         {
                             foreach (Song canc in interna4)
                             {
@@ -1861,7 +1865,7 @@ namespace Proyecto
                 case "De 25 a 40 años":
                     foreach (Artista can in interna44)
                     {
-                        if (can.age > 25 && can.age <= 40)
+                        if (can.Age > 25 && can.Age <= 40)
                         {
                             foreach (Song canc in interna4)
                             {
@@ -1877,7 +1881,7 @@ namespace Proyecto
                 case "De 40 a 60 años":
                     foreach (Artista can in interna44)
                     {
-                        if (can.age > 40 && can.age <= 60)
+                        if (can.Age > 40 && can.Age <= 60)
                         {
                             foreach (Song canc in interna4)
                             {
@@ -1893,7 +1897,7 @@ namespace Proyecto
                 case "Mayores de 60":
                     foreach (Artista can in interna44)
                     {
-                        if (can.age > 60)
+                        if (can.Age > 60)
                         {
                             foreach (Song canc in interna4)
                             {
@@ -2104,9 +2108,9 @@ namespace Proyecto
                 case "Cantante":
                     foreach (Artista art in lista_cantantes)
                     {
-                        if (art.name == _valor)
+                        if (art.Name == _valor)
                         {
-                            foreach (Song can in art.lista_canciones)
+                            foreach (Song can in art.Lista_canciones)
                             {
                                 listafiltrada.Add(can);
                             }
@@ -2151,9 +2155,9 @@ namespace Proyecto
                 case "Compositor":
                     foreach (Artista art in lista_compositores)
                     {
-                        if (art.name == _valor)
+                        if (art.Name == _valor)
                         {
-                            foreach (Song can in art.lista_canciones)
+                            foreach (Song can in art.Lista_canciones)
                             {
                                 listafiltrada.Add(can);
                             }
@@ -2172,7 +2176,7 @@ namespace Proyecto
                 case "Sexo del Artista":
                     foreach (Artista can in lista_cantantes)
                     {
-                        if (can.sexo == _valor)
+                        if (can.Sexo == _valor)
                         {
                             foreach (Song canc in todas_las_canciones)
                             {
@@ -2190,7 +2194,7 @@ namespace Proyecto
                         case "Menores de 25 años":
                             foreach (Artista can in lista_cantantes)
                             {
-                                if (can.age <= 25)
+                                if (can.Age <= 25)
                                 {
                                     foreach (Song canc in todas_las_canciones)
                                     {
@@ -2206,7 +2210,7 @@ namespace Proyecto
                         case "De 25 a 40 años":
                             foreach (Artista can in lista_cantantes)
                             {
-                                if (can.age > 25 && can.age <= 40)
+                                if (can.Age > 25 && can.Age <= 40)
                                 {
                                     foreach (Song canc in todas_las_canciones)
                                     {
@@ -2221,7 +2225,7 @@ namespace Proyecto
                         case "De 40 a 60 años":
                             foreach (Artista can in lista_cantantes)
                             {
-                                if (can.age > 40 && can.age <= 60)
+                                if (can.Age > 40 && can.Age <= 60)
                                 {
                                     foreach (Song canc in todas_las_canciones)
                                     {
@@ -2236,7 +2240,7 @@ namespace Proyecto
                         case "Mayores de 60":
                             foreach (Artista can in lista_cantantes)
                             {
-                                if (can.age > 60)
+                                if (can.Age > 60)
                                 {
                                     foreach (Song canc in todas_las_canciones)
                                     {
@@ -2506,7 +2510,7 @@ namespace Proyecto
             int h = 0, n2;
             foreach (Artista art in lista_cantantes)
             {
-                if (art.name == cantante)
+                if (art.Name == cantante)
                 {
                     h = 1;
                     return true;
@@ -2569,7 +2573,7 @@ namespace Proyecto
             int h = 0, n2;
             foreach (Artista comp in lista_compositores)
             {
-                if (comp.name == compositor)
+                if (comp.Name == compositor)
                 {
                     h = 1;
                     return true;
@@ -2632,7 +2636,7 @@ namespace Proyecto
             int h = 0, n2;
             foreach (Artista dire in lista_directores)
             {
-                if (dire.name == director)
+                if (dire.Name == director)
                 {
                     h = 1;
                     return true;
@@ -2695,7 +2699,7 @@ namespace Proyecto
             int h = 0, n2;
             foreach (Artista ac in lista_actores)
             {
-                if (ac.name == actor)
+                if (ac.Name == actor)
                 {
                     h = 1;
                     return true;
@@ -2734,9 +2738,9 @@ namespace Proyecto
             int h = 0, n2;
             foreach (Artista cantante in lista_cantantes)
             {
-                if (cantante.name == nombre_cantante)
+                if (cantante.Name == nombre_cantante)
                 {
-                    foreach (PlaylistSong album in cantante.lista_album)
+                    foreach (PlaylistSong album in cantante.Lista_album)
                     {
                         if (album.NombrePlaylist == nombre_album)
                         {
@@ -2868,7 +2872,7 @@ namespace Proyecto
             {
                 if (todas_las_cancioneskaraoke[i].Nombrecancion == nombrecancion)
                 {
-                    todas_las_cancioneskaraoke[i].Reproducciones += 1;
+                    todas_las_cancioneskaraoke[i].Reproducciones += 0;
                     AlmacenarCanciones(todas_las_cancioneskaraoke);
                     return true;
                 }
@@ -2882,7 +2886,7 @@ namespace Proyecto
             {
                 if (todos_los_videos[i].Nombre_video == nombrevideo)
                 {
-                    todos_los_videos[i].Reproduccion += 1;
+                    todos_los_videos[i].Reproduccion += 0;
                     AlmacenarVideos(todos_los_videos);
                     return true;
                 }
@@ -2902,7 +2906,7 @@ namespace Proyecto
                         {
                             if (listausuarios[j].Lista_playlistusuario_[i].NombrePlaylist == nombreply)
                             {
-                                info = listausuarios[j].Lista_playlistusuario_[i].listplay[posicion - 1].Nombrecancion;
+                                info = listausuarios[j].Lista_playlistusuario_[i].Listplay[posicion - 1].Nombrecancion;
                             }
                         }
                     }
@@ -3066,7 +3070,7 @@ namespace Proyecto
                         {
                             if (listausuarios[j].Lista_playlistvideousuario_[i].NombrePlaylist == nombreply)
                             {
-                                info = listausuarios[j].Lista_playlistvideousuario_[i].listplayvideo[posicion - 1].Nombre_video;
+                                info = listausuarios[j].Lista_playlistvideousuario_[i].Listplayvideo[posicion - 1].Nombre_video;
                             }
                         }
                     }
@@ -3090,7 +3094,7 @@ namespace Proyecto
                         {
                             if (listausuarios[j].Lista_playlistusuario_[i].NombrePlaylist == nombreply)
                             {
-                                info = listausuarios[j].Lista_playlistusuario_[i].listplay[posicion - 1].Reproducciones;
+                                info = listausuarios[j].Lista_playlistusuario_[i].Listplay[posicion - 1].Reproducciones;
                                 ;
                             }
                         }
@@ -3155,7 +3159,7 @@ namespace Proyecto
             {
                 if (todas_las_canciones[i].Nombrecancion == nombrecancion)
                 {
-                    todas_las_canciones[i].Reproducciones += 1;
+                    todas_las_canciones[i].Reproducciones += 0;
                     AlmacenarCanciones(todas_las_canciones);
                     return true;
                 }
@@ -3295,7 +3299,7 @@ namespace Proyecto
                         {
                             if (listausuarios[j].Lista_playlistvideousuario[i].NombrePlaylist == nombreply)
                             {
-                                info = listausuarios[j].Lista_playlistvideousuario[i].listplayvideo[posicion - 1].reproducciones;
+                                info = listausuarios[j].Lista_playlistvideousuario[i].Listplayvideo[posicion - 1].reproducciones;
                                 ;
                             }
                         }
@@ -3525,7 +3529,7 @@ namespace Proyecto
                 {
                     if (c == s.Cantante)
                     {
-                        if (listausuarios[i].Valorcriterio_ == c.name)
+                        if (listausuarios[i].Valorcriterio_ == c.Name)
                         {
                             listausuarios[i].Lista_inteligente.Add(s);
 
@@ -3542,7 +3546,7 @@ namespace Proyecto
                 {
                     if (c == s.Compositor)
                     {
-                        if (listausuarios[i].Valorcriterio_ == c.name)
+                        if (listausuarios[i].Valorcriterio_ == c.Name)
                         {
                             listausuarios[i].Lista_inteligente.Add(s);
                             Almacenar(listausuarios);
@@ -3760,9 +3764,9 @@ namespace Proyecto
             string _valor = ShowOptions(Lista_nombres_actores());
             foreach (Artista art in lista_actores)
             {
-                if (art.name == _valor)
+                if (art.Name == _valor)
                 {
-                    foreach (Video can in art.lista_peliculas)
+                    foreach (Video can in art.Lista_peliculas)
                     {
                         listafiltradav.Add(can);
                     }
@@ -3776,9 +3780,9 @@ namespace Proyecto
             string _valor = ShowOptions(Lista_nombres_diectores());
             foreach (Artista art in lista_directores)
             {
-                if (art.name == _valor)
+                if (art.Name == _valor)
                 {
-                    foreach (Video can in art.lista_peliculas)
+                    foreach (Video can in art.Lista_peliculas)
                     {
                         listafiltradav.Add(can);
                     }
@@ -3868,7 +3872,7 @@ namespace Proyecto
                 case "Año Publicacion":
                     lista_filtrandov = Videosporaniopublicacion();
 
-                    break; 
+                    break;
                 case "Calidad/Resolucion":
                     lista_filtrandov = Videosporcalidadvideo();
 

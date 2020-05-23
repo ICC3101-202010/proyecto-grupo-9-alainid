@@ -10,15 +10,23 @@ namespace Proyecto
     [Serializable]
     public class Artista
     {
-        public string name;
-        public int age;
-        public string nacionality;
-        public string sexo;
-        public bool seguir = false;
-        public List<PlaylistSong> lista_album = new List<PlaylistSong>();
-        public List<Video> lista_peliculas = new List<Video>();
-        public List<Song> lista_canciones = new List<Song>();
+        private string name;
+        private int age;
+        private string nacionality;
+        private string sexo;
+        private bool seguir = false;
+        private List<PlaylistSong> lista_album = new List<PlaylistSong>();
+        private List<Video> lista_peliculas = new List<Video>();
+        private List<Song> lista_canciones = new List<Song>();
 
+        public string Name { get => name; set => name = value; }
+        public int Age { get => age; set => age = value; }
+        public string Nacionality { get => nacionality; set => nacionality = value; }
+        public string Sexo { get => sexo; set => sexo = value; }
+        public bool Seguir { get => seguir; set => seguir = value; }
+        public List<PlaylistSong> Lista_album { get => lista_album; set => lista_album = value; }
+        public List<Video> Lista_peliculas { get => lista_peliculas; set => lista_peliculas = value; }
+        public List<Song> Lista_canciones { get => lista_canciones; set => lista_canciones = value; }
 
         public Artista(string name, int age, string sexo, string nacionality)
         {
@@ -31,15 +39,15 @@ namespace Proyecto
         {
             string informacion = ("- Nombre: " + name + "\n" + "- Edad: " + age.ToString() + "\n" + "- Nacionalidad: " + nacionality + "\n" + "- Sexo: " + sexo + "\n");
             informacion += "Albums:\n";
-            foreach (PlaylistSong alb in lista_album)
+            foreach (PlaylistSong alb in Lista_album)
             {
                 informacion += "-" + alb.NombrePlaylist + "\n";
             }
-            foreach (Video v in lista_peliculas)
+            foreach (Video v in Lista_peliculas)
             {
                 informacion += "-" + v.Nombre_video + "\n";
             }
-            foreach (Song s in lista_canciones)
+            foreach (Song s in Lista_canciones)
             {
                 informacion += "-" + s.Nombrecancion + "\n";
             }

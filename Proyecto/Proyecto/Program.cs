@@ -45,8 +45,11 @@ namespace Proyecto
             ALAINID.lista_criterios_filtro.Add("Calidad/Resolucion"); ALAINID.lista_criterios_filtro.Add("Evaluacion");
 
             ALAINID.lista_criterios_usuarios.Add("Nombre"); ALAINID.lista_criterios_usuarios.Add("Email"); ALAINID.lista_criterios_usuarios.Add("Id");
-            ALAINID.lista_disquera.Add("Sony Music"); ALAINID.lista_disquera.Add(" Universal Music"); ALAINID.lista_disquera.Add(" Warner Music "); ALAINID.lista_disquera.Add(" Warner Music "); ALAINID.lista_disquera.Add("YG Entertainment");
+            ALAINID.lista_disquera.Add("Sony Music"); ALAINID.lista_disquera.Add(" Universal Music"); ALAINID.lista_disquera.Add(" Warner Music "); 
             ALAINID.lista_disquera.Add("YG Entertainment"); ALAINID.lista_disquera.Add("SM Entretainment");
+
+            ALAINID.lista_disqueravideo.Add("Sony Pictures"); ALAINID.lista_disqueravideo.Add(" Universal Studio Pictures"); ALAINID.lista_disqueravideo.Add(" Warner Bos Pictures ");
+            ALAINID.lista_disqueravideo.Add("YG Entertainment Pictures"); ALAINID.lista_disqueravideo.Add("SM Entretainment Pictures");
 
             ALAINID.sexo.Add("Masculino"); ALAINID.sexo.Add("Femenino");
 

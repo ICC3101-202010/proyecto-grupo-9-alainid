@@ -36,10 +36,7 @@ namespace Proyecto
                         string nombre = "";
                         string email = "";
                         string password = "";
-                        string ultimareproduccion = "";
-                        string premium = "no premium";
-                        string perfilpublico = "publico";
-                        string valorcriterio = "";
+
                         Console.WriteLine("Ingrese su nombre de usuario");
                         idusuario = Console.ReadLine();
                         Console.WriteLine("Ingrese su email");
@@ -48,7 +45,7 @@ namespace Proyecto
                         password = Console.ReadLine();
                         Console.WriteLine("Ingrese su nombre completo");
                         nombre = Console.ReadLine();
-                        User u1 = new User(nombre, idusuario, email, password, ultimareproduccion, perfilpublico, premium, valorcriterio);
+                        User u1 = new User(nombre, idusuario, email, password);
                         ALAINID.Activarlista();
                         ALAINID.Agregarusuarioalalista(u1);
                         break;
@@ -2871,10 +2868,10 @@ namespace Proyecto
                                     if (ver1 && ver2 && ver3)
                                     {
 
-                                        ALAINID.Activarlistacanciones();
-                                        ALAINID.Activarlistacantantes();
-                                        ALAINID.Partirlistacompositores();
-                                        ALAINID.Partirlistaalbumes();
+                                        //ALAINID.Activarlistacanciones();
+                                        //ALAINID.Activarlistacantantes();
+                                        //ALAINID.Partirlistacompositores();
+                                        //ALAINID.Partirlistaalbumes();
                                         a.AgregarSong(nombrecan, cantante, genero, compositor, anopublicacion, disquera, album, duracion, tipoarchivo, tamano, calidad, nombrearchivo, reproducciones, letra);
                                         
                                     }
@@ -2942,22 +2939,22 @@ namespace Proyecto
                                     Console.WriteLine("Ingrese duracion del video:");
                                     duracion2 = float.Parse(Console.ReadLine());
                                     Console.WriteLine("Ingrese genero del video:");
-                                    genero2 = ALAINID.ShowOptions(ALAINID.lista_calidad_pelicula);      // -------------------37
+                                    genero2 = ALAINID.ShowOptions(ALAINID.lista_generos_peliculas);      // -------------------37
                                     Console.WriteLine("Ingrese la categoria del video");
                                     categoria = ALAINID.ShowOptions(ALAINID.lista_categoria);      // -------------------37
                                     Console.WriteLine("Ingrese el director del video:");
                                     director = Console.ReadLine();
                                     Console.WriteLine("Ingrese el Film Studio del video:");
-                                    film_studio = Console.ReadLine();
+                                    film_studio = ALAINID.ShowOptions(ALAINID.lista_disquera);
                                     Console.WriteLine("Ingrese año de la publicación del video");
                                     anio_publicacion = Console.ReadLine();
-                                    Console.WriteLine("Ingrese la ubicacion exacta del archivo  (EJEMPLO = Videos/nombrearchivo.mp4");
-                                    nombrearchivovideo = Console.ReadLine();
                                     Console.WriteLine("Ingrese el tipo de archivo del video");
-                                    tipo_archivo = Console.ReadLine();
-                                   
+                                    tipo_archivo = ALAINID.ShowOptions(ALAINID.lista_tipoarchivo_pelicula);
                                     Console.WriteLine("Ingrese la calidad del archivo de video");
-                                    calidad2 = ALAINID.ShowOptions(ALAINID.lista_tipoarchivo_pelicula);      // -------------------37
+                                    calidad2 = ALAINID.ShowOptions(ALAINID.lista_calidad_pelicula);
+                                    Console.WriteLine("Ingrese el nombre EXACTO del archivo  ");
+                                    nombrearchivovideo = Console.ReadLine();
+                                    string nombrearchivovideo2 = "Videos/" + nombrearchivovideo + "." + ALAINID.Todo_a_minuscula(tipo_archivo);
                                     Console.Clear();
                                     ver4 = ALAINID.Verificar_existencia_director(director);
                                     if (ver4)
@@ -2965,7 +2962,7 @@ namespace Proyecto
                                         ALAINID.Activarlistavideos();
                                         ALAINID.Partirlistadirectores();
                                         ALAINID.Partirlistaactores();
-                                        a.Subir_video(nombre_video, duracion2, categoria, director, genero2, anio_publicacion, tipo_archivo, calidad2, film_studio, tamanio, nombrearchivovideo, reproduccion);
+                                        a.Subir_video(nombre_video, duracion2, categoria, director, genero2, anio_publicacion, tipo_archivo, calidad2, film_studio, tamanio, nombrearchivovideo2, reproduccion);
                                     }
                                     else
                                     {

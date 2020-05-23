@@ -34,7 +34,7 @@ namespace Proyecto
             {
                 if (art == cantante)
                 {
-                    art.lista_canciones.Add(s);
+                    art.Lista_canciones.Add(s);
                     ALAINID.AlmacenarCantante(ALAINID.lista_cantantes);
                     break;
                 }
@@ -43,13 +43,12 @@ namespace Proyecto
             {
                 if (art == cantante)
                 {
-                    foreach (PlaylistSong alb in art.lista_album)
+                    foreach (PlaylistSong alb in art.Lista_album)
                     {
                         if (alb.NombrePlaylist == album)
                         {
-                            alb.listplay.Add(s);
+                            alb.Listplay.Add(s);
                             ALAINID.AlmacenarAlbum(ALAINID.todos_los_albumes);
-
                         }
                     }
                 }
@@ -58,7 +57,7 @@ namespace Proyecto
             {
                 if (co == compositor)
                 {
-                    co.lista_canciones.Add(s);
+                    co.Lista_canciones.Add(s);
                     ALAINID.AlmacenarCompositores(ALAINID.lista_compositores);
                     break;
                 }
@@ -77,11 +76,12 @@ namespace Proyecto
 
         public void Subir_video(string nombre_video, float duracion, string categoria, object director, string genero, string anio_publicacion, string tipo_archivo, string calidad, string film_studio, float tamanio, string nombrearchivovideo, int reproduccion1)
         {
+            Console.Clear();
             FileInfo fileInfo = new FileInfo(nombrearchivovideo);
             tamanio = (fileInfo.Length) / 1000000;
             bool ver2 = true;
             Video video1 = new Video(nombre_video, duracion, categoria, director, genero, anio_publicacion, tipo_archivo, calidad, film_studio, tamanio, nombrearchivovideo, reproduccion1);
-
+            string nombre_actor;
             foreach (Video video in ALAINID.todos_los_videos)
             {
                 if (video == video1)
@@ -95,22 +95,43 @@ namespace Proyecto
                 int n;
                 do
                 {
-                    Console.WriteLine("Ingrese el nombre del actor: ");
-                    string nombre_actor = Console.ReadLine();
-                    foreach (Artista art in ALAINID.lista_actores)
+                    
+                    if (ALAINID.lista_actores == null)
                     {
-                        if (art.name == nombre_actor)
+                        ALAINID.Crear_actor();
+                    }
+                    else
+                    {
+                        Console.WriteLine("Ingrese el nombre del actor: ");
+                        nombre_actor = Console.ReadLine();
+                        foreach (Artista art in ALAINID.lista_actores)
                         {
-                            video1.Agregar_actores(art);
-                            art.lista_peliculas.Add(video1);
-                            ALAINID.AlmacenarActores(ALAINID.lista_actores);
-                            break;
+                            if (art.Name == nombre_actor)
+                            {
+                                video1.Agregar_actores(art);
+                                art.Lista_peliculas.Add(video1);
+                                ALAINID.AlmacenarActores(ALAINID.lista_actores);
+                                break;
+                            }
                         }
-                        else
+                        Console.WriteLine("El Actor ingresado no existe");
+                        Console.WriteLine("Si desea agregar el actor ingrese 1, de lo contrario 2");
+                        string de = Console.ReadLine();
+                        if (de == "1")
                         {
-                            Console.WriteLine("El Actor ingresado no existe");
-                            break;
+                            ALAINID.Crear_actor();
                         }
+                        Console.WriteLine("Ingrese el nombre del actor que recien ingresasre: ");
+                        nombre_actor = Console.ReadLine();
+                        foreach (Artista acc in ALAINID.lista_actores)
+                        {
+                            if (acc.Name == nombre_actor)
+                            {
+                                video1.Actores.Add(acc);
+                                break;
+                            }
+                        }
+                        
                     }
                     Console.WriteLine("1-> Desea Ingresar otro actor" + " " +
                     "2-> Terminar");
@@ -120,7 +141,7 @@ namespace Proyecto
                 ALAINID.AlmacenarActores(ALAINID.lista_actores);
                 foreach (Artista dir in ALAINID.lista_directores)
                 {
-                    dir.lista_peliculas.Add(video1);
+                    dir.Lista_peliculas.Add(video1);
                     ALAINID.AlmacenarDirectores(ALAINID.lista_directores);
                 }
                 ALAINID.todos_los_videos.Add(video1);

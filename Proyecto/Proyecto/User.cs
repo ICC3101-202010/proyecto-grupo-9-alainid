@@ -12,10 +12,10 @@ namespace Proyecto
         private string email_;
         private string password_;
         private string nombre_;
-        private string premium_;
-        private string perfilpublico_;
-        private string ultimareproduccion_;
-        private string valorcriterio_;
+        private string premium_ = "no premium";
+        private string perfilpublico_ =  "publico";
+        private string ultimareproduccion_= "null";
+        private string valorcriterio_ = "null";
         private List<PlaylistSong> lista_playlistusuario_ = new List<PlaylistSong>();
         private List<PlaylistVideo> lista_playlistvideousuario_ = new List<PlaylistVideo>();
         private List<Song> favorite_songs_ = new List<Song>();        // LISTA FAVORITOS CANCIONES DE CADA USUARIO
@@ -52,16 +52,12 @@ namespace Proyecto
 
 
 
-        public User(string _nombre_, string _nomusuario_, string _email_, string _password_, string _ultimareproduccion, string _privacidad, string _premium, string valorcriterio)
+        public User(string _nombre_, string _nomusuario_, string _email_, string _password_)
         {
             this.Email_ = _email_;
             this.Nombre_ = _nombre_;
             this.Password_ = _password_;
             this.Nombreusuario = _nomusuario_;
-            this.Ultimareproduccion_ = _ultimareproduccion;
-            this.Perfipublico_ = _privacidad;
-            this.Premium_ = _premium;
-            this.Valorcriterio_ = valorcriterio;
         }
 
 
@@ -73,7 +69,7 @@ namespace Proyecto
         }
         public string InformacionUsuariopriv()
         {
-            string informacion2 = ("ID USUARIO: " + nombreUsuario + "\n" + "- Nombre: " + nombre_ + "\n" + "- Email: " + email_ + "\n" + "- Password: " + password_ + "\n" + "- Privacidad: " + perfilpublico_ + "\n" + "- Privilegio: " + Premium_);
+            string informacion2 = ("ID USUARIO: " + nombreUsuario + "\n" + "- Nombre: " + nombre_ + "\n" + "- Email: " + email_ + "\n" + "- Password: " + password_ + "\n" + "- Privacidad: " + perfilpublico_ + "\n" + "- Privilegio: " + premium_);
             return informacion2;
         }
         //public void Crear_playlist(string nombre)

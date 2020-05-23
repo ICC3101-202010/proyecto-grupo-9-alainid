@@ -9,20 +9,20 @@ namespace Proyecto
     {
         private string nombre_video;
         private float duracion;
-        private string categoria;  //tiene que estar en la lista de categorias
-        private object director; // tiene que estar en la lista de directores
-        private string genero; // tiene q estar en la lista de generos 
+        private string categoria;     //tiene que estar en la lista de categorias
+        private object director;     // tiene que estar en la lista de directores
+        private string genero;          // tiene q estar en la lista de generos 
         private string anio_publicacion;
         private string descripcion;
         private string tipo_archivo;
         private string calidad;
-        private string film_studio; // tiene que estar en la lista de estudios de pelicula
+        private string film_studio;     // tiene que estar en la lista de estudios de pelicula
         private float tamanio;
         private float calificacion_promedio;
         private string nombrearchivovideo;
         private int reproduccion;
         private List<int> todas_las_calificaciones = new List<int>();
-        private List<Artista> actores = new List<Artista>(); // ACTORES DE CADA PELICULA- VIDEO
+        private List<Artista> actores = new List<Artista>();     // ACTORES DE CADA PELICULA- VIDEO
 
         public string Nombre_video { get => nombre_video; set => nombre_video = value; }
         public float Duracion { get => duracion; set => duracion = value; }
@@ -48,7 +48,7 @@ namespace Proyecto
 
         // asumi que tanto la descripcion como la calificacion promedio, no son requisitos para subir una cancion
 
-        public Video(string nombre_video, float duracion, string categoria, object director, string genero, string anio_publicacion, string tipo_archivo, string calidad, string film_studio, float tamanio, string nombrearchivovideo,int _reproduccion)
+        public Video(string nombre_video, float duracion, string categoria, object director, string genero, string anio_publicacion, string tipo_archivo, string calidad, string film_studio, float tamanio, string nombrearchivovideo, int _reproduccion)
         {
             this.nombre_video = nombre_video;
             this.duracion = duracion;
@@ -64,32 +64,46 @@ namespace Proyecto
             this.reproduccion = _reproduccion;
         }
 
-        public void Agregar_actores(Artista actor){
-            bool ver1  = true,  ver2 = true;
-            int v = 0, n2=0;
-            ver1= ALAINID.Verificar_existencia_actor(actor.name);
-            if (ver1){
-                foreach (Artista ac in actores){
-                    if (ac == actor) { 
+        public void Agregar_actores(Artista act)
+        {
+            bool ver1 = true, ver2 = true;
+            int v = 0, n2 = 0;
+            ver1 = ALAINID.Verificar_existencia_actor(act.Name);
+            if (ver1)
+            {
+                foreach (Artista ac in Actores)
+                {
+                    if (ac == act)
+                    {
                         Console.WriteLine("El artista que intentas ingresar, ya fue ingresado");
-                        ver2  =  false;
+                        ver2 = false;
                         break;
                     }
                 }
-                if (ver2){
-                    actores.Add(actor);
+                if (ver2)
+                {
+                    Actores.Add(act);
                 }
             }
-            else {Console.WriteLine("Lo sentimos, el artista que intentas ingresar no existe en ALAINID\n,"+
-                " verifica los datos para intentar nuevamente.");
+            else
+            {
+                Console.WriteLine("Lo sentimos, el artista que intentas ingresar no existe en ALAINID\n," +
+              " verifica los datos para intentar nuevamente.");
             }
         }
+
         public string Ver_informacion()
         {
-            string info = (" Genero: " + genero + "\n" + " Director: " + director + "\n" + " Actores: " + actores + "\n" + " Nombre: " + nombre_video + "\n" +
+            string li_actores="";
+            foreach (Artista actor in Actores)
+            {
+                li_actores = li_actores + actor.Name+" , ";
+            }
+            string info = (" Genero: " + genero + "\n" + " Director: " + director + "\n" + " Actores: " + li_actores + "\n" + " Nombre: " + nombre_video + "\n" +
                 " Categoria: " + categoria + "\n" + "Año de publicacion: " + anio_publicacion + "\n" + "Descripcion: " + descripcion + "\n" + "Tipo Archivo: " + tipo_archivo + "\n" + "Tamaño Archivo: " + tamanio + "MB \n" + "Calidad: " + calidad + "\n" + "Film Studio: " + film_studio + "\n" + "Calificacion Promedio: " + calificacion_promedio + "\n" + "Duracion: " + duracion + "\n");
             return info;
         }
 
     }
 }
+

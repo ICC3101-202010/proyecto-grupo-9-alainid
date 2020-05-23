@@ -9,16 +9,15 @@ namespace Proyecto
     {
         private string nombrecancion;
         private object cantante;
-        private string genero; // este tiene q estar en la lista con los generos
+        private string genero; 
         private object compositor;
         private string anopublicacion;
         private string disquera;
         private string album;
-        private string letra;      //CAMBIE AQUI
-        //public float calificacionpersonal;
+        private string letra;      
         private float calificacionpromedio;
         private float duracion;
-        private int reproducciones;            //CAMBIE AQU
+        private int reproducciones;           
         private string tipoarchivo;
         private float tamano;
         private string calidad;
@@ -80,8 +79,6 @@ namespace Proyecto
                 "Cantidad de reproducciones:" + reproducciones + "\n" + "Letra: " + "\n" + letra);
             return info;
         }
-        //public float Calificacion()
-        //{
-        //}
+      
     }
 }

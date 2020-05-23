@@ -7,8 +7,11 @@ namespace Proyecto
     [Serializable]
     public class PlaylistSong
     {
-        public string NombrePlaylist;
-        public List<Song> listplay = new List<Song>();
+        private string nombrePlaylist;
+        private List<Song> listplay = new List<Song>();
+
+        public string NombrePlaylist { get => nombrePlaylist; set => nombrePlaylist = value; }
+        public List<Song> Listplay { get => listplay; set => listplay = value; }
 
         public PlaylistSong(string _nombrepl)
         {
@@ -17,18 +20,18 @@ namespace Proyecto
         public string InformationPLL()
         {
             string stringaux1 = " ";
-            if (listplay.Count == 0)
+            if (Listplay.Count == 0)
             {
                 return "No hay canciones en la playlist";
             }
             else
             {
                 stringaux1 += "Nombre Playlist: " + NombrePlaylist + "\n";
-                for (int i = 0; i < listplay.Count; i++)
+                for (int i = 0; i < Listplay.Count; i++)
                 {
                     stringaux1 += "Cancion" + " " + (i + 1) + "\n";
                     stringaux1 += "============ \n";
-                    stringaux1 += listplay[i].Informacioncancion() + "\n";
+                    stringaux1 += Listplay[i].Informacioncancion() + "\n";
                     stringaux1 += " ";
                 }
                 return stringaux1;
