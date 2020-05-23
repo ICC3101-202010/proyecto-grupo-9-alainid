@@ -43,7 +43,7 @@ namespace Proyecto
         public static List<Song> lista_filtrada_final = new List<Song>();
         public static List<String> lista_disqueravideo = new List<String>();
 
-        
+
         //    
 
         //===============================================TODO LO QUE ES SERIALIZATION================================================================
@@ -270,7 +270,7 @@ namespace Proyecto
                 Console.WriteLine(Convert.ToString(i) + ". " + option);
                 i += 1;
             }
-            
+
             return options[Convert.ToInt16(Console.ReadLine())];
         }
 
@@ -1479,7 +1479,7 @@ namespace Proyecto
                 {
                     foreach (Song canc in interna3)
                     {
-                        if (canc.Cantante == can)
+                        if (canc.Cantante.Name == can.Name)
                         {
                             listafiltrada.Add(canc);
                             lista_canciones_filtromiltiple.Remove(canc);
@@ -1487,6 +1487,10 @@ namespace Proyecto
 
                         }
                     }
+                }
+                else
+                {
+                    Console.WriteLine("");
                 }
             }
             return listafiltrada;
@@ -1515,7 +1519,7 @@ namespace Proyecto
                         {
                             foreach (Song canc in interna4)
                             {
-                                if (canc.Cantante == can)
+                                if (canc.Cantante.Name == can.Name)
                                 {
                                     listafiltrada.Add(canc);
                                     lista_canciones_filtromiltiple.Remove(canc);
@@ -1533,7 +1537,7 @@ namespace Proyecto
                         {
                             foreach (Song canc in interna4)
                             {
-                                if (canc.Cantante == can)
+                                if (canc.Cantante.Name == can.Name)
                                 {
                                     listafiltrada.Add(canc);
                                     lista_canciones_filtromiltiple.Remove(canc);
@@ -1550,7 +1554,7 @@ namespace Proyecto
                         {
                             foreach (Song canc in interna4)
                             {
-                                if (canc.Cantante == can)
+                                if (canc.Cantante.Name == can.Name)
                                 {
                                     listafiltrada.Add(canc);
                                     lista_canciones_filtromiltiple.Remove(canc);
@@ -1567,7 +1571,7 @@ namespace Proyecto
                         {
                             foreach (Song canc in interna4)
                             {
-                                if (canc.Cantante == can)
+                                if (canc.Cantante.Name == can.Name)
                                 {
                                     listafiltrada.Add(canc);
                                     lista_canciones_filtromiltiple.Remove(canc);
@@ -1621,39 +1625,25 @@ namespace Proyecto
             switch (criterio)
             {
                 case "Genero":
-
-
                     lista_filtrando = CancionesporGenero();
                     break;
                 case "Disquera":
-
-
                     lista_filtrando = Cancionespordisquera();
-
                     break;
                 case "Año Publicacion":
-
                     lista_filtrando = Cancionesporaniopublicacion();
-
                     break;
                 case "Sexo del Artista":
-
                     lista_filtrando = Cancionesporsexodelcantante();
-
                     break;
                 case "Edad del Artista":
-
                     lista_filtrando = Cancionesporedaddelcantante();
-
                     break;
                 case "Calidad/Resolucion":
                     lista_filtrando = Cancionesporcalidadcancion();
-
                     break;
                 case "Evaluacion":
                     lista_filtrando = cancionporevaluacion();
-
-
                     break;
                 default:
                     Console.WriteLine("No existen canciones que cumplan con el criterio y valor seleccionado");
@@ -1717,21 +1707,26 @@ namespace Proyecto
                 lista_filtrando2.Clear();
                 foreach (Song ss in filtocriteriomultiple(crit))
                 {
+                    
                     lista_filtrando2.Add(ss);
                 }
                 foreach (Song ccc in lista_filtrando2)
                 {
-                    canciones_filtradas.Add(ccc);
+                    int si  =  0;
+                    foreach (Song canc in canciones_filtradas)
+                    {
+                        if (ccc.Nombrecancion == canc.Nombrecancion)
+                        {
+                            si++;
+                        }
+                    }
+                    if (si == 0) {
+                        canciones_filtradas.Add(ccc);
+                    }
                 }
             }
             return canciones_filtradas;
         }
-
-
-
-
-
-
 
 
         public static List<Song> CancionesporGeneroand()
@@ -1817,7 +1812,7 @@ namespace Proyecto
                 {
                     foreach (Song canc in interna3)
                     {
-                        if (canc.Cantante == can)
+                        if (canc.Cantante.Name == can.Name)
                         {
                             listafiltrada.Add(canc);
                             lista_artistas_filtromiltiple.Remove(can);
@@ -1852,7 +1847,7 @@ namespace Proyecto
                         {
                             foreach (Song canc in interna4)
                             {
-                                if (canc.Cantante == can)
+                                if (canc.Cantante.Name == can.Name)
                                 {
                                     listafiltrada.Add(canc);
                                     lista_artistas_filtromiltiple.Remove(can);
@@ -1869,7 +1864,7 @@ namespace Proyecto
                         {
                             foreach (Song canc in interna4)
                             {
-                                if (canc.Cantante == can)
+                                if (canc.Cantante.Name == can.Name)
                                 {
                                     listafiltrada.Add(canc);
                                     lista_artistas_filtromiltiple.Remove(can);
@@ -1885,7 +1880,7 @@ namespace Proyecto
                         {
                             foreach (Song canc in interna4)
                             {
-                                if (canc.Cantante == can)
+                                if (canc.Cantante.Name == can.Name)
                                 {
                                     listafiltrada.Add(canc);
                                     lista_artistas_filtromiltiple.Remove(can);
@@ -1901,7 +1896,7 @@ namespace Proyecto
                         {
                             foreach (Song canc in interna4)
                             {
-                                if (canc.Cantante == can)
+                                if (canc.Cantante.Name == can.Name)
                                 {
                                     listafiltrada.Add(canc);
                                     lista_artistas_filtromiltiple.Remove(can);
@@ -1982,7 +1977,6 @@ namespace Proyecto
             }
             return lista_filtrando;
         }
-
         public static List<Song> Buqueda_multiple_cancionesand()
         {
             lista_canciones_filtromiltiple.Clear();
@@ -2032,8 +2026,6 @@ namespace Proyecto
             {
                 Console.WriteLine(" - " + c);
             }
-
-
             lista_filtrando2.Clear();
             foreach (Song ss in filtocriteriomultiple(criterios_seleccionados[0]))
             {
@@ -2060,22 +2052,6 @@ namespace Proyecto
             }
             return lista_filtrada_final;
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         //==============================================HASTA AQUI====================================================================================
         //==============================================HASTA AQUI====================================================================================
         //==============================================HASTA AQUI====================================================================================
@@ -2174,18 +2150,19 @@ namespace Proyecto
                     }
                     break;
                 case "Sexo del Artista":
-                    foreach (Artista can in lista_cantantes)
+                    foreach (Artista art in lista_cantantes)
                     {
-                        if (can.Sexo == _valor)
+                        if (art.Sexo == _valor)
                         {
                             foreach (Song canc in todas_las_canciones)
                             {
-                                if (canc.Cantante == can)
+                                if (canc.Cantante.Name == art.Name)
                                 {
                                     listafiltrada.Add(canc);
                                 }
                             }
                         }
+
                     }
                     break;
                 case "Edad del Artista":
@@ -2198,7 +2175,7 @@ namespace Proyecto
                                 {
                                     foreach (Song canc in todas_las_canciones)
                                     {
-                                        if (canc.Cantante == can)
+                                        if (canc.Cantante.Name == can.Name)
                                         {
                                             listafiltrada.Add(canc);
                                         }
@@ -2214,7 +2191,7 @@ namespace Proyecto
                                 {
                                     foreach (Song canc in todas_las_canciones)
                                     {
-                                        if (canc.Cantante == can)
+                                        if (canc.Cantante.Name == can.Name)
                                         {
                                             listafiltrada.Add(canc);
                                         }
@@ -2229,7 +2206,7 @@ namespace Proyecto
                                 {
                                     foreach (Song canc in todas_las_canciones)
                                     {
-                                        if (canc.Cantante == can)
+                                        if (canc.Cantante.Name == can.Name)
                                         {
                                             listafiltrada.Add(canc);
                                         }
@@ -2244,7 +2221,7 @@ namespace Proyecto
                                 {
                                     foreach (Song canc in todas_las_canciones)
                                     {
-                                        if (canc.Cantante == can)
+                                        if (canc.Cantante.Name == can.Name)
                                         {
                                             listafiltrada.Add(canc);
                                         }
@@ -2258,7 +2235,7 @@ namespace Proyecto
                     listafiltrada = Lista_por_calidad_cancion(_valor);
                     break;
                 case "Evaluacion":
-                    //listafiltrada = cancionesporevaluacion();
+                    listafiltrada = cancionporevaluacion();
                     break;
                 default:
                     Console.WriteLine("No existen canciones que cumplan con el criterio y valor seleccionado");
@@ -2281,7 +2258,7 @@ namespace Proyecto
                     Console.WriteLine(i + 1 + "-" + "Canción" + " " + (i + 1));
                     Console.WriteLine("============");
                     Console.WriteLine(s[i].Nombrecancion);
-                    Console.WriteLine(s[i].Cantante);
+                    Console.WriteLine(s[i].Cantante.Name);
                     Console.WriteLine(" ");
 
 
@@ -2472,9 +2449,9 @@ namespace Proyecto
             Console.WriteLine(s1.InformacioncancionKaraoke());
         }
 
-        public static void Crear_cantante()
+        public static void Crear_cantante(Artista cantante)
         {
-            int h = 0;
+            /*int h = 0;
             Console.WriteLine("Ingrese el nombre completo");
             string nombre = Console.ReadLine();
             Console.WriteLine("Ingrese la edad:");
@@ -2502,18 +2479,23 @@ namespace Proyecto
                 lista_cantantes.Add(cantante);
                 AlmacenarCantante(lista_cantantes);
                 Console.WriteLine("Perfil del Cantante fue creado exitosamente.\n");
-            }
+            }*/
+            lista_cantantes.Add(cantante);
+            AlmacenarCantante(lista_cantantes);
+
         }
 
-        public static bool Verificar_existencia_cantante(string cantante)
+        public static bool Verificar_existencia_cantante(Artista cantante)
         {
             int h = 0, n2;
             foreach (Artista art in lista_cantantes)
             {
-                if (art.Name == cantante)
+                if (art.Name == cantante.Name)
                 {
                     h = 1;
-                    return true;
+                    Console.WriteLine("El cantante ya existe en nuestra base de datos");
+                    Thread.Sleep(2000);
+                    return false;
                 }
             }
             if (h == 0)
@@ -2524,7 +2506,7 @@ namespace Proyecto
                 n2 = Numero(2);
                 if (n2 == 1)
                 {
-                    Crear_cantante();
+                    Crear_cantante(cantante);
                     return true;
                 }
                 else
@@ -2535,48 +2517,26 @@ namespace Proyecto
             return false;
         }
 
-        public static void Crear_compositor()
+        public static void Crear_compositor(Artista compositor)
         {
-            int h = 0;
-            Console.WriteLine("Ingrese el nombre completo");
-            string nombre = Console.ReadLine();
-            Console.WriteLine("Ingrese la edad:");
-            int edad = int.Parse(Console.ReadLine());
-            Console.WriteLine("Ingrese la nacionalidad:");
-            string nacion = Console.ReadLine();
-            Console.WriteLine("Ingrese el Genero:\n" +
-                "1-> Masculino\n" +
-                "2-> Femenino\n");
-            int gen = Numero(2); string genero = "";
-            if (gen == 1) { genero = "Masculino"; }
-            else if (gen == 2) { genero = "Femenino"; }
-            Artista compositor = new Artista(nombre, edad, genero, nacion);
-            foreach (Artista comp in lista_compositores)
-            {
-                if (comp == compositor)
-                {
-                    Console.WriteLine("Este compositor ya existe\n");
-                    h = 1;
-                    break;
-                }
-            }
-            if (h == 0)
-            {
-                lista_compositores.Add(compositor);
-                AlmacenarCompositores(lista_compositores);
-                Console.WriteLine("Perfil del Compositor fue creado exitosamente.\n");
-            }
+
+            lista_compositores.Add(compositor);
+            AlmacenarCompositores(lista_compositores);
+            Console.WriteLine("Perfil del Compositor fue creado exitosamente.\n");
+
         }
 
-        public static bool Verificar_existencia_compositor(string compositor)
+        public static bool Verificar_existencia_compositor(Artista compositor)
         {
             int h = 0, n2;
             foreach (Artista comp in lista_compositores)
             {
-                if (comp.Name == compositor)
+                if (comp.Name == compositor.Name)
                 {
                     h = 1;
-                    return true;
+                    Console.WriteLine("El compositor ya existe en nuestra base de datos");
+                    Thread.Sleep(2000);
+                    return false;
                 }
             }
             if (h == 0)
@@ -2587,7 +2547,7 @@ namespace Proyecto
                 n2 = Numero(2);
                 if (n2 == 1)
                 {
-                    Crear_compositor();
+                    Crear_compositor(compositor);
                     return true;
                 }
                 else

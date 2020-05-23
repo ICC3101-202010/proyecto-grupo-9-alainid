@@ -19,10 +19,10 @@ namespace Proyecto
         {
             bool ver1, ver2, ver3;
             FileInfo fileInfo = new FileInfo(nombrearchivo);
-            tamano = fileInfo.Length/ 1000000;
+            tamano = fileInfo.Length / 1000000;
             Song s = new Song(nombrecan, cantante, genero, compositor, anopublicacion, disquera, album, letra, duracion, tipoarchivo, tamano, calidad, nombrearchivo);
-            ver1 = ALAINID.Verificar_existencia_cantante(cantante.Name);
-            ver2 = ALAINID.Verificar_existencia_compositor(compositor.Name);
+            ver1 = ALAINID.Verificar_existencia_cantante(cantante);
+            ver2 = ALAINID.Verificar_existencia_compositor(compositor);
             ver3 = ALAINID.Verificar_exisitencia_Album(album, cantante.Name);
             foreach (Song si in ALAINID.todas_las_canciones)
             {
@@ -61,7 +61,7 @@ namespace Proyecto
             Console.WriteLine("================");
             Console.WriteLine("Canción agregada exitosamente");
             Console.WriteLine("================");
-            
+
             ALAINID.Partir();
             VerCanciones(ALAINID.todas_las_canciones);
             Thread.Sleep(2000);
@@ -89,7 +89,7 @@ namespace Proyecto
                 int n;
                 do
                 {
-                    
+
                     if (ALAINID.lista_actores == null)
                     {
                         ALAINID.Crear_actor();
@@ -125,7 +125,6 @@ namespace Proyecto
                                 break;
                             }
                         }
-                        
                     }
                     Console.WriteLine("1-> Desea Ingresar otro actor" + " " +
                     "2-> Terminar");
@@ -149,7 +148,6 @@ namespace Proyecto
             {
                 Console.WriteLine("El video que intenta cargar ya existe");
             }
-
         }
         public void VerCanciones(List<Song> lista)
         {
@@ -157,7 +155,6 @@ namespace Proyecto
             {
                 Console.WriteLine("No hay canciones agregadas aún");
             }
-
             else
             {
                 for (int i = 0; i < lista.Count; i++)
@@ -167,7 +164,6 @@ namespace Proyecto
                     Console.WriteLine("============");
                     Console.WriteLine(lista[i].Informacioncancion());
                     Console.WriteLine(" ");
-
                 }
             }
         }
@@ -177,7 +173,6 @@ namespace Proyecto
             {
                 Console.WriteLine("No hay videos agregados aún");
             }
-
             else
             {
                 for (int i = 0; i < lista.Count; i++)

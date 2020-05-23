@@ -14,8 +14,8 @@ namespace Proyecto
         private string anopublicacion;
         private string disquera;
         private string album;
-        private string letra;      
-        private float calificacionpromedio;
+        private string letra;
+        private float calificacionpromedio =  0;
         private float duracion;
         private int reproducciones;           
         private string tipoarchivo;
