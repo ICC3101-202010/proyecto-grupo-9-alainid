@@ -46,7 +46,7 @@ namespace Proyecto
                         Console.WriteLine("Ingrese su nombre completo");
                         nombre = Console.ReadLine();
                         User u1 = new User(nombre, idusuario, email, password);
-                        ALAINID.Activarlista();
+                        //ALAINID.Activarlista();
                         ALAINID.Agregarusuarioalalista(u1);
                         break;
                     case 2:
@@ -2594,11 +2594,6 @@ namespace Proyecto
                                                             Thread.Sleep(2000);
                                                             break;
                                                         }
-
-
-
-
-
                                                     }
                                                     break;
                                                 case 2:
@@ -2821,10 +2816,9 @@ namespace Proyecto
                                 case 1:
                                     bool ver1 = false, ver2 = false, ver3 = false;
                                     Console.Clear();
-                                    string nombrecan = "";
-                                    string cantante = "";
                                     string genero = "";
-                                    string compositor = "";
+                                    string gen_comp = "";
+                                    string nombrecan = "";
                                     string anopublicacion = "";
                                     string disquera = "";
                                     string album = "";
@@ -2838,11 +2832,34 @@ namespace Proyecto
                                     Console.WriteLine("Ingrese nombre de la cancion:");
                                     nombrecan = Console.ReadLine();
                                     Console.WriteLine("Ingrese cantante o grupo de la canción:");
-                                    cantante = Console.ReadLine();
+                                    string name = Console.ReadLine();
+                                    Console.WriteLine("Ingrese la edad del cantante:");
+                                    int age = int.Parse(Console.ReadLine());
+                                    Console.WriteLine("Ingrese el Genero:\n" +
+                                                         "1-> Masculino\n" +
+                                                         "2-> Femenino\n");
+                                    int gen = ALAINID.Numero(2); 
+                                    string sex = "";
+                                    if (gen == 1) { genero = "Masculino"; }
+                                    else if (gen == 2) { genero = "Femenino"; }
+                                    Console.WriteLine("Ingrese la nacionalidad:");
+                                    string nac = Console.ReadLine();
+                                    Artista cantante = new Artista(name, age, sex, nac);
                                     Console.WriteLine("Ingrese genero de la canción:");
                                     genero = ALAINID.ShowOptions(ALAINID.lista_generos_canciones);  // -------------------37
-                                    Console.WriteLine("Ingrese el compositor de la cancion:");
-                                    compositor = Console.ReadLine();
+                                    Console.WriteLine("Ingrese el nombre completo del compositor");
+                                    string nombre_comp = Console.ReadLine();
+                                    Console.WriteLine("Ingrese la edad:");
+                                    int edad_comp = int.Parse(Console.ReadLine());
+                                    Console.WriteLine("Ingrese la nacionalidad:");
+                                    string nacion_comp = Console.ReadLine();
+                                    Console.WriteLine("Ingrese el Genero:\n" +
+                                        "1-> Masculino\n" +
+                                        "2-> Femenino\n");
+                                    gen = ALAINID.Numero(2);
+                                    if (gen == 1) { gen_comp = "Masculino"; }
+                                    else if (gen == 2) { gen_comp = "Femenino"; }
+                                    Artista compositor = new Artista(nombre_comp, edad_comp, gen_comp, nacion_comp);
                                     Console.WriteLine("Ingrese letra de la cancion");
                                     letra = Console.ReadLine();
                                     Console.WriteLine("Ingrese año de la publicación de la canción");
@@ -2855,30 +2872,22 @@ namespace Proyecto
                                     duracion = float.Parse(Console.ReadLine());
                                     Console.WriteLine("Ingrese tipo archivo de la canción");
                                     tipoarchivo = ALAINID.ShowOptions(ALAINID.lista_tipoarchivo_cancion);       // -------------------37
-                                    
                                     Console.WriteLine("Ingrese la calidad del archivo de la canción");
                                     calidad = ALAINID.ShowOptions(ALAINID.lista_calidad_cancion);       // -------------------37
                                     Console.WriteLine("Igrese el nombre exacto como esta guardado en la carpeta Canciones/");
                                     string nom = Console.ReadLine();
                                     nombrearchivo = "Canciones/" + nom + "." + ALAINID.Todo_a_minuscula(tipoarchivo);
                                     Console.Clear();
-                                    ver1 = ALAINID.Verificar_existencia_cantante(cantante);
-                                    ver2 = ALAINID.Verificar_existencia_compositor(compositor);
-                                    ver3 = ALAINID.Verificar_exisitencia_Album(album, cantante);
-                                    if (ver1 && ver2 && ver3)
-                                    {
+                                    //ALAINID.Activarlistacanciones();
+                                    //ALAINID.Activarlistacantantes();
+                                    //ALAINID.Partirlistacompositores();
+                                    //ALAINID.Partirlistaalbumes();
+                                    a.AgregarSong(nombrecan, cantante, genero, compositor, anopublicacion, disquera, album, duracion, tipoarchivo, tamano, calidad, nombrearchivo, reproducciones, letra);
 
-                                        //ALAINID.Activarlistacanciones();
-                                        //ALAINID.Activarlistacantantes();
-                                        //ALAINID.Partirlistacompositores();
-                                        //ALAINID.Partirlistaalbumes();
-                                        a.AgregarSong(nombrecan, cantante, genero, compositor, anopublicacion, disquera, album, duracion, tipoarchivo, tamano, calidad, nombrearchivo, reproducciones, letra);
-                                        
-                                    }
-                                    else
-                                    {
-                                        Console.WriteLine("No fue Posible agregar la cancion, verifique los datos y el archivo ingresado e intente nuevamente");
-                                    }
+
+
+                                    
+                                 
                                     break;
                                 case 2:
                                     int accion21 = '\0';
@@ -3086,7 +3095,7 @@ namespace Proyecto
                                     }
                                     break;
                                 case 14:
-                                    Console.Clear();
+                                    /*Console.Clear();
                                     string nombrecan3 = "";
                                     string cantante3 = "";
                                     string genero3 = "";
@@ -3130,7 +3139,7 @@ namespace Proyecto
                                     nombrearchivo3 = "CancionesKaraoke/" + nom3 + "." + ALAINID.Todo_a_minuscula(tipoarchivo3);
                                     ALAINID.activark();
                                     a.AgregarSongKaraoke(nombrecan3, cantante3, genero3, compositor3, anopublicacion3, disquera3, album3, duracion3, tipoarchivo3, tamano3, calidad3, nombrearchivo3, reproducciones3, letra3);
-                                    
+                                   */
                                     break;
                                 case 15:
                                     Console.WriteLine("=================================");

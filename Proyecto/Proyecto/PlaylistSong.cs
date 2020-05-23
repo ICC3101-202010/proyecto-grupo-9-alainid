@@ -9,7 +9,6 @@ namespace Proyecto
     {
         private string nombrePlaylist;
         private List<Song> listplay = new List<Song>();
-
         public string NombrePlaylist { get => nombrePlaylist; set => nombrePlaylist = value; }
         public List<Song> Listplay { get => listplay; set => listplay = value; }
 

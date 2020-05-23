@@ -15,12 +15,15 @@ namespace Proyecto
                 Console.WriteLine(user.InformacionUsuario());
             }
         }
-        public bool AgregarSong(string nombrecan, object cantante, string genero, object compositor, string anopublicacion, string disquera, string album, float duracion, string tipoarchivo, float tamano, string calidad, string nombrearchivo, int reproduccion, string letra)
+        public bool AgregarSong(string nombrecan, Artista cantante, string genero, Artista compositor, string anopublicacion, string disquera, string album, float duracion, string tipoarchivo, float tamano, string calidad, string nombrearchivo, int reproduccion, string letra)
         {
+            bool ver1, ver2, ver3;
             FileInfo fileInfo = new FileInfo(nombrearchivo);
-            tamano = (fileInfo.Length) / 1000000;
+            tamano = fileInfo.Length/ 1000000;
             Song s = new Song(nombrecan, cantante, genero, compositor, anopublicacion, disquera, album, letra, duracion, tipoarchivo, tamano, calidad, nombrearchivo);
-
+            ver1 = ALAINID.Verificar_existencia_cantante(cantante.Name);
+            ver2 = ALAINID.Verificar_existencia_compositor(compositor.Name);
+            ver3 = ALAINID.Verificar_exisitencia_Album(album, cantante.Name);
             foreach (Song si in ALAINID.todas_las_canciones)
             {
                 if (si == s)
@@ -30,37 +33,27 @@ namespace Proyecto
                     return false;
                 }
             }
-            foreach (Artista art in ALAINID.lista_cantantes)
+            if (ver1 == true)
             {
-                if (art == cantante)
-                {
-                    art.Lista_canciones.Add(s);
-                    ALAINID.AlmacenarCantante(ALAINID.lista_cantantes);
-                    break;
-                }
+                cantante.Lista_canciones.Add(s);
+                ALAINID.AlmacenarCantante(ALAINID.lista_cantantes);
             }
-            foreach (Artista art in ALAINID.lista_cantantes)
+            if (ver3 == true)
             {
-                if (art == cantante)
+                foreach (PlaylistSong alb in cantante.Lista_album)
                 {
-                    foreach (PlaylistSong alb in art.Lista_album)
+                    if (alb.NombrePlaylist == album)
                     {
-                        if (alb.NombrePlaylist == album)
-                        {
-                            alb.Listplay.Add(s);
-                            ALAINID.AlmacenarAlbum(ALAINID.todos_los_albumes);
-                        }
+                        alb.Listplay.Add(s);
+                        cantante.Lista_album.Add(alb);
+                        ALAINID.AlmacenarAlbum(ALAINID.todos_los_albumes);
                     }
                 }
             }
-            foreach (Artista co in ALAINID.lista_compositores)
+            if (ver2 == true)
             {
-                if (co == compositor)
-                {
-                    co.Lista_canciones.Add(s);
-                    ALAINID.AlmacenarCompositores(ALAINID.lista_compositores);
-                    break;
-                }
+                compositor.Lista_canciones.Add(s);
+                ALAINID.AlmacenarCompositores(ALAINID.lista_compositores);
             }
             ALAINID.todas_las_canciones.Add(s);
             ALAINID.Agregarcancioneslistainteligente(s);
@@ -68,6 +61,7 @@ namespace Proyecto
             Console.WriteLine("================");
             Console.WriteLine("Canción agregada exitosamente");
             Console.WriteLine("================");
+            
             ALAINID.Partir();
             VerCanciones(ALAINID.todas_las_canciones);
             Thread.Sleep(2000);
@@ -197,7 +191,7 @@ namespace Proyecto
                 }
             }
         }
-        public bool AgregarSongKaraoke(string nombrecan2, object cantante2, string genero2, object compositor2, string anopublicacion2, string disquera2, string album2, float duracion2, string tipoarchivo2, float tamano2, string calidad2, string nombrearchivo2, int reproduccion2, string letra2)
+        public bool AgregarSongKaraoke(string nombrecan2, Artista cantante2, string genero2, Artista compositor2, string anopublicacion2, string disquera2, string album2, float duracion2, string tipoarchivo2, float tamano2, string calidad2, string nombrearchivo2, int reproduccion2, string letra2)
         {
             Song s = new Song(nombrecan2, cantante2, genero2, compositor2, anopublicacion2, disquera2, album2, letra2, duracion2, tipoarchivo2, tamano2, calidad2, nombrearchivo2);
             foreach (Song si in ALAINID.todas_las_cancioneskaraoke)
