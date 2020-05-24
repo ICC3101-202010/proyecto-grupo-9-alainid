@@ -44,8 +44,6 @@ namespace Proyecto
         public static List<String> lista_disqueravideo = new List<String>();
 
 
-        //    
-
         //===============================================TODO LO QUE ES SERIALIZATION================================================================
         //===============================================TODO LO QUE ES SERIALIZATION================================================================
         //===============================================TODO LO QUE ES SERIALIZATION================================================================
@@ -2022,7 +2020,7 @@ namespace Proyecto
             }
             Console.Clear();
             Console.WriteLine("Usted selecciono buscar por:");
-            foreach (String c in criterios_seleccionados)
+            foreach (string c in criterios_seleccionados)
             {
                 Console.WriteLine(" - " + c);
             }
@@ -2046,9 +2044,27 @@ namespace Proyecto
                 }
                 count2++;
             }
+            if (lista_filtrada_final.Count == 0) 
+            {
+                lista_filtrada_final.Add(canciones_filtradas[0]);
+
+            }
+            int si;
             foreach (Song ccc in canciones_filtradas)
             {
-                lista_filtrada_final.Add(ccc);
+                si = 0;                
+                foreach (Song canc in lista_filtrada_final)
+                {
+                    si = 0;
+                    if (ccc.Nombrecancion == canc.Nombrecancion)
+                    {
+                        si++;
+                    }
+                }
+                if (si == 0)
+                {
+                    lista_filtrada_final.Add(ccc);
+                }
             }
             return lista_filtrada_final;
         }
@@ -2693,12 +2709,12 @@ namespace Proyecto
             AlmacenarAlbum(todos_los_albumes);
         }
 
-        public static bool Verificar_exisitencia_Album(string nombre_album, string nombre_cantante)
+        public static bool Verificar_exisitencia_Album(string nombre_album, Artista cantante2)
         {
             int h = 0, n2;
             foreach (Artista cantante in lista_cantantes)
             {
-                if (cantante.Name == nombre_cantante)
+                if (cantante.Name == cantante2.Name)
                 {
                     foreach (PlaylistSong album in cantante.Lista_album)
                     {

@@ -35,7 +35,6 @@ namespace Proyecto
                         string nombre = "";
                         string email = "";
                         string password = "";
-
                         Console.WriteLine("Ingrese su nombre de usuario");
                         idusuario = Console.ReadLine();
                         Console.WriteLine("Ingrese su email");
@@ -566,7 +565,7 @@ namespace Proyecto
                                                     while (opcion000 != 2)
                                                     {
                                                         Console.Clear();
-                                                        ALAINID.Vercancionesparareproduccion(ALAINID.canciones_filtradas);
+                                                        ALAINID.Vercancionesparareproduccion(ALAINID.lista_filtrada_final);
                                                         Console.WriteLine("========================");
                                                         Console.WriteLine(" ");
                                                         Console.WriteLine("INGRESE NUMERO DE LA CANCIÓN QUE DESEA ESCUCHAR");
@@ -577,9 +576,9 @@ namespace Proyecto
                                                             string u = "";
                                                             string w = "";
                                                             int v;
-                                                            u = ALAINID.canciones_filtradas[numerocancion - 1].Nombrearchivo;
-                                                            v = ALAINID.canciones_filtradas[numerocancion - 1].Reproducciones;
-                                                            w = ALAINID.canciones_filtradas[numerocancion - 1].Nombrecancion;
+                                                            u = ALAINID.lista_filtrada_final[numerocancion - 1].Nombrearchivo;
+                                                            v = ALAINID.lista_filtrada_final[numerocancion - 1].Reproducciones;
+                                                            w = ALAINID.lista_filtrada_final[numerocancion - 1].Nombrecancion;
                                                             int opcion10 = '\0';
                                                             while (opcion10 != 12)
                                                             {
@@ -622,7 +621,7 @@ namespace Proyecto
                                                                         while (opcion60 != 1)
                                                                         {
                                                                             Console.Clear();
-                                                                            ALAINID.Verinfodeunacancion(ALAINID.canciones_filtradas[numerocancion - 1]);
+                                                                            ALAINID.Verinfodeunacancion(ALAINID.lista_filtrada_final[numerocancion - 1]);
                                                                             Console.WriteLine("======================================");
                                                                             Console.WriteLine("1. ATRAS");
                                                                             opcion60 = ALAINID.Numero(1);
@@ -637,11 +636,11 @@ namespace Proyecto
                                                                         Console.WriteLine("INGRESE EL NUMERO DE LA PLAYLIST A LA QUE DESEA AGREGAR");
                                                                         Console.WriteLine(ALAINID.Vernombresplaylistcancion(email2));
                                                                         string nply = Console.ReadLine();
-                                                                        Console.WriteLine(ALAINID.Agregarcancionaply(email2, nply, ALAINID.canciones_filtradas[numerocancion - 1]));
+                                                                        Console.WriteLine(ALAINID.Agregarcancionaply(email2, nply, ALAINID.lista_filtrada_final[numerocancion - 1]));
                                                                         Thread.Sleep(2000);
                                                                         break;
                                                                     case 7:
-                                                                        ALAINID.Agregar_a_favoritos(email2, ALAINID.canciones_filtradas[numerocancion - 1]);
+                                                                        ALAINID.Agregar_a_favoritos(email2, ALAINID.lista_filtrada_final[numerocancion - 1]);
                                                                         break;
                                                                     case 8:
                                                                         pla.Agregarcancionacola(u);
@@ -693,7 +692,7 @@ namespace Proyecto
                                                                         pla.limpiacola();
                                                                         break;
                                                                     case 11:
-                                                                        ALAINID.Agregaradescargas(email2, ALAINID.canciones_filtradas[numerocancion - 1]);
+                                                                        ALAINID.Agregaradescargas(email2, ALAINID.lista_filtrada_final[numerocancion - 1]);
                                                                         break;
                                                                     case 12:// salir
                                                                         break;
@@ -2878,10 +2877,10 @@ namespace Proyecto
                                     string nom = Console.ReadLine();
                                     nombrearchivo = "Canciones/" + nom + "." + ALAINID.Todo_a_minuscula(tipoarchivo);
                                     Console.Clear();
-                                    //ALAINID.Activarlistacanciones();
-                                    //ALAINID.Activarlistacantantes();
-                                    //ALAINID.Partirlistacompositores();
-                                    //ALAINID.Partirlistaalbumes();
+                                    ALAINID.Activarlistacanciones();
+                                    ALAINID.Activarlistacantantes();
+                                    ALAINID.Partirlistacompositores();
+                                    ALAINID.Partirlistaalbumes();
                                     a.AgregarSong(nombrecan, cantante, genero2, compositor, anopublicacion, disquera, album, duracion, tipoarchivo, tamano, calidad, nombrearchivo, reproducciones, letra);
 
 

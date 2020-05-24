@@ -23,7 +23,7 @@ namespace Proyecto
             Song s = new Song(nombrecan, cantante, genero, compositor, anopublicacion, disquera, album, letra, duracion, tipoarchivo, tamano, calidad, nombrearchivo);
             ver1 = ALAINID.Verificar_existencia_cantante(cantante);
             ver2 = ALAINID.Verificar_existencia_compositor(compositor);
-            ver3 = ALAINID.Verificar_exisitencia_Album(album, cantante.Name);
+            ver3 = ALAINID.Verificar_exisitencia_Album(album, cantante);
             foreach (Song si in ALAINID.todas_las_canciones)
             {
                 if (si == s)
