@@ -1,0 +1,11 @@
+C:\Users\rvarg\Desktop\Proyecto POO\Proyecto Forms\Proyecto Forms\Proyecto Forms\obj\Debug\Proyecto Forms.csprojAssemblyReference.cache
+C:\Users\rvarg\Desktop\Proyecto POO\Proyecto Forms\Proyecto Forms\Proyecto Forms\obj\Debug\Proyecto_Forms.Properties.Resources.resources
+C:\Users\rvarg\Desktop\Proyecto POO\Proyecto Forms\Proyecto Forms\Proyecto Forms\obj\Debug\Proyecto Forms.csproj.GenerateResource.cache
+C:\Users\rvarg\Desktop\Proyecto POO\Proyecto Forms\Proyecto Forms\Proyecto Forms\obj\Debug\Proyecto Forms.csproj.CoreCompileInputs.cache
+C:\Users\rvarg\Desktop\Proyecto POO\Proyecto Forms\Proyecto Forms\Proyecto Forms\bin\Debug\Proyecto Forms.exe.config
+C:\Users\rvarg\Desktop\Proyecto POO\Proyecto Forms\Proyecto Forms\Proyecto Forms\bin\Debug\Proyecto Forms.exe
+C:\Users\rvarg\Desktop\Proyecto POO\Proyecto Forms\Proyecto Forms\Proyecto Forms\bin\Debug\Proyecto Forms.pdb
+C:\Users\rvarg\Desktop\Proyecto POO\Proyecto Forms\Proyecto Forms\Proyecto Forms\obj\Debug\Proyecto Forms.exe
+C:\Users\rvarg\Desktop\Proyecto POO\Proyecto Forms\Proyecto Forms\Proyecto Forms\obj\Debug\Proyecto Forms.pdb
+C:\Users\rvarg\Desktop\Proyecto POO\Proyecto Forms\Proyecto Forms\Proyecto Forms\obj\Debug\Proyecto_Forms.Error.resources
+C:\Users\rvarg\Desktop\Proyecto POO\Proyecto Forms\Proyecto Forms\Proyecto Forms\obj\Debug\Proyecto_Forms.APP.resources
