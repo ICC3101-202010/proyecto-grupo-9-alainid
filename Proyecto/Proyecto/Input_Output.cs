@@ -867,17 +867,308 @@ namespace Proyecto
                                                     }
                                                     break;
                                                 case 6:
-                                                    Console.WriteLine("Lo sentimos, esta opcion aun esta en construccion");
-                                                    Console.WriteLine("Estamos trabajando para usted");
-                                                    Thread.Sleep(2000);
+                                                    ALAINID.Activarlistavideos();
+                                                    ALAINID.Partirlistadirectores();
+                                                    ALAINID.Partirlistaactores();
+                                                    Console.Clear();
+                                                    ALAINID.Buqueda_multiple_videos_or();
+                                                    int opcion0000 = '\0';
+                                                    while (opcion0000 != 2)
+                                                    {
+                                                        Console.Clear();
+                                                        ALAINID.Vervideosparareproduccion(ALAINID.canciones_filtradasv);
+                                                        Console.WriteLine("========================");
+                                                        Console.WriteLine(" ");
+                                                        Console.WriteLine("INGRESE NUMERO DEL VIDEO QUE DESEA VER");
+                                                        Console.WriteLine("0 PARA SALIR");
+                                                        int numerocancion = Convert.ToInt32(Console.ReadLine());
+                                                        if ((numerocancion >= 1) && (numerocancion <= ALAINID.canciones_filtradasv.Count))
+                                                        {
+                                                            string u = "";
+                                                            string w = "";
+                                                            int v;
+                                                            u = ALAINID.canciones_filtradasv[numerocancion - 1].Nombrearchivovideo;
+                                                            v = ALAINID.canciones_filtradasv[numerocancion - 1].Reproduccion;
+                                                            w = ALAINID.canciones_filtradasv[numerocancion - 1].Nombre_video;
+                                                            int opcion10 = '\0';
+                                                            while (opcion10 != 13)
+                                                            {
+                                                                Console.Clear();
+                                                                //ALAINID.listafiltrada[numerocancion - 1].nombrearchivo;
+                                                                Console.WriteLine("1. COMENZAR REPRODUCCION");
+                                                                Console.WriteLine("2. PAUSAR REPRODUCCION");
+                                                                Console.WriteLine("3. REANUDAR REPRODUCCIÓN");
+                                                                Console.WriteLine("4. PARAR REPRODUCCIÓN");
+                                                                Console.WriteLine("5. VER INFORMACIÓN DEL VIDEO ");
+                                                                Console.WriteLine("6. AGREGAR A PLAYLIST ");
+                                                                Console.WriteLine("7. AGREGAR A FAVORITOS ");
+                                                                Console.WriteLine("8. AGREGAR A LA COLA ");
+                                                                Console.WriteLine("9. REPRODUCIR COLA");
+                                                                Console.WriteLine("10. ELIMINAR COLA");
+                                                                Console.WriteLine("11. DESCARGAR CANCION");
+                                                                Console.WriteLine("12. CALIFICAR");
+                                                                Console.WriteLine("13. SALIR");
+                                                                Console.WriteLine("");
+                                                                opcion10 = ALAINID.Numero(13);
+                                                                switch (opcion10)
+                                                                {
+                                                                    case 1:
+                                                                        pla.Playsong(u);
+                                                                        ALAINID.GuardarUltimareproduccion(email2, u);
+                                                                        ALAINID.Aumentarreproduccion(w, v);
+                                                                        break;
+                                                                    case 2:
+                                                                        pla.PauseSong();
+                                                                        break;
+                                                                    case 3:
+                                                                        pla.ResumeSong(u);
+                                                                        break;
+                                                                    case 4:
+                                                                        pla.StopSong();
+                                                                        break;
+                                                                    case 5:
+                                                                        int opcion60 = '\0';
+                                                                        while (opcion60 != 1)
+                                                                        {
+                                                                            Console.Clear();
+                                                                            ALAINID.Verinfodeunvideo(ALAINID.canciones_filtradasv[numerocancion - 1]);
+                                                                            Console.WriteLine("======================================");
+                                                                            Console.WriteLine("1. ATRAS");
+                                                                            opcion60 = ALAINID.Numero(1);
+                                                                            switch (opcion60)
+                                                                            {
+                                                                                case 1:
+                                                                                    break;
+                                                                            }
+                                                                        }
+                                                                        break;
+                                                                    case 6:
+                                                                        Console.WriteLine("INGRESE EL NUMERO DE LA PLAYLIST A LA QUE DESEA AGREGAR");
+                                                                        Console.WriteLine(ALAINID.Vernombresplaylistvideo(email2));
+                                                                        string nply = Console.ReadLine();
+                                                                        Console.WriteLine(ALAINID.Agregarvideoaply(email2, nply, ALAINID.canciones_filtradasv[numerocancion - 1]));
+                                                                        Thread.Sleep(2000);
+                                                                        break;
+                                                                    case 7:
+                                                                        ALAINID.Agregar_video_a_favoritos(email2, ALAINID.canciones_filtradasv[numerocancion - 1]);
+                                                                        break;
+                                                                    case 8:
+                                                                        pla.Agregarcancionacola(u);
 
+                                                                        //pla.limpiacola();
+                                                                        break;
+                                                                    case 9:
+                                                                        int accion36 = '\0';
+                                                                        while (accion36 != 6)
+                                                                        {
+                                                                            Console.Clear();
+                                                                            Console.WriteLine("1. PLAY COLA");
+                                                                            Console.WriteLine("2. PAUSAR COLA");
+                                                                            Console.WriteLine("3. REANUDAR COLA");
+                                                                            Console.WriteLine("4. SIGUIENTE CANCION");
+                                                                            Console.WriteLine("5. CANCIÓN ANTERIOR");
+                                                                            Console.WriteLine("6. ATRAS");
+                                                                            accion36 = ALAINID.Numero(6);
+                                                                            switch (accion36)
+                                                                            {
+                                                                                case 1:
+                                                                                    pla.playcola();
+                                                                                    ALAINID.GuardarUltimareproduccion(email2, u);
+                                                                                    break;
+                                                                                case 2:
+                                                                                    pla.PauseSong();
+                                                                                    break;
+                                                                                case 3:
+                                                                                    pla.ResumeSong(u);
+                                                                                    break;
+                                                                                case 4:
+                                                                                    pla.siguiente();
+                                                                                    break;
 
+                                                                                case 5:
+                                                                                    pla.previa();
+                                                                                    break;
+                                                                                case 6:
+                                                                                    break;
+                                                                                default:
+                                                                                    Console.WriteLine("SELECCIONA UNA OPCION VALIDA");
+                                                                                    break;
+
+                                                                            }
+
+                                                                        }
+                                                                        break;
+                                                                    case 10:
+                                                                        pla.limpiacola();
+                                                                        break;
+                                                                    case 11:
+                                                                        Console.WriteLine("No se pueden descargar videos aweonao");
+                                                                        break;
+                                                                    case 12:
+                                                                        Console.WriteLine("INGRESE UNA CALIFICACION DEL 1 AL 10");
+                                                                        int calificacion = ALAINID.Numero(10);
+                                                                        ALAINID.DarCalificacionCancion(calificacion, u);
+                                                                        ALAINID.Sacarpromediocalificacioncancion(u);
+                                                                        Console.WriteLine("\nCALIFICACION DADA");
+                                                                        Thread.Sleep(2000);
+                                                                        break;
+                                                                    case 13:
+                                                                        break;
+                                                                    default:
+                                                                        Console.WriteLine("SELECCIONA UNA OPCION VALIDA");
+                                                                        break;
+                                                                }
+                                                            }
+                                                        }
+                                                        else { if (numerocancion == 0) { break; } }
+                                                    }
                                                     break;
                                                 case 7:
-                                                    Console.WriteLine("Lo sentimos, esta opcion aun esta en construccion");
-                                                    Console.WriteLine("Estamos trabajando para usted");
-                                                    Thread.Sleep(2000);
+                                                    ALAINID.Activarlistacanciones();
+                                                    ALAINID.Activarlistacantantes();
+                                                    ALAINID.Partirlistacompositores();
+                                                    ALAINID.Partirlistaalbumes();
+                                                    Console.Clear();
+                                                    ALAINID.Buqueda_multiple_videos_and();
+                                                    int opcion0001 = '\0';
+                                                    while (opcion0001 != 2)
+                                                    {
+                                                        Console.Clear();
+                                                        ALAINID.Vervideosparareproduccion(ALAINID.lista_filtrada_finalv);
+                                                        Console.WriteLine("========================");
+                                                        Console.WriteLine(" ");
+                                                        Console.WriteLine("INGRESE NUMERO DE LA CANCIÓN QUE DESEA ESCUCHAR");
+                                                        Console.WriteLine("0 PARA SALIR");
+                                                        int numerocancion = Convert.ToInt32(Console.ReadLine());
+                                                        if ((numerocancion >= 1) && (numerocancion <= ALAINID.canciones_filtradasv.Count))
+                                                        {
+                                                            string u = "";
+                                                            string w = "";
+                                                            int v;
+                                                            u = ALAINID.lista_filtrada_finalv[numerocancion - 1].Nombrearchivovideo;
+                                                            v = ALAINID.lista_filtrada_finalv[numerocancion - 1].Reproduccion;
+                                                            w = ALAINID.lista_filtrada_finalv[numerocancion - 1].Nombre_video;
+                                                            int opcion10 = '\0';
+                                                            while (opcion10 != 12)
+                                                            {
+                                                                Console.Clear();
+                                                                //ALAINID.listafiltrada[numerocancion - 1].nombrearchivo;
+                                                                Console.WriteLine("1. COMENZAR REPRODUCCION");
+                                                                Console.WriteLine("2. PAUSAR REPRODUCCION");
+                                                                Console.WriteLine("3. REANUDAR REPRODUCCIÓN");
+                                                                Console.WriteLine("4. PARAR REPRODUCCIÓN");
+                                                                Console.WriteLine("5. VER INFORMACIÓN DEL VIDEO ");
+                                                                Console.WriteLine("6. AGREGAR A PLAYLIST ");
+                                                                Console.WriteLine("7. AGREGAR A FAVORITOS ");
+                                                                Console.WriteLine("8. AGREGAR A LA COLA ");
+                                                                Console.WriteLine("9. REPRODUCIR COLA");
+                                                                Console.WriteLine("10. ELIMINAR COLA");
+                                                                Console.WriteLine("11. SALIR");
+                                                                Console.WriteLine("");
+                                                                opcion10 = ALAINID.Numero(12);
+                                                                switch (opcion10)
+                                                                {
+                                                                    case 1:
+                                                                        pla.Playsong(u);
+                                                                        ALAINID.GuardarUltimareproduccion(email2, u);
+                                                                        ALAINID.Aumentarreproduccion(w, v);
+                                                                        //CAMBIO
 
+                                                                        break;
+                                                                    case 2:
+                                                                        pla.PauseSong();
+                                                                        break;
+                                                                    case 3:
+                                                                        pla.ResumeSong(u);
+                                                                        break;
+                                                                    case 4:
+                                                                        pla.StopSong();
+                                                                        break;
+                                                                    case 5:
+                                                                        int opcion60 = '\0';
+                                                                        while (opcion60 != 1)
+                                                                        {
+                                                                            Console.Clear();
+                                                                            ALAINID.Verinfodeunvideo(ALAINID.lista_filtrada_finalv[numerocancion - 1]);
+                                                                            Console.WriteLine("======================================");
+                                                                            Console.WriteLine("1. ATRAS");
+                                                                            opcion60 = ALAINID.Numero(1);
+                                                                            switch (opcion60)
+                                                                            {
+                                                                                case 1:
+                                                                                    break;
+                                                                            }
+                                                                        }
+                                                                        break;
+                                                                    case 6:
+                                                                        Console.WriteLine("INGRESE EL NUMERO DE LA PLAYLIST A LA QUE DESEA AGREGAR");
+                                                                        Console.WriteLine(ALAINID.Vernombresplaylistcancion(email2));
+                                                                        string nply = Console.ReadLine();
+                                                                        Console.WriteLine(ALAINID.Agregarcancionaply(email2, nply, ALAINID.lista_filtrada_final[numerocancion - 1]));
+                                                                        Thread.Sleep(2000);
+                                                                        break;
+                                                                    case 7:
+                                                                        ALAINID.Agregar_video_a_favoritos(email2, ALAINID.lista_filtrada_finalv[numerocancion - 1]);
+                                                                        break;
+                                                                    case 8:
+                                                                        pla.Agregarcancionacola(u);
+
+                                                                        //pla.limpiacola();
+                                                                        break;
+                                                                    case 9:
+                                                                        int accion36 = '\0';
+                                                                        while (accion36 != 6)
+                                                                        {
+                                                                            Console.Clear();
+                                                                            Console.WriteLine("1. PLAY COLA");
+                                                                            Console.WriteLine("2. PAUSAR COLA");
+                                                                            Console.WriteLine("3. REANUDAR COLA");
+                                                                            Console.WriteLine("4. SIGUIENTE VIDEO");
+                                                                            Console.WriteLine("5. VIDEO ANTERIOR");
+                                                                            Console.WriteLine("6. ATRAS");
+                                                                            accion36 = ALAINID.Numero(6);
+                                                                            switch (accion36)
+                                                                            {
+                                                                                case 1:
+                                                                                    pla.playcola();
+                                                                                    ALAINID.GuardarUltimareproduccion(email2, u);
+                                                                                    break;
+                                                                                case 2:
+                                                                                    pla.PauseSong();
+                                                                                    break;
+                                                                                case 3:
+                                                                                    pla.ResumeSong(u);
+                                                                                    break;
+                                                                                case 4:
+                                                                                    pla.siguiente();
+                                                                                    break;
+                                                                                case 5:
+                                                                                    pla.previa();
+                                                                                    break;
+                                                                                case 6:
+                                                                                    break;
+                                                                                default:
+                                                                                    Console.WriteLine("SELECCIONA UNA OPCION VALIDA");
+                                                                                    break;
+
+                                                                            }
+
+                                                                        }
+                                                                        break;
+                                                                    case 10:
+                                                                        pla.limpiacola();
+                                                                        break;
+                                                                    case 11:
+                                                                        // salir
+                                                                        break;
+                                                                    default:
+                                                                        Console.WriteLine("SELECCIONA UNA OPCION VALIDA");
+                                                                        break;
+                                                                }
+                                                            }
+                                                        }
+                                                        else { if (numerocancion == 0) { break; } }
+                                                    }
                                                     break;
                                                 case 8:
                                                     break;
@@ -2812,10 +3103,10 @@ namespace Proyecto
                             switch (accion20)
                             {
                                 case 1:
-                                   
+
                                     Console.Clear();
                                     string genero = "";
-                                    string genero2  =  "";
+                                    string genero2 = "";
                                     string gen_comp = "";
                                     string nombrecan = "";
                                     string anopublicacion = "";
@@ -2932,8 +3223,8 @@ namespace Proyecto
                                     string nombre_video = "";
                                     float duracion2 = 0;
                                     string categoria = "";
-                                    string director = "";
                                     string genero5 = "";
+                                    string genero6  =  "";
                                     string anio_publicacion = "";
                                     string tipo_archivo = "";
                                     string calidad2 = "";
@@ -2950,8 +3241,21 @@ namespace Proyecto
                                     genero5 = ALAINID.ShowOptions(ALAINID.lista_generos_peliculas);      // -------------------37
                                     Console.WriteLine("Ingrese la categoria del video");
                                     categoria = ALAINID.ShowOptions(ALAINID.lista_categoria);      // -------------------37
-                                    Console.WriteLine("Ingrese el director del video:");
-                                    director = Console.ReadLine();
+                                    Console.WriteLine("Ingrese el director del video");
+                                    string namedir = Console.ReadLine();
+                                    Console.WriteLine("Ingrese la edad del director:");
+                                    int agedir = int.Parse(Console.ReadLine());
+                                    Console.WriteLine("Ingrese el Genero:\n" +
+                                                         "1-> Masculino\n" +
+                                                         "2-> Femenino\n");
+                                    int gendir = ALAINID.Numero(2);
+                                    string sexdir = "";
+                                    if (gendir == 1) { genero6 = "Masculino"; }
+                                    else if (gendir == 2) { genero6 = "Femenino"; }
+                                    Console.WriteLine("Ingrese la nacionalidad:");
+                                    string nacdir = Console.ReadLine();
+                                    Artista director = new Artista(namedir, agedir, genero6, nacdir);
+                                    
                                     Console.WriteLine("Ingrese el Film Studio del video:");
                                     film_studio = ALAINID.ShowOptions(ALAINID.lista_disquera);
                                     Console.WriteLine("Ingrese año de la publicación del video");
@@ -2964,19 +3268,11 @@ namespace Proyecto
                                     nombrearchivovideo = Console.ReadLine();
                                     string nombrearchivovideo2 = "Videos/" + nombrearchivovideo + "." + ALAINID.Todo_a_minuscula(tipo_archivo);
                                     Console.Clear();
-                                    ver4 = ALAINID.Verificar_existencia_director(director);
-                                    if (ver4)
-                                    {
-                                        ALAINID.Activarlistavideos();
-                                        ALAINID.Partirlistadirectores();
-                                        ALAINID.Partirlistaactores();
-                                        a.Subir_video(nombre_video, duracion2, categoria, director, genero5, anio_publicacion, tipo_archivo, calidad2, film_studio, tamanio, nombrearchivovideo2, reproduccion);
-                                    }
-                                    else
-                                    {
-                                        Console.WriteLine("No fue Posible agregar la cancion, verifique los datos y el archivo ingresado e intente nuevamente");
-                                    }
-
+                                    ALAINID.Activarlistavideos();
+                                    ALAINID.Partirlistadirectores();
+                                    ALAINID.Partirlistaactores();
+                                    a.Subir_video(nombre_video, duracion2, categoria, director, genero5, anio_publicacion, tipo_archivo, calidad2, film_studio, tamanio, nombrearchivovideo2, reproduccion);
+                                    
                                     break;
                                 case 5:
                                     ALAINID.Activarlistavideos();
@@ -3006,7 +3302,7 @@ namespace Proyecto
                                     //ALAINID.Crear_compositor();
                                     break;
                                 case 8:
-                                    ALAINID.Crear_director();
+                                    //ALAINID.Crear_director();
                                     break;
                                 case 9:
                                     ALAINID.Crear_actor();
@@ -3097,9 +3393,9 @@ namespace Proyecto
                                     Console.Clear();
                                     string nombrecan3 = "";
                                     string genero3 = "";
-                                    string genero4  =  "";
+                                    string genero4 = "";
                                     string gen_comp1 = "";
-                                   
+
                                     string anopublicacion3 = "";
                                     string disquera3 = "";
                                     string album3 = "";
@@ -3162,7 +3458,7 @@ namespace Proyecto
                                     nombrearchivo3 = "CancionesKaraoke/" + nom3 + "." + ALAINID.Todo_a_minuscula(tipoarchivo3);
                                     ALAINID.activark();
                                     a.AgregarSongKaraoke(nombrecan3, cantante2, genero4, compositor3, anopublicacion3, disquera3, album3, duracion3, tipoarchivo3, tamano3, calidad3, nombrearchivo3, reproducciones3, letra3);
-                                   
+
                                     break;
                                 case 15:
                                     Console.WriteLine("=================================");

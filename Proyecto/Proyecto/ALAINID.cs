@@ -41,6 +41,7 @@ namespace Proyecto
         public static List<string> sexo = new List<string>();
         public static List<string> edades = new List<string>();
         public static List<Song> lista_filtrada_final = new List<Song>();
+        public static List<Video> lista_filtrada_finalv = new List<Video>();
         public static List<String> lista_disqueravideo = new List<String>();
 
 
@@ -1705,12 +1706,12 @@ namespace Proyecto
                 lista_filtrando2.Clear();
                 foreach (Song ss in filtocriteriomultiple(crit))
                 {
-                    
+
                     lista_filtrando2.Add(ss);
                 }
                 foreach (Song ccc in lista_filtrando2)
                 {
-                    int si  =  0;
+                    int si = 0;
                     foreach (Song canc in canciones_filtradas)
                     {
                         if (ccc.Nombrecancion == canc.Nombrecancion)
@@ -1718,7 +1719,8 @@ namespace Proyecto
                             si++;
                         }
                     }
-                    if (si == 0) {
+                    if (si == 0)
+                    {
                         canciones_filtradas.Add(ccc);
                     }
                 }
@@ -2044,19 +2046,20 @@ namespace Proyecto
                 }
                 count2++;
             }
-            if (lista_filtrada_final.Count == 0) 
+            if (lista_filtrada_final.Count == 0)
             {
-                lista_filtrada_final.Add(canciones_filtradas[0]);
+                Console.WriteLine("");
+
 
             }
             int si;
             foreach (Song ccc in canciones_filtradas)
             {
-                si = 0;                
+                si = 0;
                 foreach (Song canc in lista_filtrada_final)
                 {
-                    si = 0;
-                    if (ccc.Nombrecancion == canc.Nombrecancion)
+
+                    if ((ccc.Nombrecancion == canc.Nombrecancion) && (ccc.Cantante.Name == canc.Cantante.Name))
                     {
                         si++;
                     }
@@ -2501,7 +2504,7 @@ namespace Proyecto
 
         }
 
-        public static bool Verificar_existencia_cantante(Artista cantante)
+        public static bool Verificar_existencia_cantante(ref Artista cantante)
         {
             int h = 0, n2;
             foreach (Artista art in lista_cantantes)
@@ -2511,7 +2514,8 @@ namespace Proyecto
                     h = 1;
                     Console.WriteLine("El cantante ya existe en nuestra base de datos");
                     Thread.Sleep(2000);
-                    return false;
+                    cantante = art;
+                    return true;
                 }
             }
             if (h == 0)
@@ -2542,7 +2546,7 @@ namespace Proyecto
 
         }
 
-        public static bool Verificar_existencia_compositor(Artista compositor)
+        public static bool Verificar_existencia_compositor(ref Artista compositor)
         {
             int h = 0, n2;
             foreach (Artista comp in lista_compositores)
@@ -2552,7 +2556,8 @@ namespace Proyecto
                     h = 1;
                     Console.WriteLine("El compositor ya existe en nuestra base de datos");
                     Thread.Sleep(2000);
-                    return false;
+                    compositor = comp;
+                    return true;
                 }
             }
             if (h == 0)
@@ -2574,47 +2579,25 @@ namespace Proyecto
             return false;
         }
 
-        public static void Crear_director()
+        public static void Crear_director(Artista director)
         {
-            int h = 0;
-            Console.WriteLine("Ingrese el nombre completo");
-            string nombre = Console.ReadLine();
-            Console.WriteLine("Ingrese la edad:");
-            int edad = int.Parse(Console.ReadLine());
-            Console.WriteLine("Ingrese la nacionalidad:");
-            string nacion = Console.ReadLine();
-            Console.WriteLine("Ingrese el Genero:\n" +
-                "1-> Masculino\n" +
-                "2-> Femenino\n");
-            int gen = Numero(2); string genero = "";
-            if (gen == 1) { genero = "Masculino"; }
-            else if (gen == 2) { genero = "Femenino"; }
-            Artista director = new Artista(nombre, edad, genero, nacion);
-            foreach (Artista dir in lista_directores)
-            {
-                if (dir == director)
-                {
-                    Console.WriteLine("Este director ya existe\n");
-                    h = 1;
-                    break;
-                }
-            }
-            if (h == 0)
-            {
-                lista_directores.Add(director);
-                AlmacenarDirectores(lista_directores);
-                Console.WriteLine("Perfil del Director fue creado exitosamente.\n");
-            }
+            lista_directores.Add(director);
+            AlmacenarDirectores(lista_directores);
+            Console.WriteLine("Perfil del Director fue creado exitosamente.\n");
         }
+        
 
-        public static bool Verificar_existencia_director(string director)
+        public static bool Verificar_existencia_director(ref Artista director)
         {
             int h = 0, n2;
             foreach (Artista dire in lista_directores)
             {
-                if (dire.Name == director)
+                if (dire.Name == director.Name)
                 {
                     h = 1;
+                    Console.WriteLine("El director ya existe en nuestra base de datos");
+                    Thread.Sleep(2000);
+                    director = dire;
                     return true;
                 }
             }
@@ -2626,7 +2609,7 @@ namespace Proyecto
                 n2 = Numero(2);
                 if (n2 == 1)
                 {
-                    Crear_director();
+                    Crear_director(director);
                     return true;
                 }
                 else
@@ -2709,13 +2692,14 @@ namespace Proyecto
             AlmacenarAlbum(todos_los_albumes);
         }
 
-        public static bool Verificar_exisitencia_Album(string nombre_album, Artista cantante2)
+        public static bool Verificar_exisitencia_Album(string nombre_album, ref Artista cantante2)
         {
             int h = 0, n2;
             foreach (Artista cantante in lista_cantantes)
             {
                 if (cantante.Name == cantante2.Name)
                 {
+                    cantante2 = cantante;
                     foreach (PlaylistSong album in cantante.Lista_album)
                     {
                         if (album.NombrePlaylist == nombre_album)
@@ -3892,6 +3876,258 @@ namespace Proyecto
                 lista_filtrando2v.Add(ss);
             }
             return lista_filtrando2v;
+        }
+
+
+        public static List<Video> filtro_multiple_video_or(string criterio)
+        {
+            lista_filtrando2v.Clear();
+
+            switch (criterio)
+            {
+                case "Genero":
+                    lista_filtrandov = VideosporGenero();
+                    break;
+                case "Film Studio":
+                    lista_filtrandov = Videosporfilmstudio();
+                    break;
+                case "Actores":
+                    lista_filtrandov = Videopornombre_actor();
+                    break;
+                case "Director":
+                    lista_filtrandov = Videopornombre_directores();
+                    break;
+                case "Categoria":
+                    lista_filtrandov = Videoporcategoria();
+                    break;
+                case "Nombre":
+                    lista_filtrandov = Videopornombrevideo();
+                    break;
+                case "Año Publicacion":
+                    lista_filtrandov = Videosporaniopublicacion();
+                    break;
+                case "Calidad/Resolucion":
+                    lista_filtrandov = Videosporcalidadvideo();
+                    break;
+                case "Evaluacion":
+                    lista_filtrandov = Videoporevaluacion();
+                    break;
+                default:
+                    Console.WriteLine("No existen videos que cumplan con el criterio y valor seleccionado");
+                    break;
+            }
+            return lista_filtrando2v;
+        }
+
+        public static List<Video> Buqueda_multiple_videos_or()
+        {
+            lista_canciones_filtromiltiplev.Clear();
+            lista_artistas_filtromiltiplev.Clear();
+            lista_criterios_filtro3v.Clear();
+            foreach (Video caca in todos_los_videos)
+            {
+                lista_canciones_filtromiltiplev.Add(caca);
+            }
+            foreach (Artista cancan in lista_actores)
+            {
+                lista_artistas_filtromiltiplev.Add(cancan);
+            }
+            foreach (Artista comcom in lista_directores)
+            {
+                lista_artistas_filtromiltiplev.Add(comcom);
+            }
+            foreach (string cricri in lista_criterios_filtro2v)
+            {
+                lista_criterios_filtro3v.Add(cricri);
+            }
+            canciones_filtradasv.Clear();
+
+            Console.WriteLine("Los criterios para busqueda multiple son los siguientes:");
+            int num = 0, num_select = 1;
+            foreach (string cri in lista_criterios_filtro3v)
+            {
+                Console.WriteLine(" - " + cri);
+
+            }
+            Console.WriteLine("Ingrese el numero de Criterios desea usar para la busca multiple:");
+            num = Numero(7);
+            string criterio;
+            List<string> criterios_seleccionados = new List<string>();
+            while (num_select <= num)
+            {
+                criterio = "\0";
+                Console.WriteLine("Seleccione el criterio N° " + num_select + " para su busqueda");
+                criterio = ShowOptions(lista_criterios_filtro3v);
+                lista_criterios_filtro3v.Remove(criterio);
+                criterios_seleccionados.Add(criterio);
+                num_select++;
+            }
+            Console.Clear();
+            Console.WriteLine("Usted selecciono buscar por:");
+            foreach (string c in criterios_seleccionados)
+            {
+                Console.WriteLine(" - " + c);
+            }
+            foreach (string crit in criterios_seleccionados)
+            {
+
+                lista_filtrando2v.Clear();
+                foreach (Video ss in filtro_multiple_video_or(crit))
+                {
+
+                    lista_filtrando2v.Add(ss);
+                }
+                foreach (Video ccc in lista_filtrando2v)
+                {
+                    int si = 0;
+                    foreach (Video canc in canciones_filtradasv)
+                    {
+                        if (ccc.Nombre_video == canc.Nombre_video)
+                        {
+                            si++;
+                        }
+                    }
+                    if (si == 0)
+                    {
+                        canciones_filtradasv.Add(ccc);
+                    }
+                }
+            }
+            return canciones_filtradasv;
+        }
+
+
+        public static List<Video> filtro_multiple_video_and(string criterio)
+        {
+            lista_filtrandov.Clear();
+            switch (criterio)
+            {
+                case "Genero":
+                    lista_filtrandov = VideosporGenero();
+                    break;
+                case "Film Studio":
+                    lista_filtrandov = Videosporfilmstudio();
+                    break;
+                case "Actores":
+                    lista_filtrandov = Videopornombre_actor();
+                    break;
+                case "Director":
+                    lista_filtrandov = Videopornombre_directores();
+                    break;
+                case "Categoria":
+                    lista_filtrandov = Videoporcategoria();
+                    break;
+                case "Nombre":
+                    lista_filtrandov = Videopornombrevideo();
+                    break;
+                case "Año Publicacion":
+                    lista_filtrandov = Videosporaniopublicacion();
+                    break;
+                case "Calidad/Resolucion":
+                    lista_filtrandov = Videosporcalidadvideo();
+                    break;
+                case "Evaluacion":
+                    lista_filtrandov = Videoporevaluacion();
+                    break;
+                default:
+                    Console.WriteLine("No existen videos que cumplan con el criterio y valor seleccionado");
+                    break;
+            }
+            return lista_filtrandov;
+        }
+        public static List<Video> Buqueda_multiple_videos_and()
+        {
+            lista_canciones_filtromiltiplev.Clear();
+            lista_artistas_filtromiltiplev.Clear();
+            lista_criterios_filtro3v.Clear();
+            foreach (Video caca in todos_los_videos)
+            {
+                lista_canciones_filtromiltiplev.Add(caca);
+            }
+            foreach (Artista cancan in lista_actores)
+            {
+                lista_artistas_filtromiltiplev.Add(cancan);
+            }
+            foreach (Artista comcom in lista_directores)
+            {
+                lista_artistas_filtromiltiplev.Add(comcom);
+            }
+            foreach (string cricri in lista_criterios_filtro2v)
+            {
+                lista_criterios_filtro3v.Add(cricri);
+            }
+            canciones_filtradasv.Clear();
+
+            Console.WriteLine("Los criterios para busqueda multiple son los siguientes:");
+            int num = 0, num_select = 1;
+            foreach (String cri in lista_criterios_filtro3v)
+            {
+                Console.WriteLine(" - " + cri);
+
+            }
+            Console.WriteLine("Ingrese el numero de Criterios desea usar para la busca multiple:");
+            num = Numero(7);
+            string criterio;
+            List<string> criterios_seleccionados = new List<string>();
+            while (num_select <= num)
+            {
+                criterio = "\0";
+                Console.WriteLine("Seleccione el criterio N° " + num_select + " para su busqueda");
+                criterio = ShowOptions(lista_criterios_filtro3v);
+                lista_criterios_filtro3v.Remove(criterio);
+                criterios_seleccionados.Add(criterio);
+                num_select++;
+            }
+            Console.Clear();
+            Console.WriteLine("Usted selecciono buscar por:");
+            foreach (string c in criterios_seleccionados)
+            {
+                Console.WriteLine(" - " + c);
+            }
+            lista_filtrando2.Clear();
+            foreach (Video ss in filtro_multiple_video_and(criterios_seleccionados[0]))
+            {
+                lista_filtrando2v.Add(ss);
+            }
+            foreach (Video ccc in lista_filtrando2v)
+            {
+                canciones_filtradasv.Add(ccc);
+            }
+            int count2 = 1;
+            while (count2 < num)
+            {
+                lista_filtrando2v.Clear();
+                foreach (Video ss in filtro_multiple_video_and(criterios_seleccionados[count2]))
+                {
+                    canciones_filtradasv.Clear();
+                    canciones_filtradasv.Add(ss);
+                }
+                count2++;
+            }
+            if (lista_filtrada_finalv.Count == 0)
+            {
+                Console.WriteLine("");
+
+
+            }
+            int si;
+            foreach (Video ccc in canciones_filtradasv)
+            {
+                si = 0;
+                foreach (Video canc in lista_filtrada_finalv)
+                {
+
+                    if ((ccc.Nombre_video == canc.Nombre_video) && (ccc.Director.Name == canc.Director.Name))
+                    {
+                        si++;
+                    }
+                }
+                if (si == 0)
+                {
+                    lista_filtrada_finalv.Add(ccc);
+                }
+            }
+            return lista_filtrada_finalv;
         }
     }
 }

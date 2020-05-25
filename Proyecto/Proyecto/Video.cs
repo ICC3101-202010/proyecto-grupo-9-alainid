@@ -10,7 +10,7 @@ namespace Proyecto
         private string nombre_video;
         private float duracion;
         private string categoria;     //tiene que estar en la lista de categorias
-        private object director;     // tiene que estar en la lista de directores
+        private Artista director;     // tiene que estar en la lista de directores
         private string genero;          // tiene q estar en la lista de generos 
         private string anio_publicacion;
         private string descripcion;
@@ -27,7 +27,7 @@ namespace Proyecto
         public string Nombre_video { get => nombre_video; set => nombre_video = value; }
         public float Duracion { get => duracion; set => duracion = value; }
         public string Categoria { get => categoria; set => categoria = value; }
-        public object Director { get => director; set => director = value; }
+        public Artista Director { get => director; set => director = value; }
         public string Genero { get => genero; set => genero = value; }
         public string Anio_publicacion { get => anio_publicacion; set => anio_publicacion = value; }
         public string Descripcion { get => descripcion; set => descripcion = value; }
@@ -48,7 +48,7 @@ namespace Proyecto
 
         // asumi que tanto la descripcion como la calificacion promedio, no son requisitos para subir una cancion
 
-        public Video(string nombre_video, float duracion, string categoria, object director, string genero, string anio_publicacion, string tipo_archivo, string calidad, string film_studio, float tamanio, string nombrearchivovideo, int _reproduccion)
+        public Video(string nombre_video, float duracion, string categoria, Artista director, string genero, string anio_publicacion, string tipo_archivo, string calidad, string film_studio, float tamanio, string nombrearchivovideo, int _reproduccion)
         {
             this.nombre_video = nombre_video;
             this.duracion = duracion;
@@ -99,7 +99,7 @@ namespace Proyecto
             {
                 li_actores = li_actores + actor.Name+" , ";
             }
-            string info = (" Genero: " + genero + "\n" + " Director: " + director + "\n" + " Actores: " + li_actores + "\n" + " Nombre: " + nombre_video + "\n" +
+            string info = (" Genero: " + genero + "\n" + " Director: " + director.Name + "\n" + " Actores: " + li_actores + "\n" + " Nombre: " + nombre_video + "\n" +
                 " Categoria: " + categoria + "\n" + "Año de publicacion: " + anio_publicacion + "\n" + "Descripcion: " + descripcion + "\n" + "Tipo Archivo: " + tipo_archivo + "\n" + "Tamaño Archivo: " + tamanio + "MB \n" + "Calidad: " + calidad + "\n" + "Film Studio: " + film_studio + "\n" + "Calificacion Promedio: " + calificacion_promedio + "\n" + "Duracion: " + duracion + "\n");
             return info;
         }

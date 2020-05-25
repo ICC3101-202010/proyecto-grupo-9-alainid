@@ -21,9 +21,9 @@ namespace Proyecto
             FileInfo fileInfo = new FileInfo(nombrearchivo);
             tamano = fileInfo.Length / 1000000;
             Song s = new Song(nombrecan, cantante, genero, compositor, anopublicacion, disquera, album, letra, duracion, tipoarchivo, tamano, calidad, nombrearchivo);
-            ver1 = ALAINID.Verificar_existencia_cantante(cantante);
-            ver2 = ALAINID.Verificar_existencia_compositor(compositor);
-            ver3 = ALAINID.Verificar_exisitencia_Album(album, cantante);
+            ver1 = ALAINID.Verificar_existencia_cantante(ref cantante);
+            ver2 = ALAINID.Verificar_existencia_compositor(ref compositor);
+            ver3 = ALAINID.Verificar_exisitencia_Album(album, ref cantante);
             foreach (Song si in ALAINID.todas_las_canciones)
             {
                 if (si == s)
@@ -68,20 +68,22 @@ namespace Proyecto
             return true;
         }
 
-        public void Subir_video(string nombre_video, float duracion, string categoria, object director, string genero, string anio_publicacion, string tipo_archivo, string calidad, string film_studio, float tamanio, string nombrearchivovideo, int reproduccion1)
+        public void Subir_video(string nombre_video, float duracion, string categoria, Artista director, string genero, string anio_publicacion, string tipo_archivo, string calidad, string film_studio, float tamanio, string nombrearchivovideo, int reproduccion1)
         {
+            
             Console.Clear();
             FileInfo fileInfo = new FileInfo(nombrearchivovideo);
             tamanio = (fileInfo.Length) / 1000000;
-            bool ver2 = true;
+            bool ver2 = ALAINID.Verificar_existencia_director(ref director);
             Video video1 = new Video(nombre_video, duracion, categoria, director, genero, anio_publicacion, tipo_archivo, calidad, film_studio, tamanio, nombrearchivovideo, reproduccion1);
             string nombre_actor;
             foreach (Video video in ALAINID.todos_los_videos)
             {
                 if (video == video1)
                 {
-                    ver2 = false;
-                    break;
+                    Console.WriteLine("este video ya existe en ALAINID");
+                    Thread.Sleep(2000);
+                    
                 }
             }
             if (ver2 == true)
