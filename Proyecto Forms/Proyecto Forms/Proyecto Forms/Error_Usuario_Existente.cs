@@ -31,5 +31,15 @@ namespace Proyecto_Forms
         {
             panel1.Visible  = true;
         }
+
+        public void mostrar_contrasena_incorrecta()
+        {
+            Contrasena_incorrecta.Visible = true;
+        }
+
+        private void Contrasena_incorrecta_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

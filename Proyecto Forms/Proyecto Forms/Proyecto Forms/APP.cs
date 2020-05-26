@@ -113,7 +113,9 @@ namespace Proyecto_Forms
             bool bol = ALAINID.Ingresaralaapp(mail_inicio.Text, password_inicio.Text);
             if (bol == true)
             {
-                //panel_interfaz_alainid = true;
+                Bienvenido_ALAINID.Visible = true;
+
+               
             }
             else if (bol == false)
             {
@@ -127,6 +129,11 @@ namespace Proyecto_Forms
         private void Atras_Inicio_Click_1(object sender, EventArgs e)
         {
             panel_Iniciar_Sesion.Visible = false;
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

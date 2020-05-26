@@ -21,3 +21,15 @@ C:\Users\rvarg\Desktop\Proyecto POO\proyecto-grupo-9-alainid\Proyecto Forms\Proy
 C:\Users\rvarg\Desktop\Proyecto POO\proyecto-grupo-9-alainid\Proyecto Forms\Proyecto Forms\Proyecto Forms\bin\Debug\Proyecto Forms.exe
 C:\Users\rvarg\Desktop\Proyecto POO\proyecto-grupo-9-alainid\Proyecto Forms\Proyecto Forms\Proyecto Forms\bin\Debug\Proyecto Forms.pdb
 C:\Users\rvarg\Desktop\Proyecto POO\proyecto-grupo-9-alainid\Proyecto Forms\Proyecto Forms\Proyecto Forms\obj\Debug\Proyecto_Forms.Error_Usuario_Existente.resources
+C:\Users\cvera\Desktop\proyecto-grupo-9-alainid-master (6)\proyecto-grupo-9-alainid-master\Proyecto Forms\Proyecto Forms\Proyecto Forms\bin\Debug\Proyecto Forms.exe.config
+C:\Users\cvera\Desktop\proyecto-grupo-9-alainid-master (6)\proyecto-grupo-9-alainid-master\Proyecto Forms\Proyecto Forms\Proyecto Forms\bin\Debug\Proyecto Forms.exe
+C:\Users\cvera\Desktop\proyecto-grupo-9-alainid-master (6)\proyecto-grupo-9-alainid-master\Proyecto Forms\Proyecto Forms\Proyecto Forms\bin\Debug\Proyecto Forms.pdb
+C:\Users\cvera\Desktop\proyecto-grupo-9-alainid-master (6)\proyecto-grupo-9-alainid-master\Proyecto Forms\Proyecto Forms\Proyecto Forms\obj\Debug\Proyecto Forms.csprojAssemblyReference.cache
+C:\Users\cvera\Desktop\proyecto-grupo-9-alainid-master (6)\proyecto-grupo-9-alainid-master\Proyecto Forms\Proyecto Forms\Proyecto Forms\obj\Debug\Proyecto_Forms.Error.resources
+C:\Users\cvera\Desktop\proyecto-grupo-9-alainid-master (6)\proyecto-grupo-9-alainid-master\Proyecto Forms\Proyecto Forms\Proyecto Forms\obj\Debug\Proyecto_Forms.APP.resources
+C:\Users\cvera\Desktop\proyecto-grupo-9-alainid-master (6)\proyecto-grupo-9-alainid-master\Proyecto Forms\Proyecto Forms\Proyecto Forms\obj\Debug\Proyecto_Forms.Error_Usuario_Existente.resources
+C:\Users\cvera\Desktop\proyecto-grupo-9-alainid-master (6)\proyecto-grupo-9-alainid-master\Proyecto Forms\Proyecto Forms\Proyecto Forms\obj\Debug\Proyecto_Forms.Properties.Resources.resources
+C:\Users\cvera\Desktop\proyecto-grupo-9-alainid-master (6)\proyecto-grupo-9-alainid-master\Proyecto Forms\Proyecto Forms\Proyecto Forms\obj\Debug\Proyecto Forms.csproj.GenerateResource.cache
+C:\Users\cvera\Desktop\proyecto-grupo-9-alainid-master (6)\proyecto-grupo-9-alainid-master\Proyecto Forms\Proyecto Forms\Proyecto Forms\obj\Debug\Proyecto Forms.csproj.CoreCompileInputs.cache
+C:\Users\cvera\Desktop\proyecto-grupo-9-alainid-master (6)\proyecto-grupo-9-alainid-master\Proyecto Forms\Proyecto Forms\Proyecto Forms\obj\Debug\Proyecto Forms.exe
+C:\Users\cvera\Desktop\proyecto-grupo-9-alainid-master (6)\proyecto-grupo-9-alainid-master\Proyecto Forms\Proyecto Forms\Proyecto Forms\obj\Debug\Proyecto Forms.pdb

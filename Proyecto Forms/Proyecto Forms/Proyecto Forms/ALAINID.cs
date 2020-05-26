@@ -879,37 +879,33 @@ namespace Proyecto_Forms
                     usuarioencontrado = true;
                     break;
                 }
-                else if (email =="")
-                {
-                    Error error = new Error();
-                    error.ShowDialog();
+            }
+            if ((email == "") || (password == ""))
+            {
+                Error error = new Error();
+                error.ShowDialog();
 
-                }
-                else if (password == "")
-                {
-                    Error error = new Error();
-                    error.ShowDialog();
-                }
+            }
+            else if (email == "" && password == "")
+            {
+                Error error = new Error();
+                error.ShowDialog();
             }
             if (usuarioencontrado == true)
             {
                 if (ui.Password_ != password)
                 {
-                    Console.WriteLine("Incorrect Password");
+                    Error_Usuario_Existente error_contraena = new Error_Usuario_Existente();
+                    error_contraena.mostrar_contrasena_incorrecta();
                     return false;
                 }
                 else
                 {
-                    Console.WriteLine("\nIngresando a ALAINID...");
-                    Thread.Sleep(2000);
-                    Console.WriteLine("Bievenido" + " " + ui.Nombre_);
-                    Thread.Sleep(3000);
                     return true;
                 }
             }
             else
             {
-                Console.WriteLine("Email not found");
                 return false;
             }
         }
