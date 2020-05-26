@@ -1,6 +1,6 @@
 ﻿namespace Proyecto_Forms
 {
-    partial class Error
+    partial class Error_Usuario_Existente
     {
         /// <summary>
         /// Required designer variable.
@@ -29,65 +29,63 @@
         private void InitializeComponent()
         {
             this.Aceptar_Error = new System.Windows.Forms.Button();
-            this.text_error = new System.Windows.Forms.Label();
+            this.Error_existe = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Campovacio = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // Aceptar_Error
             // 
             this.Aceptar_Error.Font = new System.Drawing.Font("Broadway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Aceptar_Error.Location = new System.Drawing.Point(157, 151);
+            this.Aceptar_Error.Location = new System.Drawing.Point(156, 162);
             this.Aceptar_Error.Name = "Aceptar_Error";
             this.Aceptar_Error.Size = new System.Drawing.Size(191, 46);
-            this.Aceptar_Error.TabIndex = 0;
+            this.Aceptar_Error.TabIndex = 1;
             this.Aceptar_Error.Text = "Aceptar";
             this.Aceptar_Error.UseVisualStyleBackColor = true;
             this.Aceptar_Error.Click += new System.EventHandler(this.Aceptar_Error_Click);
             // 
-            // text_error
+            // Error_existe
             // 
-            this.text_error.AutoSize = true;
-            this.text_error.Font = new System.Drawing.Font("Broadway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.text_error.Location = new System.Drawing.Point(96, 76);
-            this.text_error.Name = "text_error";
-            this.text_error.Size = new System.Drawing.Size(327, 22);
-            this.text_error.TabIndex = 1;
-            this.text_error.Text = "Email o Contraseña invalidos";
-            this.text_error.Click += new System.EventHandler(this.text_error_Click);
+            this.Error_existe.AutoSize = true;
+            this.Error_existe.Font = new System.Drawing.Font("Broadway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Error_existe.Location = new System.Drawing.Point(138, 85);
+            this.Error_existe.Name = "Error_existe";
+            this.Error_existe.Size = new System.Drawing.Size(234, 22);
+            this.Error_existe.TabIndex = 2;
+            this.Error_existe.Text = "Este Usuario ya exise";
+            this.Error_existe.Click += new System.EventHandler(this.Error_existe_Click);
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.Campovacio);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(55, 25);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(514, 130);
-            this.panel1.TabIndex = 2;
+            this.panel1.Size = new System.Drawing.Size(404, 116);
+            this.panel1.TabIndex = 3;
             this.panel1.Visible = false;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // Campovacio
+            // label1
             // 
-            this.Campovacio.AutoSize = true;
-            this.Campovacio.Font = new System.Drawing.Font("Broadway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Campovacio.Location = new System.Drawing.Point(51, 76);
-            this.Campovacio.Name = "Campovacio";
-            this.Campovacio.Size = new System.Drawing.Size(401, 22);
-            this.Campovacio.TabIndex = 2;
-            this.Campovacio.Text = "No puede dejar ningun campo vacio";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Broadway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(99, 51);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(193, 22);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Mail ya existente";
             // 
-            // Error
+            // Error_Usuario_Existente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(514, 271);
+            this.ClientSize = new System.Drawing.Size(508, 276);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.text_error);
+            this.Controls.Add(this.Error_existe);
             this.Controls.Add(this.Aceptar_Error);
-            this.Name = "Error";
-            this.Text = "Error";
+            this.Name = "Error_Usuario_Existente";
+            this.Text = "Error_Usuario_Existente";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -98,8 +96,8 @@
         #endregion
 
         private System.Windows.Forms.Button Aceptar_Error;
-        private System.Windows.Forms.Label text_error;
+        private System.Windows.Forms.Label Error_existe;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label Campovacio;
+        private System.Windows.Forms.Label label1;
     }
 }

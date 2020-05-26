@@ -24,18 +24,17 @@ namespace Proyecto_Forms
 
         private void btnRegistrarse_Click(object sender, EventArgs e)
         {
-            panel_Registrarse.Visible = true;
-            panel_Iniciar_Sesion.Visible = false;
-            
 
+            panel_Registrarse.Visible = true;
+          
 
         }
 
         private void btnIniciarsesion_Click(object sender, EventArgs e)
         {
-            panel_Iniciar_Sesion.Visible = true;
-            panel_Registrarse.Visible = false;
 
+            panel_Iniciar_Sesion.Visible = true;
+            
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -71,19 +70,23 @@ namespace Proyecto_Forms
 
         private void Crear_Usuario_Click(object sender, EventArgs e)
         {
-            User u1 = new User(nombre_completo.Text, nombre_usuario.Text, mail.Text, password.Text);
-            ALAINID.Activarlista();
-            ALAINID.Agregarusuarioalalista(u1);
+            try
+            {
+                User u1 = new User(nombre_completo.Text, nombre_usuario.Text, mail.Text, password.Text);
+                ALAINID.Activarlista();
+                ALAINID.Agregarusuarioalalista(u1);
+            }
+            catch
+            {
+                User u1 = new User(nombre_completo.Text, nombre_usuario.Text, mail.Text, password.Text);
+                ALAINID.Agregarusuarioalalista(u1);
+            } 
         }
 
         private void Atras_registro_Click(object sender, EventArgs e)
         {
             panel_Registrarse.Visible = false;
-            panel_Iniciar_Sesion.Visible = false;
         }
-
-        
-
 
 
         //Inico de sesion
@@ -106,22 +109,24 @@ namespace Proyecto_Forms
 
         private void Inicio_de_Sesion_Click(object sender, EventArgs e)
         {
+
             bool bol = ALAINID.Ingresaralaapp(mail_inicio.Text, password_inicio.Text);
             if (bol == true)
             {
                 //panel_interfaz_alainid = true;
-            }else if (bol== false)
+            }
+            else if (bol == false)
             {
                 Error error = new Error();
-               
-                //text_error.Text = "Usuario Invalido";
+                error.ShowDialog();
+                
             }
+            
         }
 
-        private void Atras_Inicio_Click(object sender, EventArgs e)
+        private void Atras_Inicio_Click_1(object sender, EventArgs e)
         {
             panel_Iniciar_Sesion.Visible = false;
-            panel_Registrarse.Visible = false;
         }
     }
 }

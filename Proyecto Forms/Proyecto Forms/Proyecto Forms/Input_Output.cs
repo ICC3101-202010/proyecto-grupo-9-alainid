@@ -57,7 +57,7 @@ namespace Proyecto_Forms
                         Console.WriteLine("Ingrese contraseña");
                         password2 = Console.ReadLine();
                         ALAINID.Activarlista();
-                        bol = ALAINID.Ingresaralaapp(email2, password2);
+                        //bol = ALAINID.Ingresaralaapp(email2, password2);
                         ALAINID.UltimaReproduccion(email2);
                         if (bol == true)
                         {

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(APP));
             this.btnRegistrarse = new System.Windows.Forms.Button();
             this.btnIniciarsesion = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
@@ -87,7 +88,6 @@
             // 
             // panel_Registrarse
             // 
-            this.panel_Registrarse.Controls.Add(this.panel_Iniciar_Sesion);
             this.panel_Registrarse.Controls.Add(this.Atras_registro);
             this.panel_Registrarse.Controls.Add(this.Crear_Usuario);
             this.panel_Registrarse.Controls.Add(this.label5);
@@ -99,7 +99,7 @@
             this.panel_Registrarse.Controls.Add(this.nombre_completo);
             this.panel_Registrarse.Controls.Add(this.nombre_usuario);
             this.panel_Registrarse.Controls.Add(this.mail);
-            this.panel_Registrarse.Location = new System.Drawing.Point(1, 0);
+            this.panel_Registrarse.Location = new System.Drawing.Point(2, 2);
             this.panel_Registrarse.Name = "panel_Registrarse";
             this.panel_Registrarse.Size = new System.Drawing.Size(802, 450);
             this.panel_Registrarse.TabIndex = 3;
@@ -115,7 +115,7 @@
             this.panel_Iniciar_Sesion.Controls.Add(this.label6);
             this.panel_Iniciar_Sesion.Controls.Add(this.password_inicio);
             this.panel_Iniciar_Sesion.Controls.Add(this.mail_inicio);
-            this.panel_Iniciar_Sesion.Location = new System.Drawing.Point(3, 0);
+            this.panel_Iniciar_Sesion.Location = new System.Drawing.Point(2, 2);
             this.panel_Iniciar_Sesion.Name = "panel_Iniciar_Sesion";
             this.panel_Iniciar_Sesion.Size = new System.Drawing.Size(799, 450);
             this.panel_Iniciar_Sesion.TabIndex = 12;
@@ -131,6 +131,7 @@
             this.Atras_Inicio.TabIndex = 6;
             this.Atras_Inicio.Text = "Atrás";
             this.Atras_Inicio.UseVisualStyleBackColor = true;
+            this.Atras_Inicio.Click += new System.EventHandler(this.Atras_Inicio_Click_1);
             // 
             // Inicio_de_Sesion
             // 
@@ -302,10 +303,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.panel_Iniciar_Sesion);
             this.Controls.Add(this.panel_Registrarse);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnIniciarsesion);
             this.Controls.Add(this.btnRegistrarse);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "APP";
             this.Text = "ALAINID";
             this.Load += new System.EventHandler(this.Form1_Load);

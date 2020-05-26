@@ -62,6 +62,12 @@
     <Compile Include="APP.Designer.cs">
       <DependentUpon>APP.cs</DependentUpon>
     </Compile>
+    <Compile Include="Error_Usuario_Existente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Error_Usuario_Existente.Designer.cs">
+      <DependentUpon>Error_Usuario_Existente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Input_Output.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="PlaylistSong.cs" />
@@ -76,6 +82,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="APP.resx">
       <DependentUpon>APP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Error_Usuario_Existente.resx">
+      <DependentUpon>Error_Usuario_Existente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

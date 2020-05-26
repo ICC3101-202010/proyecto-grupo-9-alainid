@@ -19,6 +19,7 @@ namespace Proyecto_Forms
     public static class ALAINID
 
     {
+
         public static List<User> listausuarios = new List<User>();       // TODOS LOS USUARIOS DE ALAINID
         public static List<Song> todas_las_canciones = new List<Song>();        // TODAS LAS CANCIONES EN ALAINID
         public static List<Video> todos_los_videos = new List<Video>();
@@ -50,6 +51,7 @@ namespace Proyecto_Forms
         public static List<Song> lista_filtrada_final = new List<Song>();
         public static List<Video> lista_filtrada_finalv = new List<Video>();
         public static List<String> lista_disqueravideo = new List<String>();
+
 
 
         //===============================================TODO LO QUE ES SERIALIZATION================================================================
@@ -822,39 +824,47 @@ namespace Proyecto_Forms
                 User ui = listausuarios[i];
                 if (ui.Email_ == "")
                 {
-                    Console.WriteLine("No se puede dejar vacio el mail");
+                    Error error = new Error();
+                    error.mostrar_panel();
+                    error.ShowDialog();
                     return false;
                 }
-                if (u1.Nombreusuario == "")
+                else if (u1.Nombreusuario == "")
                 {
-                    Console.WriteLine("No se puede dejar vacio el nombre de usuario");
+                    Error error1 = new Error();
+                    error1.mostrar_panel();
+                    error1.ShowDialog();
                     return false;
                 }
-                if (u1.Password_ == "")
+                else if (u1.Password_ == "")
                 {
-                    Console.WriteLine("No se puede dejar vacia la contraseña");
+                    Error error2 = new Error();
+                    error2.mostrar_panel();
+                    error2.ShowDialog();
                     return false;
                 }
-                if (u1.Nombre_ == "")
+                else if (u1.Nombre_ == "")
                 {
-                    Console.WriteLine("No se puede dejar vacio el nombre");
+                    Error error3 = new Error();
+                    error3.mostrar_panel();
+                    error3.ShowDialog();
                     return false;
-                }
-
-                if (ui.Email_ == u1.Email_)
+                }else if (ui.Email_ == u1.Email_)
                 {
-                    Console.WriteLine("Ya existe una cuenta con este email");
+                    Error_Usuario_Existente error5 = new Error_Usuario_Existente();
+                    error5.mostrar_mail_ya_existe();
+                    error5.ShowDialog();
                     return false;
-                }
-                if (ui.Nombreusuario == u1.Nombreusuario)
+                }else if (ui.Nombreusuario == u1.Nombreusuario)
                 {
-                    Console.WriteLine("Ya existe este nombre de usuario, pruebe con otro");
+                    Error_Usuario_Existente error5 = new Error_Usuario_Existente();
+                    error5.ShowDialog();
                     return false;
                 }
             }
             listausuarios.Add(u1);
             Almacenar(listausuarios);
-            Console.WriteLine("Usuario correctamente registrado");
+            //Console.WriteLine("Usuario correctamente registrado");
             return true;
         }
         public static bool Ingresaralaapp(string email, string password)
@@ -869,15 +879,17 @@ namespace Proyecto_Forms
                     usuarioencontrado = true;
                     break;
                 }
-                if (mail_inicio.Text)
+                else if (email =="")
                 {
-                    Error mail_vacio = new Error();
-                    Text_Error.Text = "No Puede dejar el Mail sin llenar"
+                    Error error = new Error();
+                    error.ShowDialog();
+
                 }
-                if (password.Text == "")
+                else if (password == "")
                 {
-                    Error mail_vacio = new Error();
-                    Text_Error.Text = "No Puede dejar la Contraseña sin llenar"                }
+                    Error error = new Error();
+                    error.ShowDialog();
+                }
             }
             if (usuarioencontrado == true)
             {
@@ -901,6 +913,7 @@ namespace Proyecto_Forms
                 return false;
             }
         }
+        
         public static void VerPersonas(List<User> lista)
         {
             if (lista.Count == 0)
