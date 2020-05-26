@@ -75,6 +75,7 @@ namespace Proyecto_Forms
                 User u1 = new User(nombre_completo.Text, nombre_usuario.Text, mail.Text, password.Text);
                 ALAINID.Activarlista();
                 ALAINID.Agregarusuarioalalista(u1);
+                
             }
             catch
             {
@@ -119,9 +120,7 @@ namespace Proyecto_Forms
             }
             else if (bol == false)
             {
-                Error error = new Error();
-                error.ShowDialog();
-                
+                DialogResult r = MessageBox.Show("Usuario Invalido", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Stop );
             }
             
         }
@@ -135,5 +134,99 @@ namespace Proyecto_Forms
         {
 
         }
+
+
+
+
+
+        //Menu Principal
+        private void Menu_Principal_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Buscar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Playlist_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Favoritos_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Social_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Perfil_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Karaoke_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Historial_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Descargas_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Lista_Inteligente_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Ultima_Reproduccion_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Cerrar_Sesion_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+
+        //Menu Perfil
+
+        private void Menu_Perfil_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Ver_Perfil_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Editar_Perfil_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Atras_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+
     }
 }
