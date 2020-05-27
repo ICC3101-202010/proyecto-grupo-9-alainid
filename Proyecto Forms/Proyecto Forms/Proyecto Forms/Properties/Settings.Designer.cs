@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Proyecto_Forms.Properties
+namespace ALAINID_DEFINITIVO.Properties
 {
 
 

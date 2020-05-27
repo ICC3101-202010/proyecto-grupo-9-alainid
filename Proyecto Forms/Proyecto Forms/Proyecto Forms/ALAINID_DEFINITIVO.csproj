@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D2F84DAF-63FB-4DA8-96A1-5E391D514456}</ProjectGuid>
+    <ProjectGuid>{17C9E230-2108-4AF1-94A4-633625281D46}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Proyecto_Forms</RootNamespace>
-    <AssemblyName>Proyecto Forms</AssemblyName>
+    <RootNamespace>ALAINID_DEFINITIVO</RootNamespace>
+    <AssemblyName>ALAINID_DEFINITIVO</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -35,7 +35,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Messaging" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -50,23 +49,23 @@
     <Compile Include="Admin.cs" />
     <Compile Include="ALAINID.cs" />
     <Compile Include="Artista.cs" />
-    <Compile Include="Error.cs">
+    <Compile Include="FORMS_ADMIN.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Error.Designer.cs">
-      <DependentUpon>Error.cs</DependentUpon>
+    <Compile Include="FORMS_ADMIN.Designer.cs">
+      <DependentUpon>FORMS_ADMIN.cs</DependentUpon>
     </Compile>
-    <Compile Include="APP.cs">
+    <Compile Include="FORMS_INICIO.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="APP.Designer.cs">
-      <DependentUpon>APP.cs</DependentUpon>
+    <Compile Include="FORMS_INICIO.Designer.cs">
+      <DependentUpon>FORMS_INICIO.cs</DependentUpon>
     </Compile>
-    <Compile Include="Error_Usuario_Existente.cs">
+    <Compile Include="FORMS_USUARIO.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Error_Usuario_Existente.Designer.cs">
-      <DependentUpon>Error_Usuario_Existente.cs</DependentUpon>
+    <Compile Include="FORMS_USUARIO.Designer.cs">
+      <DependentUpon>FORMS_USUARIO.cs</DependentUpon>
     </Compile>
     <Compile Include="Input_Output.cs" />
     <Compile Include="Player.cs" />
@@ -77,14 +76,14 @@
     <Compile Include="Song.cs" />
     <Compile Include="User.cs" />
     <Compile Include="Video.cs" />
-    <EmbeddedResource Include="Error.resx">
-      <DependentUpon>Error.cs</DependentUpon>
+    <EmbeddedResource Include="FORMS_ADMIN.resx">
+      <DependentUpon>FORMS_ADMIN.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="APP.resx">
-      <DependentUpon>APP.cs</DependentUpon>
+    <EmbeddedResource Include="FORMS_INICIO.resx">
+      <DependentUpon>FORMS_INICIO.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Error_Usuario_Existente.resx">
-      <DependentUpon>Error_Usuario_Existente.cs</DependentUpon>
+    <EmbeddedResource Include="FORMS_USUARIO.resx">
+      <DependentUpon>FORMS_USUARIO.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -95,6 +94,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Properties\DataSources\Proyecto_Forms.ALAINID.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -107,6 +107,25 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

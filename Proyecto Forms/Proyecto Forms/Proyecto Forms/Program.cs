@@ -1,11 +1,11 @@
-﻿using System;
-using System.Threading;
+﻿using Proyecto_Forms;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Proyecto_Forms
+namespace ALAINID_DEFINITIVO
 {
     static class Program
     {
@@ -15,6 +15,7 @@ namespace Proyecto_Forms
         [STAThread]
         static void Main()
         {
+
             ALAINID.lista_generos_canciones.Add("Electronica"); ALAINID.lista_generos_canciones.Add("Rock"); ALAINID.lista_generos_canciones.Add("Jazz");
             ALAINID.lista_generos_canciones.Add("Heavy Metal"); ALAINID.lista_generos_canciones.Add("Indie Rock");
             ALAINID.lista_generos_canciones.Add("House"); ALAINID.lista_generos_canciones.Add("Hip-Hop"); ALAINID.lista_generos_canciones.Add("R&B");
@@ -78,11 +79,9 @@ namespace Proyecto_Forms
             }
 
 
-
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new APP());
-
+            Application.Run(new FORMS_INICIO());
+        }
     }
-}
 }

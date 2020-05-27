@@ -822,49 +822,20 @@ namespace Proyecto_Forms
             for (int i = 0; i < listausuarios.Count; i++)
             {
                 User ui = listausuarios[i];
-                if (ui.Email_ == "")
+                if ((ui.Email_ == "")||(u1.Nombreusuario == "")||(u1.Password_ == "" )|| (u1.Nombre_ == ""))
                 {
-                    Error error = new Error();
-                    error.mostrar_panel();
-                    error.ShowDialog();
+                    MessageBox.Show("No Puede Dejar Campos Vacios", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+
                     return false;
-                }
-                else if (u1.Nombreusuario == "")
+                }else if (ui.Email_ == u1.Email_ || ui.Nombreusuario == u1.Nombreusuario)
                 {
-                    Error error1 = new Error();
-                    error1.mostrar_panel();
-                    error1.ShowDialog();
-                    return false;
-                }
-                else if (u1.Password_ == "")
-                {
-                    Error error2 = new Error();
-                    error2.mostrar_panel();
-                    error2.ShowDialog();
-                    return false;
-                }
-                else if (u1.Nombre_ == "")
-                {
-                    Error error3 = new Error();
-                    error3.mostrar_panel();
-                    error3.ShowDialog();
-                    return false;
-                }else if (ui.Email_ == u1.Email_)
-                {
-                    Error_Usuario_Existente error5 = new Error_Usuario_Existente();
-                    error5.mostrar_mail_ya_existe();
-                    error5.ShowDialog();
-                    return false;
-                }else if (ui.Nombreusuario == u1.Nombreusuario)
-                {
-                    Error_Usuario_Existente error5 = new Error_Usuario_Existente();
-                    error5.ShowDialog();
+                    MessageBox.Show("El Correo o Nombre de Usuario Ingresado ya Existen ", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                     return false;
                 }
             }
             listausuarios.Add(u1);
             Almacenar(listausuarios);
-            //Console.WriteLine("Usuario correctamente registrado");
+            MessageBox.Show("REGISTRO EXITOSO", "BIENVENIDO", MessageBoxButtons.OK, MessageBoxIcon.None);
             return true;
         }
         public static bool Ingresaralaapp(string email, string password)
@@ -880,23 +851,11 @@ namespace Proyecto_Forms
                     break;
                 }
             }
-            if ((email == "") || (password == ""))
-            {
-                Error error = new Error();
-                error.ShowDialog();
-
-            }
-            else if (email == "" && password == "")
-            {
-                Error error = new Error();
-                error.ShowDialog();
-            }
             if (usuarioencontrado == true)
             {
                 if (ui.Password_ != password)
                 {
-                    Error_Usuario_Existente error_contraena = new Error_Usuario_Existente();
-                    error_contraena.mostrar_contrasena_incorrecta();
+                    MessageBox.Show("CONTRASEÑA INVALIDA", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                     return false;
                 }
                 else
@@ -4146,5 +4105,6 @@ namespace Proyecto_Forms
             }
             return lista_filtrada_finalv;
         }
+        
     }
 }
