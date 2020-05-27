@@ -15,12 +15,12 @@ namespace Proyecto_Forms
                 Console.WriteLine(user.InformacionUsuario());
             }
         }
-        public bool AgregarSong(string nombrecan, Artista cantante, string genero, Artista compositor, string anopublicacion, string disquera, string album, float duracion, string tipoarchivo, float tamano, string calidad, string nombrearchivo, int reproduccion, string letra)
+        public bool AgregarSong(string nombrecan, Artista cantante, string genero, Artista compositor, string anopublicacion, string disquera, string album,string nombrearchivo)
         {
             bool ver1, ver2, ver3;
             FileInfo fileInfo = new FileInfo(nombrearchivo);
-            tamano = fileInfo.Length / 1000000;
-            Song s = new Song(nombrecan, cantante, genero, compositor, anopublicacion, disquera, album, letra, duracion, tipoarchivo, tamano, calidad, nombrearchivo);
+            //tamano = fileInfo.Length / 1000000;
+            Song s = new Song(nombrecan, cantante, genero, compositor, anopublicacion, disquera, album,nombrearchivo);
             ver1 = ALAINID.Verificar_existencia_cantante(ref cantante);
             ver2 = ALAINID.Verificar_existencia_compositor(ref compositor);
             ver3 = ALAINID.Verificar_exisitencia_Album(album, ref cantante);
@@ -188,9 +188,9 @@ namespace Proyecto_Forms
                 }
             }
         }
-        public bool AgregarSongKaraoke(string nombrecan2, Artista cantante2, string genero2, Artista compositor2, string anopublicacion2, string disquera2, string album2, float duracion2, string tipoarchivo2, float tamano2, string calidad2, string nombrearchivo2, int reproduccion2, string letra2)
+        public bool AgregarSongKaraoke(string nombrecan2, Artista cantante2, string genero2, Artista compositor2, string anopublicacion2, string disquera2, string album2,string nombrearchivo2)
         {
-            Song s = new Song(nombrecan2, cantante2, genero2, compositor2, anopublicacion2, disquera2, album2, letra2, duracion2, tipoarchivo2, tamano2, calidad2, nombrearchivo2);
+            Song s = new Song(nombrecan2, cantante2, genero2, compositor2, anopublicacion2, disquera2, album2,nombrearchivo2);
             foreach (Song si in ALAINID.todas_las_cancioneskaraoke)
             {
                 if (si == s)

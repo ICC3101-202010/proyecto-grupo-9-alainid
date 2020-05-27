@@ -17,14 +17,14 @@ namespace Proyecto_Forms
         private string letra;
         private float calificacionpromedio = 0;
         private float duracion;
-        private int reproducciones;
+        private int reproducciones = 0;
         private string tipoarchivo;
         private float tamano;
         private string calidad;
         private string nombrearchivo;
         private List<int> todas_las_calificaciones = new List<int>();
 
-        public Song(string nombrecancion, Artista cantante, string genero, Artista compositor, string anopublicacion, string disquera, string album, string letra, float duracion, string tipoarchivo, float tamano, string calidad, string nombrearchivo)
+        public Song(string nombrecancion, Artista cantante, string genero, Artista compositor, string anopublicacion, string disquera, string album, string nombrearchivo)
         {
             this.Nombrecancion = nombrecancion;
             this.Cantante = cantante;
@@ -33,11 +33,6 @@ namespace Proyecto_Forms
             this.Anopublicacion = anopublicacion;
             this.Disquera = disquera;
             this.Album = album;
-            this.Letra = letra;
-            this.Duracion = duracion;
-            this.Tipoarchivo = tipoarchivo;
-            this.Tamano = tamano;
-            this.Calidad = calidad;
             this.Nombrearchivo = nombrearchivo;
         }
 

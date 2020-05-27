@@ -3172,7 +3172,7 @@ namespace Proyecto_Forms
                                     ALAINID.Activarlistacantantes();
                                     ALAINID.Partirlistacompositores();
                                     ALAINID.Partirlistaalbumes();
-                                    a.AgregarSong(nombrecan, cantante, genero2, compositor, anopublicacion, disquera, album, duracion, tipoarchivo, tamano, calidad, nombrearchivo, reproducciones, letra);
+                                    a.AgregarSong(nombrecan, cantante, genero2, compositor, anopublicacion, disquera, album, nombrearchivo);
 
 
 
@@ -3457,10 +3457,8 @@ namespace Proyecto_Forms
                                     string nom3 = Console.ReadLine();
                                     nombrearchivo3 = "CancionesKaraoke/" + nom3 + "." + ALAINID.Todo_a_minuscula(tipoarchivo3);
                                     ALAINID.activark();
-                                    a.AgregarSongKaraoke(nombrecan3, cantante2, genero4, compositor3, anopublicacion3, disquera3, album3, duracion3, tipoarchivo3, tamano3, calidad3, nombrearchivo3, reproducciones3, letra3);
+                                    a.AgregarSongKaraoke(nombrecan3, cantante2, genero4, compositor3, anopublicacion3, disquera3, album3, nombrearchivo3);
 
-                                    break;
-                                case 15:
                                     Console.WriteLine("=================================");
                                     Console.WriteLine("CERRANDO SESION....");
                                     Console.WriteLine("=================================");

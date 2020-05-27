@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Proyecto_Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +14,7 @@ namespace ALAINID_DEFINITIVO
 {
     public partial class FORMS_ADMIN : Form
     {
+        Admin a = new Admin();
         public FORMS_ADMIN()
         {
             InitializeComponent();
@@ -54,7 +56,7 @@ namespace ALAINID_DEFINITIVO
         {
 
         }
-                    //DATOS CANTANTE
+        //DATOS CANTANTE
         private void nombre_cancion_txt_agregar_cancion_TextChanged(object sender, EventArgs e)
         {
 
@@ -79,7 +81,7 @@ namespace ALAINID_DEFINITIVO
         {
 
         }
-                    //DATOS COMPOSITOR
+        //DATOS COMPOSITOR
         private void nombrecompositor_txt_agregar_admin_TextChanged(object sender, EventArgs e)
         {
 
@@ -120,11 +122,16 @@ namespace ALAINID_DEFINITIVO
 
         }
 
-       
+
 
         private void btn_subir_cancion_admin_Click(object sender, EventArgs e)
         {
-
+            
+            ALAINID.Activarlistacanciones();
+            ALAINID.Activarlistacantantes();
+            ALAINID.Partirlistacompositores();
+            ALAINID.Partirlistaalbumes();
+            a.AgregarSong(nombre_cancion_txt_agregar_cancion.Text,cantante , genero2, compositor, anopublicacion, disquera, album, nombrearchivo);
         }
 
         private void btn_importar_cancion_admin_Click(object sender, EventArgs e)
@@ -340,5 +347,7 @@ namespace ALAINID_DEFINITIVO
         {
 
         }
+
+        
     }  
 }
