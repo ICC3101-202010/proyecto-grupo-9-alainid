@@ -130,9 +130,9 @@
             this.panel1_registrarse.Controls.Add(this.mail_text_de_registrarse);
             this.panel1_registrarse.Controls.Add(this.label1);
             this.panel1_registrarse.Controls.Add(this.btn_registrar_de_registrarse);
-            this.panel1_registrarse.Location = new System.Drawing.Point(0, 0);
+            this.panel1_registrarse.Location = new System.Drawing.Point(12, 12);
             this.panel1_registrarse.Name = "panel1_registrarse";
-            this.panel1_registrarse.Size = new System.Drawing.Size(800, 452);
+            this.panel1_registrarse.Size = new System.Drawing.Size(43, 40);
             this.panel1_registrarse.TabIndex = 19;
             this.panel1_registrarse.Visible = false;
             // 
@@ -268,7 +268,6 @@
             // 
             // panel2_inicio_sesion
             // 
-            this.panel2_inicio_sesion.Controls.Add(this.panel1_registrarse);
             this.panel2_inicio_sesion.Controls.Add(this.btn_atras_de_inicio_sesion);
             this.panel2_inicio_sesion.Controls.Add(this.label8);
             this.panel2_inicio_sesion.Controls.Add(this.btn_ingresar_inicio_sesion);
@@ -276,9 +275,9 @@
             this.panel2_inicio_sesion.Controls.Add(this.label7);
             this.panel2_inicio_sesion.Controls.Add(this.pass_txt_inicio_sesion);
             this.panel2_inicio_sesion.Controls.Add(this.nombre_completo_txt_inicio_sesion);
-            this.panel2_inicio_sesion.Location = new System.Drawing.Point(6, 2);
+            this.panel2_inicio_sesion.Location = new System.Drawing.Point(77, 12);
             this.panel2_inicio_sesion.Name = "panel2_inicio_sesion";
-            this.panel2_inicio_sesion.Size = new System.Drawing.Size(800, 452);
+            this.panel2_inicio_sesion.Size = new System.Drawing.Size(65, 48);
             this.panel2_inicio_sesion.TabIndex = 28;
             this.panel2_inicio_sesion.Visible = false;
             // 
@@ -375,6 +374,7 @@
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel2_inicio_sesion);
+            this.Controls.Add(this.panel1_registrarse);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.btn_primero_Salir);

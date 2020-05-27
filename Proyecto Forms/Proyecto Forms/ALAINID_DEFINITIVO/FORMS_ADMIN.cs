@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 namespace ALAINID_DEFINITIVO
 {
@@ -26,21 +27,25 @@ namespace ALAINID_DEFINITIVO
         private void btn_agregar_cancion_admin_Click(object sender, EventArgs e)
         {
             panel_agregar_cancion_admin.Visible = true;
+            panel_agregar_cancion_admin.Dock = DockStyle.Fill;
         }
 
         private void btn_agregar_video_admin_Click(object sender, EventArgs e)
         {
             panel_agregar_video_admin.Visible = true;
+            panel_agregar_video_admin.Dock = DockStyle.Fill;
         }
 
         private void btn_agregar_cancion_karaoke_admin_Click(object sender, EventArgs e)
         {
-
+            panel_agregar_cancion_karaoke_admin.Visible = true;
+            panel_agregar_cancion_karaoke_admin.Dock = DockStyle.Fill;
         }
 
         private void btn_ver_usuarios_admin_Click(object sender, EventArgs e)
         {
-
+            panel_ver_usuarios_admin.Visible = true;
+            panel_ver_usuarios_admin.Dock = DockStyle.Fill;
         }
 
 
@@ -130,6 +135,7 @@ namespace ALAINID_DEFINITIVO
         private void cancionesToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             panel_agregar_cancion_admin.Visible = true;
+            panel_agregar_cancion_admin.Dock = DockStyle.Fill;
         }
 
         private void btn_atras_de_agregar_cancion_admin_Click(object sender, EventArgs e)
@@ -208,6 +214,7 @@ namespace ALAINID_DEFINITIVO
         private void videosToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             panel_agregar_video_admin.Visible = true;
+            panel_agregar_video_admin.Dock = DockStyle.Fill;
         }
 
         private void FORMS_ADMIN_Load(object sender, EventArgs e)
@@ -285,6 +292,7 @@ namespace ALAINID_DEFINITIVO
         private void cancionesKaraokeToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             panel_agregar_cancion_karaoke_admin.Visible = true;
+            panel_agregar_cancion_karaoke_admin.Dock = DockStyle.Fill;
 
         }
 
@@ -298,6 +306,7 @@ namespace ALAINID_DEFINITIVO
         private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             panel_ver_usuarios_admin.Visible = true;
+            panel_ver_usuarios_admin.Dock = DockStyle.Fill;
 
         }
 
@@ -324,6 +333,11 @@ namespace ALAINID_DEFINITIVO
         private void artistasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             panel_ver_artistas_admin.Visible = true; ;
+
+        }
+
+        private void panel_ver_usuarios_admin_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }  

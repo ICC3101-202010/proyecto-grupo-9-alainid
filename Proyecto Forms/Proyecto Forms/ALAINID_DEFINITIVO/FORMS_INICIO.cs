@@ -21,12 +21,14 @@ namespace ALAINID_DEFINITIVO
         private void btn_ingresar_a_Registrarse_Click(object sender, EventArgs e)
         {
             panel1_registrarse.Visible = true;
+            panel1_registrarse.Dock = DockStyle.Fill;
         }
 
         private void btn_ingresar_a_Iniciarsesion_Click(object sender, EventArgs e)
         {
             panel1_registrarse.Visible = false;
             panel2_inicio_sesion.Visible = true;
+            panel2_inicio_sesion.Dock = DockStyle.Fill;
         }
 
         private void btn_primero_Salir_Click(object sender, EventArgs e)
@@ -100,7 +102,7 @@ namespace ALAINID_DEFINITIVO
                 if (bol == true)
                 {
                     FORMS_USUARIO fORMS_USUARIO = new FORMS_USUARIO();
-                    fORMS_USUARIO.Show();
+                    fORMS_USUARIO.Show();// hacer evento
 
                 }
                 else if (bol == false)
@@ -111,7 +113,7 @@ namespace ALAINID_DEFINITIVO
             else
             {
                 FORMS_ADMIN fORMS_ADMIN = new FORMS_ADMIN();
-                fORMS_ADMIN.Show();
+                fORMS_ADMIN.Show();//evento
             }
         }
 

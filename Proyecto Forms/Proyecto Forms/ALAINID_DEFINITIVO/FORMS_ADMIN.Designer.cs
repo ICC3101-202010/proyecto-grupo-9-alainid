@@ -80,35 +80,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.nombre_cancion_txt_agregar_cancion = new System.Windows.Forms.TextBox();
             this.panel_agregar_video_admin = new System.Windows.Forms.Panel();
-            this.panel_agregar_cancion_karaoke_admin = new System.Windows.Forms.Panel();
-            this.panel_ver_usuarios_admin = new System.Windows.Forms.Panel();
-            this.btn_atras_de_ver_usuarios_admin = new System.Windows.Forms.Button();
-            this.lista_usuarios_admin = new System.Windows.Forms.ListBox();
-            this.sexocompositorcancionkaraoke_agregar_cancion_karaoke_admin = new System.Windows.Forms.ComboBox();
-            this.nombrecantantecancionkaraoke_agregar_cancion_karaoke_admin = new System.Windows.Forms.TextBox();
-            this.btn_atras_de_agregar_cancion_karaoke_admin = new System.Windows.Forms.Button();
-            this.btn_subir_cancion_de_agregar_cancion_karaoke_admin = new System.Windows.Forms.Button();
-            this.btn_importar_video_de_cancion_karaoke_en_agregar_cancion_karaoke_admin = new System.Windows.Forms.Button();
-            this.generocancionkaraoke_agregar_cancion_karaoke_admin = new System.Windows.Forms.ComboBox();
-            this.sexocantantecancionkaraoke_agregar_cancion_karaoke_admin = new System.Windows.Forms.ComboBox();
-            this.label29 = new System.Windows.Forms.Label();
-            this.nacionalidadcompositorcancionkaraoke_agregar_cancion_karaoke_admin = new System.Windows.Forms.TextBox();
-            this.edadcompositorcancionkaraoke_agregar_cancion_karaoke_admin = new System.Windows.Forms.TextBox();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.nombrecompositorcancionkaraoke_agregar_cancion_karaoke_admin = new System.Windows.Forms.TextBox();
-            this.label36 = new System.Windows.Forms.Label();
-            this.nacionalidadcantantecancionkaraoke_agregar_cancion_karaoke_admin = new System.Windows.Forms.TextBox();
-            this.edadcantantecancionkaraoke_agregar_cancion_karaoke_admin = new System.Windows.Forms.TextBox();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.label39 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
-            this.label42 = new System.Windows.Forms.Label();
-            this.nombrecancionkaraoke_agregar_cancion_karaoke_admin = new System.Windows.Forms.TextBox();
             this.categoriavideo_agregar_video_admin = new System.Windows.Forms.ComboBox();
             this.btn_atras_de_agregar_video_admin = new System.Windows.Forms.Button();
             this.btn_subir_video_de_agregar_video_admin = new System.Windows.Forms.Button();
@@ -132,14 +103,43 @@
             this.label30 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.nombrevideo_agregar_video_admin = new System.Windows.Forms.TextBox();
+            this.panel_agregar_cancion_karaoke_admin = new System.Windows.Forms.Panel();
+            this.label42 = new System.Windows.Forms.Label();
+            this.sexocompositorcancionkaraoke_agregar_cancion_karaoke_admin = new System.Windows.Forms.ComboBox();
+            this.nombrecantantecancionkaraoke_agregar_cancion_karaoke_admin = new System.Windows.Forms.TextBox();
+            this.btn_atras_de_agregar_cancion_karaoke_admin = new System.Windows.Forms.Button();
+            this.btn_subir_cancion_de_agregar_cancion_karaoke_admin = new System.Windows.Forms.Button();
+            this.btn_importar_video_de_cancion_karaoke_en_agregar_cancion_karaoke_admin = new System.Windows.Forms.Button();
+            this.generocancionkaraoke_agregar_cancion_karaoke_admin = new System.Windows.Forms.ComboBox();
+            this.sexocantantecancionkaraoke_agregar_cancion_karaoke_admin = new System.Windows.Forms.ComboBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.nacionalidadcompositorcancionkaraoke_agregar_cancion_karaoke_admin = new System.Windows.Forms.TextBox();
+            this.edadcompositorcancionkaraoke_agregar_cancion_karaoke_admin = new System.Windows.Forms.TextBox();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.nombrecompositorcancionkaraoke_agregar_cancion_karaoke_admin = new System.Windows.Forms.TextBox();
+            this.label36 = new System.Windows.Forms.Label();
+            this.nacionalidadcantantecancionkaraoke_agregar_cancion_karaoke_admin = new System.Windows.Forms.TextBox();
+            this.edadcantantecancionkaraoke_agregar_cancion_karaoke_admin = new System.Windows.Forms.TextBox();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.nombrecancionkaraoke_agregar_cancion_karaoke_admin = new System.Windows.Forms.TextBox();
+            this.panel_ver_usuarios_admin = new System.Windows.Forms.Panel();
             this.label26 = new System.Windows.Forms.Label();
+            this.btn_atras_de_ver_usuarios_admin = new System.Windows.Forms.Button();
+            this.lista_usuarios_admin = new System.Windows.Forms.ListBox();
             this.panel_ver_artistas_admin = new System.Windows.Forms.Panel();
+            this.btn_atras_de_ver_artistas_admin = new System.Windows.Forms.Button();
+            this.lista_ver_directores_admin = new System.Windows.Forms.ListBox();
+            this.lista_ver_actores_admin = new System.Windows.Forms.ListBox();
+            this.lista_ver_compositores_admin = new System.Windows.Forms.ListBox();
             this.label27 = new System.Windows.Forms.Label();
             this.lista_ver_cantantes_admin = new System.Windows.Forms.ListBox();
-            this.lista_ver_compositores_admin = new System.Windows.Forms.ListBox();
-            this.lista_ver_actores_admin = new System.Windows.Forms.ListBox();
-            this.lista_ver_directores_admin = new System.Windows.Forms.ListBox();
-            this.btn_atras_de_ver_artistas_admin = new System.Windows.Forms.Button();
             this.aLAINIDBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.menuStrip1.SuspendLayout();
             this.panel_agregar_cancion_admin.SuspendLayout();
@@ -267,7 +267,7 @@
             // btn_agregar_cancion_admin
             // 
             this.btn_agregar_cancion_admin.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_agregar_cancion_admin.Location = new System.Drawing.Point(12, 308);
+            this.btn_agregar_cancion_admin.Location = new System.Drawing.Point(55, 314);
             this.btn_agregar_cancion_admin.Margin = new System.Windows.Forms.Padding(2);
             this.btn_agregar_cancion_admin.Name = "btn_agregar_cancion_admin";
             this.btn_agregar_cancion_admin.Size = new System.Drawing.Size(336, 57);
@@ -279,7 +279,7 @@
             // btn_agregar_video_admin
             // 
             this.btn_agregar_video_admin.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_agregar_video_admin.Location = new System.Drawing.Point(371, 308);
+            this.btn_agregar_video_admin.Location = new System.Drawing.Point(397, 314);
             this.btn_agregar_video_admin.Margin = new System.Windows.Forms.Padding(2);
             this.btn_agregar_video_admin.Name = "btn_agregar_video_admin";
             this.btn_agregar_video_admin.Size = new System.Drawing.Size(336, 57);
@@ -291,7 +291,7 @@
             // btn_agregar_cancion_karaoke_admin
             // 
             this.btn_agregar_cancion_karaoke_admin.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_agregar_cancion_karaoke_admin.Location = new System.Drawing.Point(12, 369);
+            this.btn_agregar_cancion_karaoke_admin.Location = new System.Drawing.Point(55, 375);
             this.btn_agregar_cancion_karaoke_admin.Margin = new System.Windows.Forms.Padding(2);
             this.btn_agregar_cancion_karaoke_admin.Name = "btn_agregar_cancion_karaoke_admin";
             this.btn_agregar_cancion_karaoke_admin.Size = new System.Drawing.Size(336, 57);
@@ -303,7 +303,7 @@
             // btn_ver_usuarios_admin
             // 
             this.btn_ver_usuarios_admin.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ver_usuarios_admin.Location = new System.Drawing.Point(371, 369);
+            this.btn_ver_usuarios_admin.Location = new System.Drawing.Point(397, 375);
             this.btn_ver_usuarios_admin.Margin = new System.Windows.Forms.Padding(2);
             this.btn_ver_usuarios_admin.Name = "btn_ver_usuarios_admin";
             this.btn_ver_usuarios_admin.Size = new System.Drawing.Size(336, 57);
@@ -345,9 +345,9 @@
             this.panel_agregar_cancion_admin.Controls.Add(this.label3);
             this.panel_agregar_cancion_admin.Controls.Add(this.label1);
             this.panel_agregar_cancion_admin.Controls.Add(this.nombre_cancion_txt_agregar_cancion);
-            this.panel_agregar_cancion_admin.Location = new System.Drawing.Point(0, 27);
+            this.panel_agregar_cancion_admin.Location = new System.Drawing.Point(360, 318);
             this.panel_agregar_cancion_admin.Name = "panel_agregar_cancion_admin";
-            this.panel_agregar_cancion_admin.Size = new System.Drawing.Size(800, 428);
+            this.panel_agregar_cancion_admin.Size = new System.Drawing.Size(31, 29);
             this.panel_agregar_cancion_admin.TabIndex = 24;
             this.panel_agregar_cancion_admin.Visible = false;
             this.panel_agregar_cancion_admin.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_agregar_cancion_admin_Paint);
@@ -739,7 +739,6 @@
             // 
             // panel_agregar_video_admin
             // 
-            this.panel_agregar_video_admin.Controls.Add(this.panel_agregar_cancion_karaoke_admin);
             this.panel_agregar_video_admin.Controls.Add(this.categoriavideo_agregar_video_admin);
             this.panel_agregar_video_admin.Controls.Add(this.btn_atras_de_agregar_video_admin);
             this.panel_agregar_video_admin.Controls.Add(this.btn_subir_video_de_agregar_video_admin);
@@ -763,389 +762,12 @@
             this.panel_agregar_video_admin.Controls.Add(this.label30);
             this.panel_agregar_video_admin.Controls.Add(this.label31);
             this.panel_agregar_video_admin.Controls.Add(this.nombrevideo_agregar_video_admin);
-            this.panel_agregar_video_admin.Location = new System.Drawing.Point(3, 24);
+            this.panel_agregar_video_admin.Location = new System.Drawing.Point(702, 318);
             this.panel_agregar_video_admin.Name = "panel_agregar_video_admin";
-            this.panel_agregar_video_admin.Size = new System.Drawing.Size(800, 428);
+            this.panel_agregar_video_admin.Size = new System.Drawing.Size(31, 25);
             this.panel_agregar_video_admin.TabIndex = 63;
             this.panel_agregar_video_admin.Visible = false;
             this.panel_agregar_video_admin.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_agregar_video_admin_Paint);
-            // 
-            // panel_agregar_cancion_karaoke_admin
-            // 
-            this.panel_agregar_cancion_karaoke_admin.Controls.Add(this.panel_ver_usuarios_admin);
-            this.panel_agregar_cancion_karaoke_admin.Controls.Add(this.sexocompositorcancionkaraoke_agregar_cancion_karaoke_admin);
-            this.panel_agregar_cancion_karaoke_admin.Controls.Add(this.nombrecantantecancionkaraoke_agregar_cancion_karaoke_admin);
-            this.panel_agregar_cancion_karaoke_admin.Controls.Add(this.btn_atras_de_agregar_cancion_karaoke_admin);
-            this.panel_agregar_cancion_karaoke_admin.Controls.Add(this.btn_subir_cancion_de_agregar_cancion_karaoke_admin);
-            this.panel_agregar_cancion_karaoke_admin.Controls.Add(this.btn_importar_video_de_cancion_karaoke_en_agregar_cancion_karaoke_admin);
-            this.panel_agregar_cancion_karaoke_admin.Controls.Add(this.generocancionkaraoke_agregar_cancion_karaoke_admin);
-            this.panel_agregar_cancion_karaoke_admin.Controls.Add(this.sexocantantecancionkaraoke_agregar_cancion_karaoke_admin);
-            this.panel_agregar_cancion_karaoke_admin.Controls.Add(this.label29);
-            this.panel_agregar_cancion_karaoke_admin.Controls.Add(this.nacionalidadcompositorcancionkaraoke_agregar_cancion_karaoke_admin);
-            this.panel_agregar_cancion_karaoke_admin.Controls.Add(this.edadcompositorcancionkaraoke_agregar_cancion_karaoke_admin);
-            this.panel_agregar_cancion_karaoke_admin.Controls.Add(this.label32);
-            this.panel_agregar_cancion_karaoke_admin.Controls.Add(this.label33);
-            this.panel_agregar_cancion_karaoke_admin.Controls.Add(this.label34);
-            this.panel_agregar_cancion_karaoke_admin.Controls.Add(this.label35);
-            this.panel_agregar_cancion_karaoke_admin.Controls.Add(this.nombrecompositorcancionkaraoke_agregar_cancion_karaoke_admin);
-            this.panel_agregar_cancion_karaoke_admin.Controls.Add(this.label36);
-            this.panel_agregar_cancion_karaoke_admin.Controls.Add(this.nacionalidadcantantecancionkaraoke_agregar_cancion_karaoke_admin);
-            this.panel_agregar_cancion_karaoke_admin.Controls.Add(this.edadcantantecancionkaraoke_agregar_cancion_karaoke_admin);
-            this.panel_agregar_cancion_karaoke_admin.Controls.Add(this.label37);
-            this.panel_agregar_cancion_karaoke_admin.Controls.Add(this.label38);
-            this.panel_agregar_cancion_karaoke_admin.Controls.Add(this.label39);
-            this.panel_agregar_cancion_karaoke_admin.Controls.Add(this.label40);
-            this.panel_agregar_cancion_karaoke_admin.Controls.Add(this.label41);
-            this.panel_agregar_cancion_karaoke_admin.Controls.Add(this.label42);
-            this.panel_agregar_cancion_karaoke_admin.Controls.Add(this.nombrecancionkaraoke_agregar_cancion_karaoke_admin);
-            this.panel_agregar_cancion_karaoke_admin.Location = new System.Drawing.Point(0, 0);
-            this.panel_agregar_cancion_karaoke_admin.Name = "panel_agregar_cancion_karaoke_admin";
-            this.panel_agregar_cancion_karaoke_admin.Size = new System.Drawing.Size(797, 425);
-            this.panel_agregar_cancion_karaoke_admin.TabIndex = 95;
-            this.panel_agregar_cancion_karaoke_admin.Visible = false;
-            // 
-            // panel_ver_usuarios_admin
-            // 
-            this.panel_ver_usuarios_admin.Controls.Add(this.panel_ver_artistas_admin);
-            this.panel_ver_usuarios_admin.Controls.Add(this.label26);
-            this.panel_ver_usuarios_admin.Controls.Add(this.btn_atras_de_ver_usuarios_admin);
-            this.panel_ver_usuarios_admin.Controls.Add(this.lista_usuarios_admin);
-            this.panel_ver_usuarios_admin.Location = new System.Drawing.Point(-3, 0);
-            this.panel_ver_usuarios_admin.Name = "panel_ver_usuarios_admin";
-            this.panel_ver_usuarios_admin.Size = new System.Drawing.Size(800, 428);
-            this.panel_ver_usuarios_admin.TabIndex = 96;
-            this.panel_ver_usuarios_admin.Visible = false;
-            // 
-            // btn_atras_de_ver_usuarios_admin
-            // 
-            this.btn_atras_de_ver_usuarios_admin.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_atras_de_ver_usuarios_admin.Location = new System.Drawing.Point(709, 12);
-            this.btn_atras_de_ver_usuarios_admin.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_atras_de_ver_usuarios_admin.Name = "btn_atras_de_ver_usuarios_admin";
-            this.btn_atras_de_ver_usuarios_admin.Size = new System.Drawing.Size(71, 33);
-            this.btn_atras_de_ver_usuarios_admin.TabIndex = 28;
-            this.btn_atras_de_ver_usuarios_admin.Text = "Atras";
-            this.btn_atras_de_ver_usuarios_admin.UseVisualStyleBackColor = true;
-            this.btn_atras_de_ver_usuarios_admin.Click += new System.EventHandler(this.btn_atras_de_ver_usuarios_admin_Click);
-            // 
-            // lista_usuarios_admin
-            // 
-            this.lista_usuarios_admin.FormattingEnabled = true;
-            this.lista_usuarios_admin.Location = new System.Drawing.Point(29, 61);
-            this.lista_usuarios_admin.Name = "lista_usuarios_admin";
-            this.lista_usuarios_admin.Size = new System.Drawing.Size(751, 355);
-            this.lista_usuarios_admin.TabIndex = 20;
-            this.lista_usuarios_admin.SelectedIndexChanged += new System.EventHandler(this.lista_usuarios_admin_SelectedIndexChanged);
-            // 
-            // sexocompositorcancionkaraoke_agregar_cancion_karaoke_admin
-            // 
-            this.sexocompositorcancionkaraoke_agregar_cancion_karaoke_admin.FormattingEnabled = true;
-            this.sexocompositorcancionkaraoke_agregar_cancion_karaoke_admin.Items.AddRange(new object[] {
-            "Masculino",
-            "Femenino"});
-            this.sexocompositorcancionkaraoke_agregar_cancion_karaoke_admin.Location = new System.Drawing.Point(372, 159);
-            this.sexocompositorcancionkaraoke_agregar_cancion_karaoke_admin.Name = "sexocompositorcancionkaraoke_agregar_cancion_karaoke_admin";
-            this.sexocompositorcancionkaraoke_agregar_cancion_karaoke_admin.Size = new System.Drawing.Size(129, 21);
-            this.sexocompositorcancionkaraoke_agregar_cancion_karaoke_admin.TabIndex = 95;
-            this.sexocompositorcancionkaraoke_agregar_cancion_karaoke_admin.SelectedIndexChanged += new System.EventHandler(this.sexocompositorcancionkaraoke_agregar_cancion_karaoke_admin_SelectedIndexChanged);
-            // 
-            // nombrecantantecancionkaraoke_agregar_cancion_karaoke_admin
-            // 
-            this.nombrecantantecancionkaraoke_agregar_cancion_karaoke_admin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nombrecantantecancionkaraoke_agregar_cancion_karaoke_admin.Location = new System.Drawing.Point(123, 84);
-            this.nombrecantantecancionkaraoke_agregar_cancion_karaoke_admin.Margin = new System.Windows.Forms.Padding(2);
-            this.nombrecantantecancionkaraoke_agregar_cancion_karaoke_admin.Name = "nombrecantantecancionkaraoke_agregar_cancion_karaoke_admin";
-            this.nombrecantantecancionkaraoke_agregar_cancion_karaoke_admin.Size = new System.Drawing.Size(129, 20);
-            this.nombrecantantecancionkaraoke_agregar_cancion_karaoke_admin.TabIndex = 94;
-            this.nombrecantantecancionkaraoke_agregar_cancion_karaoke_admin.TextChanged += new System.EventHandler(this.nombrecantantecancionkaraoke_agregar_cancion_karaoke_admin_TextChanged);
-            // 
-            // btn_atras_de_agregar_cancion_karaoke_admin
-            // 
-            this.btn_atras_de_agregar_cancion_karaoke_admin.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_atras_de_agregar_cancion_karaoke_admin.Location = new System.Drawing.Point(711, 13);
-            this.btn_atras_de_agregar_cancion_karaoke_admin.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_atras_de_agregar_cancion_karaoke_admin.Name = "btn_atras_de_agregar_cancion_karaoke_admin";
-            this.btn_atras_de_agregar_cancion_karaoke_admin.Size = new System.Drawing.Size(71, 33);
-            this.btn_atras_de_agregar_cancion_karaoke_admin.TabIndex = 93;
-            this.btn_atras_de_agregar_cancion_karaoke_admin.Text = "Atras";
-            this.btn_atras_de_agregar_cancion_karaoke_admin.UseVisualStyleBackColor = true;
-            this.btn_atras_de_agregar_cancion_karaoke_admin.Click += new System.EventHandler(this.btn_atras_de_agregar_cancion_karaoke_admin_Click);
-            // 
-            // btn_subir_cancion_de_agregar_cancion_karaoke_admin
-            // 
-            this.btn_subir_cancion_de_agregar_cancion_karaoke_admin.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_subir_cancion_de_agregar_cancion_karaoke_admin.Location = new System.Drawing.Point(107, 294);
-            this.btn_subir_cancion_de_agregar_cancion_karaoke_admin.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_subir_cancion_de_agregar_cancion_karaoke_admin.Name = "btn_subir_cancion_de_agregar_cancion_karaoke_admin";
-            this.btn_subir_cancion_de_agregar_cancion_karaoke_admin.Size = new System.Drawing.Size(345, 93);
-            this.btn_subir_cancion_de_agregar_cancion_karaoke_admin.TabIndex = 92;
-            this.btn_subir_cancion_de_agregar_cancion_karaoke_admin.Text = "Subir Cancion";
-            this.btn_subir_cancion_de_agregar_cancion_karaoke_admin.UseVisualStyleBackColor = true;
-            this.btn_subir_cancion_de_agregar_cancion_karaoke_admin.Click += new System.EventHandler(this.btn_subir_cancion_de_agregar_cancion_karaoke_admin_Click);
-            // 
-            // btn_importar_video_de_cancion_karaoke_en_agregar_cancion_karaoke_admin
-            // 
-            this.btn_importar_video_de_cancion_karaoke_en_agregar_cancion_karaoke_admin.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_importar_video_de_cancion_karaoke_en_agregar_cancion_karaoke_admin.Location = new System.Drawing.Point(567, 94);
-            this.btn_importar_video_de_cancion_karaoke_en_agregar_cancion_karaoke_admin.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_importar_video_de_cancion_karaoke_en_agregar_cancion_karaoke_admin.Name = "btn_importar_video_de_cancion_karaoke_en_agregar_cancion_karaoke_admin";
-            this.btn_importar_video_de_cancion_karaoke_en_agregar_cancion_karaoke_admin.Size = new System.Drawing.Size(178, 304);
-            this.btn_importar_video_de_cancion_karaoke_en_agregar_cancion_karaoke_admin.TabIndex = 91;
-            this.btn_importar_video_de_cancion_karaoke_en_agregar_cancion_karaoke_admin.Text = "importar video de cancion";
-            this.btn_importar_video_de_cancion_karaoke_en_agregar_cancion_karaoke_admin.UseVisualStyleBackColor = true;
-            this.btn_importar_video_de_cancion_karaoke_en_agregar_cancion_karaoke_admin.Click += new System.EventHandler(this.btn_importar_video_de_cancion_karaoke_en_agregar_cancion_karaoke_admin_Click);
-            // 
-            // generocancionkaraoke_agregar_cancion_karaoke_admin
-            // 
-            this.generocancionkaraoke_agregar_cancion_karaoke_admin.FormattingEnabled = true;
-            this.generocancionkaraoke_agregar_cancion_karaoke_admin.Items.AddRange(new object[] {
-            "Rock",
-            "Country",
-            "Pop",
-            "Electronica",
-            "Heavy Metal",
-            "House",
-            "Disco",
-            "Folklore",
-            "Indie Rock",
-            "Hip Hop",
-            "Blues",
-            "Urban",
-            "Jazz",
-            "Otras"});
-            this.generocancionkaraoke_agregar_cancion_karaoke_admin.Location = new System.Drawing.Point(232, 229);
-            this.generocancionkaraoke_agregar_cancion_karaoke_admin.Name = "generocancionkaraoke_agregar_cancion_karaoke_admin";
-            this.generocancionkaraoke_agregar_cancion_karaoke_admin.Size = new System.Drawing.Size(227, 21);
-            this.generocancionkaraoke_agregar_cancion_karaoke_admin.TabIndex = 89;
-            this.generocancionkaraoke_agregar_cancion_karaoke_admin.SelectedIndexChanged += new System.EventHandler(this.generocancionkaraoke_agregar_cancion_karaoke_admin_SelectedIndexChanged);
-            // 
-            // sexocantantecancionkaraoke_agregar_cancion_karaoke_admin
-            // 
-            this.sexocantantecancionkaraoke_agregar_cancion_karaoke_admin.FormattingEnabled = true;
-            this.sexocantantecancionkaraoke_agregar_cancion_karaoke_admin.Items.AddRange(new object[] {
-            "Masculino",
-            "Femenino"});
-            this.sexocantantecancionkaraoke_agregar_cancion_karaoke_admin.Location = new System.Drawing.Point(372, 88);
-            this.sexocantantecancionkaraoke_agregar_cancion_karaoke_admin.Name = "sexocantantecancionkaraoke_agregar_cancion_karaoke_admin";
-            this.sexocantantecancionkaraoke_agregar_cancion_karaoke_admin.Size = new System.Drawing.Size(129, 21);
-            this.sexocantantecancionkaraoke_agregar_cancion_karaoke_admin.TabIndex = 87;
-            this.sexocantantecancionkaraoke_agregar_cancion_karaoke_admin.SelectedIndexChanged += new System.EventHandler(this.sexocantantecancionkaraoke_agregar_cancion_karaoke_admin_SelectedIndexChanged);
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.label29.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.ForeColor = System.Drawing.Color.White;
-            this.label29.Location = new System.Drawing.Point(56, 226);
-            this.label29.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(74, 26);
-            this.label29.TabIndex = 81;
-            this.label29.Text = "Genero";
-            // 
-            // nacionalidadcompositorcancionkaraoke_agregar_cancion_karaoke_admin
-            // 
-            this.nacionalidadcompositorcancionkaraoke_agregar_cancion_karaoke_admin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nacionalidadcompositorcancionkaraoke_agregar_cancion_karaoke_admin.Location = new System.Drawing.Point(372, 194);
-            this.nacionalidadcompositorcancionkaraoke_agregar_cancion_karaoke_admin.Margin = new System.Windows.Forms.Padding(2);
-            this.nacionalidadcompositorcancionkaraoke_agregar_cancion_karaoke_admin.Name = "nacionalidadcompositorcancionkaraoke_agregar_cancion_karaoke_admin";
-            this.nacionalidadcompositorcancionkaraoke_agregar_cancion_karaoke_admin.Size = new System.Drawing.Size(129, 20);
-            this.nacionalidadcompositorcancionkaraoke_agregar_cancion_karaoke_admin.TabIndex = 80;
-            this.nacionalidadcompositorcancionkaraoke_agregar_cancion_karaoke_admin.TextChanged += new System.EventHandler(this.nacionalidadcompositorcancionkaraoke_agregar_cancion_karaoke_admin_TextChanged);
-            // 
-            // edadcompositorcancionkaraoke_agregar_cancion_karaoke_admin
-            // 
-            this.edadcompositorcancionkaraoke_agregar_cancion_karaoke_admin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.edadcompositorcancionkaraoke_agregar_cancion_karaoke_admin.Location = new System.Drawing.Point(123, 194);
-            this.edadcompositorcancionkaraoke_agregar_cancion_karaoke_admin.Margin = new System.Windows.Forms.Padding(2);
-            this.edadcompositorcancionkaraoke_agregar_cancion_karaoke_admin.Name = "edadcompositorcancionkaraoke_agregar_cancion_karaoke_admin";
-            this.edadcompositorcancionkaraoke_agregar_cancion_karaoke_admin.Size = new System.Drawing.Size(129, 20);
-            this.edadcompositorcancionkaraoke_agregar_cancion_karaoke_admin.TabIndex = 79;
-            this.edadcompositorcancionkaraoke_agregar_cancion_karaoke_admin.TextChanged += new System.EventHandler(this.edadcompositorcancionkaraoke_agregar_cancion_karaoke_admin_TextChanged);
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.label32.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.ForeColor = System.Drawing.Color.White;
-            this.label32.Location = new System.Drawing.Point(263, 194);
-            this.label32.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(88, 18);
-            this.label32.TabIndex = 78;
-            this.label32.Text = "Nacionalidad";
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.label33.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.ForeColor = System.Drawing.Color.White;
-            this.label33.Location = new System.Drawing.Point(58, 166);
-            this.label33.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(55, 18);
-            this.label33.TabIndex = 77;
-            this.label33.Text = "Nombre";
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.label34.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.ForeColor = System.Drawing.Color.White;
-            this.label34.Location = new System.Drawing.Point(58, 194);
-            this.label34.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(39, 18);
-            this.label34.TabIndex = 76;
-            this.label34.Text = "Edad";
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.label35.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.ForeColor = System.Drawing.Color.White;
-            this.label35.Location = new System.Drawing.Point(263, 166);
-            this.label35.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(39, 18);
-            this.label35.TabIndex = 75;
-            this.label35.Text = "Sexo";
-            // 
-            // nombrecompositorcancionkaraoke_agregar_cancion_karaoke_admin
-            // 
-            this.nombrecompositorcancionkaraoke_agregar_cancion_karaoke_admin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nombrecompositorcancionkaraoke_agregar_cancion_karaoke_admin.Location = new System.Drawing.Point(123, 164);
-            this.nombrecompositorcancionkaraoke_agregar_cancion_karaoke_admin.Margin = new System.Windows.Forms.Padding(2);
-            this.nombrecompositorcancionkaraoke_agregar_cancion_karaoke_admin.Name = "nombrecompositorcancionkaraoke_agregar_cancion_karaoke_admin";
-            this.nombrecompositorcancionkaraoke_agregar_cancion_karaoke_admin.Size = new System.Drawing.Size(129, 20);
-            this.nombrecompositorcancionkaraoke_agregar_cancion_karaoke_admin.TabIndex = 74;
-            this.nombrecompositorcancionkaraoke_agregar_cancion_karaoke_admin.TextChanged += new System.EventHandler(this.nombrecompositorcancionkaraoke_agregar_cancion_karaoke_admin_TextChanged);
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.label36.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.ForeColor = System.Drawing.Color.White;
-            this.label36.Location = new System.Drawing.Point(31, 142);
-            this.label36.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(78, 18);
-            this.label36.TabIndex = 73;
-            this.label36.Text = "Compositor:";
-            // 
-            // nacionalidadcantantecancionkaraoke_agregar_cancion_karaoke_admin
-            // 
-            this.nacionalidadcantantecancionkaraoke_agregar_cancion_karaoke_admin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nacionalidadcantantecancionkaraoke_agregar_cancion_karaoke_admin.Location = new System.Drawing.Point(372, 119);
-            this.nacionalidadcantantecancionkaraoke_agregar_cancion_karaoke_admin.Margin = new System.Windows.Forms.Padding(2);
-            this.nacionalidadcantantecancionkaraoke_agregar_cancion_karaoke_admin.Name = "nacionalidadcantantecancionkaraoke_agregar_cancion_karaoke_admin";
-            this.nacionalidadcantantecancionkaraoke_agregar_cancion_karaoke_admin.Size = new System.Drawing.Size(129, 20);
-            this.nacionalidadcantantecancionkaraoke_agregar_cancion_karaoke_admin.TabIndex = 72;
-            this.nacionalidadcantantecancionkaraoke_agregar_cancion_karaoke_admin.TextChanged += new System.EventHandler(this.nacionalidadcantantecancionkaraoke_agregar_cancion_karaoke_admin_TextChanged);
-            // 
-            // edadcantantecancionkaraoke_agregar_cancion_karaoke_admin
-            // 
-            this.edadcantantecancionkaraoke_agregar_cancion_karaoke_admin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.edadcantantecancionkaraoke_agregar_cancion_karaoke_admin.Location = new System.Drawing.Point(123, 119);
-            this.edadcantantecancionkaraoke_agregar_cancion_karaoke_admin.Margin = new System.Windows.Forms.Padding(2);
-            this.edadcantantecancionkaraoke_agregar_cancion_karaoke_admin.Name = "edadcantantecancionkaraoke_agregar_cancion_karaoke_admin";
-            this.edadcantantecancionkaraoke_agregar_cancion_karaoke_admin.Size = new System.Drawing.Size(129, 20);
-            this.edadcantantecancionkaraoke_agregar_cancion_karaoke_admin.TabIndex = 71;
-            this.edadcantantecancionkaraoke_agregar_cancion_karaoke_admin.TextChanged += new System.EventHandler(this.edadcantantecancionkaraoke_agregar_cancion_karaoke_admin_TextChanged);
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.label37.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.ForeColor = System.Drawing.Color.White;
-            this.label37.Location = new System.Drawing.Point(263, 119);
-            this.label37.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(88, 18);
-            this.label37.TabIndex = 70;
-            this.label37.Text = "Nacionalidad";
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.label38.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label38.ForeColor = System.Drawing.Color.White;
-            this.label38.Location = new System.Drawing.Point(58, 91);
-            this.label38.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(55, 18);
-            this.label38.TabIndex = 69;
-            this.label38.Text = "Nombre";
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.label39.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.ForeColor = System.Drawing.Color.White;
-            this.label39.Location = new System.Drawing.Point(58, 119);
-            this.label39.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(39, 18);
-            this.label39.TabIndex = 68;
-            this.label39.Text = "Edad";
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.label40.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label40.ForeColor = System.Drawing.Color.White;
-            this.label40.Location = new System.Drawing.Point(263, 91);
-            this.label40.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(39, 18);
-            this.label40.TabIndex = 67;
-            this.label40.Text = "Sexo";
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.label41.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label41.ForeColor = System.Drawing.Color.White;
-            this.label41.Location = new System.Drawing.Point(31, 67);
-            this.label41.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(65, 18);
-            this.label41.TabIndex = 65;
-            this.label41.Text = "Cantante:";
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.label42.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label42.ForeColor = System.Drawing.Color.White;
-            this.label42.Location = new System.Drawing.Point(38, 22);
-            this.label42.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(230, 26);
-            this.label42.TabIndex = 64;
-            this.label42.Text = "Nombre Cancion Karaoke";
-            // 
-            // nombrecancionkaraoke_agregar_cancion_karaoke_admin
-            // 
-            this.nombrecancionkaraoke_agregar_cancion_karaoke_admin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nombrecancionkaraoke_agregar_cancion_karaoke_admin.Location = new System.Drawing.Point(333, 24);
-            this.nombrecancionkaraoke_agregar_cancion_karaoke_admin.Margin = new System.Windows.Forms.Padding(2);
-            this.nombrecancionkaraoke_agregar_cancion_karaoke_admin.Name = "nombrecancionkaraoke_agregar_cancion_karaoke_admin";
-            this.nombrecancionkaraoke_agregar_cancion_karaoke_admin.Size = new System.Drawing.Size(227, 24);
-            this.nombrecancionkaraoke_agregar_cancion_karaoke_admin.TabIndex = 63;
-            this.nombrecancionkaraoke_agregar_cancion_karaoke_admin.TextChanged += new System.EventHandler(this.nombrecancionkaraoke_agregar_cancion_karaoke_admin_TextChanged);
             // 
             // categoriavideo_agregar_video_admin
             // 
@@ -1436,6 +1058,361 @@
             this.nombrevideo_agregar_video_admin.TabIndex = 63;
             this.nombrevideo_agregar_video_admin.TextChanged += new System.EventHandler(this.nombrevideo_agregar_video_admin_TextChanged);
             // 
+            // panel_agregar_cancion_karaoke_admin
+            // 
+            this.panel_agregar_cancion_karaoke_admin.Controls.Add(this.label42);
+            this.panel_agregar_cancion_karaoke_admin.Controls.Add(this.sexocompositorcancionkaraoke_agregar_cancion_karaoke_admin);
+            this.panel_agregar_cancion_karaoke_admin.Controls.Add(this.nombrecantantecancionkaraoke_agregar_cancion_karaoke_admin);
+            this.panel_agregar_cancion_karaoke_admin.Controls.Add(this.btn_atras_de_agregar_cancion_karaoke_admin);
+            this.panel_agregar_cancion_karaoke_admin.Controls.Add(this.btn_subir_cancion_de_agregar_cancion_karaoke_admin);
+            this.panel_agregar_cancion_karaoke_admin.Controls.Add(this.btn_importar_video_de_cancion_karaoke_en_agregar_cancion_karaoke_admin);
+            this.panel_agregar_cancion_karaoke_admin.Controls.Add(this.generocancionkaraoke_agregar_cancion_karaoke_admin);
+            this.panel_agregar_cancion_karaoke_admin.Controls.Add(this.sexocantantecancionkaraoke_agregar_cancion_karaoke_admin);
+            this.panel_agregar_cancion_karaoke_admin.Controls.Add(this.label29);
+            this.panel_agregar_cancion_karaoke_admin.Controls.Add(this.nacionalidadcompositorcancionkaraoke_agregar_cancion_karaoke_admin);
+            this.panel_agregar_cancion_karaoke_admin.Controls.Add(this.edadcompositorcancionkaraoke_agregar_cancion_karaoke_admin);
+            this.panel_agregar_cancion_karaoke_admin.Controls.Add(this.label32);
+            this.panel_agregar_cancion_karaoke_admin.Controls.Add(this.label33);
+            this.panel_agregar_cancion_karaoke_admin.Controls.Add(this.label34);
+            this.panel_agregar_cancion_karaoke_admin.Controls.Add(this.label35);
+            this.panel_agregar_cancion_karaoke_admin.Controls.Add(this.nombrecompositorcancionkaraoke_agregar_cancion_karaoke_admin);
+            this.panel_agregar_cancion_karaoke_admin.Controls.Add(this.label36);
+            this.panel_agregar_cancion_karaoke_admin.Controls.Add(this.nacionalidadcantantecancionkaraoke_agregar_cancion_karaoke_admin);
+            this.panel_agregar_cancion_karaoke_admin.Controls.Add(this.edadcantantecancionkaraoke_agregar_cancion_karaoke_admin);
+            this.panel_agregar_cancion_karaoke_admin.Controls.Add(this.label37);
+            this.panel_agregar_cancion_karaoke_admin.Controls.Add(this.label38);
+            this.panel_agregar_cancion_karaoke_admin.Controls.Add(this.label39);
+            this.panel_agregar_cancion_karaoke_admin.Controls.Add(this.label40);
+            this.panel_agregar_cancion_karaoke_admin.Controls.Add(this.label41);
+            this.panel_agregar_cancion_karaoke_admin.Controls.Add(this.nombrecancionkaraoke_agregar_cancion_karaoke_admin);
+            this.panel_agregar_cancion_karaoke_admin.Location = new System.Drawing.Point(359, 376);
+            this.panel_agregar_cancion_karaoke_admin.Name = "panel_agregar_cancion_karaoke_admin";
+            this.panel_agregar_cancion_karaoke_admin.Size = new System.Drawing.Size(32, 23);
+            this.panel_agregar_cancion_karaoke_admin.TabIndex = 95;
+            this.panel_agregar_cancion_karaoke_admin.Visible = false;
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.label42.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label42.ForeColor = System.Drawing.Color.White;
+            this.label42.Location = new System.Drawing.Point(38, 22);
+            this.label42.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(230, 26);
+            this.label42.TabIndex = 64;
+            this.label42.Text = "Nombre Cancion Karaoke";
+            // 
+            // sexocompositorcancionkaraoke_agregar_cancion_karaoke_admin
+            // 
+            this.sexocompositorcancionkaraoke_agregar_cancion_karaoke_admin.FormattingEnabled = true;
+            this.sexocompositorcancionkaraoke_agregar_cancion_karaoke_admin.Items.AddRange(new object[] {
+            "Masculino",
+            "Femenino"});
+            this.sexocompositorcancionkaraoke_agregar_cancion_karaoke_admin.Location = new System.Drawing.Point(372, 159);
+            this.sexocompositorcancionkaraoke_agregar_cancion_karaoke_admin.Name = "sexocompositorcancionkaraoke_agregar_cancion_karaoke_admin";
+            this.sexocompositorcancionkaraoke_agregar_cancion_karaoke_admin.Size = new System.Drawing.Size(129, 21);
+            this.sexocompositorcancionkaraoke_agregar_cancion_karaoke_admin.TabIndex = 95;
+            this.sexocompositorcancionkaraoke_agregar_cancion_karaoke_admin.SelectedIndexChanged += new System.EventHandler(this.sexocompositorcancionkaraoke_agregar_cancion_karaoke_admin_SelectedIndexChanged);
+            // 
+            // nombrecantantecancionkaraoke_agregar_cancion_karaoke_admin
+            // 
+            this.nombrecantantecancionkaraoke_agregar_cancion_karaoke_admin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nombrecantantecancionkaraoke_agregar_cancion_karaoke_admin.Location = new System.Drawing.Point(123, 84);
+            this.nombrecantantecancionkaraoke_agregar_cancion_karaoke_admin.Margin = new System.Windows.Forms.Padding(2);
+            this.nombrecantantecancionkaraoke_agregar_cancion_karaoke_admin.Name = "nombrecantantecancionkaraoke_agregar_cancion_karaoke_admin";
+            this.nombrecantantecancionkaraoke_agregar_cancion_karaoke_admin.Size = new System.Drawing.Size(129, 20);
+            this.nombrecantantecancionkaraoke_agregar_cancion_karaoke_admin.TabIndex = 94;
+            this.nombrecantantecancionkaraoke_agregar_cancion_karaoke_admin.TextChanged += new System.EventHandler(this.nombrecantantecancionkaraoke_agregar_cancion_karaoke_admin_TextChanged);
+            // 
+            // btn_atras_de_agregar_cancion_karaoke_admin
+            // 
+            this.btn_atras_de_agregar_cancion_karaoke_admin.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_atras_de_agregar_cancion_karaoke_admin.Location = new System.Drawing.Point(711, 13);
+            this.btn_atras_de_agregar_cancion_karaoke_admin.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_atras_de_agregar_cancion_karaoke_admin.Name = "btn_atras_de_agregar_cancion_karaoke_admin";
+            this.btn_atras_de_agregar_cancion_karaoke_admin.Size = new System.Drawing.Size(71, 33);
+            this.btn_atras_de_agregar_cancion_karaoke_admin.TabIndex = 93;
+            this.btn_atras_de_agregar_cancion_karaoke_admin.Text = "Atras";
+            this.btn_atras_de_agregar_cancion_karaoke_admin.UseVisualStyleBackColor = true;
+            this.btn_atras_de_agregar_cancion_karaoke_admin.Click += new System.EventHandler(this.btn_atras_de_agregar_cancion_karaoke_admin_Click);
+            // 
+            // btn_subir_cancion_de_agregar_cancion_karaoke_admin
+            // 
+            this.btn_subir_cancion_de_agregar_cancion_karaoke_admin.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_subir_cancion_de_agregar_cancion_karaoke_admin.Location = new System.Drawing.Point(107, 294);
+            this.btn_subir_cancion_de_agregar_cancion_karaoke_admin.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_subir_cancion_de_agregar_cancion_karaoke_admin.Name = "btn_subir_cancion_de_agregar_cancion_karaoke_admin";
+            this.btn_subir_cancion_de_agregar_cancion_karaoke_admin.Size = new System.Drawing.Size(345, 93);
+            this.btn_subir_cancion_de_agregar_cancion_karaoke_admin.TabIndex = 92;
+            this.btn_subir_cancion_de_agregar_cancion_karaoke_admin.Text = "Subir Cancion";
+            this.btn_subir_cancion_de_agregar_cancion_karaoke_admin.UseVisualStyleBackColor = true;
+            this.btn_subir_cancion_de_agregar_cancion_karaoke_admin.Click += new System.EventHandler(this.btn_subir_cancion_de_agregar_cancion_karaoke_admin_Click);
+            // 
+            // btn_importar_video_de_cancion_karaoke_en_agregar_cancion_karaoke_admin
+            // 
+            this.btn_importar_video_de_cancion_karaoke_en_agregar_cancion_karaoke_admin.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_importar_video_de_cancion_karaoke_en_agregar_cancion_karaoke_admin.Location = new System.Drawing.Point(567, 94);
+            this.btn_importar_video_de_cancion_karaoke_en_agregar_cancion_karaoke_admin.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_importar_video_de_cancion_karaoke_en_agregar_cancion_karaoke_admin.Name = "btn_importar_video_de_cancion_karaoke_en_agregar_cancion_karaoke_admin";
+            this.btn_importar_video_de_cancion_karaoke_en_agregar_cancion_karaoke_admin.Size = new System.Drawing.Size(178, 304);
+            this.btn_importar_video_de_cancion_karaoke_en_agregar_cancion_karaoke_admin.TabIndex = 91;
+            this.btn_importar_video_de_cancion_karaoke_en_agregar_cancion_karaoke_admin.Text = "importar video de cancion";
+            this.btn_importar_video_de_cancion_karaoke_en_agregar_cancion_karaoke_admin.UseVisualStyleBackColor = true;
+            this.btn_importar_video_de_cancion_karaoke_en_agregar_cancion_karaoke_admin.Click += new System.EventHandler(this.btn_importar_video_de_cancion_karaoke_en_agregar_cancion_karaoke_admin_Click);
+            // 
+            // generocancionkaraoke_agregar_cancion_karaoke_admin
+            // 
+            this.generocancionkaraoke_agregar_cancion_karaoke_admin.FormattingEnabled = true;
+            this.generocancionkaraoke_agregar_cancion_karaoke_admin.Items.AddRange(new object[] {
+            "Rock",
+            "Country",
+            "Pop",
+            "Electronica",
+            "Heavy Metal",
+            "House",
+            "Disco",
+            "Folklore",
+            "Indie Rock",
+            "Hip Hop",
+            "Blues",
+            "Urban",
+            "Jazz",
+            "Otras"});
+            this.generocancionkaraoke_agregar_cancion_karaoke_admin.Location = new System.Drawing.Point(232, 229);
+            this.generocancionkaraoke_agregar_cancion_karaoke_admin.Name = "generocancionkaraoke_agregar_cancion_karaoke_admin";
+            this.generocancionkaraoke_agregar_cancion_karaoke_admin.Size = new System.Drawing.Size(227, 21);
+            this.generocancionkaraoke_agregar_cancion_karaoke_admin.TabIndex = 89;
+            this.generocancionkaraoke_agregar_cancion_karaoke_admin.SelectedIndexChanged += new System.EventHandler(this.generocancionkaraoke_agregar_cancion_karaoke_admin_SelectedIndexChanged);
+            // 
+            // sexocantantecancionkaraoke_agregar_cancion_karaoke_admin
+            // 
+            this.sexocantantecancionkaraoke_agregar_cancion_karaoke_admin.FormattingEnabled = true;
+            this.sexocantantecancionkaraoke_agregar_cancion_karaoke_admin.Items.AddRange(new object[] {
+            "Masculino",
+            "Femenino"});
+            this.sexocantantecancionkaraoke_agregar_cancion_karaoke_admin.Location = new System.Drawing.Point(372, 88);
+            this.sexocantantecancionkaraoke_agregar_cancion_karaoke_admin.Name = "sexocantantecancionkaraoke_agregar_cancion_karaoke_admin";
+            this.sexocantantecancionkaraoke_agregar_cancion_karaoke_admin.Size = new System.Drawing.Size(129, 21);
+            this.sexocantantecancionkaraoke_agregar_cancion_karaoke_admin.TabIndex = 87;
+            this.sexocantantecancionkaraoke_agregar_cancion_karaoke_admin.SelectedIndexChanged += new System.EventHandler(this.sexocantantecancionkaraoke_agregar_cancion_karaoke_admin_SelectedIndexChanged);
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.label29.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.ForeColor = System.Drawing.Color.White;
+            this.label29.Location = new System.Drawing.Point(56, 226);
+            this.label29.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(74, 26);
+            this.label29.TabIndex = 81;
+            this.label29.Text = "Genero";
+            // 
+            // nacionalidadcompositorcancionkaraoke_agregar_cancion_karaoke_admin
+            // 
+            this.nacionalidadcompositorcancionkaraoke_agregar_cancion_karaoke_admin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nacionalidadcompositorcancionkaraoke_agregar_cancion_karaoke_admin.Location = new System.Drawing.Point(372, 194);
+            this.nacionalidadcompositorcancionkaraoke_agregar_cancion_karaoke_admin.Margin = new System.Windows.Forms.Padding(2);
+            this.nacionalidadcompositorcancionkaraoke_agregar_cancion_karaoke_admin.Name = "nacionalidadcompositorcancionkaraoke_agregar_cancion_karaoke_admin";
+            this.nacionalidadcompositorcancionkaraoke_agregar_cancion_karaoke_admin.Size = new System.Drawing.Size(129, 20);
+            this.nacionalidadcompositorcancionkaraoke_agregar_cancion_karaoke_admin.TabIndex = 80;
+            this.nacionalidadcompositorcancionkaraoke_agregar_cancion_karaoke_admin.TextChanged += new System.EventHandler(this.nacionalidadcompositorcancionkaraoke_agregar_cancion_karaoke_admin_TextChanged);
+            // 
+            // edadcompositorcancionkaraoke_agregar_cancion_karaoke_admin
+            // 
+            this.edadcompositorcancionkaraoke_agregar_cancion_karaoke_admin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.edadcompositorcancionkaraoke_agregar_cancion_karaoke_admin.Location = new System.Drawing.Point(123, 194);
+            this.edadcompositorcancionkaraoke_agregar_cancion_karaoke_admin.Margin = new System.Windows.Forms.Padding(2);
+            this.edadcompositorcancionkaraoke_agregar_cancion_karaoke_admin.Name = "edadcompositorcancionkaraoke_agregar_cancion_karaoke_admin";
+            this.edadcompositorcancionkaraoke_agregar_cancion_karaoke_admin.Size = new System.Drawing.Size(129, 20);
+            this.edadcompositorcancionkaraoke_agregar_cancion_karaoke_admin.TabIndex = 79;
+            this.edadcompositorcancionkaraoke_agregar_cancion_karaoke_admin.TextChanged += new System.EventHandler(this.edadcompositorcancionkaraoke_agregar_cancion_karaoke_admin_TextChanged);
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.label32.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.ForeColor = System.Drawing.Color.White;
+            this.label32.Location = new System.Drawing.Point(263, 194);
+            this.label32.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(88, 18);
+            this.label32.TabIndex = 78;
+            this.label32.Text = "Nacionalidad";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.label33.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.ForeColor = System.Drawing.Color.White;
+            this.label33.Location = new System.Drawing.Point(58, 166);
+            this.label33.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(55, 18);
+            this.label33.TabIndex = 77;
+            this.label33.Text = "Nombre";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.label34.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.ForeColor = System.Drawing.Color.White;
+            this.label34.Location = new System.Drawing.Point(58, 194);
+            this.label34.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(39, 18);
+            this.label34.TabIndex = 76;
+            this.label34.Text = "Edad";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.label35.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.ForeColor = System.Drawing.Color.White;
+            this.label35.Location = new System.Drawing.Point(263, 166);
+            this.label35.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(39, 18);
+            this.label35.TabIndex = 75;
+            this.label35.Text = "Sexo";
+            // 
+            // nombrecompositorcancionkaraoke_agregar_cancion_karaoke_admin
+            // 
+            this.nombrecompositorcancionkaraoke_agregar_cancion_karaoke_admin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nombrecompositorcancionkaraoke_agregar_cancion_karaoke_admin.Location = new System.Drawing.Point(123, 164);
+            this.nombrecompositorcancionkaraoke_agregar_cancion_karaoke_admin.Margin = new System.Windows.Forms.Padding(2);
+            this.nombrecompositorcancionkaraoke_agregar_cancion_karaoke_admin.Name = "nombrecompositorcancionkaraoke_agregar_cancion_karaoke_admin";
+            this.nombrecompositorcancionkaraoke_agregar_cancion_karaoke_admin.Size = new System.Drawing.Size(129, 20);
+            this.nombrecompositorcancionkaraoke_agregar_cancion_karaoke_admin.TabIndex = 74;
+            this.nombrecompositorcancionkaraoke_agregar_cancion_karaoke_admin.TextChanged += new System.EventHandler(this.nombrecompositorcancionkaraoke_agregar_cancion_karaoke_admin_TextChanged);
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.label36.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.ForeColor = System.Drawing.Color.White;
+            this.label36.Location = new System.Drawing.Point(31, 142);
+            this.label36.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(78, 18);
+            this.label36.TabIndex = 73;
+            this.label36.Text = "Compositor:";
+            // 
+            // nacionalidadcantantecancionkaraoke_agregar_cancion_karaoke_admin
+            // 
+            this.nacionalidadcantantecancionkaraoke_agregar_cancion_karaoke_admin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nacionalidadcantantecancionkaraoke_agregar_cancion_karaoke_admin.Location = new System.Drawing.Point(372, 119);
+            this.nacionalidadcantantecancionkaraoke_agregar_cancion_karaoke_admin.Margin = new System.Windows.Forms.Padding(2);
+            this.nacionalidadcantantecancionkaraoke_agregar_cancion_karaoke_admin.Name = "nacionalidadcantantecancionkaraoke_agregar_cancion_karaoke_admin";
+            this.nacionalidadcantantecancionkaraoke_agregar_cancion_karaoke_admin.Size = new System.Drawing.Size(129, 20);
+            this.nacionalidadcantantecancionkaraoke_agregar_cancion_karaoke_admin.TabIndex = 72;
+            this.nacionalidadcantantecancionkaraoke_agregar_cancion_karaoke_admin.TextChanged += new System.EventHandler(this.nacionalidadcantantecancionkaraoke_agregar_cancion_karaoke_admin_TextChanged);
+            // 
+            // edadcantantecancionkaraoke_agregar_cancion_karaoke_admin
+            // 
+            this.edadcantantecancionkaraoke_agregar_cancion_karaoke_admin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.edadcantantecancionkaraoke_agregar_cancion_karaoke_admin.Location = new System.Drawing.Point(123, 119);
+            this.edadcantantecancionkaraoke_agregar_cancion_karaoke_admin.Margin = new System.Windows.Forms.Padding(2);
+            this.edadcantantecancionkaraoke_agregar_cancion_karaoke_admin.Name = "edadcantantecancionkaraoke_agregar_cancion_karaoke_admin";
+            this.edadcantantecancionkaraoke_agregar_cancion_karaoke_admin.Size = new System.Drawing.Size(129, 20);
+            this.edadcantantecancionkaraoke_agregar_cancion_karaoke_admin.TabIndex = 71;
+            this.edadcantantecancionkaraoke_agregar_cancion_karaoke_admin.TextChanged += new System.EventHandler(this.edadcantantecancionkaraoke_agregar_cancion_karaoke_admin_TextChanged);
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.label37.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.ForeColor = System.Drawing.Color.White;
+            this.label37.Location = new System.Drawing.Point(263, 119);
+            this.label37.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(88, 18);
+            this.label37.TabIndex = 70;
+            this.label37.Text = "Nacionalidad";
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.label38.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label38.ForeColor = System.Drawing.Color.White;
+            this.label38.Location = new System.Drawing.Point(58, 91);
+            this.label38.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(55, 18);
+            this.label38.TabIndex = 69;
+            this.label38.Text = "Nombre";
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.label39.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.ForeColor = System.Drawing.Color.White;
+            this.label39.Location = new System.Drawing.Point(58, 119);
+            this.label39.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(39, 18);
+            this.label39.TabIndex = 68;
+            this.label39.Text = "Edad";
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.label40.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label40.ForeColor = System.Drawing.Color.White;
+            this.label40.Location = new System.Drawing.Point(263, 91);
+            this.label40.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(39, 18);
+            this.label40.TabIndex = 67;
+            this.label40.Text = "Sexo";
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.label41.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label41.ForeColor = System.Drawing.Color.White;
+            this.label41.Location = new System.Drawing.Point(31, 67);
+            this.label41.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(65, 18);
+            this.label41.TabIndex = 65;
+            this.label41.Text = "Cantante:";
+            // 
+            // nombrecancionkaraoke_agregar_cancion_karaoke_admin
+            // 
+            this.nombrecancionkaraoke_agregar_cancion_karaoke_admin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nombrecancionkaraoke_agregar_cancion_karaoke_admin.Location = new System.Drawing.Point(333, 24);
+            this.nombrecancionkaraoke_agregar_cancion_karaoke_admin.Margin = new System.Windows.Forms.Padding(2);
+            this.nombrecancionkaraoke_agregar_cancion_karaoke_admin.Name = "nombrecancionkaraoke_agregar_cancion_karaoke_admin";
+            this.nombrecancionkaraoke_agregar_cancion_karaoke_admin.Size = new System.Drawing.Size(227, 24);
+            this.nombrecancionkaraoke_agregar_cancion_karaoke_admin.TabIndex = 63;
+            this.nombrecancionkaraoke_agregar_cancion_karaoke_admin.TextChanged += new System.EventHandler(this.nombrecancionkaraoke_agregar_cancion_karaoke_admin_TextChanged);
+            // 
+            // panel_ver_usuarios_admin
+            // 
+            this.panel_ver_usuarios_admin.Controls.Add(this.label26);
+            this.panel_ver_usuarios_admin.Controls.Add(this.btn_atras_de_ver_usuarios_admin);
+            this.panel_ver_usuarios_admin.Controls.Add(this.lista_usuarios_admin);
+            this.panel_ver_usuarios_admin.Location = new System.Drawing.Point(702, 373);
+            this.panel_ver_usuarios_admin.Name = "panel_ver_usuarios_admin";
+            this.panel_ver_usuarios_admin.Size = new System.Drawing.Size(31, 29);
+            this.panel_ver_usuarios_admin.TabIndex = 96;
+            this.panel_ver_usuarios_admin.Visible = false;
+            this.panel_ver_usuarios_admin.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_ver_usuarios_admin_Paint);
+            // 
             // label26
             // 
             this.label26.AutoSize = true;
@@ -1448,6 +1425,27 @@
             this.label26.TabIndex = 29;
             this.label26.Text = "USUARIOS EN LA APP";
             // 
+            // btn_atras_de_ver_usuarios_admin
+            // 
+            this.btn_atras_de_ver_usuarios_admin.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_atras_de_ver_usuarios_admin.Location = new System.Drawing.Point(709, 12);
+            this.btn_atras_de_ver_usuarios_admin.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_atras_de_ver_usuarios_admin.Name = "btn_atras_de_ver_usuarios_admin";
+            this.btn_atras_de_ver_usuarios_admin.Size = new System.Drawing.Size(71, 33);
+            this.btn_atras_de_ver_usuarios_admin.TabIndex = 28;
+            this.btn_atras_de_ver_usuarios_admin.Text = "Atras";
+            this.btn_atras_de_ver_usuarios_admin.UseVisualStyleBackColor = true;
+            this.btn_atras_de_ver_usuarios_admin.Click += new System.EventHandler(this.btn_atras_de_ver_usuarios_admin_Click);
+            // 
+            // lista_usuarios_admin
+            // 
+            this.lista_usuarios_admin.FormattingEnabled = true;
+            this.lista_usuarios_admin.Location = new System.Drawing.Point(29, 61);
+            this.lista_usuarios_admin.Name = "lista_usuarios_admin";
+            this.lista_usuarios_admin.Size = new System.Drawing.Size(751, 355);
+            this.lista_usuarios_admin.TabIndex = 20;
+            this.lista_usuarios_admin.SelectedIndexChanged += new System.EventHandler(this.lista_usuarios_admin_SelectedIndexChanged);
+            // 
             // panel_ver_artistas_admin
             // 
             this.panel_ver_artistas_admin.Controls.Add(this.btn_atras_de_ver_artistas_admin);
@@ -1456,11 +1454,47 @@
             this.panel_ver_artistas_admin.Controls.Add(this.lista_ver_compositores_admin);
             this.panel_ver_artistas_admin.Controls.Add(this.label27);
             this.panel_ver_artistas_admin.Controls.Add(this.lista_ver_cantantes_admin);
-            this.panel_ver_artistas_admin.Location = new System.Drawing.Point(2, 2);
+            this.panel_ver_artistas_admin.Location = new System.Drawing.Point(486, 135);
             this.panel_ver_artistas_admin.Name = "panel_ver_artistas_admin";
-            this.panel_ver_artistas_admin.Size = new System.Drawing.Size(795, 423);
+            this.panel_ver_artistas_admin.Size = new System.Drawing.Size(49, 20);
             this.panel_ver_artistas_admin.TabIndex = 30;
             this.panel_ver_artistas_admin.Visible = false;
+            // 
+            // btn_atras_de_ver_artistas_admin
+            // 
+            this.btn_atras_de_ver_artistas_admin.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_atras_de_ver_artistas_admin.Location = new System.Drawing.Point(707, 11);
+            this.btn_atras_de_ver_artistas_admin.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_atras_de_ver_artistas_admin.Name = "btn_atras_de_ver_artistas_admin";
+            this.btn_atras_de_ver_artistas_admin.Size = new System.Drawing.Size(71, 33);
+            this.btn_atras_de_ver_artistas_admin.TabIndex = 36;
+            this.btn_atras_de_ver_artistas_admin.Text = "Atras";
+            this.btn_atras_de_ver_artistas_admin.UseVisualStyleBackColor = true;
+            this.btn_atras_de_ver_artistas_admin.Click += new System.EventHandler(this.btn_atras_de_ver_artistas_admin_Click);
+            // 
+            // lista_ver_directores_admin
+            // 
+            this.lista_ver_directores_admin.FormattingEnabled = true;
+            this.lista_ver_directores_admin.Location = new System.Drawing.Point(16, 315);
+            this.lista_ver_directores_admin.Name = "lista_ver_directores_admin";
+            this.lista_ver_directores_admin.Size = new System.Drawing.Size(770, 82);
+            this.lista_ver_directores_admin.TabIndex = 35;
+            // 
+            // lista_ver_actores_admin
+            // 
+            this.lista_ver_actores_admin.FormattingEnabled = true;
+            this.lista_ver_actores_admin.Location = new System.Drawing.Point(16, 227);
+            this.lista_ver_actores_admin.Name = "lista_ver_actores_admin";
+            this.lista_ver_actores_admin.Size = new System.Drawing.Size(770, 82);
+            this.lista_ver_actores_admin.TabIndex = 34;
+            // 
+            // lista_ver_compositores_admin
+            // 
+            this.lista_ver_compositores_admin.FormattingEnabled = true;
+            this.lista_ver_compositores_admin.Location = new System.Drawing.Point(16, 140);
+            this.lista_ver_compositores_admin.Name = "lista_ver_compositores_admin";
+            this.lista_ver_compositores_admin.Size = new System.Drawing.Size(770, 82);
+            this.lista_ver_compositores_admin.TabIndex = 33;
             // 
             // label27
             // 
@@ -1482,42 +1516,6 @@
             this.lista_ver_cantantes_admin.Size = new System.Drawing.Size(770, 82);
             this.lista_ver_cantantes_admin.TabIndex = 30;
             // 
-            // lista_ver_compositores_admin
-            // 
-            this.lista_ver_compositores_admin.FormattingEnabled = true;
-            this.lista_ver_compositores_admin.Location = new System.Drawing.Point(16, 140);
-            this.lista_ver_compositores_admin.Name = "lista_ver_compositores_admin";
-            this.lista_ver_compositores_admin.Size = new System.Drawing.Size(770, 82);
-            this.lista_ver_compositores_admin.TabIndex = 33;
-            // 
-            // lista_ver_actores_admin
-            // 
-            this.lista_ver_actores_admin.FormattingEnabled = true;
-            this.lista_ver_actores_admin.Location = new System.Drawing.Point(16, 227);
-            this.lista_ver_actores_admin.Name = "lista_ver_actores_admin";
-            this.lista_ver_actores_admin.Size = new System.Drawing.Size(770, 82);
-            this.lista_ver_actores_admin.TabIndex = 34;
-            // 
-            // lista_ver_directores_admin
-            // 
-            this.lista_ver_directores_admin.FormattingEnabled = true;
-            this.lista_ver_directores_admin.Location = new System.Drawing.Point(16, 315);
-            this.lista_ver_directores_admin.Name = "lista_ver_directores_admin";
-            this.lista_ver_directores_admin.Size = new System.Drawing.Size(770, 82);
-            this.lista_ver_directores_admin.TabIndex = 35;
-            // 
-            // btn_atras_de_ver_artistas_admin
-            // 
-            this.btn_atras_de_ver_artistas_admin.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_atras_de_ver_artistas_admin.Location = new System.Drawing.Point(707, 11);
-            this.btn_atras_de_ver_artistas_admin.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_atras_de_ver_artistas_admin.Name = "btn_atras_de_ver_artistas_admin";
-            this.btn_atras_de_ver_artistas_admin.Size = new System.Drawing.Size(71, 33);
-            this.btn_atras_de_ver_artistas_admin.TabIndex = 36;
-            this.btn_atras_de_ver_artistas_admin.Text = "Atras";
-            this.btn_atras_de_ver_artistas_admin.UseVisualStyleBackColor = true;
-            this.btn_atras_de_ver_artistas_admin.Click += new System.EventHandler(this.btn_atras_de_ver_artistas_admin_Click);
-            // 
             // aLAINIDBindingSource
             // 
             this.aLAINIDBindingSource.DataSource = typeof(Proyecto_Forms.ALAINID);
@@ -1528,8 +1526,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.panel_agregar_video_admin);
             this.Controls.Add(this.panel_agregar_cancion_admin);
+            this.Controls.Add(this.panel_ver_usuarios_admin);
+            this.Controls.Add(this.panel_ver_artistas_admin);
+            this.Controls.Add(this.panel_agregar_video_admin);
+            this.Controls.Add(this.panel_agregar_cancion_karaoke_admin);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btn_ver_usuarios_admin);
