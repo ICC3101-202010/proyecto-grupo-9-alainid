@@ -22,8 +22,8 @@ namespace ALAINID_DEFINITIVO
         // CERRAR SESION MENU ARRIBA
         private void cerrarSesionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-            Application.Exit();
+            Close();
+            Program.forms_inicio.Show();
         }
         // MENU PANEL PRINCIPAL ADMIN 
         private void btn_agregar_cancion_admin_Click(object sender, EventArgs e)
@@ -126,19 +126,49 @@ namespace ALAINID_DEFINITIVO
 
         private void btn_subir_cancion_admin_Click(object sender, EventArgs e)
         {
-
+            
             Artista cantante = new Artista(nombrecantante_txt_agregar_admin.Text, int.Parse(edadcantante_txt_agregar_admin.Text), sexocantante_txt_agregar_admin.Text, nacionalidadcantante_txt_agregar_admin.Text);
             Artista compositor = new Artista(nombrecompositor_txt_agregar_admin.Text, int.Parse(edadcompositor_txt_agregar_admin.Text), sexocompositor_txt_agregar_admin.Text, nacionalidad_txt_agregar_admin.Text);
             ALAINID.Activarlistacanciones();
             ALAINID.Activarlistacantantes();
             ALAINID.Partirlistacompositores();
             ALAINID.Partirlistaalbumes();
-            //a.AgregarSong(nombre_cancion_txt_agregar_cancion.Text, cantante, comboBox3.Text, compositor, anopublic_txt_agregar_cancion.Text, comboBox4.Text, album_txt_agregar_cancion.Text, nombrearchivo);
+            a.AgregarSong(nombre_cancion_txt_agregar_cancion.Text, cantante, comboBox3.Text, compositor, anopublic_txt_agregar_cancion.Text, comboBox4.Text, album_txt_agregar_cancion.Text, ruta_cancion);
         }
-
-        private void btn_importar_cancion_admin_Click(object sender, EventArgs e)
+        private void checkBox_repetir_cantante_como_compositor_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox_repetir_cantante_como_compositor.Checked == true)
+            {
+                nombrecompositor_txt_agregar_admin.Text = nombrecantante_txt_agregar_admin.Text;
+                edadcompositor_txt_agregar_admin.Text = edadcantante_txt_agregar_admin.Text;
+                sexocompositor_txt_agregar_admin.Text = sexocantante_txt_agregar_admin.Text;
+                nacionalidad_txt_agregar_admin.Text = nacionalidadcantante_txt_agregar_admin.Text;
+                nombrecompositor_txt_agregar_admin.Enabled = false;
+                edadcompositor_txt_agregar_admin.Enabled = false;
+                sexocompositor_txt_agregar_admin.Enabled = false;
+                nacionalidad_txt_agregar_admin.Enabled = false;
+               
+            }
+            if (checkBox_repetir_cantante_como_compositor.Checked == false)
+            {
+                nombrecompositor_txt_agregar_admin.Enabled = true;
+                edadcompositor_txt_agregar_admin.Enabled = true;
+                sexocompositor_txt_agregar_admin.Enabled = true;
+                nacionalidad_txt_agregar_admin.Enabled = true;
+            }
+        }
+        public string ruta_cancion;
+        private void ruta_archivo_cancion_txt_subir_cancion_TextChanged(object sender, EventArgs e)
         {
 
+        }
+        private void btn_importar_cancion_admin_Click(object sender, EventArgs e)
+        {
+            openfile_subircancion_admin.ShowDialog();
+            if (openfile_subircancion_admin.ShowDialog() == DialogResult.OK)
+            {
+                ruta_archivo_cancion_txt_subir_cancion.Text = openfile_subircancion_admin.FileName;
+            }
         }
 
         private void cancionesToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -354,6 +384,14 @@ namespace ALAINID_DEFINITIVO
         {
             panel_ver_artistas_admin.Visible = true; ;
         }
+
+        private void cerrarSesionYSalirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Close();
+            Program.forms_inicio.Show();
+            Application.Exit();
+        }
+
         
     }  
 }

@@ -12,6 +12,8 @@ namespace ALAINID_DEFINITIVO
         /// <summary>
         /// Punto de entrada principal para la aplicación.
         /// </summary>
+        public static FORMS_INICIO forms_inicio;
+        public static User usuario_activo;
         [STAThread]
         static void Main()
         {
@@ -78,10 +80,14 @@ namespace ALAINID_DEFINITIVO
                 ALAINID.anios.Add(i.ToString());
             }
 
-
+            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FORMS_INICIO());
+            Application.Run(forms_inicio=new FORMS_INICIO());
+
+
         }
+
+
     }
 }

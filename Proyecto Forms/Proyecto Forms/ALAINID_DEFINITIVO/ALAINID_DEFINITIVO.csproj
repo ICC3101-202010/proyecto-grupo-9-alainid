@@ -82,9 +82,9 @@
     <EmbeddedResource Include="FORMS_INICIO.resx">
       <DependentUpon>FORMS_INICIO.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORMS_USUARIO.resx">
+    <None Include="FORMS_USUARIO.resx">
       <DependentUpon>FORMS_USUARIO.cs</DependentUpon>
-    </EmbeddedResource>
+    </None>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

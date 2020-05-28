@@ -98,11 +98,19 @@ namespace Proyecto_Forms
         }
         public static List<Artista> CargarCompositores()
         {
-            IFormatter formatter6 = new BinaryFormatter();
-            Stream stream6 = new FileStream("Compositores.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
-            List<Artista> v = (List<Artista>)formatter6.Deserialize(stream6);
-            stream6.Close();
-            return v;
+            try
+            {
+                IFormatter formatter6 = new BinaryFormatter();
+                Stream stream6 = new FileStream("Compositores.bin", FileMode.OpenOrCreate, FileAccess.Read, FileShare.Read);
+                List<Artista> v = (List<Artista>)formatter6.Deserialize(stream6);
+                stream6.Close();
+                return v;
+            }
+            catch
+            {
+                List<Artista> v = new List<Artista>();
+                return v;
+            }
         }
         public static void Partirlistacompositores()
         {
@@ -117,11 +125,19 @@ namespace Proyecto_Forms
         }
         public static List<Artista> CargarDirectores()
         {
-            IFormatter formatter6 = new BinaryFormatter();
-            Stream stream6 = new FileStream("Directores.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
-            List<Artista> v = (List<Artista>)formatter6.Deserialize(stream6);
-            stream6.Close();
-            return v;
+            try
+            {
+                IFormatter formatter6 = new BinaryFormatter();
+                Stream stream6 = new FileStream("Directores.bin", FileMode.OpenOrCreate, FileAccess.Read, FileShare.Read);
+                List<Artista> v = (List<Artista>)formatter6.Deserialize(stream6);
+                stream6.Close();
+                return v;
+            }
+            catch
+            {
+                List<Artista> v = new List<Artista>();
+                return v;
+            }
         }
         public static void Partirlistadirectores()
         {
@@ -136,11 +152,19 @@ namespace Proyecto_Forms
         }
         public static List<Artista> CargarActores()
         {
-            IFormatter formatter6 = new BinaryFormatter();
-            Stream stream6 = new FileStream("Actores.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
-            List<Artista> v = (List<Artista>)formatter6.Deserialize(stream6);
-            stream6.Close();
-            return v;
+            try
+            { 
+                IFormatter formatter6 = new BinaryFormatter();
+                Stream stream6 = new FileStream("Actores.bin", FileMode.OpenOrCreate, FileAccess.Read, FileShare.Read);
+                List<Artista> v = (List<Artista>)formatter6.Deserialize(stream6);
+                stream6.Close();
+                return v;
+            }
+            catch
+            {
+                List<Artista> v = new List<Artista>();
+                return v;
+            }
         }
         public static void Partirlistaactores()
         {
@@ -155,11 +179,19 @@ namespace Proyecto_Forms
         }
         public static List<PlaylistSong> CargarAlbum()
         {
-            IFormatter formatter6 = new BinaryFormatter();
-            Stream stream6 = new FileStream("Albums.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
-            List<PlaylistSong> v = (List<PlaylistSong>)formatter6.Deserialize(stream6);
-            stream6.Close();
-            return v;
+            try
+            {
+                IFormatter formatter6 = new BinaryFormatter();
+                Stream stream6 = new FileStream("Albums.bin", FileMode.OpenOrCreate, FileAccess.Read, FileShare.Read);
+                List<PlaylistSong> v = (List<PlaylistSong>)formatter6.Deserialize(stream6);
+                stream6.Close();
+                return v;
+            }
+            catch
+            {
+                List<PlaylistSong> v = new List<PlaylistSong>();
+                return v;
+            }
         }
         public static void Partirlistaalbumes()
         {
@@ -196,17 +228,25 @@ namespace Proyecto_Forms
         public static void AlmacenarVideos(List<Video> u)      //Serializamos
         {
             IFormatter formatter5 = new BinaryFormatter();
-            Stream stream5 = new FileStream("Videos.bin", FileMode.Create, FileAccess.Write, FileShare.None);
+            Stream stream5 = new FileStream("Videos.bin", FileMode.OpenOrCreate, FileAccess.Write, FileShare.None);
             formatter5.Serialize(stream5, u);
             stream5.Close();
         }
         public static List<Video> CargarVideos()
         {
-            IFormatter formatter6 = new BinaryFormatter();
-            Stream stream6 = new FileStream("Videos.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
-            List<Video> v = (List<Video>)formatter6.Deserialize(stream6);
-            stream6.Close();
-            return v;
+            try
+            {
+                IFormatter formatter6 = new BinaryFormatter();
+                Stream stream6 = new FileStream("Videos.bin", FileMode.OpenOrCreate, FileAccess.Read, FileShare.Read);
+                List<Video> v = (List<Video>)formatter6.Deserialize(stream6);
+                stream6.Close();
+                return v;
+            }
+            catch
+            {
+                List<Video> v = new List<Video>();
+                return v;
+            }
         }
         //======================================================BINARIOCANTANTES=====================================================================================0000
         public static void AlmacenarCantante(List<Artista> a)      //Serializamos
@@ -218,43 +258,66 @@ namespace Proyecto_Forms
         }
         public static List<Artista> CargarCantantes()
         {
-            IFormatter formatter8 = new BinaryFormatter();
-            Stream stream8 = new FileStream("Cantantes.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
-            List<Artista> ar = (List<Artista>)formatter8.Deserialize(stream8);
-            stream8.Close();
-            return ar;
-
+            try
+            {
+                IFormatter formatter8 = new BinaryFormatter();
+                Stream stream8 = new FileStream("Cantantes.bin", FileMode.OpenOrCreate, FileAccess.Read, FileShare.Read);
+                List<Artista> ar = (List<Artista>)formatter8.Deserialize(stream8);
+                stream8.Close();
+                return ar;
+            }
+            catch
+            {
+                List<Artista> ar = new List<Artista>();
+                return ar;
+            }
         }
 
-        static void Almacenar(List<User> u)      //Serializamos
+        public static void Almacenar(List<User> u)      //Serializamos
         {
             IFormatter formatter = new BinaryFormatter();
             Stream stream = new FileStream("Usuarios2.bin", FileMode.OpenOrCreate, FileAccess.Write, FileShare.None);
             formatter.Serialize(stream, u);
             stream.Close();
         }
-        static List<User> Cargar()
+        public static List<User> Cargar()
         {
-            IFormatter formatter2 = new BinaryFormatter();
-            Stream stream2 = new FileStream("Usuarios2.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
-            List<User> p = (List<User>)formatter2.Deserialize(stream2);
-            stream2.Close();
-            return p;
+            try
+            {
+                IFormatter formatter2 = new BinaryFormatter();
+                Stream stream2 = new FileStream("Usuarios2.bin", FileMode.OpenOrCreate, FileAccess.Read, FileShare.Read);
+                List<User> p = (List<User>)formatter2.Deserialize(stream2);
+                stream2.Close();
+                return p;
+            }
+            catch
+            {
+                List<User> p = new List<User>();
+                return p;
+            }
         }
-        static void AlmacenarKaraoke(List<Song> k)      //Serializamos
+        public static void AlmacenarKaraoke(List<Song> k)      //Serializamos
         {
             IFormatter formatter = new BinaryFormatter();
             Stream stream = new FileStream("Cancioneskaraoke.bin", FileMode.OpenOrCreate, FileAccess.Write, FileShare.None);
             formatter.Serialize(stream, k);
             stream.Close();
         }
-        static List<Song> CargarKaraoke()
+        public static List<Song> CargarKaraoke()
         {
-            IFormatter formatter2 = new BinaryFormatter();
-            Stream stream2 = new FileStream("Cancioneskaraoke.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
-            List<Song> k3 = (List<Song>)formatter2.Deserialize(stream2);
-            stream2.Close();
-            return k3;
+            try
+            {
+                IFormatter formatter2 = new BinaryFormatter();
+                Stream stream2 = new FileStream("Cancioneskaraoke.bin", FileMode.OpenOrCreate, FileAccess.Read, FileShare.Read);
+                List<Song> k3 = (List<Song>)formatter2.Deserialize(stream2);
+                stream2.Close();
+                return k3;
+            }
+            catch
+            {
+                List<Song> k3 = new List<Song>();
+                return k3;
+            }
         }
         //===============================================HASTA AQUI ES TODO LO QUE ES SERIALIZATION================================================================
         //===============================================HASTA AQUI ES TODO LO QUE ES SERIALIZATION================================================================

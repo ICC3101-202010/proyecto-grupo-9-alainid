@@ -26,9 +26,9 @@ namespace ALAINID_DEFINITIVO
 
         private void btn_ingresar_a_Iniciarsesion_Click(object sender, EventArgs e)
         {
-            panel1_registrarse.Visible = false;
             panel2_inicio_sesion.Visible = true;
             panel2_inicio_sesion.Dock = DockStyle.Fill;
+
         }
 
         private void btn_primero_Salir_Click(object sender, EventArgs e)
@@ -55,7 +55,6 @@ namespace ALAINID_DEFINITIVO
             {
                 User u1 = new User(nombre_completo_text_de_registrarse.Text, nombre_usuario_text_de_registrarse.Text, mail_text_de_registrarse.Text, pass_text_de_registrarse.Text);
                 ALAINID.Agregarusuarioalalista(u1);
-                panel1_registrarse.Visible = false;
                 panel1_registrarse.Visible = false;
                 nombre_completo_text_de_registrarse.Text = "";
                 nombre_usuario_text_de_registrarse.Text = "";
@@ -102,9 +101,19 @@ namespace ALAINID_DEFINITIVO
                 bool bol = ALAINID.Ingresaralaapp(nombre_completo_txt_inicio_sesion.Text, pass_txt_inicio_sesion.Text);
                 if (bol == true)
                 {
+                    foreach (User usuario in ALAINID.listausuarios)
+                    {
+                        if (usuario.Email_== nombre_completo_txt_inicio_sesion.Text && usuario.Password_== pass_txt_inicio_sesion.Text)
+                        {
+                            Program.usuario_activo = usuario;
+                        }
+                    }
                     FORMS_USUARIO fORMS_USUARIO = new FORMS_USUARIO();
                     fORMS_USUARIO.Show();// hacer evento
-
+                    panel2_inicio_sesion.Visible = false;
+                    Program.forms_inicio.Visible = false;
+                    nombre_completo_txt_inicio_sesion.Text = "";
+                    pass_txt_inicio_sesion.Text = "";
                 }
                 else if (bol == false)
                 {
@@ -115,6 +124,10 @@ namespace ALAINID_DEFINITIVO
             {
                 FORMS_ADMIN fORMS_ADMIN = new FORMS_ADMIN();
                 fORMS_ADMIN.Show();//evento
+                panel2_inicio_sesion.Visible = false;
+                Program.forms_inicio.Visible = false;
+                nombre_completo_txt_inicio_sesion.Text = "";
+                pass_txt_inicio_sesion.Text = "";
             }
         }
 

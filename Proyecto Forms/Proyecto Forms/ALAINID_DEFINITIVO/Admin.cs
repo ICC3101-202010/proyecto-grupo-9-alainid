@@ -18,7 +18,7 @@ namespace Proyecto_Forms
         public bool AgregarSong(string nombrecan, Artista cantante, string genero, Artista compositor, string anopublicacion, string disquera, string album,string nombrearchivo)
         {
             bool ver1, ver2, ver3;
-            FileInfo fileInfo = new FileInfo(nombrearchivo);
+            //FileInfo fileInfo = new FileInfo(nombrearchivo);
             //tamano = fileInfo.Length / 1000000;
             Song s = new Song(nombrecan, cantante, genero, compositor, anopublicacion, disquera, album,nombrearchivo);
             ver1 = ALAINID.Verificar_existencia_cantante(ref cantante);
