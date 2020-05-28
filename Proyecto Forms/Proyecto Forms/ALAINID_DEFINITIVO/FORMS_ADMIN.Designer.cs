@@ -345,10 +345,10 @@
             this.panel_agregar_cancion_admin.Controls.Add(this.label3);
             this.panel_agregar_cancion_admin.Controls.Add(this.label1);
             this.panel_agregar_cancion_admin.Controls.Add(this.nombre_cancion_txt_agregar_cancion);
-            this.panel_agregar_cancion_admin.Location = new System.Drawing.Point(13, 32);
+            this.panel_agregar_cancion_admin.Location = new System.Drawing.Point(487, 386);
             this.panel_agregar_cancion_admin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel_agregar_cancion_admin.Name = "panel_agregar_cancion_admin";
-            this.panel_agregar_cancion_admin.Size = new System.Drawing.Size(1039, 509);
+            this.panel_agregar_cancion_admin.Size = new System.Drawing.Size(34, 36);
             this.panel_agregar_cancion_admin.TabIndex = 24;
             this.panel_agregar_cancion_admin.Visible = false;
             this.panel_agregar_cancion_admin.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_agregar_cancion_admin_Paint);
@@ -1382,10 +1382,10 @@
             this.panel_ver_usuarios_admin.Controls.Add(this.label26);
             this.panel_ver_usuarios_admin.Controls.Add(this.btn_atras_de_ver_usuarios_admin);
             this.panel_ver_usuarios_admin.Controls.Add(this.lista_usuarios_admin);
-            this.panel_ver_usuarios_admin.Location = new System.Drawing.Point(936, 459);
+            this.panel_ver_usuarios_admin.Location = new System.Drawing.Point(931, 465);
             this.panel_ver_usuarios_admin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel_ver_usuarios_admin.Name = "panel_ver_usuarios_admin";
-            this.panel_ver_usuarios_admin.Size = new System.Drawing.Size(41, 36);
+            this.panel_ver_usuarios_admin.Size = new System.Drawing.Size(46, 26);
             this.panel_ver_usuarios_admin.TabIndex = 96;
             this.panel_ver_usuarios_admin.Visible = false;
             this.panel_ver_usuarios_admin.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_ver_usuarios_admin_Paint);
@@ -1512,8 +1512,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.ClientSize = new System.Drawing.Size(1067, 554);
-            this.Controls.Add(this.panel_agregar_cancion_admin);
             this.Controls.Add(this.panel_ver_usuarios_admin);
+            this.Controls.Add(this.panel_agregar_cancion_admin);
             this.Controls.Add(this.panel_ver_artistas_admin);
             this.Controls.Add(this.panel_agregar_video_admin);
             this.Controls.Add(this.panel_agregar_cancion_karaoke_admin);

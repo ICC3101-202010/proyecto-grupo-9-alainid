@@ -15,3 +15,20 @@ C:\Users\cvera\Desktop\DEFINITIVO 2.0\ALAINID_DEFINITIVO\ALAINID_DEFINITIVO\obj\
 C:\Users\cvera\Desktop\DEFINITIVO 2.0\ALAINID_DEFINITIVO\ALAINID_DEFINITIVO\obj\Debug\AxInterop.WMPLib.dll
 C:\Users\cvera\Desktop\DEFINITIVO 2.0\ALAINID_DEFINITIVO\ALAINID_DEFINITIVO\obj\Debug\ALAINID_DEFINITIVO.csproj.ResolveComReference.cache
 C:\Users\cvera\Desktop\DEFINITIVO 2.0\ALAINID_DEFINITIVO\ALAINID_DEFINITIVO\obj\Debug\ALAINID_DEFINITIVO.FORMS_USUARIO.resources
+C:\Users\rvarg\Desktop\Proyecto POO\proyecto-grupo-9-alainid\Proyecto Forms\Proyecto Forms\ALAINID_DEFINITIVO\obj\Debug\ALAINID_DEFINITIVO.csprojAssemblyReference.cache
+C:\Users\rvarg\Desktop\Proyecto POO\proyecto-grupo-9-alainid\Proyecto Forms\Proyecto Forms\ALAINID_DEFINITIVO\obj\Debug\Interop.WMPLib.dll
+C:\Users\rvarg\Desktop\Proyecto POO\proyecto-grupo-9-alainid\Proyecto Forms\Proyecto Forms\ALAINID_DEFINITIVO\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\rvarg\Desktop\Proyecto POO\proyecto-grupo-9-alainid\Proyecto Forms\Proyecto Forms\ALAINID_DEFINITIVO\obj\Debug\ALAINID_DEFINITIVO.csproj.ResolveComReference.cache
+C:\Users\rvarg\Desktop\Proyecto POO\proyecto-grupo-9-alainid\Proyecto Forms\Proyecto Forms\ALAINID_DEFINITIVO\obj\Debug\ALAINID_DEFINITIVO.FORMS_ADMIN.resources
+C:\Users\rvarg\Desktop\Proyecto POO\proyecto-grupo-9-alainid\Proyecto Forms\Proyecto Forms\ALAINID_DEFINITIVO\obj\Debug\ALAINID_DEFINITIVO.FORMS_INICIO.resources
+C:\Users\rvarg\Desktop\Proyecto POO\proyecto-grupo-9-alainid\Proyecto Forms\Proyecto Forms\ALAINID_DEFINITIVO\obj\Debug\ALAINID_DEFINITIVO.FORMS_USUARIO.resources
+C:\Users\rvarg\Desktop\Proyecto POO\proyecto-grupo-9-alainid\Proyecto Forms\Proyecto Forms\ALAINID_DEFINITIVO\obj\Debug\ALAINID_DEFINITIVO.Properties.Resources.resources
+C:\Users\rvarg\Desktop\Proyecto POO\proyecto-grupo-9-alainid\Proyecto Forms\Proyecto Forms\ALAINID_DEFINITIVO\obj\Debug\ALAINID_DEFINITIVO.csproj.GenerateResource.cache
+C:\Users\rvarg\Desktop\Proyecto POO\proyecto-grupo-9-alainid\Proyecto Forms\Proyecto Forms\ALAINID_DEFINITIVO\obj\Debug\ALAINID_DEFINITIVO.csproj.CoreCompileInputs.cache
+C:\Users\rvarg\Desktop\Proyecto POO\proyecto-grupo-9-alainid\Proyecto Forms\Proyecto Forms\ALAINID_DEFINITIVO\obj\Debug\ALAINID_DEFINITIVO.exe
+C:\Users\rvarg\Desktop\Proyecto POO\proyecto-grupo-9-alainid\Proyecto Forms\Proyecto Forms\ALAINID_DEFINITIVO\obj\Debug\ALAINID_DEFINITIVO.pdb
+C:\Users\rvarg\Desktop\Proyecto POO\proyecto-grupo-9-alainid\Proyecto Forms\Proyecto Forms\ALAINID_DEFINITIVO\bin\Debug\ALAINID_DEFINITIVO.exe.config
+C:\Users\rvarg\Desktop\Proyecto POO\proyecto-grupo-9-alainid\Proyecto Forms\Proyecto Forms\ALAINID_DEFINITIVO\bin\Debug\ALAINID_DEFINITIVO.exe
+C:\Users\rvarg\Desktop\Proyecto POO\proyecto-grupo-9-alainid\Proyecto Forms\Proyecto Forms\ALAINID_DEFINITIVO\bin\Debug\ALAINID_DEFINITIVO.pdb
+C:\Users\rvarg\Desktop\Proyecto POO\proyecto-grupo-9-alainid\Proyecto Forms\Proyecto Forms\ALAINID_DEFINITIVO\bin\Debug\Interop.WMPLib.dll
+C:\Users\rvarg\Desktop\Proyecto POO\proyecto-grupo-9-alainid\Proyecto Forms\Proyecto Forms\ALAINID_DEFINITIVO\bin\Debug\AxInterop.WMPLib.dll

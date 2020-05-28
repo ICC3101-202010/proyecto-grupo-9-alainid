@@ -69,7 +69,7 @@ namespace Proyecto_Forms
         }
         public string InformacionUsuariopriv()
         {
-            string informacion2 = ("ID USUARIO: " + nombreUsuario + "\n" + "- Nombre: " + nombre_ + "\n" + "- Email: " + email_ + "\n" + "- Password: " + password_ + "\n" + "- Privacidad: " + perfilpublico_ + "\n" + "- Privilegio: " + premium_);
+            string informacion2 = ("ID USUARIO: " + nombreUsuario  + " NOMBRE: " + nombre_  + " EMAIL: " + email_  + " PASSWORD: " + password_  + " PRIVACIDAD: " + perfilpublico_  + " PRIVILEGIO: " + premium_);
             return informacion2;
         }
         //public void Crear_playlist(string nombre)

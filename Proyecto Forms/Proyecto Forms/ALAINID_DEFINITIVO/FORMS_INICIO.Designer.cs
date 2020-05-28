@@ -62,10 +62,9 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.DarkRed;
-            this.label9.Location = new System.Drawing.Point(363, 124);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Location = new System.Drawing.Point(484, 153);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(323, 23);
+            this.label9.Size = new System.Drawing.Size(411, 29);
             this.label9.TabIndex = 18;
             this.label9.Text = "Todo lo que necesitas en un solo lugar...";
             // 
@@ -74,20 +73,19 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Comic Sans MS", 72F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(163, 9);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Location = new System.Drawing.Point(217, 11);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(501, 136);
+            this.label10.Size = new System.Drawing.Size(631, 169);
             this.label10.TabIndex = 17;
             this.label10.Text = "ALAINID";
             // 
             // btn_primero_Salir
             // 
             this.btn_primero_Salir.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_primero_Salir.Location = new System.Drawing.Point(207, 380);
-            this.btn_primero_Salir.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_primero_Salir.Location = new System.Drawing.Point(276, 468);
+            this.btn_primero_Salir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_primero_Salir.Name = "btn_primero_Salir";
-            this.btn_primero_Salir.Size = new System.Drawing.Size(400, 46);
+            this.btn_primero_Salir.Size = new System.Drawing.Size(533, 57);
             this.btn_primero_Salir.TabIndex = 16;
             this.btn_primero_Salir.Text = "Salir";
             this.btn_primero_Salir.UseVisualStyleBackColor = true;
@@ -96,10 +94,10 @@
             // btn_ingresar_a_Iniciarsesion
             // 
             this.btn_ingresar_a_Iniciarsesion.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ingresar_a_Iniciarsesion.Location = new System.Drawing.Point(207, 281);
-            this.btn_ingresar_a_Iniciarsesion.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_ingresar_a_Iniciarsesion.Location = new System.Drawing.Point(276, 346);
+            this.btn_ingresar_a_Iniciarsesion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_ingresar_a_Iniciarsesion.Name = "btn_ingresar_a_Iniciarsesion";
-            this.btn_ingresar_a_Iniciarsesion.Size = new System.Drawing.Size(400, 90);
+            this.btn_ingresar_a_Iniciarsesion.Size = new System.Drawing.Size(533, 111);
             this.btn_ingresar_a_Iniciarsesion.TabIndex = 15;
             this.btn_ingresar_a_Iniciarsesion.Text = "Iniciar Sesion";
             this.btn_ingresar_a_Iniciarsesion.UseVisualStyleBackColor = true;
@@ -108,10 +106,10 @@
             // btn_ingresar_a_Registrarse
             // 
             this.btn_ingresar_a_Registrarse.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ingresar_a_Registrarse.Location = new System.Drawing.Point(207, 183);
-            this.btn_ingresar_a_Registrarse.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_ingresar_a_Registrarse.Location = new System.Drawing.Point(276, 225);
+            this.btn_ingresar_a_Registrarse.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_ingresar_a_Registrarse.Name = "btn_ingresar_a_Registrarse";
-            this.btn_ingresar_a_Registrarse.Size = new System.Drawing.Size(400, 90);
+            this.btn_ingresar_a_Registrarse.Size = new System.Drawing.Size(533, 111);
             this.btn_ingresar_a_Registrarse.TabIndex = 14;
             this.btn_ingresar_a_Registrarse.Text = "Registrarse";
             this.btn_ingresar_a_Registrarse.UseVisualStyleBackColor = true;
@@ -130,19 +128,20 @@
             this.panel1_registrarse.Controls.Add(this.mail_text_de_registrarse);
             this.panel1_registrarse.Controls.Add(this.label1);
             this.panel1_registrarse.Controls.Add(this.btn_registrar_de_registrarse);
-            this.panel1_registrarse.Location = new System.Drawing.Point(12, 12);
+            this.panel1_registrarse.Location = new System.Drawing.Point(16, 15);
+            this.panel1_registrarse.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1_registrarse.Name = "panel1_registrarse";
-            this.panel1_registrarse.Size = new System.Drawing.Size(43, 40);
+            this.panel1_registrarse.Size = new System.Drawing.Size(1038, 510);
             this.panel1_registrarse.TabIndex = 19;
             this.panel1_registrarse.Visible = false;
             // 
             // btn_atras_de_registrarse
             // 
             this.btn_atras_de_registrarse.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_atras_de_registrarse.Location = new System.Drawing.Point(699, 17);
-            this.btn_atras_de_registrarse.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_atras_de_registrarse.Location = new System.Drawing.Point(932, 21);
+            this.btn_atras_de_registrarse.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_atras_de_registrarse.Name = "btn_atras_de_registrarse";
-            this.btn_atras_de_registrarse.Size = new System.Drawing.Size(71, 33);
+            this.btn_atras_de_registrarse.Size = new System.Drawing.Size(95, 41);
             this.btn_atras_de_registrarse.TabIndex = 27;
             this.btn_atras_de_registrarse.Text = "Atras";
             this.btn_atras_de_registrarse.UseVisualStyleBackColor = true;
@@ -154,10 +153,9 @@
             this.label4.BackColor = System.Drawing.Color.Black;
             this.label4.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(48, 366);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(64, 450);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(138, 33);
+            this.label4.Size = new System.Drawing.Size(173, 42);
             this.label4.TabIndex = 26;
             this.label4.Text = "Contraseña";
             // 
@@ -167,10 +165,9 @@
             this.label3.BackColor = System.Drawing.Color.Black;
             this.label3.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(48, 291);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(64, 358);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(211, 33);
+            this.label3.Size = new System.Drawing.Size(265, 42);
             this.label3.TabIndex = 25;
             this.label3.Text = "Nombre Completo";
             // 
@@ -180,10 +177,9 @@
             this.label2.BackColor = System.Drawing.Color.Black;
             this.label2.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(48, 218);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(64, 268);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(229, 33);
+            this.label2.Size = new System.Drawing.Size(285, 42);
             this.label2.TabIndex = 24;
             this.label2.Text = "Nombre de Usuario";
             // 
@@ -193,21 +189,20 @@
             this.label5.BackColor = System.Drawing.Color.Black;
             this.label5.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(51, 148);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(68, 182);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(79, 33);
+            this.label5.Size = new System.Drawing.Size(99, 42);
             this.label5.TabIndex = 23;
             this.label5.Text = "MAIL";
             // 
             // pass_text_de_registrarse
             // 
             this.pass_text_de_registrarse.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pass_text_de_registrarse.Location = new System.Drawing.Point(333, 373);
-            this.pass_text_de_registrarse.Margin = new System.Windows.Forms.Padding(2);
+            this.pass_text_de_registrarse.Location = new System.Drawing.Point(444, 459);
+            this.pass_text_de_registrarse.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pass_text_de_registrarse.Name = "pass_text_de_registrarse";
             this.pass_text_de_registrarse.PasswordChar = '*';
-            this.pass_text_de_registrarse.Size = new System.Drawing.Size(227, 26);
+            this.pass_text_de_registrarse.Size = new System.Drawing.Size(301, 30);
             this.pass_text_de_registrarse.TabIndex = 22;
             this.pass_text_de_registrarse.UseSystemPasswordChar = true;
             this.pass_text_de_registrarse.TextChanged += new System.EventHandler(this.pass_text_de_registrarse_TextChanged);
@@ -215,30 +210,30 @@
             // nombre_completo_text_de_registrarse
             // 
             this.nombre_completo_text_de_registrarse.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nombre_completo_text_de_registrarse.Location = new System.Drawing.Point(333, 298);
-            this.nombre_completo_text_de_registrarse.Margin = new System.Windows.Forms.Padding(2);
+            this.nombre_completo_text_de_registrarse.Location = new System.Drawing.Point(444, 367);
+            this.nombre_completo_text_de_registrarse.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nombre_completo_text_de_registrarse.Name = "nombre_completo_text_de_registrarse";
-            this.nombre_completo_text_de_registrarse.Size = new System.Drawing.Size(227, 26);
+            this.nombre_completo_text_de_registrarse.Size = new System.Drawing.Size(301, 30);
             this.nombre_completo_text_de_registrarse.TabIndex = 21;
             this.nombre_completo_text_de_registrarse.TextChanged += new System.EventHandler(this.nombre_completo_text_de_registrarse_TextChanged);
             // 
             // nombre_usuario_text_de_registrarse
             // 
             this.nombre_usuario_text_de_registrarse.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nombre_usuario_text_de_registrarse.Location = new System.Drawing.Point(333, 225);
-            this.nombre_usuario_text_de_registrarse.Margin = new System.Windows.Forms.Padding(2);
+            this.nombre_usuario_text_de_registrarse.Location = new System.Drawing.Point(444, 277);
+            this.nombre_usuario_text_de_registrarse.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nombre_usuario_text_de_registrarse.Name = "nombre_usuario_text_de_registrarse";
-            this.nombre_usuario_text_de_registrarse.Size = new System.Drawing.Size(227, 26);
+            this.nombre_usuario_text_de_registrarse.Size = new System.Drawing.Size(301, 30);
             this.nombre_usuario_text_de_registrarse.TabIndex = 20;
             this.nombre_usuario_text_de_registrarse.TextChanged += new System.EventHandler(this.nombre_usuario_text_de_registrarse_TextChanged);
             // 
             // mail_text_de_registrarse
             // 
             this.mail_text_de_registrarse.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mail_text_de_registrarse.Location = new System.Drawing.Point(333, 155);
-            this.mail_text_de_registrarse.Margin = new System.Windows.Forms.Padding(2);
+            this.mail_text_de_registrarse.Location = new System.Drawing.Point(444, 191);
+            this.mail_text_de_registrarse.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mail_text_de_registrarse.Name = "mail_text_de_registrarse";
-            this.mail_text_de_registrarse.Size = new System.Drawing.Size(227, 26);
+            this.mail_text_de_registrarse.Size = new System.Drawing.Size(301, 30);
             this.mail_text_de_registrarse.TabIndex = 19;
             this.mail_text_de_registrarse.TextChanged += new System.EventHandler(this.mail_text_de_registrarse_TextChanged);
             // 
@@ -247,20 +242,19 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(224, 31);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(299, 38);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(248, 45);
+            this.label1.Size = new System.Drawing.Size(314, 56);
             this.label1.TabIndex = 18;
             this.label1.Text = "REGISTRARSE";
             // 
             // btn_registrar_de_registrarse
             // 
             this.btn_registrar_de_registrarse.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_registrar_de_registrarse.Location = new System.Drawing.Point(625, 155);
-            this.btn_registrar_de_registrarse.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_registrar_de_registrarse.Location = new System.Drawing.Point(833, 191);
+            this.btn_registrar_de_registrarse.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_registrar_de_registrarse.Name = "btn_registrar_de_registrarse";
-            this.btn_registrar_de_registrarse.Size = new System.Drawing.Size(144, 244);
+            this.btn_registrar_de_registrarse.Size = new System.Drawing.Size(192, 300);
             this.btn_registrar_de_registrarse.TabIndex = 15;
             this.btn_registrar_de_registrarse.Text = "Registrarse";
             this.btn_registrar_de_registrarse.UseVisualStyleBackColor = true;
@@ -275,19 +269,20 @@
             this.panel2_inicio_sesion.Controls.Add(this.label7);
             this.panel2_inicio_sesion.Controls.Add(this.pass_txt_inicio_sesion);
             this.panel2_inicio_sesion.Controls.Add(this.nombre_completo_txt_inicio_sesion);
-            this.panel2_inicio_sesion.Location = new System.Drawing.Point(77, 12);
+            this.panel2_inicio_sesion.Location = new System.Drawing.Point(103, 15);
+            this.panel2_inicio_sesion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2_inicio_sesion.Name = "panel2_inicio_sesion";
-            this.panel2_inicio_sesion.Size = new System.Drawing.Size(65, 48);
+            this.panel2_inicio_sesion.Size = new System.Drawing.Size(58, 49);
             this.panel2_inicio_sesion.TabIndex = 28;
             this.panel2_inicio_sesion.Visible = false;
             // 
             // btn_atras_de_inicio_sesion
             // 
             this.btn_atras_de_inicio_sesion.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_atras_de_inicio_sesion.Location = new System.Drawing.Point(699, 41);
-            this.btn_atras_de_inicio_sesion.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_atras_de_inicio_sesion.Location = new System.Drawing.Point(932, 50);
+            this.btn_atras_de_inicio_sesion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_atras_de_inicio_sesion.Name = "btn_atras_de_inicio_sesion";
-            this.btn_atras_de_inicio_sesion.Size = new System.Drawing.Size(71, 35);
+            this.btn_atras_de_inicio_sesion.Size = new System.Drawing.Size(95, 43);
             this.btn_atras_de_inicio_sesion.TabIndex = 17;
             this.btn_atras_de_inicio_sesion.Text = "Atras";
             this.btn_atras_de_inicio_sesion.UseVisualStyleBackColor = true;
@@ -299,20 +294,19 @@
             this.label8.BackColor = System.Drawing.Color.Black;
             this.label8.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(251, 41);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Location = new System.Drawing.Point(335, 50);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(290, 45);
+            this.label8.Size = new System.Drawing.Size(365, 55);
             this.label8.TabIndex = 16;
             this.label8.Text = "INICIO SESION";
             // 
             // btn_ingresar_inicio_sesion
             // 
             this.btn_ingresar_inicio_sesion.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ingresar_inicio_sesion.Location = new System.Drawing.Point(279, 298);
-            this.btn_ingresar_inicio_sesion.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_ingresar_inicio_sesion.Location = new System.Drawing.Point(372, 367);
+            this.btn_ingresar_inicio_sesion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_ingresar_inicio_sesion.Name = "btn_ingresar_inicio_sesion";
-            this.btn_ingresar_inicio_sesion.Size = new System.Drawing.Size(212, 92);
+            this.btn_ingresar_inicio_sesion.Size = new System.Drawing.Size(283, 113);
             this.btn_ingresar_inicio_sesion.TabIndex = 15;
             this.btn_ingresar_inicio_sesion.Text = "Ingresar";
             this.btn_ingresar_inicio_sesion.UseVisualStyleBackColor = true;
@@ -325,10 +319,9 @@
             this.label6.BackColor = System.Drawing.Color.Black;
             this.label6.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(121, 211);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(161, 260);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(138, 33);
+            this.label6.Size = new System.Drawing.Size(173, 42);
             this.label6.TabIndex = 14;
             this.label6.Text = "Contraseña";
             // 
@@ -338,21 +331,20 @@
             this.label7.BackColor = System.Drawing.Color.Black;
             this.label7.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(121, 136);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(161, 167);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(79, 33);
+            this.label7.Size = new System.Drawing.Size(99, 42);
             this.label7.TabIndex = 13;
             this.label7.Text = "MAIL";
             // 
             // pass_txt_inicio_sesion
             // 
             this.pass_txt_inicio_sesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pass_txt_inicio_sesion.Location = new System.Drawing.Point(406, 218);
-            this.pass_txt_inicio_sesion.Margin = new System.Windows.Forms.Padding(2);
+            this.pass_txt_inicio_sesion.Location = new System.Drawing.Point(541, 268);
+            this.pass_txt_inicio_sesion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pass_txt_inicio_sesion.Name = "pass_txt_inicio_sesion";
             this.pass_txt_inicio_sesion.PasswordChar = '*';
-            this.pass_txt_inicio_sesion.Size = new System.Drawing.Size(227, 26);
+            this.pass_txt_inicio_sesion.Size = new System.Drawing.Size(301, 30);
             this.pass_txt_inicio_sesion.TabIndex = 12;
             this.pass_txt_inicio_sesion.UseSystemPasswordChar = true;
             this.pass_txt_inicio_sesion.TextChanged += new System.EventHandler(this.pass_txt_inicio_sesion_TextChanged);
@@ -360,19 +352,19 @@
             // nombre_completo_txt_inicio_sesion
             // 
             this.nombre_completo_txt_inicio_sesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nombre_completo_txt_inicio_sesion.Location = new System.Drawing.Point(406, 143);
-            this.nombre_completo_txt_inicio_sesion.Margin = new System.Windows.Forms.Padding(2);
+            this.nombre_completo_txt_inicio_sesion.Location = new System.Drawing.Point(541, 176);
+            this.nombre_completo_txt_inicio_sesion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nombre_completo_txt_inicio_sesion.Name = "nombre_completo_txt_inicio_sesion";
-            this.nombre_completo_txt_inicio_sesion.Size = new System.Drawing.Size(227, 26);
+            this.nombre_completo_txt_inicio_sesion.Size = new System.Drawing.Size(301, 30);
             this.nombre_completo_txt_inicio_sesion.TabIndex = 11;
             this.nombre_completo_txt_inicio_sesion.TextChanged += new System.EventHandler(this.nombre_completo_txt_inicio_sesion_TextChanged);
             // 
             // FORMS_INICIO
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.panel2_inicio_sesion);
             this.Controls.Add(this.panel1_registrarse);
             this.Controls.Add(this.label9);
@@ -380,6 +372,7 @@
             this.Controls.Add(this.btn_primero_Salir);
             this.Controls.Add(this.btn_ingresar_a_Iniciarsesion);
             this.Controls.Add(this.btn_ingresar_a_Registrarse);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FORMS_INICIO";
             this.ShowIcon = false;
             this.Text = "ALAINID";

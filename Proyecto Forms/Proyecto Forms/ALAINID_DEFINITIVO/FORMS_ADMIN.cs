@@ -126,12 +126,14 @@ namespace ALAINID_DEFINITIVO
 
         private void btn_subir_cancion_admin_Click(object sender, EventArgs e)
         {
-            
+
+            Artista cantante = new Artista(nombrecantante_txt_agregar_admin.Text, int.Parse(edadcantante_txt_agregar_admin.Text), sexocantante_txt_agregar_admin.Text, nacionalidadcantante_txt_agregar_admin.Text);
+            Artista compositor = new Artista(nombrecompositor_txt_agregar_admin.Text, int.Parse(edadcompositor_txt_agregar_admin.Text), sexocompositor_txt_agregar_admin.Text, nacionalidad_txt_agregar_admin.Text);
             ALAINID.Activarlistacanciones();
             ALAINID.Activarlistacantantes();
             ALAINID.Partirlistacompositores();
             ALAINID.Partirlistaalbumes();
-            a.AgregarSong(nombre_cancion_txt_agregar_cancion.Text,cantante , genero2, compositor, anopublicacion, disquera, album, nombrearchivo);
+            //a.AgregarSong(nombre_cancion_txt_agregar_cancion.Text, cantante, comboBox3.Text, compositor, anopublic_txt_agregar_cancion.Text, comboBox4.Text, album_txt_agregar_cancion.Text, nombrearchivo);
         }
 
         private void btn_importar_cancion_admin_Click(object sender, EventArgs e)
@@ -224,8 +226,15 @@ namespace ALAINID_DEFINITIVO
             panel_agregar_video_admin.Dock = DockStyle.Fill;
         }
 
+
+
         private void FORMS_ADMIN_Load(object sender, EventArgs e)
         {
+            for (int i = 0; i < ALAINID.listausuarios.Count; i++)
+            {
+                lista_usuarios_admin.Items.Add(ALAINID.listausuarios[i].InformacionUsuariopriv());
+            }
+
             //no borrar
         }
 
@@ -304,6 +313,10 @@ namespace ALAINID_DEFINITIVO
         }
 
         // VER USUARIOS ADMIN ======================================================================================================================================================================================
+        private void panel_ver_usuarios_admin_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
 
         private void btn_atras_de_ver_usuarios_admin_Click(object sender, EventArgs e)
         {
@@ -340,14 +353,7 @@ namespace ALAINID_DEFINITIVO
         private void artistasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             panel_ver_artistas_admin.Visible = true; ;
-
         }
-
-        private void panel_ver_usuarios_admin_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         
     }  
 }
