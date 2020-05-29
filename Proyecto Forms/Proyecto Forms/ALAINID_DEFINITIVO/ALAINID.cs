@@ -2551,27 +2551,16 @@ namespace Proyecto_Forms
                 if (art.Name == cantante.Name)
                 {
                     h = 1;
-                    Console.WriteLine("El cantante ya existe en nuestra base de datos");
-                    Thread.Sleep(2000);
+                    
+                    
                     cantante = art;
                     return true;
                 }
             }
             if (h == 0)
             {
-                Console.WriteLine("El cantante ingresado no existe, que desea hacer:\n" +
-                              "1--> Crear un perfil para el cantante\n" +
-                              "2--> No Agregar la cancion\n");
-                n2 = Numero(2);
-                if (n2 == 1)
-                {
-                    Crear_cantante(cantante);
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
+                Crear_cantante(cantante);
+                return true;
             }
             return false;
         }
@@ -2581,7 +2570,7 @@ namespace Proyecto_Forms
 
             lista_compositores.Add(compositor);
             AlmacenarCompositores(lista_compositores);
-            Console.WriteLine("Perfil del Compositor fue creado exitosamente.\n");
+            
 
         }
 
@@ -2593,27 +2582,18 @@ namespace Proyecto_Forms
                 if (comp.Name == compositor.Name)
                 {
                     h = 1;
-                    Console.WriteLine("El compositor ya existe en nuestra base de datos");
-                    Thread.Sleep(2000);
+                    
+                    
                     compositor = comp;
                     return true;
                 }
             }
             if (h == 0)
             {
-                Console.WriteLine("El compositor ingresado no existe, que desea hacer:\n" +
-                              "1--> Crear un perfil para el Compositor\n" +
-                              "2--> No Agregar la cancion\n");
-                n2 = Numero(2);
-                if (n2 == 1)
-                {
-                    Crear_compositor(compositor);
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
+                Crear_compositor(compositor);
+                return true;
+
+
             }
             return false;
         }
@@ -2722,10 +2702,10 @@ namespace Proyecto_Forms
             return false;
         }
 
-        public static void Crear_Album()
+        public static void Crear_Album(string nombre)
         {
-            Console.WriteLine("Ingrese el nombre del Album:");
-            string nombre = Console.ReadLine();
+            
+            
             PlaylistSong album = new PlaylistSong(nombre);
             todos_los_albumes.Add(album);
             AlmacenarAlbum(todos_los_albumes);
@@ -2750,19 +2730,8 @@ namespace Proyecto_Forms
                 }
                 if (h == 0)
                 {
-                    Console.WriteLine("El Album ingresado no existe, que desea hacer:\n" +
-                                  "1--> Crear un Album\n" +
-                                  "2--> No Agregar la cancion\n");
-                    n2 = Numero(2);
-                    if (n2 == 1)
-                    {
-                        Crear_Album();
-                        return true;
-                    }
-                    else
-                    {
-                        return false;
-                    }
+                    Crear_Album(nombre_album);
+                    return true;
                 }
             }
             return false;

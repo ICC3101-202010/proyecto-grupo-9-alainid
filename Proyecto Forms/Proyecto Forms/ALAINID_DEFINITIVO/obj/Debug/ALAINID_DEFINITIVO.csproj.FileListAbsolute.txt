@@ -21,7 +21,6 @@ C:\Users\rvarg\Desktop\Proyecto POO\proyecto-grupo-9-alainid\Proyecto Forms\Proy
 C:\Users\rvarg\Desktop\Proyecto POO\proyecto-grupo-9-alainid\Proyecto Forms\Proyecto Forms\ALAINID_DEFINITIVO\obj\Debug\ALAINID_DEFINITIVO.csproj.ResolveComReference.cache
 C:\Users\rvarg\Desktop\Proyecto POO\proyecto-grupo-9-alainid\Proyecto Forms\Proyecto Forms\ALAINID_DEFINITIVO\obj\Debug\ALAINID_DEFINITIVO.FORMS_ADMIN.resources
 C:\Users\rvarg\Desktop\Proyecto POO\proyecto-grupo-9-alainid\Proyecto Forms\Proyecto Forms\ALAINID_DEFINITIVO\obj\Debug\ALAINID_DEFINITIVO.FORMS_INICIO.resources
-C:\Users\rvarg\Desktop\Proyecto POO\proyecto-grupo-9-alainid\Proyecto Forms\Proyecto Forms\ALAINID_DEFINITIVO\obj\Debug\ALAINID_DEFINITIVO.FORMS_USUARIO.resources
 C:\Users\rvarg\Desktop\Proyecto POO\proyecto-grupo-9-alainid\Proyecto Forms\Proyecto Forms\ALAINID_DEFINITIVO\obj\Debug\ALAINID_DEFINITIVO.Properties.Resources.resources
 C:\Users\rvarg\Desktop\Proyecto POO\proyecto-grupo-9-alainid\Proyecto Forms\Proyecto Forms\ALAINID_DEFINITIVO\obj\Debug\ALAINID_DEFINITIVO.csproj.GenerateResource.cache
 C:\Users\rvarg\Desktop\Proyecto POO\proyecto-grupo-9-alainid\Proyecto Forms\Proyecto Forms\ALAINID_DEFINITIVO\obj\Debug\ALAINID_DEFINITIVO.csproj.CoreCompileInputs.cache

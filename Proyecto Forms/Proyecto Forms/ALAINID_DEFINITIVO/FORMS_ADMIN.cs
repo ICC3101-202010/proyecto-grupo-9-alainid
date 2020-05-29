@@ -133,6 +133,9 @@ namespace ALAINID_DEFINITIVO
             ALAINID.Activarlistacantantes();
             ALAINID.Partirlistacompositores();
             ALAINID.Partirlistaalbumes();
+            
+
+            
             a.AgregarSong(nombre_cancion_txt_agregar_cancion.Text, cantante, comboBox3.Text, compositor, anopublic_txt_agregar_cancion.Text, comboBox4.Text, album_txt_agregar_cancion.Text, ruta_cancion);
         }
         private void checkBox_repetir_cantante_como_compositor_CheckedChanged(object sender, EventArgs e)

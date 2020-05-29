@@ -232,5 +232,17 @@ namespace ALAINID_DEFINITIVO
             contraseñapremiumtextbox.Text = "";
             emialpremiumtextbox.Text = "";
         }
+
+        private void checkBox_contraseña_premium_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox_contraseña_premium.Checked == true)
+            {
+                contraseñapremiumtextbox.UseSystemPasswordChar = false;
+            }
+            if (checkBox_contraseña_premium.Checked == false)
+            {
+                contraseñapremiumtextbox.UseSystemPasswordChar = true;
+            }
+        }
     }
 }

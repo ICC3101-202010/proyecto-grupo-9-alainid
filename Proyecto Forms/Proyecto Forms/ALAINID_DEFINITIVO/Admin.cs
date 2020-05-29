@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Threading;
+using System.Windows.Forms;
 
 namespace Proyecto_Forms
 {
@@ -12,7 +13,7 @@ namespace Proyecto_Forms
         {
             foreach (User user in ALAINID.listausuarios)
             {
-                Console.WriteLine(user.InformacionUsuario());
+                //Console.WriteLine(user.InformacionUsuario());
             }
         }
         public bool AgregarSong(string nombrecan, Artista cantante, string genero, Artista compositor, string anopublicacion, string disquera, string album,string nombrearchivo)
@@ -28,8 +29,7 @@ namespace Proyecto_Forms
             {
                 if (si == s)
                 {
-                    Console.WriteLine("esta cancion ya existe en ALAINID");
-                    Thread.Sleep(2000);
+                    MessageBox.Show("La cancion ya existe en ALAINID", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                     return false;
                 }
             }
@@ -58,13 +58,10 @@ namespace Proyecto_Forms
             ALAINID.todas_las_canciones.Add(s);
             ALAINID.Agregarcancioneslistainteligente(s);
             ALAINID.Partir();
-            Console.WriteLine("================");
-            Console.WriteLine("Canción agregada exitosamente");
-            Console.WriteLine("================");
-
+            MessageBox.Show("CANCION AGREGADA EXITOSAMENTE", "OK", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             ALAINID.Partir();
             VerCanciones(ALAINID.todas_las_canciones);
-            Thread.Sleep(2000);
+            
             return true;
         }
 
