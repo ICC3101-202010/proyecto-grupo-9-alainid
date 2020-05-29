@@ -2779,15 +2779,15 @@ namespace Proyecto_Forms
                     {
                         if (listausuarios[i].Premium_ == "premium")
                         {
-                            Console.Clear();
-                            Console.WriteLine("Ya estabas registrado como premium");
-                            Thread.Sleep(2000);
-                            funko = "noup";
+                            
+                            MessageBox.Show("YA ERAS PREMIUM ANTERIORMENTE", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                            funko = "noupo";
                             break;
                         }
                         else
                         {
                             listausuarios[i].Premium_ = "premium";
+                            MessageBox.Show("FELICIDADES "+email+" AHORA ERES UN USUARIO PREMIUM", "BIENVENIDO", MessageBoxButtons.OK, MessageBoxIcon.None);
                             funko = "correcto";
                             Almacenar(listausuarios);
                         }
@@ -2795,12 +2795,14 @@ namespace Proyecto_Forms
                     }
                     else
                     {
+                        
                         funko = "noup";
                     }
                     break;
                 }
                 else
                 {
+                    
                     funko = "noup";
                 }
             }
@@ -2808,8 +2810,15 @@ namespace Proyecto_Forms
             {
                 return true;
             }
+            if (funko =="noupo")
+            {
+                
+                
+                return false;
+            }
             else
             {
+                MessageBox.Show("EMAIL O CONTRASEÑA INCORRECTOS", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 return false;
             }
         }

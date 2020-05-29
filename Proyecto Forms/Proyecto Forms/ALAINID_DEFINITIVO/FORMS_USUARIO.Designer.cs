@@ -77,8 +77,18 @@
             this.btn_atras_de_registrarse = new System.Windows.Forms.Button();
             this.btn_editar_perfil_usuario = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.btn_premium = new System.Windows.Forms.Button();
+            this.Panel_premium = new System.Windows.Forms.Panel();
+            this.btn_premium_listo = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.contraseñapremiumtextbox = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.mailpremiumlabel = new System.Windows.Forms.Label();
+            this.emialpremiumtextbox = new System.Windows.Forms.TextBox();
+            this.btnatraspremium = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.panel_perfil_de_usuario.SuspendLayout();
+            this.Panel_premium.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -260,7 +270,7 @@
             this.label2.BackColor = System.Drawing.Color.Black;
             this.label2.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(628, 205);
+            this.label2.Location = new System.Drawing.Point(637, 208);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(152, 33);
@@ -586,12 +596,126 @@
             this.label1.TabIndex = 46;
             this.label1.Text = "Perfil de Usuario";
             // 
+            // btn_premium
+            // 
+            this.btn_premium.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_premium.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_premium.Location = new System.Drawing.Point(564, 36);
+            this.btn_premium.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_premium.Name = "btn_premium";
+            this.btn_premium.Size = new System.Drawing.Size(225, 39);
+            this.btn_premium.TabIndex = 51;
+            this.btn_premium.Text = "Conviertete en PREMIUM";
+            this.btn_premium.UseVisualStyleBackColor = false;
+            this.btn_premium.Click += new System.EventHandler(this.btn_premium_Click);
+            // 
+            // Panel_premium
+            // 
+            this.Panel_premium.Controls.Add(this.btnatraspremium);
+            this.Panel_premium.Controls.Add(this.btn_premium_listo);
+            this.Panel_premium.Controls.Add(this.label9);
+            this.Panel_premium.Controls.Add(this.contraseñapremiumtextbox);
+            this.Panel_premium.Controls.Add(this.label8);
+            this.Panel_premium.Controls.Add(this.mailpremiumlabel);
+            this.Panel_premium.Controls.Add(this.emialpremiumtextbox);
+            this.Panel_premium.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Panel_premium.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Panel_premium.Location = new System.Drawing.Point(0, 24);
+            this.Panel_premium.Name = "Panel_premium";
+            this.Panel_premium.Size = new System.Drawing.Size(800, 426);
+            this.Panel_premium.TabIndex = 52;
+            this.Panel_premium.Visible = false;
+            this.Panel_premium.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel_premium_Paint);
+            // 
+            // btn_premium_listo
+            // 
+            this.btn_premium_listo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_premium_listo.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_premium_listo.Location = new System.Drawing.Point(296, 303);
+            this.btn_premium_listo.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_premium_listo.Name = "btn_premium_listo";
+            this.btn_premium_listo.Size = new System.Drawing.Size(262, 57);
+            this.btn_premium_listo.TabIndex = 42;
+            this.btn_premium_listo.Text = "Listo";
+            this.btn_premium_listo.UseVisualStyleBackColor = false;
+            this.btn_premium_listo.Click += new System.EventHandler(this.btn_premium_listo_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Comic Sans MS", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(196, 43);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(436, 68);
+            this.label9.TabIndex = 41;
+            this.label9.Text = "Alainid PREMIUM";
+            // 
+            // contraseñapremiumtextbox
+            // 
+            this.contraseñapremiumtextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contraseñapremiumtextbox.Location = new System.Drawing.Point(256, 231);
+            this.contraseñapremiumtextbox.Name = "contraseñapremiumtextbox";
+            this.contraseñapremiumtextbox.Size = new System.Drawing.Size(376, 29);
+            this.contraseñapremiumtextbox.TabIndex = 40;
+            this.contraseñapremiumtextbox.TextChanged += new System.EventHandler(this.contraseñapremiumtextbox_TextChanged);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label8.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(86, 228);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(140, 35);
+            this.label8.TabIndex = 39;
+            this.label8.Text = "Contraseña";
+            // 
+            // mailpremiumlabel
+            // 
+            this.mailpremiumlabel.AutoSize = true;
+            this.mailpremiumlabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.mailpremiumlabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.mailpremiumlabel.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mailpremiumlabel.ForeColor = System.Drawing.Color.White;
+            this.mailpremiumlabel.Location = new System.Drawing.Point(150, 157);
+            this.mailpremiumlabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.mailpremiumlabel.Name = "mailpremiumlabel";
+            this.mailpremiumlabel.Size = new System.Drawing.Size(76, 35);
+            this.mailpremiumlabel.TabIndex = 38;
+            this.mailpremiumlabel.Text = "Email";
+            // 
+            // emialpremiumtextbox
+            // 
+            this.emialpremiumtextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emialpremiumtextbox.Location = new System.Drawing.Point(256, 160);
+            this.emialpremiumtextbox.Name = "emialpremiumtextbox";
+            this.emialpremiumtextbox.Size = new System.Drawing.Size(376, 29);
+            this.emialpremiumtextbox.TabIndex = 0;
+            this.emialpremiumtextbox.TextChanged += new System.EventHandler(this.emialpremiumtextbox_TextChanged);
+            // 
+            // btnatraspremium
+            // 
+            this.btnatraspremium.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnatraspremium.Location = new System.Drawing.Point(661, 16);
+            this.btnatraspremium.Name = "btnatraspremium";
+            this.btnatraspremium.Size = new System.Drawing.Size(118, 52);
+            this.btnatraspremium.TabIndex = 43;
+            this.btnatraspremium.Text = "Atras";
+            this.btnatraspremium.UseVisualStyleBackColor = true;
+            this.btnatraspremium.Click += new System.EventHandler(this.btnatraspremium_Click);
+            // 
             // FORMS_USUARIO
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Panel_premium);
             this.Controls.Add(this.panel_perfil_de_usuario);
             this.Controls.Add(this.BtnListaInteligente);
             this.Controls.Add(this.btnDescargas);
@@ -606,6 +730,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.btn_premium);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FORMS_USUARIO";
             this.Text = "FORMS_USUARIO";
@@ -614,6 +739,8 @@
             this.menuStrip1.PerformLayout();
             this.panel_perfil_de_usuario.ResumeLayout(false);
             this.panel_perfil_de_usuario.PerformLayout();
+            this.Panel_premium.ResumeLayout(false);
+            this.Panel_premium.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -665,9 +792,18 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.CheckBox checkbox_para_ver_contraseña_perfil_usuraio;
         private System.Windows.Forms.Button btn_guardar_cambios_perfil_usuario;
         private System.Windows.Forms.ToolStripMenuItem cerrarSesionYSalirToolStripMenuItem;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btn_premium;
+        private System.Windows.Forms.Panel Panel_premium;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox contraseñapremiumtextbox;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label mailpremiumlabel;
+        private System.Windows.Forms.TextBox emialpremiumtextbox;
+        private System.Windows.Forms.Button btn_premium_listo;
+        private System.Windows.Forms.Button btnatraspremium;
     }
 }

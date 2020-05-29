@@ -199,5 +199,38 @@ namespace ALAINID_DEFINITIVO
             Program.forms_inicio.Show();
             Application.Exit();
         }
+        //PREMIUM////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////7
+        private void btn_premium_Click(object sender, EventArgs e)
+        {
+            Panel_premium.Visible = true;
+            Panel_premium.Dock = DockStyle.Fill;
+        }
+
+        private void Panel_premium_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btn_premium_listo_Click(object sender, EventArgs e)
+        {
+            ALAINID.VolversePremium(emialpremiumtextbox.Text, contraseñapremiumtextbox.Text);
+        }
+
+        private void contraseñapremiumtextbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void emialpremiumtextbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnatraspremium_Click(object sender, EventArgs e)
+        {
+            Panel_premium.Visible = false;
+            contraseñapremiumtextbox.Text = "";
+            emialpremiumtextbox.Text = "";
+        }
     }
 }
