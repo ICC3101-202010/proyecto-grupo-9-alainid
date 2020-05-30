@@ -11,8 +11,7 @@ using System.Data;
 using System.Drawing;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
-
+using ALAINID_DEFINITIVO;
 
 namespace Proyecto_Forms
 {
@@ -98,10 +97,10 @@ namespace Proyecto_Forms
         }
         public static List<Artista> CargarCompositores()
         {
+            IFormatter formatter6 = new BinaryFormatter();
+            Stream stream6 = new FileStream("Compositores.bin", FileMode.OpenOrCreate, FileAccess.Read, FileShare.Read);
             try
             {
-                IFormatter formatter6 = new BinaryFormatter();
-                Stream stream6 = new FileStream("Compositores.bin", FileMode.OpenOrCreate, FileAccess.Read, FileShare.Read);
                 List<Artista> v = (List<Artista>)formatter6.Deserialize(stream6);
                 stream6.Close();
                 return v;
@@ -109,6 +108,7 @@ namespace Proyecto_Forms
             catch
             {
                 List<Artista> v = new List<Artista>();
+                stream6.Close();
                 return v;
             }
         }
@@ -125,10 +125,11 @@ namespace Proyecto_Forms
         }
         public static List<Artista> CargarDirectores()
         {
+            IFormatter formatter6 = new BinaryFormatter();
+            Stream stream6 = new FileStream("Directores.bin", FileMode.OpenOrCreate, FileAccess.Read, FileShare.Read);
+
             try
             {
-                IFormatter formatter6 = new BinaryFormatter();
-                Stream stream6 = new FileStream("Directores.bin", FileMode.OpenOrCreate, FileAccess.Read, FileShare.Read);
                 List<Artista> v = (List<Artista>)formatter6.Deserialize(stream6);
                 stream6.Close();
                 return v;
@@ -136,6 +137,7 @@ namespace Proyecto_Forms
             catch
             {
                 List<Artista> v = new List<Artista>();
+                stream6.Close();
                 return v;
             }
         }
@@ -152,10 +154,11 @@ namespace Proyecto_Forms
         }
         public static List<Artista> CargarActores()
         {
+            IFormatter formatter6 = new BinaryFormatter();
+            Stream stream6 = new FileStream("Actores.bin", FileMode.OpenOrCreate, FileAccess.Read, FileShare.Read);
+
             try
             { 
-                IFormatter formatter6 = new BinaryFormatter();
-                Stream stream6 = new FileStream("Actores.bin", FileMode.OpenOrCreate, FileAccess.Read, FileShare.Read);
                 List<Artista> v = (List<Artista>)formatter6.Deserialize(stream6);
                 stream6.Close();
                 return v;
@@ -163,6 +166,7 @@ namespace Proyecto_Forms
             catch
             {
                 List<Artista> v = new List<Artista>();
+                stream6.Close();
                 return v;
             }
         }
@@ -179,10 +183,11 @@ namespace Proyecto_Forms
         }
         public static List<PlaylistSong> CargarAlbum()
         {
+            IFormatter formatter6 = new BinaryFormatter();
+            Stream stream6 = new FileStream("Albums.bin", FileMode.OpenOrCreate, FileAccess.Read, FileShare.Read);
+
             try
             {
-                IFormatter formatter6 = new BinaryFormatter();
-                Stream stream6 = new FileStream("Albums.bin", FileMode.OpenOrCreate, FileAccess.Read, FileShare.Read);
                 List<PlaylistSong> v = (List<PlaylistSong>)formatter6.Deserialize(stream6);
                 stream6.Close();
                 return v;
@@ -190,6 +195,7 @@ namespace Proyecto_Forms
             catch
             {
                 List<PlaylistSong> v = new List<PlaylistSong>();
+                stream6.Close();
                 return v;
             }
         }
@@ -206,21 +212,21 @@ namespace Proyecto_Forms
         }
         static List<Song> CargarCancion()
         {
-            if (File.Exists("Canciones.bin"))
+            IFormatter formatter4 = new BinaryFormatter();
+            Stream stream4 = new FileStream("Canciones.bin", FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.None);
+            try 
             {
-                IFormatter formatter4 = new BinaryFormatter();
-                Stream stream4 = new FileStream("Canciones.bin", FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.None);
                 List<Song> s2 = (List<Song>)formatter4.Deserialize(stream4);
                 stream4.Close();
 
                 return s2;
             }
-            else
+            catch
             {
-                Console.WriteLine("El archivo Canciones.bin no existe");
+                //Console.WriteLine("El archivo Canciones.bin no existe");
                 List<Song> s2 = new List<Song>();
                 Thread.Sleep(5000);
-
+                stream4.Close();
                 return s2;
             }
         }
@@ -234,17 +240,19 @@ namespace Proyecto_Forms
         }
         public static List<Video> CargarVideos()
         {
+            IFormatter formatter6 = new BinaryFormatter();
+            Stream stream6 = new FileStream("Videos.bin", FileMode.OpenOrCreate, FileAccess.Read, FileShare.Read);
+
             try
             {
-                IFormatter formatter6 = new BinaryFormatter();
-                Stream stream6 = new FileStream("Videos.bin", FileMode.OpenOrCreate, FileAccess.Read, FileShare.Read);
-                List<Video> v = (List<Video>)formatter6.Deserialize(stream6);
+               List<Video> v = (List<Video>)formatter6.Deserialize(stream6);
                 stream6.Close();
                 return v;
             }
             catch
             {
                 List<Video> v = new List<Video>();
+                stream6.Close();
                 return v;
             }
         }
@@ -258,10 +266,10 @@ namespace Proyecto_Forms
         }
         public static List<Artista> CargarCantantes()
         {
+            IFormatter formatter8 = new BinaryFormatter();
+            Stream stream8 = new FileStream("Cantantes.bin", FileMode.OpenOrCreate, FileAccess.Read, FileShare.Read);
             try
             {
-                IFormatter formatter8 = new BinaryFormatter();
-                Stream stream8 = new FileStream("Cantantes.bin", FileMode.OpenOrCreate, FileAccess.Read, FileShare.Read);
                 List<Artista> ar = (List<Artista>)formatter8.Deserialize(stream8);
                 stream8.Close();
                 return ar;
@@ -269,6 +277,7 @@ namespace Proyecto_Forms
             catch
             {
                 List<Artista> ar = new List<Artista>();
+                stream8.Close();
                 return ar;
             }
         }
@@ -282,10 +291,10 @@ namespace Proyecto_Forms
         }
         public static List<User> Cargar()
         {
+            IFormatter formatter2 = new BinaryFormatter();
+            Stream stream2 = new FileStream("Usuarios2.bin", FileMode.OpenOrCreate, FileAccess.Read, FileShare.Read);
             try
             {
-                IFormatter formatter2 = new BinaryFormatter();
-                Stream stream2 = new FileStream("Usuarios2.bin", FileMode.OpenOrCreate, FileAccess.Read, FileShare.Read);
                 List<User> p = (List<User>)formatter2.Deserialize(stream2);
                 stream2.Close();
                 return p;
@@ -293,6 +302,7 @@ namespace Proyecto_Forms
             catch
             {
                 List<User> p = new List<User>();
+                stream2.Close();
                 return p;
             }
         }
@@ -305,10 +315,11 @@ namespace Proyecto_Forms
         }
         public static List<Song> CargarKaraoke()
         {
+            IFormatter formatter2 = new BinaryFormatter();
+            Stream stream2 = new FileStream("Cancioneskaraoke.bin", FileMode.OpenOrCreate, FileAccess.Read, FileShare.Read);
+
             try
             {
-                IFormatter formatter2 = new BinaryFormatter();
-                Stream stream2 = new FileStream("Cancioneskaraoke.bin", FileMode.OpenOrCreate, FileAccess.Read, FileShare.Read);
                 List<Song> k3 = (List<Song>)formatter2.Deserialize(stream2);
                 stream2.Close();
                 return k3;
@@ -316,6 +327,7 @@ namespace Proyecto_Forms
             catch
             {
                 List<Song> k3 = new List<Song>();
+                stream2.Close();
                 return k3;
             }
         }
@@ -1049,25 +1061,53 @@ namespace Proyecto_Forms
         public static bool Cambiarnombreusuario(string email, string contrasena, string nuevonombre)
         {
             string funko = "correcto";
-            for (int i = 0; i < listausuarios.Count; i++)
+            int uno;
+            foreach (User user in listausuarios)
             {
-                if (listausuarios[i].Email_ == email)
+                uno = 0;
+                if (user.Nombreusuario == Program.usuario_activo.Nombreusuario) 
                 {
-                    if (listausuarios[i].Password_ == contrasena)
-                    {
-                        listausuarios[i].Nombreusuario = nuevonombre;
-                        Almacenar(listausuarios);
-                        funko = "correcto";
-                    }
-                    else
-                    {
-                        funko = "noup";
-                    }
-                    break;
+                    uno = 1;
                 }
                 else
                 {
-                    funko = "noup";
+                    uno = 2;
+                }
+                if (uno == 2 )
+                {
+                    if (user.Nombreusuario == nuevonombre)
+                    {
+                        MessageBox.Show("El Nombre de Usuario Ya Existe", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                        funko = "noup";
+                    }
+                }
+
+                
+            }
+            if (funko != "noup")
+            {
+                for (int i = 0; i < listausuarios.Count; i++)
+                {
+                    if (listausuarios[i].Email_ == email)
+                    {
+                        if (listausuarios[i].Password_ == contrasena)
+                        {
+                            listausuarios[i].Nombreusuario = nuevonombre;
+                            Almacenar(listausuarios);
+                            funko = "correcto";
+
+                        }
+                        else
+                        {
+                            funko = "noup";
+                        }
+                        break;
+                    }
+                    else
+                    {
+
+                        funko = "noup";
+                    }
                 }
             }
             if (funko == "correcto")
@@ -2413,9 +2453,7 @@ namespace Proyecto_Forms
                     {
                         if (listausuarios[i].Perfipublico_ == "privado")
                         {
-                            Console.Clear();
-                            Console.WriteLine("Ya eras privado anteriormente");
-                            Thread.Sleep(2000);
+                            MessageBox.Show(email + " YA ERAS PRIVADO ANTERIORMENTE", "BIENVENIDO", MessageBoxButtons.OK, MessageBoxIcon.None);
                             funko = "noup";
                             break;
                         }
@@ -2457,9 +2495,7 @@ namespace Proyecto_Forms
                     {
                         if (listausuarios[i].Perfipublico_ == "publico")
                         {
-                            Console.Clear();
-                            Console.WriteLine("Ya eras publico anteriormente");
-                            Thread.Sleep(2000);
+                        
                             funko = "noup";
                             break;
                         }
@@ -2749,7 +2785,7 @@ namespace Proyecto_Forms
                         if (listausuarios[i].Premium_ == "premium")
                         {
                             
-                            MessageBox.Show("YA ERAS PREMIUM ANTERIORMENTE", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                            MessageBox.Show("YA ERAS PREMIUM ANTERIORMENTE", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.None);
                             funko = "noupo";
                             break;
                         }
@@ -2790,6 +2826,7 @@ namespace Proyecto_Forms
                 MessageBox.Show("EMAIL O CONTRASEÑA INCORRECTOS", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 return false;
             }
+            
         }
 
         public static void Agregar_a_favoritos(string email, Song s)

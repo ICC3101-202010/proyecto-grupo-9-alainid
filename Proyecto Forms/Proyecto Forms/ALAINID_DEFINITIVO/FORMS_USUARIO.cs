@@ -39,7 +39,8 @@ namespace ALAINID_DEFINITIVO
         //Botones menu principal usuario
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-
+            panel_buscar.Visible = true;
+            panel_buscar.Dock = DockStyle.Fill;
         }
 
         private void btnPlaylist_Click(object sender, EventArgs e)
@@ -145,13 +146,10 @@ namespace ALAINID_DEFINITIVO
 
         private void btn_editar_perfil_usuario_Click(object sender, EventArgs e)
         {
-
             pass_txt_perfil_usuario.ReadOnly = false;
             nombrecompleto_txt_perfil_usuario.ReadOnly = false;
             nombredeusuario_txt_perfil_usuario.ReadOnly = false;
-            mail_txt_perfil_usuario.ReadOnly = false;
             btn_guardar_cambios_perfil_usuario.Visible = true;
-
         }
 
         private void btn_guardar_cambios_perfil_usuario_Click(object sender, EventArgs e)
@@ -159,23 +157,16 @@ namespace ALAINID_DEFINITIVO
             pass_txt_perfil_usuario.ReadOnly = true;
             nombrecompleto_txt_perfil_usuario.ReadOnly = true;
             nombredeusuario_txt_perfil_usuario.ReadOnly = true;
-            mail_txt_perfil_usuario.ReadOnly = true;
-            btn_guardar_cambios_perfil_usuario.Visible = false;
-            foreach (User user in ALAINID.listausuarios)
-            {
-                if (user.Nombre_==Program.usuario_activo.Nombre_ && user.Nombreusuario== Program.usuario_activo.Nombreusuario && user.Email_ == Program.usuario_activo.Email_)
-                {
-                    user.Email_ = mail_txt_perfil_usuario.Text;
-                    user.Password_ = pass_txt_perfil_usuario.Text;
-                    user.Nombreusuario = nombredeusuario_txt_perfil_usuario.Text;
-                    user.Nombre_ = nombrecompleto_txt_perfil_usuario.Text;
-                    ALAINID.Almacenar(ALAINID.listausuarios);
-                }
-            }
-            Program.usuario_activo.Email_ = mail_txt_perfil_usuario.Text;
+            btn_guardar_cambios_perfil_usuario.Visible = false; 
+            ALAINID.Cambiarcontrasena(Program.usuario_activo.Email_, Program.usuario_activo.Password_, pass_txt_perfil_usuario.Text);
+            bool name = ALAINID.Cambiarnombreusuario(Program.usuario_activo.Email_, Program.usuario_activo.Password_, nombredeusuario_txt_perfil_usuario.Text);
+            ALAINID.Cambiarnombre(Program.usuario_activo.Email_, Program.usuario_activo.Password_, nombrecompleto_txt_perfil_usuario.Text);
             Program.usuario_activo.Password_ = pass_txt_perfil_usuario.Text;
-            Program.usuario_activo.Nombreusuario = nombredeusuario_txt_perfil_usuario.Text;
             Program.usuario_activo.Nombre_ = nombrecompleto_txt_perfil_usuario.Text;
+            if (name == true)
+            {
+                Program.usuario_activo.Nombreusuario = nombredeusuario_txt_perfil_usuario.Text;
+            }
         }
 
         private void FORMS_USUARIO_Load(object sender, EventArgs e)
@@ -242,6 +233,28 @@ namespace ALAINID_DEFINITIVO
             if (checkBox_contraseña_premium.Checked == false)
             {
                 contraseñapremiumtextbox.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void privacidad_tvt_editar_perfil_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkbox_privado_editar_usuario_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkbox_privado_editar_usuario .Checked == true)
+            {
+                ALAINID.Cambiarprivacidadaprivado(Program.usuario_activo.Email_, Program.usuario_activo.Password_);
+            }
+            if (checkbox_privado_editar_usuario.Checked == false)
+            {
+                ALAINID.Cambiarprivacidapublico(Program.usuario_activo.Email_, Program.usuario_activo.Password_);
             }
         }
     }

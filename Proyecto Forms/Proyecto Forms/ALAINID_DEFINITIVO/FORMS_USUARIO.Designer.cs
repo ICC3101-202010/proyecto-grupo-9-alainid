@@ -64,6 +64,7 @@
             this.btnHistorial = new System.Windows.Forms.Button();
             this.btnKaraoke = new System.Windows.Forms.Button();
             this.panel_perfil_de_usuario = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
             this.btn_guardar_cambios_perfil_usuario = new System.Windows.Forms.Button();
             this.checkbox_para_ver_contraseña_perfil_usuraio = new System.Windows.Forms.CheckBox();
             this.nombredeusuario_txt_perfil_usuario = new System.Windows.Forms.TextBox();
@@ -79,6 +80,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btn_premium = new System.Windows.Forms.Button();
             this.Panel_premium = new System.Windows.Forms.Panel();
+            this.checkBox_contraseña_premium = new System.Windows.Forms.CheckBox();
             this.btnatraspremium = new System.Windows.Forms.Button();
             this.btn_premium_listo = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
@@ -86,10 +88,39 @@
             this.label8 = new System.Windows.Forms.Label();
             this.mailpremiumlabel = new System.Windows.Forms.Label();
             this.emialpremiumtextbox = new System.Windows.Forms.TextBox();
-            this.checkBox_contraseña_premium = new System.Windows.Forms.CheckBox();
+            this.checkbox_privado_editar_usuario = new System.Windows.Forms.CheckBox();
+            this.panel_buscar = new System.Windows.Forms.Panel();
+            this.btn_atras_de_inicio_sesion = new System.Windows.Forms.Button();
+            this.pass_txt_inicio_sesion = new System.Windows.Forms.TextBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.checkBox_repetir_cantante_como_compositor = new System.Windows.Forms.CheckBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.comboBox1_criterio = new System.Windows.Forms.ComboBox();
+            this.criterio_txt_combobox1 = new System.Windows.Forms.TextBox();
+            this.comboBox5_criterio = new System.Windows.Forms.ComboBox();
+            this.criterio_txt_combobox5 = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.comboBox6_criterio = new System.Windows.Forms.ComboBox();
+            this.criterio_txt_combobox6 = new System.Windows.Forms.TextBox();
+            this.comboBox2_criterio = new System.Windows.Forms.ComboBox();
+            this.criterio_txt_combobox2 = new System.Windows.Forms.TextBox();
+            this.comboBox8_criterio = new System.Windows.Forms.ComboBox();
+            this.criterio_txt_combobox8 = new System.Windows.Forms.TextBox();
+            this.comboBox4_criterio = new System.Windows.Forms.ComboBox();
+            this.criterio_txt_combobox4 = new System.Windows.Forms.TextBox();
+            this.comboBox7_criterio = new System.Windows.Forms.ComboBox();
+            this.criterio_txt_combobox7 = new System.Windows.Forms.TextBox();
+            this.comboBox3_criterio = new System.Windows.Forms.ComboBox();
+            this.criterio_txt_combobox3 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.panel_perfil_de_usuario.SuspendLayout();
             this.Panel_premium.SuspendLayout();
+            this.panel_buscar.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -103,8 +134,8 @@
             this.reproducciónToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1067, 28);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
             this.menuStrip1.TabIndex = 34;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -115,26 +146,26 @@
             this.cerrarSesionToolStripMenuItem,
             this.cerrarSesionYSalirToolStripMenuItem});
             this.aLAINIDToolStripMenuItem.Name = "aLAINIDToolStripMenuItem";
-            this.aLAINIDToolStripMenuItem.Size = new System.Drawing.Size(80, 24);
+            this.aLAINIDToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
             this.aLAINIDToolStripMenuItem.Text = "ALAINID";
             // 
             // perfilDeUsuarioToolStripMenuItem
             // 
             this.perfilDeUsuarioToolStripMenuItem.Name = "perfilDeUsuarioToolStripMenuItem";
-            this.perfilDeUsuarioToolStripMenuItem.Size = new System.Drawing.Size(223, 26);
+            this.perfilDeUsuarioToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.perfilDeUsuarioToolStripMenuItem.Text = "Perfil de Usuario";
             // 
             // cerrarSesionToolStripMenuItem
             // 
             this.cerrarSesionToolStripMenuItem.Name = "cerrarSesionToolStripMenuItem";
-            this.cerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(223, 26);
+            this.cerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.cerrarSesionToolStripMenuItem.Text = "Cerrar Sesion";
             this.cerrarSesionToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesionToolStripMenuItem_Click);
             // 
             // cerrarSesionYSalirToolStripMenuItem
             // 
             this.cerrarSesionYSalirToolStripMenuItem.Name = "cerrarSesionYSalirToolStripMenuItem";
-            this.cerrarSesionYSalirToolStripMenuItem.Size = new System.Drawing.Size(223, 26);
+            this.cerrarSesionYSalirToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.cerrarSesionYSalirToolStripMenuItem.Text = "Cerrar Sesion y Salir";
             this.cerrarSesionYSalirToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesionYSalirToolStripMenuItem_Click);
             // 
@@ -143,13 +174,13 @@
             this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.crearPlayListToolStripMenuItem});
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
-            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(73, 24);
+            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.archivoToolStripMenuItem.Text = "Archivo";
             // 
             // crearPlayListToolStripMenuItem
             // 
             this.crearPlayListToolStripMenuItem.Name = "crearPlayListToolStripMenuItem";
-            this.crearPlayListToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.crearPlayListToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.crearPlayListToolStripMenuItem.Text = "Crear PlayList";
             // 
             // editarToolStripMenuItem
@@ -159,25 +190,25 @@
             this.editarListaInteligenteToolStripMenuItem,
             this.editarFavoritosToolStripMenuItem});
             this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
-            this.editarToolStripMenuItem.Size = new System.Drawing.Size(62, 24);
+            this.editarToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
             this.editarToolStripMenuItem.Text = "Editar";
             // 
             // editarPerfilToolStripMenuItem
             // 
             this.editarPerfilToolStripMenuItem.Name = "editarPerfilToolStripMenuItem";
-            this.editarPerfilToolStripMenuItem.Size = new System.Drawing.Size(240, 26);
+            this.editarPerfilToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
             this.editarPerfilToolStripMenuItem.Text = "Editar Perfil";
             // 
             // editarListaInteligenteToolStripMenuItem
             // 
             this.editarListaInteligenteToolStripMenuItem.Name = "editarListaInteligenteToolStripMenuItem";
-            this.editarListaInteligenteToolStripMenuItem.Size = new System.Drawing.Size(240, 26);
+            this.editarListaInteligenteToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
             this.editarListaInteligenteToolStripMenuItem.Text = "Editar Lista Inteligente";
             // 
             // editarFavoritosToolStripMenuItem
             // 
             this.editarFavoritosToolStripMenuItem.Name = "editarFavoritosToolStripMenuItem";
-            this.editarFavoritosToolStripMenuItem.Size = new System.Drawing.Size(240, 26);
+            this.editarFavoritosToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
             this.editarFavoritosToolStripMenuItem.Text = "Editar Favoritos";
             // 
             // verToolStripMenuItem
@@ -189,37 +220,37 @@
             this.favoritosCancionesToolStripMenuItem,
             this.favoritosVideosToolStripMenuItem});
             this.verToolStripMenuItem.Name = "verToolStripMenuItem";
-            this.verToolStripMenuItem.Size = new System.Drawing.Size(44, 24);
+            this.verToolStripMenuItem.Size = new System.Drawing.Size(35, 20);
             this.verToolStripMenuItem.Text = "Ver";
             // 
             // descargasToolStripMenuItem
             // 
             this.descargasToolStripMenuItem.Name = "descargasToolStripMenuItem";
-            this.descargasToolStripMenuItem.Size = new System.Drawing.Size(222, 26);
+            this.descargasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.descargasToolStripMenuItem.Text = "Descargas";
             // 
             // socialToolStripMenuItem
             // 
             this.socialToolStripMenuItem.Name = "socialToolStripMenuItem";
-            this.socialToolStripMenuItem.Size = new System.Drawing.Size(222, 26);
+            this.socialToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.socialToolStripMenuItem.Text = "Social";
             // 
             // karaokeToolStripMenuItem
             // 
             this.karaokeToolStripMenuItem.Name = "karaokeToolStripMenuItem";
-            this.karaokeToolStripMenuItem.Size = new System.Drawing.Size(222, 26);
+            this.karaokeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.karaokeToolStripMenuItem.Text = "Karaoke";
             // 
             // favoritosCancionesToolStripMenuItem
             // 
             this.favoritosCancionesToolStripMenuItem.Name = "favoritosCancionesToolStripMenuItem";
-            this.favoritosCancionesToolStripMenuItem.Size = new System.Drawing.Size(222, 26);
+            this.favoritosCancionesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.favoritosCancionesToolStripMenuItem.Text = "Favoritos Canciones";
             // 
             // favoritosVideosToolStripMenuItem
             // 
             this.favoritosVideosToolStripMenuItem.Name = "favoritosVideosToolStripMenuItem";
-            this.favoritosVideosToolStripMenuItem.Size = new System.Drawing.Size(222, 26);
+            this.favoritosVideosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.favoritosVideosToolStripMenuItem.Text = "FavoritosVideos";
             // 
             // reproducciónToolStripMenuItem
@@ -231,38 +262,38 @@
             this.nextToolStripMenuItem,
             this.previousToolStripMenuItem});
             this.reproducciónToolStripMenuItem.Name = "reproducciónToolStripMenuItem";
-            this.reproducciónToolStripMenuItem.Size = new System.Drawing.Size(115, 24);
+            this.reproducciónToolStripMenuItem.Size = new System.Drawing.Size(93, 20);
             this.reproducciónToolStripMenuItem.Text = "Reproducción";
             // 
             // playToolStripMenuItem
             // 
             this.playToolStripMenuItem.Name = "playToolStripMenuItem";
-            this.playToolStripMenuItem.Size = new System.Drawing.Size(147, 26);
+            this.playToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.playToolStripMenuItem.Text = "Play";
             // 
             // stopToolStripMenuItem
             // 
             this.stopToolStripMenuItem.Name = "stopToolStripMenuItem";
-            this.stopToolStripMenuItem.Size = new System.Drawing.Size(147, 26);
+            this.stopToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.stopToolStripMenuItem.Text = "Stop";
             this.stopToolStripMenuItem.Click += new System.EventHandler(this.stopToolStripMenuItem_Click);
             // 
             // pausaToolStripMenuItem
             // 
             this.pausaToolStripMenuItem.Name = "pausaToolStripMenuItem";
-            this.pausaToolStripMenuItem.Size = new System.Drawing.Size(147, 26);
+            this.pausaToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.pausaToolStripMenuItem.Text = "Pausa";
             // 
             // nextToolStripMenuItem
             // 
             this.nextToolStripMenuItem.Name = "nextToolStripMenuItem";
-            this.nextToolStripMenuItem.Size = new System.Drawing.Size(147, 26);
+            this.nextToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.nextToolStripMenuItem.Text = "Next";
             // 
             // previousToolStripMenuItem
             // 
             this.previousToolStripMenuItem.Name = "previousToolStripMenuItem";
-            this.previousToolStripMenuItem.Size = new System.Drawing.Size(147, 26);
+            this.previousToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.previousToolStripMenuItem.Text = "Previous";
             // 
             // label2
@@ -271,9 +302,10 @@
             this.label2.BackColor = System.Drawing.Color.Black;
             this.label2.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(849, 256);
+            this.label2.Location = new System.Drawing.Point(637, 208);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(191, 42);
+            this.label2.Size = new System.Drawing.Size(152, 33);
             this.label2.TabIndex = 37;
             this.label2.Text = "Reproductor";
             // 
@@ -282,9 +314,10 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Comic Sans MS", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(88, 53);
+            this.label3.Location = new System.Drawing.Point(66, 43);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(153, 56);
+            this.label3.Size = new System.Drawing.Size(124, 45);
             this.label3.TabIndex = 38;
             this.label3.Text = "Alainid";
             // 
@@ -292,10 +325,10 @@
             // 
             this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnBuscar.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(80, 176);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBuscar.Location = new System.Drawing.Point(60, 143);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(255, 46);
+            this.btnBuscar.Size = new System.Drawing.Size(191, 37);
             this.btnBuscar.TabIndex = 39;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
@@ -305,10 +338,10 @@
             // 
             this.btnPlaylist.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnPlaylist.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPlaylist.Location = new System.Drawing.Point(80, 238);
-            this.btnPlaylist.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPlaylist.Location = new System.Drawing.Point(60, 193);
+            this.btnPlaylist.Margin = new System.Windows.Forms.Padding(2);
             this.btnPlaylist.Name = "btnPlaylist";
-            this.btnPlaylist.Size = new System.Drawing.Size(255, 46);
+            this.btnPlaylist.Size = new System.Drawing.Size(191, 37);
             this.btnPlaylist.TabIndex = 40;
             this.btnPlaylist.Text = "Playlist";
             this.btnPlaylist.UseVisualStyleBackColor = false;
@@ -318,10 +351,10 @@
             // 
             this.btnSocial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnSocial.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSocial.Location = new System.Drawing.Point(80, 359);
-            this.btnSocial.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSocial.Location = new System.Drawing.Point(60, 292);
+            this.btnSocial.Margin = new System.Windows.Forms.Padding(2);
             this.btnSocial.Name = "btnSocial";
-            this.btnSocial.Size = new System.Drawing.Size(255, 46);
+            this.btnSocial.Size = new System.Drawing.Size(191, 37);
             this.btnSocial.TabIndex = 42;
             this.btnSocial.Text = "Social";
             this.btnSocial.UseVisualStyleBackColor = false;
@@ -331,10 +364,10 @@
             // 
             this.btnFavoritos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnFavoritos.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFavoritos.Location = new System.Drawing.Point(80, 298);
-            this.btnFavoritos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnFavoritos.Location = new System.Drawing.Point(60, 242);
+            this.btnFavoritos.Margin = new System.Windows.Forms.Padding(2);
             this.btnFavoritos.Name = "btnFavoritos";
-            this.btnFavoritos.Size = new System.Drawing.Size(255, 46);
+            this.btnFavoritos.Size = new System.Drawing.Size(191, 37);
             this.btnFavoritos.TabIndex = 41;
             this.btnFavoritos.Text = "Favoritos";
             this.btnFavoritos.UseVisualStyleBackColor = false;
@@ -344,10 +377,10 @@
             // 
             this.btnPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnPerfil.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPerfil.Location = new System.Drawing.Point(80, 423);
-            this.btnPerfil.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPerfil.Location = new System.Drawing.Point(60, 344);
+            this.btnPerfil.Margin = new System.Windows.Forms.Padding(2);
             this.btnPerfil.Name = "btnPerfil";
-            this.btnPerfil.Size = new System.Drawing.Size(255, 46);
+            this.btnPerfil.Size = new System.Drawing.Size(191, 37);
             this.btnPerfil.TabIndex = 44;
             this.btnPerfil.Text = "Perfil";
             this.btnPerfil.UseVisualStyleBackColor = false;
@@ -357,10 +390,10 @@
             // 
             this.btnAtras.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnAtras.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtras.Location = new System.Drawing.Point(395, 423);
-            this.btnAtras.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAtras.Location = new System.Drawing.Point(296, 344);
+            this.btnAtras.Margin = new System.Windows.Forms.Padding(2);
             this.btnAtras.Name = "btnAtras";
-            this.btnAtras.Size = new System.Drawing.Size(255, 46);
+            this.btnAtras.Size = new System.Drawing.Size(191, 37);
             this.btnAtras.TabIndex = 43;
             this.btnAtras.Text = "Cerrar Sesion";
             this.btnAtras.UseVisualStyleBackColor = false;
@@ -370,10 +403,10 @@
             // 
             this.BtnListaInteligente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.BtnListaInteligente.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnListaInteligente.Location = new System.Drawing.Point(395, 359);
-            this.BtnListaInteligente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnListaInteligente.Location = new System.Drawing.Point(296, 292);
+            this.BtnListaInteligente.Margin = new System.Windows.Forms.Padding(2);
             this.BtnListaInteligente.Name = "BtnListaInteligente";
-            this.BtnListaInteligente.Size = new System.Drawing.Size(255, 46);
+            this.BtnListaInteligente.Size = new System.Drawing.Size(191, 37);
             this.BtnListaInteligente.TabIndex = 48;
             this.BtnListaInteligente.Text = "Lista Inteligente";
             this.BtnListaInteligente.UseVisualStyleBackColor = false;
@@ -383,10 +416,10 @@
             // 
             this.btnDescargas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnDescargas.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDescargas.Location = new System.Drawing.Point(395, 298);
-            this.btnDescargas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDescargas.Location = new System.Drawing.Point(296, 242);
+            this.btnDescargas.Margin = new System.Windows.Forms.Padding(2);
             this.btnDescargas.Name = "btnDescargas";
-            this.btnDescargas.Size = new System.Drawing.Size(255, 46);
+            this.btnDescargas.Size = new System.Drawing.Size(191, 37);
             this.btnDescargas.TabIndex = 47;
             this.btnDescargas.Text = "Descargas";
             this.btnDescargas.UseVisualStyleBackColor = false;
@@ -396,10 +429,10 @@
             // 
             this.btnHistorial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnHistorial.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHistorial.Location = new System.Drawing.Point(395, 238);
-            this.btnHistorial.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnHistorial.Location = new System.Drawing.Point(296, 193);
+            this.btnHistorial.Margin = new System.Windows.Forms.Padding(2);
             this.btnHistorial.Name = "btnHistorial";
-            this.btnHistorial.Size = new System.Drawing.Size(255, 46);
+            this.btnHistorial.Size = new System.Drawing.Size(191, 37);
             this.btnHistorial.TabIndex = 46;
             this.btnHistorial.Text = "Historial";
             this.btnHistorial.UseVisualStyleBackColor = false;
@@ -409,10 +442,10 @@
             // 
             this.btnKaraoke.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnKaraoke.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKaraoke.Location = new System.Drawing.Point(395, 176);
-            this.btnKaraoke.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnKaraoke.Location = new System.Drawing.Point(296, 143);
+            this.btnKaraoke.Margin = new System.Windows.Forms.Padding(2);
             this.btnKaraoke.Name = "btnKaraoke";
-            this.btnKaraoke.Size = new System.Drawing.Size(255, 46);
+            this.btnKaraoke.Size = new System.Drawing.Size(191, 37);
             this.btnKaraoke.TabIndex = 45;
             this.btnKaraoke.Text = "Karaoke";
             this.btnKaraoke.UseVisualStyleBackColor = false;
@@ -420,6 +453,8 @@
             // 
             // panel_perfil_de_usuario
             // 
+            this.panel_perfil_de_usuario.Controls.Add(this.checkbox_privado_editar_usuario);
+            this.panel_perfil_de_usuario.Controls.Add(this.label10);
             this.panel_perfil_de_usuario.Controls.Add(this.btn_guardar_cambios_perfil_usuario);
             this.panel_perfil_de_usuario.Controls.Add(this.checkbox_para_ver_contraseña_perfil_usuraio);
             this.panel_perfil_de_usuario.Controls.Add(this.nombredeusuario_txt_perfil_usuario);
@@ -433,23 +468,34 @@
             this.panel_perfil_de_usuario.Controls.Add(this.btn_atras_de_registrarse);
             this.panel_perfil_de_usuario.Controls.Add(this.btn_editar_perfil_usuario);
             this.panel_perfil_de_usuario.Controls.Add(this.label1);
-            this.panel_perfil_de_usuario.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_perfil_de_usuario.Location = new System.Drawing.Point(0, 28);
-            this.panel_perfil_de_usuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel_perfil_de_usuario.Location = new System.Drawing.Point(214, 344);
             this.panel_perfil_de_usuario.Name = "panel_perfil_de_usuario";
-            this.panel_perfil_de_usuario.Size = new System.Drawing.Size(1067, 526);
+            this.panel_perfil_de_usuario.Size = new System.Drawing.Size(37, 21);
             this.panel_perfil_de_usuario.TabIndex = 50;
             this.panel_perfil_de_usuario.Visible = false;
             this.panel_perfil_de_usuario.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_perfil_de_usuario_Paint);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(61, 297);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(129, 33);
+            this.label10.TabIndex = 62;
+            this.label10.Tag = "";
+            this.label10.Text = "Privacidad";
             // 
             // btn_guardar_cambios_perfil_usuario
             // 
             this.btn_guardar_cambios_perfil_usuario.BackColor = System.Drawing.Color.White;
             this.btn_guardar_cambios_perfil_usuario.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_guardar_cambios_perfil_usuario.Location = new System.Drawing.Point(781, 395);
-            this.btn_guardar_cambios_perfil_usuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_guardar_cambios_perfil_usuario.Location = new System.Drawing.Point(601, 358);
+            this.btn_guardar_cambios_perfil_usuario.Margin = new System.Windows.Forms.Padding(2);
             this.btn_guardar_cambios_perfil_usuario.Name = "btn_guardar_cambios_perfil_usuario";
-            this.btn_guardar_cambios_perfil_usuario.Size = new System.Drawing.Size(235, 36);
+            this.btn_guardar_cambios_perfil_usuario.Size = new System.Drawing.Size(176, 29);
             this.btn_guardar_cambios_perfil_usuario.TabIndex = 61;
             this.btn_guardar_cambios_perfil_usuario.Text = "Guardar Cambios";
             this.btn_guardar_cambios_perfil_usuario.UseVisualStyleBackColor = false;
@@ -461,10 +507,9 @@
             this.checkbox_para_ver_contraseña_perfil_usuraio.AutoSize = true;
             this.checkbox_para_ver_contraseña_perfil_usuraio.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkbox_para_ver_contraseña_perfil_usuraio.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.checkbox_para_ver_contraseña_perfil_usuraio.Location = new System.Drawing.Point(945, 341);
-            this.checkbox_para_ver_contraseña_perfil_usuraio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkbox_para_ver_contraseña_perfil_usuraio.Location = new System.Drawing.Point(695, 253);
             this.checkbox_para_ver_contraseña_perfil_usuraio.Name = "checkbox_para_ver_contraseña_perfil_usuraio";
-            this.checkbox_para_ver_contraseña_perfil_usuraio.Size = new System.Drawing.Size(88, 29);
+            this.checkbox_para_ver_contraseña_perfil_usuraio.Size = new System.Drawing.Size(70, 23);
             this.checkbox_para_ver_contraseña_perfil_usuraio.TabIndex = 60;
             this.checkbox_para_ver_contraseña_perfil_usuraio.Text = "Visible";
             this.checkbox_para_ver_contraseña_perfil_usuraio.UseVisualStyleBackColor = true;
@@ -473,33 +518,30 @@
             // nombredeusuario_txt_perfil_usuario
             // 
             this.nombredeusuario_txt_perfil_usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nombredeusuario_txt_perfil_usuario.Location = new System.Drawing.Point(521, 190);
-            this.nombredeusuario_txt_perfil_usuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nombredeusuario_txt_perfil_usuario.Location = new System.Drawing.Point(366, 127);
             this.nombredeusuario_txt_perfil_usuario.Name = "nombredeusuario_txt_perfil_usuario";
             this.nombredeusuario_txt_perfil_usuario.ReadOnly = true;
-            this.nombredeusuario_txt_perfil_usuario.Size = new System.Drawing.Size(375, 34);
+            this.nombredeusuario_txt_perfil_usuario.Size = new System.Drawing.Size(282, 29);
             this.nombredeusuario_txt_perfil_usuario.TabIndex = 59;
             this.nombredeusuario_txt_perfil_usuario.TextChanged += new System.EventHandler(this.nombredeusuario_txt_perfil_usuario_TextChanged);
             // 
             // mail_txt_perfil_usuario
             // 
             this.mail_txt_perfil_usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mail_txt_perfil_usuario.Location = new System.Drawing.Point(521, 263);
-            this.mail_txt_perfil_usuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mail_txt_perfil_usuario.Location = new System.Drawing.Point(366, 188);
             this.mail_txt_perfil_usuario.Name = "mail_txt_perfil_usuario";
             this.mail_txt_perfil_usuario.ReadOnly = true;
-            this.mail_txt_perfil_usuario.Size = new System.Drawing.Size(375, 34);
+            this.mail_txt_perfil_usuario.Size = new System.Drawing.Size(282, 29);
             this.mail_txt_perfil_usuario.TabIndex = 58;
             this.mail_txt_perfil_usuario.TextChanged += new System.EventHandler(this.mail_txt_perfil_usuario_TextChanged);
             // 
             // pass_txt_perfil_usuario
             // 
             this.pass_txt_perfil_usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pass_txt_perfil_usuario.Location = new System.Drawing.Point(521, 334);
-            this.pass_txt_perfil_usuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pass_txt_perfil_usuario.Location = new System.Drawing.Point(366, 248);
             this.pass_txt_perfil_usuario.Name = "pass_txt_perfil_usuario";
             this.pass_txt_perfil_usuario.ReadOnly = true;
-            this.pass_txt_perfil_usuario.Size = new System.Drawing.Size(375, 34);
+            this.pass_txt_perfil_usuario.Size = new System.Drawing.Size(282, 29);
             this.pass_txt_perfil_usuario.TabIndex = 57;
             this.pass_txt_perfil_usuario.UseSystemPasswordChar = true;
             this.pass_txt_perfil_usuario.TextChanged += new System.EventHandler(this.pass_txt_perfil_usuario_TextChanged);
@@ -507,11 +549,10 @@
             // nombrecompleto_txt_perfil_usuario
             // 
             this.nombrecompleto_txt_perfil_usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nombrecompleto_txt_perfil_usuario.Location = new System.Drawing.Point(521, 116);
-            this.nombrecompleto_txt_perfil_usuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nombrecompleto_txt_perfil_usuario.Location = new System.Drawing.Point(366, 68);
             this.nombrecompleto_txt_perfil_usuario.Name = "nombrecompleto_txt_perfil_usuario";
             this.nombrecompleto_txt_perfil_usuario.ReadOnly = true;
-            this.nombrecompleto_txt_perfil_usuario.Size = new System.Drawing.Size(375, 34);
+            this.nombrecompleto_txt_perfil_usuario.Size = new System.Drawing.Size(282, 29);
             this.nombrecompleto_txt_perfil_usuario.TabIndex = 56;
             this.nombrecompleto_txt_perfil_usuario.TextChanged += new System.EventHandler(this.nombrecompleto_txt_perfil_usuario_TextChanged);
             // 
@@ -520,9 +561,10 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(91, 332);
+            this.label7.Location = new System.Drawing.Point(61, 244);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(173, 42);
+            this.label7.Size = new System.Drawing.Size(138, 33);
             this.label7.TabIndex = 55;
             this.label7.Tag = "";
             this.label7.Text = "Contraseña";
@@ -532,9 +574,10 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(91, 185);
+            this.label5.Location = new System.Drawing.Point(61, 127);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(285, 42);
+            this.label5.Size = new System.Drawing.Size(229, 33);
             this.label5.TabIndex = 54;
             this.label5.Text = "Nombre de Usuario";
             // 
@@ -543,9 +586,10 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(91, 258);
+            this.label4.Location = new System.Drawing.Point(61, 187);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 42);
+            this.label4.Size = new System.Drawing.Size(62, 33);
             this.label4.TabIndex = 53;
             this.label4.Text = "Mail";
             // 
@@ -554,19 +598,21 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(91, 111);
+            this.label6.Location = new System.Drawing.Point(61, 68);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(265, 42);
+            this.label6.Size = new System.Drawing.Size(211, 33);
             this.label6.TabIndex = 52;
             this.label6.Text = "Nombre Completo";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // btn_atras_de_registrarse
             // 
             this.btn_atras_de_registrarse.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_atras_de_registrarse.Location = new System.Drawing.Point(945, 23);
-            this.btn_atras_de_registrarse.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_atras_de_registrarse.Location = new System.Drawing.Point(709, 19);
+            this.btn_atras_de_registrarse.Margin = new System.Windows.Forms.Padding(2);
             this.btn_atras_de_registrarse.Name = "btn_atras_de_registrarse";
-            this.btn_atras_de_registrarse.Size = new System.Drawing.Size(95, 41);
+            this.btn_atras_de_registrarse.Size = new System.Drawing.Size(71, 33);
             this.btn_atras_de_registrarse.TabIndex = 49;
             this.btn_atras_de_registrarse.Text = "Atras";
             this.btn_atras_de_registrarse.UseVisualStyleBackColor = true;
@@ -576,10 +622,10 @@
             // 
             this.btn_editar_perfil_usuario.BackColor = System.Drawing.Color.White;
             this.btn_editar_perfil_usuario.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_editar_perfil_usuario.Location = new System.Drawing.Point(245, 431);
-            this.btn_editar_perfil_usuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_editar_perfil_usuario.Location = new System.Drawing.Point(185, 356);
+            this.btn_editar_perfil_usuario.Margin = new System.Windows.Forms.Padding(2);
             this.btn_editar_perfil_usuario.Name = "btn_editar_perfil_usuario";
-            this.btn_editar_perfil_usuario.Size = new System.Drawing.Size(385, 63);
+            this.btn_editar_perfil_usuario.Size = new System.Drawing.Size(289, 51);
             this.btn_editar_perfil_usuario.TabIndex = 48;
             this.btn_editar_perfil_usuario.Text = "Editar Perfil";
             this.btn_editar_perfil_usuario.UseVisualStyleBackColor = false;
@@ -590,9 +636,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(269, 23);
+            this.label1.Location = new System.Drawing.Point(247, 3);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(350, 56);
+            this.label1.Size = new System.Drawing.Size(285, 45);
             this.label1.TabIndex = 46;
             this.label1.Text = "Perfil de Usuario";
             // 
@@ -600,10 +647,10 @@
             // 
             this.btn_premium.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btn_premium.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_premium.Location = new System.Drawing.Point(752, 44);
-            this.btn_premium.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_premium.Location = new System.Drawing.Point(564, 36);
+            this.btn_premium.Margin = new System.Windows.Forms.Padding(2);
             this.btn_premium.Name = "btn_premium";
-            this.btn_premium.Size = new System.Drawing.Size(300, 48);
+            this.btn_premium.Size = new System.Drawing.Size(225, 39);
             this.btn_premium.TabIndex = 51;
             this.btn_premium.Text = "Conviertete en PREMIUM";
             this.btn_premium.UseVisualStyleBackColor = false;
@@ -619,23 +666,34 @@
             this.Panel_premium.Controls.Add(this.label8);
             this.Panel_premium.Controls.Add(this.mailpremiumlabel);
             this.Panel_premium.Controls.Add(this.emialpremiumtextbox);
-            this.Panel_premium.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Panel_premium.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Panel_premium.Location = new System.Drawing.Point(0, 28);
-            this.Panel_premium.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Panel_premium.Location = new System.Drawing.Point(767, 36);
             this.Panel_premium.Name = "Panel_premium";
-            this.Panel_premium.Size = new System.Drawing.Size(1067, 526);
+            this.Panel_premium.Size = new System.Drawing.Size(21, 20);
             this.Panel_premium.TabIndex = 52;
             this.Panel_premium.Visible = false;
             this.Panel_premium.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel_premium_Paint);
             // 
+            // checkBox_contraseña_premium
+            // 
+            this.checkBox_contraseña_premium.AutoSize = true;
+            this.checkBox_contraseña_premium.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox_contraseña_premium.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.checkBox_contraseña_premium.Location = new System.Drawing.Point(651, 233);
+            this.checkBox_contraseña_premium.Margin = new System.Windows.Forms.Padding(2);
+            this.checkBox_contraseña_premium.Name = "checkBox_contraseña_premium";
+            this.checkBox_contraseña_premium.Size = new System.Drawing.Size(79, 27);
+            this.checkBox_contraseña_premium.TabIndex = 53;
+            this.checkBox_contraseña_premium.Text = "Visible";
+            this.checkBox_contraseña_premium.UseVisualStyleBackColor = true;
+            this.checkBox_contraseña_premium.CheckedChanged += new System.EventHandler(this.checkBox_contraseña_premium_CheckedChanged);
+            // 
             // btnatraspremium
             // 
             this.btnatraspremium.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnatraspremium.Location = new System.Drawing.Point(881, 20);
-            this.btnatraspremium.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnatraspremium.Location = new System.Drawing.Point(661, 16);
             this.btnatraspremium.Name = "btnatraspremium";
-            this.btnatraspremium.Size = new System.Drawing.Size(157, 64);
+            this.btnatraspremium.Size = new System.Drawing.Size(118, 52);
             this.btnatraspremium.TabIndex = 43;
             this.btnatraspremium.Text = "Atras";
             this.btnatraspremium.UseVisualStyleBackColor = true;
@@ -645,10 +703,10 @@
             // 
             this.btn_premium_listo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btn_premium_listo.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_premium_listo.Location = new System.Drawing.Point(395, 373);
-            this.btn_premium_listo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_premium_listo.Location = new System.Drawing.Point(296, 303);
+            this.btn_premium_listo.Margin = new System.Windows.Forms.Padding(2);
             this.btn_premium_listo.Name = "btn_premium_listo";
-            this.btn_premium_listo.Size = new System.Drawing.Size(349, 70);
+            this.btn_premium_listo.Size = new System.Drawing.Size(262, 57);
             this.btn_premium_listo.TabIndex = 42;
             this.btn_premium_listo.Text = "Listo";
             this.btn_premium_listo.UseVisualStyleBackColor = false;
@@ -659,19 +717,19 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Comic Sans MS", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(261, 53);
+            this.label9.Location = new System.Drawing.Point(196, 43);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(544, 84);
+            this.label9.Size = new System.Drawing.Size(436, 68);
             this.label9.TabIndex = 41;
             this.label9.Text = "Alainid PREMIUM";
             // 
             // contraseñapremiumtextbox
             // 
             this.contraseñapremiumtextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contraseñapremiumtextbox.Location = new System.Drawing.Point(341, 284);
-            this.contraseñapremiumtextbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.contraseñapremiumtextbox.Location = new System.Drawing.Point(256, 231);
             this.contraseñapremiumtextbox.Name = "contraseñapremiumtextbox";
-            this.contraseñapremiumtextbox.Size = new System.Drawing.Size(500, 34);
+            this.contraseñapremiumtextbox.Size = new System.Drawing.Size(376, 29);
             this.contraseñapremiumtextbox.TabIndex = 40;
             this.contraseñapremiumtextbox.TextChanged += new System.EventHandler(this.contraseñapremiumtextbox_TextChanged);
             // 
@@ -682,9 +740,10 @@
             this.label8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label8.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(115, 281);
+            this.label8.Location = new System.Drawing.Point(86, 228);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(175, 44);
+            this.label8.Size = new System.Drawing.Size(140, 35);
             this.label8.TabIndex = 39;
             this.label8.Text = "Contraseña";
             // 
@@ -695,41 +754,446 @@
             this.mailpremiumlabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.mailpremiumlabel.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mailpremiumlabel.ForeColor = System.Drawing.Color.White;
-            this.mailpremiumlabel.Location = new System.Drawing.Point(200, 193);
+            this.mailpremiumlabel.Location = new System.Drawing.Point(150, 157);
+            this.mailpremiumlabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.mailpremiumlabel.Name = "mailpremiumlabel";
-            this.mailpremiumlabel.Size = new System.Drawing.Size(92, 44);
+            this.mailpremiumlabel.Size = new System.Drawing.Size(76, 35);
             this.mailpremiumlabel.TabIndex = 38;
             this.mailpremiumlabel.Text = "Email";
             // 
             // emialpremiumtextbox
             // 
             this.emialpremiumtextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emialpremiumtextbox.Location = new System.Drawing.Point(341, 197);
-            this.emialpremiumtextbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.emialpremiumtextbox.Location = new System.Drawing.Point(256, 160);
             this.emialpremiumtextbox.Name = "emialpremiumtextbox";
-            this.emialpremiumtextbox.Size = new System.Drawing.Size(500, 34);
+            this.emialpremiumtextbox.Size = new System.Drawing.Size(376, 29);
             this.emialpremiumtextbox.TabIndex = 0;
             this.emialpremiumtextbox.TextChanged += new System.EventHandler(this.emialpremiumtextbox_TextChanged);
             // 
-            // checkBox_contraseña_premium
+            // checkbox_privado_editar_usuario
             // 
-            this.checkBox_contraseña_premium.AutoSize = true;
-            this.checkBox_contraseña_premium.Location = new System.Drawing.Point(868, 287);
-            this.checkBox_contraseña_premium.Name = "checkBox_contraseña_premium";
-            this.checkBox_contraseña_premium.Size = new System.Drawing.Size(131, 29);
-            this.checkBox_contraseña_premium.TabIndex = 53;
-            this.checkBox_contraseña_premium.Text = "checkBox1";
-            this.checkBox_contraseña_premium.UseVisualStyleBackColor = true;
-            this.checkBox_contraseña_premium.CheckedChanged += new System.EventHandler(this.checkBox_contraseña_premium_CheckedChanged);
+            this.checkbox_privado_editar_usuario.AutoSize = true;
+            this.checkbox_privado_editar_usuario.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkbox_privado_editar_usuario.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.checkbox_privado_editar_usuario.Location = new System.Drawing.Point(366, 301);
+            this.checkbox_privado_editar_usuario.Name = "checkbox_privado_editar_usuario";
+            this.checkbox_privado_editar_usuario.Size = new System.Drawing.Size(96, 31);
+            this.checkbox_privado_editar_usuario.TabIndex = 63;
+            this.checkbox_privado_editar_usuario.Text = "Privado";
+            this.checkbox_privado_editar_usuario.UseVisualStyleBackColor = true;
+            this.checkbox_privado_editar_usuario.CheckedChanged += new System.EventHandler(this.checkbox_privado_editar_usuario_CheckedChanged);
+            // 
+            // panel_buscar
+            // 
+            this.panel_buscar.Controls.Add(this.panel1);
+            this.panel_buscar.Controls.Add(this.button1);
+            this.panel_buscar.Controls.Add(this.checkBox_repetir_cantante_como_compositor);
+            this.panel_buscar.Controls.Add(this.comboBox2);
+            this.panel_buscar.Controls.Add(this.pass_txt_inicio_sesion);
+            this.panel_buscar.Controls.Add(this.btn_atras_de_inicio_sesion);
+            this.panel_buscar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_buscar.Location = new System.Drawing.Point(0, 24);
+            this.panel_buscar.Name = "panel_buscar";
+            this.panel_buscar.Size = new System.Drawing.Size(800, 426);
+            this.panel_buscar.TabIndex = 53;
+            this.panel_buscar.Visible = false;
+            // 
+            // btn_atras_de_inicio_sesion
+            // 
+            this.btn_atras_de_inicio_sesion.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_atras_de_inicio_sesion.Location = new System.Drawing.Point(715, 16);
+            this.btn_atras_de_inicio_sesion.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_atras_de_inicio_sesion.Name = "btn_atras_de_inicio_sesion";
+            this.btn_atras_de_inicio_sesion.Size = new System.Drawing.Size(71, 35);
+            this.btn_atras_de_inicio_sesion.TabIndex = 18;
+            this.btn_atras_de_inicio_sesion.Text = "Atras";
+            this.btn_atras_de_inicio_sesion.UseVisualStyleBackColor = true;
+            // 
+            // pass_txt_inicio_sesion
+            // 
+            this.pass_txt_inicio_sesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pass_txt_inicio_sesion.Location = new System.Drawing.Point(90, 89);
+            this.pass_txt_inicio_sesion.Margin = new System.Windows.Forms.Padding(2);
+            this.pass_txt_inicio_sesion.Name = "pass_txt_inicio_sesion";
+            this.pass_txt_inicio_sesion.PasswordChar = '*';
+            this.pass_txt_inicio_sesion.Size = new System.Drawing.Size(227, 26);
+            this.pass_txt_inicio_sesion.TabIndex = 20;
+            this.pass_txt_inicio_sesion.UseSystemPasswordChar = true;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Genero",
+            "Cantante",
+            "Nombre",
+            "Compositor",
+            "Disquera",
+            "Año",
+            "Edad",
+            "Sexo",
+            "Evaluacion",
+            "Calidad/Resolucion"});
+            this.comboBox2.Location = new System.Drawing.Point(90, 47);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(227, 21);
+            this.comboBox2.TabIndex = 59;
+            // 
+            // checkBox_repetir_cantante_como_compositor
+            // 
+            this.checkBox_repetir_cantante_como_compositor.AutoSize = true;
+            this.checkBox_repetir_cantante_como_compositor.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox_repetir_cantante_como_compositor.ForeColor = System.Drawing.Color.White;
+            this.checkBox_repetir_cantante_como_compositor.Location = new System.Drawing.Point(22, 67);
+            this.checkBox_repetir_cantante_como_compositor.Name = "checkBox_repetir_cantante_como_compositor";
+            this.checkBox_repetir_cantante_como_compositor.Size = new System.Drawing.Size(62, 20);
+            this.checkBox_repetir_cantante_como_compositor.TabIndex = 64;
+            this.checkBox_repetir_cantante_como_compositor.Text = "Simple";
+            this.checkBox_repetir_cantante_como_compositor.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(334, 67);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(79, 31);
+            this.button1.TabIndex = 73;
+            this.button1.Text = "Buscar";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.textBox7);
+            this.panel1.Controls.Add(this.comboBox8_criterio);
+            this.panel1.Controls.Add(this.criterio_txt_combobox8);
+            this.panel1.Controls.Add(this.comboBox4_criterio);
+            this.panel1.Controls.Add(this.criterio_txt_combobox4);
+            this.panel1.Controls.Add(this.comboBox7_criterio);
+            this.panel1.Controls.Add(this.criterio_txt_combobox7);
+            this.panel1.Controls.Add(this.comboBox3_criterio);
+            this.panel1.Controls.Add(this.criterio_txt_combobox3);
+            this.panel1.Controls.Add(this.comboBox6_criterio);
+            this.panel1.Controls.Add(this.criterio_txt_combobox6);
+            this.panel1.Controls.Add(this.comboBox2_criterio);
+            this.panel1.Controls.Add(this.criterio_txt_combobox2);
+            this.panel1.Controls.Add(this.label11);
+            this.panel1.Controls.Add(this.comboBox5_criterio);
+            this.panel1.Controls.Add(this.criterio_txt_combobox5);
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.comboBox1_criterio);
+            this.panel1.Controls.Add(this.criterio_txt_combobox1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(800, 426);
+            this.panel1.TabIndex = 75;
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(46, 355);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(685, 51);
+            this.button2.TabIndex = 84;
+            this.button2.Text = "Buscar";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // comboBox1_criterio
+            // 
+            this.comboBox1_criterio.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.comboBox1_criterio.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1_criterio.FormattingEnabled = true;
+            this.comboBox1_criterio.Items.AddRange(new object[] {
+            "Genero",
+            "Cantante",
+            "Nombre",
+            "Compositor",
+            "Disquera",
+            "Año",
+            "Edad",
+            "Sexo",
+            "Evaluacion",
+            "Calidad/Resolucion"});
+            this.comboBox1_criterio.Location = new System.Drawing.Point(46, 98);
+            this.comboBox1_criterio.Name = "comboBox1_criterio";
+            this.comboBox1_criterio.Size = new System.Drawing.Size(154, 37);
+            this.comboBox1_criterio.TabIndex = 77;
+            // 
+            // criterio_txt_combobox1
+            // 
+            this.criterio_txt_combobox1.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.criterio_txt_combobox1.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.criterio_txt_combobox1.Location = new System.Drawing.Point(46, 151);
+            this.criterio_txt_combobox1.Margin = new System.Windows.Forms.Padding(2);
+            this.criterio_txt_combobox1.Name = "criterio_txt_combobox1";
+            this.criterio_txt_combobox1.Size = new System.Drawing.Size(154, 37);
+            this.criterio_txt_combobox1.TabIndex = 75;
+            // 
+            // comboBox5_criterio
+            // 
+            this.comboBox5_criterio.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.comboBox5_criterio.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox5_criterio.FormattingEnabled = true;
+            this.comboBox5_criterio.Items.AddRange(new object[] {
+            "Genero",
+            "Cantante",
+            "Nombre",
+            "Compositor",
+            "Disquera",
+            "Año",
+            "Edad",
+            "Sexo",
+            "Evaluacion",
+            "Calidad/Resolucion"});
+            this.comboBox5_criterio.Location = new System.Drawing.Point(46, 231);
+            this.comboBox5_criterio.Name = "comboBox5_criterio";
+            this.comboBox5_criterio.Size = new System.Drawing.Size(154, 37);
+            this.comboBox5_criterio.TabIndex = 92;
+            // 
+            // criterio_txt_combobox5
+            // 
+            this.criterio_txt_combobox5.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.criterio_txt_combobox5.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.criterio_txt_combobox5.Location = new System.Drawing.Point(46, 287);
+            this.criterio_txt_combobox5.Margin = new System.Windows.Forms.Padding(2);
+            this.criterio_txt_combobox5.Name = "criterio_txt_combobox5";
+            this.criterio_txt_combobox5.Size = new System.Drawing.Size(154, 37);
+            this.criterio_txt_combobox5.TabIndex = 91;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Maroon;
+            this.label11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label11.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(238, 20);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(300, 47);
+            this.label11.TabIndex = 101;
+            this.label11.Text = "Busqueda Multiple";
+            // 
+            // comboBox6_criterio
+            // 
+            this.comboBox6_criterio.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.comboBox6_criterio.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox6_criterio.FormattingEnabled = true;
+            this.comboBox6_criterio.Items.AddRange(new object[] {
+            "Genero",
+            "Cantante",
+            "Nombre",
+            "Compositor",
+            "Disquera",
+            "Año",
+            "Edad",
+            "Sexo",
+            "Evaluacion",
+            "Calidad/Resolucion"});
+            this.comboBox6_criterio.Location = new System.Drawing.Point(226, 231);
+            this.comboBox6_criterio.Name = "comboBox6_criterio";
+            this.comboBox6_criterio.Size = new System.Drawing.Size(154, 37);
+            this.comboBox6_criterio.TabIndex = 105;
+            // 
+            // criterio_txt_combobox6
+            // 
+            this.criterio_txt_combobox6.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.criterio_txt_combobox6.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.criterio_txt_combobox6.Location = new System.Drawing.Point(226, 287);
+            this.criterio_txt_combobox6.Margin = new System.Windows.Forms.Padding(2);
+            this.criterio_txt_combobox6.Name = "criterio_txt_combobox6";
+            this.criterio_txt_combobox6.Size = new System.Drawing.Size(154, 37);
+            this.criterio_txt_combobox6.TabIndex = 104;
+            // 
+            // comboBox2_criterio
+            // 
+            this.comboBox2_criterio.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.comboBox2_criterio.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox2_criterio.FormattingEnabled = true;
+            this.comboBox2_criterio.Items.AddRange(new object[] {
+            "Genero",
+            "Cantante",
+            "Nombre",
+            "Compositor",
+            "Disquera",
+            "Año",
+            "Edad",
+            "Sexo",
+            "Evaluacion",
+            "Calidad/Resolucion"});
+            this.comboBox2_criterio.Location = new System.Drawing.Point(226, 98);
+            this.comboBox2_criterio.Name = "comboBox2_criterio";
+            this.comboBox2_criterio.Size = new System.Drawing.Size(154, 37);
+            this.comboBox2_criterio.TabIndex = 103;
+            // 
+            // criterio_txt_combobox2
+            // 
+            this.criterio_txt_combobox2.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.criterio_txt_combobox2.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.criterio_txt_combobox2.Location = new System.Drawing.Point(226, 151);
+            this.criterio_txt_combobox2.Margin = new System.Windows.Forms.Padding(2);
+            this.criterio_txt_combobox2.Name = "criterio_txt_combobox2";
+            this.criterio_txt_combobox2.Size = new System.Drawing.Size(154, 37);
+            this.criterio_txt_combobox2.TabIndex = 102;
+            // 
+            // comboBox8_criterio
+            // 
+            this.comboBox8_criterio.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.comboBox8_criterio.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox8_criterio.FormattingEnabled = true;
+            this.comboBox8_criterio.Items.AddRange(new object[] {
+            "Genero",
+            "Cantante",
+            "Nombre",
+            "Compositor",
+            "Disquera",
+            "Año",
+            "Edad",
+            "Sexo",
+            "Evaluacion",
+            "Calidad/Resolucion"});
+            this.comboBox8_criterio.Location = new System.Drawing.Point(577, 231);
+            this.comboBox8_criterio.Name = "comboBox8_criterio";
+            this.comboBox8_criterio.Size = new System.Drawing.Size(154, 37);
+            this.comboBox8_criterio.TabIndex = 113;
+            // 
+            // criterio_txt_combobox8
+            // 
+            this.criterio_txt_combobox8.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.criterio_txt_combobox8.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.criterio_txt_combobox8.Location = new System.Drawing.Point(577, 287);
+            this.criterio_txt_combobox8.Margin = new System.Windows.Forms.Padding(2);
+            this.criterio_txt_combobox8.Name = "criterio_txt_combobox8";
+            this.criterio_txt_combobox8.Size = new System.Drawing.Size(154, 37);
+            this.criterio_txt_combobox8.TabIndex = 112;
+            // 
+            // comboBox4_criterio
+            // 
+            this.comboBox4_criterio.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.comboBox4_criterio.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox4_criterio.FormattingEnabled = true;
+            this.comboBox4_criterio.Items.AddRange(new object[] {
+            "Genero",
+            "Cantante",
+            "Nombre",
+            "Compositor",
+            "Disquera",
+            "Año",
+            "Edad",
+            "Sexo",
+            "Evaluacion",
+            "Calidad/Resolucion"});
+            this.comboBox4_criterio.Location = new System.Drawing.Point(577, 98);
+            this.comboBox4_criterio.Name = "comboBox4_criterio";
+            this.comboBox4_criterio.Size = new System.Drawing.Size(154, 37);
+            this.comboBox4_criterio.TabIndex = 111;
+            // 
+            // criterio_txt_combobox4
+            // 
+            this.criterio_txt_combobox4.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.criterio_txt_combobox4.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.criterio_txt_combobox4.Location = new System.Drawing.Point(577, 151);
+            this.criterio_txt_combobox4.Margin = new System.Windows.Forms.Padding(2);
+            this.criterio_txt_combobox4.Name = "criterio_txt_combobox4";
+            this.criterio_txt_combobox4.Size = new System.Drawing.Size(154, 37);
+            this.criterio_txt_combobox4.TabIndex = 110;
+            // 
+            // comboBox7_criterio
+            // 
+            this.comboBox7_criterio.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.comboBox7_criterio.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox7_criterio.FormattingEnabled = true;
+            this.comboBox7_criterio.Items.AddRange(new object[] {
+            "Genero",
+            "Cantante",
+            "Nombre",
+            "Compositor",
+            "Disquera",
+            "Año",
+            "Edad",
+            "Sexo",
+            "Evaluacion",
+            "Calidad/Resolucion"});
+            this.comboBox7_criterio.Location = new System.Drawing.Point(397, 231);
+            this.comboBox7_criterio.Name = "comboBox7_criterio";
+            this.comboBox7_criterio.Size = new System.Drawing.Size(154, 37);
+            this.comboBox7_criterio.TabIndex = 109;
+            // 
+            // criterio_txt_combobox7
+            // 
+            this.criterio_txt_combobox7.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.criterio_txt_combobox7.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.criterio_txt_combobox7.Location = new System.Drawing.Point(397, 287);
+            this.criterio_txt_combobox7.Margin = new System.Windows.Forms.Padding(2);
+            this.criterio_txt_combobox7.Name = "criterio_txt_combobox7";
+            this.criterio_txt_combobox7.Size = new System.Drawing.Size(154, 37);
+            this.criterio_txt_combobox7.TabIndex = 108;
+            // 
+            // comboBox3_criterio
+            // 
+            this.comboBox3_criterio.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.comboBox3_criterio.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox3_criterio.FormattingEnabled = true;
+            this.comboBox3_criterio.Items.AddRange(new object[] {
+            "Genero",
+            "Cantante",
+            "Nombre",
+            "Compositor",
+            "Disquera",
+            "Año",
+            "Edad",
+            "Sexo",
+            "Evaluacion",
+            "Calidad/Resolucion"});
+            this.comboBox3_criterio.Location = new System.Drawing.Point(397, 98);
+            this.comboBox3_criterio.Name = "comboBox3_criterio";
+            this.comboBox3_criterio.Size = new System.Drawing.Size(154, 37);
+            this.comboBox3_criterio.TabIndex = 107;
+            // 
+            // criterio_txt_combobox3
+            // 
+            this.criterio_txt_combobox3.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.criterio_txt_combobox3.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.criterio_txt_combobox3.Location = new System.Drawing.Point(397, 151);
+            this.criterio_txt_combobox3.Margin = new System.Windows.Forms.Padding(2);
+            this.criterio_txt_combobox3.Name = "criterio_txt_combobox3";
+            this.criterio_txt_combobox3.Size = new System.Drawing.Size(154, 37);
+            this.criterio_txt_combobox3.TabIndex = 106;
+            // 
+            // textBox7
+            // 
+            this.textBox7.BackColor = System.Drawing.Color.Maroon;
+            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox7.Font = new System.Drawing.Font("Arial", 1.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox7.Location = new System.Drawing.Point(28, 207);
+            this.textBox7.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(724, 3);
+            this.textBox7.TabIndex = 114;
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(705, 16);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(71, 35);
+            this.button3.TabIndex = 115;
+            this.button3.Text = "Atras";
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // FORMS_USUARIO
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
-            this.Controls.Add(this.Panel_premium);
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.panel_buscar);
             this.Controls.Add(this.panel_perfil_de_usuario);
+            this.Controls.Add(this.Panel_premium);
             this.Controls.Add(this.BtnListaInteligente);
             this.Controls.Add(this.btnDescargas);
             this.Controls.Add(this.btnHistorial);
@@ -745,7 +1209,6 @@
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.btn_premium);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FORMS_USUARIO";
             this.Text = "FORMS_USUARIO";
             this.Load += new System.EventHandler(this.FORMS_USUARIO_Load);
@@ -755,6 +1218,10 @@
             this.panel_perfil_de_usuario.PerformLayout();
             this.Panel_premium.ResumeLayout(false);
             this.Panel_premium.PerformLayout();
+            this.panel_buscar.ResumeLayout(false);
+            this.panel_buscar.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -820,5 +1287,34 @@
         private System.Windows.Forms.Button btn_premium_listo;
         private System.Windows.Forms.Button btnatraspremium;
         private System.Windows.Forms.CheckBox checkBox_contraseña_premium;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.CheckBox checkbox_privado_editar_usuario;
+        private System.Windows.Forms.Panel panel_buscar;
+        private System.Windows.Forms.Button btn_atras_de_inicio_sesion;
+        private System.Windows.Forms.TextBox pass_txt_inicio_sesion;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.CheckBox checkBox_repetir_cantante_como_compositor;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ComboBox comboBox5_criterio;
+        private System.Windows.Forms.TextBox criterio_txt_combobox5;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ComboBox comboBox1_criterio;
+        private System.Windows.Forms.TextBox criterio_txt_combobox1;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.ComboBox comboBox8_criterio;
+        private System.Windows.Forms.TextBox criterio_txt_combobox8;
+        private System.Windows.Forms.ComboBox comboBox4_criterio;
+        private System.Windows.Forms.TextBox criterio_txt_combobox4;
+        private System.Windows.Forms.ComboBox comboBox7_criterio;
+        private System.Windows.Forms.TextBox criterio_txt_combobox7;
+        private System.Windows.Forms.ComboBox comboBox3_criterio;
+        private System.Windows.Forms.TextBox criterio_txt_combobox3;
+        private System.Windows.Forms.ComboBox comboBox6_criterio;
+        private System.Windows.Forms.TextBox criterio_txt_combobox6;
+        private System.Windows.Forms.ComboBox comboBox2_criterio;
+        private System.Windows.Forms.TextBox criterio_txt_combobox2;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button button3;
     }
 }
