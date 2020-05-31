@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.aDMINToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cerrarSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -133,9 +134,11 @@
             this.label41 = new System.Windows.Forms.Label();
             this.nombrecancionkaraoke_agregar_cancion_karaoke_admin = new System.Windows.Forms.TextBox();
             this.panel_ver_usuarios_admin = new System.Windows.Forms.Panel();
+            this.btn_guardar_usuarios_admin = new System.Windows.Forms.Button();
+            this.btn_editar_usuarios_admin = new System.Windows.Forms.Button();
+            this.tabla_usuarios_admin = new System.Windows.Forms.DataGridView();
             this.label26 = new System.Windows.Forms.Label();
             this.btn_atras_de_ver_usuarios_admin = new System.Windows.Forms.Button();
-            this.lista_usuarios_admin = new System.Windows.Forms.ListBox();
             this.panel_ver_artistas_admin = new System.Windows.Forms.Panel();
             this.btn_atras_de_ver_artistas_admin = new System.Windows.Forms.Button();
             this.lista_ver_directores_admin = new System.Windows.Forms.ListBox();
@@ -144,14 +147,25 @@
             this.label27 = new System.Windows.Forms.Label();
             this.lista_ver_cantantes_admin = new System.Windows.Forms.ListBox();
             this.openfile_subircancion_admin = new System.Windows.Forms.OpenFileDialog();
+            this.aLAINIDBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.aLAINIDBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.aLAINIDBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.colum_usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colum_nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colum_mail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colum_pass = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colum_privacidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colum_suscripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             this.panel_agregar_cancion_admin.SuspendLayout();
             this.panel_agregar_video_admin.SuspendLayout();
             this.panel_agregar_cancion_karaoke_admin.SuspendLayout();
             this.panel_ver_usuarios_admin.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tabla_usuarios_admin)).BeginInit();
             this.panel_ver_artistas_admin.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.aLAINIDBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aLAINIDBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aLAINIDBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -361,10 +375,9 @@
             this.panel_agregar_cancion_admin.Controls.Add(this.label3);
             this.panel_agregar_cancion_admin.Controls.Add(this.label1);
             this.panel_agregar_cancion_admin.Controls.Add(this.nombre_cancion_txt_agregar_cancion);
-            this.panel_agregar_cancion_admin.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_agregar_cancion_admin.Location = new System.Drawing.Point(0, 24);
+            this.panel_agregar_cancion_admin.Location = new System.Drawing.Point(362, 318);
             this.panel_agregar_cancion_admin.Name = "panel_agregar_cancion_admin";
-            this.panel_agregar_cancion_admin.Size = new System.Drawing.Size(800, 426);
+            this.panel_agregar_cancion_admin.Size = new System.Drawing.Size(20, 20);
             this.panel_agregar_cancion_admin.TabIndex = 24;
             this.panel_agregar_cancion_admin.Visible = false;
             this.panel_agregar_cancion_admin.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_agregar_cancion_admin_Paint);
@@ -1443,15 +1456,71 @@
             // 
             // panel_ver_usuarios_admin
             // 
+            this.panel_ver_usuarios_admin.Controls.Add(this.btn_guardar_usuarios_admin);
+            this.panel_ver_usuarios_admin.Controls.Add(this.btn_editar_usuarios_admin);
+            this.panel_ver_usuarios_admin.Controls.Add(this.tabla_usuarios_admin);
             this.panel_ver_usuarios_admin.Controls.Add(this.label26);
             this.panel_ver_usuarios_admin.Controls.Add(this.btn_atras_de_ver_usuarios_admin);
-            this.panel_ver_usuarios_admin.Controls.Add(this.lista_usuarios_admin);
-            this.panel_ver_usuarios_admin.Location = new System.Drawing.Point(686, 396);
+            this.panel_ver_usuarios_admin.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_ver_usuarios_admin.Location = new System.Drawing.Point(0, 24);
             this.panel_ver_usuarios_admin.Name = "panel_ver_usuarios_admin";
-            this.panel_ver_usuarios_admin.Size = new System.Drawing.Size(47, 36);
+            this.panel_ver_usuarios_admin.Size = new System.Drawing.Size(800, 426);
             this.panel_ver_usuarios_admin.TabIndex = 96;
             this.panel_ver_usuarios_admin.Visible = false;
             this.panel_ver_usuarios_admin.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_ver_usuarios_admin_Paint);
+            // 
+            // btn_guardar_usuarios_admin
+            // 
+            this.btn_guardar_usuarios_admin.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_guardar_usuarios_admin.Location = new System.Drawing.Point(590, 21);
+            this.btn_guardar_usuarios_admin.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_guardar_usuarios_admin.Name = "btn_guardar_usuarios_admin";
+            this.btn_guardar_usuarios_admin.Size = new System.Drawing.Size(71, 33);
+            this.btn_guardar_usuarios_admin.TabIndex = 99;
+            this.btn_guardar_usuarios_admin.Text = "Guardar";
+            this.btn_guardar_usuarios_admin.UseVisualStyleBackColor = true;
+            this.btn_guardar_usuarios_admin.Click += new System.EventHandler(this.btn_guardar_usuarios_admin_Click);
+            // 
+            // btn_editar_usuarios_admin
+            // 
+            this.btn_editar_usuarios_admin.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_editar_usuarios_admin.Location = new System.Drawing.Point(486, 21);
+            this.btn_editar_usuarios_admin.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_editar_usuarios_admin.Name = "btn_editar_usuarios_admin";
+            this.btn_editar_usuarios_admin.Size = new System.Drawing.Size(71, 33);
+            this.btn_editar_usuarios_admin.TabIndex = 98;
+            this.btn_editar_usuarios_admin.Text = "Editar";
+            this.btn_editar_usuarios_admin.UseVisualStyleBackColor = true;
+            this.btn_editar_usuarios_admin.Click += new System.EventHandler(this.btn_editar_usuarios_admin_Click);
+            // 
+            // tabla_usuarios_admin
+            // 
+            this.tabla_usuarios_admin.AllowUserToResizeColumns = false;
+            this.tabla_usuarios_admin.AllowUserToResizeRows = false;
+            this.tabla_usuarios_admin.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.tabla_usuarios_admin.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
+            this.tabla_usuarios_admin.BackgroundColor = System.Drawing.Color.DarkOliveGreen;
+            this.tabla_usuarios_admin.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tabla_usuarios_admin.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.tabla_usuarios_admin.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colum_usuario,
+            this.colum_nombre,
+            this.colum_mail,
+            this.colum_pass,
+            this.colum_privacidad,
+            this.colum_suscripcion});
+            this.tabla_usuarios_admin.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.tabla_usuarios_admin.Location = new System.Drawing.Point(3, 66);
+            this.tabla_usuarios_admin.Name = "tabla_usuarios_admin";
+            this.tabla_usuarios_admin.ReadOnly = true;
+            this.tabla_usuarios_admin.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.tabla_usuarios_admin.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.tabla_usuarios_admin.RowHeadersVisible = false;
+            this.tabla_usuarios_admin.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.tabla_usuarios_admin.Size = new System.Drawing.Size(794, 357);
+            this.tabla_usuarios_admin.TabIndex = 97;
+            this.tabla_usuarios_admin.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabla_usuarios_admin_CellClick);
+            this.tabla_usuarios_admin.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabla_usuarios_admin_CellContentClick);
             // 
             // label26
             // 
@@ -1476,15 +1545,6 @@
             this.btn_atras_de_ver_usuarios_admin.Text = "Atras";
             this.btn_atras_de_ver_usuarios_admin.UseVisualStyleBackColor = true;
             this.btn_atras_de_ver_usuarios_admin.Click += new System.EventHandler(this.btn_atras_de_ver_usuarios_admin_Click);
-            // 
-            // lista_usuarios_admin
-            // 
-            this.lista_usuarios_admin.FormattingEnabled = true;
-            this.lista_usuarios_admin.Location = new System.Drawing.Point(3, 56);
-            this.lista_usuarios_admin.Name = "lista_usuarios_admin";
-            this.lista_usuarios_admin.Size = new System.Drawing.Size(798, 355);
-            this.lista_usuarios_admin.TabIndex = 20;
-            this.lista_usuarios_admin.SelectedIndexChanged += new System.EventHandler(this.lista_usuarios_admin_SelectedIndexChanged);
             // 
             // panel_ver_artistas_admin
             // 
@@ -1563,9 +1623,59 @@
             this.openfile_subircancion_admin.RestoreDirectory = true;
             this.openfile_subircancion_admin.Title = "Agregar Cancion";
             // 
+            // aLAINIDBindingSource2
+            // 
+            this.aLAINIDBindingSource2.DataSource = typeof(Proyecto_Forms.ALAINID);
+            // 
             // aLAINIDBindingSource
             // 
             this.aLAINIDBindingSource.DataSource = typeof(Proyecto_Forms.ALAINID);
+            // 
+            // aLAINIDBindingSource1
+            // 
+            this.aLAINIDBindingSource1.DataSource = typeof(Proyecto_Forms.ALAINID);
+            // 
+            // colum_usuario
+            // 
+            this.colum_usuario.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colum_usuario.DefaultCellStyle = dataGridViewCellStyle1;
+            this.colum_usuario.HeaderText = "Usuario";
+            this.colum_usuario.Name = "colum_usuario";
+            this.colum_usuario.ReadOnly = true;
+            this.colum_usuario.Width = 68;
+            // 
+            // colum_nombre
+            // 
+            this.colum_nombre.HeaderText = "Nombre";
+            this.colum_nombre.Name = "colum_nombre";
+            this.colum_nombre.ReadOnly = true;
+            // 
+            // colum_mail
+            // 
+            this.colum_mail.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.colum_mail.HeaderText = "Mail";
+            this.colum_mail.Name = "colum_mail";
+            this.colum_mail.ReadOnly = true;
+            this.colum_mail.Width = 51;
+            // 
+            // colum_pass
+            // 
+            this.colum_pass.HeaderText = "Contraseña";
+            this.colum_pass.Name = "colum_pass";
+            this.colum_pass.ReadOnly = true;
+            // 
+            // colum_privacidad
+            // 
+            this.colum_privacidad.HeaderText = "Privacidad";
+            this.colum_privacidad.Name = "colum_privacidad";
+            this.colum_privacidad.ReadOnly = true;
+            // 
+            // colum_suscripcion
+            // 
+            this.colum_suscripcion.HeaderText = "Suscripcion";
+            this.colum_suscripcion.Name = "colum_suscripcion";
+            this.colum_suscripcion.ReadOnly = true;
             // 
             // FORMS_ADMIN
             // 
@@ -1573,8 +1683,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.panel_agregar_cancion_admin);
             this.Controls.Add(this.panel_ver_usuarios_admin);
+            this.Controls.Add(this.panel_agregar_cancion_admin);
             this.Controls.Add(this.panel_ver_artistas_admin);
             this.Controls.Add(this.panel_agregar_video_admin);
             this.Controls.Add(this.panel_agregar_cancion_karaoke_admin);
@@ -1588,7 +1698,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FORMS_ADMIN";
             this.ShowIcon = false;
-            this.Text = "6";
+            this.Text = "ADMIN ADALIND";
             this.Load += new System.EventHandler(this.FORMS_ADMIN_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -1600,9 +1710,12 @@
             this.panel_agregar_cancion_karaoke_admin.PerformLayout();
             this.panel_ver_usuarios_admin.ResumeLayout(false);
             this.panel_ver_usuarios_admin.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tabla_usuarios_admin)).EndInit();
             this.panel_ver_artistas_admin.ResumeLayout(false);
             this.panel_ver_artistas_admin.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.aLAINIDBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aLAINIDBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aLAINIDBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1712,7 +1825,6 @@
         private System.Windows.Forms.TextBox nombrecantantecancionkaraoke_agregar_cancion_karaoke_admin;
         private System.Windows.Forms.ComboBox sexocompositorcancionkaraoke_agregar_cancion_karaoke_admin;
         private System.Windows.Forms.Panel panel_ver_usuarios_admin;
-        private System.Windows.Forms.ListBox lista_usuarios_admin;
         private System.Windows.Forms.Button btn_atras_de_ver_usuarios_admin;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Panel panel_ver_artistas_admin;
@@ -1726,5 +1838,16 @@
         private System.Windows.Forms.CheckBox checkBox_repetir_cantante_como_compositor;
         private System.Windows.Forms.ToolStripMenuItem cerrarSesionYSalirToolStripMenuItem;
         private System.Windows.Forms.TextBox ruta_archivo_cancion_txt_subir_cancion;
+        private System.Windows.Forms.BindingSource aLAINIDBindingSource2;
+        private System.Windows.Forms.BindingSource aLAINIDBindingSource1;
+        private System.Windows.Forms.Button btn_editar_usuarios_admin;
+        private System.Windows.Forms.Button btn_guardar_usuarios_admin;
+        public System.Windows.Forms.DataGridView tabla_usuarios_admin;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colum_usuario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colum_nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colum_mail;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colum_pass;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colum_privacidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colum_suscripcion;
     }
 }

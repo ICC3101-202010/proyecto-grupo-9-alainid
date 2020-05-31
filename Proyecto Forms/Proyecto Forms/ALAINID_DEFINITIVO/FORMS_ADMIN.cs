@@ -48,6 +48,17 @@ namespace ALAINID_DEFINITIVO
         {
             panel_ver_usuarios_admin.Visible = true;
             panel_ver_usuarios_admin.Dock = DockStyle.Fill;
+            foreach (User user in Proyecto_Forms.ALAINID.listausuarios)
+            {
+                int n = tabla_usuarios_admin.Rows.Add();
+                tabla_usuarios_admin.Rows[n].Cells[0].Value = user.Nombreusuario;
+                tabla_usuarios_admin.Rows[n].Cells[1].Value = user.Nombre_;
+                tabla_usuarios_admin.Rows[n].Cells[2].Value = user.Email_;
+                tabla_usuarios_admin.Rows[n].Cells[3].Value = user.Password_;
+                tabla_usuarios_admin.Rows[n].Cells[4].Value = user.Perfipublico_;
+                tabla_usuarios_admin.Rows[n].Cells[5].Value = user.Premium_;
+
+            }
         }
 
 
@@ -126,13 +137,13 @@ namespace ALAINID_DEFINITIVO
 
         private void btn_subir_cancion_admin_Click(object sender, EventArgs e)
         {
-            
+
             Artista cantante = new Artista(nombrecantante_txt_agregar_admin.Text, int.Parse(edadcantante_txt_agregar_admin.Text), sexocantante_txt_agregar_admin.Text, nacionalidadcantante_txt_agregar_admin.Text);
             Artista compositor = new Artista(nombrecompositor_txt_agregar_admin.Text, int.Parse(edadcompositor_txt_agregar_admin.Text), sexocompositor_txt_agregar_admin.Text, nacionalidad_txt_agregar_admin.Text);
-            ALAINID.Activarlistacanciones();
-            ALAINID.Activarlistacantantes();
-            ALAINID.Partirlistacompositores();
-            ALAINID.Partirlistaalbumes();
+            Proyecto_Forms.ALAINID.Activarlistacanciones();
+            Proyecto_Forms.ALAINID.Activarlistacantantes();
+            Proyecto_Forms.ALAINID.Partirlistacompositores();
+            Proyecto_Forms.ALAINID.Partirlistaalbumes();
             a.AgregarSong(nombre_cancion_txt_agregar_cancion.Text, cantante, comboBox3.Text, compositor, anopublic_txt_agregar_cancion.Text, comboBox4.Text, album_txt_agregar_cancion.Text, ruta_cancion);
         }
         private void checkBox_repetir_cantante_como_compositor_CheckedChanged(object sender, EventArgs e)
@@ -147,7 +158,7 @@ namespace ALAINID_DEFINITIVO
                 edadcompositor_txt_agregar_admin.Enabled = false;
                 sexocompositor_txt_agregar_admin.Enabled = false;
                 nacionalidad_txt_agregar_admin.Enabled = false;
-               
+
             }
             if (checkBox_repetir_cantante_como_compositor.Checked == false)
             {
@@ -189,7 +200,7 @@ namespace ALAINID_DEFINITIVO
         {
 
         }
-                        //AGREGAR DIRECTOR EN AGREGAR VIDEO ADMIN
+        //AGREGAR DIRECTOR EN AGREGAR VIDEO ADMIN
         private void nombredirector_agregar_video_admin_TextChanged(object sender, EventArgs e)
         {
 
@@ -260,10 +271,10 @@ namespace ALAINID_DEFINITIVO
 
         private void FORMS_ADMIN_Load(object sender, EventArgs e)
         {
-            for (int i = 0; i < ALAINID.listausuarios.Count; i++)
+            /*for (int i = 0; i < ALAINID.listausuarios.Count; i++)
             {
                 lista_usuarios_admin.Items.Add(ALAINID.listausuarios[i].InformacionUsuariopriv());
-            }
+            }*/
 
             //no borrar
         }
@@ -350,6 +361,7 @@ namespace ALAINID_DEFINITIVO
 
         private void btn_atras_de_ver_usuarios_admin_Click(object sender, EventArgs e)
         {
+            tabla_usuarios_admin.Rows.Clear();
             panel_ver_usuarios_admin.Visible = false;
         }
 
@@ -392,6 +404,117 @@ namespace ALAINID_DEFINITIVO
             Application.Exit();
         }
 
-        
-    }  
+        private void tabla_usuarios_admin_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int f = tabla_usuarios_admin.Rows.Count;
+            int c = tabla_usuarios_admin.Columns.Count;
+            if (f != -1)
+            {
+                switch (c)
+                {
+                    case 0:
+                        foreach (User user in Proyecto_Forms.ALAINID.listausuarios)
+                        {
+                            if ((string)tabla_usuarios_admin.Rows[f].Cells[2].Value == user.Email_)
+                            {
+                                user.Nombreusuario = (string)tabla_usuarios_admin.Rows[f].Cells[0].Value;
+                                Proyecto_Forms.ALAINID.Almacenar(Proyecto_Forms.ALAINID.listausuarios);
+
+                            }
+                        }
+                        break;
+                    case 1:
+                        foreach (User user in Proyecto_Forms.ALAINID.listausuarios)
+                        {
+                            if ((string)tabla_usuarios_admin.Rows[f].Cells[2].Value == user.Email_)
+                            {
+                                user.Nombre_ = (string)tabla_usuarios_admin.Rows[f].Cells[1].Value;
+                                Proyecto_Forms.ALAINID.Almacenar(Proyecto_Forms.ALAINID.listausuarios);
+
+                            }
+                        }
+                        break;
+                    case 2:
+
+                        break;
+                    case 3:
+                        foreach (User user in Proyecto_Forms.ALAINID.listausuarios)
+                        {
+                            if ((string)tabla_usuarios_admin.Rows[f].Cells[2].Value == user.Email_)
+                            {
+                                user.Password_ = (string)tabla_usuarios_admin.Rows[f].Cells[3].Value;
+                                Proyecto_Forms.ALAINID.Almacenar(Proyecto_Forms.ALAINID.listausuarios);
+
+                            }
+                        }
+                        break;
+                    case 4:
+                        foreach (User user in Proyecto_Forms.ALAINID.listausuarios)
+                        {
+                            if ((string)tabla_usuarios_admin.Rows[f].Cells[4].Value == user.Email_)
+                            {
+                                user.Perfipublico_ = (string)tabla_usuarios_admin.Rows[f].Cells[4].Value;
+                                Proyecto_Forms.ALAINID.Almacenar(Proyecto_Forms.ALAINID.listausuarios);
+
+                            }
+                        }
+                        break;
+                    case 5:
+                        foreach (User user in Proyecto_Forms.ALAINID.listausuarios)
+                        {
+                            if ((string)tabla_usuarios_admin.Rows[f].Cells[4].Value == user.Email_)
+                            {
+                                user.Premium_ = (string)tabla_usuarios_admin.Rows[f].Cells[5].Value;
+                                Proyecto_Forms.ALAINID.Almacenar(Proyecto_Forms.ALAINID.listausuarios);
+                            }
+                        }
+                        break;
+
+                }
+            }
+        }
+
+        private void tabla_usuarios_admin_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        private void btn_editar_usuarios_admin_Click(object sender, EventArgs e)
+        {
+            int fil = tabla_usuarios_admin.RowCount;
+            int col = tabla_usuarios_admin.ColumnCount;
+            tabla_usuarios_admin.ReadOnly = false;
+            for (int i = 1; i < fil; i++)
+            {
+                for (int ii = 1; ii < col; ii++)
+                {
+                    if (ii != 2)
+                    {
+                        tabla_usuarios_admin.Rows[i].Cells[ii].ReadOnly = false;
+                    }
+                }
+            }
+        }
+
+        private void btn_guardar_usuarios_admin_Click(object sender, EventArgs e)
+        {
+            
+           
+            int fil = tabla_usuarios_admin.RowCount;
+            int col = tabla_usuarios_admin.ColumnCount;
+            tabla_usuarios_admin.ReadOnly = true;
+
+            for (int i = 1; i < fil; i++)
+            {
+                for (int ii = 1; ii < col; ii++)
+                {
+                    if (ii != 2)
+                    {
+                        tabla_usuarios_admin.Rows[i].Cells[ii].ReadOnly = true;
+                    }
+                }
+            }
+
+        }
+    }
 }

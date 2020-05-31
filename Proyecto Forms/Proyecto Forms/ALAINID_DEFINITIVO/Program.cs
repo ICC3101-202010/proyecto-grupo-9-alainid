@@ -18,67 +18,64 @@ namespace ALAINID_DEFINITIVO
         static void Main()
         {
 
-            ALAINID.lista_generos_canciones.Add("Electronica"); ALAINID.lista_generos_canciones.Add("Rock"); ALAINID.lista_generos_canciones.Add("Jazz");
-            ALAINID.lista_generos_canciones.Add("Heavy Metal"); ALAINID.lista_generos_canciones.Add("Indie Rock");
-            ALAINID.lista_generos_canciones.Add("House"); ALAINID.lista_generos_canciones.Add("Hip-Hop"); ALAINID.lista_generos_canciones.Add("R&B");
-            ALAINID.lista_generos_canciones.Add("Techno"); ALAINID.lista_generos_canciones.Add("Country"); ALAINID.lista_generos_canciones.Add("Pop");
-            ALAINID.lista_generos_canciones.Add("Disco"); ALAINID.lista_generos_canciones.Add("Blues"); ALAINID.lista_generos_canciones.Add("K-Pop");
-            ALAINID.lista_generos_canciones.Add("Folklorica"); ALAINID.lista_generos_canciones.Add("Urban"); ALAINID.lista_generos_canciones.Add("Punk");
+            Proyecto_Forms.ALAINID.lista_generos_canciones.Add("Electronica"); Proyecto_Forms.ALAINID.lista_generos_canciones.Add("Rock"); Proyecto_Forms.ALAINID.lista_generos_canciones.Add("Jazz");
+            Proyecto_Forms.ALAINID.lista_generos_canciones.Add("Heavy Metal"); Proyecto_Forms.ALAINID.lista_generos_canciones.Add("Indie Rock");
+            Proyecto_Forms.ALAINID.lista_generos_canciones.Add("House"); Proyecto_Forms.ALAINID.lista_generos_canciones.Add("Hip-Hop"); Proyecto_Forms.ALAINID.lista_generos_canciones.Add("R&B");
+            Proyecto_Forms.ALAINID.lista_generos_canciones.Add("Techno"); Proyecto_Forms.ALAINID.lista_generos_canciones.Add("Country"); Proyecto_Forms.ALAINID.lista_generos_canciones.Add("Pop");
+            Proyecto_Forms.ALAINID.lista_generos_canciones.Add("Disco"); Proyecto_Forms.ALAINID.lista_generos_canciones.Add("Blues"); Proyecto_Forms.ALAINID.lista_generos_canciones.Add("K-Pop");
+            Proyecto_Forms.ALAINID.lista_generos_canciones.Add("Folklorica"); Proyecto_Forms.ALAINID.lista_generos_canciones.Add("Urban"); Proyecto_Forms.ALAINID.lista_generos_canciones.Add("Punk");
 
-            ALAINID.lista_generos_peliculas.Add("Accion"); ALAINID.lista_generos_peliculas.Add("Comedia"); ALAINID.lista_generos_peliculas.Add("Drama");
-            ALAINID.lista_generos_peliculas.Add("Terror"); ALAINID.lista_generos_peliculas.Add("Musical"); ALAINID.lista_generos_peliculas.Add("Ciencia Ficcion");
-            ALAINID.lista_generos_peliculas.Add("Crimen");
+            Proyecto_Forms.ALAINID.lista_generos_peliculas.Add("Accion"); Proyecto_Forms.ALAINID.lista_generos_peliculas.Add("Comedia"); Proyecto_Forms.ALAINID.lista_generos_peliculas.Add("Drama");
+            Proyecto_Forms.ALAINID.lista_generos_peliculas.Add("Terror"); Proyecto_Forms.ALAINID.lista_generos_peliculas.Add("Musical"); Proyecto_Forms.ALAINID.lista_generos_peliculas.Add("Ciencia Ficcion");
+            Proyecto_Forms.ALAINID.lista_generos_peliculas.Add("Crimen");
 
-            ALAINID.lista_categoria.Add("Infantil (0 - 7 anios)");
-            ALAINID.lista_categoria.Add("Infanto-Juvenil (7 - 16 anios)");
-            ALAINID.lista_categoria.Add("Adolecente (16 - 18 anios)");
-            ALAINID.lista_categoria.Add("Adulto (18+ anios)");
-            ALAINID.lista_categoria.Add("XXX (18+ anios)");
+            Proyecto_Forms.ALAINID.lista_categoria.Add("Infantil (0 - 7 anios)");
+            Proyecto_Forms.ALAINID.lista_categoria.Add("Infanto-Juvenil (7 - 16 anios)");
+            Proyecto_Forms.ALAINID.lista_categoria.Add("Adolecente (16 - 18 anios)");
+            Proyecto_Forms.ALAINID.lista_categoria.Add("Adulto (18+ anios)");
+            Proyecto_Forms.ALAINID.lista_categoria.Add("XXX (18+ anios)");
 
-            ALAINID.lista_calidad_cancion.Add("96 kbps"); ALAINID.lista_calidad_cancion.Add("128 kbps"); ALAINID.lista_calidad_cancion.Add("160 kbps");
-            ALAINID.lista_calidad_cancion.Add("256 kbps"); ALAINID.lista_calidad_cancion.Add("320 kbps");
+            Proyecto_Forms.ALAINID.lista_calidad_cancion.Add("96 kbps"); Proyecto_Forms.ALAINID.lista_calidad_cancion.Add("128 kbps"); Proyecto_Forms.ALAINID.lista_calidad_cancion.Add("160 kbps");
+            Proyecto_Forms.ALAINID.lista_calidad_cancion.Add("256 kbps"); Proyecto_Forms.ALAINID.lista_calidad_cancion.Add("320 kbps");
 
-            ALAINID.lista_calidad_pelicula.Add("144p"); ALAINID.lista_calidad_pelicula.Add("240p"); ALAINID.lista_calidad_pelicula.Add("360p");
-            ALAINID.lista_calidad_pelicula.Add("480p"); ALAINID.lista_calidad_pelicula.Add("720p");
+            Proyecto_Forms.ALAINID.lista_calidad_pelicula.Add("144p"); Proyecto_Forms.ALAINID.lista_calidad_pelicula.Add("240p"); Proyecto_Forms.ALAINID.lista_calidad_pelicula.Add("360p");
+            Proyecto_Forms.ALAINID.lista_calidad_pelicula.Add("480p"); Proyecto_Forms.ALAINID.lista_calidad_pelicula.Add("720p");
 
-            ALAINID.lista_tipoarchivo_cancion.Add("WAV"); ALAINID.lista_tipoarchivo_cancion.Add("AIFF"); ALAINID.lista_tipoarchivo_cancion.Add("FLAC");
-            ALAINID.lista_tipoarchivo_cancion.Add("MP3"); ALAINID.lista_tipoarchivo_cancion.Add("WavPack");
+            Proyecto_Forms.ALAINID.lista_tipoarchivo_cancion.Add("WAV"); Proyecto_Forms.ALAINID.lista_tipoarchivo_cancion.Add("AIFF"); Proyecto_Forms.ALAINID.lista_tipoarchivo_cancion.Add("FLAC");
+            Proyecto_Forms.ALAINID.lista_tipoarchivo_cancion.Add("MP3"); Proyecto_Forms.ALAINID.lista_tipoarchivo_cancion.Add("WavPack");
 
-            ALAINID.lista_tipoarchivo_pelicula.Add("AVI"); ALAINID.lista_tipoarchivo_pelicula.Add("MP4"); ALAINID.lista_tipoarchivo_pelicula.Add("MKV");
-            ALAINID.lista_tipoarchivo_pelicula.Add("FLV"); ALAINID.lista_tipoarchivo_pelicula.Add("MOV"); ALAINID.lista_tipoarchivo_pelicula.Add("WMV");
+            Proyecto_Forms.ALAINID.lista_tipoarchivo_pelicula.Add("AVI"); Proyecto_Forms.ALAINID.lista_tipoarchivo_pelicula.Add("MP4"); Proyecto_Forms.ALAINID.lista_tipoarchivo_pelicula.Add("MKV");
+            Proyecto_Forms.ALAINID.lista_tipoarchivo_pelicula.Add("FLV"); Proyecto_Forms.ALAINID.lista_tipoarchivo_pelicula.Add("MOV"); Proyecto_Forms.ALAINID.lista_tipoarchivo_pelicula.Add("WMV");
 
 
             //---------37 PA ABAJO
-            ALAINID.lista_criterios_filtro.Add("Genero"); ALAINID.lista_criterios_filtro.Add("Cantante"); ALAINID.lista_criterios_filtro.Add("Album");
-            ALAINID.lista_criterios_filtro.Add("Nombre"); ALAINID.lista_criterios_filtro.Add("Disquera"); ALAINID.lista_criterios_filtro.Add("Compositor");
-            ALAINID.lista_criterios_filtro.Add("Año Publicacion"); ALAINID.lista_criterios_filtro.Add("Sexo del Artista"); ALAINID.lista_criterios_filtro.Add("Edad del Artista");
-            ALAINID.lista_criterios_filtro.Add("Calidad/Resolucion"); ALAINID.lista_criterios_filtro.Add("Evaluacion");
+            Proyecto_Forms.ALAINID.lista_criterios_filtro.Add("Genero"); Proyecto_Forms.ALAINID.lista_criterios_filtro.Add("Cantante"); Proyecto_Forms.ALAINID.lista_criterios_filtro.Add("Album");
+            Proyecto_Forms.ALAINID.lista_criterios_filtro.Add("Nombre"); Proyecto_Forms.ALAINID.lista_criterios_filtro.Add("Disquera"); Proyecto_Forms.ALAINID.lista_criterios_filtro.Add("Compositor");
+            Proyecto_Forms.ALAINID.lista_criterios_filtro.Add("Año Publicacion"); Proyecto_Forms.ALAINID.lista_criterios_filtro.Add("Sexo del Artista"); Proyecto_Forms.ALAINID.lista_criterios_filtro.Add("Edad del Artista");
+            Proyecto_Forms.ALAINID.lista_criterios_filtro.Add("Calidad/Resolucion"); Proyecto_Forms.ALAINID.lista_criterios_filtro.Add("Evaluacion");
 
-            ALAINID.lista_criterios_usuarios.Add("Nombre"); ALAINID.lista_criterios_usuarios.Add("Email"); ALAINID.lista_criterios_usuarios.Add("Id");
-            ALAINID.lista_disquera.Add("Sony Music"); ALAINID.lista_disquera.Add(" Universal Music"); ALAINID.lista_disquera.Add(" Warner Music ");
-            ALAINID.lista_disquera.Add("YG Entertainment"); ALAINID.lista_disquera.Add("SM Entretainment");
+            Proyecto_Forms.ALAINID.lista_criterios_usuarios.Add("Nombre"); Proyecto_Forms.ALAINID.lista_criterios_usuarios.Add("Email"); Proyecto_Forms.ALAINID.lista_criterios_usuarios.Add("Id");
+            Proyecto_Forms.ALAINID.lista_disquera.Add("Sony Music"); Proyecto_Forms.ALAINID.lista_disquera.Add(" Universal Music"); Proyecto_Forms.ALAINID.lista_disquera.Add(" Warner Music ");
+            Proyecto_Forms.ALAINID.lista_disquera.Add("YG Entertainment"); Proyecto_Forms.ALAINID.lista_disquera.Add("SM Entretainment");
 
-            ALAINID.lista_disqueravideo.Add("Sony Pictures"); ALAINID.lista_disqueravideo.Add(" Universal Studio Pictures"); ALAINID.lista_disqueravideo.Add(" Warner Bos Pictures ");
-            ALAINID.lista_disqueravideo.Add("YG Entertainment Pictures"); ALAINID.lista_disqueravideo.Add("SM Entretainment Pictures");
+            Proyecto_Forms.ALAINID.lista_disqueravideo.Add("Sony Pictures"); Proyecto_Forms.ALAINID.lista_disqueravideo.Add(" Universal Studio Pictures"); Proyecto_Forms.ALAINID.lista_disqueravideo.Add(" Warner Bos Pictures ");
+            Proyecto_Forms.ALAINID.lista_disqueravideo.Add("YG Entertainment Pictures"); Proyecto_Forms.ALAINID.lista_disqueravideo.Add("SM Entretainment Pictures");
 
-            ALAINID.sexo.Add("Masculino"); ALAINID.sexo.Add("Femenino");
+            Proyecto_Forms.ALAINID.sexo.Add("Masculino"); Proyecto_Forms.ALAINID.sexo.Add("Femenino");
 
-            ALAINID.edades.Add("Menores de 25 años"); ALAINID.edades.Add("De 25 a 40 años"); ALAINID.edades.Add("De 40 a 60 años");
-            ALAINID.edades.Add("Mayores de 60");
+            Proyecto_Forms.ALAINID.edades.Add("Menores de 25 años"); Proyecto_Forms.ALAINID.edades.Add("De 25 a 40 años"); Proyecto_Forms.ALAINID.edades.Add("De 40 a 60 años");
+            Proyecto_Forms.ALAINID.edades.Add("Mayores de 60");
 
-            ALAINID.lista_criterios_filtro2.Add("Genero");
-            ALAINID.lista_criterios_filtro2.Add("Disquera");
-            ALAINID.lista_criterios_filtro2.Add("Año Publicacion"); ALAINID.lista_criterios_filtro2.Add("Sexo del Artista"); ALAINID.lista_criterios_filtro2.Add("Edad del Artista");
-            ALAINID.lista_criterios_filtro2.Add("Calidad/Resolucion"); ALAINID.lista_criterios_filtro2.Add("Evaluacion");
+            Proyecto_Forms.ALAINID.lista_criterios_filtro2.Add("Genero");
+            Proyecto_Forms.ALAINID.lista_criterios_filtro2.Add("Disquera");
+            Proyecto_Forms.ALAINID.lista_criterios_filtro2.Add("Año Publicacion"); Proyecto_Forms.ALAINID.lista_criterios_filtro2.Add("Sexo del Artista"); Proyecto_Forms.ALAINID.lista_criterios_filtro2.Add("Edad del Artista");
+            Proyecto_Forms.ALAINID.lista_criterios_filtro2.Add("Calidad/Resolucion"); Proyecto_Forms.ALAINID.lista_criterios_filtro2.Add("Evaluacion");
 
-            ALAINID.lista_criterios_filtro2v.Add("Genero"); ALAINID.lista_criterios_filtro2v.Add("Film Studio"); ALAINID.lista_criterios_filtro2v.Add("Categoria"); ALAINID.lista_criterios_filtro2v.Add("Nombre");
-            ALAINID.lista_criterios_filtro2v.Add("Año Publicacion"); ALAINID.lista_criterios_filtro2v.Add("Calidad/Resolucion"); ALAINID.lista_criterios_filtro2v.Add("Actores"); ALAINID.lista_criterios_filtro2v.Add("Director");
-            ALAINID.lista_criterios_filtro2v.Add("Evaluacion");
+            Proyecto_Forms.ALAINID.lista_criterios_filtro2v.Add("Genero"); Proyecto_Forms.ALAINID.lista_criterios_filtro2v.Add("Film Studio"); Proyecto_Forms.ALAINID.lista_criterios_filtro2v.Add("Categoria"); Proyecto_Forms.ALAINID.lista_criterios_filtro2v.Add("Nombre");
+            Proyecto_Forms.ALAINID.lista_criterios_filtro2v.Add("Año Publicacion"); Proyecto_Forms.ALAINID.lista_criterios_filtro2v.Add("Calidad/Resolucion"); Proyecto_Forms.ALAINID.lista_criterios_filtro2v.Add("Actores"); Proyecto_Forms.ALAINID.lista_criterios_filtro2v.Add("Director");
+            Proyecto_Forms.ALAINID.lista_criterios_filtro2v.Add("Evaluacion");
 
-            for (int i = 1900; i <= 2020; i++)
-            {
-                ALAINID.anios.Add(i.ToString());
-            }
+            
 
             
             Application.EnableVisualStyles();

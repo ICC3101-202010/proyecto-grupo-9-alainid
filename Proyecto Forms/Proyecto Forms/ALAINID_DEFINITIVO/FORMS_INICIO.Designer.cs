@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label9 = new System.Windows.Forms.Label();
+            this.label_todo_lo_que_necesitas = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.btn_primero_Salir = new System.Windows.Forms.Button();
             this.btn_ingresar_a_Iniciarsesion = new System.Windows.Forms.Button();
@@ -57,17 +57,18 @@
             this.panel2_inicio_sesion.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label9
+            // label_todo_lo_que_necesitas
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.DarkRed;
-            this.label9.Location = new System.Drawing.Point(363, 124);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(323, 23);
-            this.label9.TabIndex = 18;
-            this.label9.Text = "Todo lo que necesitas en un solo lugar...";
+            this.label_todo_lo_que_necesitas.AutoSize = true;
+            this.label_todo_lo_que_necesitas.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_todo_lo_que_necesitas.ForeColor = System.Drawing.Color.DarkRed;
+            this.label_todo_lo_que_necesitas.Location = new System.Drawing.Point(363, 124);
+            this.label_todo_lo_que_necesitas.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label_todo_lo_que_necesitas.Name = "label_todo_lo_que_necesitas";
+            this.label_todo_lo_que_necesitas.Size = new System.Drawing.Size(323, 23);
+            this.label_todo_lo_que_necesitas.TabIndex = 18;
+            this.label_todo_lo_que_necesitas.Text = "Todo lo que necesitas en un solo lugar...";
+            this.label_todo_lo_que_necesitas.Click += new System.EventHandler(this.label_todo_lo_que_necesitas_Click);
             // 
             // label10
             // 
@@ -80,6 +81,7 @@
             this.label10.Size = new System.Drawing.Size(501, 136);
             this.label10.TabIndex = 17;
             this.label10.Text = "ALAINID";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // btn_primero_Salir
             // 
@@ -275,12 +277,12 @@
             this.panel2_inicio_sesion.Controls.Add(this.label7);
             this.panel2_inicio_sesion.Controls.Add(this.pass_txt_inicio_sesion);
             this.panel2_inicio_sesion.Controls.Add(this.nombre_completo_txt_inicio_sesion);
-            this.panel2_inicio_sesion.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2_inicio_sesion.Location = new System.Drawing.Point(0, 0);
+            this.panel2_inicio_sesion.Location = new System.Drawing.Point(563, 281);
             this.panel2_inicio_sesion.Name = "panel2_inicio_sesion";
-            this.panel2_inicio_sesion.Size = new System.Drawing.Size(800, 450);
+            this.panel2_inicio_sesion.Size = new System.Drawing.Size(44, 40);
             this.panel2_inicio_sesion.TabIndex = 28;
             this.panel2_inicio_sesion.Visible = false;
+            this.panel2_inicio_sesion.Resize += new System.EventHandler(this.panel2_inicio_sesion_Resize);
             // 
             // btn_atras_de_inicio_sesion
             // 
@@ -376,7 +378,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel2_inicio_sesion);
             this.Controls.Add(this.panel1_registrarse);
-            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label_todo_lo_que_necesitas);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.btn_primero_Salir);
             this.Controls.Add(this.btn_ingresar_a_Iniciarsesion);
@@ -384,6 +386,7 @@
             this.Name = "FORMS_INICIO";
             this.ShowIcon = false;
             this.Text = "ALAINID";
+            this.Resize += new System.EventHandler(this.FORMS_INICIO_Resize);
             this.panel1_registrarse.ResumeLayout(false);
             this.panel1_registrarse.PerformLayout();
             this.panel2_inicio_sesion.ResumeLayout(false);
@@ -395,7 +398,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label_todo_lo_que_necesitas;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button btn_primero_Salir;
         private System.Windows.Forms.Button btn_ingresar_a_Iniciarsesion;

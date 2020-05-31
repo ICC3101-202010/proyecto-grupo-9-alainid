@@ -1,6 +1,6 @@
 ﻿namespace ALAINID_DEFINITIVO
 {
-    partial class FORMS_USUARIO
+    partial class ALAINID
     {
         /// <summary>
         /// Required designer variable.
@@ -64,6 +64,7 @@
             this.btnHistorial = new System.Windows.Forms.Button();
             this.btnKaraoke = new System.Windows.Forms.Button();
             this.panel_perfil_de_usuario = new System.Windows.Forms.Panel();
+            this.checkbox_privado_editar_usuario = new System.Windows.Forms.CheckBox();
             this.label10 = new System.Windows.Forms.Label();
             this.btn_guardar_cambios_perfil_usuario = new System.Windows.Forms.Button();
             this.checkbox_para_ver_contraseña_perfil_usuraio = new System.Windows.Forms.CheckBox();
@@ -88,24 +89,10 @@
             this.label8 = new System.Windows.Forms.Label();
             this.mailpremiumlabel = new System.Windows.Forms.Label();
             this.emialpremiumtextbox = new System.Windows.Forms.TextBox();
-            this.checkbox_privado_editar_usuario = new System.Windows.Forms.CheckBox();
             this.panel_buscar = new System.Windows.Forms.Panel();
-            this.btn_atras_de_inicio_sesion = new System.Windows.Forms.Button();
-            this.pass_txt_inicio_sesion = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.checkBox_repetir_cantante_como_compositor = new System.Windows.Forms.CheckBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.comboBox1_criterio = new System.Windows.Forms.ComboBox();
-            this.criterio_txt_combobox1 = new System.Windows.Forms.TextBox();
-            this.comboBox5_criterio = new System.Windows.Forms.ComboBox();
-            this.criterio_txt_combobox5 = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.comboBox6_criterio = new System.Windows.Forms.ComboBox();
-            this.criterio_txt_combobox6 = new System.Windows.Forms.TextBox();
-            this.comboBox2_criterio = new System.Windows.Forms.ComboBox();
-            this.criterio_txt_combobox2 = new System.Windows.Forms.TextBox();
+            this.panel_busqueda_multiple = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.textBox7 = new System.Windows.Forms.TextBox();
             this.comboBox8_criterio = new System.Windows.Forms.ComboBox();
             this.criterio_txt_combobox8 = new System.Windows.Forms.TextBox();
             this.comboBox4_criterio = new System.Windows.Forms.ComboBox();
@@ -114,13 +101,39 @@
             this.criterio_txt_combobox7 = new System.Windows.Forms.TextBox();
             this.comboBox3_criterio = new System.Windows.Forms.ComboBox();
             this.criterio_txt_combobox3 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.comboBox6_criterio = new System.Windows.Forms.ComboBox();
+            this.criterio_txt_combobox6 = new System.Windows.Forms.TextBox();
+            this.comboBox2_criterio = new System.Windows.Forms.ComboBox();
+            this.criterio_txt_combobox2 = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.comboBox5_criterio = new System.Windows.Forms.ComboBox();
+            this.criterio_txt_combobox5 = new System.Windows.Forms.TextBox();
+            this.btn_buscar_busqueda_multiple = new System.Windows.Forms.Button();
+            this.comboBox1_criterio = new System.Windows.Forms.ComboBox();
+            this.criterio_txt_combobox1 = new System.Windows.Forms.TextBox();
+            this.panel_busqueda_simple = new System.Windows.Forms.Panel();
+            this.busquedasimple_valor_criterio_desplegable = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.colum_nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colum_artista = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.busquedasimple_criterio_text = new System.Windows.Forms.ComboBox();
+            this.busaquedasimple_valor_criterio_text = new System.Windows.Forms.TextBox();
+            this.btn_buscar_busqueda_simple = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.btn_atras_busquedasimple = new System.Windows.Forms.Button();
+            this.btn_atras_de_inicio_sesion = new System.Windows.Forms.Button();
+            this.btn_busqueda_simple = new System.Windows.Forms.Button();
+            this.btn_busqueda_multiple = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.panel_perfil_de_usuario.SuspendLayout();
             this.Panel_premium.SuspendLayout();
             this.panel_buscar.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.panel_busqueda_multiple.SuspendLayout();
+            this.panel_busqueda_simple.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -135,7 +148,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(807, 24);
             this.menuStrip1.TabIndex = 34;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -302,7 +315,7 @@
             this.label2.BackColor = System.Drawing.Color.Black;
             this.label2.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(637, 208);
+            this.label2.Location = new System.Drawing.Point(558, 208);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(152, 33);
@@ -468,12 +481,25 @@
             this.panel_perfil_de_usuario.Controls.Add(this.btn_atras_de_registrarse);
             this.panel_perfil_de_usuario.Controls.Add(this.btn_editar_perfil_usuario);
             this.panel_perfil_de_usuario.Controls.Add(this.label1);
-            this.panel_perfil_de_usuario.Location = new System.Drawing.Point(214, 344);
+            this.panel_perfil_de_usuario.Location = new System.Drawing.Point(224, 344);
             this.panel_perfil_de_usuario.Name = "panel_perfil_de_usuario";
-            this.panel_perfil_de_usuario.Size = new System.Drawing.Size(37, 21);
+            this.panel_perfil_de_usuario.Size = new System.Drawing.Size(27, 21);
             this.panel_perfil_de_usuario.TabIndex = 50;
             this.panel_perfil_de_usuario.Visible = false;
             this.panel_perfil_de_usuario.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_perfil_de_usuario_Paint);
+            // 
+            // checkbox_privado_editar_usuario
+            // 
+            this.checkbox_privado_editar_usuario.AutoSize = true;
+            this.checkbox_privado_editar_usuario.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkbox_privado_editar_usuario.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.checkbox_privado_editar_usuario.Location = new System.Drawing.Point(366, 301);
+            this.checkbox_privado_editar_usuario.Name = "checkbox_privado_editar_usuario";
+            this.checkbox_privado_editar_usuario.Size = new System.Drawing.Size(96, 31);
+            this.checkbox_privado_editar_usuario.TabIndex = 63;
+            this.checkbox_privado_editar_usuario.Text = "Privado";
+            this.checkbox_privado_editar_usuario.UseVisualStyleBackColor = true;
+            this.checkbox_privado_editar_usuario.CheckedChanged += new System.EventHandler(this.checkbox_privado_editar_usuario_CheckedChanged);
             // 
             // label10
             // 
@@ -770,198 +796,297 @@
             this.emialpremiumtextbox.TabIndex = 0;
             this.emialpremiumtextbox.TextChanged += new System.EventHandler(this.emialpremiumtextbox_TextChanged);
             // 
-            // checkbox_privado_editar_usuario
-            // 
-            this.checkbox_privado_editar_usuario.AutoSize = true;
-            this.checkbox_privado_editar_usuario.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkbox_privado_editar_usuario.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.checkbox_privado_editar_usuario.Location = new System.Drawing.Point(366, 301);
-            this.checkbox_privado_editar_usuario.Name = "checkbox_privado_editar_usuario";
-            this.checkbox_privado_editar_usuario.Size = new System.Drawing.Size(96, 31);
-            this.checkbox_privado_editar_usuario.TabIndex = 63;
-            this.checkbox_privado_editar_usuario.Text = "Privado";
-            this.checkbox_privado_editar_usuario.UseVisualStyleBackColor = true;
-            this.checkbox_privado_editar_usuario.CheckedChanged += new System.EventHandler(this.checkbox_privado_editar_usuario_CheckedChanged);
-            // 
             // panel_buscar
             // 
-            this.panel_buscar.Controls.Add(this.panel1);
-            this.panel_buscar.Controls.Add(this.button1);
-            this.panel_buscar.Controls.Add(this.checkBox_repetir_cantante_como_compositor);
-            this.panel_buscar.Controls.Add(this.comboBox2);
-            this.panel_buscar.Controls.Add(this.pass_txt_inicio_sesion);
+            this.panel_buscar.Controls.Add(this.panel_busqueda_simple);
+            this.panel_buscar.Controls.Add(this.panel_busqueda_multiple);
             this.panel_buscar.Controls.Add(this.btn_atras_de_inicio_sesion);
-            this.panel_buscar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_buscar.Location = new System.Drawing.Point(0, 24);
+            this.panel_buscar.Controls.Add(this.btn_busqueda_simple);
+            this.panel_buscar.Controls.Add(this.btn_busqueda_multiple);
+            this.panel_buscar.Location = new System.Drawing.Point(238, 143);
             this.panel_buscar.Name = "panel_buscar";
-            this.panel_buscar.Size = new System.Drawing.Size(800, 426);
+            this.panel_buscar.Size = new System.Drawing.Size(13, 16);
             this.panel_buscar.TabIndex = 53;
             this.panel_buscar.Visible = false;
             // 
-            // btn_atras_de_inicio_sesion
+            // panel_busqueda_multiple
             // 
-            this.btn_atras_de_inicio_sesion.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_atras_de_inicio_sesion.Location = new System.Drawing.Point(715, 16);
-            this.btn_atras_de_inicio_sesion.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_atras_de_inicio_sesion.Name = "btn_atras_de_inicio_sesion";
-            this.btn_atras_de_inicio_sesion.Size = new System.Drawing.Size(71, 35);
-            this.btn_atras_de_inicio_sesion.TabIndex = 18;
-            this.btn_atras_de_inicio_sesion.Text = "Atras";
-            this.btn_atras_de_inicio_sesion.UseVisualStyleBackColor = true;
+            this.panel_busqueda_multiple.Controls.Add(this.button3);
+            this.panel_busqueda_multiple.Controls.Add(this.textBox7);
+            this.panel_busqueda_multiple.Controls.Add(this.comboBox8_criterio);
+            this.panel_busqueda_multiple.Controls.Add(this.criterio_txt_combobox8);
+            this.panel_busqueda_multiple.Controls.Add(this.comboBox4_criterio);
+            this.panel_busqueda_multiple.Controls.Add(this.criterio_txt_combobox4);
+            this.panel_busqueda_multiple.Controls.Add(this.comboBox7_criterio);
+            this.panel_busqueda_multiple.Controls.Add(this.criterio_txt_combobox7);
+            this.panel_busqueda_multiple.Controls.Add(this.comboBox3_criterio);
+            this.panel_busqueda_multiple.Controls.Add(this.criterio_txt_combobox3);
+            this.panel_busqueda_multiple.Controls.Add(this.comboBox6_criterio);
+            this.panel_busqueda_multiple.Controls.Add(this.criterio_txt_combobox6);
+            this.panel_busqueda_multiple.Controls.Add(this.comboBox2_criterio);
+            this.panel_busqueda_multiple.Controls.Add(this.criterio_txt_combobox2);
+            this.panel_busqueda_multiple.Controls.Add(this.label11);
+            this.panel_busqueda_multiple.Controls.Add(this.comboBox5_criterio);
+            this.panel_busqueda_multiple.Controls.Add(this.criterio_txt_combobox5);
+            this.panel_busqueda_multiple.Controls.Add(this.btn_buscar_busqueda_multiple);
+            this.panel_busqueda_multiple.Controls.Add(this.comboBox1_criterio);
+            this.panel_busqueda_multiple.Controls.Add(this.criterio_txt_combobox1);
+            this.panel_busqueda_multiple.Location = new System.Drawing.Point(630, 82);
+            this.panel_busqueda_multiple.Name = "panel_busqueda_multiple";
+            this.panel_busqueda_multiple.Size = new System.Drawing.Size(24, 24);
+            this.panel_busqueda_multiple.TabIndex = 75;
+            this.panel_busqueda_multiple.Visible = false;
             // 
-            // pass_txt_inicio_sesion
+            // button3
             // 
-            this.pass_txt_inicio_sesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pass_txt_inicio_sesion.Location = new System.Drawing.Point(90, 89);
-            this.pass_txt_inicio_sesion.Margin = new System.Windows.Forms.Padding(2);
-            this.pass_txt_inicio_sesion.Name = "pass_txt_inicio_sesion";
-            this.pass_txt_inicio_sesion.PasswordChar = '*';
-            this.pass_txt_inicio_sesion.Size = new System.Drawing.Size(227, 26);
-            this.pass_txt_inicio_sesion.TabIndex = 20;
-            this.pass_txt_inicio_sesion.UseSystemPasswordChar = true;
+            this.button3.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(705, 16);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(71, 35);
+            this.button3.TabIndex = 115;
+            this.button3.Text = "Atras";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // comboBox2
+            // textBox7
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Genero",
+            this.textBox7.BackColor = System.Drawing.Color.Maroon;
+            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox7.Font = new System.Drawing.Font("Arial", 1.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox7.Location = new System.Drawing.Point(28, 207);
+            this.textBox7.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(724, 3);
+            this.textBox7.TabIndex = 114;
+            // 
+            // comboBox8_criterio
+            // 
+            this.comboBox8_criterio.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.comboBox8_criterio.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox8_criterio.FormattingEnabled = true;
+            this.comboBox8_criterio.Items.AddRange(new object[] {
+            "Nombre Cancion",
+            "Nombre Pelicula",
+            "Genero ",
+            "Categoria Pelicula",
             "Cantante",
-            "Nombre",
             "Compositor",
+            "Director",
+            "Actor",
             "Disquera",
-            "Año",
+            "Film Studio",
+            "Año de Publicacion",
             "Edad",
             "Sexo",
             "Evaluacion",
             "Calidad/Resolucion"});
-            this.comboBox2.Location = new System.Drawing.Point(90, 47);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(227, 21);
-            this.comboBox2.TabIndex = 59;
+            this.comboBox8_criterio.Location = new System.Drawing.Point(577, 231);
+            this.comboBox8_criterio.Name = "comboBox8_criterio";
+            this.comboBox8_criterio.Size = new System.Drawing.Size(154, 37);
+            this.comboBox8_criterio.TabIndex = 113;
+            this.comboBox8_criterio.SelectedIndexChanged += new System.EventHandler(this.comboBox8_criterio_SelectedIndexChanged);
             // 
-            // checkBox_repetir_cantante_como_compositor
+            // criterio_txt_combobox8
             // 
-            this.checkBox_repetir_cantante_como_compositor.AutoSize = true;
-            this.checkBox_repetir_cantante_como_compositor.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox_repetir_cantante_como_compositor.ForeColor = System.Drawing.Color.White;
-            this.checkBox_repetir_cantante_como_compositor.Location = new System.Drawing.Point(22, 67);
-            this.checkBox_repetir_cantante_como_compositor.Name = "checkBox_repetir_cantante_como_compositor";
-            this.checkBox_repetir_cantante_como_compositor.Size = new System.Drawing.Size(62, 20);
-            this.checkBox_repetir_cantante_como_compositor.TabIndex = 64;
-            this.checkBox_repetir_cantante_como_compositor.Text = "Simple";
-            this.checkBox_repetir_cantante_como_compositor.UseVisualStyleBackColor = true;
+            this.criterio_txt_combobox8.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.criterio_txt_combobox8.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.criterio_txt_combobox8.Location = new System.Drawing.Point(577, 287);
+            this.criterio_txt_combobox8.Margin = new System.Windows.Forms.Padding(2);
+            this.criterio_txt_combobox8.Name = "criterio_txt_combobox8";
+            this.criterio_txt_combobox8.Size = new System.Drawing.Size(154, 37);
+            this.criterio_txt_combobox8.TabIndex = 112;
+            this.criterio_txt_combobox8.TextChanged += new System.EventHandler(this.criterio_txt_combobox8_TextChanged);
             // 
-            // button1
+            // comboBox4_criterio
             // 
-            this.button1.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(334, 67);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(79, 31);
-            this.button1.TabIndex = 73;
-            this.button1.Text = "Buscar";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.textBox7);
-            this.panel1.Controls.Add(this.comboBox8_criterio);
-            this.panel1.Controls.Add(this.criterio_txt_combobox8);
-            this.panel1.Controls.Add(this.comboBox4_criterio);
-            this.panel1.Controls.Add(this.criterio_txt_combobox4);
-            this.panel1.Controls.Add(this.comboBox7_criterio);
-            this.panel1.Controls.Add(this.criterio_txt_combobox7);
-            this.panel1.Controls.Add(this.comboBox3_criterio);
-            this.panel1.Controls.Add(this.criterio_txt_combobox3);
-            this.panel1.Controls.Add(this.comboBox6_criterio);
-            this.panel1.Controls.Add(this.criterio_txt_combobox6);
-            this.panel1.Controls.Add(this.comboBox2_criterio);
-            this.panel1.Controls.Add(this.criterio_txt_combobox2);
-            this.panel1.Controls.Add(this.label11);
-            this.panel1.Controls.Add(this.comboBox5_criterio);
-            this.panel1.Controls.Add(this.criterio_txt_combobox5);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.comboBox1_criterio);
-            this.panel1.Controls.Add(this.criterio_txt_combobox1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 426);
-            this.panel1.TabIndex = 75;
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(46, 355);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(685, 51);
-            this.button2.TabIndex = 84;
-            this.button2.Text = "Buscar";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // comboBox1_criterio
-            // 
-            this.comboBox1_criterio.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.comboBox1_criterio.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1_criterio.FormattingEnabled = true;
-            this.comboBox1_criterio.Items.AddRange(new object[] {
-            "Genero",
+            this.comboBox4_criterio.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.comboBox4_criterio.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox4_criterio.FormattingEnabled = true;
+            this.comboBox4_criterio.Items.AddRange(new object[] {
+            "Nombre Cancion",
+            "Nombre Pelicula",
+            "Genero ",
+            "Categoria Pelicula",
             "Cantante",
-            "Nombre",
             "Compositor",
+            "Director",
+            "Actor",
             "Disquera",
-            "Año",
+            "Film Studio",
+            "Año de Publicacion",
             "Edad",
             "Sexo",
             "Evaluacion",
             "Calidad/Resolucion"});
-            this.comboBox1_criterio.Location = new System.Drawing.Point(46, 98);
-            this.comboBox1_criterio.Name = "comboBox1_criterio";
-            this.comboBox1_criterio.Size = new System.Drawing.Size(154, 37);
-            this.comboBox1_criterio.TabIndex = 77;
+            this.comboBox4_criterio.Location = new System.Drawing.Point(577, 98);
+            this.comboBox4_criterio.Name = "comboBox4_criterio";
+            this.comboBox4_criterio.Size = new System.Drawing.Size(154, 37);
+            this.comboBox4_criterio.TabIndex = 111;
+            this.comboBox4_criterio.SelectedIndexChanged += new System.EventHandler(this.comboBox4_criterio_SelectedIndexChanged);
             // 
-            // criterio_txt_combobox1
+            // criterio_txt_combobox4
             // 
-            this.criterio_txt_combobox1.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.criterio_txt_combobox1.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.criterio_txt_combobox1.Location = new System.Drawing.Point(46, 151);
-            this.criterio_txt_combobox1.Margin = new System.Windows.Forms.Padding(2);
-            this.criterio_txt_combobox1.Name = "criterio_txt_combobox1";
-            this.criterio_txt_combobox1.Size = new System.Drawing.Size(154, 37);
-            this.criterio_txt_combobox1.TabIndex = 75;
+            this.criterio_txt_combobox4.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.criterio_txt_combobox4.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.criterio_txt_combobox4.Location = new System.Drawing.Point(577, 151);
+            this.criterio_txt_combobox4.Margin = new System.Windows.Forms.Padding(2);
+            this.criterio_txt_combobox4.Name = "criterio_txt_combobox4";
+            this.criterio_txt_combobox4.Size = new System.Drawing.Size(154, 37);
+            this.criterio_txt_combobox4.TabIndex = 110;
+            this.criterio_txt_combobox4.TextChanged += new System.EventHandler(this.criterio_txt_combobox4_TextChanged);
             // 
-            // comboBox5_criterio
+            // comboBox7_criterio
             // 
-            this.comboBox5_criterio.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.comboBox5_criterio.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox5_criterio.FormattingEnabled = true;
-            this.comboBox5_criterio.Items.AddRange(new object[] {
-            "Genero",
+            this.comboBox7_criterio.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.comboBox7_criterio.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox7_criterio.FormattingEnabled = true;
+            this.comboBox7_criterio.Items.AddRange(new object[] {
+            "Nombre Cancion",
+            "Nombre Pelicula",
+            "Genero ",
+            "Categoria Pelicula",
             "Cantante",
-            "Nombre",
             "Compositor",
+            "Director",
+            "Actor",
             "Disquera",
-            "Año",
+            "Film Studio",
+            "Año de Publicacion",
             "Edad",
             "Sexo",
             "Evaluacion",
             "Calidad/Resolucion"});
-            this.comboBox5_criterio.Location = new System.Drawing.Point(46, 231);
-            this.comboBox5_criterio.Name = "comboBox5_criterio";
-            this.comboBox5_criterio.Size = new System.Drawing.Size(154, 37);
-            this.comboBox5_criterio.TabIndex = 92;
+            this.comboBox7_criterio.Location = new System.Drawing.Point(397, 231);
+            this.comboBox7_criterio.Name = "comboBox7_criterio";
+            this.comboBox7_criterio.Size = new System.Drawing.Size(154, 37);
+            this.comboBox7_criterio.TabIndex = 109;
+            this.comboBox7_criterio.SelectedIndexChanged += new System.EventHandler(this.comboBox7_criterio_SelectedIndexChanged);
             // 
-            // criterio_txt_combobox5
+            // criterio_txt_combobox7
             // 
-            this.criterio_txt_combobox5.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.criterio_txt_combobox5.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.criterio_txt_combobox5.Location = new System.Drawing.Point(46, 287);
-            this.criterio_txt_combobox5.Margin = new System.Windows.Forms.Padding(2);
-            this.criterio_txt_combobox5.Name = "criterio_txt_combobox5";
-            this.criterio_txt_combobox5.Size = new System.Drawing.Size(154, 37);
-            this.criterio_txt_combobox5.TabIndex = 91;
+            this.criterio_txt_combobox7.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.criterio_txt_combobox7.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.criterio_txt_combobox7.Location = new System.Drawing.Point(397, 287);
+            this.criterio_txt_combobox7.Margin = new System.Windows.Forms.Padding(2);
+            this.criterio_txt_combobox7.Name = "criterio_txt_combobox7";
+            this.criterio_txt_combobox7.Size = new System.Drawing.Size(154, 37);
+            this.criterio_txt_combobox7.TabIndex = 108;
+            this.criterio_txt_combobox7.TextChanged += new System.EventHandler(this.criterio_txt_combobox7_TextChanged);
+            // 
+            // comboBox3_criterio
+            // 
+            this.comboBox3_criterio.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.comboBox3_criterio.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox3_criterio.FormattingEnabled = true;
+            this.comboBox3_criterio.Items.AddRange(new object[] {
+            "Nombre Cancion",
+            "Nombre Pelicula",
+            "Genero ",
+            "Categoria Pelicula",
+            "Cantante",
+            "Compositor",
+            "Director",
+            "Actor",
+            "Disquera",
+            "Film Studio",
+            "Año de Publicacion",
+            "Edad",
+            "Sexo",
+            "Evaluacion",
+            "Calidad/Resolucion"});
+            this.comboBox3_criterio.Location = new System.Drawing.Point(397, 98);
+            this.comboBox3_criterio.Name = "comboBox3_criterio";
+            this.comboBox3_criterio.Size = new System.Drawing.Size(154, 37);
+            this.comboBox3_criterio.TabIndex = 107;
+            this.comboBox3_criterio.SelectedIndexChanged += new System.EventHandler(this.comboBox3_criterio_SelectedIndexChanged);
+            // 
+            // criterio_txt_combobox3
+            // 
+            this.criterio_txt_combobox3.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.criterio_txt_combobox3.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.criterio_txt_combobox3.Location = new System.Drawing.Point(397, 151);
+            this.criterio_txt_combobox3.Margin = new System.Windows.Forms.Padding(2);
+            this.criterio_txt_combobox3.Name = "criterio_txt_combobox3";
+            this.criterio_txt_combobox3.Size = new System.Drawing.Size(154, 37);
+            this.criterio_txt_combobox3.TabIndex = 106;
+            this.criterio_txt_combobox3.TextChanged += new System.EventHandler(this.criterio_txt_combobox3_TextChanged);
+            // 
+            // comboBox6_criterio
+            // 
+            this.comboBox6_criterio.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.comboBox6_criterio.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox6_criterio.FormattingEnabled = true;
+            this.comboBox6_criterio.Items.AddRange(new object[] {
+            "Nombre Cancion",
+            "Nombre Pelicula",
+            "Genero ",
+            "Categoria Pelicula",
+            "Cantante",
+            "Compositor",
+            "Director",
+            "Actor",
+            "Disquera",
+            "Film Studio",
+            "Año de Publicacion",
+            "Edad",
+            "Sexo",
+            "Evaluacion",
+            "Calidad/Resolucion"});
+            this.comboBox6_criterio.Location = new System.Drawing.Point(226, 231);
+            this.comboBox6_criterio.Name = "comboBox6_criterio";
+            this.comboBox6_criterio.Size = new System.Drawing.Size(154, 37);
+            this.comboBox6_criterio.TabIndex = 105;
+            this.comboBox6_criterio.SelectedIndexChanged += new System.EventHandler(this.comboBox6_criterio_SelectedIndexChanged);
+            // 
+            // criterio_txt_combobox6
+            // 
+            this.criterio_txt_combobox6.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.criterio_txt_combobox6.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.criterio_txt_combobox6.Location = new System.Drawing.Point(226, 287);
+            this.criterio_txt_combobox6.Margin = new System.Windows.Forms.Padding(2);
+            this.criterio_txt_combobox6.Name = "criterio_txt_combobox6";
+            this.criterio_txt_combobox6.Size = new System.Drawing.Size(154, 37);
+            this.criterio_txt_combobox6.TabIndex = 104;
+            this.criterio_txt_combobox6.TextChanged += new System.EventHandler(this.criterio_txt_combobox6_TextChanged);
+            // 
+            // comboBox2_criterio
+            // 
+            this.comboBox2_criterio.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.comboBox2_criterio.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox2_criterio.FormattingEnabled = true;
+            this.comboBox2_criterio.Items.AddRange(new object[] {
+            "Nombre Cancion",
+            "Nombre Pelicula",
+            "Genero ",
+            "Categoria Pelicula",
+            "Cantante",
+            "Compositor",
+            "Director",
+            "Actor",
+            "Disquera",
+            "Film Studio",
+            "Año de Publicacion",
+            "Edad",
+            "Sexo",
+            "Evaluacion",
+            "Calidad/Resolucion"});
+            this.comboBox2_criterio.Location = new System.Drawing.Point(226, 98);
+            this.comboBox2_criterio.Name = "comboBox2_criterio";
+            this.comboBox2_criterio.Size = new System.Drawing.Size(154, 37);
+            this.comboBox2_criterio.TabIndex = 103;
+            this.comboBox2_criterio.SelectedIndexChanged += new System.EventHandler(this.comboBox2_criterio_SelectedIndexChanged);
+            // 
+            // criterio_txt_combobox2
+            // 
+            this.criterio_txt_combobox2.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.criterio_txt_combobox2.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.criterio_txt_combobox2.Location = new System.Drawing.Point(226, 151);
+            this.criterio_txt_combobox2.Margin = new System.Windows.Forms.Padding(2);
+            this.criterio_txt_combobox2.Name = "criterio_txt_combobox2";
+            this.criterio_txt_combobox2.Size = new System.Drawing.Size(154, 37);
+            this.criterio_txt_combobox2.TabIndex = 102;
+            this.criterio_txt_combobox2.TextChanged += new System.EventHandler(this.criterio_txt_combobox2_TextChanged);
             // 
             // label11
             // 
@@ -977,222 +1102,306 @@
             this.label11.TabIndex = 101;
             this.label11.Text = "Busqueda Multiple";
             // 
-            // comboBox6_criterio
+            // comboBox5_criterio
             // 
-            this.comboBox6_criterio.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.comboBox6_criterio.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox6_criterio.FormattingEnabled = true;
-            this.comboBox6_criterio.Items.AddRange(new object[] {
-            "Genero",
+            this.comboBox5_criterio.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.comboBox5_criterio.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox5_criterio.FormattingEnabled = true;
+            this.comboBox5_criterio.Items.AddRange(new object[] {
+            "Nombre Cancion",
+            "Nombre Pelicula",
+            "Genero ",
+            "Categoria Pelicula",
             "Cantante",
-            "Nombre",
             "Compositor",
+            "Director",
+            "Actor",
             "Disquera",
-            "Año",
+            "Film Studio",
+            "Año de Publicacion",
             "Edad",
             "Sexo",
             "Evaluacion",
             "Calidad/Resolucion"});
-            this.comboBox6_criterio.Location = new System.Drawing.Point(226, 231);
-            this.comboBox6_criterio.Name = "comboBox6_criterio";
-            this.comboBox6_criterio.Size = new System.Drawing.Size(154, 37);
-            this.comboBox6_criterio.TabIndex = 105;
+            this.comboBox5_criterio.Location = new System.Drawing.Point(46, 231);
+            this.comboBox5_criterio.Name = "comboBox5_criterio";
+            this.comboBox5_criterio.Size = new System.Drawing.Size(154, 37);
+            this.comboBox5_criterio.TabIndex = 92;
+            this.comboBox5_criterio.SelectedIndexChanged += new System.EventHandler(this.comboBox5_criterio_SelectedIndexChanged);
             // 
-            // criterio_txt_combobox6
+            // criterio_txt_combobox5
             // 
-            this.criterio_txt_combobox6.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.criterio_txt_combobox6.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.criterio_txt_combobox6.Location = new System.Drawing.Point(226, 287);
-            this.criterio_txt_combobox6.Margin = new System.Windows.Forms.Padding(2);
-            this.criterio_txt_combobox6.Name = "criterio_txt_combobox6";
-            this.criterio_txt_combobox6.Size = new System.Drawing.Size(154, 37);
-            this.criterio_txt_combobox6.TabIndex = 104;
+            this.criterio_txt_combobox5.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.criterio_txt_combobox5.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.criterio_txt_combobox5.Location = new System.Drawing.Point(46, 287);
+            this.criterio_txt_combobox5.Margin = new System.Windows.Forms.Padding(2);
+            this.criterio_txt_combobox5.Name = "criterio_txt_combobox5";
+            this.criterio_txt_combobox5.Size = new System.Drawing.Size(154, 37);
+            this.criterio_txt_combobox5.TabIndex = 91;
+            this.criterio_txt_combobox5.TextChanged += new System.EventHandler(this.criterio_txt_combobox5_TextChanged);
             // 
-            // comboBox2_criterio
+            // btn_buscar_busqueda_multiple
             // 
-            this.comboBox2_criterio.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.comboBox2_criterio.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2_criterio.FormattingEnabled = true;
-            this.comboBox2_criterio.Items.AddRange(new object[] {
-            "Genero",
+            this.btn_buscar_busqueda_multiple.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_buscar_busqueda_multiple.Location = new System.Drawing.Point(46, 355);
+            this.btn_buscar_busqueda_multiple.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_buscar_busqueda_multiple.Name = "btn_buscar_busqueda_multiple";
+            this.btn_buscar_busqueda_multiple.Size = new System.Drawing.Size(685, 51);
+            this.btn_buscar_busqueda_multiple.TabIndex = 84;
+            this.btn_buscar_busqueda_multiple.Text = "Buscar";
+            this.btn_buscar_busqueda_multiple.UseVisualStyleBackColor = true;
+            this.btn_buscar_busqueda_multiple.Click += new System.EventHandler(this.btn_buscar_busqueda_multiple_Click);
+            // 
+            // comboBox1_criterio
+            // 
+            this.comboBox1_criterio.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.comboBox1_criterio.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1_criterio.FormattingEnabled = true;
+            this.comboBox1_criterio.Items.AddRange(new object[] {
+            "Nombre Cancion",
+            "Nombre Pelicula",
+            "Genero ",
+            "Categoria Pelicula",
             "Cantante",
-            "Nombre",
             "Compositor",
+            "Director",
+            "Actor",
             "Disquera",
-            "Año",
+            "Film Studio",
+            "Año de Publicacion",
             "Edad",
             "Sexo",
             "Evaluacion",
             "Calidad/Resolucion"});
-            this.comboBox2_criterio.Location = new System.Drawing.Point(226, 98);
-            this.comboBox2_criterio.Name = "comboBox2_criterio";
-            this.comboBox2_criterio.Size = new System.Drawing.Size(154, 37);
-            this.comboBox2_criterio.TabIndex = 103;
+            this.comboBox1_criterio.Location = new System.Drawing.Point(46, 98);
+            this.comboBox1_criterio.Name = "comboBox1_criterio";
+            this.comboBox1_criterio.Size = new System.Drawing.Size(154, 37);
+            this.comboBox1_criterio.TabIndex = 77;
+            this.comboBox1_criterio.SelectedIndexChanged += new System.EventHandler(this.comboBox1_criterio_SelectedIndexChanged);
             // 
-            // criterio_txt_combobox2
+            // criterio_txt_combobox1
             // 
-            this.criterio_txt_combobox2.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.criterio_txt_combobox2.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.criterio_txt_combobox2.Location = new System.Drawing.Point(226, 151);
-            this.criterio_txt_combobox2.Margin = new System.Windows.Forms.Padding(2);
-            this.criterio_txt_combobox2.Name = "criterio_txt_combobox2";
-            this.criterio_txt_combobox2.Size = new System.Drawing.Size(154, 37);
-            this.criterio_txt_combobox2.TabIndex = 102;
+            this.criterio_txt_combobox1.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.criterio_txt_combobox1.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.criterio_txt_combobox1.Location = new System.Drawing.Point(46, 151);
+            this.criterio_txt_combobox1.Margin = new System.Windows.Forms.Padding(2);
+            this.criterio_txt_combobox1.Name = "criterio_txt_combobox1";
+            this.criterio_txt_combobox1.Size = new System.Drawing.Size(154, 37);
+            this.criterio_txt_combobox1.TabIndex = 75;
+            this.criterio_txt_combobox1.TextChanged += new System.EventHandler(this.criterio_txt_combobox1_TextChanged);
             // 
-            // comboBox8_criterio
+            // panel_busqueda_simple
             // 
-            this.comboBox8_criterio.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.comboBox8_criterio.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox8_criterio.FormattingEnabled = true;
-            this.comboBox8_criterio.Items.AddRange(new object[] {
+            this.panel_busqueda_simple.Controls.Add(this.busquedasimple_valor_criterio_desplegable);
+            this.panel_busqueda_simple.Controls.Add(this.label13);
+            this.panel_busqueda_simple.Controls.Add(this.label14);
+            this.panel_busqueda_simple.Controls.Add(this.dataGridView1);
+            this.panel_busqueda_simple.Controls.Add(this.textBox2);
+            this.panel_busqueda_simple.Controls.Add(this.busquedasimple_criterio_text);
+            this.panel_busqueda_simple.Controls.Add(this.busaquedasimple_valor_criterio_text);
+            this.panel_busqueda_simple.Controls.Add(this.btn_buscar_busqueda_simple);
+            this.panel_busqueda_simple.Controls.Add(this.label12);
+            this.panel_busqueda_simple.Controls.Add(this.btn_atras_busquedasimple);
+            this.panel_busqueda_simple.Location = new System.Drawing.Point(342, 76);
+            this.panel_busqueda_simple.Name = "panel_busqueda_simple";
+            this.panel_busqueda_simple.Size = new System.Drawing.Size(26, 24);
+            this.panel_busqueda_simple.TabIndex = 76;
+            this.panel_busqueda_simple.Visible = false;
+            // 
+            // busquedasimple_valor_criterio_desplegable
+            // 
+            this.busquedasimple_valor_criterio_desplegable.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.busquedasimple_valor_criterio_desplegable.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.busquedasimple_valor_criterio_desplegable.FormattingEnabled = true;
+            this.busquedasimple_valor_criterio_desplegable.Location = new System.Drawing.Point(296, 160);
+            this.busquedasimple_valor_criterio_desplegable.Name = "busquedasimple_valor_criterio_desplegable";
+            this.busquedasimple_valor_criterio_desplegable.Size = new System.Drawing.Size(305, 37);
+            this.busquedasimple_valor_criterio_desplegable.TabIndex = 125;
+            this.busquedasimple_valor_criterio_desplegable.SelectedIndexChanged += new System.EventHandler(this.busquedasimple_valor_criterio_desplegable_SelectedIndexChanged);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Black;
+            this.label13.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label13.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(23, 157);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(164, 36);
+            this.label13.TabIndex = 124;
+            this.label13.Text = "Palabra Clave";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Black;
+            this.label14.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label14.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(23, 102);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(249, 36);
+            this.label14.TabIndex = 123;
+            this.label14.Text = "Criterio de Busqueda";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colum_nombre,
+            this.colum_artista});
+            this.dataGridView1.Location = new System.Drawing.Point(32, 218);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(728, 196);
+            this.dataGridView1.TabIndex = 121;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // colum_nombre
+            // 
+            this.colum_nombre.HeaderText = "Nombre";
+            this.colum_nombre.Name = "colum_nombre";
+            // 
+            // colum_artista
+            // 
+            this.colum_artista.HeaderText = "Artista";
+            this.colum_artista.Name = "colum_artista";
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.Color.Maroon;
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Font = new System.Drawing.Font("Arial", 1.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(36, 208);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(724, 3);
+            this.textBox2.TabIndex = 120;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // busquedasimple_criterio_text
+            // 
+            this.busquedasimple_criterio_text.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.busquedasimple_criterio_text.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.busquedasimple_criterio_text.FormattingEnabled = true;
+            this.busquedasimple_criterio_text.Items.AddRange(new object[] {
+            "Nombre Cancion",
+            "Nombre Pelicula",
             "Genero",
+            "Categoria Pelicula",
             "Cantante",
-            "Nombre",
             "Compositor",
+            "Director",
+            "Actor",
             "Disquera",
-            "Año",
+            "Film Studio",
+            "Año de Publicacion",
             "Edad",
             "Sexo",
             "Evaluacion",
             "Calidad/Resolucion"});
-            this.comboBox8_criterio.Location = new System.Drawing.Point(577, 231);
-            this.comboBox8_criterio.Name = "comboBox8_criterio";
-            this.comboBox8_criterio.Size = new System.Drawing.Size(154, 37);
-            this.comboBox8_criterio.TabIndex = 113;
+            this.busquedasimple_criterio_text.Location = new System.Drawing.Point(296, 101);
+            this.busquedasimple_criterio_text.Name = "busquedasimple_criterio_text";
+            this.busquedasimple_criterio_text.Size = new System.Drawing.Size(305, 37);
+            this.busquedasimple_criterio_text.TabIndex = 117;
+            this.busquedasimple_criterio_text.SelectedIndexChanged += new System.EventHandler(this.busquedasimple_criterio_text_SelectedIndexChanged);
+            this.busquedasimple_criterio_text.SelectedValueChanged += new System.EventHandler(this.busquedasimple_criterio_text_SelectedValueChanged);
             // 
-            // criterio_txt_combobox8
+            // busaquedasimple_valor_criterio_text
             // 
-            this.criterio_txt_combobox8.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.criterio_txt_combobox8.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.criterio_txt_combobox8.Location = new System.Drawing.Point(577, 287);
-            this.criterio_txt_combobox8.Margin = new System.Windows.Forms.Padding(2);
-            this.criterio_txt_combobox8.Name = "criterio_txt_combobox8";
-            this.criterio_txt_combobox8.Size = new System.Drawing.Size(154, 37);
-            this.criterio_txt_combobox8.TabIndex = 112;
+            this.busaquedasimple_valor_criterio_text.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.busaquedasimple_valor_criterio_text.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.busaquedasimple_valor_criterio_text.Location = new System.Drawing.Point(296, 160);
+            this.busaquedasimple_valor_criterio_text.Margin = new System.Windows.Forms.Padding(2);
+            this.busaquedasimple_valor_criterio_text.Name = "busaquedasimple_valor_criterio_text";
+            this.busaquedasimple_valor_criterio_text.Size = new System.Drawing.Size(305, 37);
+            this.busaquedasimple_valor_criterio_text.TabIndex = 116;
+            this.busaquedasimple_valor_criterio_text.TextChanged += new System.EventHandler(this.busaquedasimple_valor_criterio_text_TextChanged);
             // 
-            // comboBox4_criterio
+            // btn_buscar_busqueda_simple
             // 
-            this.comboBox4_criterio.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.comboBox4_criterio.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox4_criterio.FormattingEnabled = true;
-            this.comboBox4_criterio.Items.AddRange(new object[] {
-            "Genero",
-            "Cantante",
-            "Nombre",
-            "Compositor",
-            "Disquera",
-            "Año",
-            "Edad",
-            "Sexo",
-            "Evaluacion",
-            "Calidad/Resolucion"});
-            this.comboBox4_criterio.Location = new System.Drawing.Point(577, 98);
-            this.comboBox4_criterio.Name = "comboBox4_criterio";
-            this.comboBox4_criterio.Size = new System.Drawing.Size(154, 37);
-            this.comboBox4_criterio.TabIndex = 111;
+            this.btn_buscar_busqueda_simple.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_buscar_busqueda_simple.Location = new System.Drawing.Point(621, 124);
+            this.btn_buscar_busqueda_simple.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_buscar_busqueda_simple.Name = "btn_buscar_busqueda_simple";
+            this.btn_buscar_busqueda_simple.Size = new System.Drawing.Size(147, 51);
+            this.btn_buscar_busqueda_simple.TabIndex = 115;
+            this.btn_buscar_busqueda_simple.Text = "Buscar";
+            this.btn_buscar_busqueda_simple.UseVisualStyleBackColor = true;
+            this.btn_buscar_busqueda_simple.Click += new System.EventHandler(this.btn_buscar_busqueda_simple_Click);
             // 
-            // criterio_txt_combobox4
+            // label12
             // 
-            this.criterio_txt_combobox4.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.criterio_txt_combobox4.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.criterio_txt_combobox4.Location = new System.Drawing.Point(577, 151);
-            this.criterio_txt_combobox4.Margin = new System.Windows.Forms.Padding(2);
-            this.criterio_txt_combobox4.Name = "criterio_txt_combobox4";
-            this.criterio_txt_combobox4.Size = new System.Drawing.Size(154, 37);
-            this.criterio_txt_combobox4.TabIndex = 110;
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Maroon;
+            this.label12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label12.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(263, 29);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(278, 47);
+            this.label12.TabIndex = 102;
+            this.label12.Text = "Busqueda Simple";
             // 
-            // comboBox7_criterio
+            // btn_atras_busquedasimple
             // 
-            this.comboBox7_criterio.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.comboBox7_criterio.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox7_criterio.FormattingEnabled = true;
-            this.comboBox7_criterio.Items.AddRange(new object[] {
-            "Genero",
-            "Cantante",
-            "Nombre",
-            "Compositor",
-            "Disquera",
-            "Año",
-            "Edad",
-            "Sexo",
-            "Evaluacion",
-            "Calidad/Resolucion"});
-            this.comboBox7_criterio.Location = new System.Drawing.Point(397, 231);
-            this.comboBox7_criterio.Name = "comboBox7_criterio";
-            this.comboBox7_criterio.Size = new System.Drawing.Size(154, 37);
-            this.comboBox7_criterio.TabIndex = 109;
+            this.btn_atras_busquedasimple.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_atras_busquedasimple.Location = new System.Drawing.Point(704, 16);
+            this.btn_atras_busquedasimple.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_atras_busquedasimple.Name = "btn_atras_busquedasimple";
+            this.btn_atras_busquedasimple.Size = new System.Drawing.Size(71, 35);
+            this.btn_atras_busquedasimple.TabIndex = 74;
+            this.btn_atras_busquedasimple.Text = "Atras";
+            this.btn_atras_busquedasimple.UseVisualStyleBackColor = true;
+            this.btn_atras_busquedasimple.Click += new System.EventHandler(this.btn_atras_busquedasimple_Click);
             // 
-            // criterio_txt_combobox7
+            // btn_atras_de_inicio_sesion
             // 
-            this.criterio_txt_combobox7.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.criterio_txt_combobox7.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.criterio_txt_combobox7.Location = new System.Drawing.Point(397, 287);
-            this.criterio_txt_combobox7.Margin = new System.Windows.Forms.Padding(2);
-            this.criterio_txt_combobox7.Name = "criterio_txt_combobox7";
-            this.criterio_txt_combobox7.Size = new System.Drawing.Size(154, 37);
-            this.criterio_txt_combobox7.TabIndex = 108;
+            this.btn_atras_de_inicio_sesion.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_atras_de_inicio_sesion.Location = new System.Drawing.Point(715, 16);
+            this.btn_atras_de_inicio_sesion.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_atras_de_inicio_sesion.Name = "btn_atras_de_inicio_sesion";
+            this.btn_atras_de_inicio_sesion.Size = new System.Drawing.Size(71, 35);
+            this.btn_atras_de_inicio_sesion.TabIndex = 18;
+            this.btn_atras_de_inicio_sesion.Text = "Atras";
+            this.btn_atras_de_inicio_sesion.UseVisualStyleBackColor = true;
+            this.btn_atras_de_inicio_sesion.Click += new System.EventHandler(this.btn_atras_de_inicio_sesion_Click);
             // 
-            // comboBox3_criterio
+            // btn_busqueda_simple
             // 
-            this.comboBox3_criterio.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.comboBox3_criterio.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3_criterio.FormattingEnabled = true;
-            this.comboBox3_criterio.Items.AddRange(new object[] {
-            "Genero",
-            "Cantante",
-            "Nombre",
-            "Compositor",
-            "Disquera",
-            "Año",
-            "Edad",
-            "Sexo",
-            "Evaluacion",
-            "Calidad/Resolucion"});
-            this.comboBox3_criterio.Location = new System.Drawing.Point(397, 98);
-            this.comboBox3_criterio.Name = "comboBox3_criterio";
-            this.comboBox3_criterio.Size = new System.Drawing.Size(154, 37);
-            this.comboBox3_criterio.TabIndex = 107;
+            this.btn_busqueda_simple.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_busqueda_simple.Location = new System.Drawing.Point(150, 76);
+            this.btn_busqueda_simple.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_busqueda_simple.Name = "btn_busqueda_simple";
+            this.btn_busqueda_simple.Size = new System.Drawing.Size(229, 266);
+            this.btn_busqueda_simple.TabIndex = 78;
+            this.btn_busqueda_simple.Text = "BUSQUEDA SIMPLE";
+            this.btn_busqueda_simple.UseVisualStyleBackColor = true;
+            this.btn_busqueda_simple.Click += new System.EventHandler(this.btn_busqueda_simple_Click);
             // 
-            // criterio_txt_combobox3
+            // btn_busqueda_multiple
             // 
-            this.criterio_txt_combobox3.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.criterio_txt_combobox3.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.criterio_txt_combobox3.Location = new System.Drawing.Point(397, 151);
-            this.criterio_txt_combobox3.Margin = new System.Windows.Forms.Padding(2);
-            this.criterio_txt_combobox3.Name = "criterio_txt_combobox3";
-            this.criterio_txt_combobox3.Size = new System.Drawing.Size(154, 37);
-            this.criterio_txt_combobox3.TabIndex = 106;
+            this.btn_busqueda_multiple.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_busqueda_multiple.Location = new System.Drawing.Point(434, 76);
+            this.btn_busqueda_multiple.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_busqueda_multiple.Name = "btn_busqueda_multiple";
+            this.btn_busqueda_multiple.Size = new System.Drawing.Size(229, 266);
+            this.btn_busqueda_multiple.TabIndex = 77;
+            this.btn_busqueda_multiple.Text = "BUSQUEDA MULTIPLE";
+            this.btn_busqueda_multiple.UseVisualStyleBackColor = true;
+            this.btn_busqueda_multiple.Click += new System.EventHandler(this.btn_busqueda_multiple_Click);
             // 
-            // textBox7
-            // 
-            this.textBox7.BackColor = System.Drawing.Color.Maroon;
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox7.Font = new System.Drawing.Font("Arial", 1.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(28, 207);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(724, 3);
-            this.textBox7.TabIndex = 114;
-            // 
-            // button3
-            // 
-            this.button3.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(705, 16);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(71, 35);
-            this.button3.TabIndex = 115;
-            this.button3.Text = "Atras";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // FORMS_USUARIO
+            // ALAINID
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.panel_buscar);
+            this.ClientSize = new System.Drawing.Size(807, 445);
             this.Controls.Add(this.panel_perfil_de_usuario);
+            this.Controls.Add(this.panel_buscar);
             this.Controls.Add(this.Panel_premium);
             this.Controls.Add(this.BtnListaInteligente);
             this.Controls.Add(this.btnDescargas);
@@ -1209,8 +1418,8 @@
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.btn_premium);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "FORMS_USUARIO";
-            this.Text = "FORMS_USUARIO";
+            this.Name = "ALAINID";
+            this.Text = "ALAINID";
             this.Load += new System.EventHandler(this.FORMS_USUARIO_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -1219,9 +1428,11 @@
             this.Panel_premium.ResumeLayout(false);
             this.Panel_premium.PerformLayout();
             this.panel_buscar.ResumeLayout(false);
-            this.panel_buscar.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panel_busqueda_multiple.ResumeLayout(false);
+            this.panel_busqueda_multiple.PerformLayout();
+            this.panel_busqueda_simple.ResumeLayout(false);
+            this.panel_busqueda_simple.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1291,14 +1502,10 @@
         private System.Windows.Forms.CheckBox checkbox_privado_editar_usuario;
         private System.Windows.Forms.Panel panel_buscar;
         private System.Windows.Forms.Button btn_atras_de_inicio_sesion;
-        private System.Windows.Forms.TextBox pass_txt_inicio_sesion;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.CheckBox checkBox_repetir_cantante_como_compositor;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel_busqueda_multiple;
         private System.Windows.Forms.ComboBox comboBox5_criterio;
         private System.Windows.Forms.TextBox criterio_txt_combobox5;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_buscar_busqueda_multiple;
         private System.Windows.Forms.ComboBox comboBox1_criterio;
         private System.Windows.Forms.TextBox criterio_txt_combobox1;
         private System.Windows.Forms.TextBox textBox7;
@@ -1316,5 +1523,20 @@
         private System.Windows.Forms.TextBox criterio_txt_combobox2;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Panel panel_busqueda_simple;
+        private System.Windows.Forms.Button btn_atras_busquedasimple;
+        private System.Windows.Forms.Button btn_busqueda_simple;
+        private System.Windows.Forms.Button btn_busqueda_multiple;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.ComboBox busquedasimple_criterio_text;
+        private System.Windows.Forms.TextBox busaquedasimple_valor_criterio_text;
+        private System.Windows.Forms.Button btn_buscar_busqueda_simple;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colum_nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colum_artista;
+        private System.Windows.Forms.ComboBox busquedasimple_valor_criterio_desplegable;
     }
 }
