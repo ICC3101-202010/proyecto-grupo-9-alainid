@@ -24,8 +24,9 @@ namespace Proyecto_Forms
         private string nombrearchivo;
         private List<int> todas_las_calificaciones = new List<int>();
 
-        public Song(string nombrecancion, Artista cantante, string genero, Artista compositor, string anopublicacion, string disquera, string album, string nombrearchivo)
+        public Song(float tamano,string nombrecancion, Artista cantante, string genero, Artista compositor, string anopublicacion, string disquera, string album, string nombrearchivo)
         {
+            this.Tamano = tamano;
             this.Nombrecancion = nombrecancion;
             this.Cantante = cantante;
             this.Genero = genero;
@@ -54,28 +55,6 @@ namespace Proyecto_Forms
         public List<int> Todas_las_calificaciones { get => todas_las_calificaciones; set => todas_las_calificaciones = value; }
         public Artista Cantante { get => cantante; set => cantante = value; }
         public Artista Compositor { get => compositor; set => compositor = value; }
-
-
-
-
-        // asumi que no todas las canciones seran subidas con su letra por lo tanto no es requisito par acerar cancion al igual que la calificacion
-        //y el numero de reproducciones
-
-
-        public string Informacioncancion()
-        {
-            string info = (" Nombre: " + nombrecancion + "\n" + " Genero: " + genero + "\n" + " Artista: " + cantante.Name + "\n" + " Album: " + album + "\n" + "Compositor: " + compositor.Name + "\n" + "Año de publicacion: " + anopublicacion + "\n" +
-                "Disquera: " + disquera + "\n" + "Calificacion promedio: " + calificacionpromedio + "\n" + "Duracion: " + duracion + "\n" + "Tamaño Archivo: " + tamano + "MB \n" +
-               "Cantidad de reproducciones:" + reproducciones + "\n");
-            return info;
-        }
-        public string InformacioncancionKaraoke()
-        {
-            string info = (" Nombre: " + nombrecancion + "\n" + " Genero: " + genero + "\n" + " Artista: " + cantante + "\n" + " Album: " + album + "\n" + "Compositor: " + compositor + "\n" + "Año de publicacion: " + anopublicacion + "\n" +
-                "Disquera: " + disquera + "\n" + "Calificacion promedio: " + calificacionpromedio + "\n" + "Duracion: " + duracion + "\n" + "Tamaño Archivo: " + tamano + "MB \n" +
-                "Cantidad de reproducciones:" + reproducciones + "\n" + "Letra: " + "\n" + letra);
-            return info;
-        }
 
     }
 }

@@ -41,7 +41,6 @@ namespace ALAINID_DEFINITIVO
 
         private void btn_primero_Salir_Click(object sender, EventArgs e)
         {
-
             Application.Exit();
         }
 
@@ -52,12 +51,12 @@ namespace ALAINID_DEFINITIVO
                 User u1 = new User(nombre_completo_text_de_registrarse.Text, nombre_usuario_text_de_registrarse.Text, mail_text_de_registrarse.Text, pass_text_de_registrarse.Text);
                 Proyecto_Forms.ALAINID.Activarlista();
                 Proyecto_Forms.ALAINID.Agregarusuarioalalista(u1);
-
-                panel1_registrarse.Visible = false;
                 nombre_completo_text_de_registrarse.Text = "";
                 nombre_usuario_text_de_registrarse.Text = "";
                 mail_text_de_registrarse.Text = "";
                 pass_text_de_registrarse.Text = "";
+                panel1_registrarse.Visible = false;
+                
             }
             catch
             {

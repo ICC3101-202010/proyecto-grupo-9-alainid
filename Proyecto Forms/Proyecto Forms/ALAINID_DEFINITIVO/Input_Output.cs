@@ -226,8 +226,8 @@ namespace Proyecto_Forms
                                                                         int opcion60 = '\0';
                                                                         while (opcion60 != 1)
                                                                         {
-                                                                            Console.Clear();
-                                                                            ALAINID.Verinfodeunacancion(ALAINID.listafiltrada[numerocancion - 1]);
+                                                                            //Console.Clear();
+                                                                            //ALAINID.Verinfodeunacancion(ALAINID.listafiltrada[numerocancion - 1]);
                                                                             Console.WriteLine("======================================");
                                                                             Console.WriteLine("1. ATRAS");
                                                                             opcion60 = ALAINID.Numero(1);
@@ -386,8 +386,7 @@ namespace Proyecto_Forms
                                                                         int opcion60 = '\0';
                                                                         while (opcion60 != 1)
                                                                         {
-                                                                            Console.Clear();
-                                                                            ALAINID.Verinfodeunacancion(ALAINID.canciones_filtradas[numerocancion - 1]);
+                                                                            //ALAINID.Verinfodeunacancion(ALAINID.canciones_filtradas[numerocancion - 1]);
                                                                             Console.WriteLine("======================================");
                                                                             Console.WriteLine("1. ATRAS");
                                                                             opcion60 = ALAINID.Numero(1);
@@ -521,9 +520,7 @@ namespace Proyecto_Forms
                                                                         int opcion59 = '\0';
                                                                         while (opcion59 != 1)
                                                                         {
-                                                                            Console.Clear();
-
-                                                                            ALAINID.Verinfodeunusuario(ALAINID.listafiltradausuarios[numerousuario - 1]);
+                                                                           // ALAINID.Verinfodeunusuario(ALAINID.listafiltradausuarios[numerousuario - 1]);
                                                                             Console.WriteLine("======================================");
                                                                             Console.WriteLine("1. ATRAS");
                                                                             opcion59 = ALAINID.Numero(1);
@@ -621,7 +618,7 @@ namespace Proyecto_Forms
                                                                         while (opcion60 != 1)
                                                                         {
                                                                             Console.Clear();
-                                                                            ALAINID.Verinfodeunacancion(ALAINID.lista_filtrada_final[numerocancion - 1]);
+                                                                            //ALAINID.Verinfodeunacancion(ALAINID.lista_filtrada_final[numerocancion - 1]);
                                                                             Console.WriteLine("======================================");
                                                                             Console.WriteLine("1. ATRAS");
                                                                             opcion60 = ALAINID.Numero(1);
@@ -711,7 +708,7 @@ namespace Proyecto_Forms
                                                     ALAINID.Partirlistacompositores();
                                                     ALAINID.Partirlistaalbumes();
                                                     Console.Clear();
-                                                    ALAINID.Buqueda_simple_videos();
+                                                    //ALAINID.Buqueda_simple_videos();
 
                                                     opcion = '\0';
                                                     while (opcion != 2)
@@ -775,7 +772,7 @@ namespace Proyecto_Forms
                                                                         while (opcion60 != 1)
                                                                         {
                                                                             Console.Clear();
-                                                                            ALAINID.Verinfodeunvideo(ALAINID.listafiltradav[numerocancion - 1]);
+                                                                            //ALAINID.Verinfodeunvideo(ALAINID.listafiltradav[numerocancion - 1]);
                                                                             Console.WriteLine("======================================");
                                                                             Console.WriteLine("1. ATRAS");
                                                                             opcion60 = ALAINID.Numero(1);
@@ -931,7 +928,7 @@ namespace Proyecto_Forms
                                                                         while (opcion60 != 1)
                                                                         {
                                                                             Console.Clear();
-                                                                            ALAINID.Verinfodeunvideo(ALAINID.canciones_filtradasv[numerocancion - 1]);
+                                                                            //ALAINID.Verinfodeunvideo(ALAINID.canciones_filtradasv[numerocancion - 1]);
                                                                             Console.WriteLine("======================================");
                                                                             Console.WriteLine("1. ATRAS");
                                                                             opcion60 = ALAINID.Numero(1);
@@ -1089,7 +1086,7 @@ namespace Proyecto_Forms
                                                                         while (opcion60 != 1)
                                                                         {
                                                                             Console.Clear();
-                                                                            ALAINID.Verinfodeunvideo(ALAINID.lista_filtrada_finalv[numerocancion - 1]);
+                                                                            //ALAINID.Verinfodeunvideo(ALAINID.lista_filtrada_finalv[numerocancion - 1]);
                                                                             Console.WriteLine("======================================");
                                                                             Console.WriteLine("1. ATRAS");
                                                                             opcion60 = ALAINID.Numero(1);
@@ -1277,7 +1274,7 @@ namespace Proyecto_Forms
                                                                                             while (opcion60 != 1)
                                                                                             {
                                                                                                 Console.Clear();
-                                                                                                ALAINID.Verinfodeunacancion(ALAINID.listafiltrada2[int.Parse(accion34) - 1]);
+                                                                                                //ALAINID.Verinfodeunacancion(ALAINID.listafiltrada2[int.Parse(accion34) - 1]);
                                                                                                 Console.WriteLine("======================================");
                                                                                                 Console.WriteLine("1. ATRAS");
                                                                                                 opcion60 = ALAINID.Numero(1);
@@ -1468,7 +1465,7 @@ namespace Proyecto_Forms
                                                                                             while (opcion60 != 1)
                                                                                             {
                                                                                                 Console.Clear();
-                                                                                                ALAINID.Verinfodeunvideo(ALAINID.listafiltrada3[int.Parse(accion35) - 1]);
+                                                                                                //ALAINID.Verinfodeunvideo(ALAINID.listafiltrada3[int.Parse(accion35) - 1]);
                                                                                                 Console.WriteLine("======================================");
                                                                                                 Console.WriteLine("1. ATRAS");
                                                                                                 opcion60 = ALAINID.Numero(1);
@@ -1702,7 +1699,7 @@ namespace Proyecto_Forms
                                                                                     {
                                                                                         Console.Clear();
 
-                                                                                        ALAINID.Verinfodeunacancion(ALAINID.cancionfavoritabuscada[0]);
+                                                                                        //ALAINID.Verinfodeunacancion(ALAINID.cancionfavoritabuscada[0]);
                                                                                         Console.WriteLine("======================================");
                                                                                         Console.WriteLine("1. ATRAS");
                                                                                         opcion60 = ALAINID.Numero(1);
@@ -1862,7 +1859,7 @@ namespace Proyecto_Forms
                                                                                     while (opcion60 != 1)
                                                                                     {
                                                                                         Console.Clear();
-                                                                                        ALAINID.Verinfodeunvideo(ALAINID.videofavoritobuscado[0]);
+                                                                                        //ALAINID.Verinfodeunvideo(ALAINID.videofavoritobuscado[0]);
                                                                                         Console.WriteLine("======================================");
                                                                                         Console.WriteLine("1. ATRAS");
                                                                                         opcion60 = ALAINID.Numero(1);
@@ -2026,7 +2023,7 @@ namespace Proyecto_Forms
                                                             while (opcion60 != 1)
                                                             {
                                                                 Console.Clear();
-                                                                ALAINID.Verinfodeunacancion(ALAINID.todas_las_cancioneskaraoke[numerocancion2 - 1]);
+                                                                //ALAINID.Verinfodeunacancion(ALAINID.todas_las_cancioneskaraoke[numerocancion2 - 1]);
                                                                 Console.WriteLine("======================================");
                                                                 Console.WriteLine("1. ATRAS");
                                                                 opcion60 = ALAINID.Numero(1);
@@ -2243,7 +2240,7 @@ namespace Proyecto_Forms
                                                                                     while (opcion60 != 1)
                                                                                     {
                                                                                         Console.Clear();
-                                                                                        ALAINID.Verinfodeunacancion(ALAINID.cancionfavoritabuscada[0]);
+                                                                                        //ALAINID.Verinfodeunacancion(ALAINID.cancionfavoritabuscada[0]);
                                                                                         Console.WriteLine("======================================");
                                                                                         Console.WriteLine("1. ATRAS");
                                                                                         opcion60 = ALAINID.Numero(1);
@@ -2403,7 +2400,7 @@ namespace Proyecto_Forms
                                                                                     while (opcion60 != 1)
                                                                                     {
                                                                                         Console.Clear();
-                                                                                        ALAINID.Verinfodeunvideo(ALAINID.videofavoritobuscado[0]);
+                                                                                        //ALAINID.Verinfodeunvideo(ALAINID.videofavoritobuscado[0]);
                                                                                         Console.WriteLine("======================================");
                                                                                         Console.WriteLine("1. ATRAS");
                                                                                         opcion60 = ALAINID.Numero(1);
@@ -2747,7 +2744,7 @@ namespace Proyecto_Forms
                                                                         {
                                                                             Console.Clear();
 
-                                                                            ALAINID.Verinfodeunacancion(ALAINID.cancionfavoritabuscada[0]);
+                                                                            //ALAINID.Verinfodeunacancion(ALAINID.cancionfavoritabuscada[0]);
                                                                             Console.WriteLine("======================================");
                                                                             Console.WriteLine("1. ATRAS");
                                                                             opcion60 = ALAINID.Numero(1);
@@ -2944,7 +2941,7 @@ namespace Proyecto_Forms
                                                                                     {
                                                                                         Console.Clear();
 
-                                                                                        ALAINID.Verinfodeunacancion(ALAINID.cancionfavoritabuscada[0]);
+                                                                                        //ALAINID.Verinfodeunacancion(ALAINID.cancionfavoritabuscada[0]);
                                                                                         Console.WriteLine("======================================");
                                                                                         Console.WriteLine("1. ATRAS");
                                                                                         opcion60 = ALAINID.Numero(1);
@@ -3188,7 +3185,7 @@ namespace Proyecto_Forms
                                         ALAINID.Activarlistacantantes();
                                         ALAINID.Partirlistacompositores();
                                         ALAINID.Partirlistaalbumes();
-                                        a.VerCanciones(ALAINID.todas_las_canciones);
+                                        //a.VerCanciones(ALAINID.todas_las_canciones);
                                         Console.WriteLine("=================================");
                                         Console.WriteLine("1. ATRAS");
                                         Console.WriteLine("=================================");
@@ -3271,7 +3268,7 @@ namespace Proyecto_Forms
                                     ALAINID.Activarlistavideos();
                                     ALAINID.Partirlistadirectores();
                                     ALAINID.Partirlistaactores();
-                                    a.Subir_video(nombre_video, duracion2, categoria, director, genero5, anio_publicacion, tipo_archivo, calidad2, film_studio, tamanio, nombrearchivovideo2, reproduccion);
+                                    //a.Subir_video(nombre_video, duracion2, categoria, director, genero5, anio_publicacion, tipo_archivo, calidad2, film_studio, tamanio, nombrearchivovideo2, reproduccion);
 
                                     break;
                                 case 5:
@@ -3283,7 +3280,7 @@ namespace Proyecto_Forms
                                     {
                                         Console.Clear();
                                         ALAINID.Activarlistavideos();
-                                        a.VerVideos(ALAINID.todos_los_videos);
+                                        //a.VerVideos(ALAINID.todos_los_videos);
                                         Console.WriteLine("=================================");
                                         Console.WriteLine("1. ATRAS");
                                         Console.WriteLine("=================================");

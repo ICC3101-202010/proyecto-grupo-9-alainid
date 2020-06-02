@@ -29,11 +29,11 @@ namespace ALAINID_DEFINITIVO
             Proyecto_Forms.ALAINID.lista_generos_peliculas.Add("Terror"); Proyecto_Forms.ALAINID.lista_generos_peliculas.Add("Musical"); Proyecto_Forms.ALAINID.lista_generos_peliculas.Add("Ciencia Ficcion");
             Proyecto_Forms.ALAINID.lista_generos_peliculas.Add("Crimen");
 
-            Proyecto_Forms.ALAINID.lista_categoria.Add("Infantil (0 - 7 anios)");
-            Proyecto_Forms.ALAINID.lista_categoria.Add("Infanto-Juvenil (7 - 16 anios)");
-            Proyecto_Forms.ALAINID.lista_categoria.Add("Adolecente (16 - 18 anios)");
-            Proyecto_Forms.ALAINID.lista_categoria.Add("Adulto (18+ anios)");
-            Proyecto_Forms.ALAINID.lista_categoria.Add("XXX (18+ anios)");
+            Proyecto_Forms.ALAINID.lista_categoria.Add("Infantil (0 - 7 años)");
+            Proyecto_Forms.ALAINID.lista_categoria.Add("Infantil-Juvenil (7 - 16 años)");
+            Proyecto_Forms.ALAINID.lista_categoria.Add("Adolecente (16 - 18 años)");
+            Proyecto_Forms.ALAINID.lista_categoria.Add("Adulto (18+ años)");
+            Proyecto_Forms.ALAINID.lista_categoria.Add("XXX (18+ años)");
 
             Proyecto_Forms.ALAINID.lista_calidad_cancion.Add("96 kbps"); Proyecto_Forms.ALAINID.lista_calidad_cancion.Add("128 kbps"); Proyecto_Forms.ALAINID.lista_calidad_cancion.Add("160 kbps");
             Proyecto_Forms.ALAINID.lista_calidad_cancion.Add("256 kbps"); Proyecto_Forms.ALAINID.lista_calidad_cancion.Add("320 kbps");

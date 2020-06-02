@@ -30,7 +30,7 @@ namespace Proyecto_Forms
                 {
                     stringaux1 += "Cancion" + " " + (i + 1) + "\n";
                     stringaux1 += "============ \n";
-                    stringaux1 += Listplay[i].Informacioncancion() + "\n";
+                    //stringaux1 += Listplay[i].Informacioncancion() + "\n";
                     stringaux1 += " ";
                 }
                 return stringaux1;

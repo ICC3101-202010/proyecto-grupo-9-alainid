@@ -1,7 +1,7 @@
 ﻿/*using System;
 using System.Collections.Generic;
 using System.Text;
-//using WMPLib;
+using WMPLib;
 using System.Threading;
 
 
@@ -10,7 +10,7 @@ namespace Proyecto_Forms
 {
     public class Player
     {
-        /*
+        
         WindowsMediaPlayer wmp;
         double currpos;
         WMPLib.IWMPPlaylist playlistcola;
@@ -77,5 +77,4 @@ namespace Proyecto_Forms
         }
         
     }
-}
-*/
+}*/

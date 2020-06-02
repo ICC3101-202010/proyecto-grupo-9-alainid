@@ -37,7 +37,7 @@ namespace Proyecto_Forms
                 {
                     stringaux1 += "Video" + " " + (i + 1) + "\n";
                     stringaux1 += "============ \n";
-                    stringaux1 += Listplayvideo[i].Ver_informacion() + "\n";
+                    //stringaux1 += Listplayvideo[i].Ver_informacion() + "\n";
 
                     stringaux1 += " ";
 
