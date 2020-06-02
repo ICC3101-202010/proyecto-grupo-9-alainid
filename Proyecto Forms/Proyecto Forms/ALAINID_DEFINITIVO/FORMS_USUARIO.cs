@@ -679,20 +679,32 @@ namespace ALAINID_DEFINITIVO
             Proyecto_Forms.ALAINID.Activarlistacantantes();
             Proyecto_Forms.ALAINID.Partirlistacompositores();
             Proyecto_Forms.ALAINID.Partirlistaalbumes();
-            panel_cancion_seleccionada_busqueda_simple.Visible = true;
-            panel_cancion_seleccionada_busqueda_simple.Dock = DockStyle.Fill;
             int fila = e.RowIndex;
             int col = e.ColumnIndex;
-            foreach(Song s in Proyecto_Forms.ALAINID.todas_las_canciones)
+            string nombre = datagratview_busquedasimple.Rows[fila].Cells[0].Value.ToString();
+            string nombrea = datagratview_busquedasimple.Rows[fila].Cells[1].Value.ToString();
+            foreach (Song s in Proyecto_Forms.ALAINID.todas_las_canciones)
             {
-                string nombre = datagratview_busquedasimple.Rows[fila].Cells[0].Value.ToString();
-                if (s.Nombrecancion.ToLower() == nombre.ToLower())
+                if ((s.Nombrecancion.ToLower() == nombre.ToLower()) && (s.Cantante.Name.ToLower() == nombrea.ToLower()))
                 {
+                    panel_cancion_seleccionada_busqueda_simple.Visible = true;
+                    panel_cancion_seleccionada_busqueda_simple.Dock = DockStyle.Fill;
                     ruta = s.Nombrearchivo;
-                
+                    axWindowsMediaPlayer2.URL = ruta;
                 }
             }
-            axWindowsMediaPlayer2.URL = ruta;
+            foreach (Video v in Proyecto_Forms.ALAINID.todos_los_videos)
+            {
+                if ((v.Nombre_video.ToLower() == nombre.ToLower()) && (v.Director.Name.ToLower() == nombrea.ToLower()))
+                {
+                    panel_video_seleccionado.Visible = true;
+                    panel_video_seleccionado.Dock = DockStyle.Fill;
+                    ruta = v.Nombrearchivovideo;
+                    axWindowsMediaPlayerVideo.URL = ruta;
+                }
+            }
+
+            
         }
         
         
@@ -737,6 +749,40 @@ namespace ALAINID_DEFINITIVO
         {
             axWindowsMediaPlayer2.Ctlcontrols.previous();
 
+        }
+
+
+
+
+        //Panel reproductor video
+        private void panel_video_seleccionado_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnAgregar_A_Favoritos_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAgregar_A_Playlist_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAgregar_A_Cola_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCalificar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Atrás_Click(object sender, EventArgs e)
+        {
+            panel_video_seleccionado.Visible = false;
         }
     }
 }

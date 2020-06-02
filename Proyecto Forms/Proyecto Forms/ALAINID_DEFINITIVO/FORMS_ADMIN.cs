@@ -46,8 +46,8 @@ namespace ALAINID_DEFINITIVO
 
         private void btn_agregar_cancion_karaoke_admin_Click(object sender, EventArgs e)
         {
-            panel_agregar_cancion_karaoke_admin.Visible = true;
-            panel_agregar_cancion_karaoke_admin.Dock = DockStyle.Fill;
+            panel_agregar_cancion_karaoke.Visible = true;
+            panel_agregar_cancion_karaoke.Dock = DockStyle.Fill;
         }
 
         private void btn_ver_usuarios_admin_Click(object sender, EventArgs e)
@@ -165,6 +165,8 @@ namespace ALAINID_DEFINITIVO
             album_txt_agregar_cancion.Text = "";
             ruta_cancion = "";
             ruta_archivo_cancion_txt_subir_cancion.Text = "";
+            checkBox_repetir_cantante_como_compositor .Checked = false;
+
         }
         private void checkBox_repetir_cantante_como_compositor_CheckedChanged(object sender, EventArgs e)
         {
@@ -190,7 +192,7 @@ namespace ALAINID_DEFINITIVO
         }
         public string ruta_cancion;
         private void ruta_archivo_cancion_txt_subir_cancion_TextChanged(object sender, EventArgs e)
-        {
+        {//txt
 
         }
         private void btn_importar_cancion_admin_Click(object sender, EventArgs e)
@@ -405,15 +407,10 @@ namespace ALAINID_DEFINITIVO
 
         }
 
-        private void btn_atras_de_agregar_cancion_karaoke_admin_Click(object sender, EventArgs e)
-        {
-            panel_agregar_cancion_karaoke_admin.Visible = false;
-        }
-
         private void cancionesKaraokeToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            panel_agregar_cancion_karaoke_admin.Visible = true;
-            panel_agregar_cancion_karaoke_admin.Dock = DockStyle.Fill;
+            panel_agregar_cancion_karaoke.Visible = true;
+            panel_agregar_cancion_karaoke.Dock = DockStyle.Fill;
 
         }
 
@@ -433,6 +430,16 @@ namespace ALAINID_DEFINITIVO
         {
             panel_ver_usuarios_admin.Visible = true;
             panel_ver_usuarios_admin.Dock = DockStyle.Fill;
+            foreach (User user in Proyecto_Forms.ALAINID.listausuarios)
+            {
+                int n = tabla_usuarios_admin.Rows.Add();
+                tabla_usuarios_admin.Rows[n].Cells[0].Value = user.Nombreusuario;
+                tabla_usuarios_admin.Rows[n].Cells[1].Value = user.Nombre_;
+                tabla_usuarios_admin.Rows[n].Cells[2].Value = user.Email_;
+                tabla_usuarios_admin.Rows[n].Cells[3].Value = user.Password_;
+                tabla_usuarios_admin.Rows[n].Cells[4].Value = user.Perfipublico_;
+                tabla_usuarios_admin.Rows[n].Cells[5].Value = user.Premium_;
+            }
 
         }
 
@@ -451,14 +458,48 @@ namespace ALAINID_DEFINITIVO
 
         }
 
-        private void btn_atras_de_ver_artistas_admin_Click(object sender, EventArgs e)
-        {
-            panel_ver_artistas_admin.Visible = false;
-        }
+        
 
         private void artistasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            panel_ver_artistas_admin.Visible = true; ;
+            Proyecto_Forms.ALAINID.Partirlistadirectores();
+            Proyecto_Forms.ALAINID.Partirlistaactores();
+            Proyecto_Forms.ALAINID.Partirlistacompositores();
+            Proyecto_Forms.ALAINID.CargarActores();//??????
+            panel_ver_artistas.Visible = true;
+            panel_ver_artistas.Dock = DockStyle.Fill;
+            foreach(Artista cantante in Proyecto_Forms.ALAINID.lista_cantantes)
+            {
+                int n = tabla_ver_cantantes_admin.Rows.Add();
+                tabla_ver_cantantes_admin.Rows[n].Cells[0].Value = cantante.Name;
+                tabla_ver_cantantes_admin.Rows[n].Cells[1].Value = cantante.Age;
+                tabla_ver_cantantes_admin.Rows[n].Cells[2].Value = cantante.Nacionality;
+                tabla_ver_cantantes_admin.Rows[n].Cells[3].Value = cantante.Sexo;
+            }
+            foreach (Artista comp in Proyecto_Forms.ALAINID.lista_compositores)
+            {
+                int n = tabla_ver_compositores_admin.Rows.Add();
+                tabla_ver_compositores_admin.Rows[n].Cells[0].Value = comp.Name;
+                tabla_ver_compositores_admin.Rows[n].Cells[1].Value = comp.Age;
+                tabla_ver_compositores_admin.Rows[n].Cells[2].Value = comp.Nacionality;
+                tabla_ver_compositores_admin.Rows[n].Cells[3].Value = comp.Sexo;
+            }
+            foreach (Artista actor in Proyecto_Forms.ALAINID.lista_actores)
+            {
+                int n = tabla_ver_actores_admin.Rows.Add();
+                tabla_ver_actores_admin.Rows[n].Cells[0].Value = actor.Name;
+                tabla_ver_actores_admin.Rows[n].Cells[1].Value = actor.Age;
+                tabla_ver_actores_admin.Rows[n].Cells[2].Value = actor.Nacionality;
+                tabla_ver_actores_admin.Rows[n].Cells[3].Value = actor.Sexo;
+            }
+            foreach (Artista dir in Proyecto_Forms.ALAINID.lista_directores)
+            {
+                int n = tabla_ver_directores_admin.Rows.Add();
+                tabla_ver_directores_admin.Rows[n].Cells[0].Value = dir.Name;
+                tabla_ver_directores_admin.Rows[n].Cells[1].Value = dir.Age;
+                tabla_ver_directores_admin.Rows[n].Cells[2].Value = dir.Nacionality;
+                tabla_ver_directores_admin.Rows[n].Cells[3].Value = dir.Sexo;
+            }
         }
 
         private void cerrarSesionYSalirToolStripMenuItem_Click(object sender, EventArgs e)
@@ -656,6 +697,158 @@ namespace ALAINID_DEFINITIVO
                 tabla_ver_canciones_admin.Rows[n].Cells[11].Value = song.Tamano;
                 tabla_ver_canciones_admin.Rows[n].Cells[12].Value = song.Calidad;
 
+            }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {//atras ver canciones admin
+            panel_ver_canciones_admin.Visible = false;
+            tabla_ver_canciones_admin.Rows.Clear();
+
+        }
+
+        private void label44_Click(object sender, EventArgs e)
+        {// cualquier wea NO BORRAR
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {//atras de ver canciones karaoke
+            panel_ver_canciones_karaoke.Visible = false;
+            tabla_ver_canciones_karaoke.Rows.Clear();
+        }
+
+        private void cancionesKaraokeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            panel_ver_canciones_karaoke.Visible = true;
+            panel_ver_canciones_karaoke.Dock = DockStyle.Fill;
+            Proyecto_Forms.ALAINID.Activarlistacanciones();
+            Proyecto_Forms.ALAINID.Activarlistacantantes();
+            Proyecto_Forms.ALAINID.Partirlistacompositores();
+            Proyecto_Forms.ALAINID.Partirkaraoke();
+            Proyecto_Forms.ALAINID.Partirlistaalbumes();
+            foreach (Song song in Proyecto_Forms.ALAINID.todas_las_cancioneskaraoke)
+            {
+                int n = tabla_ver_canciones_karaoke.Rows.Add();
+                tabla_ver_canciones_karaoke.Rows[n].Cells[0].Value = song.Nombrecancion;
+                tabla_ver_canciones_karaoke.Rows[n].Cells[1].Value = song.Cantante.Name;
+                tabla_ver_canciones_karaoke.Rows[n].Cells[2].Value = song.Genero;
+                tabla_ver_canciones_karaoke.Rows[n].Cells[3].Value = song.Compositor.Name;
+                tabla_ver_canciones_karaoke.Rows[n].Cells[4].Value = song.Anopublicacion;
+                tabla_ver_canciones_karaoke.Rows[n].Cells[5].Value = song.Disquera;
+                tabla_ver_canciones_karaoke.Rows[n].Cells[6].Value = song.Album;
+                tabla_ver_canciones_karaoke.Rows[n].Cells[7].Value = song.Calificacionpromedio;
+                tabla_ver_canciones_karaoke.Rows[n].Cells[8].Value = song.Duracion;
+                tabla_ver_canciones_karaoke.Rows[n].Cells[9].Value = song.Reproducciones;
+                tabla_ver_canciones_karaoke.Rows[n].Cells[10].Value = song.Tipoarchivo;
+                tabla_ver_canciones_karaoke.Rows[n].Cells[11].Value = song.Tamano;
+                tabla_ver_canciones_karaoke.Rows[n].Cells[12].Value = song.Calidad;
+
+            }
+        }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label18_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label19_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label20_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_atras_agregar_cancion_karaoke_Click(object sender, EventArgs e)
+        {
+            panel_agregar_cancion_karaoke.Visible = false;
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_subir_cancion_karaoke_Click(object sender, EventArgs e)
+        {
+            Artista cantante = new Artista(nombrecantante_text_cancion_karaoke.Text, int.Parse(edadcantante_text_cancion_karaoke.Text), sexocantante_text_cancion_karaoke.Text, nacioncompositor_text_cancion_karaoke.Text);
+            Artista compositor = new Artista(nombrecompositor_text_cancion_karaoke.Text, int.Parse(edadcompositor_text_cancion_karaoke.Text), sexocompositor_text_cancion_karaoke.Text, nacioncompositor_text_cancion_karaoke.Text);
+            //Proyecto_Forms.ALAINID.Activarlistacanciones();
+            //Proyecto_Forms.ALAINID.Activarlistacantantes();
+            //Proyecto_Forms.ALAINID.Partirlistacompositores();
+            //Proyecto_Forms.ALAINID.Partirlistaalbumes();
+            a.AgregarSongKaraoke(nombre_text_cancion_karaoke.Text, cantante, genero_text_cancion_karaoke.Text, compositor, aniopublicacion_text_cancion_karaoke.Text, Disquera_text_cancion_karaoke.Text, album_text_cancion_karaoke.Text, ruta_cancion_karaoke);
+            archivo_text_cancion_karaoke.Text = "";
+            nombrecantante_text_cancion_karaoke.Text = "";
+            edadcantante_text_cancion_karaoke.Text = "";
+            sexocantante_text_cancion_karaoke.Text = "";
+            nacioncompositor_text_cancion_karaoke.Text = "";
+            nombrecompositor_text_cancion_karaoke.Text = "";
+            edadcompositor_text_cancion_karaoke.Text = "";
+            sexocompositor_text_cancion_karaoke.Text = "";
+            nacioncompositor_text_cancion_karaoke.Text = "";
+            nombre_text_cancion_karaoke.Text = "";
+            genero_text_cancion_karaoke.Text = "";
+            aniopublicacion_text_cancion_karaoke.Text = "";
+            Disquera_text_cancion_karaoke.Text = "";
+            album_text_cancion_karaoke.Text = "";
+            ruta_cancion_karaoke = "";
+            checkBox_repetir_cantante_como_compositor.Checked = false;
+        }
+
+        public string ruta_cancion_karaoke;
+        private void btn_importar_archivo_cancion_karaoke_Click(object sender, EventArgs e)
+        {
+            if (openfile_subircancion_karaoke_admin.ShowDialog() == DialogResult.OK)
+            {
+                archivo_text_cancion_karaoke.Text = openfile_subircancion_karaoke_admin.FileName;
+                ruta_cancion_karaoke = openfile_subircancion_karaoke_admin.FileName;
+            }
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {//NO BORRAR
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {//btn atras ver artista admin
+            panel_ver_artistas.Visible = false;
+            tabla_ver_directores_admin.Rows.Clear();
+            tabla_ver_compositores_admin.Rows.Clear();
+            tabla_ver_actores_admin.Rows.Clear();
+            tabla_ver_cantantes_admin.Rows.Clear();
+
+        }
+
+        private void checkBox_repetir_cantante_encompositor_karaoke_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox_repetir_cantante_como_compositor.Checked == true)
+            {
+                nombrecompositor_text_cancion_karaoke.Text = nombrecantante_text_cancion_karaoke.Text;
+                edadcompositor_text_cancion_karaoke.Text = edadcantante_text_cancion_karaoke.Text;
+                sexocompositor_text_cancion_karaoke.Text = sexocantante_text_cancion_karaoke.Text;
+                nacioncompositor_text_cancion_karaoke.Text = nacioncompositor_text_cancion_karaoke.Text;
+                nombrecompositor_text_cancion_karaoke.Enabled = false;
+                edadcompositor_text_cancion_karaoke.Enabled = false;
+                sexocompositor_text_cancion_karaoke.Enabled = false;
+                nacioncompositor_text_cancion_karaoke.Enabled = false;
+
+            }
+            if (checkBox_repetir_cantante_como_compositor.Checked == false)
+            {
+                nombrecompositor_text_cancion_karaoke.Enabled = true;
+                edadcompositor_text_cancion_karaoke.Enabled = true;
+                sexocompositor_text_cancion_karaoke.Enabled = true;
+                nacioncompositor_text_cancion_karaoke.Enabled = true;
             }
         }
     }

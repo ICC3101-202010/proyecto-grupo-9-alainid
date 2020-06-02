@@ -2602,7 +2602,7 @@ namespace Proyecto_Forms
 
         public static bool Verificar_existencia_compositor(ref Artista compositor)
         {
-            int h = 0, n2;
+            int h = 0;
             foreach (Artista comp in lista_compositores)
             {
                 if (comp.Name == compositor.Name)
@@ -2714,7 +2714,7 @@ namespace Proyecto_Forms
 
         public static bool Verificar_exisitencia_Album(string nombre_album, ref Artista cantante2)
         {
-            int h = 0, n2;
+            int h = 0;
             foreach (Artista cantante in lista_cantantes)
             {
                 if (cantante.Name == cantante2.Name)

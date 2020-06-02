@@ -91,6 +91,29 @@
             this.emialpremiumtextbox = new System.Windows.Forms.TextBox();
             this.panel_buscar = new System.Windows.Forms.Panel();
             this.panel_busqueda_simple = new System.Windows.Forms.Panel();
+            this.panel_video_seleccionado = new System.Windows.Forms.Panel();
+            this.btn_Atrás = new System.Windows.Forms.Button();
+            this.label28 = new System.Windows.Forms.Label();
+            this.textBox_Reproducciones = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.textBox_Año_Grabacion = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.textBox_Calificacion = new System.Windows.Forms.TextBox();
+            this.listBox_Actores = new System.Windows.Forms.ListBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.textBox_Nombre_Director = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.textBox_Nombre_Video = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.Calificacion = new System.Windows.Forms.NumericUpDown();
+            this.btnCalificar = new System.Windows.Forms.Button();
+            this.btnAgregar_A_Cola = new System.Windows.Forms.Button();
+            this.btnAgregar_A_Playlist = new System.Windows.Forms.Button();
+            this.btnAgregar_A_Favoritos = new System.Windows.Forms.Button();
+            this.axWindowsMediaPlayerVideo = new AxWMPLib.AxWindowsMediaPlayer();
             this.panel_cancion_seleccionada_busqueda_simple = new System.Windows.Forms.Panel();
             this.axWindowsMediaPlayer2 = new AxWMPLib.AxWindowsMediaPlayer();
             this.textBox9 = new System.Windows.Forms.TextBox();
@@ -150,6 +173,9 @@
             this.Panel_premium.SuspendLayout();
             this.panel_buscar.SuspendLayout();
             this.panel_busqueda_simple.SuspendLayout();
+            this.panel_video_seleccionado.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Calificacion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayerVideo)).BeginInit();
             this.panel_cancion_seleccionada_busqueda_simple.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datagratview_busquedasimple)).BeginInit();
@@ -167,8 +193,8 @@
             this.reproducciónToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(807, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(1076, 30);
             this.menuStrip1.TabIndex = 34;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -179,26 +205,26 @@
             this.cerrarSesionToolStripMenuItem,
             this.cerrarSesionYSalirToolStripMenuItem});
             this.aLAINIDToolStripMenuItem.Name = "aLAINIDToolStripMenuItem";
-            this.aLAINIDToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
+            this.aLAINIDToolStripMenuItem.Size = new System.Drawing.Size(80, 26);
             this.aLAINIDToolStripMenuItem.Text = "ALAINID";
             // 
             // perfilDeUsuarioToolStripMenuItem
             // 
             this.perfilDeUsuarioToolStripMenuItem.Name = "perfilDeUsuarioToolStripMenuItem";
-            this.perfilDeUsuarioToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.perfilDeUsuarioToolStripMenuItem.Size = new System.Drawing.Size(223, 26);
             this.perfilDeUsuarioToolStripMenuItem.Text = "Perfil de Usuario";
             // 
             // cerrarSesionToolStripMenuItem
             // 
             this.cerrarSesionToolStripMenuItem.Name = "cerrarSesionToolStripMenuItem";
-            this.cerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.cerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(223, 26);
             this.cerrarSesionToolStripMenuItem.Text = "Cerrar Sesion";
             this.cerrarSesionToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesionToolStripMenuItem_Click);
             // 
             // cerrarSesionYSalirToolStripMenuItem
             // 
             this.cerrarSesionYSalirToolStripMenuItem.Name = "cerrarSesionYSalirToolStripMenuItem";
-            this.cerrarSesionYSalirToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.cerrarSesionYSalirToolStripMenuItem.Size = new System.Drawing.Size(223, 26);
             this.cerrarSesionYSalirToolStripMenuItem.Text = "Cerrar Sesion y Salir";
             this.cerrarSesionYSalirToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesionYSalirToolStripMenuItem_Click);
             // 
@@ -207,13 +233,13 @@
             this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.crearPlayListToolStripMenuItem});
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
-            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(73, 26);
             this.archivoToolStripMenuItem.Text = "Archivo";
             // 
             // crearPlayListToolStripMenuItem
             // 
             this.crearPlayListToolStripMenuItem.Name = "crearPlayListToolStripMenuItem";
-            this.crearPlayListToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.crearPlayListToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.crearPlayListToolStripMenuItem.Text = "Crear PlayList";
             // 
             // editarToolStripMenuItem
@@ -223,25 +249,25 @@
             this.editarListaInteligenteToolStripMenuItem,
             this.editarFavoritosToolStripMenuItem});
             this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
-            this.editarToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
+            this.editarToolStripMenuItem.Size = new System.Drawing.Size(62, 26);
             this.editarToolStripMenuItem.Text = "Editar";
             // 
             // editarPerfilToolStripMenuItem
             // 
             this.editarPerfilToolStripMenuItem.Name = "editarPerfilToolStripMenuItem";
-            this.editarPerfilToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
+            this.editarPerfilToolStripMenuItem.Size = new System.Drawing.Size(240, 26);
             this.editarPerfilToolStripMenuItem.Text = "Editar Perfil";
             // 
             // editarListaInteligenteToolStripMenuItem
             // 
             this.editarListaInteligenteToolStripMenuItem.Name = "editarListaInteligenteToolStripMenuItem";
-            this.editarListaInteligenteToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
+            this.editarListaInteligenteToolStripMenuItem.Size = new System.Drawing.Size(240, 26);
             this.editarListaInteligenteToolStripMenuItem.Text = "Editar Lista Inteligente";
             // 
             // editarFavoritosToolStripMenuItem
             // 
             this.editarFavoritosToolStripMenuItem.Name = "editarFavoritosToolStripMenuItem";
-            this.editarFavoritosToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
+            this.editarFavoritosToolStripMenuItem.Size = new System.Drawing.Size(240, 26);
             this.editarFavoritosToolStripMenuItem.Text = "Editar Favoritos";
             // 
             // verToolStripMenuItem
@@ -253,37 +279,37 @@
             this.favoritosCancionesToolStripMenuItem,
             this.favoritosVideosToolStripMenuItem});
             this.verToolStripMenuItem.Name = "verToolStripMenuItem";
-            this.verToolStripMenuItem.Size = new System.Drawing.Size(35, 20);
+            this.verToolStripMenuItem.Size = new System.Drawing.Size(44, 26);
             this.verToolStripMenuItem.Text = "Ver";
             // 
             // descargasToolStripMenuItem
             // 
             this.descargasToolStripMenuItem.Name = "descargasToolStripMenuItem";
-            this.descargasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.descargasToolStripMenuItem.Size = new System.Drawing.Size(222, 26);
             this.descargasToolStripMenuItem.Text = "Descargas";
             // 
             // socialToolStripMenuItem
             // 
             this.socialToolStripMenuItem.Name = "socialToolStripMenuItem";
-            this.socialToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.socialToolStripMenuItem.Size = new System.Drawing.Size(222, 26);
             this.socialToolStripMenuItem.Text = "Social";
             // 
             // karaokeToolStripMenuItem
             // 
             this.karaokeToolStripMenuItem.Name = "karaokeToolStripMenuItem";
-            this.karaokeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.karaokeToolStripMenuItem.Size = new System.Drawing.Size(222, 26);
             this.karaokeToolStripMenuItem.Text = "Karaoke";
             // 
             // favoritosCancionesToolStripMenuItem
             // 
             this.favoritosCancionesToolStripMenuItem.Name = "favoritosCancionesToolStripMenuItem";
-            this.favoritosCancionesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.favoritosCancionesToolStripMenuItem.Size = new System.Drawing.Size(222, 26);
             this.favoritosCancionesToolStripMenuItem.Text = "Favoritos Canciones";
             // 
             // favoritosVideosToolStripMenuItem
             // 
             this.favoritosVideosToolStripMenuItem.Name = "favoritosVideosToolStripMenuItem";
-            this.favoritosVideosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.favoritosVideosToolStripMenuItem.Size = new System.Drawing.Size(222, 26);
             this.favoritosVideosToolStripMenuItem.Text = "FavoritosVideos";
             // 
             // reproducciónToolStripMenuItem
@@ -295,41 +321,41 @@
             this.nextToolStripMenuItem,
             this.previousToolStripMenuItem});
             this.reproducciónToolStripMenuItem.Name = "reproducciónToolStripMenuItem";
-            this.reproducciónToolStripMenuItem.Size = new System.Drawing.Size(93, 20);
+            this.reproducciónToolStripMenuItem.Size = new System.Drawing.Size(115, 26);
             this.reproducciónToolStripMenuItem.Text = "Reproducción";
             // 
             // playToolStripMenuItem
             // 
             this.playToolStripMenuItem.Name = "playToolStripMenuItem";
-            this.playToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.playToolStripMenuItem.Size = new System.Drawing.Size(147, 26);
             this.playToolStripMenuItem.Text = "Play";
             this.playToolStripMenuItem.Click += new System.EventHandler(this.playToolStripMenuItem_Click);
             // 
             // stopToolStripMenuItem
             // 
             this.stopToolStripMenuItem.Name = "stopToolStripMenuItem";
-            this.stopToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.stopToolStripMenuItem.Size = new System.Drawing.Size(147, 26);
             this.stopToolStripMenuItem.Text = "Stop";
             this.stopToolStripMenuItem.Click += new System.EventHandler(this.stopToolStripMenuItem_Click);
             // 
             // pausaToolStripMenuItem
             // 
             this.pausaToolStripMenuItem.Name = "pausaToolStripMenuItem";
-            this.pausaToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.pausaToolStripMenuItem.Size = new System.Drawing.Size(147, 26);
             this.pausaToolStripMenuItem.Text = "Pausa";
             this.pausaToolStripMenuItem.Click += new System.EventHandler(this.pausaToolStripMenuItem_Click);
             // 
             // nextToolStripMenuItem
             // 
             this.nextToolStripMenuItem.Name = "nextToolStripMenuItem";
-            this.nextToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.nextToolStripMenuItem.Size = new System.Drawing.Size(147, 26);
             this.nextToolStripMenuItem.Text = "Next";
             this.nextToolStripMenuItem.Click += new System.EventHandler(this.nextToolStripMenuItem_Click);
             // 
             // previousToolStripMenuItem
             // 
             this.previousToolStripMenuItem.Name = "previousToolStripMenuItem";
-            this.previousToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.previousToolStripMenuItem.Size = new System.Drawing.Size(147, 26);
             this.previousToolStripMenuItem.Text = "Previous";
             this.previousToolStripMenuItem.Click += new System.EventHandler(this.previousToolStripMenuItem_Click);
             // 
@@ -338,10 +364,9 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Comic Sans MS", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(95, 44);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(127, 54);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(142, 52);
+            this.label3.Size = new System.Drawing.Size(180, 66);
             this.label3.TabIndex = 38;
             this.label3.Text = "Alainid";
             // 
@@ -349,10 +374,10 @@
             // 
             this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnBuscar.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(169, 147);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBuscar.Location = new System.Drawing.Point(225, 181);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(220, 37);
+            this.btnBuscar.Size = new System.Drawing.Size(293, 46);
             this.btnBuscar.TabIndex = 39;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
@@ -362,10 +387,10 @@
             // 
             this.btnPlaylist.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnPlaylist.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPlaylist.Location = new System.Drawing.Point(169, 197);
-            this.btnPlaylist.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPlaylist.Location = new System.Drawing.Point(225, 242);
+            this.btnPlaylist.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPlaylist.Name = "btnPlaylist";
-            this.btnPlaylist.Size = new System.Drawing.Size(220, 37);
+            this.btnPlaylist.Size = new System.Drawing.Size(293, 46);
             this.btnPlaylist.TabIndex = 40;
             this.btnPlaylist.Text = "Playlist";
             this.btnPlaylist.UseVisualStyleBackColor = false;
@@ -375,10 +400,10 @@
             // 
             this.btnSocial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnSocial.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSocial.Location = new System.Drawing.Point(169, 296);
-            this.btnSocial.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSocial.Location = new System.Drawing.Point(225, 364);
+            this.btnSocial.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSocial.Name = "btnSocial";
-            this.btnSocial.Size = new System.Drawing.Size(220, 37);
+            this.btnSocial.Size = new System.Drawing.Size(293, 46);
             this.btnSocial.TabIndex = 42;
             this.btnSocial.Text = "Social";
             this.btnSocial.UseVisualStyleBackColor = false;
@@ -388,10 +413,10 @@
             // 
             this.btnFavoritos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnFavoritos.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFavoritos.Location = new System.Drawing.Point(169, 246);
-            this.btnFavoritos.Margin = new System.Windows.Forms.Padding(2);
+            this.btnFavoritos.Location = new System.Drawing.Point(225, 303);
+            this.btnFavoritos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnFavoritos.Name = "btnFavoritos";
-            this.btnFavoritos.Size = new System.Drawing.Size(220, 37);
+            this.btnFavoritos.Size = new System.Drawing.Size(293, 46);
             this.btnFavoritos.TabIndex = 41;
             this.btnFavoritos.Text = "Favoritos";
             this.btnFavoritos.UseVisualStyleBackColor = false;
@@ -401,10 +426,10 @@
             // 
             this.btnPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnPerfil.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPerfil.Location = new System.Drawing.Point(169, 348);
-            this.btnPerfil.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPerfil.Location = new System.Drawing.Point(225, 428);
+            this.btnPerfil.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPerfil.Name = "btnPerfil";
-            this.btnPerfil.Size = new System.Drawing.Size(220, 37);
+            this.btnPerfil.Size = new System.Drawing.Size(293, 46);
             this.btnPerfil.TabIndex = 44;
             this.btnPerfil.Text = "Perfil";
             this.btnPerfil.UseVisualStyleBackColor = false;
@@ -414,10 +439,10 @@
             // 
             this.btnAtras.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnAtras.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtras.Location = new System.Drawing.Point(405, 348);
-            this.btnAtras.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAtras.Location = new System.Drawing.Point(540, 428);
+            this.btnAtras.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAtras.Name = "btnAtras";
-            this.btnAtras.Size = new System.Drawing.Size(220, 37);
+            this.btnAtras.Size = new System.Drawing.Size(293, 46);
             this.btnAtras.TabIndex = 43;
             this.btnAtras.Text = "Cerrar Sesion";
             this.btnAtras.UseVisualStyleBackColor = false;
@@ -427,10 +452,10 @@
             // 
             this.BtnListaInteligente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.BtnListaInteligente.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnListaInteligente.Location = new System.Drawing.Point(405, 296);
-            this.BtnListaInteligente.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnListaInteligente.Location = new System.Drawing.Point(540, 364);
+            this.BtnListaInteligente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnListaInteligente.Name = "BtnListaInteligente";
-            this.BtnListaInteligente.Size = new System.Drawing.Size(220, 37);
+            this.BtnListaInteligente.Size = new System.Drawing.Size(293, 46);
             this.BtnListaInteligente.TabIndex = 48;
             this.BtnListaInteligente.Text = "Lista Inteligente";
             this.BtnListaInteligente.UseVisualStyleBackColor = false;
@@ -440,10 +465,10 @@
             // 
             this.btnDescargas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnDescargas.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDescargas.Location = new System.Drawing.Point(405, 246);
-            this.btnDescargas.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDescargas.Location = new System.Drawing.Point(540, 303);
+            this.btnDescargas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDescargas.Name = "btnDescargas";
-            this.btnDescargas.Size = new System.Drawing.Size(220, 37);
+            this.btnDescargas.Size = new System.Drawing.Size(293, 46);
             this.btnDescargas.TabIndex = 47;
             this.btnDescargas.Text = "Descargas";
             this.btnDescargas.UseVisualStyleBackColor = false;
@@ -453,10 +478,10 @@
             // 
             this.btnHistorial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnHistorial.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHistorial.Location = new System.Drawing.Point(405, 197);
-            this.btnHistorial.Margin = new System.Windows.Forms.Padding(2);
+            this.btnHistorial.Location = new System.Drawing.Point(540, 242);
+            this.btnHistorial.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnHistorial.Name = "btnHistorial";
-            this.btnHistorial.Size = new System.Drawing.Size(220, 37);
+            this.btnHistorial.Size = new System.Drawing.Size(293, 46);
             this.btnHistorial.TabIndex = 46;
             this.btnHistorial.Text = "Historial";
             this.btnHistorial.UseVisualStyleBackColor = false;
@@ -466,10 +491,10 @@
             // 
             this.btnKaraoke.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnKaraoke.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKaraoke.Location = new System.Drawing.Point(405, 147);
-            this.btnKaraoke.Margin = new System.Windows.Forms.Padding(2);
+            this.btnKaraoke.Location = new System.Drawing.Point(540, 181);
+            this.btnKaraoke.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnKaraoke.Name = "btnKaraoke";
-            this.btnKaraoke.Size = new System.Drawing.Size(220, 37);
+            this.btnKaraoke.Size = new System.Drawing.Size(293, 46);
             this.btnKaraoke.TabIndex = 45;
             this.btnKaraoke.Text = "Karaoke";
             this.btnKaraoke.UseVisualStyleBackColor = false;
@@ -492,10 +517,10 @@
             this.panel_perfil_de_usuario.Controls.Add(this.btn_atras_de_registrarse);
             this.panel_perfil_de_usuario.Controls.Add(this.btn_editar_perfil_usuario);
             this.panel_perfil_de_usuario.Controls.Add(this.label1);
-            this.panel_perfil_de_usuario.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_perfil_de_usuario.Location = new System.Drawing.Point(0, 24);
+            this.panel_perfil_de_usuario.Location = new System.Drawing.Point(455, 384);
+            this.panel_perfil_de_usuario.Margin = new System.Windows.Forms.Padding(4);
             this.panel_perfil_de_usuario.Name = "panel_perfil_de_usuario";
-            this.panel_perfil_de_usuario.Size = new System.Drawing.Size(807, 421);
+            this.panel_perfil_de_usuario.Size = new System.Drawing.Size(43, 30);
             this.panel_perfil_de_usuario.TabIndex = 50;
             this.panel_perfil_de_usuario.Visible = false;
             this.panel_perfil_de_usuario.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_perfil_de_usuario_Paint);
@@ -506,9 +531,10 @@
             this.checkbox_privado_editar_usuario.Enabled = false;
             this.checkbox_privado_editar_usuario.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkbox_privado_editar_usuario.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.checkbox_privado_editar_usuario.Location = new System.Drawing.Point(366, 301);
+            this.checkbox_privado_editar_usuario.Location = new System.Drawing.Point(488, 370);
+            this.checkbox_privado_editar_usuario.Margin = new System.Windows.Forms.Padding(4);
             this.checkbox_privado_editar_usuario.Name = "checkbox_privado_editar_usuario";
-            this.checkbox_privado_editar_usuario.Size = new System.Drawing.Size(96, 31);
+            this.checkbox_privado_editar_usuario.Size = new System.Drawing.Size(121, 39);
             this.checkbox_privado_editar_usuario.TabIndex = 63;
             this.checkbox_privado_editar_usuario.Text = "Privado";
             this.checkbox_privado_editar_usuario.UseVisualStyleBackColor = true;
@@ -519,10 +545,9 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(61, 297);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Location = new System.Drawing.Point(81, 366);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(129, 33);
+            this.label10.Size = new System.Drawing.Size(156, 42);
             this.label10.TabIndex = 62;
             this.label10.Tag = "";
             this.label10.Text = "Privacidad";
@@ -531,10 +556,10 @@
             // 
             this.btn_guardar_cambios_perfil_usuario.BackColor = System.Drawing.Color.White;
             this.btn_guardar_cambios_perfil_usuario.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_guardar_cambios_perfil_usuario.Location = new System.Drawing.Point(601, 358);
-            this.btn_guardar_cambios_perfil_usuario.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_guardar_cambios_perfil_usuario.Location = new System.Drawing.Point(801, 441);
+            this.btn_guardar_cambios_perfil_usuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_guardar_cambios_perfil_usuario.Name = "btn_guardar_cambios_perfil_usuario";
-            this.btn_guardar_cambios_perfil_usuario.Size = new System.Drawing.Size(176, 29);
+            this.btn_guardar_cambios_perfil_usuario.Size = new System.Drawing.Size(235, 36);
             this.btn_guardar_cambios_perfil_usuario.TabIndex = 61;
             this.btn_guardar_cambios_perfil_usuario.Text = "Guardar Cambios";
             this.btn_guardar_cambios_perfil_usuario.UseVisualStyleBackColor = false;
@@ -546,9 +571,10 @@
             this.checkbox_para_ver_contraseña_perfil_usuraio.AutoSize = true;
             this.checkbox_para_ver_contraseña_perfil_usuraio.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkbox_para_ver_contraseña_perfil_usuraio.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.checkbox_para_ver_contraseña_perfil_usuraio.Location = new System.Drawing.Point(695, 253);
+            this.checkbox_para_ver_contraseña_perfil_usuraio.Location = new System.Drawing.Point(927, 311);
+            this.checkbox_para_ver_contraseña_perfil_usuraio.Margin = new System.Windows.Forms.Padding(4);
             this.checkbox_para_ver_contraseña_perfil_usuraio.Name = "checkbox_para_ver_contraseña_perfil_usuraio";
-            this.checkbox_para_ver_contraseña_perfil_usuraio.Size = new System.Drawing.Size(70, 23);
+            this.checkbox_para_ver_contraseña_perfil_usuraio.Size = new System.Drawing.Size(88, 29);
             this.checkbox_para_ver_contraseña_perfil_usuraio.TabIndex = 60;
             this.checkbox_para_ver_contraseña_perfil_usuraio.Text = "Visible";
             this.checkbox_para_ver_contraseña_perfil_usuraio.UseVisualStyleBackColor = true;
@@ -557,30 +583,33 @@
             // nombredeusuario_txt_perfil_usuario
             // 
             this.nombredeusuario_txt_perfil_usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nombredeusuario_txt_perfil_usuario.Location = new System.Drawing.Point(366, 127);
+            this.nombredeusuario_txt_perfil_usuario.Location = new System.Drawing.Point(488, 156);
+            this.nombredeusuario_txt_perfil_usuario.Margin = new System.Windows.Forms.Padding(4);
             this.nombredeusuario_txt_perfil_usuario.Name = "nombredeusuario_txt_perfil_usuario";
             this.nombredeusuario_txt_perfil_usuario.ReadOnly = true;
-            this.nombredeusuario_txt_perfil_usuario.Size = new System.Drawing.Size(282, 29);
+            this.nombredeusuario_txt_perfil_usuario.Size = new System.Drawing.Size(375, 34);
             this.nombredeusuario_txt_perfil_usuario.TabIndex = 59;
             this.nombredeusuario_txt_perfil_usuario.TextChanged += new System.EventHandler(this.nombredeusuario_txt_perfil_usuario_TextChanged);
             // 
             // mail_txt_perfil_usuario
             // 
             this.mail_txt_perfil_usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mail_txt_perfil_usuario.Location = new System.Drawing.Point(366, 188);
+            this.mail_txt_perfil_usuario.Location = new System.Drawing.Point(488, 231);
+            this.mail_txt_perfil_usuario.Margin = new System.Windows.Forms.Padding(4);
             this.mail_txt_perfil_usuario.Name = "mail_txt_perfil_usuario";
             this.mail_txt_perfil_usuario.ReadOnly = true;
-            this.mail_txt_perfil_usuario.Size = new System.Drawing.Size(282, 29);
+            this.mail_txt_perfil_usuario.Size = new System.Drawing.Size(375, 34);
             this.mail_txt_perfil_usuario.TabIndex = 58;
             this.mail_txt_perfil_usuario.TextChanged += new System.EventHandler(this.mail_txt_perfil_usuario_TextChanged);
             // 
             // pass_txt_perfil_usuario
             // 
             this.pass_txt_perfil_usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pass_txt_perfil_usuario.Location = new System.Drawing.Point(366, 248);
+            this.pass_txt_perfil_usuario.Location = new System.Drawing.Point(488, 305);
+            this.pass_txt_perfil_usuario.Margin = new System.Windows.Forms.Padding(4);
             this.pass_txt_perfil_usuario.Name = "pass_txt_perfil_usuario";
             this.pass_txt_perfil_usuario.ReadOnly = true;
-            this.pass_txt_perfil_usuario.Size = new System.Drawing.Size(282, 29);
+            this.pass_txt_perfil_usuario.Size = new System.Drawing.Size(375, 34);
             this.pass_txt_perfil_usuario.TabIndex = 57;
             this.pass_txt_perfil_usuario.UseSystemPasswordChar = true;
             this.pass_txt_perfil_usuario.TextChanged += new System.EventHandler(this.pass_txt_perfil_usuario_TextChanged);
@@ -588,10 +617,11 @@
             // nombrecompleto_txt_perfil_usuario
             // 
             this.nombrecompleto_txt_perfil_usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nombrecompleto_txt_perfil_usuario.Location = new System.Drawing.Point(366, 68);
+            this.nombrecompleto_txt_perfil_usuario.Location = new System.Drawing.Point(488, 84);
+            this.nombrecompleto_txt_perfil_usuario.Margin = new System.Windows.Forms.Padding(4);
             this.nombrecompleto_txt_perfil_usuario.Name = "nombrecompleto_txt_perfil_usuario";
             this.nombrecompleto_txt_perfil_usuario.ReadOnly = true;
-            this.nombrecompleto_txt_perfil_usuario.Size = new System.Drawing.Size(282, 29);
+            this.nombrecompleto_txt_perfil_usuario.Size = new System.Drawing.Size(375, 34);
             this.nombrecompleto_txt_perfil_usuario.TabIndex = 56;
             this.nombrecompleto_txt_perfil_usuario.TextChanged += new System.EventHandler(this.nombrecompleto_txt_perfil_usuario_TextChanged);
             // 
@@ -600,10 +630,9 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(61, 244);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(81, 300);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(138, 33);
+            this.label7.Size = new System.Drawing.Size(173, 42);
             this.label7.TabIndex = 55;
             this.label7.Tag = "";
             this.label7.Text = "Contraseña";
@@ -613,10 +642,9 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(61, 127);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(81, 156);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(229, 33);
+            this.label5.Size = new System.Drawing.Size(285, 42);
             this.label5.TabIndex = 54;
             this.label5.Text = "Nombre de Usuario";
             // 
@@ -625,10 +653,9 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(61, 187);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(81, 230);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 33);
+            this.label4.Size = new System.Drawing.Size(74, 42);
             this.label4.TabIndex = 53;
             this.label4.Text = "Mail";
             // 
@@ -637,10 +664,9 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(61, 68);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(81, 84);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(211, 33);
+            this.label6.Size = new System.Drawing.Size(265, 42);
             this.label6.TabIndex = 52;
             this.label6.Text = "Nombre Completo";
             this.label6.Click += new System.EventHandler(this.label6_Click);
@@ -648,10 +674,10 @@
             // btn_atras_de_registrarse
             // 
             this.btn_atras_de_registrarse.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_atras_de_registrarse.Location = new System.Drawing.Point(709, 19);
-            this.btn_atras_de_registrarse.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_atras_de_registrarse.Location = new System.Drawing.Point(945, 23);
+            this.btn_atras_de_registrarse.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_atras_de_registrarse.Name = "btn_atras_de_registrarse";
-            this.btn_atras_de_registrarse.Size = new System.Drawing.Size(71, 33);
+            this.btn_atras_de_registrarse.Size = new System.Drawing.Size(95, 41);
             this.btn_atras_de_registrarse.TabIndex = 49;
             this.btn_atras_de_registrarse.Text = "Atras";
             this.btn_atras_de_registrarse.UseVisualStyleBackColor = true;
@@ -661,10 +687,10 @@
             // 
             this.btn_editar_perfil_usuario.BackColor = System.Drawing.Color.White;
             this.btn_editar_perfil_usuario.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_editar_perfil_usuario.Location = new System.Drawing.Point(185, 356);
-            this.btn_editar_perfil_usuario.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_editar_perfil_usuario.Location = new System.Drawing.Point(247, 438);
+            this.btn_editar_perfil_usuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_editar_perfil_usuario.Name = "btn_editar_perfil_usuario";
-            this.btn_editar_perfil_usuario.Size = new System.Drawing.Size(289, 51);
+            this.btn_editar_perfil_usuario.Size = new System.Drawing.Size(385, 63);
             this.btn_editar_perfil_usuario.TabIndex = 48;
             this.btn_editar_perfil_usuario.Text = "Editar Perfil";
             this.btn_editar_perfil_usuario.UseVisualStyleBackColor = false;
@@ -675,10 +701,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(247, 3);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(329, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(285, 45);
+            this.label1.Size = new System.Drawing.Size(350, 56);
             this.label1.TabIndex = 46;
             this.label1.Text = "Perfil de Usuario";
             // 
@@ -686,10 +711,10 @@
             // 
             this.btn_premium.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btn_premium.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_premium.Location = new System.Drawing.Point(564, 36);
-            this.btn_premium.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_premium.Location = new System.Drawing.Point(752, 44);
+            this.btn_premium.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_premium.Name = "btn_premium";
-            this.btn_premium.Size = new System.Drawing.Size(225, 39);
+            this.btn_premium.Size = new System.Drawing.Size(300, 48);
             this.btn_premium.TabIndex = 51;
             this.btn_premium.Text = "Conviertete en PREMIUM";
             this.btn_premium.UseVisualStyleBackColor = false;
@@ -706,9 +731,10 @@
             this.Panel_premium.Controls.Add(this.mailpremiumlabel);
             this.Panel_premium.Controls.Add(this.emialpremiumtextbox);
             this.Panel_premium.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Panel_premium.Location = new System.Drawing.Point(767, 36);
+            this.Panel_premium.Location = new System.Drawing.Point(1023, 44);
+            this.Panel_premium.Margin = new System.Windows.Forms.Padding(4);
             this.Panel_premium.Name = "Panel_premium";
-            this.Panel_premium.Size = new System.Drawing.Size(21, 20);
+            this.Panel_premium.Size = new System.Drawing.Size(28, 25);
             this.Panel_premium.TabIndex = 52;
             this.Panel_premium.Visible = false;
             this.Panel_premium.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel_premium_Paint);
@@ -718,10 +744,10 @@
             this.checkBox_contraseña_premium.AutoSize = true;
             this.checkBox_contraseña_premium.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox_contraseña_premium.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.checkBox_contraseña_premium.Location = new System.Drawing.Point(651, 233);
-            this.checkBox_contraseña_premium.Margin = new System.Windows.Forms.Padding(2);
+            this.checkBox_contraseña_premium.Location = new System.Drawing.Point(868, 287);
+            this.checkBox_contraseña_premium.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBox_contraseña_premium.Name = "checkBox_contraseña_premium";
-            this.checkBox_contraseña_premium.Size = new System.Drawing.Size(79, 27);
+            this.checkBox_contraseña_premium.Size = new System.Drawing.Size(99, 33);
             this.checkBox_contraseña_premium.TabIndex = 53;
             this.checkBox_contraseña_premium.Text = "Visible";
             this.checkBox_contraseña_premium.UseVisualStyleBackColor = true;
@@ -730,9 +756,10 @@
             // btnatraspremium
             // 
             this.btnatraspremium.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnatraspremium.Location = new System.Drawing.Point(661, 16);
+            this.btnatraspremium.Location = new System.Drawing.Point(881, 20);
+            this.btnatraspremium.Margin = new System.Windows.Forms.Padding(4);
             this.btnatraspremium.Name = "btnatraspremium";
-            this.btnatraspremium.Size = new System.Drawing.Size(118, 52);
+            this.btnatraspremium.Size = new System.Drawing.Size(157, 64);
             this.btnatraspremium.TabIndex = 43;
             this.btnatraspremium.Text = "Atras";
             this.btnatraspremium.UseVisualStyleBackColor = true;
@@ -742,10 +769,10 @@
             // 
             this.btn_premium_listo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btn_premium_listo.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_premium_listo.Location = new System.Drawing.Point(296, 303);
-            this.btn_premium_listo.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_premium_listo.Location = new System.Drawing.Point(395, 373);
+            this.btn_premium_listo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_premium_listo.Name = "btn_premium_listo";
-            this.btn_premium_listo.Size = new System.Drawing.Size(262, 57);
+            this.btn_premium_listo.Size = new System.Drawing.Size(349, 70);
             this.btn_premium_listo.TabIndex = 42;
             this.btn_premium_listo.Text = "Listo";
             this.btn_premium_listo.UseVisualStyleBackColor = false;
@@ -756,19 +783,19 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Comic Sans MS", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(196, 43);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Location = new System.Drawing.Point(261, 53);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(436, 68);
+            this.label9.Size = new System.Drawing.Size(544, 84);
             this.label9.TabIndex = 41;
             this.label9.Text = "Alainid PREMIUM";
             // 
             // contraseñapremiumtextbox
             // 
             this.contraseñapremiumtextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contraseñapremiumtextbox.Location = new System.Drawing.Point(256, 231);
+            this.contraseñapremiumtextbox.Location = new System.Drawing.Point(341, 284);
+            this.contraseñapremiumtextbox.Margin = new System.Windows.Forms.Padding(4);
             this.contraseñapremiumtextbox.Name = "contraseñapremiumtextbox";
-            this.contraseñapremiumtextbox.Size = new System.Drawing.Size(376, 29);
+            this.contraseñapremiumtextbox.Size = new System.Drawing.Size(500, 34);
             this.contraseñapremiumtextbox.TabIndex = 40;
             this.contraseñapremiumtextbox.TextChanged += new System.EventHandler(this.contraseñapremiumtextbox_TextChanged);
             // 
@@ -779,10 +806,9 @@
             this.label8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label8.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(86, 228);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Location = new System.Drawing.Point(115, 281);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(140, 35);
+            this.label8.Size = new System.Drawing.Size(175, 44);
             this.label8.TabIndex = 39;
             this.label8.Text = "Contraseña";
             // 
@@ -793,37 +819,41 @@
             this.mailpremiumlabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.mailpremiumlabel.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mailpremiumlabel.ForeColor = System.Drawing.Color.White;
-            this.mailpremiumlabel.Location = new System.Drawing.Point(150, 157);
-            this.mailpremiumlabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.mailpremiumlabel.Location = new System.Drawing.Point(200, 193);
             this.mailpremiumlabel.Name = "mailpremiumlabel";
-            this.mailpremiumlabel.Size = new System.Drawing.Size(76, 35);
+            this.mailpremiumlabel.Size = new System.Drawing.Size(92, 44);
             this.mailpremiumlabel.TabIndex = 38;
             this.mailpremiumlabel.Text = "Email";
             // 
             // emialpremiumtextbox
             // 
             this.emialpremiumtextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emialpremiumtextbox.Location = new System.Drawing.Point(256, 160);
+            this.emialpremiumtextbox.Location = new System.Drawing.Point(341, 197);
+            this.emialpremiumtextbox.Margin = new System.Windows.Forms.Padding(4);
             this.emialpremiumtextbox.Name = "emialpremiumtextbox";
-            this.emialpremiumtextbox.Size = new System.Drawing.Size(376, 29);
+            this.emialpremiumtextbox.Size = new System.Drawing.Size(500, 34);
             this.emialpremiumtextbox.TabIndex = 0;
             this.emialpremiumtextbox.TextChanged += new System.EventHandler(this.emialpremiumtextbox_TextChanged);
             // 
             // panel_buscar
             // 
+            this.panel_buscar.Controls.Add(this.panel_perfil_de_usuario);
             this.panel_buscar.Controls.Add(this.panel_busqueda_simple);
             this.panel_buscar.Controls.Add(this.panel_busqueda_multiple);
             this.panel_buscar.Controls.Add(this.btn_atras_de_inicio_sesion);
             this.panel_buscar.Controls.Add(this.btn_busqueda_simple);
             this.panel_buscar.Controls.Add(this.btn_busqueda_multiple);
-            this.panel_buscar.Location = new System.Drawing.Point(372, 147);
+            this.panel_buscar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_buscar.Location = new System.Drawing.Point(0, 30);
+            this.panel_buscar.Margin = new System.Windows.Forms.Padding(4);
             this.panel_buscar.Name = "panel_buscar";
-            this.panel_buscar.Size = new System.Drawing.Size(17, 13);
+            this.panel_buscar.Size = new System.Drawing.Size(1076, 518);
             this.panel_buscar.TabIndex = 53;
             this.panel_buscar.Visible = false;
             // 
             // panel_busqueda_simple
             // 
+            this.panel_busqueda_simple.Controls.Add(this.panel_video_seleccionado);
             this.panel_busqueda_simple.Controls.Add(this.panel_cancion_seleccionada_busqueda_simple);
             this.panel_busqueda_simple.Controls.Add(this.busquedasimple_valor_criterio_desplegable);
             this.panel_busqueda_simple.Controls.Add(this.label13);
@@ -835,11 +865,274 @@
             this.panel_busqueda_simple.Controls.Add(this.btn_buscar_busqueda_simple);
             this.panel_busqueda_simple.Controls.Add(this.label12);
             this.panel_busqueda_simple.Controls.Add(this.btn_atras_busquedasimple);
-            this.panel_busqueda_simple.Location = new System.Drawing.Point(347, 76);
+            this.panel_busqueda_simple.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_busqueda_simple.Location = new System.Drawing.Point(0, 0);
+            this.panel_busqueda_simple.Margin = new System.Windows.Forms.Padding(4);
             this.panel_busqueda_simple.Name = "panel_busqueda_simple";
-            this.panel_busqueda_simple.Size = new System.Drawing.Size(21, 29);
+            this.panel_busqueda_simple.Size = new System.Drawing.Size(1076, 518);
             this.panel_busqueda_simple.TabIndex = 76;
             this.panel_busqueda_simple.Visible = false;
+            // 
+            // panel_video_seleccionado
+            // 
+            this.panel_video_seleccionado.Controls.Add(this.btn_Atrás);
+            this.panel_video_seleccionado.Controls.Add(this.label28);
+            this.panel_video_seleccionado.Controls.Add(this.textBox_Reproducciones);
+            this.panel_video_seleccionado.Controls.Add(this.label26);
+            this.panel_video_seleccionado.Controls.Add(this.textBox_Año_Grabacion);
+            this.panel_video_seleccionado.Controls.Add(this.label27);
+            this.panel_video_seleccionado.Controls.Add(this.textBox_Calificacion);
+            this.panel_video_seleccionado.Controls.Add(this.listBox_Actores);
+            this.panel_video_seleccionado.Controls.Add(this.label25);
+            this.panel_video_seleccionado.Controls.Add(this.label24);
+            this.panel_video_seleccionado.Controls.Add(this.textBox_Nombre_Director);
+            this.panel_video_seleccionado.Controls.Add(this.label23);
+            this.panel_video_seleccionado.Controls.Add(this.textBox_Nombre_Video);
+            this.panel_video_seleccionado.Controls.Add(this.label22);
+            this.panel_video_seleccionado.Controls.Add(this.label21);
+            this.panel_video_seleccionado.Controls.Add(this.comboBox1);
+            this.panel_video_seleccionado.Controls.Add(this.Calificacion);
+            this.panel_video_seleccionado.Controls.Add(this.btnCalificar);
+            this.panel_video_seleccionado.Controls.Add(this.btnAgregar_A_Cola);
+            this.panel_video_seleccionado.Controls.Add(this.btnAgregar_A_Playlist);
+            this.panel_video_seleccionado.Controls.Add(this.btnAgregar_A_Favoritos);
+            this.panel_video_seleccionado.Controls.Add(this.axWindowsMediaPlayerVideo);
+            this.panel_video_seleccionado.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_video_seleccionado.Location = new System.Drawing.Point(0, 0);
+            this.panel_video_seleccionado.Name = "panel_video_seleccionado";
+            this.panel_video_seleccionado.Size = new System.Drawing.Size(1076, 518);
+            this.panel_video_seleccionado.TabIndex = 127;
+            this.panel_video_seleccionado.Visible = false;
+            this.panel_video_seleccionado.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_video_seleccionado_Paint);
+            // 
+            // btn_Atrás
+            // 
+            this.btn_Atrás.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Atrás.Location = new System.Drawing.Point(12, 468);
+            this.btn_Atrás.Name = "btn_Atrás";
+            this.btn_Atrás.Size = new System.Drawing.Size(89, 38);
+            this.btn_Atrás.TabIndex = 21;
+            this.btn_Atrás.Text = "Atrás";
+            this.btn_Atrás.UseVisualStyleBackColor = true;
+            this.btn_Atrás.Click += new System.EventHandler(this.btn_Atrás_Click);
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label28.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.ForeColor = System.Drawing.SystemColors.Window;
+            this.label28.Location = new System.Drawing.Point(3, 364);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(164, 28);
+            this.label28.TabIndex = 20;
+            this.label28.Text = "Reproducciones:";
+            // 
+            // textBox_Reproducciones
+            // 
+            this.textBox_Reproducciones.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_Reproducciones.Location = new System.Drawing.Point(3, 395);
+            this.textBox_Reproducciones.Name = "textBox_Reproducciones";
+            this.textBox_Reproducciones.Size = new System.Drawing.Size(230, 35);
+            this.textBox_Reproducciones.TabIndex = 19;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label26.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.ForeColor = System.Drawing.SystemColors.Window;
+            this.label26.Location = new System.Drawing.Point(2, 295);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(149, 28);
+            this.label26.TabIndex = 18;
+            this.label26.Text = "Año grabación:";
+            // 
+            // textBox_Año_Grabacion
+            // 
+            this.textBox_Año_Grabacion.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_Año_Grabacion.Location = new System.Drawing.Point(2, 326);
+            this.textBox_Año_Grabacion.Name = "textBox_Año_Grabacion";
+            this.textBox_Año_Grabacion.Size = new System.Drawing.Size(230, 35);
+            this.textBox_Año_Grabacion.TabIndex = 17;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label27.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.ForeColor = System.Drawing.SystemColors.Window;
+            this.label27.Location = new System.Drawing.Point(2, 226);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(124, 28);
+            this.label27.TabIndex = 16;
+            this.label27.Text = "Calificación:";
+            // 
+            // textBox_Calificacion
+            // 
+            this.textBox_Calificacion.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_Calificacion.Location = new System.Drawing.Point(2, 257);
+            this.textBox_Calificacion.Name = "textBox_Calificacion";
+            this.textBox_Calificacion.Size = new System.Drawing.Size(230, 35);
+            this.textBox_Calificacion.TabIndex = 15;
+            // 
+            // listBox_Actores
+            // 
+            this.listBox_Actores.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBox_Actores.FormattingEnabled = true;
+            this.listBox_Actores.ItemHeight = 28;
+            this.listBox_Actores.Location = new System.Drawing.Point(3, 184);
+            this.listBox_Actores.Name = "listBox_Actores";
+            this.listBox_Actores.Size = new System.Drawing.Size(230, 32);
+            this.listBox_Actores.TabIndex = 14;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label25.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.ForeColor = System.Drawing.SystemColors.Window;
+            this.label25.Location = new System.Drawing.Point(3, 149);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(92, 28);
+            this.label25.TabIndex = 13;
+            this.label25.Text = "Actores:";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label24.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.ForeColor = System.Drawing.SystemColors.Window;
+            this.label24.Location = new System.Drawing.Point(3, 80);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(98, 28);
+            this.label24.TabIndex = 12;
+            this.label24.Text = "Director:";
+            // 
+            // textBox_Nombre_Director
+            // 
+            this.textBox_Nombre_Director.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_Nombre_Director.Location = new System.Drawing.Point(3, 111);
+            this.textBox_Nombre_Director.Name = "textBox_Nombre_Director";
+            this.textBox_Nombre_Director.Size = new System.Drawing.Size(230, 35);
+            this.textBox_Nombre_Director.TabIndex = 11;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label23.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.ForeColor = System.Drawing.SystemColors.Window;
+            this.label23.Location = new System.Drawing.Point(3, 11);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(93, 28);
+            this.label23.TabIndex = 10;
+            this.label23.Text = "Nombre:";
+            // 
+            // textBox_Nombre_Video
+            // 
+            this.textBox_Nombre_Video.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_Nombre_Video.Location = new System.Drawing.Point(3, 42);
+            this.textBox_Nombre_Video.Name = "textBox_Nombre_Video";
+            this.textBox_Nombre_Video.Size = new System.Drawing.Size(230, 35);
+            this.textBox_Nombre_Video.TabIndex = 9;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.ForeColor = System.Drawing.SystemColors.Window;
+            this.label22.Location = new System.Drawing.Point(859, 120);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(197, 28);
+            this.label22.TabIndex = 8;
+            this.label22.Text = "Seleccionar playlist:";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.SystemColors.Window;
+            this.label21.Location = new System.Drawing.Point(840, 374);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(236, 28);
+            this.label21.TabIndex = 7;
+            this.label21.Text = "Seleccionar calificación:";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(862, 151);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(194, 36);
+            this.comboBox1.TabIndex = 6;
+            // 
+            // Calificacion
+            // 
+            this.Calificacion.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Calificacion.Location = new System.Drawing.Point(862, 405);
+            this.Calificacion.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.Calificacion.Name = "Calificacion";
+            this.Calificacion.Size = new System.Drawing.Size(194, 35);
+            this.Calificacion.TabIndex = 5;
+            // 
+            // btnCalificar
+            // 
+            this.btnCalificar.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCalificar.Location = new System.Drawing.Point(862, 445);
+            this.btnCalificar.Name = "btnCalificar";
+            this.btnCalificar.Size = new System.Drawing.Size(194, 38);
+            this.btnCalificar.TabIndex = 4;
+            this.btnCalificar.Text = "Calificar";
+            this.btnCalificar.UseVisualStyleBackColor = true;
+            this.btnCalificar.Click += new System.EventHandler(this.btnCalificar_Click);
+            // 
+            // btnAgregar_A_Cola
+            // 
+            this.btnAgregar_A_Cola.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar_A_Cola.Location = new System.Drawing.Point(862, 287);
+            this.btnAgregar_A_Cola.Name = "btnAgregar_A_Cola";
+            this.btnAgregar_A_Cola.Size = new System.Drawing.Size(194, 38);
+            this.btnAgregar_A_Cola.TabIndex = 3;
+            this.btnAgregar_A_Cola.Text = "Agregar a cola";
+            this.btnAgregar_A_Cola.UseVisualStyleBackColor = true;
+            this.btnAgregar_A_Cola.Click += new System.EventHandler(this.btnAgregar_A_Cola_Click);
+            // 
+            // btnAgregar_A_Playlist
+            // 
+            this.btnAgregar_A_Playlist.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar_A_Playlist.Location = new System.Drawing.Point(862, 193);
+            this.btnAgregar_A_Playlist.Name = "btnAgregar_A_Playlist";
+            this.btnAgregar_A_Playlist.Size = new System.Drawing.Size(194, 38);
+            this.btnAgregar_A_Playlist.TabIndex = 2;
+            this.btnAgregar_A_Playlist.Text = "Agregar a Plys";
+            this.btnAgregar_A_Playlist.UseVisualStyleBackColor = true;
+            this.btnAgregar_A_Playlist.Click += new System.EventHandler(this.btnAgregar_A_Playlist_Click);
+            // 
+            // btnAgregar_A_Favoritos
+            // 
+            this.btnAgregar_A_Favoritos.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar_A_Favoritos.Location = new System.Drawing.Point(862, 21);
+            this.btnAgregar_A_Favoritos.Name = "btnAgregar_A_Favoritos";
+            this.btnAgregar_A_Favoritos.Size = new System.Drawing.Size(194, 38);
+            this.btnAgregar_A_Favoritos.TabIndex = 1;
+            this.btnAgregar_A_Favoritos.Text = "Agregar a fav";
+            this.btnAgregar_A_Favoritos.UseVisualStyleBackColor = true;
+            this.btnAgregar_A_Favoritos.Click += new System.EventHandler(this.btnAgregar_A_Favoritos_Click);
+            // 
+            // axWindowsMediaPlayerVideo
+            // 
+            this.axWindowsMediaPlayerVideo.Enabled = true;
+            this.axWindowsMediaPlayerVideo.Location = new System.Drawing.Point(239, 112);
+            this.axWindowsMediaPlayerVideo.Name = "axWindowsMediaPlayerVideo";
+            this.axWindowsMediaPlayerVideo.Size = new System.Drawing.Size(374, 249);
+            this.axWindowsMediaPlayerVideo.TabIndex = 0;
             // 
             // panel_cancion_seleccionada_busqueda_simple
             // 
@@ -859,9 +1152,10 @@
             this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.label15);
             this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.label17);
             this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.button2);
-            this.panel_cancion_seleccionada_busqueda_simple.Location = new System.Drawing.Point(733, 222);
+            this.panel_cancion_seleccionada_busqueda_simple.Location = new System.Drawing.Point(977, 273);
+            this.panel_cancion_seleccionada_busqueda_simple.Margin = new System.Windows.Forms.Padding(4);
             this.panel_cancion_seleccionada_busqueda_simple.Name = "panel_cancion_seleccionada_busqueda_simple";
-            this.panel_cancion_seleccionada_busqueda_simple.Size = new System.Drawing.Size(27, 29);
+            this.panel_cancion_seleccionada_busqueda_simple.Size = new System.Drawing.Size(36, 36);
             this.panel_cancion_seleccionada_busqueda_simple.TabIndex = 126;
             this.panel_cancion_seleccionada_busqueda_simple.Visible = false;
             // 
@@ -869,6 +1163,7 @@
             // 
             this.axWindowsMediaPlayer2.Enabled = true;
             this.axWindowsMediaPlayer2.Location = new System.Drawing.Point(0, 324);
+            this.axWindowsMediaPlayer2.Margin = new System.Windows.Forms.Padding(4);
             this.axWindowsMediaPlayer2.Name = "axWindowsMediaPlayer2";
             this.axWindowsMediaPlayer2.Size = new System.Drawing.Size(807, 93);
             this.axWindowsMediaPlayer2.TabIndex = 145;
@@ -876,51 +1171,58 @@
             // 
             // textBox9
             // 
-            this.textBox9.Location = new System.Drawing.Point(229, 233);
+            this.textBox9.Location = new System.Drawing.Point(305, 287);
+            this.textBox9.Margin = new System.Windows.Forms.Padding(4);
             this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(184, 20);
+            this.textBox9.Size = new System.Drawing.Size(244, 22);
             this.textBox9.TabIndex = 143;
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(229, 60);
+            this.textBox8.Location = new System.Drawing.Point(305, 74);
+            this.textBox8.Margin = new System.Windows.Forms.Padding(4);
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(184, 20);
+            this.textBox8.Size = new System.Drawing.Size(244, 22);
             this.textBox8.TabIndex = 142;
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(229, 94);
+            this.textBox6.Location = new System.Drawing.Point(305, 116);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(4);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(184, 20);
+            this.textBox6.Size = new System.Drawing.Size(244, 22);
             this.textBox6.TabIndex = 141;
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(229, 129);
+            this.textBox5.Location = new System.Drawing.Point(305, 159);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(4);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(184, 20);
+            this.textBox5.Size = new System.Drawing.Size(244, 22);
             this.textBox5.TabIndex = 140;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(229, 164);
+            this.textBox4.Location = new System.Drawing.Point(305, 202);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(184, 20);
+            this.textBox4.Size = new System.Drawing.Size(244, 22);
             this.textBox4.TabIndex = 139;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(229, 199);
+            this.textBox3.Location = new System.Drawing.Point(305, 245);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(184, 20);
+            this.textBox3.Size = new System.Drawing.Size(244, 22);
             this.textBox3.TabIndex = 138;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(229, 23);
+            this.textBox1.Location = new System.Drawing.Point(305, 28);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(184, 20);
+            this.textBox1.Size = new System.Drawing.Size(244, 22);
             this.textBox1.TabIndex = 137;
             // 
             // label20
@@ -929,10 +1231,9 @@
             this.label20.BackColor = System.Drawing.Color.Black;
             this.label20.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.White;
-            this.label20.Location = new System.Drawing.Point(49, 157);
-            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label20.Location = new System.Drawing.Point(65, 193);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(76, 27);
+            this.label20.Size = new System.Drawing.Size(95, 35);
             this.label20.TabIndex = 136;
             this.label20.Text = "Genero";
             // 
@@ -942,10 +1243,9 @@
             this.label19.BackColor = System.Drawing.Color.Black;
             this.label19.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.White;
-            this.label19.Location = new System.Drawing.Point(49, 229);
-            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label19.Location = new System.Drawing.Point(65, 282);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(150, 27);
+            this.label19.Size = new System.Drawing.Size(189, 35);
             this.label19.TabIndex = 135;
             this.label19.Text = "Reproducciones";
             // 
@@ -955,10 +1255,9 @@
             this.label18.BackColor = System.Drawing.Color.Black;
             this.label18.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(49, 122);
-            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label18.Location = new System.Drawing.Point(65, 150);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(67, 27);
+            this.label18.Size = new System.Drawing.Size(85, 35);
             this.label18.TabIndex = 134;
             this.label18.Text = "Album";
             // 
@@ -968,10 +1267,9 @@
             this.label2.BackColor = System.Drawing.Color.Black;
             this.label2.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(46, 193);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(61, 238);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(116, 27);
+            this.label2.Size = new System.Drawing.Size(146, 35);
             this.label2.TabIndex = 133;
             this.label2.Text = "Calificacion";
             // 
@@ -981,10 +1279,9 @@
             this.label16.BackColor = System.Drawing.Color.Black;
             this.label16.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(46, 87);
-            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label16.Location = new System.Drawing.Point(61, 107);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(111, 27);
+            this.label16.Size = new System.Drawing.Size(143, 35);
             this.label16.TabIndex = 132;
             this.label16.Text = "Compositor";
             // 
@@ -994,10 +1291,9 @@
             this.label15.BackColor = System.Drawing.Color.Black;
             this.label15.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(46, 54);
-            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label15.Location = new System.Drawing.Point(61, 66);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(95, 27);
+            this.label15.Size = new System.Drawing.Size(117, 35);
             this.label15.TabIndex = 130;
             this.label15.Text = "Cantante";
             // 
@@ -1007,20 +1303,19 @@
             this.label17.BackColor = System.Drawing.Color.Black;
             this.label17.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(46, 20);
-            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label17.Location = new System.Drawing.Point(61, 25);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(83, 27);
+            this.label17.Size = new System.Drawing.Size(106, 35);
             this.label17.TabIndex = 127;
             this.label17.Text = "Nombre";
             // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(717, 14);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Location = new System.Drawing.Point(956, 17);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(71, 35);
+            this.button2.Size = new System.Drawing.Size(95, 43);
             this.button2.TabIndex = 126;
             this.button2.Text = "Atras";
             this.button2.UseVisualStyleBackColor = true;
@@ -1031,9 +1326,10 @@
             this.busquedasimple_valor_criterio_desplegable.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.busquedasimple_valor_criterio_desplegable.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.busquedasimple_valor_criterio_desplegable.FormattingEnabled = true;
-            this.busquedasimple_valor_criterio_desplegable.Location = new System.Drawing.Point(296, 160);
+            this.busquedasimple_valor_criterio_desplegable.Location = new System.Drawing.Point(395, 197);
+            this.busquedasimple_valor_criterio_desplegable.Margin = new System.Windows.Forms.Padding(4);
             this.busquedasimple_valor_criterio_desplegable.Name = "busquedasimple_valor_criterio_desplegable";
-            this.busquedasimple_valor_criterio_desplegable.Size = new System.Drawing.Size(305, 37);
+            this.busquedasimple_valor_criterio_desplegable.Size = new System.Drawing.Size(405, 45);
             this.busquedasimple_valor_criterio_desplegable.TabIndex = 125;
             this.busquedasimple_valor_criterio_desplegable.SelectedIndexChanged += new System.EventHandler(this.busquedasimple_valor_criterio_desplegable_SelectedIndexChanged);
             // 
@@ -1044,10 +1340,9 @@
             this.label13.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label13.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(23, 157);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Location = new System.Drawing.Point(31, 193);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(164, 36);
+            this.label13.Size = new System.Drawing.Size(202, 44);
             this.label13.TabIndex = 124;
             this.label13.Text = "Palabra Clave";
             // 
@@ -1058,10 +1353,9 @@
             this.label14.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label14.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(23, 102);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Location = new System.Drawing.Point(31, 126);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(249, 36);
+            this.label14.Size = new System.Drawing.Size(311, 44);
             this.label14.TabIndex = 123;
             this.label14.Text = "Criterio de Busqueda";
             // 
@@ -1076,12 +1370,14 @@
             this.datagratview_busquedasimple.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colum_nombre,
             this.colum_artista});
-            this.datagratview_busquedasimple.Location = new System.Drawing.Point(32, 218);
+            this.datagratview_busquedasimple.Location = new System.Drawing.Point(43, 268);
+            this.datagratview_busquedasimple.Margin = new System.Windows.Forms.Padding(4);
             this.datagratview_busquedasimple.Name = "datagratview_busquedasimple";
             this.datagratview_busquedasimple.ReadOnly = true;
             this.datagratview_busquedasimple.RowHeadersVisible = false;
+            this.datagratview_busquedasimple.RowHeadersWidth = 51;
             this.datagratview_busquedasimple.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.datagratview_busquedasimple.Size = new System.Drawing.Size(728, 196);
+            this.datagratview_busquedasimple.Size = new System.Drawing.Size(971, 241);
             this.datagratview_busquedasimple.TabIndex = 121;
             this.datagratview_busquedasimple.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.datagratview_busquedasimple.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagratview_busquedasimple_CellContentDoubleClick);
@@ -1089,12 +1385,14 @@
             // colum_nombre
             // 
             this.colum_nombre.HeaderText = "Nombre";
+            this.colum_nombre.MinimumWidth = 6;
             this.colum_nombre.Name = "colum_nombre";
             this.colum_nombre.ReadOnly = true;
             // 
             // colum_artista
             // 
             this.colum_artista.HeaderText = "Artista";
+            this.colum_artista.MinimumWidth = 6;
             this.colum_artista.Name = "colum_artista";
             this.colum_artista.ReadOnly = true;
             // 
@@ -1103,10 +1401,10 @@
             this.textBox2.BackColor = System.Drawing.Color.Maroon;
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Font = new System.Drawing.Font("Arial", 1.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(36, 208);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox2.Location = new System.Drawing.Point(48, 256);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(724, 3);
+            this.textBox2.Size = new System.Drawing.Size(965, 3);
             this.textBox2.TabIndex = 120;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
@@ -1133,9 +1431,10 @@
             "Sexo del Artista",
             "Evaluacion",
             "Calidad/Resolucion"});
-            this.busquedasimple_criterio_text.Location = new System.Drawing.Point(296, 101);
+            this.busquedasimple_criterio_text.Location = new System.Drawing.Point(395, 124);
+            this.busquedasimple_criterio_text.Margin = new System.Windows.Forms.Padding(4);
             this.busquedasimple_criterio_text.Name = "busquedasimple_criterio_text";
-            this.busquedasimple_criterio_text.Size = new System.Drawing.Size(305, 37);
+            this.busquedasimple_criterio_text.Size = new System.Drawing.Size(405, 45);
             this.busquedasimple_criterio_text.TabIndex = 117;
             this.busquedasimple_criterio_text.SelectedIndexChanged += new System.EventHandler(this.busquedasimple_criterio_text_SelectedIndexChanged);
             this.busquedasimple_criterio_text.SelectedValueChanged += new System.EventHandler(this.busquedasimple_criterio_text_SelectedValueChanged);
@@ -1144,20 +1443,20 @@
             // 
             this.busaquedasimple_valor_criterio_text.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.busaquedasimple_valor_criterio_text.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.busaquedasimple_valor_criterio_text.Location = new System.Drawing.Point(296, 160);
-            this.busaquedasimple_valor_criterio_text.Margin = new System.Windows.Forms.Padding(2);
+            this.busaquedasimple_valor_criterio_text.Location = new System.Drawing.Point(395, 197);
+            this.busaquedasimple_valor_criterio_text.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.busaquedasimple_valor_criterio_text.Name = "busaquedasimple_valor_criterio_text";
-            this.busaquedasimple_valor_criterio_text.Size = new System.Drawing.Size(305, 37);
+            this.busaquedasimple_valor_criterio_text.Size = new System.Drawing.Size(405, 44);
             this.busaquedasimple_valor_criterio_text.TabIndex = 116;
             this.busaquedasimple_valor_criterio_text.TextChanged += new System.EventHandler(this.busaquedasimple_valor_criterio_text_TextChanged);
             // 
             // btn_buscar_busqueda_simple
             // 
             this.btn_buscar_busqueda_simple.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_buscar_busqueda_simple.Location = new System.Drawing.Point(621, 124);
-            this.btn_buscar_busqueda_simple.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_buscar_busqueda_simple.Location = new System.Drawing.Point(828, 153);
+            this.btn_buscar_busqueda_simple.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_buscar_busqueda_simple.Name = "btn_buscar_busqueda_simple";
-            this.btn_buscar_busqueda_simple.Size = new System.Drawing.Size(147, 51);
+            this.btn_buscar_busqueda_simple.Size = new System.Drawing.Size(196, 63);
             this.btn_buscar_busqueda_simple.TabIndex = 115;
             this.btn_buscar_busqueda_simple.Text = "Buscar";
             this.btn_buscar_busqueda_simple.UseVisualStyleBackColor = true;
@@ -1170,20 +1469,19 @@
             this.label12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label12.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(263, 29);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Location = new System.Drawing.Point(351, 36);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(278, 47);
+            this.label12.Size = new System.Drawing.Size(342, 57);
             this.label12.TabIndex = 102;
             this.label12.Text = "Busqueda Simple";
             // 
             // btn_atras_busquedasimple
             // 
             this.btn_atras_busquedasimple.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_atras_busquedasimple.Location = new System.Drawing.Point(704, 16);
-            this.btn_atras_busquedasimple.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_atras_busquedasimple.Location = new System.Drawing.Point(939, 20);
+            this.btn_atras_busquedasimple.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_atras_busquedasimple.Name = "btn_atras_busquedasimple";
-            this.btn_atras_busquedasimple.Size = new System.Drawing.Size(71, 35);
+            this.btn_atras_busquedasimple.Size = new System.Drawing.Size(95, 43);
             this.btn_atras_busquedasimple.TabIndex = 74;
             this.btn_atras_busquedasimple.Text = "Atras";
             this.btn_atras_busquedasimple.UseVisualStyleBackColor = true;
@@ -1211,19 +1509,20 @@
             this.panel_busqueda_multiple.Controls.Add(this.btn_buscar_busqueda_multiple);
             this.panel_busqueda_multiple.Controls.Add(this.comboBox1_criterio);
             this.panel_busqueda_multiple.Controls.Add(this.criterio_txt_combobox1);
-            this.panel_busqueda_multiple.Location = new System.Drawing.Point(630, 82);
+            this.panel_busqueda_multiple.Location = new System.Drawing.Point(840, 101);
+            this.panel_busqueda_multiple.Margin = new System.Windows.Forms.Padding(4);
             this.panel_busqueda_multiple.Name = "panel_busqueda_multiple";
-            this.panel_busqueda_multiple.Size = new System.Drawing.Size(24, 24);
+            this.panel_busqueda_multiple.Size = new System.Drawing.Size(32, 30);
             this.panel_busqueda_multiple.TabIndex = 75;
             this.panel_busqueda_multiple.Visible = false;
             // 
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(705, 16);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
+            this.button3.Location = new System.Drawing.Point(940, 20);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(71, 35);
+            this.button3.Size = new System.Drawing.Size(95, 43);
             this.button3.TabIndex = 115;
             this.button3.Text = "Atras";
             this.button3.UseVisualStyleBackColor = true;
@@ -1234,10 +1533,10 @@
             this.textBox7.BackColor = System.Drawing.Color.Maroon;
             this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox7.Font = new System.Drawing.Font("Arial", 1.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(28, 207);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox7.Location = new System.Drawing.Point(37, 255);
+            this.textBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(724, 3);
+            this.textBox7.Size = new System.Drawing.Size(965, 3);
             this.textBox7.TabIndex = 114;
             // 
             // comboBox8_criterio
@@ -1261,9 +1560,10 @@
             "Sexo",
             "Evaluacion",
             "Calidad/Resolucion"});
-            this.comboBox8_criterio.Location = new System.Drawing.Point(577, 231);
+            this.comboBox8_criterio.Location = new System.Drawing.Point(769, 284);
+            this.comboBox8_criterio.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox8_criterio.Name = "comboBox8_criterio";
-            this.comboBox8_criterio.Size = new System.Drawing.Size(154, 37);
+            this.comboBox8_criterio.Size = new System.Drawing.Size(204, 45);
             this.comboBox8_criterio.TabIndex = 113;
             this.comboBox8_criterio.SelectedIndexChanged += new System.EventHandler(this.comboBox8_criterio_SelectedIndexChanged);
             // 
@@ -1271,10 +1571,10 @@
             // 
             this.criterio_txt_combobox8.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.criterio_txt_combobox8.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.criterio_txt_combobox8.Location = new System.Drawing.Point(577, 287);
-            this.criterio_txt_combobox8.Margin = new System.Windows.Forms.Padding(2);
+            this.criterio_txt_combobox8.Location = new System.Drawing.Point(769, 353);
+            this.criterio_txt_combobox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.criterio_txt_combobox8.Name = "criterio_txt_combobox8";
-            this.criterio_txt_combobox8.Size = new System.Drawing.Size(154, 37);
+            this.criterio_txt_combobox8.Size = new System.Drawing.Size(204, 44);
             this.criterio_txt_combobox8.TabIndex = 112;
             this.criterio_txt_combobox8.TextChanged += new System.EventHandler(this.criterio_txt_combobox8_TextChanged);
             // 
@@ -1299,9 +1599,10 @@
             "Sexo",
             "Evaluacion",
             "Calidad/Resolucion"});
-            this.comboBox4_criterio.Location = new System.Drawing.Point(577, 98);
+            this.comboBox4_criterio.Location = new System.Drawing.Point(769, 121);
+            this.comboBox4_criterio.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox4_criterio.Name = "comboBox4_criterio";
-            this.comboBox4_criterio.Size = new System.Drawing.Size(154, 37);
+            this.comboBox4_criterio.Size = new System.Drawing.Size(204, 45);
             this.comboBox4_criterio.TabIndex = 111;
             this.comboBox4_criterio.SelectedIndexChanged += new System.EventHandler(this.comboBox4_criterio_SelectedIndexChanged);
             // 
@@ -1309,10 +1610,10 @@
             // 
             this.criterio_txt_combobox4.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.criterio_txt_combobox4.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.criterio_txt_combobox4.Location = new System.Drawing.Point(577, 151);
-            this.criterio_txt_combobox4.Margin = new System.Windows.Forms.Padding(2);
+            this.criterio_txt_combobox4.Location = new System.Drawing.Point(769, 186);
+            this.criterio_txt_combobox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.criterio_txt_combobox4.Name = "criterio_txt_combobox4";
-            this.criterio_txt_combobox4.Size = new System.Drawing.Size(154, 37);
+            this.criterio_txt_combobox4.Size = new System.Drawing.Size(204, 44);
             this.criterio_txt_combobox4.TabIndex = 110;
             this.criterio_txt_combobox4.TextChanged += new System.EventHandler(this.criterio_txt_combobox4_TextChanged);
             // 
@@ -1337,9 +1638,10 @@
             "Sexo",
             "Evaluacion",
             "Calidad/Resolucion"});
-            this.comboBox7_criterio.Location = new System.Drawing.Point(397, 231);
+            this.comboBox7_criterio.Location = new System.Drawing.Point(529, 284);
+            this.comboBox7_criterio.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox7_criterio.Name = "comboBox7_criterio";
-            this.comboBox7_criterio.Size = new System.Drawing.Size(154, 37);
+            this.comboBox7_criterio.Size = new System.Drawing.Size(204, 45);
             this.comboBox7_criterio.TabIndex = 109;
             this.comboBox7_criterio.SelectedIndexChanged += new System.EventHandler(this.comboBox7_criterio_SelectedIndexChanged);
             // 
@@ -1347,10 +1649,10 @@
             // 
             this.criterio_txt_combobox7.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.criterio_txt_combobox7.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.criterio_txt_combobox7.Location = new System.Drawing.Point(397, 287);
-            this.criterio_txt_combobox7.Margin = new System.Windows.Forms.Padding(2);
+            this.criterio_txt_combobox7.Location = new System.Drawing.Point(529, 353);
+            this.criterio_txt_combobox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.criterio_txt_combobox7.Name = "criterio_txt_combobox7";
-            this.criterio_txt_combobox7.Size = new System.Drawing.Size(154, 37);
+            this.criterio_txt_combobox7.Size = new System.Drawing.Size(204, 44);
             this.criterio_txt_combobox7.TabIndex = 108;
             this.criterio_txt_combobox7.TextChanged += new System.EventHandler(this.criterio_txt_combobox7_TextChanged);
             // 
@@ -1375,9 +1677,10 @@
             "Sexo",
             "Evaluacion",
             "Calidad/Resolucion"});
-            this.comboBox3_criterio.Location = new System.Drawing.Point(397, 98);
+            this.comboBox3_criterio.Location = new System.Drawing.Point(529, 121);
+            this.comboBox3_criterio.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox3_criterio.Name = "comboBox3_criterio";
-            this.comboBox3_criterio.Size = new System.Drawing.Size(154, 37);
+            this.comboBox3_criterio.Size = new System.Drawing.Size(204, 45);
             this.comboBox3_criterio.TabIndex = 107;
             this.comboBox3_criterio.SelectedIndexChanged += new System.EventHandler(this.comboBox3_criterio_SelectedIndexChanged);
             // 
@@ -1385,10 +1688,10 @@
             // 
             this.criterio_txt_combobox3.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.criterio_txt_combobox3.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.criterio_txt_combobox3.Location = new System.Drawing.Point(397, 151);
-            this.criterio_txt_combobox3.Margin = new System.Windows.Forms.Padding(2);
+            this.criterio_txt_combobox3.Location = new System.Drawing.Point(529, 186);
+            this.criterio_txt_combobox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.criterio_txt_combobox3.Name = "criterio_txt_combobox3";
-            this.criterio_txt_combobox3.Size = new System.Drawing.Size(154, 37);
+            this.criterio_txt_combobox3.Size = new System.Drawing.Size(204, 44);
             this.criterio_txt_combobox3.TabIndex = 106;
             this.criterio_txt_combobox3.TextChanged += new System.EventHandler(this.criterio_txt_combobox3_TextChanged);
             // 
@@ -1413,9 +1716,10 @@
             "Sexo",
             "Evaluacion",
             "Calidad/Resolucion"});
-            this.comboBox6_criterio.Location = new System.Drawing.Point(226, 231);
+            this.comboBox6_criterio.Location = new System.Drawing.Point(301, 284);
+            this.comboBox6_criterio.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox6_criterio.Name = "comboBox6_criterio";
-            this.comboBox6_criterio.Size = new System.Drawing.Size(154, 37);
+            this.comboBox6_criterio.Size = new System.Drawing.Size(204, 45);
             this.comboBox6_criterio.TabIndex = 105;
             this.comboBox6_criterio.SelectedIndexChanged += new System.EventHandler(this.comboBox6_criterio_SelectedIndexChanged);
             // 
@@ -1423,10 +1727,10 @@
             // 
             this.criterio_txt_combobox6.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.criterio_txt_combobox6.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.criterio_txt_combobox6.Location = new System.Drawing.Point(226, 287);
-            this.criterio_txt_combobox6.Margin = new System.Windows.Forms.Padding(2);
+            this.criterio_txt_combobox6.Location = new System.Drawing.Point(301, 353);
+            this.criterio_txt_combobox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.criterio_txt_combobox6.Name = "criterio_txt_combobox6";
-            this.criterio_txt_combobox6.Size = new System.Drawing.Size(154, 37);
+            this.criterio_txt_combobox6.Size = new System.Drawing.Size(204, 44);
             this.criterio_txt_combobox6.TabIndex = 104;
             this.criterio_txt_combobox6.TextChanged += new System.EventHandler(this.criterio_txt_combobox6_TextChanged);
             // 
@@ -1451,9 +1755,10 @@
             "Sexo",
             "Evaluacion",
             "Calidad/Resolucion"});
-            this.comboBox2_criterio.Location = new System.Drawing.Point(226, 98);
+            this.comboBox2_criterio.Location = new System.Drawing.Point(301, 121);
+            this.comboBox2_criterio.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox2_criterio.Name = "comboBox2_criterio";
-            this.comboBox2_criterio.Size = new System.Drawing.Size(154, 37);
+            this.comboBox2_criterio.Size = new System.Drawing.Size(204, 45);
             this.comboBox2_criterio.TabIndex = 103;
             this.comboBox2_criterio.SelectedIndexChanged += new System.EventHandler(this.comboBox2_criterio_SelectedIndexChanged);
             // 
@@ -1461,10 +1766,10 @@
             // 
             this.criterio_txt_combobox2.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.criterio_txt_combobox2.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.criterio_txt_combobox2.Location = new System.Drawing.Point(226, 151);
-            this.criterio_txt_combobox2.Margin = new System.Windows.Forms.Padding(2);
+            this.criterio_txt_combobox2.Location = new System.Drawing.Point(301, 186);
+            this.criterio_txt_combobox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.criterio_txt_combobox2.Name = "criterio_txt_combobox2";
-            this.criterio_txt_combobox2.Size = new System.Drawing.Size(154, 37);
+            this.criterio_txt_combobox2.Size = new System.Drawing.Size(204, 44);
             this.criterio_txt_combobox2.TabIndex = 102;
             this.criterio_txt_combobox2.TextChanged += new System.EventHandler(this.criterio_txt_combobox2_TextChanged);
             // 
@@ -1475,10 +1780,9 @@
             this.label11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label11.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(238, 20);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Location = new System.Drawing.Point(317, 25);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(300, 47);
+            this.label11.Size = new System.Drawing.Size(369, 57);
             this.label11.TabIndex = 101;
             this.label11.Text = "Busqueda Multiple";
             // 
@@ -1503,9 +1807,10 @@
             "Sexo",
             "Evaluacion",
             "Calidad/Resolucion"});
-            this.comboBox5_criterio.Location = new System.Drawing.Point(46, 231);
+            this.comboBox5_criterio.Location = new System.Drawing.Point(61, 284);
+            this.comboBox5_criterio.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox5_criterio.Name = "comboBox5_criterio";
-            this.comboBox5_criterio.Size = new System.Drawing.Size(154, 37);
+            this.comboBox5_criterio.Size = new System.Drawing.Size(204, 45);
             this.comboBox5_criterio.TabIndex = 92;
             this.comboBox5_criterio.SelectedIndexChanged += new System.EventHandler(this.comboBox5_criterio_SelectedIndexChanged);
             // 
@@ -1513,20 +1818,20 @@
             // 
             this.criterio_txt_combobox5.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.criterio_txt_combobox5.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.criterio_txt_combobox5.Location = new System.Drawing.Point(46, 287);
-            this.criterio_txt_combobox5.Margin = new System.Windows.Forms.Padding(2);
+            this.criterio_txt_combobox5.Location = new System.Drawing.Point(61, 353);
+            this.criterio_txt_combobox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.criterio_txt_combobox5.Name = "criterio_txt_combobox5";
-            this.criterio_txt_combobox5.Size = new System.Drawing.Size(154, 37);
+            this.criterio_txt_combobox5.Size = new System.Drawing.Size(204, 44);
             this.criterio_txt_combobox5.TabIndex = 91;
             this.criterio_txt_combobox5.TextChanged += new System.EventHandler(this.criterio_txt_combobox5_TextChanged);
             // 
             // btn_buscar_busqueda_multiple
             // 
             this.btn_buscar_busqueda_multiple.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_buscar_busqueda_multiple.Location = new System.Drawing.Point(46, 355);
-            this.btn_buscar_busqueda_multiple.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_buscar_busqueda_multiple.Location = new System.Drawing.Point(61, 437);
+            this.btn_buscar_busqueda_multiple.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_buscar_busqueda_multiple.Name = "btn_buscar_busqueda_multiple";
-            this.btn_buscar_busqueda_multiple.Size = new System.Drawing.Size(685, 51);
+            this.btn_buscar_busqueda_multiple.Size = new System.Drawing.Size(913, 63);
             this.btn_buscar_busqueda_multiple.TabIndex = 84;
             this.btn_buscar_busqueda_multiple.Text = "Buscar";
             this.btn_buscar_busqueda_multiple.UseVisualStyleBackColor = true;
@@ -1553,9 +1858,10 @@
             "Sexo",
             "Evaluacion",
             "Calidad/Resolucion"});
-            this.comboBox1_criterio.Location = new System.Drawing.Point(46, 98);
+            this.comboBox1_criterio.Location = new System.Drawing.Point(61, 121);
+            this.comboBox1_criterio.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1_criterio.Name = "comboBox1_criterio";
-            this.comboBox1_criterio.Size = new System.Drawing.Size(154, 37);
+            this.comboBox1_criterio.Size = new System.Drawing.Size(204, 45);
             this.comboBox1_criterio.TabIndex = 77;
             this.comboBox1_criterio.SelectedIndexChanged += new System.EventHandler(this.comboBox1_criterio_SelectedIndexChanged);
             // 
@@ -1563,20 +1869,20 @@
             // 
             this.criterio_txt_combobox1.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.criterio_txt_combobox1.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.criterio_txt_combobox1.Location = new System.Drawing.Point(46, 151);
-            this.criterio_txt_combobox1.Margin = new System.Windows.Forms.Padding(2);
+            this.criterio_txt_combobox1.Location = new System.Drawing.Point(61, 186);
+            this.criterio_txt_combobox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.criterio_txt_combobox1.Name = "criterio_txt_combobox1";
-            this.criterio_txt_combobox1.Size = new System.Drawing.Size(154, 37);
+            this.criterio_txt_combobox1.Size = new System.Drawing.Size(204, 44);
             this.criterio_txt_combobox1.TabIndex = 75;
             this.criterio_txt_combobox1.TextChanged += new System.EventHandler(this.criterio_txt_combobox1_TextChanged);
             // 
             // btn_atras_de_inicio_sesion
             // 
             this.btn_atras_de_inicio_sesion.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_atras_de_inicio_sesion.Location = new System.Drawing.Point(715, 16);
-            this.btn_atras_de_inicio_sesion.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_atras_de_inicio_sesion.Location = new System.Drawing.Point(953, 20);
+            this.btn_atras_de_inicio_sesion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_atras_de_inicio_sesion.Name = "btn_atras_de_inicio_sesion";
-            this.btn_atras_de_inicio_sesion.Size = new System.Drawing.Size(71, 35);
+            this.btn_atras_de_inicio_sesion.Size = new System.Drawing.Size(95, 43);
             this.btn_atras_de_inicio_sesion.TabIndex = 18;
             this.btn_atras_de_inicio_sesion.Text = "Atras";
             this.btn_atras_de_inicio_sesion.UseVisualStyleBackColor = true;
@@ -1585,10 +1891,10 @@
             // btn_busqueda_simple
             // 
             this.btn_busqueda_simple.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_busqueda_simple.Location = new System.Drawing.Point(150, 76);
-            this.btn_busqueda_simple.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_busqueda_simple.Location = new System.Drawing.Point(200, 94);
+            this.btn_busqueda_simple.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_busqueda_simple.Name = "btn_busqueda_simple";
-            this.btn_busqueda_simple.Size = new System.Drawing.Size(229, 266);
+            this.btn_busqueda_simple.Size = new System.Drawing.Size(305, 327);
             this.btn_busqueda_simple.TabIndex = 78;
             this.btn_busqueda_simple.Text = "BUSQUEDA SIMPLE";
             this.btn_busqueda_simple.UseVisualStyleBackColor = true;
@@ -1597,10 +1903,10 @@
             // btn_busqueda_multiple
             // 
             this.btn_busqueda_multiple.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_busqueda_multiple.Location = new System.Drawing.Point(434, 76);
-            this.btn_busqueda_multiple.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_busqueda_multiple.Location = new System.Drawing.Point(579, 94);
+            this.btn_busqueda_multiple.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_busqueda_multiple.Name = "btn_busqueda_multiple";
-            this.btn_busqueda_multiple.Size = new System.Drawing.Size(229, 266);
+            this.btn_busqueda_multiple.Size = new System.Drawing.Size(305, 327);
             this.btn_busqueda_multiple.TabIndex = 77;
             this.btn_busqueda_multiple.Text = "BUSQUEDA MULTIPLE";
             this.btn_busqueda_multiple.UseVisualStyleBackColor = true;
@@ -1613,11 +1919,10 @@
             // 
             // ALAINID
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(807, 445);
-            this.Controls.Add(this.panel_perfil_de_usuario);
+            this.ClientSize = new System.Drawing.Size(1076, 548);
             this.Controls.Add(this.panel_buscar);
             this.Controls.Add(this.Panel_premium);
             this.Controls.Add(this.BtnListaInteligente);
@@ -1634,6 +1939,7 @@
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.btn_premium);
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ALAINID";
             this.Text = "ALAINID";
             this.Load += new System.EventHandler(this.FORMS_USUARIO_Load);
@@ -1646,6 +1952,10 @@
             this.panel_buscar.ResumeLayout(false);
             this.panel_busqueda_simple.ResumeLayout(false);
             this.panel_busqueda_simple.PerformLayout();
+            this.panel_video_seleccionado.ResumeLayout(false);
+            this.panel_video_seleccionado.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Calificacion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayerVideo)).EndInit();
             this.panel_cancion_seleccionada_busqueda_simple.ResumeLayout(false);
             this.panel_cancion_seleccionada_busqueda_simple.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer2)).EndInit();
@@ -1774,5 +2084,28 @@
         private System.Windows.Forms.Label label18;
         private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer2;
         private System.Windows.Forms.OpenFileDialog ruta_cancion_reproducir;
+        private System.Windows.Forms.Panel panel_video_seleccionado;
+        private System.Windows.Forms.Button btnAgregar_A_Favoritos;
+        private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayerVideo;
+        private System.Windows.Forms.Button btnAgregar_A_Cola;
+        private System.Windows.Forms.Button btnAgregar_A_Playlist;
+        private System.Windows.Forms.Button btnCalificar;
+        private System.Windows.Forms.ListBox listBox_Actores;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.TextBox textBox_Nombre_Director;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.TextBox textBox_Nombre_Video;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.NumericUpDown Calificacion;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.TextBox textBox_Reproducciones;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.TextBox textBox_Año_Grabacion;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.TextBox textBox_Calificacion;
+        private System.Windows.Forms.Button btn_Atrás;
     }
 }
