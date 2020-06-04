@@ -175,5 +175,10 @@ namespace ALAINID_DEFINITIVO
 
 
         }
+
+        private void panel1_registrarse_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

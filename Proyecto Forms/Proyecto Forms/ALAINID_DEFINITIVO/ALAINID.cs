@@ -55,7 +55,7 @@ namespace Proyecto_Forms
         //===============================================TODO LO QUE ES SERIALIZATION================================================================
         //===============================================TODO LO QUE ES SERIALIZATION================================================================
         //===============================================TODO LO QUE ES SERIALIZATION================================================================
-        
+
 
         public static void Activarlistacantantes()
         {
@@ -157,7 +157,7 @@ namespace Proyecto_Forms
             Stream stream6 = new FileStream("Actores.bin", FileMode.OpenOrCreate, FileAccess.Read, FileShare.Read);
 
             try
-            { 
+            {
                 List<Artista> v = (List<Artista>)formatter6.Deserialize(stream6);
                 stream6.Close();
                 return v;
@@ -213,7 +213,7 @@ namespace Proyecto_Forms
         {
             IFormatter formatter4 = new BinaryFormatter();
             Stream stream4 = new FileStream("Canciones.bin", FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.None);
-            try 
+            try
             {
                 List<Song> s2 = (List<Song>)formatter4.Deserialize(stream4);
                 stream4.Close();
@@ -244,7 +244,7 @@ namespace Proyecto_Forms
 
             try
             {
-               List<Video> v = (List<Video>)formatter6.Deserialize(stream6);
+                List<Video> v = (List<Video>)formatter6.Deserialize(stream6);
                 stream6.Close();
                 return v;
             }
@@ -896,12 +896,12 @@ namespace Proyecto_Forms
             for (int i = 0; i < listausuarios.Count; i++)
             {
                 User ui = listausuarios[i];
-                if ((ui.Email_ == "")||(u1.Nombreusuario == "")||(u1.Password_ == "" )|| (u1.Nombre_ == ""))
+                if ((ui.Email_ == "") || (u1.Nombreusuario == "") || (u1.Password_ == "") || (u1.Nombre_ == ""))
                 {
                     MessageBox.Show("No Puede Dejar Campos Vacios", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Stop);
 
                     return false;
-                }else if (ui.Email_ == u1.Email_ || ui.Nombreusuario == u1.Nombreusuario)
+                } else if (ui.Email_ == u1.Email_ || ui.Nombreusuario == u1.Nombreusuario)
                 {
                     MessageBox.Show("El Correo o Nombre de Usuario Ingresado ya Existen ", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                     return false;
@@ -942,7 +942,7 @@ namespace Proyecto_Forms
                 return false;
             }
         }
-        
+
         public static void VerPersonas(List<User> lista)
         {
             if (lista.Count == 0)
@@ -1064,7 +1064,7 @@ namespace Proyecto_Forms
             foreach (User user in listausuarios)
             {
                 uno = 0;
-                if (user.Nombreusuario == Program.usuario_activo.Nombreusuario) 
+                if (user.Nombreusuario == Program.usuario_activo.Nombreusuario)
                 {
                     uno = 1;
                 }
@@ -1072,7 +1072,7 @@ namespace Proyecto_Forms
                 {
                     uno = 2;
                 }
-                if (uno == 2 )
+                if (uno == 2)
                 {
                     if (user.Nombreusuario == nuevonombre)
                     {
@@ -1081,7 +1081,7 @@ namespace Proyecto_Forms
                     }
                 }
 
-                
+
             }
             if (funko != "noup")
             {
@@ -1151,1233 +1151,6 @@ namespace Proyecto_Forms
                 return false;
             }
         }
-
-        //============================================================================================================================================================
-        public static List<string> Lista_nombres_cantantes()
-        {
-            List<string> nombr = new List<string>();
-            foreach (Artista cantante in lista_cantantes)
-            {
-                nombr.Add(cantante.Name);
-            }
-            return nombr;
-        }
-        public static List<string> Lista_nombres_canciones()
-        {
-            List<string> canc = new List<string>();
-            foreach (Song cancion in todas_las_canciones)
-            {
-                canc.Add(cancion.Nombrecancion);
-            }
-            return canc;
-        }
-
-        public static List<string> Lista_nombres_albums()
-        {
-            List<string> alb = new List<string>();
-            foreach (PlaylistSong album in todos_los_albumes)
-            {
-                alb.Add(album.NombrePlaylist);
-            }
-            return alb;
-        }
-        public static List<string> Lista_nombres_compositores()
-        {
-            List<string> nombrc = new List<string>();
-            foreach (Artista compositor in lista_compositores)
-            {
-                nombrc.Add(compositor.Name);
-            }
-            return nombrc;
-        }
-
-        public static List<string> Lista_nombres_diectores()
-        {
-            List<string> nom_dir = new List<string>();
-            foreach (Artista director in lista_directores)
-            {
-                nom_dir.Add(director.Name);
-            }
-            return nom_dir;
-        }
-
-        public static List<string> Lista_nombres_actores()
-        {
-            List<string> nom_act = new List<string>();
-            foreach (Artista actor in lista_actores)
-            {
-                nom_act.Add(actor.Name);
-            }
-            return nom_act;
-        }
-
-        public static List<Artista> Lista_personas_jovenes() // menores de 25
-        {
-            List<Artista> per_jov = new List<Artista>();
-            foreach (Artista actor in lista_actores)
-            {
-                if (actor.Age < 25)
-                {
-                    per_jov.Add(actor);
-                }
-            }
-            foreach (Artista director in lista_directores)
-            {
-                if (director.Age < 25)
-                {
-                    per_jov.Add(director);
-                }
-            }
-            foreach (Artista cantante in lista_cantantes)
-            {
-                if (cantante.Age < 25)
-                {
-                    per_jov.Add(cantante);
-                }
-            }
-            foreach (Artista compositor in lista_compositores)
-            {
-                if (compositor.Age < 25)
-                {
-                    per_jov.Add(compositor);
-                }
-            }
-            return per_jov;
-        }
-
-        public static List<Artista> Lista_personas_notan_jovenes() // 25 a 40
-        {
-            List<Artista> per_jov = new List<Artista>();
-            foreach (Artista actor in lista_actores)
-            {
-                if (actor.Age >= 25 && actor.Age < 40)
-                {
-                    per_jov.Add(actor);
-                }
-            }
-            foreach (Artista director in lista_directores)
-            {
-                if (director.Age >= 25 && director.Age < 40)
-                {
-                    per_jov.Add(director);
-                }
-            }
-            foreach (Artista cantante in lista_cantantes)
-            {
-                if (cantante.Age >= 25 && cantante.Age < 40)
-                {
-                    per_jov.Add(cantante);
-                }
-            }
-            foreach (Artista compositor in lista_compositores)
-            {
-                if (compositor.Age >= 25 && compositor.Age < 40)
-                {
-                    per_jov.Add(compositor);
-                }
-            }
-            return per_jov;
-        }
-
-        public static List<Artista> Lista_personas_casiviejas() // 40 a 60
-        {
-            List<Artista> per_jov = new List<Artista>();
-            foreach (Artista actor in lista_actores)
-            {
-                if (actor.Age >= 40 && actor.Age < 60)
-                {
-                    per_jov.Add(actor);
-                }
-            }
-            foreach (Artista director in lista_directores)
-            {
-                if (director.Age >= 40 && director.Age < 60)
-                {
-                    per_jov.Add(director);
-                }
-            }
-            foreach (Artista cantante in lista_cantantes)
-            {
-                if (cantante.Age >= 40 && cantante.Age < 60)
-                {
-                    per_jov.Add(cantante);
-                }
-            }
-            foreach (Artista compositor in lista_compositores)
-            {
-                if (compositor.Age >= 40 && compositor.Age < 60)
-                {
-                    per_jov.Add(compositor);
-                }
-            }
-            return per_jov;
-        }
-
-        public static List<Artista> Lista_personas_viejas() // 60 o +
-        {
-            List<Artista> per_jov = new List<Artista>();
-            foreach (Artista actor in lista_actores)
-            {
-                if (actor.Age >= 60)
-                {
-                    per_jov.Add(actor);
-                }
-            }
-            foreach (Artista director in lista_directores)
-            {
-                if (director.Age >= 60)
-                {
-                    per_jov.Add(director);
-                }
-            }
-            foreach (Artista cantante in lista_cantantes)
-            {
-                if (cantante.Age >= 60)
-                {
-                    per_jov.Add(cantante);
-                }
-            }
-            foreach (Artista compositor in lista_compositores)
-            {
-                if (compositor.Age >= 60)
-                {
-                    per_jov.Add(compositor);
-                }
-            }
-            return per_jov;
-        }
-
-        public static List<Artista> Lista_artistas_genero(string _valor)
-        {
-            List<Artista> per_jov = new List<Artista>();
-            foreach (Artista actor in lista_actores)
-            {
-                if (actor.Sexo == _valor)
-                {
-                    per_jov.Add(actor);
-                }
-            }
-            foreach (Artista director in lista_directores)
-            {
-                if (director.Sexo == _valor)
-                {
-                    per_jov.Add(director);
-                }
-            }
-            foreach (Artista cantante in lista_cantantes)
-            {
-                if (cantante.Sexo == _valor)
-                {
-                    per_jov.Add(cantante);
-                }
-            }
-            /*foreach (Artista compositor in lista_compositores)
-            {
-                if (compositor.sexo == _valor)
-                {
-                    per_jov.Add(compositor);
-                }
-            }*/
-            return per_jov;
-        }
-
-
-        public static List<Song> Lista_por_calidad_cancion(string calidad)
-        { // busca todas las canciones de una calidad x
-            List<Song> cali_ca = new List<Song>();
-            foreach (Song ca in todas_las_canciones)
-            {
-                if (ca.Calidad == calidad)
-                {
-                    cali_ca.Add(ca);
-                }
-
-            }
-            return cali_ca;
-        }
-
-        public static List<string> Lista_por_calidad_video(string calidad)
-        { // busca todos los videos de una calidad x
-            List<string> cali_v = new List<string>();
-            foreach (Video v in todos_los_videos)
-            {
-                if (v.Calidad == calidad)
-                {
-                    cali_v.Add(v.Nombre_video);
-                }
-
-            }
-            return cali_v;
-        }
-
-        public static List<string> Lista_por_categoria_video(string categoria)
-        {
-            List<string> cat_v = new List<string>();
-            foreach (Video v in todos_los_videos)
-            {
-                if (v.Categoria == categoria)
-                {
-                    cat_v.Add(v.Nombre_video);
-                }
-            }
-            return cat_v;
-        }
-
-        public static List<string> Lista_genero_video(string genero)
-        {
-            List<string> gen_v = new List<string>();
-            foreach (Video v in todos_los_videos)
-            {
-                if (v.Genero == genero)
-                {
-                    gen_v.Add(v.Nombre_video);
-                }
-            }
-            return gen_v;
-        }
-
-        public static List<string> Lista_genero_cancion(string genero)
-        {
-            List<string> gen_c = new List<string>();
-            foreach (Song s in todas_las_canciones)
-            {
-                if (s.Genero == genero)
-                {
-                    gen_c.Add(s.Nombrecancion);
-                }
-            }
-            return gen_c;
-        }
-        //========================================================AQUI=====================================================================================
-        //========================================================AQUI=====================================================================================
-        //========================================================AQUI=====================================================================================
-        //========================================================AQUI=====================================================================================
-        //========================================================AQUI=====================================================================================
-        //========================================================AQUI=====================================================================================
-        //========================================================AQUI=====================================================================================
-        //========================================================AQUI=====================================================================================
-        //========================================================AQUI=====================================================================================
-        //========================================================AQUI=====================================================================================
-        //========================================================AQUI=====================================================================================
-        //========================================================AQUI=====================================================================================
-
-
-        public static List<string> lista_criterios_filtro2 = new List<string>();       //    
-        public static List<string> lista_criterios_filtro3 = new List<string>();       //      
-        public static List<Song> lista_canciones_filtromiltiple = new List<Song>();        //     
-        public static List<Artista> lista_artistas_filtromiltiple = new List<Artista>();        //     
-        public static List<Song> lista_filtrando = new List<Song>();        //    
-        public static List<Song> canciones_filtradas = new List<Song>();
-        public static List<Song> lista_filtrando2 = new List<Song>();        //    
-
-
-
-        public static List<Song> CancionesporGenero()
-        {
-            listafiltrada.Clear();
-            string _valor = ShowOptions(lista_generos_canciones);
-            List<Song> interna = new List<Song>();
-            foreach (Song cc in lista_canciones_filtromiltiple)
-            {
-                interna.Add(cc);
-            }
-            foreach (Song can in interna)
-            {
-                if (can.Genero == _valor)
-                {
-                    listafiltrada.Add(can);
-                    lista_canciones_filtromiltiple.Remove(can);
-                }
-            }
-            return listafiltrada;
-        }
-
-        public static List<Song> Cancionespordisquera()
-        {
-            listafiltrada.Clear();
-            string _valor = ShowOptions(lista_disquera);
-            List<Song> interna1 = new List<Song>();
-            foreach (Song cc in lista_canciones_filtromiltiple)
-            {
-                interna1.Add(cc);
-            }
-            foreach (Song canc in interna1)
-            {
-                if (canc.Disquera == _valor)
-                {
-                    listafiltrada.Add(canc);
-                    lista_canciones_filtromiltiple.Remove(canc);
-
-                }
-            }
-            return listafiltrada;
-        }
-
-        public static List<Song> Cancionesporaniopublicacion()
-        {
-            listafiltrada.Clear();
-            List<Song> interna2 = new List<Song>();
-            foreach (Song cc in lista_canciones_filtromiltiple)
-            {
-                interna2.Add(cc);
-            }
-            Console.WriteLine("Ingrese el año:");
-            string _valor = Console.ReadLine();
-            foreach (Song canc in interna2)
-            {
-                if (int.Parse(canc.Anopublicacion) == int.Parse(_valor))
-                {
-                    listafiltrada.Add(canc);// ver 
-                    lista_canciones_filtromiltiple.Remove(canc);
-
-                }
-            }
-            return listafiltrada;
-        }
-
-        public static List<Song> Cancionesporsexodelcantante()
-        {
-            listafiltrada.Clear();
-            List<Song> interna3 = new List<Song>();
-            foreach (Song cc in lista_canciones_filtromiltiple)
-            {
-                interna3.Add(cc);
-            }
-            List<Artista> interna33 = new List<Artista>();
-            foreach (Artista aa in lista_artistas_filtromiltiple)
-            {
-                interna33.Add(aa);
-            }
-            string _valor = ShowOptions(sexo);
-
-            foreach (Artista can in interna33)
-            {
-                if (can.Sexo == _valor)
-                {
-                    foreach (Song canc in interna3)
-                    {
-                        if (canc.Cantante.Name == can.Name)
-                        {
-                            listafiltrada.Add(canc);
-                            lista_canciones_filtromiltiple.Remove(canc);
-                            lista_artistas_filtromiltiple.Remove(can);
-
-                        }
-                    }
-                }
-            }
-            return listafiltrada;
-        }
-
-
-        public static List<Video> Videosporsexodelartista(string _valor)
-        {
-            listafiltradav.Clear();
-            List<Video> interna3 = new List<Video>();
-            foreach (Video cc in lista_canciones_filtromiltiplev)
-            {
-                interna3.Add(cc);
-            }
-            List<Artista> interna33 = new List<Artista>();
-            foreach (Artista aa in lista_artistas_filtromiltiplev)
-            {
-                interna33.Add(aa);
-            }
-            
-
-            foreach (Artista can in interna33)
-            {
-                if (can.Sexo.ToLower() == _valor)
-                {
-                    foreach (Video canc in interna3)
-                    {
-                        if (canc.Director.Name == can.Name)
-                        {
-                            listafiltradav.Add(canc);
-                            lista_canciones_filtromiltiplev.Remove(canc);
-                            lista_artistas_filtromiltiplev.Remove(can);
-
-                        }
-                    }
-                }
-                
-            }
-            return listafiltradav;
-        }
-
-        public static List<Song> Cancionesporedaddelcantante()
-        {
-            List<Song> interna4 = new List<Song>();
-            foreach (Song cc in lista_canciones_filtromiltiple)
-            {
-                interna4.Add(cc);
-            }
-            List<Artista> interna44 = new List<Artista>();
-            foreach (Artista aa in lista_artistas_filtromiltiple)
-            {
-                interna44.Add(aa);
-            }
-            listafiltrada.Clear();
-            string _valor = ShowOptions(edades);
-            switch (_valor)
-            {
-                case "Menores de 25 años":
-                    foreach (Artista can in interna44)
-                    {
-                        if (can.Age <= 25)
-                        {
-                            foreach (Song canc in interna4)
-                            {
-                                if (canc.Cantante.Name == can.Name)
-                                {
-                                    listafiltrada.Add(canc);
-                                    lista_canciones_filtromiltiple.Remove(canc);
-                                    lista_artistas_filtromiltiple.Remove(can);
-                                }
-                            }
-                        }
-                    }
-
-                    break;
-                case "De 25 a 40 años":
-                    foreach (Artista can in interna44)
-                    {
-                        if (can.Age > 25 && can.Age <= 40)
-                        {
-                            foreach (Song canc in interna4)
-                            {
-                                if (canc.Cantante.Name == can.Name)
-                                {
-                                    listafiltrada.Add(canc);
-                                    lista_canciones_filtromiltiple.Remove(canc);
-                                    lista_artistas_filtromiltiple.Remove(can);
-                                }
-                            }
-                        }
-                    }
-                    break;
-                case "De 40 a 60 años":
-                    foreach (Artista can in interna44)
-                    {
-                        if (can.Age > 40 && can.Age <= 60)
-                        {
-                            foreach (Song canc in interna4)
-                            {
-                                if (canc.Cantante.Name == can.Name)
-                                {
-                                    listafiltrada.Add(canc);
-                                    lista_canciones_filtromiltiple.Remove(canc);
-                                    lista_artistas_filtromiltiple.Remove(can);
-                                }
-                            }
-                        }
-                    }
-                    break;
-                case "Mayores de 60":
-                    foreach (Artista can in interna44)
-                    {
-                        if (can.Age > 60)
-                        {
-                            foreach (Song canc in interna4)
-                            {
-                                if (canc.Cantante.Name == can.Name)
-                                {
-                                    listafiltrada.Add(canc);
-                                    lista_canciones_filtromiltiple.Remove(canc);
-                                    lista_artistas_filtromiltiple.Remove(can);
-                                }
-                            }
-                        }
-                    }
-                    break;
-            }
-            return listafiltrada;
-        }
-
-        public static List<Song> Cancionesporcalidadcancion()
-        {
-            listafiltrada.Clear();
-            List<Song> interna5 = new List<Song>();
-            foreach (Song cc in lista_canciones_filtromiltiple)
-            {
-                interna5.Add(cc);
-            }
-            string _valor = ShowOptions(lista_calidad_cancion);
-            foreach (Song ca in interna5)
-            {
-                if (ca.Calidad == _valor)
-                {
-                    listafiltrada.Add(ca);
-                    lista_canciones_filtromiltiple.Remove(ca);
-
-                }
-
-            }
-            return listafiltrada;
-        }
-        public static List<Song> cancionporevaluacion(string valor)
-        {
-            
-            try
-            { 
-                float _valor = float.Parse(valor);
-                foreach (Song canc in todas_las_canciones)
-                {
-                    if (canc.Calificacionpromedio >= _valor)
-                    {
-                        listafiltrada.Add(canc);
-                    }
-                }
-                return listafiltrada;
-            }
-            catch
-            {
-                MessageBox.Show("NO PUEDE INGRESAR EVALUACIONES NULAS", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.None);
-                
-            }
-            return listafiltrada;
-        }
-        public static List<Song> filtocriteriomultiple(string criterio)
-        {
-            lista_filtrando.Clear();
-            switch (criterio)
-            {
-                case "Genero":
-                    lista_filtrando = CancionesporGenero();
-                    break;
-                case "Disquera":
-                    lista_filtrando = Cancionespordisquera();
-                    break;
-                case "Año Publicacion":
-                    lista_filtrando = Cancionesporaniopublicacion();
-                    break;
-                case "Sexo del Artista":
-                    lista_filtrando = Cancionesporsexodelcantante();
-                    break;
-                case "Edad del Artista":
-                    lista_filtrando = Cancionesporedaddelcantante();
-                    break;
-                case "Calidad/Resolucion":
-                    lista_filtrando = Cancionesporcalidadcancion();
-                    break;
-                case "Evaluacion":
-                    //lista_filtrando = cancionporevaluacion();
-                    break;
-               
-            }
-            return lista_filtrando;
-        }
-
-        public static List<Song> Buqueda_multiple_canciones()
-        {
-            lista_canciones_filtromiltiple.Clear();
-            lista_artistas_filtromiltiple.Clear();
-            lista_criterios_filtro3.Clear();
-            foreach (Song caca in todas_las_canciones)
-            {
-                lista_canciones_filtromiltiple.Add(caca);
-            }
-            foreach (Artista cancan in lista_cantantes)
-            {
-                lista_artistas_filtromiltiple.Add(cancan);
-            }
-            foreach (Artista comcom in lista_compositores)
-            {
-                lista_artistas_filtromiltiple.Add(comcom);
-            }
-            foreach (String cricri in lista_criterios_filtro2)
-            {
-                lista_criterios_filtro3.Add(cricri);
-            }
-            canciones_filtradas.Clear();
-
-            //Console.WriteLine("Los criterios para busqueda multiple son los siguientes:");
-            int num = 0, num_select = 1;
-            foreach (String cri in lista_criterios_filtro3)
-            {
-               // Console.WriteLine(" - " + cri);
-
-            }
-           //Console.WriteLine("Ingrese el numero de Criterios desea usar para la busca multiple:");
-            num = Numero(7);
-            string criterio;
-            List<string> criterios_seleccionados = new List<string>();
-            while (num_select <= num)
-            {
-                criterio = "\0";
-               // Console.WriteLine("Seleccione el criterio N° " + num_select + " para su busqueda");
-                criterio = ShowOptions(lista_criterios_filtro3);
-                lista_criterios_filtro3.Remove(criterio);
-                criterios_seleccionados.Add(criterio);
-                num_select++;
-            }
-            //Console.Clear();
-            //Console.WriteLine("Usted selecciono buscar por:");
-            foreach (String c in criterios_seleccionados)
-            {
-                //Console.WriteLine(" - " + c);
-            }
-            foreach (String crit in criterios_seleccionados)
-            {
-
-                lista_filtrando2.Clear();
-                foreach (Song ss in filtocriteriomultiple(crit))
-                {
-
-                    lista_filtrando2.Add(ss);
-                }
-                foreach (Song ccc in lista_filtrando2)
-                {
-                    int si = 0;
-                    foreach (Song canc in canciones_filtradas)
-                    {
-                        if (ccc.Nombrecancion == canc.Nombrecancion)
-                        {
-                            si++;
-                        }
-                    }
-                    if (si == 0)
-                    {
-                        canciones_filtradas.Add(ccc);
-                    }
-                }
-            }
-            return canciones_filtradas;
-        }
-
-
-        public static List<Song> CancionesporGeneroand()
-        {
-            listafiltrada.Clear();
-            string _valor = ShowOptions(lista_generos_canciones);
-
-            List<Song> interna = new List<Song>();
-            foreach (Song cc in canciones_filtradas)
-            {
-                interna.Add(cc);
-            }
-            foreach (Song can in interna)
-            {
-                if (can.Genero == _valor)
-                {
-
-                    listafiltrada.Add(can);
-                }
-            }
-            return listafiltrada;
-        }
-
-        public static List<Song> Cancionespordisqueraand()
-        {
-            listafiltrada.Clear();
-            string _valor = ShowOptions(lista_disquera);
-            List<Song> interna1 = new List<Song>();
-            foreach (Song cc in canciones_filtradas)
-            {
-                interna1.Add(cc);
-            }
-            foreach (Song canc in interna1)
-            {
-                if (canc.Disquera == _valor)
-                {
-                    listafiltrada.Add(canc);
-
-                }
-            }
-            return listafiltrada;
-        }
-
-        public static List<Song> Cancionesporaniopublicacionand()
-        {
-            listafiltrada.Clear();
-            List<Song> interna2 = new List<Song>();
-            foreach (Song cc in canciones_filtradas)
-            {
-                interna2.Add(cc);
-            }
-            //Console.WriteLine("Ingrese el año:");
-            string _valor = Console.ReadLine();
-            foreach (Song canc in interna2)
-            {
-                if (int.Parse(canc.Anopublicacion) == int.Parse(_valor))
-                {
-                    listafiltrada.Add(canc);// ver 
-
-                }
-            }
-            return listafiltrada;
-        }
-
-        public static List<Song> Cancionesporsexodelcantanteand()
-        {
-            listafiltrada.Clear();
-            List<Song> interna3 = new List<Song>();
-            foreach (Song cc in canciones_filtradas)
-            {
-                interna3.Add(cc);
-            }
-            List<Artista> interna33 = new List<Artista>();
-            foreach (Artista aa in lista_artistas_filtromiltiple)
-            {
-                interna33.Add(aa);
-            }
-            string _valor = ShowOptions(sexo);
-
-            foreach (Artista can in interna33)
-            {
-                if (can.Sexo == _valor)
-                {
-                    foreach (Song canc in interna3)
-                    {
-                        if (canc.Cantante.Name == can.Name)
-                        {
-                            listafiltrada.Add(canc);
-                            lista_artistas_filtromiltiple.Remove(can);
-
-                        }
-                    }
-                }
-            }
-            return listafiltrada;
-        }
-
-        public static List<Song> Cancionesporedaddelcantanteand()
-        {
-            List<Song> interna4 = new List<Song>();
-            foreach (Song cc in canciones_filtradas)
-            {
-                interna4.Add(cc);
-            }
-            List<Artista> interna44 = new List<Artista>();
-            foreach (Artista aa in lista_artistas_filtromiltiple)
-            {
-                interna44.Add(aa);
-            }
-            listafiltrada.Clear();
-            string _valor = ShowOptions(edades);
-            switch (_valor)
-            {
-                case "Menores de 25 años":
-                    foreach (Artista can in interna44)
-                    {
-                        if (can.Age <= 25)
-                        {
-                            foreach (Song canc in interna4)
-                            {
-                                if (canc.Cantante.Name == can.Name)
-                                {
-                                    listafiltrada.Add(canc);
-                                    lista_artistas_filtromiltiple.Remove(can);
-                                }
-                            }
-                        }
-                    }
-
-                    break;
-                case "De 25 a 40 años":
-                    foreach (Artista can in interna44)
-                    {
-                        if (can.Age > 25 && can.Age <= 40)
-                        {
-                            foreach (Song canc in interna4)
-                            {
-                                if (canc.Cantante.Name == can.Name)
-                                {
-                                    listafiltrada.Add(canc);
-                                    lista_artistas_filtromiltiple.Remove(can);
-                                }
-                            }
-                        }
-                    }
-                    break;
-                case "De 40 a 60 años":
-                    foreach (Artista can in interna44)
-                    {
-                        if (can.Age > 40 && can.Age <= 60)
-                        {
-                            foreach (Song canc in interna4)
-                            {
-                                if (canc.Cantante.Name == can.Name)
-                                {
-                                    listafiltrada.Add(canc);
-                                    lista_artistas_filtromiltiple.Remove(can);
-                                }
-                            }
-                        }
-                    }
-                    break;
-                case "Mayores de 60":
-                    foreach (Artista can in interna44)
-                    {
-                        if (can.Age > 60)
-                        {
-                            foreach (Song canc in interna4)
-                            {
-                                if (canc.Cantante.Name == can.Name)
-                                {
-                                    listafiltrada.Add(canc);
-                                    lista_artistas_filtromiltiple.Remove(can);
-                                }
-                            }
-                        }
-                    }
-                    break;
-            }
-            return listafiltrada;
-        }
-
-        public static List<Song> Cancionesporcalidadcancionand()
-        {
-            listafiltrada.Clear();
-            List<Song> interna5 = new List<Song>();
-            foreach (Song cc in canciones_filtradas)
-            {
-                interna5.Add(cc);
-            }
-            string _valor = ShowOptions(lista_calidad_cancion);
-            foreach (Song ca in interna5)
-            {
-                if (ca.Calidad == _valor)
-                {
-                    listafiltrada.Add(ca);
-
-                }
-
-            }
-            return listafiltrada;
-        }
-
-
-        public static List<Song> filtocriteriomultipleand(string criterio)
-        {
-            lista_filtrando.Clear();
-            switch (criterio)
-            {
-                case "Genero":
-
-                    lista_filtrando = CancionesporGeneroand();
-                    break;
-                case "Disquera":
-
-                    lista_filtrando = Cancionespordisqueraand();
-
-                    break;
-                case "Año Publicacion":
-
-                    lista_filtrando = Cancionesporaniopublicacionand();
-
-                    break;
-                case "Sexo del Artista":
-
-                    lista_filtrando = Cancionesporsexodelcantanteand();
-
-                    break;
-                case "Edad del Artista":
-
-                    lista_filtrando = Cancionesporedaddelcantanteand();
-
-                    break;
-                case "Calidad/Resolucion":
-                    lista_filtrando = Cancionesporcalidadcancionand();
-
-                    break;
-                case "Evaluacion":
-
-                    Console.WriteLine("Lo sentimos pero este metodo aun esta en construccion");
-                    Thread.Sleep(2000);
-
-                    //TERMINAR
-                    break;
-                default:
-                    Console.WriteLine("No existen canciones que cumplan con el criterio y valor seleccionado");
-                    break;
-            }
-            return lista_filtrando;
-        }
-        public static List<Song> Buqueda_multiple_cancionesand()
-        {
-            lista_canciones_filtromiltiple.Clear();
-            lista_artistas_filtromiltiple.Clear();
-            lista_criterios_filtro3.Clear();
-            foreach (Song caca in todas_las_canciones)
-            {
-                lista_canciones_filtromiltiple.Add(caca);
-            }
-            foreach (Artista cancan in lista_cantantes)
-            {
-                lista_artistas_filtromiltiple.Add(cancan);
-            }
-            foreach (Artista comcom in lista_compositores)
-            {
-                lista_artistas_filtromiltiple.Add(comcom);
-            }
-            foreach (String cricri in lista_criterios_filtro2)
-            {
-                lista_criterios_filtro3.Add(cricri);
-            }
-            canciones_filtradas.Clear();
-
-            Console.WriteLine("Los criterios para busqueda multiple son los siguientes:");
-            int num = 0, num_select = 1;
-            foreach (String cri in lista_criterios_filtro3)
-            {
-                Console.WriteLine(" - " + cri);
-
-            }
-            Console.WriteLine("Ingrese el numero de Criterios desea usar para la busca multiple:");
-            num = Numero(7);
-            string criterio;
-            List<string> criterios_seleccionados = new List<string>();
-            while (num_select <= num)
-            {
-                criterio = "\0";
-                Console.WriteLine("Seleccione el criterio N° " + num_select + " para su busqueda");
-                criterio = ShowOptions(lista_criterios_filtro3);
-                lista_criterios_filtro3.Remove(criterio);
-                criterios_seleccionados.Add(criterio);
-                num_select++;
-            }
-            Console.Clear();
-            Console.WriteLine("Usted selecciono buscar por:");
-            foreach (string c in criterios_seleccionados)
-            {
-                Console.WriteLine(" - " + c);
-            }
-            lista_filtrando2.Clear();
-            foreach (Song ss in filtocriteriomultiple(criterios_seleccionados[0]))
-            {
-                lista_filtrando2.Add(ss);
-            }
-            foreach (Song ccc in lista_filtrando2)
-            {
-                canciones_filtradas.Add(ccc);
-            }
-            int count2 = 1;
-            while (count2 < num)
-            {
-                lista_filtrando2.Clear();
-                foreach (Song ss in filtocriteriomultipleand(criterios_seleccionados[count2]))
-                {
-                    canciones_filtradas.Clear();
-                    canciones_filtradas.Add(ss);
-                }
-                count2++;
-            }
-            if (lista_filtrada_final.Count == 0)
-            {
-                Console.WriteLine("");
-
-
-            }
-            int si;
-            foreach (Song ccc in canciones_filtradas)
-            {
-                si = 0;
-                foreach (Song canc in lista_filtrada_final)
-                {
-
-                    if ((ccc.Nombrecancion == canc.Nombrecancion) && (ccc.Cantante.Name == canc.Cantante.Name))
-                    {
-                        si++;
-                    }
-                }
-                if (si == 0)
-                {
-                    lista_filtrada_final.Add(ccc);
-                }
-            }
-            return lista_filtrada_final;
-        }
-        //==============================================HASTA AQUI====================================================================================
-        //==============================================HASTA AQUI====================================================================================
-        //==============================================HASTA AQUI====================================================================================
-        //==============================================HASTA AQUI====================================================================================
-        //==============================================HASTA AQUI====================================================================================
-        //==============================================HASTA AQUI====================================================================================
-        //==============================================HASTA AQUI====================================================================================
-        //==============================================HASTA AQUI====================================================================================
-        //==============================================HASTA AQUI====================================================================================
-        //==============================================HASTA AQUI====================================================================================
-        //==============================================HASTA AQUI====================================================================================
-        //==============================================HASTA AQUI====================================================================================
-        //==============================================HASTA AQUI====================================================================================
-
-
-        public static List<Song> CancionesPorCriterio(string _criterio, string _valor)
-        {
-            listafiltrada.Clear();
-            switch (_criterio)
-            {
-                case "Genero Cancion":
-                    foreach (Song can in todas_las_canciones)
-                    {
-                        if (can.Genero.ToLower() == _valor.ToLower())
-                        {
-                            listafiltrada.Add(can);
-                        }
-                    }
-                    break;
-                case "Cantante":
-                    foreach (Artista art in lista_cantantes)
-                    {
-                        if (art.Name.ToLower() == _valor.ToLower())
-                        {
-                            foreach (Song can in art.Lista_canciones)
-                            {
-                                listafiltrada.Add(can);
-                            }
-                        }
-                    }
-                    break;
-                case "Album":
-                    foreach (PlaylistSong alb in todos_los_albumes)
-                    {
-                        if (alb.NombrePlaylist.ToLower() == _valor.ToLower())
-                        {
-                            foreach (Song canc in todas_las_canciones)
-                            {
-                                if (canc.Album.ToLower() == alb.NombrePlaylist.ToLower())
-                                {
-                                    listafiltrada.Add(canc);
-                                }
-                            }
-
-                        }
-                    }
-
-                    break;
-                case "Nombre Cancion":
-                    foreach (Song canc in todas_las_canciones)
-                    {
-                        if (canc.Nombrecancion.ToLower() == _valor.ToLower())
-                        {
-                            listafiltrada.Add(canc);
-                        }
-                    }
-                    break;
-                case "Disquera":
-                    foreach (Song canc in todas_las_canciones)
-                    {
-                        if (canc.Disquera.ToLower() == _valor.ToLower())
-                        {
-                            listafiltrada.Add(canc);
-                        }
-                    }
-                    break;
-                case "Compositor":
-                    foreach (Artista art in lista_compositores)
-                    {
-                        if (art.Name.ToLower() == _valor.ToLower())
-                        {
-                            foreach (Song can in art.Lista_canciones)
-                            {
-                                listafiltrada.Add(can);
-                            }
-                        }
-                    }
-                    break;
-                case "Año de Publicacion":
-                    foreach (Song canc in todas_las_canciones)
-                    {
-                        if (int.Parse(canc.Anopublicacion) == int.Parse(_valor))
-                        {
-                            listafiltrada.Add(canc);// ver 
-                        }
-                    }
-                    break;
-                case "Sexo del Artista":
-                    foreach (Artista art in lista_cantantes)
-                    {
-                        if (art.Sexo.ToLower() == _valor.ToLower())
-                        {
-                            foreach (Song canc in todas_las_canciones)
-                            {
-                                if (canc.Cantante.Name.ToLower() == art.Name.ToLower())
-                                {
-                                    listafiltrada.Add(canc);
-                                }
-                            }
-                        }
-
-                    }
-                    break;
-                case "Edad del Artista":
-                    switch (_valor)
-                    {
-                        case "Menores de 25 años":
-                            foreach (Artista can in lista_cantantes)
-                            {
-                                if (can.Age <= 25)
-                                {
-                                    foreach (Song canc in todas_las_canciones)
-                                    {
-                                        if (canc.Cantante.Name.ToLower() == can.Name.ToLower())
-                                        {
-                                            listafiltrada.Add(canc);
-                                        }
-                                    }
-                                }
-                            }
-
-                            break;
-                        case "De 25 a 40 años":
-                            foreach (Artista can in lista_cantantes)
-                            {
-                                if (can.Age > 25 && can.Age <= 40)
-                                {
-                                    foreach (Song canc in todas_las_canciones)
-                                    {
-                                        if (canc.Cantante.Name.ToLower() == can.Name.ToLower())
-                                        {
-                                            listafiltrada.Add(canc);
-                                        }
-                                    }
-                                }
-                            }
-                            break;
-                        case "De 40 a 60 años":
-                            foreach (Artista can in lista_cantantes)
-                            {
-                                if (can.Age > 40 && can.Age <= 60)
-                                {
-                                    foreach (Song canc in todas_las_canciones)
-                                    {
-                                        if (canc.Cantante.Name.ToLower() == can.Name.ToLower())
-                                        {
-                                            listafiltrada.Add(canc);
-                                        }
-                                    }
-                                }
-                            }
-                            break;
-                        case "Mayores de 60":
-                            foreach (Artista can in lista_cantantes)
-                            {
-                                if (can.Age > 60)
-                                {
-                                    foreach (Song canc in todas_las_canciones)
-                                    {
-                                        if (canc.Cantante.Name.ToLower() == can.Name.ToLower())
-                                        {
-                                            listafiltrada.Add(canc);
-                                        }
-                                    }
-                                }
-                            }
-                            break;
-                    }
-                    break;
-                case "Calidad/Resolucion":
-                    listafiltrada = Lista_por_calidad_cancion(_valor);
-                    break;
-                case "Evaluacion":
-                    listafiltrada = cancionporevaluacion(_valor);
-                    break;
-                
-            }
-            return listafiltrada;
-        }
-
         public static void Vercancionesparareproduccion(List<Song> s)
         {
             if (s.Count == 0)
@@ -2531,7 +1304,7 @@ namespace Proyecto_Forms
                     {
                         if (listausuarios[i].Perfipublico_ == "publico")
                         {
-                        
+
                             funko = "noup";
                             break;
                         }
@@ -2577,8 +1350,8 @@ namespace Proyecto_Forms
                 if (art.Name == cantante.Name)
                 {
                     h = 1;
-                    
-                    
+
+
                     cantante = art;
                     return true;
                 }
@@ -2596,7 +1369,7 @@ namespace Proyecto_Forms
 
             lista_compositores.Add(compositor);
             AlmacenarCompositores(lista_compositores);
-            
+
 
         }
 
@@ -2608,8 +1381,8 @@ namespace Proyecto_Forms
                 if (comp.Name == compositor.Name)
                 {
                     h = 1;
-                    
-                    
+
+
                     compositor = comp;
                     return true;
                 }
@@ -2749,7 +1522,7 @@ namespace Proyecto_Forms
                     {
                         if (listausuarios[i].Premium_ == "premium")
                         {
-                            
+
                             MessageBox.Show("YA ERAS PREMIUM ANTERIORMENTE", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.None);
                             funko = "noupo";
                             break;
@@ -2757,7 +1530,7 @@ namespace Proyecto_Forms
                         else
                         {
                             listausuarios[i].Premium_ = "premium";
-                            MessageBox.Show("FELICIDADES "+email+" AHORA ERES UN USUARIO PREMIUM", "BIENVENIDO", MessageBoxButtons.OK, MessageBoxIcon.None);
+                            MessageBox.Show("FELICIDADES " + email + " AHORA ERES UN USUARIO PREMIUM", "BIENVENIDO", MessageBoxButtons.OK, MessageBoxIcon.None);
                             funko = "correcto";
                             Almacenar(listausuarios);
                         }
@@ -2765,14 +1538,14 @@ namespace Proyecto_Forms
                     }
                     else
                     {
-                        
+
                         funko = "noup";
                     }
                     break;
                 }
                 else
                 {
-                    
+
                     funko = "noup";
                 }
             }
@@ -2780,10 +1553,10 @@ namespace Proyecto_Forms
             {
                 return true;
             }
-            if (funko =="noupo")
+            if (funko == "noupo")
             {
-                
-                
+
+
                 return false;
             }
             else
@@ -2791,7 +1564,7 @@ namespace Proyecto_Forms
                 MessageBox.Show("EMAIL O CONTRASEÑA INCORRECTOS", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 return false;
             }
-            
+
         }
 
         public static void Agregar_a_favoritos(string email, Song s)
@@ -2828,18 +1601,7 @@ namespace Proyecto_Forms
                     listausuarios[i].Favorite_videos_.Add(s);
                     Almacenar(listausuarios);
                     funka += "si";
-
                 }
-            }
-            if (funka != "")
-            {
-                Console.WriteLine("CANCION AGREGADA CORRECTAMENTE A FAVORITOS");
-                Thread.Sleep(2000);
-            }
-            else
-            {
-                Console.WriteLine("LA CANCION NO PUDO AGREGARSE A FAVORITOS");
-                Thread.Sleep(2000);
             }
         }
 
@@ -3172,50 +1934,7 @@ namespace Proyecto_Forms
             }
             return info;
         }
-        public static string Verinformacionfavoritoscancion(string email)//arreglar este
-        {
-            string info = "";
-            for (int j = 0; j < listausuarios.Count; j++)
-            {
-                if (listausuarios[j].Email_ == email)
-                {
-                    if (listausuarios[j].Favorite_songs_.Count == 0)
-                    {
-                        info = "No hay canciones agregadas aún";
-                    }
-                    else
-                    {
-                        for (int i = 0; i < listausuarios[j].Favorite_songs_.Count; i++)
-                        {
-                            //info += "============\nCanción" + " " + (i + 1) + "============" + listausuarios[j].Favorite_songs_[i].Informacioncancion() + " ";
-                        }
-                    }
-                }
-            }
-            return info;
-        }
-        public static string Verinformacionfavoritosvideo(string email)
-        {
-            string info = "";
-            for (int j = 0; j < listausuarios.Count; j++)
-            {
-                if (listausuarios[j].Email_ == email)
-                {
-                    if (listausuarios[j].Favorite_videos_.Count == 0)
-                    {
-                        info = "No hay videos agregadas aún";
-                    }
-                    else
-                    {
-                        for (int i = 0; i < listausuarios[j].Favorite_videos_.Count; i++)
-                        {
-                            //info += "============\nCanción" + " " + (i + 1) + "============" + listausuarios[j].Favorite_videos_[i].Ver_informacion() + " ";
-                        }
-                    }
-                }
-            }
-            return info;
-        }
+        
         public static string Verinformacionhistorialcancion(string email)
         {
             string info = "";
@@ -3361,7 +2080,7 @@ namespace Proyecto_Forms
                         for (int i = 0; i < listausuarios[j].Usuarios_seguidos_.Count; i++)
                         {
 
-                            
+
                             //Console.WriteLine(listausuarios[j].Usuarios_seguidos_[i].InformacionUsuario());
                         }
 
@@ -3617,17 +2336,17 @@ namespace Proyecto_Forms
         }
 
 
-        public static List<string> lista_criterios_filtro2v = new List<string>();       //    
-        public static List<string> lista_criterios_filtro3v = new List<string>();       //      
-        public static List<Video> lista_canciones_filtromiltiplev = new List<Video>();        //     
-        public static List<Artista> lista_artistas_filtromiltiplev = new List<Artista>();        //     
-        public static List<Video> lista_filtrandov = new List<Video>();        //    
+
+        // METODOS FILTROS VIDEO=============================================================================
+
+        public static List<string> lista_criterios_filtro2v = new List<string>();         
+        public static List<string> lista_criterios_filtro3v = new List<string>();           
+        public static List<Video> lista_canciones_filtromiltiplev = new List<Video>();           
+        public static List<Artista> lista_artistas_filtromiltiplev = new List<Artista>();          
+        public static List<Video> lista_filtrandov = new List<Video>();          
         public static List<Video> canciones_filtradasv = new List<Video>();
-        public static List<Video> lista_filtrando2v = new List<Video>();        //    
-        public static List<Video> listafiltradav = new List<Video>();       // ?? ESTO NO SE Q ES????
-
-
-
+        public static List<Video> lista_filtrando2v = new List<Video>();        
+        public static List<Video> listafiltradav = new List<Video>();       
         public static List<Video> VideosporGenero(string _valor)
         {
             listafiltradav.Clear();
@@ -3646,7 +2365,6 @@ namespace Proyecto_Forms
             }
             return listafiltradav;
         }
-
         public static List<Video> Videosporfilmstudio(string _valor)
         {
             listafiltradav.Clear();
@@ -3666,7 +2384,6 @@ namespace Proyecto_Forms
             }
             return listafiltradav;
         }
-
         public static List<Video> Videosporaniopublicacion(string _valor)
         {
             listafiltradav.Clear();
@@ -3686,7 +2403,6 @@ namespace Proyecto_Forms
             }
             return listafiltradav;
         }
-
         public static List<Video> Videosporcalidadvideo(string _valor)
         {
             listafiltradav.Clear();
@@ -3707,8 +2423,6 @@ namespace Proyecto_Forms
             }
             return listafiltradav;
         }
-
-
         public static List<Video> Videopornombre_actor(string _valor)
         {
             foreach (Artista art in lista_actores)
@@ -3723,7 +2437,6 @@ namespace Proyecto_Forms
             }
             return listafiltradav;
         }
-
         public static List<Video> Videopornombre_directores(string _valor)
         {
             foreach (Artista art in lista_directores)
@@ -3738,17 +2451,6 @@ namespace Proyecto_Forms
             }
             return listafiltradav;
         }
-        public static List<string> Lista_nombres_videos()
-        {
-            List<string> canc = new List<string>();
-            foreach (Video cancion in todos_los_videos)
-            {
-                canc.Add(cancion.Nombre_video);
-            }
-            return canc;
-        }
-
-
         public static List<Video> Videopornombrevideo(string _valor)
         {
             foreach (Video canc in todos_los_videos)
@@ -3760,7 +2462,6 @@ namespace Proyecto_Forms
             }
             return listafiltradav;
         }
-
         public static List<Video> Videoporcategoria(string _valor)
         {
             foreach (Video canc in todos_los_videos)
@@ -3858,11 +2559,9 @@ namespace Proyecto_Forms
                     }
                     break;
             }
-            
+
             return listafiltradav;
         }
-
-
         public static List<Video> Videoporevaluacion(string valor)
         {
             float _valor = float.Parse(valor);
@@ -3875,10 +2574,40 @@ namespace Proyecto_Forms
             }
             return listafiltradav;
         }
+        public static List<Video> Videosporsexodelartista(string _valor)
+        {
+            listafiltradav.Clear();
+            List<Video> interna3 = new List<Video>();
+            foreach (Video cc in lista_canciones_filtromiltiplev)
+            {
+                interna3.Add(cc);
+            }
+            List<Artista> interna33 = new List<Artista>();
+            foreach (Artista aa in lista_artistas_filtromiltiplev)
+            {
+                interna33.Add(aa);
+            }
 
 
+            foreach (Artista can in interna33)
+            {
+                if (can.Sexo.ToLower() == _valor)
+                {
+                    foreach (Video canc in interna3)
+                    {
+                        if (canc.Director.Name == can.Name)
+                        {
+                            listafiltradav.Add(canc);
+                            lista_canciones_filtromiltiplev.Remove(canc);
+                            lista_artistas_filtromiltiplev.Remove(can);
 
+                        }
+                    }
+                }
 
+            }
+            return listafiltradav;
+        }
         public static List<Video> Filtroporcriteriovideo(string criterio, string valor)
         {
             lista_filtrandov.Clear();
@@ -3921,7 +2650,7 @@ namespace Proyecto_Forms
             }
             return lista_filtrandov;
         }
-
+        //==================================================================================================
         public static List<Video> Buqueda_simple_videos(string criterio, string valor)
         {
             lista_canciones_filtromiltiplev.Clear();
@@ -3946,47 +2675,8 @@ namespace Proyecto_Forms
             }
             return lista_filtrando2v;
         }
-
-
-        public static List<Video> filtro_multiple_video_or(string criterio)
-        {
-            lista_filtrando2v.Clear();
-
-            switch (criterio)
-            {
-                case "Genero":
-                    lista_filtrandov = VideosporGenero( criterio);
-                    break;
-                case "Film Studio":
-                    lista_filtrandov = Videosporfilmstudio( criterio);
-                    break;
-                case "Actores":
-                    lista_filtrandov = Videopornombre_actor(criterio);
-                    break;
-                case "Director":
-                    lista_filtrandov = Videopornombre_directores(criterio);
-                    break;
-                case "Categoria":
-                    lista_filtrandov = Videoporcategoria(criterio);
-                    break;
-                case "Nombre":
-                    lista_filtrandov = Videopornombrevideo(criterio);
-                    break;
-                case "Año Publicacion":
-                    lista_filtrandov = Videosporaniopublicacion(criterio);
-                    break;
-                case "Calidad/Resolucion":
-                    lista_filtrandov = Videosporcalidadvideo(criterio);
-                    break;
-                case "Evaluacion":
-                    lista_filtrandov = Videoporevaluacion(criterio);
-                    break;
-                
-            }
-            return lista_filtrando2v;
-        }
-
-        public static List<Video> Buqueda_multiple_videos_or()
+        //====================================================================================================
+        public static List<Video> Buqueda_multiple_videos_or(List<string> criterios_seleccionados, List<string> criterios_ingresados)
         {
             lista_canciones_filtromiltiplev.Clear();
             lista_artistas_filtromiltiplev.Clear();
@@ -4007,29 +2697,7 @@ namespace Proyecto_Forms
             {
                 lista_criterios_filtro3v.Add(cricri);
             }
-            canciones_filtradasv.Clear();
-
-            Console.WriteLine("Los criterios para busqueda multiple son los siguientes:");
-            int num = 0, num_select = 1;
-            foreach (string cri in lista_criterios_filtro3v)
-            {
-                Console.WriteLine(" - " + cri);
-
-            }
-            Console.WriteLine("Ingrese el numero de Criterios desea usar para la busca multiple:");
-            num = Numero(7);
-            string criterio;
-            List<string> criterios_seleccionados = new List<string>();
-            while (num_select <= num)
-            {
-                criterio = "\0";
-                Console.WriteLine("Seleccione el criterio N° " + num_select + " para su busqueda");
-                criterio = ShowOptions(lista_criterios_filtro3v);
-                lista_criterios_filtro3v.Remove(criterio);
-                criterios_seleccionados.Add(criterio);
-                num_select++;
-            }
-            Console.Clear();
+            canciones_filtradasv.Clear();            
             Console.WriteLine("Usted selecciono buscar por:");
             foreach (string c in criterios_seleccionados)
             {
@@ -4037,72 +2705,39 @@ namespace Proyecto_Forms
             }
             foreach (string crit in criterios_seleccionados)
             {
-
-                lista_filtrando2v.Clear();
-                foreach (Video ss in filtro_multiple_video_or(crit))
+                List<string> criterio2 = new List<string>();
+                foreach (string palabra in criterios_ingresados)
                 {
-
-                    lista_filtrando2v.Add(ss);
+                    criterio2.Add(palabra);
                 }
-                foreach (Video ccc in lista_filtrando2v)
+                foreach (string c in criterio2)
                 {
-                    int si = 0;
-                    foreach (Video canc in canciones_filtradasv)
+                    lista_filtrando2v.Clear();
+                    foreach (Video ss in Filtroporcriteriovideo(crit, c))
                     {
-                        if (ccc.Nombre_video == canc.Nombre_video)
+                        lista_filtrando2v.Add(ss);
+                    }
+                    foreach (Video ccc in lista_filtrando2v)
+                    {
+                        int si = 0;
+                        foreach (Video canc in canciones_filtradasv)
                         {
-                            si++;
+                            if (ccc.Nombre_video == canc.Nombre_video)
+                            {
+                                si++;
+                            }
+                        }
+                        if (si == 0)
+                        {
+                            canciones_filtradasv.Add(ccc);
                         }
                     }
-                    if (si == 0)
-                    {
-                        canciones_filtradasv.Add(ccc);
-                    }
+                    break;
                 }
             }
             return canciones_filtradasv;
         }
-
-
-        public static List<Video> filtro_multiple_video_and(string criterio)
-        {
-            lista_filtrandov.Clear();
-            switch (criterio)
-            {
-                case "Genero":
-                    lista_filtrandov = VideosporGenero(criterio);
-                    break;
-                case "Film Studio":
-                    lista_filtrandov = Videosporfilmstudio(criterio);
-                    break;
-                case "Actores":
-                    lista_filtrandov = Videopornombre_actor(criterio);
-                    break;
-                case "Director":
-                    lista_filtrandov = Videopornombre_directores(criterio);
-                    break;
-                case "Categoria":
-                    lista_filtrandov = Videoporcategoria(criterio);
-                    break;
-                case "Nombre":
-                    lista_filtrandov = Videopornombrevideo(criterio);
-                    break;
-                case "Año Publicacion":
-                    lista_filtrandov = Videosporaniopublicacion(criterio);
-                    break;
-                case "Calidad/Resolucion":
-                    lista_filtrandov = Videosporcalidadvideo(criterio);
-                    break;
-                case "Evaluacion":
-                    lista_filtrandov = Videoporevaluacion(criterio);
-                    break;
-                default:
-                    Console.WriteLine("No existen videos que cumplan con el criterio y valor seleccionado");
-                    break;
-            }
-            return lista_filtrandov;
-        }
-        public static List<Video> Buqueda_multiple_videos_and()
+        public static List<Video> Buqueda_multiple_videos_and(List<string> criterios_seleccionados, List<string> criterios_ingresados)
         {
             lista_canciones_filtromiltiplev.Clear();
             lista_artistas_filtromiltiplev.Clear();
@@ -4124,35 +2759,8 @@ namespace Proyecto_Forms
                 lista_criterios_filtro3v.Add(cricri);
             }
             canciones_filtradasv.Clear();
-
-            Console.WriteLine("Los criterios para busqueda multiple son los siguientes:");
-            int num = 0, num_select = 1;
-            foreach (String cri in lista_criterios_filtro3v)
-            {
-                Console.WriteLine(" - " + cri);
-
-            }
-            Console.WriteLine("Ingrese el numero de Criterios desea usar para la busca multiple:");
-            num = Numero(7);
-            string criterio;
-            List<string> criterios_seleccionados = new List<string>();
-            while (num_select <= num)
-            {
-                criterio = "\0";
-                Console.WriteLine("Seleccione el criterio N° " + num_select + " para su busqueda");
-                criterio = ShowOptions(lista_criterios_filtro3v);
-                lista_criterios_filtro3v.Remove(criterio);
-                criterios_seleccionados.Add(criterio);
-                num_select++;
-            }
-            Console.Clear();
-            Console.WriteLine("Usted selecciono buscar por:");
-            foreach (string c in criterios_seleccionados)
-            {
-                Console.WriteLine(" - " + c);
-            }
             lista_filtrando2.Clear();
-            foreach (Video ss in filtro_multiple_video_and(criterios_seleccionados[0]))
+            foreach (Video ss in Filtroporcriteriovideo(criterios_seleccionados[0], criterios_ingresados[0]))
             {
                 lista_filtrando2v.Add(ss);
             }
@@ -4161,10 +2769,10 @@ namespace Proyecto_Forms
                 canciones_filtradasv.Add(ccc);
             }
             int count2 = 1;
-            while (count2 < num)
+            while (count2 < criterios_seleccionados.Count)
             {
                 lista_filtrando2v.Clear();
-                foreach (Video ss in filtro_multiple_video_and(criterios_seleccionados[count2]))
+                foreach (Video ss in Filtroporcriteriovideo(criterios_seleccionados[count2], criterios_ingresados[count2]))
                 {
                     canciones_filtradasv.Clear();
                     canciones_filtradasv.Add(ss);
@@ -4196,6 +2804,352 @@ namespace Proyecto_Forms
             }
             return lista_filtrada_finalv;
         }
-        
+
+
+
+        // METODOS DE FILTROS CANCIONES=============================================================
+        public static List<string> lista_criterios_filtro2 = new List<string>();
+        public static List<string> lista_criterios_filtro3 = new List<string>();
+        public static List<Song> lista_canciones_filtromiltiple = new List<Song>();
+        public static List<Artista> lista_artistas_filtromiltiple = new List<Artista>();
+        public static List<Song> lista_filtrando = new List<Song>();
+        public static List<Song> canciones_filtradas = new List<Song>();
+        public static List<Song> lista_filtrando2 = new List<Song>();
+        public static List<Song> Lista_por_calidad_cancion(string calidad)
+        { // busca todas las canciones de una calidad x
+            List<Song> cali_ca = new List<Song>();
+            foreach (Song ca in todas_las_canciones)
+            {
+                if (ca.Calidad == calidad)
+                {
+                    cali_ca.Add(ca);
+                }
+
+            }
+            return cali_ca;
+        }
+        public static List<Song> cancionporevaluacion(string valor)
+        {
+
+            try
+            {
+                float _valor = float.Parse(valor);
+                foreach (Song canc in todas_las_canciones)
+                {
+                    if (canc.Calificacionpromedio >= _valor)
+                    {
+                        listafiltrada.Add(canc);
+                    }
+                }
+                return listafiltrada;
+            }
+            catch
+            {
+                MessageBox.Show("NO PUEDE INGRESAR EVALUACIONES NULAS", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.None);
+
+            }
+            return listafiltrada;
+        }
+        public static List<Song> CancionesPorCriterio(string _criterio, string _valor)
+        {
+           
+            listafiltrada.Clear();
+            switch (_criterio)
+            {
+                case "Genero Cancion":
+                    foreach (Song can in todas_las_canciones)
+                    {
+                        if (can.Genero.ToLower() == _valor.ToLower())
+                        {
+                            listafiltrada.Add(can);
+                        }
+                    }
+                    break;
+                case "Cantante":
+                    foreach (Artista art in lista_cantantes)
+                    {
+                        if (art.Name.ToLower() == _valor.ToLower())
+                        {
+                            foreach (Song can in art.Lista_canciones)
+                            {
+                                listafiltrada.Add(can);
+                            }
+                        }
+                    }
+                    break;
+                case "Album":
+                    foreach (PlaylistSong alb in todos_los_albumes)
+                    {
+                        if (alb.NombrePlaylist.ToLower() == _valor.ToLower())
+                        {
+                            foreach (Song canc in todas_las_canciones)
+                            {
+                                if (canc.Album.ToLower() == alb.NombrePlaylist.ToLower())
+                                {
+                                    listafiltrada.Add(canc);
+                                }
+                            }
+
+                        }
+                    }
+
+                    break;
+                case "Nombre Cancion":
+                    foreach (Song canc in todas_las_canciones)
+                    {
+                        if (canc.Nombrecancion.ToLower() == _valor.ToLower())
+                        {
+                            listafiltrada.Add(canc);
+                        }
+                    }
+                    break;
+                case "Disquera":
+                    foreach (Song canc in todas_las_canciones)
+                    {
+                        if (canc.Disquera.ToLower() == _valor.ToLower())
+                        {
+                            listafiltrada.Add(canc);
+                        }
+                    }
+                    break;
+                case "Compositor":
+                    foreach (Artista art in lista_compositores)
+                    {
+                        if (art.Name.ToLower() == _valor.ToLower())
+                        {
+                            foreach (Song can in art.Lista_canciones)
+                            {
+                                listafiltrada.Add(can);
+                            }
+                        }
+                    }
+                    break;
+                case "Año de Publicacion":
+                    foreach (Song canc in todas_las_canciones)
+                    {
+                        if (int.Parse(canc.Anopublicacion) == int.Parse(_valor))
+                        {
+                            listafiltrada.Add(canc);// ver 
+                        }
+                    }
+                    break;
+                case "Sexo del Artista":
+                    foreach (Artista art in lista_cantantes)
+                    {
+                        if (art.Sexo.ToLower() == _valor.ToLower())
+                        {
+                            foreach (Song canc in todas_las_canciones)
+                            {
+                                if (canc.Cantante.Name.ToLower() == art.Name.ToLower())
+                                {
+                                    listafiltrada.Add(canc);
+                                }
+                            }
+                        }
+
+                    }
+                    break;
+                case "Edad del Artista":
+                    switch (_valor)
+                    {
+                        case "Menores de 25 años":
+                            foreach (Artista can in lista_cantantes)
+                            {
+                                if (can.Age <= 25)
+                                {
+                                    foreach (Song canc in todas_las_canciones)
+                                    {
+                                        if (canc.Cantante.Name.ToLower() == can.Name.ToLower())
+                                        {
+                                            listafiltrada.Add(canc);
+                                        }
+                                    }
+                                }
+                            }
+
+                            break;
+                        case "De 25 a 40 años":
+                            foreach (Artista can in lista_cantantes)
+                            {
+                                if (can.Age > 25 && can.Age <= 40)
+                                {
+                                    foreach (Song canc in todas_las_canciones)
+                                    {
+                                        if (canc.Cantante.Name.ToLower() == can.Name.ToLower())
+                                        {
+                                            listafiltrada.Add(canc);
+                                        }
+                                    }
+                                }
+                            }
+                            break;
+                        case "De 40 a 60 años":
+                            foreach (Artista can in lista_cantantes)
+                            {
+                                if (can.Age > 40 && can.Age <= 60)
+                                {
+                                    foreach (Song canc in todas_las_canciones)
+                                    {
+                                        if (canc.Cantante.Name.ToLower() == can.Name.ToLower())
+                                        {
+                                            listafiltrada.Add(canc);
+                                        }
+                                    }
+                                }
+                            }
+                            break;
+                        case "Mayores de 60":
+                            foreach (Artista can in lista_cantantes)
+                            {
+                                if (can.Age > 60)
+                                {
+                                    foreach (Song canc in todas_las_canciones)
+                                    {
+                                        if (canc.Cantante.Name.ToLower() == can.Name.ToLower())
+                                        {
+                                            listafiltrada.Add(canc);
+                                        }
+                                    }
+                                }
+                            }
+                            break;
+                    }
+                    break;
+                case "Calidad/Resolucion":
+                    listafiltrada = Lista_por_calidad_cancion(_valor);
+                    break;
+                case "Evaluacion":
+                    listafiltrada = cancionporevaluacion(_valor);
+                    break;
+
+            }
+            return listafiltrada;
+        }
+        //================================================================================================
+        public static List<Song> Buqueda_multiple_cancionesand(List<string> criterios_seleccionados, List<string> criterio)
+        {
+            lista_canciones_filtromiltiple.Clear();
+            lista_artistas_filtromiltiple.Clear();
+            lista_criterios_filtro3.Clear();
+            foreach (Song caca in todas_las_canciones)
+            {
+                lista_canciones_filtromiltiple.Add(caca);
+            }
+            foreach (Artista cancan in lista_cantantes)
+            {
+                lista_artistas_filtromiltiple.Add(cancan);
+            }
+            foreach (Artista comcom in lista_compositores)
+            {
+                lista_artistas_filtromiltiple.Add(comcom);
+            }
+            foreach (String cricri in lista_criterios_filtro2)
+            {
+                lista_criterios_filtro3.Add(cricri);
+            }
+            canciones_filtradas.Clear();
+            lista_filtrando2.Clear();
+            foreach (Song ss in CancionesPorCriterio(criterios_seleccionados[0], criterio[0]))
+            {
+                lista_filtrando2.Add(ss);
+            }
+            foreach (Song ccc in lista_filtrando2)
+            {
+                canciones_filtradas.Add(ccc);
+            }
+            int count2 = 1;
+            while (count2 < criterios_seleccionados.Count)
+            {
+                lista_filtrando2.Clear();
+                foreach (Song ss in CancionesPorCriterio(criterios_seleccionados[count2], criterio[count2]))
+                {
+                    canciones_filtradas.Clear();
+                    canciones_filtradas.Add(ss);
+                }
+                count2++;
+            }
+            if (lista_filtrada_final.Count == 0)
+            {
+                Console.WriteLine("");
+
+
+            }
+            int si;
+            foreach (Song ccc in canciones_filtradas)
+            {
+                si = 0;
+                foreach (Song canc in lista_filtrada_final)
+                {
+
+                    if ((ccc.Nombrecancion == canc.Nombrecancion) && (ccc.Cantante.Name == canc.Cantante.Name))
+                    {
+                        si++;
+                    }
+                }
+                if (si == 0)
+                {
+                    lista_filtrada_final.Add(ccc);
+                }
+            }
+            return lista_filtrada_final;
+        }
+        public static List<Song> Buqueda_multiple_canciones(List<string> criterios_seleccionados, List<string> criterio)
+        {
+            lista_canciones_filtromiltiple.Clear();
+            lista_artistas_filtromiltiple.Clear();
+            lista_criterios_filtro3.Clear();
+            foreach (Song caca in todas_las_canciones)
+            {
+                lista_canciones_filtromiltiple.Add(caca);
+            }
+            foreach (Artista cancan in lista_cantantes)
+            {
+                lista_artistas_filtromiltiple.Add(cancan);
+            }
+            foreach (Artista comcom in lista_compositores)
+            {
+                lista_artistas_filtromiltiple.Add(comcom);
+            }
+            foreach (String cricri in lista_criterios_filtro2)
+            {
+                lista_criterios_filtro3.Add(cricri);
+            }
+            canciones_filtradas.Clear();
+
+            foreach (String crit in criterios_seleccionados)
+            {
+                List<string> criterio2 = new List<string>();
+                foreach (string palabra in criterio)
+                {
+                    criterio2.Add(palabra);
+                }
+                foreach (string c in criterio2)
+                {
+                    lista_filtrando2.Clear();
+                    foreach (Song ss in CancionesPorCriterio(crit, c))
+                    {
+                        lista_filtrando2.Add(ss);
+                    }
+                    foreach (Song ccc in lista_filtrando2)
+                    {
+                        int si = 0;
+                        foreach (Song canc in canciones_filtradas)
+                        {
+                            if (ccc.Nombrecancion == canc.Nombrecancion)
+                            {
+                                si++;
+                            }
+                        }
+                        if (si == 0)
+                        {
+                            canciones_filtradas.Add(ccc);
+                        }
+                    }
+                    break;
+                }
+            }
+            return canciones_filtradas;
+        }
+
     }
 }

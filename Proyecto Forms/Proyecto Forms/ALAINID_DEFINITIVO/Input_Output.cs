@@ -1,4 +1,4 @@
-﻿using System;
+﻿/*using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading;
@@ -325,7 +325,7 @@ namespace Proyecto_Forms
                                                     ALAINID.Partirlistacompositores();
                                                     ALAINID.Partirlistaalbumes();
                                                     Console.Clear();
-                                                    ALAINID.Buqueda_multiple_canciones();
+                                                    //ALAINID.Buqueda_multiple_canciones();
                                                     int opcion00 = '\0';
                                                     while (opcion00 != 2)
                                                     {
@@ -557,7 +557,7 @@ namespace Proyecto_Forms
                                                     ALAINID.Partirlistacompositores();
                                                     ALAINID.Partirlistaalbumes();
                                                     Console.Clear();
-                                                    ALAINID.Buqueda_multiple_cancionesand();
+                                                    //ALAINID.Buqueda_multiple_cancionesand();
                                                     int opcion000 = '\0';
                                                     while (opcion000 != 2)
                                                     {
@@ -3481,4 +3481,4 @@ namespace Proyecto_Forms
             }
         }
     }
-}
+}*/

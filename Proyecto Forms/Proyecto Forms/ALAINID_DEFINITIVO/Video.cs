@@ -23,6 +23,7 @@ namespace Proyecto_Forms
         private int reproduccion;
         private List<int> todas_las_calificaciones = new List<int>();
         private List<Artista> actores = new List<Artista>();     // ACTORES DE CADA PELICULA- VIDEO
+        private int tipo = 1;
 
         public string Nombre_video { get => nombre_video; set => nombre_video = value; }
         public float Duracion { get => duracion; set => duracion = value; }
@@ -40,6 +41,7 @@ namespace Proyecto_Forms
         public int Reproduccion { get => reproduccion; set => reproduccion = value; }
         public List<int> Todas_las_calificaciones { get => todas_las_calificaciones; set => todas_las_calificaciones = value; }
         public List<Artista> Actores { get => actores; set => actores = value; }
+        public int Tipo { get => tipo; set => tipo = value; }
 
 
         //public float calificacion_personal; 

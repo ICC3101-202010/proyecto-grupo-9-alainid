@@ -206,6 +206,13 @@ namespace ALAINID_DEFINITIVO
 
         private void cancionesToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            panel_agregar_cancion_karaoke.Visible = false;
+            panel_agregar_video_admin.Visible = false;
+            panel_ver_artistas.Visible = false;
+            panel_ver_usuarios_admin.Visible = false;
+            panel_ver_canciones_karaoke.Visible = false;
+            panel_ver_canciones_admin.Visible = false;
+            panel_ver_videos_admin.Visible = false;
             panel_agregar_cancion_admin.Visible = true;
             panel_agregar_cancion_admin.Dock = DockStyle.Fill;
         }
@@ -329,6 +336,13 @@ namespace ALAINID_DEFINITIVO
 
         private void videosToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            panel_agregar_cancion_karaoke.Visible = false;
+            panel_agregar_cancion_admin.Visible = false;
+            panel_ver_artistas.Visible = false;
+            panel_ver_usuarios_admin.Visible = false;
+            panel_ver_canciones_karaoke.Visible = false;
+            panel_ver_canciones_admin.Visible = false;
+            panel_ver_videos_admin.Visible = false;
             panel_agregar_video_admin.Visible = true;
             panel_agregar_video_admin.Dock = DockStyle.Fill;
         }
@@ -389,45 +403,46 @@ namespace ALAINID_DEFINITIVO
 
         private void nacionalidadcompositorcancionkaraoke_agregar_cancion_karaoke_admin_TextChanged(object sender, EventArgs e)
         {
-
         }
-
         private void generocancionkaraoke_agregar_cancion_karaoke_admin_SelectedIndexChanged(object sender, EventArgs e)
         {
-
         }
-
         private void btn_subir_cancion_de_agregar_cancion_karaoke_admin_Click(object sender, EventArgs e)
         {
-
         }
-
         private void btn_importar_video_de_cancion_karaoke_en_agregar_cancion_karaoke_admin_Click(object sender, EventArgs e)
         {
-
         }
-
         private void cancionesKaraokeToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            panel_agregar_video_admin.Visible = false;
+            panel_agregar_cancion_admin.Visible = false;
+            panel_ver_artistas.Visible = false;
+            panel_ver_usuarios_admin.Visible = false;
+            panel_ver_canciones_karaoke.Visible = false;
+            panel_ver_canciones_admin.Visible = false;
+            panel_ver_videos_admin.Visible = false;
             panel_agregar_cancion_karaoke.Visible = true;
             panel_agregar_cancion_karaoke.Dock = DockStyle.Fill;
-
         }
-
         // VER USUARIOS ADMIN ======================================================================================================================================================================================
         private void panel_ver_usuarios_admin_Paint(object sender, PaintEventArgs e)
         {
-
         }
-
         private void btn_atras_de_ver_usuarios_admin_Click(object sender, EventArgs e)
         {
             tabla_usuarios_admin.Rows.Clear();
             panel_ver_usuarios_admin.Visible = false;
         }
-
         private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            panel_agregar_cancion_karaoke.Visible = false;
+            panel_agregar_video_admin.Visible = false;
+            panel_agregar_cancion_admin.Visible = false;
+            panel_ver_artistas.Visible = false;
+            panel_ver_canciones_karaoke.Visible = false;
+            panel_ver_videos_admin.Visible = false;
+            panel_ver_canciones_admin.Visible = false;
             panel_ver_usuarios_admin.Visible = true;
             panel_ver_usuarios_admin.Dock = DockStyle.Fill;
             foreach (User user in Proyecto_Forms.ALAINID.listausuarios)
@@ -440,28 +455,26 @@ namespace ALAINID_DEFINITIVO
                 tabla_usuarios_admin.Rows[n].Cells[4].Value = user.Perfipublico_;
                 tabla_usuarios_admin.Rows[n].Cells[5].Value = user.Premium_;
             }
-
         }
-
         private void lista_usuarios_admin_SelectedIndexChanged(object sender, EventArgs e)
         {
-
         }
-
         private void label26_Click(object sender, EventArgs e)
         {
-
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
 
         }
-
-        
-
         private void artistasToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            panel_agregar_cancion_karaoke.Visible = false;
+            panel_agregar_video_admin.Visible = false;
+            panel_agregar_cancion_admin.Visible = false;
+            panel_ver_usuarios_admin.Visible = false;
+            panel_ver_canciones_karaoke.Visible = false;
+            panel_ver_videos_admin.Visible = false;
+            panel_ver_canciones_admin.Visible = false;
             Proyecto_Forms.ALAINID.Partirlistadirectores();
             Proyecto_Forms.ALAINID.Partirlistaactores();
             Proyecto_Forms.ALAINID.Partirlistacompositores();
@@ -501,26 +514,21 @@ namespace ALAINID_DEFINITIVO
                 tabla_ver_directores_admin.Rows[n].Cells[3].Value = dir.Sexo;
             }
         }
-
         private void cerrarSesionYSalirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Close();
             Program.forms_inicio.Show();
             Application.Exit();
         }
-
         private void tabla_usuarios_admin_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             f = e.RowIndex;
             c = e.ColumnIndex;
-
         }
-
         private void tabla_usuarios_admin_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
-
         private void btn_editar_usuarios_admin_Click(object sender, EventArgs e)
         {
             int fil = tabla_usuarios_admin.RowCount;
@@ -537,7 +545,6 @@ namespace ALAINID_DEFINITIVO
                 }
             }
         }
-
         private void btn_guardar_usuarios_admin_Click(object sender, EventArgs e)
         {
             f = tabla_usuarios_admin.Rows.Count;
@@ -565,7 +572,6 @@ namespace ALAINID_DEFINITIVO
                             {
                                 user.Nombreusuario = (string)tabla_usuarios_admin.Rows[f].Cells[1].Value;
                                 Proyecto_Forms.ALAINID.Almacenar(Proyecto_Forms.ALAINID.listausuarios);
-
                             }
                         }
                         break;
@@ -576,12 +582,10 @@ namespace ALAINID_DEFINITIVO
                             {
                                 user.Nombre_ = (string)tabla_usuarios_admin.Rows[f].Cells[1].Value;
                                 Proyecto_Forms.ALAINID.Almacenar(Proyecto_Forms.ALAINID.listausuarios);
-
                             }
                         }
                         break;
                     case 3:
-
                         break;
                     case 4:
                         foreach (User user in Proyecto_Forms.ALAINID.listausuarios)
@@ -590,7 +594,6 @@ namespace ALAINID_DEFINITIVO
                             {
                                 user.Password_ = (string)tabla_usuarios_admin.Rows[f].Cells[3].Value;
                                 Proyecto_Forms.ALAINID.Almacenar(Proyecto_Forms.ALAINID.listausuarios);
-
                             }
                         }
                         break;
@@ -601,7 +604,6 @@ namespace ALAINID_DEFINITIVO
                             {
                                 user.Perfipublico_ = (string)tabla_usuarios_admin.Rows[f].Cells[4].Value;
                                 Proyecto_Forms.ALAINID.Almacenar(Proyecto_Forms.ALAINID.listausuarios);
-
                             }
                         }
                         break;
@@ -615,14 +617,11 @@ namespace ALAINID_DEFINITIVO
                             }
                         }
                         break;
-
                 }
             }
-
             int fil = tabla_usuarios_admin.RowCount;
             int col = tabla_usuarios_admin.ColumnCount;
             tabla_usuarios_admin.ReadOnly = true;
-
             for (int i = 1; i < fil; i++)
             {
                 for (int ii = 1; ii < col; ii++)
@@ -633,7 +632,6 @@ namespace ALAINID_DEFINITIVO
                     }
                 }
             }
-
         }
 
         private void openfile_subircancion_admin_FileOk(object sender, CancelEventArgs e)
@@ -643,9 +641,16 @@ namespace ALAINID_DEFINITIVO
 
         private void videosToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            panel_agregar_cancion_karaoke.Visible = false;
+            panel_agregar_video_admin.Visible = false;
+            panel_agregar_cancion_admin.Visible = false;
+            panel_ver_artistas.Visible = false;
+            panel_ver_usuarios_admin.Visible = false;
+            panel_ver_canciones_karaoke.Visible = false;
             Proyecto_Forms.ALAINID.Activarlistavideos();
             Proyecto_Forms.ALAINID.Partirlistadirectores();
             Proyecto_Forms.ALAINID.Partirlistaactores();
+            panel_ver_canciones_admin.Visible = false;
             panel_ver_videos_admin.Visible = true;
             panel_ver_videos_admin.Dock = DockStyle.Fill;
             foreach (Video video in Proyecto_Forms.ALAINID.todos_los_videos)
@@ -674,6 +679,13 @@ namespace ALAINID_DEFINITIVO
 
         private void cancionesToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            panel_agregar_cancion_karaoke.Visible = false;
+            panel_agregar_video_admin.Visible = false;
+            panel_agregar_cancion_admin.Visible = false;
+            panel_ver_artistas.Visible = false;
+            panel_ver_usuarios_admin.Visible = false;
+            panel_ver_canciones_karaoke.Visible = false;
+            panel_ver_videos_admin.Visible = false;
             Proyecto_Forms.ALAINID.Activarlistacanciones();
             Proyecto_Forms.ALAINID.Activarlistacantantes();
             Proyecto_Forms.ALAINID.Partirlistacompositores();
@@ -704,7 +716,6 @@ namespace ALAINID_DEFINITIVO
         {//atras ver canciones admin
             panel_ver_canciones_admin.Visible = false;
             tabla_ver_canciones_admin.Rows.Clear();
-
         }
 
         private void label44_Click(object sender, EventArgs e)
@@ -720,6 +731,13 @@ namespace ALAINID_DEFINITIVO
 
         private void cancionesKaraokeToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            panel_agregar_cancion_karaoke.Visible = false;
+            panel_agregar_video_admin.Visible = false;
+            panel_agregar_cancion_admin.Visible = false;
+            panel_ver_artistas.Visible = false;
+            panel_ver_usuarios_admin.Visible = false;
+            panel_ver_videos_admin.Visible = false;
+            panel_ver_canciones_admin.Visible = false;
             panel_ver_canciones_karaoke.Visible = true;
             panel_ver_canciones_karaoke.Dock = DockStyle.Fill;
             Proyecto_Forms.ALAINID.Activarlistacanciones();
@@ -791,7 +809,7 @@ namespace ALAINID_DEFINITIVO
             edadcantante_text_cancion_karaoke.Text = "";
             sexocantante_text_cancion_karaoke.Text = "";
             nacioncompositor_text_cancion_karaoke.Text = "";
-            nombrecompositor_text_cancion_karaoke.Text = "";
+            nacioncantante_text_cancion_karaoke.Text = "";
             edadcompositor_text_cancion_karaoke.Text = "";
             sexocompositor_text_cancion_karaoke.Text = "";
             nacioncompositor_text_cancion_karaoke.Text = "";
@@ -826,24 +844,22 @@ namespace ALAINID_DEFINITIVO
             tabla_ver_compositores_admin.Rows.Clear();
             tabla_ver_actores_admin.Rows.Clear();
             tabla_ver_cantantes_admin.Rows.Clear();
-
         }
 
         private void checkBox_repetir_cantante_encompositor_karaoke_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox_repetir_cantante_como_compositor.Checked == true)
+            if (checkBox_repetir_cantante_encompositor_karaoke.Checked == true)
             {
                 nombrecompositor_text_cancion_karaoke.Text = nombrecantante_text_cancion_karaoke.Text;
                 edadcompositor_text_cancion_karaoke.Text = edadcantante_text_cancion_karaoke.Text;
                 sexocompositor_text_cancion_karaoke.Text = sexocantante_text_cancion_karaoke.Text;
-                nacioncompositor_text_cancion_karaoke.Text = nacioncompositor_text_cancion_karaoke.Text;
+                nacioncompositor_text_cancion_karaoke.Text = nacioncantante_text_cancion_karaoke.Text;
                 nombrecompositor_text_cancion_karaoke.Enabled = false;
                 edadcompositor_text_cancion_karaoke.Enabled = false;
                 sexocompositor_text_cancion_karaoke.Enabled = false;
                 nacioncompositor_text_cancion_karaoke.Enabled = false;
-
             }
-            if (checkBox_repetir_cantante_como_compositor.Checked == false)
+            if (checkBox_repetir_cantante_encompositor_karaoke.Checked == false)
             {
                 nombrecompositor_text_cancion_karaoke.Enabled = true;
                 edadcompositor_text_cancion_karaoke.Enabled = true;

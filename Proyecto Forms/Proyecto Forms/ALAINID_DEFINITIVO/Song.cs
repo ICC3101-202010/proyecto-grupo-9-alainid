@@ -23,6 +23,7 @@ namespace Proyecto_Forms
         private string calidad;
         private string nombrearchivo;
         private List<int> todas_las_calificaciones = new List<int>();
+        private int tipo = 0;
 
         public Song(float tamano,string nombrecancion, Artista cantante, string genero, Artista compositor, string anopublicacion, string disquera, string album, string nombrearchivo)
         {
@@ -38,9 +39,7 @@ namespace Proyecto_Forms
         }
 
         public string Nombrecancion { get => nombrecancion; set => nombrecancion = value; }
-
         public string Genero { get => genero; set => genero = value; }
-
         public string Anopublicacion { get => anopublicacion; set => anopublicacion = value; }
         public string Disquera { get => disquera; set => disquera = value; }
         public string Album { get => album; set => album = value; }
@@ -55,6 +54,6 @@ namespace Proyecto_Forms
         public List<int> Todas_las_calificaciones { get => todas_las_calificaciones; set => todas_las_calificaciones = value; }
         public Artista Cantante { get => cantante; set => cantante = value; }
         public Artista Compositor { get => compositor; set => compositor = value; }
-
+        public int Tipo { get => tipo; set => tipo = value; }
     }
 }

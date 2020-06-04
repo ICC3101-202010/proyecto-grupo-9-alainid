@@ -49,12 +49,9 @@ namespace ALAINID_DEFINITIVO
 
 
             //---------37 PA ABAJO
-            Proyecto_Forms.ALAINID.lista_criterios_filtro.Add("Genero"); Proyecto_Forms.ALAINID.lista_criterios_filtro.Add("Cantante"); Proyecto_Forms.ALAINID.lista_criterios_filtro.Add("Album");
-            Proyecto_Forms.ALAINID.lista_criterios_filtro.Add("Nombre"); Proyecto_Forms.ALAINID.lista_criterios_filtro.Add("Disquera"); Proyecto_Forms.ALAINID.lista_criterios_filtro.Add("Compositor");
-            Proyecto_Forms.ALAINID.lista_criterios_filtro.Add("Año Publicacion"); Proyecto_Forms.ALAINID.lista_criterios_filtro.Add("Sexo del Artista"); Proyecto_Forms.ALAINID.lista_criterios_filtro.Add("Edad del Artista");
-            Proyecto_Forms.ALAINID.lista_criterios_filtro.Add("Calidad/Resolucion"); Proyecto_Forms.ALAINID.lista_criterios_filtro.Add("Evaluacion");
-
+            
             Proyecto_Forms.ALAINID.lista_criterios_usuarios.Add("Nombre"); Proyecto_Forms.ALAINID.lista_criterios_usuarios.Add("Email"); Proyecto_Forms.ALAINID.lista_criterios_usuarios.Add("Id");
+            
             Proyecto_Forms.ALAINID.lista_disquera.Add("Sony Music"); Proyecto_Forms.ALAINID.lista_disquera.Add(" Universal Music"); Proyecto_Forms.ALAINID.lista_disquera.Add(" Warner Music ");
             Proyecto_Forms.ALAINID.lista_disquera.Add("YG Entertainment"); Proyecto_Forms.ALAINID.lista_disquera.Add("SM Entretainment");
 
@@ -66,14 +63,20 @@ namespace ALAINID_DEFINITIVO
             Proyecto_Forms.ALAINID.edades.Add("Menores de 25 años"); Proyecto_Forms.ALAINID.edades.Add("De 25 a 40 años"); Proyecto_Forms.ALAINID.edades.Add("De 40 a 60 años");
             Proyecto_Forms.ALAINID.edades.Add("Mayores de 60");
 
-            Proyecto_Forms.ALAINID.lista_criterios_filtro2.Add("Genero");
+            Proyecto_Forms.ALAINID.lista_criterios_filtro2.Add("Categoria Pelicula");
+            Proyecto_Forms.ALAINID.lista_criterios_filtro2.Add("Film Studio");
             Proyecto_Forms.ALAINID.lista_criterios_filtro2.Add("Disquera");
-            Proyecto_Forms.ALAINID.lista_criterios_filtro2.Add("Año Publicacion"); Proyecto_Forms.ALAINID.lista_criterios_filtro2.Add("Sexo del Artista"); Proyecto_Forms.ALAINID.lista_criterios_filtro2.Add("Edad del Artista");
+            Proyecto_Forms.ALAINID.lista_criterios_filtro2.Add("Album");
+            Proyecto_Forms.ALAINID.lista_criterios_filtro2.Add("Actor");
+            Proyecto_Forms.ALAINID.lista_criterios_filtro2.Add("Director");
+            Proyecto_Forms.ALAINID.lista_criterios_filtro2.Add("Compositor");
+            Proyecto_Forms.ALAINID.lista_criterios_filtro2.Add("Cantante");
+            Proyecto_Forms.ALAINID.lista_criterios_filtro2.Add("Genero Video");
+            Proyecto_Forms.ALAINID.lista_criterios_filtro2.Add("Genero Cancion");
+            Proyecto_Forms.ALAINID.lista_criterios_filtro2.Add("Nombre Cancion");
+            Proyecto_Forms.ALAINID.lista_criterios_filtro2.Add("Nombre Pelicula");
+            Proyecto_Forms.ALAINID.lista_criterios_filtro2.Add("Año de Publicacion"); Proyecto_Forms.ALAINID.lista_criterios_filtro2.Add("Sexo del Artista"); Proyecto_Forms.ALAINID.lista_criterios_filtro2.Add("Edad del Artista");
             Proyecto_Forms.ALAINID.lista_criterios_filtro2.Add("Calidad/Resolucion"); Proyecto_Forms.ALAINID.lista_criterios_filtro2.Add("Evaluacion");
-
-            Proyecto_Forms.ALAINID.lista_criterios_filtro2v.Add("Genero"); Proyecto_Forms.ALAINID.lista_criterios_filtro2v.Add("Film Studio"); Proyecto_Forms.ALAINID.lista_criterios_filtro2v.Add("Categoria"); Proyecto_Forms.ALAINID.lista_criterios_filtro2v.Add("Nombre");
-            Proyecto_Forms.ALAINID.lista_criterios_filtro2v.Add("Año Publicacion"); Proyecto_Forms.ALAINID.lista_criterios_filtro2v.Add("Calidad/Resolucion"); Proyecto_Forms.ALAINID.lista_criterios_filtro2v.Add("Actores"); Proyecto_Forms.ALAINID.lista_criterios_filtro2v.Add("Director");
-            Proyecto_Forms.ALAINID.lista_criterios_filtro2v.Add("Evaluacion");
 
             
 

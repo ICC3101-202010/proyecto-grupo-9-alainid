@@ -279,9 +279,10 @@
             label54.AutoSize = true;
             label54.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label54.ForeColor = System.Drawing.Color.Maroon;
-            label54.Location = new System.Drawing.Point(15, 487);
+            label54.Location = new System.Drawing.Point(11, 396);
+            label54.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label54.Name = "label54";
-            label54.Size = new System.Drawing.Size(115, 29);
+            label54.Size = new System.Drawing.Size(92, 23);
             label54.TabIndex = 135;
             label54.Text = "Directores";
             // 
@@ -290,9 +291,10 @@
             label51.AutoSize = true;
             label51.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label51.ForeColor = System.Drawing.Color.Maroon;
-            label51.Location = new System.Drawing.Point(15, 320);
+            label51.Location = new System.Drawing.Point(11, 260);
+            label51.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label51.Name = "label51";
-            label51.Size = new System.Drawing.Size(89, 29);
+            label51.Size = new System.Drawing.Size(71, 23);
             label51.TabIndex = 136;
             label51.Text = "Actores";
             // 
@@ -301,9 +303,10 @@
             label52.AutoSize = true;
             label52.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label52.ForeColor = System.Drawing.Color.Maroon;
-            label52.Location = new System.Drawing.Point(15, 169);
+            label52.Location = new System.Drawing.Point(11, 137);
+            label52.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label52.Name = "label52";
-            label52.Size = new System.Drawing.Size(141, 29);
+            label52.Size = new System.Drawing.Size(110, 23);
             label52.TabIndex = 137;
             label52.Text = "Compositores";
             // 
@@ -312,9 +315,10 @@
             label53.AutoSize = true;
             label53.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label53.ForeColor = System.Drawing.Color.Maroon;
-            label53.Location = new System.Drawing.Point(15, 31);
+            label53.Location = new System.Drawing.Point(11, 25);
+            label53.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label53.Name = "label53";
-            label53.Size = new System.Drawing.Size(106, 29);
+            label53.Size = new System.Drawing.Size(87, 23);
             label53.TabIndex = 138;
             label53.Text = "Cantantes";
             // 
@@ -327,8 +331,8 @@
             this.agregarToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1213, 30);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(910, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -339,20 +343,20 @@
             this.cerrarSesionToolStripMenuItem,
             this.cerrarSesionYSalirToolStripMenuItem});
             this.aDMINToolStripMenuItem.Name = "aDMINToolStripMenuItem";
-            this.aDMINToolStripMenuItem.Size = new System.Drawing.Size(72, 26);
+            this.aDMINToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
             this.aDMINToolStripMenuItem.Text = "ADMIN";
             // 
             // cerrarSesionToolStripMenuItem
             // 
             this.cerrarSesionToolStripMenuItem.Name = "cerrarSesionToolStripMenuItem";
-            this.cerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(223, 26);
+            this.cerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.cerrarSesionToolStripMenuItem.Text = "Cerrar Sesion";
             this.cerrarSesionToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesionToolStripMenuItem_Click);
             // 
             // cerrarSesionYSalirToolStripMenuItem
             // 
             this.cerrarSesionYSalirToolStripMenuItem.Name = "cerrarSesionYSalirToolStripMenuItem";
-            this.cerrarSesionYSalirToolStripMenuItem.Size = new System.Drawing.Size(223, 26);
+            this.cerrarSesionYSalirToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.cerrarSesionYSalirToolStripMenuItem.Text = "Cerrar Sesion y Salir";
             this.cerrarSesionYSalirToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesionYSalirToolStripMenuItem_Click);
             // 
@@ -365,41 +369,41 @@
             this.usuariosToolStripMenuItem,
             this.artistasToolStripMenuItem});
             this.verToolStripMenuItem.Name = "verToolStripMenuItem";
-            this.verToolStripMenuItem.Size = new System.Drawing.Size(44, 26);
+            this.verToolStripMenuItem.Size = new System.Drawing.Size(35, 20);
             this.verToolStripMenuItem.Text = "Ver";
             // 
             // cancionesToolStripMenuItem
             // 
             this.cancionesToolStripMenuItem.Name = "cancionesToolStripMenuItem";
-            this.cancionesToolStripMenuItem.Size = new System.Drawing.Size(217, 26);
+            this.cancionesToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.cancionesToolStripMenuItem.Text = "Canciones";
             this.cancionesToolStripMenuItem.Click += new System.EventHandler(this.cancionesToolStripMenuItem_Click);
             // 
             // videosToolStripMenuItem
             // 
             this.videosToolStripMenuItem.Name = "videosToolStripMenuItem";
-            this.videosToolStripMenuItem.Size = new System.Drawing.Size(217, 26);
+            this.videosToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.videosToolStripMenuItem.Text = "Videos";
             this.videosToolStripMenuItem.Click += new System.EventHandler(this.videosToolStripMenuItem_Click);
             // 
             // cancionesKaraokeToolStripMenuItem
             // 
             this.cancionesKaraokeToolStripMenuItem.Name = "cancionesKaraokeToolStripMenuItem";
-            this.cancionesKaraokeToolStripMenuItem.Size = new System.Drawing.Size(217, 26);
+            this.cancionesKaraokeToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.cancionesKaraokeToolStripMenuItem.Text = "Canciones Karaoke";
             this.cancionesKaraokeToolStripMenuItem.Click += new System.EventHandler(this.cancionesKaraokeToolStripMenuItem_Click);
             // 
             // usuariosToolStripMenuItem
             // 
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(217, 26);
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.usuariosToolStripMenuItem.Text = "Usuarios";
             this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
             // artistasToolStripMenuItem
             // 
             this.artistasToolStripMenuItem.Name = "artistasToolStripMenuItem";
-            this.artistasToolStripMenuItem.Size = new System.Drawing.Size(217, 26);
+            this.artistasToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.artistasToolStripMenuItem.Text = "Artistas";
             this.artistasToolStripMenuItem.Click += new System.EventHandler(this.artistasToolStripMenuItem_Click);
             // 
@@ -410,27 +414,27 @@
             this.videosToolStripMenuItem1,
             this.cancionesKaraokeToolStripMenuItem1});
             this.agregarToolStripMenuItem.Name = "agregarToolStripMenuItem";
-            this.agregarToolStripMenuItem.Size = new System.Drawing.Size(77, 26);
+            this.agregarToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.agregarToolStripMenuItem.Text = "Agregar";
             // 
             // cancionesToolStripMenuItem1
             // 
             this.cancionesToolStripMenuItem1.Name = "cancionesToolStripMenuItem1";
-            this.cancionesToolStripMenuItem1.Size = new System.Drawing.Size(217, 26);
+            this.cancionesToolStripMenuItem1.Size = new System.Drawing.Size(174, 22);
             this.cancionesToolStripMenuItem1.Text = "Canciones";
             this.cancionesToolStripMenuItem1.Click += new System.EventHandler(this.cancionesToolStripMenuItem1_Click);
             // 
             // videosToolStripMenuItem1
             // 
             this.videosToolStripMenuItem1.Name = "videosToolStripMenuItem1";
-            this.videosToolStripMenuItem1.Size = new System.Drawing.Size(217, 26);
+            this.videosToolStripMenuItem1.Size = new System.Drawing.Size(174, 22);
             this.videosToolStripMenuItem1.Text = "Videos";
             this.videosToolStripMenuItem1.Click += new System.EventHandler(this.videosToolStripMenuItem1_Click);
             // 
             // cancionesKaraokeToolStripMenuItem1
             // 
             this.cancionesKaraokeToolStripMenuItem1.Name = "cancionesKaraokeToolStripMenuItem1";
-            this.cancionesKaraokeToolStripMenuItem1.Size = new System.Drawing.Size(217, 26);
+            this.cancionesKaraokeToolStripMenuItem1.Size = new System.Drawing.Size(174, 22);
             this.cancionesKaraokeToolStripMenuItem1.Text = "Canciones Karaoke";
             this.cancionesKaraokeToolStripMenuItem1.Click += new System.EventHandler(this.cancionesKaraokeToolStripMenuItem1_Click);
             // 
@@ -440,19 +444,20 @@
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Font = new System.Drawing.Font("Comic Sans MS", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(0, 30);
+            this.label2.Location = new System.Drawing.Point(0, 24);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(1121, 66);
+            this.label2.Size = new System.Drawing.Size(884, 52);
             this.label2.TabIndex = 19;
             this.label2.Text = "BIENVENIDO ADMINISTRADOR DE ALAINID";
             // 
             // btn_agregar_cancion_admin
             // 
             this.btn_agregar_cancion_admin.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_agregar_cancion_admin.Location = new System.Drawing.Point(52, 398);
-            this.btn_agregar_cancion_admin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_agregar_cancion_admin.Location = new System.Drawing.Point(39, 323);
+            this.btn_agregar_cancion_admin.Margin = new System.Windows.Forms.Padding(2);
             this.btn_agregar_cancion_admin.Name = "btn_agregar_cancion_admin";
-            this.btn_agregar_cancion_admin.Size = new System.Drawing.Size(547, 111);
+            this.btn_agregar_cancion_admin.Size = new System.Drawing.Size(410, 90);
             this.btn_agregar_cancion_admin.TabIndex = 20;
             this.btn_agregar_cancion_admin.Text = "AGREGAR CANCION";
             this.btn_agregar_cancion_admin.UseVisualStyleBackColor = true;
@@ -461,10 +466,10 @@
             // btn_agregar_video_admin
             // 
             this.btn_agregar_video_admin.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_agregar_video_admin.Location = new System.Drawing.Point(625, 398);
-            this.btn_agregar_video_admin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_agregar_video_admin.Location = new System.Drawing.Point(469, 323);
+            this.btn_agregar_video_admin.Margin = new System.Windows.Forms.Padding(2);
             this.btn_agregar_video_admin.Name = "btn_agregar_video_admin";
-            this.btn_agregar_video_admin.Size = new System.Drawing.Size(547, 111);
+            this.btn_agregar_video_admin.Size = new System.Drawing.Size(410, 90);
             this.btn_agregar_video_admin.TabIndex = 21;
             this.btn_agregar_video_admin.Text = "AGREGAR VIDEO";
             this.btn_agregar_video_admin.UseVisualStyleBackColor = true;
@@ -473,10 +478,10 @@
             // btn_agregar_cancion_karaoke_admin
             // 
             this.btn_agregar_cancion_karaoke_admin.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_agregar_cancion_karaoke_admin.Location = new System.Drawing.Point(52, 523);
-            this.btn_agregar_cancion_karaoke_admin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_agregar_cancion_karaoke_admin.Location = new System.Drawing.Point(39, 425);
+            this.btn_agregar_cancion_karaoke_admin.Margin = new System.Windows.Forms.Padding(2);
             this.btn_agregar_cancion_karaoke_admin.Name = "btn_agregar_cancion_karaoke_admin";
-            this.btn_agregar_cancion_karaoke_admin.Size = new System.Drawing.Size(547, 111);
+            this.btn_agregar_cancion_karaoke_admin.Size = new System.Drawing.Size(410, 90);
             this.btn_agregar_cancion_karaoke_admin.TabIndex = 22;
             this.btn_agregar_cancion_karaoke_admin.Text = "AGREGAR CANCION KARAOKE";
             this.btn_agregar_cancion_karaoke_admin.UseVisualStyleBackColor = true;
@@ -485,10 +490,10 @@
             // btn_ver_usuarios_admin
             // 
             this.btn_ver_usuarios_admin.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ver_usuarios_admin.Location = new System.Drawing.Point(625, 523);
-            this.btn_ver_usuarios_admin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_ver_usuarios_admin.Location = new System.Drawing.Point(469, 425);
+            this.btn_ver_usuarios_admin.Margin = new System.Windows.Forms.Padding(2);
             this.btn_ver_usuarios_admin.Name = "btn_ver_usuarios_admin";
-            this.btn_ver_usuarios_admin.Size = new System.Drawing.Size(547, 111);
+            this.btn_ver_usuarios_admin.Size = new System.Drawing.Size(410, 90);
             this.btn_ver_usuarios_admin.TabIndex = 23;
             this.btn_ver_usuarios_admin.Text = "VER USUARIOS";
             this.btn_ver_usuarios_admin.UseVisualStyleBackColor = true;
@@ -529,10 +534,10 @@
             this.panel_agregar_cancion_admin.Controls.Add(this.label3);
             this.panel_agregar_cancion_admin.Controls.Add(this.label1);
             this.panel_agregar_cancion_admin.Controls.Add(this.nombre_cancion_txt_agregar_cancion);
-            this.panel_agregar_cancion_admin.Location = new System.Drawing.Point(480, 402);
-            this.panel_agregar_cancion_admin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel_agregar_cancion_admin.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_agregar_cancion_admin.Location = new System.Drawing.Point(0, 24);
             this.panel_agregar_cancion_admin.Name = "panel_agregar_cancion_admin";
-            this.panel_agregar_cancion_admin.Size = new System.Drawing.Size(107, 39);
+            this.panel_agregar_cancion_admin.Size = new System.Drawing.Size(910, 525);
             this.panel_agregar_cancion_admin.TabIndex = 24;
             this.panel_agregar_cancion_admin.Visible = false;
             this.panel_agregar_cancion_admin.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_agregar_cancion_admin_Paint);
@@ -542,10 +547,10 @@
             this.ruta_archivo_cancion_txt_subir_cancion.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.ruta_archivo_cancion_txt_subir_cancion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ruta_archivo_cancion_txt_subir_cancion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ruta_archivo_cancion_txt_subir_cancion.Location = new System.Drawing.Point(55, 570);
-            this.ruta_archivo_cancion_txt_subir_cancion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ruta_archivo_cancion_txt_subir_cancion.Location = new System.Drawing.Point(41, 463);
+            this.ruta_archivo_cancion_txt_subir_cancion.Margin = new System.Windows.Forms.Padding(2);
             this.ruta_archivo_cancion_txt_subir_cancion.Name = "ruta_archivo_cancion_txt_subir_cancion";
-            this.ruta_archivo_cancion_txt_subir_cancion.Size = new System.Drawing.Size(847, 17);
+            this.ruta_archivo_cancion_txt_subir_cancion.Size = new System.Drawing.Size(635, 14);
             this.ruta_archivo_cancion_txt_subir_cancion.TabIndex = 64;
             this.ruta_archivo_cancion_txt_subir_cancion.Text = "Archivo cancion";
             this.ruta_archivo_cancion_txt_subir_cancion.TextChanged += new System.EventHandler(this.ruta_archivo_cancion_txt_subir_cancion_TextChanged);
@@ -555,10 +560,9 @@
             this.checkBox_repetir_cantante_como_compositor.AutoSize = true;
             this.checkBox_repetir_cantante_como_compositor.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox_repetir_cantante_como_compositor.ForeColor = System.Drawing.Color.White;
-            this.checkBox_repetir_cantante_como_compositor.Location = new System.Drawing.Point(261, 194);
-            this.checkBox_repetir_cantante_como_compositor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox_repetir_cantante_como_compositor.Location = new System.Drawing.Point(196, 158);
             this.checkBox_repetir_cantante_como_compositor.Name = "checkBox_repetir_cantante_como_compositor";
-            this.checkBox_repetir_cantante_como_compositor.Size = new System.Drawing.Size(170, 24);
+            this.checkBox_repetir_cantante_como_compositor.Size = new System.Drawing.Size(137, 20);
             this.checkBox_repetir_cantante_como_compositor.TabIndex = 63;
             this.checkBox_repetir_cantante_como_compositor.Text = "Es el Mismo Cantante";
             this.checkBox_repetir_cantante_como_compositor.UseVisualStyleBackColor = true;
@@ -567,10 +571,10 @@
             // btn_atras_de_agregar_cancion_admin
             // 
             this.btn_atras_de_agregar_cancion_admin.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_atras_de_agregar_cancion_admin.Location = new System.Drawing.Point(1097, 20);
-            this.btn_atras_de_agregar_cancion_admin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_atras_de_agregar_cancion_admin.Location = new System.Drawing.Point(823, 16);
+            this.btn_atras_de_agregar_cancion_admin.Margin = new System.Windows.Forms.Padding(2);
             this.btn_atras_de_agregar_cancion_admin.Name = "btn_atras_de_agregar_cancion_admin";
-            this.btn_atras_de_agregar_cancion_admin.Size = new System.Drawing.Size(95, 41);
+            this.btn_atras_de_agregar_cancion_admin.Size = new System.Drawing.Size(71, 33);
             this.btn_atras_de_agregar_cancion_admin.TabIndex = 62;
             this.btn_atras_de_agregar_cancion_admin.Text = "Atras";
             this.btn_atras_de_agregar_cancion_admin.UseVisualStyleBackColor = true;
@@ -579,10 +583,10 @@
             // btn_subir_cancion_admin
             // 
             this.btn_subir_cancion_admin.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_subir_cancion_admin.Location = new System.Drawing.Point(907, 133);
-            this.btn_subir_cancion_admin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_subir_cancion_admin.Location = new System.Drawing.Point(680, 108);
+            this.btn_subir_cancion_admin.Margin = new System.Windows.Forms.Padding(2);
             this.btn_subir_cancion_admin.Name = "btn_subir_cancion_admin";
-            this.btn_subir_cancion_admin.Size = new System.Drawing.Size(247, 326);
+            this.btn_subir_cancion_admin.Size = new System.Drawing.Size(185, 265);
             this.btn_subir_cancion_admin.TabIndex = 61;
             this.btn_subir_cancion_admin.Text = "Subir Cancion";
             this.btn_subir_cancion_admin.UseVisualStyleBackColor = true;
@@ -591,10 +595,10 @@
             // btn_importar_cancion_admin
             // 
             this.btn_importar_cancion_admin.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_importar_cancion_admin.Location = new System.Drawing.Point(907, 522);
-            this.btn_importar_cancion_admin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_importar_cancion_admin.Location = new System.Drawing.Point(680, 424);
+            this.btn_importar_cancion_admin.Margin = new System.Windows.Forms.Padding(2);
             this.btn_importar_cancion_admin.Name = "btn_importar_cancion_admin";
-            this.btn_importar_cancion_admin.Size = new System.Drawing.Size(247, 92);
+            this.btn_importar_cancion_admin.Size = new System.Drawing.Size(185, 75);
             this.btn_importar_cancion_admin.TabIndex = 60;
             this.btn_importar_cancion_admin.Text = "Importar Archivo cancion";
             this.btn_importar_cancion_admin.UseVisualStyleBackColor = true;
@@ -611,10 +615,9 @@
             "YG Entertainment",
             "SM Entretainment",
             "Otra"});
-            this.comboBox4.Location = new System.Drawing.Point(357, 430);
-            this.comboBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox4.Location = new System.Drawing.Point(268, 349);
             this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(460, 33);
+            this.comboBox4.Size = new System.Drawing.Size(346, 28);
             this.comboBox4.TabIndex = 59;
             this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
             // 
@@ -637,10 +640,9 @@
             "Urban",
             "Jazz",
             "Otras"});
-            this.comboBox3.Location = new System.Drawing.Point(357, 334);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox3.Location = new System.Drawing.Point(268, 271);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(460, 33);
+            this.comboBox3.Size = new System.Drawing.Size(346, 28);
             this.comboBox3.TabIndex = 58;
             this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
@@ -650,10 +652,9 @@
             this.sexocompositor_txt_agregar_admin.Items.AddRange(new object[] {
             "Masculino",
             "Femenino"});
-            this.sexocompositor_txt_agregar_admin.Location = new System.Drawing.Point(580, 233);
-            this.sexocompositor_txt_agregar_admin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.sexocompositor_txt_agregar_admin.Location = new System.Drawing.Point(435, 189);
             this.sexocompositor_txt_agregar_admin.Name = "sexocompositor_txt_agregar_admin";
-            this.sexocompositor_txt_agregar_admin.Size = new System.Drawing.Size(239, 24);
+            this.sexocompositor_txt_agregar_admin.Size = new System.Drawing.Size(180, 21);
             this.sexocompositor_txt_agregar_admin.TabIndex = 57;
             this.sexocompositor_txt_agregar_admin.SelectedIndexChanged += new System.EventHandler(this.sexocompositor_txt_agregar_admin_SelectedIndexChanged);
             // 
@@ -663,10 +664,9 @@
             this.sexocantante_txt_agregar_admin.Items.AddRange(new object[] {
             "Masculino",
             "Femenino"});
-            this.sexocantante_txt_agregar_admin.Location = new System.Drawing.Point(580, 114);
-            this.sexocantante_txt_agregar_admin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.sexocantante_txt_agregar_admin.Location = new System.Drawing.Point(435, 93);
             this.sexocantante_txt_agregar_admin.Name = "sexocantante_txt_agregar_admin";
-            this.sexocantante_txt_agregar_admin.Size = new System.Drawing.Size(239, 24);
+            this.sexocantante_txt_agregar_admin.Size = new System.Drawing.Size(180, 21);
             this.sexocantante_txt_agregar_admin.TabIndex = 56;
             this.sexocantante_txt_agregar_admin.SelectedIndexChanged += new System.EventHandler(this.sexocantante_txt_agregar_admin_SelectedIndexChanged);
             // 
@@ -676,19 +676,20 @@
             this.label16.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.label16.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(80, 473);
+            this.label16.Location = new System.Drawing.Point(60, 384);
+            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(208, 38);
+            this.label16.Size = new System.Drawing.Size(164, 29);
             this.label16.TabIndex = 55;
             this.label16.Text = "Año Publicacion";
             // 
             // anopublic_txt_agregar_cancion
             // 
             this.anopublic_txt_agregar_cancion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.anopublic_txt_agregar_cancion.Location = new System.Drawing.Point(359, 478);
-            this.anopublic_txt_agregar_cancion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.anopublic_txt_agregar_cancion.Location = new System.Drawing.Point(269, 388);
+            this.anopublic_txt_agregar_cancion.Margin = new System.Windows.Forms.Padding(2);
             this.anopublic_txt_agregar_cancion.Name = "anopublic_txt_agregar_cancion";
-            this.anopublic_txt_agregar_cancion.Size = new System.Drawing.Size(460, 30);
+            this.anopublic_txt_agregar_cancion.Size = new System.Drawing.Size(346, 26);
             this.anopublic_txt_agregar_cancion.TabIndex = 54;
             this.anopublic_txt_agregar_cancion.TextChanged += new System.EventHandler(this.anopublic_txt_agregar_cancion_TextChanged);
             // 
@@ -698,9 +699,10 @@
             this.label15.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.label15.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(83, 427);
+            this.label15.Location = new System.Drawing.Point(62, 347);
+            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(126, 38);
+            this.label15.Size = new System.Drawing.Size(98, 29);
             this.label15.TabIndex = 52;
             this.label15.Text = "Disquera";
             // 
@@ -710,19 +712,20 @@
             this.label14.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.label14.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(85, 379);
+            this.label14.Location = new System.Drawing.Point(64, 308);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(95, 38);
+            this.label14.Size = new System.Drawing.Size(74, 29);
             this.label14.TabIndex = 50;
             this.label14.Text = "Album";
             // 
             // album_txt_agregar_cancion
             // 
             this.album_txt_agregar_cancion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.album_txt_agregar_cancion.Location = new System.Drawing.Point(357, 384);
-            this.album_txt_agregar_cancion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.album_txt_agregar_cancion.Location = new System.Drawing.Point(268, 312);
+            this.album_txt_agregar_cancion.Margin = new System.Windows.Forms.Padding(2);
             this.album_txt_agregar_cancion.Name = "album_txt_agregar_cancion";
-            this.album_txt_agregar_cancion.Size = new System.Drawing.Size(460, 30);
+            this.album_txt_agregar_cancion.Size = new System.Drawing.Size(346, 26);
             this.album_txt_agregar_cancion.TabIndex = 49;
             this.album_txt_agregar_cancion.TextChanged += new System.EventHandler(this.album_txt_agregar_cancion_TextChanged);
             // 
@@ -732,29 +735,30 @@
             this.label13.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.label13.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(85, 329);
+            this.label13.Location = new System.Drawing.Point(64, 267);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(106, 38);
+            this.label13.Size = new System.Drawing.Size(81, 29);
             this.label13.TabIndex = 48;
             this.label13.Text = "Genero";
             // 
             // nacionalidad_txt_agregar_admin
             // 
             this.nacionalidad_txt_agregar_admin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nacionalidad_txt_agregar_admin.Location = new System.Drawing.Point(580, 267);
-            this.nacionalidad_txt_agregar_admin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.nacionalidad_txt_agregar_admin.Location = new System.Drawing.Point(435, 217);
+            this.nacionalidad_txt_agregar_admin.Margin = new System.Windows.Forms.Padding(2);
             this.nacionalidad_txt_agregar_admin.Name = "nacionalidad_txt_agregar_admin";
-            this.nacionalidad_txt_agregar_admin.Size = new System.Drawing.Size(239, 23);
+            this.nacionalidad_txt_agregar_admin.Size = new System.Drawing.Size(180, 20);
             this.nacionalidad_txt_agregar_admin.TabIndex = 46;
             this.nacionalidad_txt_agregar_admin.TextChanged += new System.EventHandler(this.nacionalidad_txt_agregar_admin_TextChanged);
             // 
             // edadcompositor_txt_agregar_admin
             // 
             this.edadcompositor_txt_agregar_admin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.edadcompositor_txt_agregar_admin.Location = new System.Drawing.Point(173, 268);
-            this.edadcompositor_txt_agregar_admin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.edadcompositor_txt_agregar_admin.Location = new System.Drawing.Point(130, 218);
+            this.edadcompositor_txt_agregar_admin.Margin = new System.Windows.Forms.Padding(2);
             this.edadcompositor_txt_agregar_admin.Name = "edadcompositor_txt_agregar_admin";
-            this.edadcompositor_txt_agregar_admin.Size = new System.Drawing.Size(239, 23);
+            this.edadcompositor_txt_agregar_admin.Size = new System.Drawing.Size(180, 20);
             this.edadcompositor_txt_agregar_admin.TabIndex = 44;
             this.edadcompositor_txt_agregar_admin.TextChanged += new System.EventHandler(this.edadcompositor_txt_agregar_admin_TextChanged);
             // 
@@ -764,9 +768,10 @@
             this.label8.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.label8.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(448, 267);
+            this.label8.Location = new System.Drawing.Point(336, 217);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(112, 24);
+            this.label8.Size = new System.Drawing.Size(88, 18);
             this.label8.TabIndex = 43;
             this.label8.Text = "Nacionalidad";
             // 
@@ -776,9 +781,10 @@
             this.label9.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.label9.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(85, 234);
+            this.label9.Location = new System.Drawing.Point(64, 190);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(75, 24);
+            this.label9.Size = new System.Drawing.Size(55, 18);
             this.label9.TabIndex = 42;
             this.label9.Text = "Nombre";
             // 
@@ -788,9 +794,10 @@
             this.label10.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.label10.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(85, 268);
+            this.label10.Location = new System.Drawing.Point(64, 218);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(50, 24);
+            this.label10.Size = new System.Drawing.Size(39, 18);
             this.label10.TabIndex = 41;
             this.label10.Text = "Edad";
             // 
@@ -800,19 +807,20 @@
             this.label11.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.label11.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(448, 233);
+            this.label11.Location = new System.Drawing.Point(336, 189);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(52, 24);
+            this.label11.Size = new System.Drawing.Size(39, 18);
             this.label11.TabIndex = 40;
             this.label11.Text = "Sexo";
             // 
             // nombrecompositor_txt_agregar_admin
             // 
             this.nombrecompositor_txt_agregar_admin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nombrecompositor_txt_agregar_admin.Location = new System.Drawing.Point(173, 231);
-            this.nombrecompositor_txt_agregar_admin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.nombrecompositor_txt_agregar_admin.Location = new System.Drawing.Point(130, 188);
+            this.nombrecompositor_txt_agregar_admin.Margin = new System.Windows.Forms.Padding(2);
             this.nombrecompositor_txt_agregar_admin.Name = "nombrecompositor_txt_agregar_admin";
-            this.nombrecompositor_txt_agregar_admin.Size = new System.Drawing.Size(239, 23);
+            this.nombrecompositor_txt_agregar_admin.Size = new System.Drawing.Size(180, 20);
             this.nombrecompositor_txt_agregar_admin.TabIndex = 39;
             this.nombrecompositor_txt_agregar_admin.TextChanged += new System.EventHandler(this.nombrecompositor_txt_agregar_admin_TextChanged);
             // 
@@ -822,29 +830,30 @@
             this.label12.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.label12.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(49, 199);
+            this.label12.Location = new System.Drawing.Point(37, 162);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(105, 24);
+            this.label12.Size = new System.Drawing.Size(78, 18);
             this.label12.TabIndex = 38;
             this.label12.Text = "Compositor:";
             // 
             // nacionalidadcantante_txt_agregar_admin
             // 
             this.nacionalidadcantante_txt_agregar_admin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nacionalidadcantante_txt_agregar_admin.Location = new System.Drawing.Point(580, 153);
-            this.nacionalidadcantante_txt_agregar_admin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.nacionalidadcantante_txt_agregar_admin.Location = new System.Drawing.Point(435, 124);
+            this.nacionalidadcantante_txt_agregar_admin.Margin = new System.Windows.Forms.Padding(2);
             this.nacionalidadcantante_txt_agregar_admin.Name = "nacionalidadcantante_txt_agregar_admin";
-            this.nacionalidadcantante_txt_agregar_admin.Size = new System.Drawing.Size(239, 23);
+            this.nacionalidadcantante_txt_agregar_admin.Size = new System.Drawing.Size(180, 20);
             this.nacionalidadcantante_txt_agregar_admin.TabIndex = 36;
             this.nacionalidadcantante_txt_agregar_admin.TextChanged += new System.EventHandler(this.nacionalidadcantante_txt_agregar_admin_TextChanged);
             // 
             // edadcantante_txt_agregar_admin
             // 
             this.edadcantante_txt_agregar_admin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.edadcantante_txt_agregar_admin.Location = new System.Drawing.Point(173, 154);
-            this.edadcantante_txt_agregar_admin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.edadcantante_txt_agregar_admin.Location = new System.Drawing.Point(130, 125);
+            this.edadcantante_txt_agregar_admin.Margin = new System.Windows.Forms.Padding(2);
             this.edadcantante_txt_agregar_admin.Name = "edadcantante_txt_agregar_admin";
-            this.edadcantante_txt_agregar_admin.Size = new System.Drawing.Size(239, 23);
+            this.edadcantante_txt_agregar_admin.Size = new System.Drawing.Size(180, 20);
             this.edadcantante_txt_agregar_admin.TabIndex = 35;
             this.edadcantante_txt_agregar_admin.TextChanged += new System.EventHandler(this.edadcantante_txt_agregar_admin_TextChanged);
             // 
@@ -854,9 +863,10 @@
             this.label7.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.label7.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(448, 153);
+            this.label7.Location = new System.Drawing.Point(336, 124);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(112, 24);
+            this.label7.Size = new System.Drawing.Size(88, 18);
             this.label7.TabIndex = 34;
             this.label7.Text = "Nacionalidad";
             // 
@@ -866,9 +876,10 @@
             this.label6.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.label6.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(85, 119);
+            this.label6.Location = new System.Drawing.Point(64, 97);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(75, 24);
+            this.label6.Size = new System.Drawing.Size(55, 18);
             this.label6.TabIndex = 33;
             this.label6.Text = "Nombre";
             // 
@@ -878,9 +889,10 @@
             this.label5.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.label5.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(85, 154);
+            this.label5.Location = new System.Drawing.Point(64, 125);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(50, 24);
+            this.label5.Size = new System.Drawing.Size(39, 18);
             this.label5.TabIndex = 32;
             this.label5.Text = "Edad";
             // 
@@ -890,19 +902,20 @@
             this.label4.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.label4.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(448, 118);
+            this.label4.Location = new System.Drawing.Point(336, 96);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 24);
+            this.label4.Size = new System.Drawing.Size(39, 18);
             this.label4.TabIndex = 31;
             this.label4.Text = "Sexo";
             // 
             // nombrecantante_txt_agregar_admin
             // 
             this.nombrecantante_txt_agregar_admin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nombrecantante_txt_agregar_admin.Location = new System.Drawing.Point(173, 117);
-            this.nombrecantante_txt_agregar_admin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.nombrecantante_txt_agregar_admin.Location = new System.Drawing.Point(130, 95);
+            this.nombrecantante_txt_agregar_admin.Margin = new System.Windows.Forms.Padding(2);
             this.nombrecantante_txt_agregar_admin.Name = "nombrecantante_txt_agregar_admin";
-            this.nombrecantante_txt_agregar_admin.Size = new System.Drawing.Size(239, 23);
+            this.nombrecantante_txt_agregar_admin.Size = new System.Drawing.Size(180, 20);
             this.nombrecantante_txt_agregar_admin.TabIndex = 30;
             this.nombrecantante_txt_agregar_admin.TextChanged += new System.EventHandler(this.nombrecantante_txt_agregar_admin_TextChanged);
             // 
@@ -912,9 +925,10 @@
             this.label3.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.label3.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(49, 90);
+            this.label3.Location = new System.Drawing.Point(37, 73);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(87, 24);
+            this.label3.Size = new System.Drawing.Size(65, 18);
             this.label3.TabIndex = 29;
             this.label3.Text = "Cantante:";
             // 
@@ -924,19 +938,20 @@
             this.label1.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(83, 39);
+            this.label1.Location = new System.Drawing.Point(62, 32);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(219, 38);
+            this.label1.Size = new System.Drawing.Size(170, 29);
             this.label1.TabIndex = 28;
             this.label1.Text = "Nombre Cancion";
             // 
             // nombre_cancion_txt_agregar_cancion
             // 
             this.nombre_cancion_txt_agregar_cancion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nombre_cancion_txt_agregar_cancion.Location = new System.Drawing.Point(357, 41);
-            this.nombre_cancion_txt_agregar_cancion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.nombre_cancion_txt_agregar_cancion.Location = new System.Drawing.Point(268, 33);
+            this.nombre_cancion_txt_agregar_cancion.Margin = new System.Windows.Forms.Padding(2);
             this.nombre_cancion_txt_agregar_cancion.Name = "nombre_cancion_txt_agregar_cancion";
-            this.nombre_cancion_txt_agregar_cancion.Size = new System.Drawing.Size(461, 30);
+            this.nombre_cancion_txt_agregar_cancion.Size = new System.Drawing.Size(347, 26);
             this.nombre_cancion_txt_agregar_cancion.TabIndex = 26;
             this.nombre_cancion_txt_agregar_cancion.TextChanged += new System.EventHandler(this.nombre_cancion_txt_agregar_cancion_TextChanged);
             // 
@@ -969,10 +984,9 @@
             this.panel_agregar_video_admin.Controls.Add(this.label31);
             this.panel_agregar_video_admin.Controls.Add(this.nombrevideo_agregar_video_admin);
             this.panel_agregar_video_admin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.panel_agregar_video_admin.Location = new System.Drawing.Point(1056, 402);
-            this.panel_agregar_video_admin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel_agregar_video_admin.Location = new System.Drawing.Point(792, 327);
             this.panel_agregar_video_admin.Name = "panel_agregar_video_admin";
-            this.panel_agregar_video_admin.Size = new System.Drawing.Size(107, 32);
+            this.panel_agregar_video_admin.Size = new System.Drawing.Size(80, 26);
             this.panel_agregar_video_admin.TabIndex = 63;
             this.panel_agregar_video_admin.Visible = false;
             this.panel_agregar_video_admin.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_agregar_video_admin_Paint);
@@ -983,9 +997,10 @@
             this.archivo_video_importar_video.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.archivo_video_importar_video.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.archivo_video_importar_video.ForeColor = System.Drawing.Color.White;
-            this.archivo_video_importar_video.Location = new System.Drawing.Point(281, 475);
+            this.archivo_video_importar_video.Location = new System.Drawing.Point(211, 386);
+            this.archivo_video_importar_video.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.archivo_video_importar_video.Name = "archivo_video_importar_video";
-            this.archivo_video_importar_video.Size = new System.Drawing.Size(0, 33);
+            this.archivo_video_importar_video.Size = new System.Drawing.Size(0, 26);
             this.archivo_video_importar_video.TabIndex = 97;
             // 
             // label28
@@ -994,9 +1009,10 @@
             this.label28.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.label28.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label28.ForeColor = System.Drawing.Color.Black;
-            this.label28.Location = new System.Drawing.Point(68, 583);
+            this.label28.Location = new System.Drawing.Point(51, 474);
+            this.label28.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(130, 26);
+            this.label28.Size = new System.Drawing.Size(105, 20);
             this.label28.TabIndex = 96;
             this.label28.Text = "Archivo Video";
             // 
@@ -1009,12 +1025,11 @@
             this.edad_actor,
             this.sexo_actor,
             this.nacion_actor});
-            this.tabla_agregar_actores_en_video.Location = new System.Drawing.Point(87, 411);
-            this.tabla_agregar_actores_en_video.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabla_agregar_actores_en_video.Location = new System.Drawing.Point(65, 334);
             this.tabla_agregar_actores_en_video.Name = "tabla_agregar_actores_en_video";
             this.tabla_agregar_actores_en_video.RowHeadersVisible = false;
             this.tabla_agregar_actores_en_video.RowHeadersWidth = 51;
-            this.tabla_agregar_actores_en_video.Size = new System.Drawing.Size(805, 134);
+            this.tabla_agregar_actores_en_video.Size = new System.Drawing.Size(604, 109);
             this.tabla_agregar_actores_en_video.TabIndex = 95;
             // 
             // nombre_actor
@@ -1050,20 +1065,19 @@
             "Infantil-Juvenil (7 - 16 años)",
             "Adolecente (16 - 18 años)",
             "Adulto (18+ años)"});
-            this.categoriavideo_agregar_video_admin.Location = new System.Drawing.Point(337, 240);
-            this.categoriavideo_agregar_video_admin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.categoriavideo_agregar_video_admin.Location = new System.Drawing.Point(253, 195);
             this.categoriavideo_agregar_video_admin.Name = "categoriavideo_agregar_video_admin";
-            this.categoriavideo_agregar_video_admin.Size = new System.Drawing.Size(553, 32);
+            this.categoriavideo_agregar_video_admin.Size = new System.Drawing.Size(416, 26);
             this.categoriavideo_agregar_video_admin.TabIndex = 94;
             this.categoriavideo_agregar_video_admin.SelectedIndexChanged += new System.EventHandler(this.categoriavideo_agregar_video_admin_SelectedIndexChanged);
             // 
             // btn_atras_de_agregar_video_admin
             // 
             this.btn_atras_de_agregar_video_admin.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_atras_de_agregar_video_admin.Location = new System.Drawing.Point(1097, 20);
-            this.btn_atras_de_agregar_video_admin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_atras_de_agregar_video_admin.Location = new System.Drawing.Point(823, 16);
+            this.btn_atras_de_agregar_video_admin.Margin = new System.Windows.Forms.Padding(2);
             this.btn_atras_de_agregar_video_admin.Name = "btn_atras_de_agregar_video_admin";
-            this.btn_atras_de_agregar_video_admin.Size = new System.Drawing.Size(95, 41);
+            this.btn_atras_de_agregar_video_admin.Size = new System.Drawing.Size(71, 33);
             this.btn_atras_de_agregar_video_admin.TabIndex = 93;
             this.btn_atras_de_agregar_video_admin.Text = "Atras";
             this.btn_atras_de_agregar_video_admin.UseVisualStyleBackColor = true;
@@ -1072,10 +1086,10 @@
             // btn_subir_video_de_agregar_video_admin
             // 
             this.btn_subir_video_de_agregar_video_admin.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_subir_video_de_agregar_video_admin.Location = new System.Drawing.Point(949, 133);
-            this.btn_subir_video_de_agregar_video_admin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_subir_video_de_agregar_video_admin.Location = new System.Drawing.Point(712, 108);
+            this.btn_subir_video_de_agregar_video_admin.Margin = new System.Windows.Forms.Padding(2);
             this.btn_subir_video_de_agregar_video_admin.Name = "btn_subir_video_de_agregar_video_admin";
-            this.btn_subir_video_de_agregar_video_admin.Size = new System.Drawing.Size(240, 276);
+            this.btn_subir_video_de_agregar_video_admin.Size = new System.Drawing.Size(180, 224);
             this.btn_subir_video_de_agregar_video_admin.TabIndex = 92;
             this.btn_subir_video_de_agregar_video_admin.Text = "Subir Video";
             this.btn_subir_video_de_agregar_video_admin.UseVisualStyleBackColor = true;
@@ -1084,10 +1098,10 @@
             // btn_importar_video_agregar_video_admin
             // 
             this.btn_importar_video_agregar_video_admin.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_importar_video_agregar_video_admin.Location = new System.Drawing.Point(949, 519);
-            this.btn_importar_video_agregar_video_admin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_importar_video_agregar_video_admin.Location = new System.Drawing.Point(712, 422);
+            this.btn_importar_video_agregar_video_admin.Margin = new System.Windows.Forms.Padding(2);
             this.btn_importar_video_agregar_video_admin.Name = "btn_importar_video_agregar_video_admin";
-            this.btn_importar_video_agregar_video_admin.Size = new System.Drawing.Size(240, 105);
+            this.btn_importar_video_agregar_video_admin.Size = new System.Drawing.Size(180, 85);
             this.btn_importar_video_agregar_video_admin.TabIndex = 91;
             this.btn_importar_video_agregar_video_admin.Text = "Importar Archivo Video";
             this.btn_importar_video_agregar_video_admin.UseVisualStyleBackColor = true;
@@ -1104,10 +1118,9 @@
             "SM Entretainment Pictures",
             "YG Entertainment Pictures",
             "Otra"});
-            this.filmstudiovideo_agregar_video_admin.Location = new System.Drawing.Point(337, 288);
-            this.filmstudiovideo_agregar_video_admin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.filmstudiovideo_agregar_video_admin.Location = new System.Drawing.Point(253, 234);
             this.filmstudiovideo_agregar_video_admin.Name = "filmstudiovideo_agregar_video_admin";
-            this.filmstudiovideo_agregar_video_admin.Size = new System.Drawing.Size(553, 32);
+            this.filmstudiovideo_agregar_video_admin.Size = new System.Drawing.Size(416, 26);
             this.filmstudiovideo_agregar_video_admin.TabIndex = 90;
             this.filmstudiovideo_agregar_video_admin.SelectedIndexChanged += new System.EventHandler(this.filmstudiovideo_agregar_video_admin_SelectedIndexChanged);
             // 
@@ -1124,10 +1137,9 @@
             "Drama",
             "Ciencia Ficcion",
             "Otro"});
-            this.generovideo_agregar_video_admin.Location = new System.Drawing.Point(337, 194);
-            this.generovideo_agregar_video_admin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.generovideo_agregar_video_admin.Location = new System.Drawing.Point(253, 158);
             this.generovideo_agregar_video_admin.Name = "generovideo_agregar_video_admin";
-            this.generovideo_agregar_video_admin.Size = new System.Drawing.Size(553, 32);
+            this.generovideo_agregar_video_admin.Size = new System.Drawing.Size(416, 26);
             this.generovideo_agregar_video_admin.TabIndex = 89;
             this.generovideo_agregar_video_admin.SelectedIndexChanged += new System.EventHandler(this.generovideo_agregar_video_admin_SelectedIndexChanged);
             // 
@@ -1137,10 +1149,9 @@
             this.sexodirector_agregar_video_admin.Items.AddRange(new object[] {
             "Masculino",
             "Femenino"});
-            this.sexodirector_agregar_video_admin.Location = new System.Drawing.Point(664, 114);
-            this.sexodirector_agregar_video_admin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.sexodirector_agregar_video_admin.Location = new System.Drawing.Point(498, 93);
             this.sexodirector_agregar_video_admin.Name = "sexodirector_agregar_video_admin";
-            this.sexodirector_agregar_video_admin.Size = new System.Drawing.Size(228, 25);
+            this.sexodirector_agregar_video_admin.Size = new System.Drawing.Size(172, 21);
             this.sexodirector_agregar_video_admin.TabIndex = 88;
             this.sexodirector_agregar_video_admin.SelectedIndexChanged += new System.EventHandler(this.sexodirector_agregar_video_admin_SelectedIndexChanged);
             // 
@@ -1150,9 +1161,10 @@
             this.label17.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.label17.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(77, 330);
+            this.label17.Location = new System.Drawing.Point(58, 268);
+            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(208, 38);
+            this.label17.Size = new System.Drawing.Size(164, 29);
             this.label17.TabIndex = 86;
             this.label17.Text = "Año Publicacion";
             this.label17.Click += new System.EventHandler(this.label17_Click);
@@ -1160,10 +1172,10 @@
             // aniopubvideo_agregar_video_admin
             // 
             this.aniopubvideo_agregar_video_admin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.aniopubvideo_agregar_video_admin.Location = new System.Drawing.Point(337, 336);
-            this.aniopubvideo_agregar_video_admin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.aniopubvideo_agregar_video_admin.Location = new System.Drawing.Point(253, 273);
+            this.aniopubvideo_agregar_video_admin.Margin = new System.Windows.Forms.Padding(2);
             this.aniopubvideo_agregar_video_admin.Name = "aniopubvideo_agregar_video_admin";
-            this.aniopubvideo_agregar_video_admin.Size = new System.Drawing.Size(553, 29);
+            this.aniopubvideo_agregar_video_admin.Size = new System.Drawing.Size(416, 24);
             this.aniopubvideo_agregar_video_admin.TabIndex = 85;
             this.aniopubvideo_agregar_video_admin.TextChanged += new System.EventHandler(this.aniopubvideo_agregar_video_admin_TextChanged);
             // 
@@ -1173,9 +1185,10 @@
             this.label18.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.label18.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(80, 282);
+            this.label18.Location = new System.Drawing.Point(60, 229);
+            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(159, 38);
+            this.label18.Size = new System.Drawing.Size(126, 29);
             this.label18.TabIndex = 84;
             this.label18.Text = "Film Studio";
             this.label18.Click += new System.EventHandler(this.label18_Click);
@@ -1186,9 +1199,10 @@
             this.label19.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.label19.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.White;
-            this.label19.Location = new System.Drawing.Point(81, 238);
+            this.label19.Location = new System.Drawing.Point(61, 193);
+            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(137, 38);
+            this.label19.Size = new System.Drawing.Size(107, 29);
             this.label19.TabIndex = 83;
             this.label19.Text = "Categoria";
             this.label19.Click += new System.EventHandler(this.label19_Click);
@@ -1199,9 +1213,10 @@
             this.label20.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.label20.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.White;
-            this.label20.Location = new System.Drawing.Point(81, 188);
+            this.label20.Location = new System.Drawing.Point(61, 153);
+            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(106, 38);
+            this.label20.Size = new System.Drawing.Size(81, 29);
             this.label20.TabIndex = 81;
             this.label20.Text = "Genero";
             this.label20.Click += new System.EventHandler(this.label20_Click);
@@ -1209,20 +1224,20 @@
             // nacionalidaddirector_agregar_video_admin
             // 
             this.nacionalidaddirector_agregar_video_admin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nacionalidaddirector_agregar_video_admin.Location = new System.Drawing.Point(664, 149);
-            this.nacionalidaddirector_agregar_video_admin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.nacionalidaddirector_agregar_video_admin.Location = new System.Drawing.Point(498, 121);
+            this.nacionalidaddirector_agregar_video_admin.Margin = new System.Windows.Forms.Padding(2);
             this.nacionalidaddirector_agregar_video_admin.Name = "nacionalidaddirector_agregar_video_admin";
-            this.nacionalidaddirector_agregar_video_admin.Size = new System.Drawing.Size(228, 23);
+            this.nacionalidaddirector_agregar_video_admin.Size = new System.Drawing.Size(172, 20);
             this.nacionalidaddirector_agregar_video_admin.TabIndex = 80;
             this.nacionalidaddirector_agregar_video_admin.TextChanged += new System.EventHandler(this.nacionalidaddirector_agregar_video_admin_TextChanged);
             // 
             // edaddirector_agregar_video_admin
             // 
             this.edaddirector_agregar_video_admin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.edaddirector_agregar_video_admin.Location = new System.Drawing.Point(279, 149);
-            this.edaddirector_agregar_video_admin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.edaddirector_agregar_video_admin.Location = new System.Drawing.Point(209, 121);
+            this.edaddirector_agregar_video_admin.Margin = new System.Windows.Forms.Padding(2);
             this.edaddirector_agregar_video_admin.Name = "edaddirector_agregar_video_admin";
-            this.edaddirector_agregar_video_admin.Size = new System.Drawing.Size(228, 23);
+            this.edaddirector_agregar_video_admin.Size = new System.Drawing.Size(172, 20);
             this.edaddirector_agregar_video_admin.TabIndex = 79;
             this.edaddirector_agregar_video_admin.TextChanged += new System.EventHandler(this.edaddirector_agregar_video_admin_TextChanged);
             // 
@@ -1232,9 +1247,10 @@
             this.label21.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.label21.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.White;
-            this.label21.Location = new System.Drawing.Point(531, 149);
+            this.label21.Location = new System.Drawing.Point(398, 121);
+            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(112, 24);
+            this.label21.Size = new System.Drawing.Size(88, 18);
             this.label21.TabIndex = 78;
             this.label21.Text = "Nacionalidad";
             // 
@@ -1244,9 +1260,10 @@
             this.label22.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.label22.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.Color.White;
-            this.label22.Location = new System.Drawing.Point(168, 117);
+            this.label22.Location = new System.Drawing.Point(126, 95);
+            this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(75, 24);
+            this.label22.Size = new System.Drawing.Size(55, 18);
             this.label22.TabIndex = 77;
             this.label22.Text = "Nombre";
             // 
@@ -1256,9 +1273,10 @@
             this.label23.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.label23.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.ForeColor = System.Drawing.Color.White;
-            this.label23.Location = new System.Drawing.Point(168, 151);
+            this.label23.Location = new System.Drawing.Point(126, 123);
+            this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(50, 24);
+            this.label23.Size = new System.Drawing.Size(39, 18);
             this.label23.TabIndex = 76;
             this.label23.Text = "Edad";
             // 
@@ -1268,19 +1286,20 @@
             this.label24.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.label24.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.Color.White;
-            this.label24.Location = new System.Drawing.Point(531, 114);
+            this.label24.Location = new System.Drawing.Point(398, 93);
+            this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(52, 24);
+            this.label24.Size = new System.Drawing.Size(39, 18);
             this.label24.TabIndex = 75;
             this.label24.Text = "Sexo";
             // 
             // nombredirector_agregar_video_admin
             // 
             this.nombredirector_agregar_video_admin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nombredirector_agregar_video_admin.Location = new System.Drawing.Point(279, 112);
-            this.nombredirector_agregar_video_admin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.nombredirector_agregar_video_admin.Location = new System.Drawing.Point(209, 91);
+            this.nombredirector_agregar_video_admin.Margin = new System.Windows.Forms.Padding(2);
             this.nombredirector_agregar_video_admin.Name = "nombredirector_agregar_video_admin";
-            this.nombredirector_agregar_video_admin.Size = new System.Drawing.Size(228, 23);
+            this.nombredirector_agregar_video_admin.Size = new System.Drawing.Size(172, 20);
             this.nombredirector_agregar_video_admin.TabIndex = 74;
             this.nombredirector_agregar_video_admin.TextChanged += new System.EventHandler(this.nombredirector_agregar_video_admin_TextChanged);
             // 
@@ -1290,9 +1309,10 @@
             this.label25.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.label25.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label25.ForeColor = System.Drawing.Color.White;
-            this.label25.Location = new System.Drawing.Point(95, 84);
+            this.label25.Location = new System.Drawing.Point(71, 68);
+            this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(84, 24);
+            this.label25.Size = new System.Drawing.Size(63, 18);
             this.label25.TabIndex = 73;
             this.label25.Text = "Director:";
             // 
@@ -1302,9 +1322,10 @@
             this.label30.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.label30.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label30.ForeColor = System.Drawing.Color.White;
-            this.label30.Location = new System.Drawing.Point(83, 379);
+            this.label30.Location = new System.Drawing.Point(62, 308);
+            this.label30.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(86, 28);
+            this.label30.Size = new System.Drawing.Size(68, 23);
             this.label30.TabIndex = 65;
             this.label30.Text = "Actores";
             // 
@@ -1314,19 +1335,20 @@
             this.label31.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.label31.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label31.ForeColor = System.Drawing.Color.White;
-            this.label31.Location = new System.Drawing.Point(92, 39);
+            this.label31.Location = new System.Drawing.Point(69, 32);
+            this.label31.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(196, 38);
+            this.label31.Size = new System.Drawing.Size(151, 29);
             this.label31.TabIndex = 64;
             this.label31.Text = "Nombre Video";
             // 
             // nombrevideo_agregar_video_admin
             // 
             this.nombrevideo_agregar_video_admin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nombrevideo_agregar_video_admin.Location = new System.Drawing.Point(337, 46);
-            this.nombrevideo_agregar_video_admin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.nombrevideo_agregar_video_admin.Location = new System.Drawing.Point(253, 37);
+            this.nombrevideo_agregar_video_admin.Margin = new System.Windows.Forms.Padding(2);
             this.nombrevideo_agregar_video_admin.Name = "nombrevideo_agregar_video_admin";
-            this.nombrevideo_agregar_video_admin.Size = new System.Drawing.Size(553, 29);
+            this.nombrevideo_agregar_video_admin.Size = new System.Drawing.Size(416, 24);
             this.nombrevideo_agregar_video_admin.TabIndex = 63;
             this.nombrevideo_agregar_video_admin.TextChanged += new System.EventHandler(this.nombrevideo_agregar_video_admin_TextChanged);
             // 
@@ -1337,10 +1359,9 @@
             this.panel_ver_usuarios_admin.Controls.Add(this.btn_editar_usuarios_admin);
             this.panel_ver_usuarios_admin.Controls.Add(this.label26);
             this.panel_ver_usuarios_admin.Controls.Add(this.btn_atras_de_ver_usuarios_admin);
-            this.panel_ver_usuarios_admin.Location = new System.Drawing.Point(1056, 529);
-            this.panel_ver_usuarios_admin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel_ver_usuarios_admin.Location = new System.Drawing.Point(792, 430);
             this.panel_ver_usuarios_admin.Name = "panel_ver_usuarios_admin";
-            this.panel_ver_usuarios_admin.Size = new System.Drawing.Size(107, 43);
+            this.panel_ver_usuarios_admin.Size = new System.Drawing.Size(80, 35);
             this.panel_ver_usuarios_admin.TabIndex = 96;
             this.panel_ver_usuarios_admin.Visible = false;
             this.panel_ver_usuarios_admin.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_ver_usuarios_admin_Paint);
@@ -1364,8 +1385,7 @@
             this.colum_suscripcion});
             this.tabla_usuarios_admin.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tabla_usuarios_admin.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.tabla_usuarios_admin.Location = new System.Drawing.Point(0, -496);
-            this.tabla_usuarios_admin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabla_usuarios_admin.Location = new System.Drawing.Point(0, -403);
             this.tabla_usuarios_admin.Name = "tabla_usuarios_admin";
             this.tabla_usuarios_admin.ReadOnly = true;
             this.tabla_usuarios_admin.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -1373,7 +1393,7 @@
             this.tabla_usuarios_admin.RowHeadersVisible = false;
             this.tabla_usuarios_admin.RowHeadersWidth = 51;
             this.tabla_usuarios_admin.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.tabla_usuarios_admin.Size = new System.Drawing.Size(107, 539);
+            this.tabla_usuarios_admin.Size = new System.Drawing.Size(80, 438);
             this.tabla_usuarios_admin.TabIndex = 97;
             this.tabla_usuarios_admin.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabla_usuarios_admin_CellClick);
             this.tabla_usuarios_admin.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabla_usuarios_admin_CellContentClick);
@@ -1387,7 +1407,7 @@
             this.colum_usuario.MinimumWidth = 6;
             this.colum_usuario.Name = "colum_usuario";
             this.colum_usuario.ReadOnly = true;
-            this.colum_usuario.Width = 86;
+            this.colum_usuario.Width = 68;
             // 
             // colum_nombre
             // 
@@ -1403,7 +1423,7 @@
             this.colum_mail.MinimumWidth = 6;
             this.colum_mail.Name = "colum_mail";
             this.colum_mail.ReadOnly = true;
-            this.colum_mail.Width = 62;
+            this.colum_mail.Width = 51;
             // 
             // colum_pass
             // 
@@ -1429,10 +1449,10 @@
             // btn_guardar_usuarios_admin
             // 
             this.btn_guardar_usuarios_admin.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_guardar_usuarios_admin.Location = new System.Drawing.Point(929, 20);
-            this.btn_guardar_usuarios_admin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_guardar_usuarios_admin.Location = new System.Drawing.Point(697, 16);
+            this.btn_guardar_usuarios_admin.Margin = new System.Windows.Forms.Padding(2);
             this.btn_guardar_usuarios_admin.Name = "btn_guardar_usuarios_admin";
-            this.btn_guardar_usuarios_admin.Size = new System.Drawing.Size(95, 41);
+            this.btn_guardar_usuarios_admin.Size = new System.Drawing.Size(71, 33);
             this.btn_guardar_usuarios_admin.TabIndex = 99;
             this.btn_guardar_usuarios_admin.Text = "Guardar";
             this.btn_guardar_usuarios_admin.UseVisualStyleBackColor = true;
@@ -1441,10 +1461,10 @@
             // btn_editar_usuarios_admin
             // 
             this.btn_editar_usuarios_admin.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_editar_usuarios_admin.Location = new System.Drawing.Point(819, 20);
-            this.btn_editar_usuarios_admin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_editar_usuarios_admin.Location = new System.Drawing.Point(614, 16);
+            this.btn_editar_usuarios_admin.Margin = new System.Windows.Forms.Padding(2);
             this.btn_editar_usuarios_admin.Name = "btn_editar_usuarios_admin";
-            this.btn_editar_usuarios_admin.Size = new System.Drawing.Size(95, 41);
+            this.btn_editar_usuarios_admin.Size = new System.Drawing.Size(71, 33);
             this.btn_editar_usuarios_admin.TabIndex = 98;
             this.btn_editar_usuarios_admin.Text = "Editar";
             this.btn_editar_usuarios_admin.UseVisualStyleBackColor = true;
@@ -1455,19 +1475,20 @@
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Comic Sans MS", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.ForeColor = System.Drawing.Color.White;
-            this.label26.Location = new System.Drawing.Point(111, 18);
+            this.label26.Location = new System.Drawing.Point(83, 15);
+            this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(478, 56);
+            this.label26.Size = new System.Drawing.Size(384, 45);
             this.label26.TabIndex = 29;
             this.label26.Text = "USUARIOS EN LA APP";
             // 
             // btn_atras_de_ver_usuarios_admin
             // 
             this.btn_atras_de_ver_usuarios_admin.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_atras_de_ver_usuarios_admin.Location = new System.Drawing.Point(1083, 20);
-            this.btn_atras_de_ver_usuarios_admin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_atras_de_ver_usuarios_admin.Location = new System.Drawing.Point(812, 16);
+            this.btn_atras_de_ver_usuarios_admin.Margin = new System.Windows.Forms.Padding(2);
             this.btn_atras_de_ver_usuarios_admin.Name = "btn_atras_de_ver_usuarios_admin";
-            this.btn_atras_de_ver_usuarios_admin.Size = new System.Drawing.Size(95, 41);
+            this.btn_atras_de_ver_usuarios_admin.Size = new System.Drawing.Size(71, 33);
             this.btn_atras_de_ver_usuarios_admin.TabIndex = 28;
             this.btn_atras_de_ver_usuarios_admin.Text = "Atras";
             this.btn_atras_de_ver_usuarios_admin.UseVisualStyleBackColor = true;
@@ -1490,20 +1511,19 @@
             this.panel_ver_videos_admin.Controls.Add(this.button2);
             this.panel_ver_videos_admin.Controls.Add(this.label43);
             this.panel_ver_videos_admin.Controls.Add(this.tabla_ver_videos_admin);
-            this.panel_ver_videos_admin.Location = new System.Drawing.Point(28, 128);
-            this.panel_ver_videos_admin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel_ver_videos_admin.Location = new System.Drawing.Point(21, 104);
             this.panel_ver_videos_admin.Name = "panel_ver_videos_admin";
-            this.panel_ver_videos_admin.Size = new System.Drawing.Size(32, 28);
+            this.panel_ver_videos_admin.Size = new System.Drawing.Size(24, 23);
             this.panel_ver_videos_admin.TabIndex = 97;
             this.panel_ver_videos_admin.Visible = false;
             // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(1100, 18);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button2.Location = new System.Drawing.Point(825, 15);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(95, 43);
+            this.button2.Size = new System.Drawing.Size(71, 35);
             this.button2.TabIndex = 127;
             this.button2.Text = "Atras";
             this.button2.UseVisualStyleBackColor = true;
@@ -1514,9 +1534,10 @@
             this.label43.AutoSize = true;
             this.label43.Font = new System.Drawing.Font("Comic Sans MS", 23.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label43.ForeColor = System.Drawing.Color.White;
-            this.label43.Location = new System.Drawing.Point(487, 25);
+            this.label43.Location = new System.Drawing.Point(365, 20);
+            this.label43.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(146, 55);
+            this.label43.Size = new System.Drawing.Size(116, 44);
             this.label43.TabIndex = 20;
             this.label43.Text = "Videos";
             // 
@@ -1538,13 +1559,12 @@
             this.Column10,
             this.Column11});
             this.tabla_ver_videos_admin.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tabla_ver_videos_admin.Location = new System.Drawing.Point(0, -511);
-            this.tabla_ver_videos_admin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabla_ver_videos_admin.Location = new System.Drawing.Point(0, -415);
             this.tabla_ver_videos_admin.Name = "tabla_ver_videos_admin";
             this.tabla_ver_videos_admin.ReadOnly = true;
             this.tabla_ver_videos_admin.RowHeadersVisible = false;
             this.tabla_ver_videos_admin.RowHeadersWidth = 51;
-            this.tabla_ver_videos_admin.Size = new System.Drawing.Size(32, 539);
+            this.tabla_ver_videos_admin.Size = new System.Drawing.Size(24, 438);
             this.tabla_ver_videos_admin.TabIndex = 0;
             // 
             // Column1
@@ -1553,7 +1573,7 @@
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
-            this.Column1.Width = 87;
+            this.Column1.Width = 69;
             // 
             // Column2
             // 
@@ -1561,7 +1581,7 @@
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
-            this.Column2.Width = 94;
+            this.Column2.Width = 75;
             // 
             // Column3
             // 
@@ -1569,7 +1589,7 @@
             this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
-            this.Column3.Width = 98;
+            this.Column3.Width = 77;
             // 
             // Director
             // 
@@ -1577,7 +1597,7 @@
             this.Director.MinimumWidth = 6;
             this.Director.Name = "Director";
             this.Director.ReadOnly = true;
-            this.Director.Width = 87;
+            this.Director.Width = 69;
             // 
             // Column4
             // 
@@ -1585,7 +1605,7 @@
             this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
-            this.Column4.Width = 85;
+            this.Column4.Width = 67;
             // 
             // Column5
             // 
@@ -1593,7 +1613,6 @@
             this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
-            this.Column5.Width = 127;
             // 
             // Column6
             // 
@@ -1601,7 +1620,7 @@
             this.Column6.MinimumWidth = 6;
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
-            this.Column6.Width = 107;
+            this.Column6.Width = 85;
             // 
             // Column7
             // 
@@ -1609,7 +1628,7 @@
             this.Column7.MinimumWidth = 6;
             this.Column7.Name = "Column7";
             this.Column7.ReadOnly = true;
-            this.Column7.Width = 84;
+            this.Column7.Width = 67;
             // 
             // Column8
             // 
@@ -1617,7 +1636,7 @@
             this.Column8.MinimumWidth = 6;
             this.Column8.Name = "Column8";
             this.Column8.ReadOnly = true;
-            this.Column8.Width = 96;
+            this.Column8.Width = 75;
             // 
             // Column9
             // 
@@ -1625,7 +1644,7 @@
             this.Column9.MinimumWidth = 6;
             this.Column9.Name = "Column9";
             this.Column9.ReadOnly = true;
-            this.Column9.Width = 89;
+            this.Column9.Width = 71;
             // 
             // Column10
             // 
@@ -1633,7 +1652,7 @@
             this.Column10.MinimumWidth = 6;
             this.Column10.Name = "Column10";
             this.Column10.ReadOnly = true;
-            this.Column10.Width = 108;
+            this.Column10.Width = 86;
             // 
             // Column11
             // 
@@ -1641,17 +1660,16 @@
             this.Column11.MinimumWidth = 6;
             this.Column11.Name = "Column11";
             this.Column11.ReadOnly = true;
-            this.Column11.Width = 140;
+            this.Column11.Width = 110;
             // 
             // panel_ver_canciones_admin
             // 
             this.panel_ver_canciones_admin.Controls.Add(this.tabla_ver_canciones_admin);
             this.panel_ver_canciones_admin.Controls.Add(this.button1);
             this.panel_ver_canciones_admin.Controls.Add(this.label44);
-            this.panel_ver_canciones_admin.Location = new System.Drawing.Point(68, 132);
-            this.panel_ver_canciones_admin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel_ver_canciones_admin.Location = new System.Drawing.Point(51, 107);
             this.panel_ver_canciones_admin.Name = "panel_ver_canciones_admin";
-            this.panel_ver_canciones_admin.Size = new System.Drawing.Size(24, 21);
+            this.panel_ver_canciones_admin.Size = new System.Drawing.Size(18, 17);
             this.panel_ver_canciones_admin.TabIndex = 98;
             this.panel_ver_canciones_admin.Visible = false;
             // 
@@ -1674,13 +1692,12 @@
             this.Column24,
             this.Column25});
             this.tabla_ver_canciones_admin.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tabla_ver_canciones_admin.Location = new System.Drawing.Point(0, -518);
-            this.tabla_ver_canciones_admin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabla_ver_canciones_admin.Location = new System.Drawing.Point(0, -421);
             this.tabla_ver_canciones_admin.Name = "tabla_ver_canciones_admin";
             this.tabla_ver_canciones_admin.ReadOnly = true;
             this.tabla_ver_canciones_admin.RowHeadersVisible = false;
             this.tabla_ver_canciones_admin.RowHeadersWidth = 51;
-            this.tabla_ver_canciones_admin.Size = new System.Drawing.Size(24, 539);
+            this.tabla_ver_canciones_admin.Size = new System.Drawing.Size(18, 438);
             this.tabla_ver_canciones_admin.TabIndex = 130;
             // 
             // Column12
@@ -1689,7 +1706,7 @@
             this.Column12.MinimumWidth = 6;
             this.Column12.Name = "Column12";
             this.Column12.ReadOnly = true;
-            this.Column12.Width = 87;
+            this.Column12.Width = 69;
             // 
             // Column13
             // 
@@ -1697,7 +1714,7 @@
             this.Column13.MinimumWidth = 6;
             this.Column13.Name = "Column13";
             this.Column13.ReadOnly = true;
-            this.Column13.Width = 94;
+            this.Column13.Width = 75;
             // 
             // Column14
             // 
@@ -1705,7 +1722,7 @@
             this.Column14.MinimumWidth = 6;
             this.Column14.Name = "Column14";
             this.Column14.ReadOnly = true;
-            this.Column14.Width = 85;
+            this.Column14.Width = 67;
             // 
             // Column15
             // 
@@ -1713,7 +1730,7 @@
             this.Column15.MinimumWidth = 6;
             this.Column15.Name = "Column15";
             this.Column15.ReadOnly = true;
-            this.Column15.Width = 108;
+            this.Column15.Width = 84;
             // 
             // Column16
             // 
@@ -1721,7 +1738,6 @@
             this.Column16.MinimumWidth = 6;
             this.Column16.Name = "Column16";
             this.Column16.ReadOnly = true;
-            this.Column16.Width = 127;
             // 
             // Column17
             // 
@@ -1729,7 +1745,7 @@
             this.Column17.MinimumWidth = 6;
             this.Column17.Name = "Column17";
             this.Column17.ReadOnly = true;
-            this.Column17.Width = 94;
+            this.Column17.Width = 74;
             // 
             // Column18
             // 
@@ -1737,7 +1753,7 @@
             this.Column18.MinimumWidth = 6;
             this.Column18.Name = "Column18";
             this.Column18.ReadOnly = true;
-            this.Column18.Width = 76;
+            this.Column18.Width = 61;
             // 
             // Column20
             // 
@@ -1745,7 +1761,7 @@
             this.Column20.MinimumWidth = 6;
             this.Column20.Name = "Column20";
             this.Column20.ReadOnly = true;
-            this.Column20.Width = 108;
+            this.Column20.Width = 86;
             // 
             // Column21
             // 
@@ -1753,7 +1769,7 @@
             this.Column21.MinimumWidth = 6;
             this.Column21.Name = "Column21";
             this.Column21.ReadOnly = true;
-            this.Column21.Width = 94;
+            this.Column21.Width = 75;
             // 
             // Column22
             // 
@@ -1761,7 +1777,7 @@
             this.Column22.MinimumWidth = 6;
             this.Column22.Name = "Column22";
             this.Column22.ReadOnly = true;
-            this.Column22.Width = 140;
+            this.Column22.Width = 110;
             // 
             // Column23
             // 
@@ -1769,7 +1785,7 @@
             this.Column23.MinimumWidth = 6;
             this.Column23.Name = "Column23";
             this.Column23.ReadOnly = true;
-            this.Column23.Width = 107;
+            this.Column23.Width = 85;
             // 
             // Column24
             // 
@@ -1777,7 +1793,7 @@
             this.Column24.MinimumWidth = 6;
             this.Column24.Name = "Column24";
             this.Column24.ReadOnly = true;
-            this.Column24.Width = 89;
+            this.Column24.Width = 71;
             // 
             // Column25
             // 
@@ -1785,15 +1801,15 @@
             this.Column25.MinimumWidth = 6;
             this.Column25.Name = "Column25";
             this.Column25.ReadOnly = true;
-            this.Column25.Width = 84;
+            this.Column25.Width = 67;
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(1097, 25);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Location = new System.Drawing.Point(823, 20);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(95, 43);
+            this.button1.Size = new System.Drawing.Size(71, 35);
             this.button1.TabIndex = 129;
             this.button1.Text = "Atras";
             this.button1.UseVisualStyleBackColor = true;
@@ -1804,9 +1820,10 @@
             this.label44.AutoSize = true;
             this.label44.Font = new System.Drawing.Font("Comic Sans MS", 23.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label44.ForeColor = System.Drawing.Color.White;
-            this.label44.Location = new System.Drawing.Point(468, 20);
+            this.label44.Location = new System.Drawing.Point(351, 16);
+            this.label44.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(203, 55);
+            this.label44.Size = new System.Drawing.Size(161, 44);
             this.label44.TabIndex = 128;
             this.label44.Text = "Canciones";
             this.label44.Click += new System.EventHandler(this.label44_Click);
@@ -1816,11 +1833,9 @@
             this.panel_ver_canciones_karaoke.Controls.Add(this.tabla_ver_canciones_karaoke);
             this.panel_ver_canciones_karaoke.Controls.Add(this.button3);
             this.panel_ver_canciones_karaoke.Controls.Add(this.label45);
-            this.panel_ver_canciones_karaoke.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_ver_canciones_karaoke.Location = new System.Drawing.Point(0, 30);
-            this.panel_ver_canciones_karaoke.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel_ver_canciones_karaoke.Location = new System.Drawing.Point(151, 97);
             this.panel_ver_canciones_karaoke.Name = "panel_ver_canciones_karaoke";
-            this.panel_ver_canciones_karaoke.Size = new System.Drawing.Size(1213, 646);
+            this.panel_ver_canciones_karaoke.Size = new System.Drawing.Size(27, 32);
             this.panel_ver_canciones_karaoke.TabIndex = 99;
             this.panel_ver_canciones_karaoke.Visible = false;
             // 
@@ -1843,13 +1858,12 @@
             this.dataGridViewTextBoxColumn12,
             this.dataGridViewTextBoxColumn13});
             this.tabla_ver_canciones_karaoke.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tabla_ver_canciones_karaoke.Location = new System.Drawing.Point(0, 107);
-            this.tabla_ver_canciones_karaoke.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabla_ver_canciones_karaoke.Location = new System.Drawing.Point(0, -406);
             this.tabla_ver_canciones_karaoke.Name = "tabla_ver_canciones_karaoke";
             this.tabla_ver_canciones_karaoke.ReadOnly = true;
             this.tabla_ver_canciones_karaoke.RowHeadersVisible = false;
             this.tabla_ver_canciones_karaoke.RowHeadersWidth = 51;
-            this.tabla_ver_canciones_karaoke.Size = new System.Drawing.Size(1213, 539);
+            this.tabla_ver_canciones_karaoke.Size = new System.Drawing.Size(27, 438);
             this.tabla_ver_canciones_karaoke.TabIndex = 130;
             // 
             // dataGridViewTextBoxColumn1
@@ -1858,7 +1872,7 @@
             this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 87;
+            this.dataGridViewTextBoxColumn1.Width = 69;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -1866,7 +1880,7 @@
             this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 94;
+            this.dataGridViewTextBoxColumn2.Width = 75;
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -1874,7 +1888,7 @@
             this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 85;
+            this.dataGridViewTextBoxColumn3.Width = 67;
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -1882,7 +1896,7 @@
             this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Width = 108;
+            this.dataGridViewTextBoxColumn4.Width = 84;
             // 
             // dataGridViewTextBoxColumn5
             // 
@@ -1890,7 +1904,6 @@
             this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            this.dataGridViewTextBoxColumn5.Width = 127;
             // 
             // dataGridViewTextBoxColumn6
             // 
@@ -1898,7 +1911,7 @@
             this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            this.dataGridViewTextBoxColumn6.Width = 94;
+            this.dataGridViewTextBoxColumn6.Width = 74;
             // 
             // dataGridViewTextBoxColumn7
             // 
@@ -1906,7 +1919,7 @@
             this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            this.dataGridViewTextBoxColumn7.Width = 76;
+            this.dataGridViewTextBoxColumn7.Width = 61;
             // 
             // dataGridViewTextBoxColumn8
             // 
@@ -1914,7 +1927,7 @@
             this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            this.dataGridViewTextBoxColumn8.Width = 108;
+            this.dataGridViewTextBoxColumn8.Width = 86;
             // 
             // dataGridViewTextBoxColumn9
             // 
@@ -1922,7 +1935,7 @@
             this.dataGridViewTextBoxColumn9.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
             this.dataGridViewTextBoxColumn9.ReadOnly = true;
-            this.dataGridViewTextBoxColumn9.Width = 94;
+            this.dataGridViewTextBoxColumn9.Width = 75;
             // 
             // dataGridViewTextBoxColumn10
             // 
@@ -1930,7 +1943,7 @@
             this.dataGridViewTextBoxColumn10.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
             this.dataGridViewTextBoxColumn10.ReadOnly = true;
-            this.dataGridViewTextBoxColumn10.Width = 140;
+            this.dataGridViewTextBoxColumn10.Width = 110;
             // 
             // dataGridViewTextBoxColumn11
             // 
@@ -1938,7 +1951,7 @@
             this.dataGridViewTextBoxColumn11.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
             this.dataGridViewTextBoxColumn11.ReadOnly = true;
-            this.dataGridViewTextBoxColumn11.Width = 107;
+            this.dataGridViewTextBoxColumn11.Width = 85;
             // 
             // dataGridViewTextBoxColumn12
             // 
@@ -1946,7 +1959,7 @@
             this.dataGridViewTextBoxColumn12.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
             this.dataGridViewTextBoxColumn12.ReadOnly = true;
-            this.dataGridViewTextBoxColumn12.Width = 89;
+            this.dataGridViewTextBoxColumn12.Width = 71;
             // 
             // dataGridViewTextBoxColumn13
             // 
@@ -1954,15 +1967,15 @@
             this.dataGridViewTextBoxColumn13.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
             this.dataGridViewTextBoxColumn13.ReadOnly = true;
-            this.dataGridViewTextBoxColumn13.Width = 84;
+            this.dataGridViewTextBoxColumn13.Width = 67;
             // 
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(1100, 17);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button3.Location = new System.Drawing.Point(825, 14);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(95, 43);
+            this.button3.Size = new System.Drawing.Size(71, 35);
             this.button3.TabIndex = 129;
             this.button3.Text = "Atras";
             this.button3.UseVisualStyleBackColor = true;
@@ -1973,9 +1986,10 @@
             this.label45.AutoSize = true;
             this.label45.Font = new System.Drawing.Font("Comic Sans MS", 23.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label45.ForeColor = System.Drawing.Color.White;
-            this.label45.Location = new System.Drawing.Point(381, 17);
+            this.label45.Location = new System.Drawing.Point(286, 14);
+            this.label45.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(371, 55);
+            this.label45.Size = new System.Drawing.Size(292, 44);
             this.label45.TabIndex = 128;
             this.label45.Text = "Canciones Karaoke";
             // 
@@ -1995,20 +2009,19 @@
             this.panel_ver_artistas.Controls.Add(this.label48);
             this.panel_ver_artistas.Controls.Add(this.label49);
             this.panel_ver_artistas.Controls.Add(this.label50);
-            this.panel_ver_artistas.Location = new System.Drawing.Point(141, 132);
-            this.panel_ver_artistas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel_ver_artistas.Location = new System.Drawing.Point(106, 107);
             this.panel_ver_artistas.Name = "panel_ver_artistas";
-            this.panel_ver_artistas.Size = new System.Drawing.Size(40, 28);
+            this.panel_ver_artistas.Size = new System.Drawing.Size(30, 23);
             this.panel_ver_artistas.TabIndex = 131;
             this.panel_ver_artistas.Visible = false;
             // 
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(1113, 7);
-            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button4.Location = new System.Drawing.Point(835, 6);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(89, 39);
+            this.button4.Size = new System.Drawing.Size(67, 32);
             this.button4.TabIndex = 131;
             this.button4.Text = "Atras";
             this.button4.UseVisualStyleBackColor = true;
@@ -2019,9 +2032,10 @@
             this.label46.AutoSize = true;
             this.label46.Font = new System.Drawing.Font("Comic Sans MS", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label46.ForeColor = System.Drawing.Color.White;
-            this.label46.Location = new System.Drawing.Point(464, 2);
+            this.label46.Location = new System.Drawing.Point(348, 2);
+            this.label46.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(169, 52);
+            this.label46.Size = new System.Drawing.Size(133, 41);
             this.label46.TabIndex = 130;
             this.label46.Text = "Artistas";
             // 
@@ -2034,13 +2048,12 @@
             this.dataGridViewTextBoxColumn24,
             this.dataGridViewTextBoxColumn25,
             this.dataGridViewTextBoxColumn26});
-            this.tabla_ver_directores_admin.Location = new System.Drawing.Point(-1, 521);
-            this.tabla_ver_directores_admin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabla_ver_directores_admin.Location = new System.Drawing.Point(-1, 423);
             this.tabla_ver_directores_admin.Name = "tabla_ver_directores_admin";
             this.tabla_ver_directores_admin.ReadOnly = true;
             this.tabla_ver_directores_admin.RowHeadersVisible = false;
             this.tabla_ver_directores_admin.RowHeadersWidth = 51;
-            this.tabla_ver_directores_admin.Size = new System.Drawing.Size(1215, 126);
+            this.tabla_ver_directores_admin.Size = new System.Drawing.Size(911, 102);
             this.tabla_ver_directores_admin.TabIndex = 96;
             // 
             // dataGridViewTextBoxColumn23
@@ -2080,13 +2093,12 @@
             this.dataGridViewTextBoxColumn20,
             this.dataGridViewTextBoxColumn21,
             this.dataGridViewTextBoxColumn22});
-            this.tabla_ver_actores_admin.Location = new System.Drawing.Point(0, 354);
-            this.tabla_ver_actores_admin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabla_ver_actores_admin.Location = new System.Drawing.Point(0, 288);
             this.tabla_ver_actores_admin.Name = "tabla_ver_actores_admin";
             this.tabla_ver_actores_admin.ReadOnly = true;
             this.tabla_ver_actores_admin.RowHeadersVisible = false;
             this.tabla_ver_actores_admin.RowHeadersWidth = 51;
-            this.tabla_ver_actores_admin.Size = new System.Drawing.Size(1213, 128);
+            this.tabla_ver_actores_admin.Size = new System.Drawing.Size(910, 104);
             this.tabla_ver_actores_admin.TabIndex = 95;
             // 
             // dataGridViewTextBoxColumn19
@@ -2126,13 +2138,12 @@
             this.dataGridViewTextBoxColumn16,
             this.dataGridViewTextBoxColumn17,
             this.dataGridViewTextBoxColumn18});
-            this.tabla_ver_compositores_admin.Location = new System.Drawing.Point(1, 201);
-            this.tabla_ver_compositores_admin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabla_ver_compositores_admin.Location = new System.Drawing.Point(1, 163);
             this.tabla_ver_compositores_admin.Name = "tabla_ver_compositores_admin";
             this.tabla_ver_compositores_admin.ReadOnly = true;
             this.tabla_ver_compositores_admin.RowHeadersVisible = false;
             this.tabla_ver_compositores_admin.RowHeadersWidth = 51;
-            this.tabla_ver_compositores_admin.Size = new System.Drawing.Size(1212, 118);
+            this.tabla_ver_compositores_admin.Size = new System.Drawing.Size(909, 96);
             this.tabla_ver_compositores_admin.TabIndex = 94;
             // 
             // dataGridViewTextBoxColumn15
@@ -2172,13 +2183,12 @@
             this.Column19,
             this.Column26,
             this.Column27});
-            this.tabla_ver_cantantes_admin.Location = new System.Drawing.Point(1, 65);
-            this.tabla_ver_cantantes_admin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabla_ver_cantantes_admin.Location = new System.Drawing.Point(1, 53);
             this.tabla_ver_cantantes_admin.Name = "tabla_ver_cantantes_admin";
             this.tabla_ver_cantantes_admin.ReadOnly = true;
             this.tabla_ver_cantantes_admin.RowHeadersVisible = false;
             this.tabla_ver_cantantes_admin.RowHeadersWidth = 51;
-            this.tabla_ver_cantantes_admin.Size = new System.Drawing.Size(1212, 103);
+            this.tabla_ver_cantantes_admin.Size = new System.Drawing.Size(909, 84);
             this.tabla_ver_cantantes_admin.TabIndex = 93;
             // 
             // dataGridViewTextBoxColumn14
@@ -2213,10 +2223,9 @@
             // 
             this.label47.AutoSize = true;
             this.label47.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label47.Location = new System.Drawing.Point(-413, 209);
-            this.label47.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label47.Location = new System.Drawing.Point(-310, 170);
             this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(121, 20);
+            this.label47.Size = new System.Drawing.Size(95, 16);
             this.label47.TabIndex = 90;
             this.label47.Text = "Recreaciones";
             // 
@@ -2224,10 +2233,9 @@
             // 
             this.label48.AutoSize = true;
             this.label48.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label48.Location = new System.Drawing.Point(-413, 71);
-            this.label48.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label48.Location = new System.Drawing.Point(-310, 58);
             this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(56, 20);
+            this.label48.Size = new System.Drawing.Size(43, 16);
             this.label48.TabIndex = 89;
             this.label48.Text = "Cines";
             // 
@@ -2235,10 +2243,9 @@
             // 
             this.label49.AutoSize = true;
             this.label49.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label49.Location = new System.Drawing.Point(-413, -86);
-            this.label49.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label49.Location = new System.Drawing.Point(-310, -70);
             this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(75, 20);
+            this.label49.Size = new System.Drawing.Size(59, 16);
             this.label49.TabIndex = 88;
             this.label49.Text = "Tiendas";
             // 
@@ -2246,10 +2253,9 @@
             // 
             this.label50.AutoSize = true;
             this.label50.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label50.Location = new System.Drawing.Point(-413, -239);
-            this.label50.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label50.Location = new System.Drawing.Point(-310, -194);
             this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(122, 20);
+            this.label50.Size = new System.Drawing.Size(95, 16);
             this.label50.TabIndex = 87;
             this.label50.Text = "Restaurantes";
             // 
@@ -2288,20 +2294,19 @@
             this.panel_agregar_cancion_karaoke.Controls.Add(this.label55);
             this.panel_agregar_cancion_karaoke.Controls.Add(this.label56);
             this.panel_agregar_cancion_karaoke.Controls.Add(this.nombre_text_cancion_karaoke);
-            this.panel_agregar_cancion_karaoke.Location = new System.Drawing.Point(480, 523);
-            this.panel_agregar_cancion_karaoke.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel_agregar_cancion_karaoke.Location = new System.Drawing.Point(360, 425);
             this.panel_agregar_cancion_karaoke.Name = "panel_agregar_cancion_karaoke";
-            this.panel_agregar_cancion_karaoke.Size = new System.Drawing.Size(107, 39);
+            this.panel_agregar_cancion_karaoke.Size = new System.Drawing.Size(80, 32);
             this.panel_agregar_cancion_karaoke.TabIndex = 132;
             this.panel_agregar_cancion_karaoke.Visible = false;
             // 
             // btn_subir_cancion_karaoke
             // 
             this.btn_subir_cancion_karaoke.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_subir_cancion_karaoke.Location = new System.Drawing.Point(907, 128);
-            this.btn_subir_cancion_karaoke.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_subir_cancion_karaoke.Location = new System.Drawing.Point(680, 104);
+            this.btn_subir_cancion_karaoke.Margin = new System.Windows.Forms.Padding(2);
             this.btn_subir_cancion_karaoke.Name = "btn_subir_cancion_karaoke";
-            this.btn_subir_cancion_karaoke.Size = new System.Drawing.Size(247, 340);
+            this.btn_subir_cancion_karaoke.Size = new System.Drawing.Size(185, 276);
             this.btn_subir_cancion_karaoke.TabIndex = 65;
             this.btn_subir_cancion_karaoke.Text = "Subir Cancion";
             this.btn_subir_cancion_karaoke.UseVisualStyleBackColor = true;
@@ -2312,10 +2317,10 @@
             this.archivo_text_cancion_karaoke.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.archivo_text_cancion_karaoke.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.archivo_text_cancion_karaoke.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.archivo_text_cancion_karaoke.Location = new System.Drawing.Point(55, 570);
-            this.archivo_text_cancion_karaoke.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.archivo_text_cancion_karaoke.Location = new System.Drawing.Point(41, 463);
+            this.archivo_text_cancion_karaoke.Margin = new System.Windows.Forms.Padding(2);
             this.archivo_text_cancion_karaoke.Name = "archivo_text_cancion_karaoke";
-            this.archivo_text_cancion_karaoke.Size = new System.Drawing.Size(847, 19);
+            this.archivo_text_cancion_karaoke.Size = new System.Drawing.Size(635, 15);
             this.archivo_text_cancion_karaoke.TabIndex = 64;
             this.archivo_text_cancion_karaoke.Text = "Archivo cancion";
             // 
@@ -2324,10 +2329,9 @@
             this.checkBox_repetir_cantante_encompositor_karaoke.AutoSize = true;
             this.checkBox_repetir_cantante_encompositor_karaoke.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox_repetir_cantante_encompositor_karaoke.ForeColor = System.Drawing.Color.White;
-            this.checkBox_repetir_cantante_encompositor_karaoke.Location = new System.Drawing.Point(263, 190);
-            this.checkBox_repetir_cantante_encompositor_karaoke.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox_repetir_cantante_encompositor_karaoke.Location = new System.Drawing.Point(197, 154);
             this.checkBox_repetir_cantante_encompositor_karaoke.Name = "checkBox_repetir_cantante_encompositor_karaoke";
-            this.checkBox_repetir_cantante_encompositor_karaoke.Size = new System.Drawing.Size(170, 24);
+            this.checkBox_repetir_cantante_encompositor_karaoke.Size = new System.Drawing.Size(137, 20);
             this.checkBox_repetir_cantante_encompositor_karaoke.TabIndex = 63;
             this.checkBox_repetir_cantante_encompositor_karaoke.Text = "Es el Mismo Cantante";
             this.checkBox_repetir_cantante_encompositor_karaoke.UseVisualStyleBackColor = true;
@@ -2336,10 +2340,10 @@
             // btn_atras_agregar_cancion_karaoke
             // 
             this.btn_atras_agregar_cancion_karaoke.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_atras_agregar_cancion_karaoke.Location = new System.Drawing.Point(1097, 20);
-            this.btn_atras_agregar_cancion_karaoke.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_atras_agregar_cancion_karaoke.Location = new System.Drawing.Point(823, 16);
+            this.btn_atras_agregar_cancion_karaoke.Margin = new System.Windows.Forms.Padding(2);
             this.btn_atras_agregar_cancion_karaoke.Name = "btn_atras_agregar_cancion_karaoke";
-            this.btn_atras_agregar_cancion_karaoke.Size = new System.Drawing.Size(95, 41);
+            this.btn_atras_agregar_cancion_karaoke.Size = new System.Drawing.Size(71, 33);
             this.btn_atras_agregar_cancion_karaoke.TabIndex = 62;
             this.btn_atras_agregar_cancion_karaoke.Text = "Atras";
             this.btn_atras_agregar_cancion_karaoke.UseVisualStyleBackColor = true;
@@ -2348,10 +2352,10 @@
             // btn_importar_archivo_cancion_karaoke
             // 
             this.btn_importar_archivo_cancion_karaoke.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_importar_archivo_cancion_karaoke.Location = new System.Drawing.Point(907, 516);
-            this.btn_importar_archivo_cancion_karaoke.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_importar_archivo_cancion_karaoke.Location = new System.Drawing.Point(680, 419);
+            this.btn_importar_archivo_cancion_karaoke.Margin = new System.Windows.Forms.Padding(2);
             this.btn_importar_archivo_cancion_karaoke.Name = "btn_importar_archivo_cancion_karaoke";
-            this.btn_importar_archivo_cancion_karaoke.Size = new System.Drawing.Size(247, 92);
+            this.btn_importar_archivo_cancion_karaoke.Size = new System.Drawing.Size(185, 75);
             this.btn_importar_archivo_cancion_karaoke.TabIndex = 60;
             this.btn_importar_archivo_cancion_karaoke.Text = "Importar Archivo cancion";
             this.btn_importar_archivo_cancion_karaoke.UseVisualStyleBackColor = true;
@@ -2368,10 +2372,9 @@
             "YG Entertainment",
             "SM Entretainment",
             "Otra"});
-            this.Disquera_text_cancion_karaoke.Location = new System.Drawing.Point(385, 425);
-            this.Disquera_text_cancion_karaoke.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Disquera_text_cancion_karaoke.Location = new System.Drawing.Point(289, 345);
             this.Disquera_text_cancion_karaoke.Name = "Disquera_text_cancion_karaoke";
-            this.Disquera_text_cancion_karaoke.Size = new System.Drawing.Size(433, 33);
+            this.Disquera_text_cancion_karaoke.Size = new System.Drawing.Size(326, 28);
             this.Disquera_text_cancion_karaoke.TabIndex = 59;
             // 
             // genero_text_cancion_karaoke
@@ -2393,10 +2396,9 @@
             "Urban",
             "Jazz",
             "Otras"});
-            this.genero_text_cancion_karaoke.Location = new System.Drawing.Point(385, 329);
-            this.genero_text_cancion_karaoke.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.genero_text_cancion_karaoke.Location = new System.Drawing.Point(289, 267);
             this.genero_text_cancion_karaoke.Name = "genero_text_cancion_karaoke";
-            this.genero_text_cancion_karaoke.Size = new System.Drawing.Size(433, 33);
+            this.genero_text_cancion_karaoke.Size = new System.Drawing.Size(326, 28);
             this.genero_text_cancion_karaoke.TabIndex = 58;
             // 
             // sexocompositor_text_cancion_karaoke
@@ -2405,10 +2407,9 @@
             this.sexocompositor_text_cancion_karaoke.Items.AddRange(new object[] {
             "Masculino",
             "Femenino"});
-            this.sexocompositor_text_cancion_karaoke.Location = new System.Drawing.Point(581, 228);
-            this.sexocompositor_text_cancion_karaoke.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.sexocompositor_text_cancion_karaoke.Location = new System.Drawing.Point(436, 185);
             this.sexocompositor_text_cancion_karaoke.Name = "sexocompositor_text_cancion_karaoke";
-            this.sexocompositor_text_cancion_karaoke.Size = new System.Drawing.Size(239, 24);
+            this.sexocompositor_text_cancion_karaoke.Size = new System.Drawing.Size(180, 21);
             this.sexocompositor_text_cancion_karaoke.TabIndex = 57;
             // 
             // sexocantante_text_cancion_karaoke
@@ -2417,10 +2418,9 @@
             this.sexocantante_text_cancion_karaoke.Items.AddRange(new object[] {
             "Masculino",
             "Femenino"});
-            this.sexocantante_text_cancion_karaoke.Location = new System.Drawing.Point(581, 110);
-            this.sexocantante_text_cancion_karaoke.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.sexocantante_text_cancion_karaoke.Location = new System.Drawing.Point(436, 89);
             this.sexocantante_text_cancion_karaoke.Name = "sexocantante_text_cancion_karaoke";
-            this.sexocantante_text_cancion_karaoke.Size = new System.Drawing.Size(239, 24);
+            this.sexocantante_text_cancion_karaoke.Size = new System.Drawing.Size(180, 21);
             this.sexocantante_text_cancion_karaoke.TabIndex = 56;
             // 
             // label27
@@ -2429,19 +2429,20 @@
             this.label27.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.label27.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label27.ForeColor = System.Drawing.Color.White;
-            this.label27.Location = new System.Drawing.Point(35, 468);
+            this.label27.Location = new System.Drawing.Point(26, 380);
+            this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(208, 38);
+            this.label27.Size = new System.Drawing.Size(164, 29);
             this.label27.TabIndex = 55;
             this.label27.Text = "Año Publicacion";
             // 
             // aniopublicacion_text_cancion_karaoke
             // 
             this.aniopublicacion_text_cancion_karaoke.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.aniopublicacion_text_cancion_karaoke.Location = new System.Drawing.Point(387, 473);
-            this.aniopublicacion_text_cancion_karaoke.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.aniopublicacion_text_cancion_karaoke.Location = new System.Drawing.Point(290, 384);
+            this.aniopublicacion_text_cancion_karaoke.Margin = new System.Windows.Forms.Padding(2);
             this.aniopublicacion_text_cancion_karaoke.Name = "aniopublicacion_text_cancion_karaoke";
-            this.aniopublicacion_text_cancion_karaoke.Size = new System.Drawing.Size(433, 30);
+            this.aniopublicacion_text_cancion_karaoke.Size = new System.Drawing.Size(326, 26);
             this.aniopublicacion_text_cancion_karaoke.TabIndex = 54;
             // 
             // label29
@@ -2450,9 +2451,10 @@
             this.label29.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.label29.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label29.ForeColor = System.Drawing.Color.White;
-            this.label29.Location = new System.Drawing.Point(37, 422);
+            this.label29.Location = new System.Drawing.Point(28, 343);
+            this.label29.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(126, 38);
+            this.label29.Size = new System.Drawing.Size(98, 29);
             this.label29.TabIndex = 52;
             this.label29.Text = "Disquera";
             // 
@@ -2462,19 +2464,20 @@
             this.label32.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.label32.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label32.ForeColor = System.Drawing.Color.White;
-            this.label32.Location = new System.Drawing.Point(40, 374);
+            this.label32.Location = new System.Drawing.Point(30, 304);
+            this.label32.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(95, 38);
+            this.label32.Size = new System.Drawing.Size(74, 29);
             this.label32.TabIndex = 50;
             this.label32.Text = "Album";
             // 
             // album_text_cancion_karaoke
             // 
             this.album_text_cancion_karaoke.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.album_text_cancion_karaoke.Location = new System.Drawing.Point(385, 379);
-            this.album_text_cancion_karaoke.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.album_text_cancion_karaoke.Location = new System.Drawing.Point(289, 308);
+            this.album_text_cancion_karaoke.Margin = new System.Windows.Forms.Padding(2);
             this.album_text_cancion_karaoke.Name = "album_text_cancion_karaoke";
-            this.album_text_cancion_karaoke.Size = new System.Drawing.Size(433, 30);
+            this.album_text_cancion_karaoke.Size = new System.Drawing.Size(326, 26);
             this.album_text_cancion_karaoke.TabIndex = 49;
             // 
             // label33
@@ -2483,28 +2486,29 @@
             this.label33.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.label33.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label33.ForeColor = System.Drawing.Color.White;
-            this.label33.Location = new System.Drawing.Point(40, 324);
+            this.label33.Location = new System.Drawing.Point(30, 263);
+            this.label33.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(106, 38);
+            this.label33.Size = new System.Drawing.Size(81, 29);
             this.label33.TabIndex = 48;
             this.label33.Text = "Genero";
             // 
             // nacioncompositor_text_cancion_karaoke
             // 
             this.nacioncompositor_text_cancion_karaoke.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nacioncompositor_text_cancion_karaoke.Location = new System.Drawing.Point(581, 262);
-            this.nacioncompositor_text_cancion_karaoke.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.nacioncompositor_text_cancion_karaoke.Location = new System.Drawing.Point(436, 213);
+            this.nacioncompositor_text_cancion_karaoke.Margin = new System.Windows.Forms.Padding(2);
             this.nacioncompositor_text_cancion_karaoke.Name = "nacioncompositor_text_cancion_karaoke";
-            this.nacioncompositor_text_cancion_karaoke.Size = new System.Drawing.Size(239, 23);
+            this.nacioncompositor_text_cancion_karaoke.Size = new System.Drawing.Size(180, 20);
             this.nacioncompositor_text_cancion_karaoke.TabIndex = 46;
             // 
             // edadcompositor_text_cancion_karaoke
             // 
             this.edadcompositor_text_cancion_karaoke.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.edadcompositor_text_cancion_karaoke.Location = new System.Drawing.Point(175, 263);
-            this.edadcompositor_text_cancion_karaoke.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.edadcompositor_text_cancion_karaoke.Location = new System.Drawing.Point(131, 214);
+            this.edadcompositor_text_cancion_karaoke.Margin = new System.Windows.Forms.Padding(2);
             this.edadcompositor_text_cancion_karaoke.Name = "edadcompositor_text_cancion_karaoke";
-            this.edadcompositor_text_cancion_karaoke.Size = new System.Drawing.Size(239, 23);
+            this.edadcompositor_text_cancion_karaoke.Size = new System.Drawing.Size(180, 20);
             this.edadcompositor_text_cancion_karaoke.TabIndex = 44;
             // 
             // label34
@@ -2513,9 +2517,10 @@
             this.label34.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.label34.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label34.ForeColor = System.Drawing.Color.White;
-            this.label34.Location = new System.Drawing.Point(449, 262);
+            this.label34.Location = new System.Drawing.Point(337, 213);
+            this.label34.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(112, 24);
+            this.label34.Size = new System.Drawing.Size(88, 18);
             this.label34.TabIndex = 43;
             this.label34.Text = "Nacionalidad";
             // 
@@ -2525,9 +2530,10 @@
             this.label35.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.label35.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label35.ForeColor = System.Drawing.Color.White;
-            this.label35.Location = new System.Drawing.Point(87, 229);
+            this.label35.Location = new System.Drawing.Point(65, 186);
+            this.label35.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(75, 24);
+            this.label35.Size = new System.Drawing.Size(55, 18);
             this.label35.TabIndex = 42;
             this.label35.Text = "Nombre";
             // 
@@ -2537,9 +2543,10 @@
             this.label36.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.label36.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label36.ForeColor = System.Drawing.Color.White;
-            this.label36.Location = new System.Drawing.Point(87, 263);
+            this.label36.Location = new System.Drawing.Point(65, 214);
+            this.label36.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(50, 24);
+            this.label36.Size = new System.Drawing.Size(39, 18);
             this.label36.TabIndex = 41;
             this.label36.Text = "Edad";
             // 
@@ -2549,19 +2556,20 @@
             this.label37.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.label37.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label37.ForeColor = System.Drawing.Color.White;
-            this.label37.Location = new System.Drawing.Point(449, 228);
+            this.label37.Location = new System.Drawing.Point(337, 185);
+            this.label37.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(52, 24);
+            this.label37.Size = new System.Drawing.Size(39, 18);
             this.label37.TabIndex = 40;
             this.label37.Text = "Sexo";
             // 
             // nombrecompositor_text_cancion_karaoke
             // 
             this.nombrecompositor_text_cancion_karaoke.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nombrecompositor_text_cancion_karaoke.Location = new System.Drawing.Point(175, 226);
-            this.nombrecompositor_text_cancion_karaoke.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.nombrecompositor_text_cancion_karaoke.Location = new System.Drawing.Point(131, 184);
+            this.nombrecompositor_text_cancion_karaoke.Margin = new System.Windows.Forms.Padding(2);
             this.nombrecompositor_text_cancion_karaoke.Name = "nombrecompositor_text_cancion_karaoke";
-            this.nombrecompositor_text_cancion_karaoke.Size = new System.Drawing.Size(239, 23);
+            this.nombrecompositor_text_cancion_karaoke.Size = new System.Drawing.Size(180, 20);
             this.nombrecompositor_text_cancion_karaoke.TabIndex = 39;
             // 
             // label38
@@ -2570,28 +2578,29 @@
             this.label38.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.label38.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label38.ForeColor = System.Drawing.Color.White;
-            this.label38.Location = new System.Drawing.Point(51, 194);
+            this.label38.Location = new System.Drawing.Point(38, 158);
+            this.label38.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(105, 24);
+            this.label38.Size = new System.Drawing.Size(78, 18);
             this.label38.TabIndex = 38;
             this.label38.Text = "Compositor:";
             // 
             // nacioncantante_text_cancion_karaoke
             // 
             this.nacioncantante_text_cancion_karaoke.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nacioncantante_text_cancion_karaoke.Location = new System.Drawing.Point(581, 148);
-            this.nacioncantante_text_cancion_karaoke.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.nacioncantante_text_cancion_karaoke.Location = new System.Drawing.Point(436, 120);
+            this.nacioncantante_text_cancion_karaoke.Margin = new System.Windows.Forms.Padding(2);
             this.nacioncantante_text_cancion_karaoke.Name = "nacioncantante_text_cancion_karaoke";
-            this.nacioncantante_text_cancion_karaoke.Size = new System.Drawing.Size(239, 23);
+            this.nacioncantante_text_cancion_karaoke.Size = new System.Drawing.Size(180, 20);
             this.nacioncantante_text_cancion_karaoke.TabIndex = 36;
             // 
             // edadcantante_text_cancion_karaoke
             // 
             this.edadcantante_text_cancion_karaoke.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.edadcantante_text_cancion_karaoke.Location = new System.Drawing.Point(175, 149);
-            this.edadcantante_text_cancion_karaoke.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.edadcantante_text_cancion_karaoke.Location = new System.Drawing.Point(131, 121);
+            this.edadcantante_text_cancion_karaoke.Margin = new System.Windows.Forms.Padding(2);
             this.edadcantante_text_cancion_karaoke.Name = "edadcantante_text_cancion_karaoke";
-            this.edadcantante_text_cancion_karaoke.Size = new System.Drawing.Size(239, 23);
+            this.edadcantante_text_cancion_karaoke.Size = new System.Drawing.Size(180, 20);
             this.edadcantante_text_cancion_karaoke.TabIndex = 35;
             // 
             // label39
@@ -2600,9 +2609,10 @@
             this.label39.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.label39.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label39.ForeColor = System.Drawing.Color.White;
-            this.label39.Location = new System.Drawing.Point(449, 148);
+            this.label39.Location = new System.Drawing.Point(337, 120);
+            this.label39.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(112, 24);
+            this.label39.Size = new System.Drawing.Size(88, 18);
             this.label39.TabIndex = 34;
             this.label39.Text = "Nacionalidad";
             // 
@@ -2612,9 +2622,10 @@
             this.label40.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.label40.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label40.ForeColor = System.Drawing.Color.White;
-            this.label40.Location = new System.Drawing.Point(87, 114);
+            this.label40.Location = new System.Drawing.Point(65, 93);
+            this.label40.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(75, 24);
+            this.label40.Size = new System.Drawing.Size(55, 18);
             this.label40.TabIndex = 33;
             this.label40.Text = "Nombre";
             // 
@@ -2624,9 +2635,10 @@
             this.label41.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.label41.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label41.ForeColor = System.Drawing.Color.White;
-            this.label41.Location = new System.Drawing.Point(87, 149);
+            this.label41.Location = new System.Drawing.Point(65, 121);
+            this.label41.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(50, 24);
+            this.label41.Size = new System.Drawing.Size(39, 18);
             this.label41.TabIndex = 32;
             this.label41.Text = "Edad";
             // 
@@ -2636,19 +2648,20 @@
             this.label42.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.label42.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label42.ForeColor = System.Drawing.Color.White;
-            this.label42.Location = new System.Drawing.Point(449, 113);
+            this.label42.Location = new System.Drawing.Point(337, 92);
+            this.label42.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(52, 24);
+            this.label42.Size = new System.Drawing.Size(39, 18);
             this.label42.TabIndex = 31;
             this.label42.Text = "Sexo";
             // 
             // nombrecantante_text_cancion_karaoke
             // 
             this.nombrecantante_text_cancion_karaoke.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nombrecantante_text_cancion_karaoke.Location = new System.Drawing.Point(175, 112);
-            this.nombrecantante_text_cancion_karaoke.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.nombrecantante_text_cancion_karaoke.Location = new System.Drawing.Point(131, 91);
+            this.nombrecantante_text_cancion_karaoke.Margin = new System.Windows.Forms.Padding(2);
             this.nombrecantante_text_cancion_karaoke.Name = "nombrecantante_text_cancion_karaoke";
-            this.nombrecantante_text_cancion_karaoke.Size = new System.Drawing.Size(239, 23);
+            this.nombrecantante_text_cancion_karaoke.Size = new System.Drawing.Size(180, 20);
             this.nombrecantante_text_cancion_karaoke.TabIndex = 30;
             // 
             // label55
@@ -2657,9 +2670,10 @@
             this.label55.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.label55.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label55.ForeColor = System.Drawing.Color.White;
-            this.label55.Location = new System.Drawing.Point(51, 85);
+            this.label55.Location = new System.Drawing.Point(38, 69);
+            this.label55.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(87, 24);
+            this.label55.Size = new System.Drawing.Size(65, 18);
             this.label55.TabIndex = 29;
             this.label55.Text = "Cantante:";
             // 
@@ -2669,19 +2683,20 @@
             this.label56.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.label56.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label56.ForeColor = System.Drawing.Color.White;
-            this.label56.Location = new System.Drawing.Point(40, 34);
+            this.label56.Location = new System.Drawing.Point(30, 28);
+            this.label56.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(329, 38);
+            this.label56.Size = new System.Drawing.Size(255, 29);
             this.label56.TabIndex = 28;
             this.label56.Text = "Nombre Cancion Karaoke";
             // 
             // nombre_text_cancion_karaoke
             // 
             this.nombre_text_cancion_karaoke.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nombre_text_cancion_karaoke.Location = new System.Drawing.Point(385, 36);
-            this.nombre_text_cancion_karaoke.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.nombre_text_cancion_karaoke.Location = new System.Drawing.Point(289, 29);
+            this.nombre_text_cancion_karaoke.Margin = new System.Windows.Forms.Padding(2);
             this.nombre_text_cancion_karaoke.Name = "nombre_text_cancion_karaoke";
-            this.nombre_text_cancion_karaoke.Size = new System.Drawing.Size(435, 30);
+            this.nombre_text_cancion_karaoke.Size = new System.Drawing.Size(327, 26);
             this.nombre_text_cancion_karaoke.TabIndex = 26;
             // 
             // openfile_subircancion_karaoke_admin
@@ -2702,13 +2717,13 @@
             // 
             // FORMS_ADMIN
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.ClientSize = new System.Drawing.Size(1213, 676);
-            this.Controls.Add(this.panel_ver_canciones_karaoke);
-            this.Controls.Add(this.panel_agregar_cancion_karaoke);
+            this.ClientSize = new System.Drawing.Size(910, 549);
             this.Controls.Add(this.panel_agregar_cancion_admin);
+            this.Controls.Add(this.panel_agregar_cancion_karaoke);
+            this.Controls.Add(this.panel_ver_canciones_karaoke);
             this.Controls.Add(this.panel_ver_artistas);
             this.Controls.Add(this.panel_ver_canciones_admin);
             this.Controls.Add(this.panel_ver_videos_admin);
@@ -2722,7 +2737,6 @@
             this.Controls.Add(this.menuStrip1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FORMS_ADMIN";
             this.ShowIcon = false;
             this.Text = "ADMIN ADALIND";
