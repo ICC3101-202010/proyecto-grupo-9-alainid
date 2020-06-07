@@ -18,66 +18,54 @@ namespace Proyecto_Forms
 {
     public static class ALAINID
     {
-        public static List<User> listausuarios = new List<User>();       // TODOS LOS USUARIOS DE ALAINID
-        public static List<Song> todas_las_canciones = new List<Song>();        // TODAS LAS CANCIONES EN ALAINID
-        public static List<Video> todos_los_videos = new List<Video>();
-        public static List<Song> todas_las_cancioneskaraoke = new List<Song>();
+        public static List<User> listausuarios = new List<User>();          // TODOS LOS USUARIOS DE ALAINID
+        public static List<Song> todas_las_canciones = new List<Song>();      // TODAS LAS CANCIONES EN ALAINID
+        public static List<Video> todos_los_videos = new List<Video>();         // TODOS LOS VIDEOS DE ALAINID
+        public static List<Song> todas_las_cancioneskaraoke = new List<Song>(); // TODAS LAS CANCIONES KARAOKE DE ALAINID
         public static List<Artista> lista_actores = new List<Artista>();        // TODOS LOS ACTORES EN ALAINID
-        public static List<Artista> lista_directores = new List<Artista>();        // TODOS LOS DIRECTORES EN ALAINID
-        public static List<Artista> lista_cantantes = new List<Artista>();        // TODOS LOS CANTANTES EN ALAINID
-        public static List<Artista> lista_compositores = new List<Artista>();        // TODOS LOS COMPOSITORES EN ALAINID
-        public static List<Song> listafiltrada2 = new List<Song>();
+        public static List<Artista> lista_directores = new List<Artista>();     // TODOS LOS DIRECTORES EN ALAINID
+        public static List<Artista> lista_cantantes = new List<Artista>();     // TODOS LOS CANTANTES EN ALAINID
+        public static List<Artista> lista_compositores = new List<Artista>();   // TODOS LOS COMPOSITORES EN ALAINID
+
+        public static List<string> lista_generos_canciones = new List<string>();       // TODOS LOS GENEROS DE CANCIONES QUE EXISTEN DE ALAINID
+        public static List<string> lista_disquera = new List<string>();             // TODAS LAS DISQUERAS DISPONIBLES EN ALAINID
+        public static List<string> lista_generos_peliculas = new List<string>();     // TODOS LOS GENEROS DE VIDEOS QUE EXISTEN DE ALAINID
+        public static List<string> lista_calidad_cancion = new List<string>();       // TODAS LAS CALIDADES DE CANCIONES QUE SOPORTA EN  ALAINID
+        public static List<string> lista_tipoarchivo_cancion = new List<string>();    // TODOS TIPOS DE ARCHIVO DE CANCIONES QUE SOPORTA  ALAINID
+        public static List<string> lista_calidad_pelicula = new List<string>();      // TODAS LAS CALIDADES DE VIEOS QUE SOPORTA EN  ALAINID
+        public static List<string> lista_tipoarchivo_pelicula = new List<string>();    // TODOS TIPOS DE ARCHIVO DE VIDEOS QUE SOPORTA  ALAINID
+        public static List<string> lista_categoria = new List<string>();            // CATEGORIAS DE PELICULAS- VIDEOS EN ALAINID
+        public static List<string> lista_criterios_usuarios = new List<string>();     // CRITERIOS PARA BUSCAR USUARIOS
+        public static List<PlaylistSong> todos_los_albumes = new List<PlaylistSong>();// TODOS LOS ALBUMES DE ALAINID
+        public static List<string> sexo = new List<string>();                         // MASCULINO / FEMEMNINO
+        public static List<string> edades = new List<string>();                      //INTERVALOS DE EDADES PARA LAS BUSQUEDAS
+
         public static List<Song> cancionfavoritabuscada = new List<Song>();
         public static List<Video> videofavoritobuscado = new List<Video>();
-        public static List<Video> listafiltrada3 = new List<Video>();
-        public static List<Song> listafiltrada = new List<Song>();       // ?? ESTO NO SE Q ES????
-        public static List<User> listafiltradausuarios = new List<User>();
-        public static List<string> lista_generos_canciones = new List<string>();// TODOS LOS GENEROS DE CANCIONES QUE EXISTEN DE ALAINID
-        public static List<string> lista_disquera = new List<string>();
-        public static List<string> lista_generos_peliculas = new List<string>();       // TODOS LOS GENEROS DE VIDEOS QUE EXISTEN DE ALAINID
-        public static List<string> lista_calidad_cancion = new List<string>();       // TODAS LAS CALIDADES DE CANCIONES QUE SOPORTA EN  ALAINID
-        public static List<string> lista_tipoarchivo_cancion = new List<string>();       // TODOS TIPOS DE ARCHIVO DE CANCIONES QUE SOPORTA  ALAINID
-        public static List<string> lista_calidad_pelicula = new List<string>();      // TODAS LAS CALIDADES DE VIEOS QUE SOPORTA EN  ALAINID
-        public static List<string> lista_tipoarchivo_pelicula = new List<string>();        // TODOS TIPOS DE ARCHIVO DE VIDEOS QUE SOPORTA  ALAINID
-        public static List<string> lista_categoria = new List<string>();       // CATEGORIAS DE PELICULAS- VIDEOS EN ALAINID
-        public static List<string> lista_criterios_filtro = new List<string>();       // CRITERIOS PARA FILTRAR LAS CANCIONES 
-        public static List<string> lista_criterios_usuarios = new List<string>();       // CRITERIOS PARA BUSCAR USUARIOS
-        public static List<PlaylistSong> todos_los_albumes = new List<PlaylistSong>();   // TODOS LOS ALBUMES DE ALAINID
-        public static List<string> anios = new List<string>();
-        public static List<string> sexo = new List<string>();
-        public static List<string> edades = new List<string>();
-        public static List<Song> lista_filtrada_final = new List<Song>();
-        public static List<Video> lista_filtrada_finalv = new List<Video>();
-        public static List<String> lista_disqueravideo = new List<String>();
+
+        public static List<Song> lista_filtrada_final = new List<Song>();            // LISTA UTILIZADA PARA LAS BUSQUEDAS MULTIPLES
+        public static List<Video> lista_filtrada_finalv = new List<Video>();          // LISTA UTILIZADA PARA LAS BUSQUEDAS MULTIPLES
+        public static List<String> lista_disqueravideo = new List<String>();          // LISTA UTILIZADA PARA LAS BUSQUEDAS MULTIPLES
+        public static List<Video> listafiltrada3 = new List<Video>();            // LISTA UTILIZADA PARA LAS BUSQUEDAS MULTIPLES
+        public static List<Song> listafiltrada = new List<Song>();                // LISTA UTILIZADA PARA LAS BUSQUEDAS MULTIPLES
+        public static List<User> listafiltradausuarios = new List<User>();           // LISTA UTILIZADA PARA LAS BUSQUEDAS MULTIPLES
+        public static List<Song> listafiltrada2 = new List<Song>();                 // LISTA UTILIZADA PARA LAS BUSQUEDAS MULTIPLES
 
 
-        //===============================================TODO LO QUE ES SERIALIZATION================================================================
-        //===============================================TODO LO QUE ES SERIALIZATION================================================================
-        //===============================================TODO LO QUE ES SERIALIZATION================================================================
-        //===============================================TODO LO QUE ES SERIALIZATION================================================================
-        //===============================================TODO LO QUE ES SERIALIZATION================================================================
 
 
-        public static bool comprobar_mail(String email)
-        {
-            String expresion;
-            expresion = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
-            if (Regex.IsMatch(email, expresion))
-            {
-                if (Regex.Replace(email, expresion, String.Empty).Length == 0)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-            }
-            else
-            {
-                return false;
-            }
-        }
+
+
+
+
+
+
+        //======================TODO LO QUE ES SERIALIZATION=====================================
+        //======================TODO LO QUE ES SERIALIZATION=====================================
+        //======================TODO LO QUE ES SERIALIZATION=====================================
+        //======================TODO LO QUE ES SERIALIZATION=====================================
+        //======================TODO LO QUE ES SERIALIZATION=====================================
+        //======================TODO LO QUE ES SERIALIZATION=====================================
 
         public static void Activar_todo()// implementa todos los metodos de activas o partir de una
         {
@@ -89,9 +77,8 @@ namespace Proyecto_Forms
             Partirlistadirectores();
             Activarlistavideos();
             activark();
-            Partirkaraoke();
-            Partir();
             Partirlistaactores();
+            
         }
         public static void Almacenar_todo() // imoplementa todos los metodos de almacenamiento de una
         {
@@ -104,38 +91,21 @@ namespace Proyecto_Forms
             AlmacenarCantante(lista_cantantes);
             Almacenar(listausuarios);
             AlmacenarKaraoke(todas_las_cancioneskaraoke);
+            Partir();
+            Partirkaraoke();
         }
-        public static void Cargar_todo()  // implementa todos los metodos de cargar de una
-        {
-            CargarCompositores();
-            CargarDirectores();
-            CargarActores();
-            CargarAlbum();
-            CargarCancion();
-            CargarVideos();
-            CargarCantantes();
-            Cargar();
-            CargarKaraoke();
-        } 
+
 
         /// todo lo que es partir partiendo parti con gubbins
-
+        // ESTAS CARGAN AL PROGRAMA LOS ARCHIUVOS GUARDADOS ANTERIORMENTE 
 
         public static void Activarlistacantantes()
         {
             lista_cantantes = CargarCantantes();
         }
-        public static void Partirkaraoke()
-        {
-            AlmacenarKaraoke(todas_las_cancioneskaraoke);
-        }
         public static void activark()
         {
             todas_las_cancioneskaraoke = CargarKaraoke();
-        }
-        public static void Partir()
-        {
-            AlmacenarCanciones(todas_las_canciones);
         }
         public static void Activarlista()
         {
@@ -166,12 +136,21 @@ namespace Proyecto_Forms
         {
             todos_los_albumes = CargarAlbum();
         }
-        
+
 
 
 
         //todo lo que es almacenar almacenando almacenamos con gubbins
+        // ESTAS GUARDAN EN LOS ARCHIVOS LOS DATOS INGRESADOS EN CADA SESION 
 
+        public static void Partirkaraoke()          // ESTAS ALMACENAN PERO TIENEN NOMBRE DE PARTIR
+        {
+            AlmacenarKaraoke(todas_las_cancioneskaraoke);
+        }
+        public static void Partir()             // ESTAS ALMACENAN PERO TIENEN NOMBRE DE PARTIR
+        {
+            AlmacenarCanciones(todas_las_canciones);
+        }    
         public static void AlmacenarCompositores(List<Artista> u)      //Serializamos
         {
             IFormatter formatter5 = new BinaryFormatter();
@@ -200,7 +179,7 @@ namespace Proyecto_Forms
             formatter5.Serialize(stream5, u);
             stream5.Close();
         }
-        static void AlmacenarCanciones(List<Song> s)      //Serializamos
+        public static void AlmacenarCanciones(List<Song> s)      //Serializamos
         {
             IFormatter formatter3 = new BinaryFormatter();
             Stream stream3 = new FileStream("Canciones.bin", FileMode.OpenOrCreate, FileAccess.Write, FileShare.None);
@@ -239,6 +218,8 @@ namespace Proyecto_Forms
 
 
         // todo lo que es cargar con gubbins
+        // ESTAS RETORNAN UNA LISTA PARA LUEGO SER ALMACENADAS EN ACTIVAR/PARTIR
+
         public static List<Artista> CargarCompositores()
         {
             IFormatter formatter6 = new BinaryFormatter();
@@ -400,50 +381,43 @@ namespace Proyecto_Forms
                 return k3;
             }
         }
-        
-        
-        //===============================================HASTA AQUI ES TODO LO QUE ES SERIALIZATION================================================================
-        //===============================================HASTA AQUI ES TODO LO QUE ES SERIALIZATION================================================================
-        //===============================================HASTA AQUI ES TODO LO QUE ES SERIALIZATION================================================================
-        //===============================================HASTA AQUI ES TODO LO QUE ES SERIALIZATION================================================================
-        //===============================================HASTA AQUI ES TODO LO QUE ES SERIALIZATION================================================================
 
-        public static string Todo_a_minuscula(string pal)
+
+        //======================HASTA AQUI ES TODO LO QUE ES SERIALIZATION===============================
+        //======================HASTA AQUI ES TODO LO QUE ES SERIALIZATION===============================
+        //======================HASTA AQUI ES TODO LO QUE ES SERIALIZATION===============================
+        //======================HASTA AQUI ES TODO LO QUE ES SERIALIZATION===============================
+        //======================HASTA AQUI ES TODO LO QUE ES SERIALIZATION===============================
+        //======================HASTA AQUI ES TODO LO QUE ES SERIALIZATION===============================
+
+
+
+
+
+
+
+
+        public static bool comprobar_mail(String email)
         {
-            string pal_minuscula;
-            pal_minuscula = pal.ToLower();
-            return pal_minuscula;
-        }
-        // Metodo para mostrar las opciones posibles
-        public static string ShowOptions(List<string> options)
-        {
-            int i = 0;
-            Console.WriteLine(">Selecciona una opcion:");
-            foreach (string option in options)
+            String expresion;
+            expresion = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
+            if (Regex.IsMatch(email, expresion))
             {
-                Console.WriteLine(Convert.ToString(i) + ". " + option);
-                i += 1;
+                if (Regex.Replace(email, expresion, String.Empty).Length == 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
-
-            return options[Convert.ToInt16(Console.ReadLine())];
-        }
-
-        public static int Acceso_inicial()
-        {  // verifica que el input  sea un numero dentro del rango requerido
-            int n;
-            bool aux1 = true;
-            bool aux2 = true;
-            do
+            else
             {
-                aux2 = int.TryParse(Console.ReadLine(), out n);
-                if (n == 1) { aux1 = false; }
-                else if (n == 2) { aux1 = false; }
-                else if (n == 3) { aux1 = false; }
-                else if (n == 202023) { aux1 = false; }
-                else { Console.WriteLine("---ERROR: INGRESE SOLO NUMEROS del 1 al {0}---", 3); }
-            } while (aux1);
-            return n;
+                return false;
+            }
         }
+
         public static int Numero(int o) // verifica que el input  sea un numero dentro del rango requerido
         {
             int n;
@@ -459,216 +433,12 @@ namespace Proyecto_Forms
             return n;
         }
 
-
-
-        public static bool Hacerplaylistsong(string mail, string nombrepl)
-        {
-            string funkaa = "";
-            for (int i = 0; i < listausuarios.Count; i++)
-            {
-                if (listausuarios[i].Email_ == mail)
-                {
-                    PlaylistSong plysu = new PlaylistSong(nombrepl);
-                    listausuarios[i].Lista_playlistusuario_.Add(plysu);
-                    Almacenar(listausuarios);
-                    funkaa += "si";
-
-                }
-            }
-            if (funkaa != "")
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-
-        }
-        public static bool Hacerplaylistvideo(string mail, string nombrepl)
-        {
-            string funkaa = "";
-            for (int i = 0; i < listausuarios.Count; i++)
-            {
-                if (listausuarios[i].Email_ == mail)
-                {
-                    PlaylistVideo playlist2 = new PlaylistVideo(nombrepl);
-                    listausuarios[i].Lista_playlistvideousuario_.Add(playlist2);
-                    Almacenar(listausuarios);
-                    funkaa += "si";
-
-                }
-            }
-            if (funkaa != "")
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-
-        }
+        
+        
         public static string cachativa;
-        public static void Retornaplaylistusuario(string email, string nombreply)
-        {
-            cachativa = "";
-            for (int j = 0; j < listausuarios.Count; j++)
-            {
-                if (listausuarios[j].Email_ == email)
-                {
-                    if (listausuarios[j].Lista_playlistusuario_.Count > 0)
-                    {
-                        for (int i = 0; i < listausuarios[j].Lista_playlistusuario_.Count; i++)
-                        {
-                            if (listausuarios[j].Lista_playlistusuario_[i].NombrePlaylist == nombreply)
-                            {
-                                listafiltrada2 = listausuarios[j].Lista_playlistusuario_[i].Listplay;
-                                if (listausuarios[j].Lista_playlistusuario_[i].Listplay.Count > 0)
-                                {
-                                    cachativa = "si";
-                                }
-
-                            }
-                        }
-                    }
-                }
-            }
-
-        }
-        public static void Retornaplaylistvideousuario(string email, string nombreply)
-        {
-            cachativa = "";
-            for (int j = 0; j < listausuarios.Count; j++)
-            {
-                if (listausuarios[j].Email_ == email)
-                {
-                    if (listausuarios[j].Lista_playlistvideousuario_.Count > 0)
-                    {
-                        for (int i = 0; i < listausuarios[j].Lista_playlistvideousuario_.Count; i++)
-                        {
-                            if (listausuarios[j].Lista_playlistvideousuario_[i].NombrePlaylist == nombreply)
-                            {
-                                listafiltrada3 = listausuarios[j].Lista_playlistvideousuario_[i].Listplayvideo;
-                                if (listausuarios[j].Lista_playlistvideousuario_[i].Listplayvideo.Count > 0)
-                                {
-                                    cachativa = "si";
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-
-        }
-        public static string Vernombresplaylistcancion(string email)
-        {
-            //List<String> lplaylist = new List<string>();
-            string info = "No hay Playlist";
-            for (int j = 0; j < listausuarios.Count; j++)
-            {
-                if (listausuarios[j].Email_ == email)
-                {
-                    if (listausuarios[j].Lista_playlistusuario_.Count > 0)
-                    {
-                        info = "Nombres de tus playlist: \n";
-                        for (int i = 0; i < listausuarios[j].Lista_playlistusuario_.Count; i++)
-                        {
-                            //lplaylist.Add(listausuarios[j].Lista_playlistusuario[i].NombrePlaylist);
-                            info += i + 1 + ". " + listausuarios[j].Lista_playlistusuario_[i].NombrePlaylist + "\n";
-                        }
-                    }
-
-                }
-            }
-            return info;
-        }
-        public static string Vernombresplaylistvideo(string email)
-        {
-            //List<String> lplaylist = new List<string>();
-            string info = "No hay Playlist";
-            for (int j = 0; j < listausuarios.Count; j++)
-            {
-                if (listausuarios[j].Email_ == email)
-                {
-                    if (listausuarios[j].Lista_playlistvideousuario_.Count > 0)
-                    {
-                        info = "Nombres de tus playlist: \n";
-                        for (int i = 0; i < listausuarios[j].Lista_playlistvideousuario_.Count; i++)
-                        {
-                            //lplaylist.Add(listausuarios[j].Lista_playlistvideousuario[i].NombrePlaylist);
-                            info += i + 1 + ". " + listausuarios[j].Lista_playlistvideousuario_[i].NombrePlaylist + "\n";
-                        }
-                    }
-
-                }
-            }
-            return info;
-        }
-        public static string Numeroplaylistcancion(string email, int numerolista)
-        {
-            string info = "";
-            for (int j = 0; j < listausuarios.Count; j++)
-            {
-                if (listausuarios[j].Email_ == email)
-                {
-                    if (listausuarios[j].Lista_playlistusuario_.Count > 0)
-                    {
-                        info = listausuarios[j].Lista_playlistusuario_[numerolista - 1].NombrePlaylist;
-
-                    }
-
-                }
-            }
-            return info;
-        }
-        public static int Cuantasplaylistcancion(string email)
-        {
-            int info = 0;
-            for (int j = 0; j < listausuarios.Count; j++)
-            {
-                if (listausuarios[j].Email_ == email)
-                {
-                    if (listausuarios[j].Lista_playlistusuario_.Count > 0)
-                    {
-                        info = listausuarios[j].Lista_playlistusuario_.Count;
-                    }
-                }
-            }
-            return info;
-        }
-        public static int Cuantasfavoritascancion(string email)
-        {
-            int info = 0;
-            for (int j = 0; j < listausuarios.Count; j++)
-            {
-                if (listausuarios[j].Email_ == email)
-                {
-                    if (listausuarios[j].Favorite_songs_.Count > 0)
-                    {
-                        info = listausuarios[j].Favorite_songs_.Count;
-                    }
-                }
-            }
-            return info;
-        }
-
-
-        public static int Cuantasfavoritadescargas(string email)
-        {
-            int info = 0;
-            for (int j = 0; j < listausuarios.Count; j++)
-            {
-                if (listausuarios[j].Email_ == email)
-                {
-                    if (listausuarios[j].Descargas_.Count > 0)
-                    {
-                        info = listausuarios[j].Descargas_.Count;
-                    }
-                }
-            }
-            return info;
-        }
+        
+       
+       
         public static int Cuantashistorialcancion(string email)
         {
             int info = 0;
@@ -700,21 +470,7 @@ namespace Proyecto_Forms
             }
             return info;
         }
-        public static int Cuantasfavoritasvideo(string email)
-        {
-            int info = 0;
-            for (int j = 0; j < listausuarios.Count; j++)
-            {
-                if (listausuarios[j].Email_ == email)
-                {
-                    if (listausuarios[j].Favorite_videos_.Count > 0)
-                    {
-                        info = listausuarios[j].Favorite_videos_.Count;
-                    }
-                }
-            }
-            return info;
-        }
+        
         public static void Cancionbuscada(string archivo)
         {
             for (int j = 0; j < todas_las_canciones.Count; j++)
@@ -737,38 +493,8 @@ namespace Proyecto_Forms
                 }
             }
         }
-        public static int Cuantasplaylistvideo(string email)
-        {
-            int info = 0;
-            for (int j = 0; j < listausuarios.Count; j++)
-            {
-                if (listausuarios[j].Email_ == email)
-                {
-                    if (listausuarios[j].Lista_playlistvideousuario_.Count > 0)
-                    {
-                        info = listausuarios[j].Lista_playlistvideousuario_.Count;
-                    }
-                }
-            }
-            return info;
-        }
-        public static string Numeroplaylistvideo(string email, int numerolista)
-        {
-            string info = "";
-            for (int j = 0; j < listausuarios.Count; j++)
-            {
-                if (listausuarios[j].Email_ == email)
-                {
-                    if (listausuarios[j].Lista_playlistvideousuario_.Count > 0)
-                    {
-                        info = listausuarios[j].Lista_playlistvideousuario_[numerolista - 1].NombrePlaylist;
-
-                    }
-                }
-
-            }
-            return info;
-        }
+       
+        
 
         public static string Agregarcancionaply(string email, string posicion, Song cancion)
         {
@@ -2409,15 +2135,25 @@ namespace Proyecto_Forms
 
 
 
+        
+        
+        
+        
+        
+        // METODOS FILTROS VIDEO=============================================================================
+        // METODOS FILTROS VIDEO=============================================================================
+        // METODOS FILTROS VIDEO=============================================================================
+        // METODOS FILTROS VIDEO=============================================================================
+        // METODOS FILTROS VIDEO=============================================================================
         // METODOS FILTROS VIDEO=============================================================================
 
-        public static List<string> lista_criterios_filtro2v = new List<string>();         
         public static List<Video> lista_canciones_filtromiltiplev = new List<Video>();           
         public static List<Artista> lista_artistas_filtromiltiplev = new List<Artista>();          
         public static List<Video> lista_filtrandov = new List<Video>();          
         public static List<Video> canciones_filtradasv = new List<Video>();
         public static List<Video> lista_filtrando2v = new List<Video>();        
         public static List<Video> listafiltradav = new List<Video>();       
+
         public static List<Video> VideosporGenero(string _valor)
         {
             listafiltradav.Clear();
@@ -2859,13 +2595,31 @@ namespace Proyecto_Forms
 
 
 
+
+
+
+
+
+
+
+
+
+
+
         // METODOS DE FILTROS CANCIONES=============================================================
+        // METODOS DE FILTROS CANCIONES=============================================================
+        // METODOS DE FILTROS CANCIONES=============================================================
+        // METODOS DE FILTROS CANCIONES=============================================================
+        // METODOS DE FILTROS CANCIONES=============================================================
+        // METODOS DE FILTROS CANCIONES=============================================================
+        // METODOS DE FILTROS CANCIONES=============================================================
+
         public static List<string> lista_criterios_filtro2 = new List<string>();
         public static List<Song> lista_canciones_filtromiltiple = new List<Song>();
         public static List<Artista> lista_artistas_filtromiltiple = new List<Artista>();
-        public static List<Song> lista_filtrando = new List<Song>();
         public static List<Song> canciones_filtradas = new List<Song>();
         public static List<Song> lista_filtrando2 = new List<Song>();
+
         public static List<Song> Lista_por_calidad_cancion(string calidad)
         { // busca todas las canciones de una calidad x
             List<Song> cali_ca = new List<Song>();
