@@ -24,6 +24,7 @@ namespace Proyecto_Forms
         //private List<Artista> cantantes_seguidos_ = new List<Artista>();
         //private List<PlaylistSong> playlistcanciones_seguidas = new List<PlaylistSong>();
         private List<User> usuarios_seguidos_ = new List<User>();
+        private List<Artista> artistas_seguidos_ = new List<Artista>();
         private List<Song> historial_canciones_ = new List<Song>();
         private List<Video> historial_videos_ = new List<Video>();
         private List<Song> lista_inteligente = new List<Song>();
@@ -45,7 +46,8 @@ namespace Proyecto_Forms
         public List<PlaylistVideo> Lista_playlistvideousuario_ { get => lista_playlistvideousuario_; set => lista_playlistvideousuario_ = value; }
         public List<User> Usuarios_seguidos_ { get => usuarios_seguidos_; set => usuarios_seguidos_ = value; }
         public List<Song> Lista_inteligente { get => lista_inteligente; set => lista_inteligente = value; }
-        //public List<Artista> Cantantes_seguidos_ { get => cantantes_seguidos_; set => cantantes_seguidos_ = value; }
+        public List<Artista> Artistas_seguidos_ { get => artistas_seguidos_; set => artistas_seguidos_ = value; }
+
 
 
 
@@ -72,12 +74,7 @@ namespace Proyecto_Forms
             string informacion2 = ("ID USUARIO: " + nombreUsuario  + " NOMBRE: " + nombre_  + " EMAIL: " + email_  + " PASSWORD: " + password_  + " PRIVACIDAD: " + perfilpublico_  + " PRIVILEGIO: " + premium_);
             return informacion2;
         }
-        //public void Crear_playlist(string nombre)
-        //{
-        //PlaylistSong playlistSong = new PlaylistSong(nombre);
-        //Lista_playlistusuario.Add(playlistSong);
-        //}
-
+       
         public void Agregar_cancion_favoritos(Song song)
         {
             Favorite_songs_.Add(song);

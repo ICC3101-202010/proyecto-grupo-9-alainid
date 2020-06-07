@@ -20,6 +20,11 @@ namespace ALAINID_DEFINITIVO
     {
         public ALAINID()
         {
+            lista_cri_canciones.Add("Nombre Cancion"); lista_cri_canciones.Add("Cantante"); lista_cri_canciones.Add("Album"); 
+            lista_cri_canciones.Add("Genero Cancion"); lista_cri_canciones.Add("Compositor"); lista_cri_canciones.Add("Disquera");
+
+            lista_cri_videos.Add("Nombre Pelicula"); lista_cri_videos.Add("Categoria Pelicula"); lista_cri_videos.Add("Actor");
+            lista_cri_videos.Add("Genero Video"); lista_cri_videos.Add("Director"); lista_cri_videos.Add("Film Studio");
             InitializeComponent();
         }
         public int desplegable;
@@ -27,6 +32,8 @@ namespace ALAINID_DEFINITIVO
         public List<string> criterios = new List<string>();
         public List<string> criterios_seleccionados = new List<string>();
         public List<string> criterios_introducidos = new List<string>();
+        public List<string> lista_cri_canciones = new List<string>();
+        public List<string> lista_cri_videos = new List<string>();
 
 
         private void stopToolStripMenuItem_Click(object sender, EventArgs e)
@@ -52,12 +59,27 @@ namespace ALAINID_DEFINITIVO
         {
             panel_buscar.Visible = true;
             panel_buscar.Dock = DockStyle.Fill;
+            
         }
 
         private void btnPlaylist_Click(object sender, EventArgs e)
         {
             panel_playlist_usuario.Visible = true;
             panel_playlist_usuario.Dock = DockStyle.Fill;
+            foreach (PlaylistSong plys in Program.usuario_activo.Lista_playlistusuario_)
+            {
+                int n = tabla_playlist.Rows.Add();
+                tabla_playlist.Rows[n].Cells[0].Value = plys.NombrePlaylist;
+                tabla_playlist.Rows[n].Cells[1].Value = plys.Listplay.Count();
+                tabla_playlist.Rows[n].Cells[1].Value = "Canciones";
+            }
+            foreach (PlaylistVideo plyv in Program.usuario_activo.Lista_playlistvideousuario_)
+            {
+                int n = tabla_playlist.Rows.Add();
+                tabla_playlist.Rows[n].Cells[0].Value = plyv.NombrePlaylist;
+                tabla_playlist.Rows[n].Cells[1].Value = plyv.Listplayvideo.Count();
+                tabla_playlist.Rows[n].Cells[1].Value = "Videos";
+            }
         }
 
         private void btnFavoritos_Click(object sender, EventArgs e)
@@ -89,6 +111,34 @@ namespace ALAINID_DEFINITIVO
         {
             panel_social_menu.Visible = true;
             panel_social_menu.Dock = DockStyle.Fill;
+            foreach(User user in usuarios_busqueda_social)
+            {
+                int n = tabla_seguidos_social.Rows.Add();
+                tabla_seguidos_social.Rows[n].Cells[0].Value = user.Nombre_;
+                tabla_seguidos_social.Rows[n].Cells[1].Value = "Usuario";
+                
+            }
+            foreach (Artista art in artistas_busqueda_social)
+            {
+                int n = tabla_seguidos_social.Rows.Add();
+                tabla_seguidos_social.Rows[n].Cells[0].Value = art.Name;
+                tabla_seguidos_social.Rows[n].Cells[1].Value = "Artista";
+
+            }
+            foreach(User user1 in Proyecto_Forms.ALAINID.listausuarios)
+            {
+                foreach(User seguido in user1.Usuarios_seguidos_)
+                {
+                    if (seguido.Email_ == Program.usuario_activo.Email_)
+                    {
+                        int n = tabla_seguidores_social.Rows.Add();
+                        tabla_seguidores_social.Rows[n].Cells[0].Value = user1.Nombre_;
+                        tabla_seguidores_social.Rows[n].Cells[1].Value = "Usuario";
+                        
+                    }
+                }
+            }
+
         }
 
         private void btnPerfil_Click(object sender, EventArgs e)
@@ -305,12 +355,15 @@ namespace ALAINID_DEFINITIVO
 
         private void btn_busqueda_simple_Click(object sender, EventArgs e)
         {
+            checkBox_busqueda_OR.Checked = true;
             panel_busqueda_simple.Visible = true;
             panel_busqueda_simple.Dock = DockStyle.Fill;
         }
 
         private void btn_busqueda_multiple_Click(object sender, EventArgs e)
         {
+            checkBox_busqueda_OR.Checked = true;
+            checkBox_busqueda_AND.Checked = false;
             Proyecto_Forms.ALAINID.Activarlistacanciones();
             Proyecto_Forms.ALAINID.Activarlistacantantes();
             Proyecto_Forms.ALAINID.Partirlistacompositores();
@@ -320,7 +373,29 @@ namespace ALAINID_DEFINITIVO
             Proyecto_Forms.ALAINID.Partirlistaactores();
             panel_busqueda_multiple.Visible = true;
             panel_busqueda_multiple.Dock = DockStyle.Fill;
-            foreach(string criterio in Proyecto_Forms.ALAINID.lista_criterios_filtro2)
+            criterio_txt_combobox1_desplegable.Items.Clear(); criterio_txt_combobox2_desplegable.Items.Clear();
+            criterio_txt_combobox3_desplegable.Items.Clear(); criterio_txt_combobox4_desplegable.Items.Clear();
+            criterio_txt_combobox5_desplegable.Items.Clear(); criterio_txt_combobox6_desplegable.Items.Clear();
+            criterio_txt_combobox7_desplegable.Items.Clear(); criterio_txt_combobox8_desplegable.Items.Clear();
+            criterio_txt_combobox2.Enabled = false; criterio_txt_combobox3.Enabled = false; criterio_txt_combobox4.Enabled = false;
+            criterio_txt_combobox5.Enabled = false; criterio_txt_combobox6.Enabled = false; criterio_txt_combobox7.Enabled = false;
+            criterio_txt_combobox8.Enabled = false;
+            criterio_txt_combobox1_desplegable.Visible = false; criterio_txt_combobox2_desplegable.Visible = false; criterio_txt_combobox3_desplegable.Visible = false;
+            criterio_txt_combobox4_desplegable.Visible = false; criterio_txt_combobox5_desplegable.Visible = false; criterio_txt_combobox6_desplegable.Visible = false;
+            criterio_txt_combobox7_desplegable.Visible = false; criterio_txt_combobox8_desplegable.Visible = false;
+            comboBox1_criterio.Enabled = true;
+            comboBox1_criterio.Items.Clear(); comboBox2_criterio.Items.Clear(); comboBox3_criterio.Items.Clear(); comboBox4_criterio.Items.Clear();
+            comboBox5_criterio.Items.Clear(); comboBox6_criterio.Items.Clear(); comboBox7_criterio.Items.Clear(); comboBox8_criterio.Items.Clear();
+            comboBox1_criterio.Text = "";comboBox2_criterio.Text = "";comboBox3_criterio.Text = "";comboBox4_criterio.Text = "";
+            comboBox5_criterio.Text = "";comboBox6_criterio.Text = "";comboBox7_criterio.Text = "";comboBox8_criterio.Text = "";
+            criterio_txt_combobox1.Text = ""; criterio_txt_combobox2.Text = ""; criterio_txt_combobox3.Text = ""; criterio_txt_combobox4.Text = "";
+            criterio_txt_combobox5.Text = ""; criterio_txt_combobox6.Text = ""; criterio_txt_combobox7.Text = ""; criterio_txt_combobox8.Text = "";
+            criterio_txt_combobox1_desplegable.Text = ""; criterio_txt_combobox2_desplegable.Text = ""; criterio_txt_combobox3_desplegable.Text = "";
+            criterio_txt_combobox4_desplegable.Text = ""; criterio_txt_combobox5_desplegable.Text = ""; criterio_txt_combobox6_desplegable.Text = "";
+            criterio_txt_combobox7_desplegable.Text = ""; criterio_txt_combobox8_desplegable.Text = "";
+            criterios.Clear();
+
+            foreach (string criterio in Proyecto_Forms.ALAINID.lista_criterios_filtro2)
             {
                 criterios.Add(criterio);
             }
@@ -328,7 +403,6 @@ namespace ALAINID_DEFINITIVO
             {
                 comboBox1_criterio.Items.Add(criterio);
             }
-
         }
 
         private void btn_atras_de_inicio_sesion_Click(object sender, EventArgs e)
@@ -610,6 +684,7 @@ namespace ALAINID_DEFINITIVO
             panel_busqueda_simple.Visible = false;
             busquedasimple_valor_criterio_desplegable.Text = "";
             busaquedasimple_valor_criterio_text.Text = "";
+            datagratview_busquedasimple.Rows.Clear();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -632,57 +707,101 @@ namespace ALAINID_DEFINITIVO
         public List<Video> lista_videos_filtrados = new List<Video>();
         private void btn_buscar_busqueda_multiple_Click(object sender, EventArgs e)
         {
-            for(int i=0; i<criterios_seleccionados.Count; i++)
+
+            switch (criterios_seleccionados.Count())
+            {
+                case 1:
+                    if (criterio_txt_combobox1.Text != "")
+                    {
+                        criterios_introducidos.Add(criterio_txt_combobox1.Text);
+                    }
+                    else if (criterio_txt_combobox1_desplegable.Text != "")
+                    {
+                        criterios_introducidos.Add(criterio_txt_combobox1_desplegable.Text);
+                    }
+                    break;
+                case 2:
+                    if (criterio_txt_combobox1.Text != "")
+                    {
+                        criterios_introducidos.Add(criterio_txt_combobox2.Text);
+                    }
+                    else if (criterio_txt_combobox1_desplegable.Text != "")
+                    {
+                        criterios_introducidos.Add(criterio_txt_combobox2_desplegable.Text);
+                    }
+                    break;
+                case 3:
+                    if (criterio_txt_combobox1.Text != "")
+                    {
+                        criterios_introducidos.Add(criterio_txt_combobox3.Text);
+                    }
+                    else if (criterio_txt_combobox1_desplegable.Text != "")
+                    {
+                        criterios_introducidos.Add(criterio_txt_combobox3_desplegable.Text);
+                    }
+                    break;
+                case 4:
+                    if (criterio_txt_combobox1.Text != "")
+                    {
+                        criterios_introducidos.Add(criterio_txt_combobox4.Text);
+                    }
+                    else if (criterio_txt_combobox1_desplegable.Text != "")
+                    {
+                        criterios_introducidos.Add(criterio_txt_combobox4_desplegable.Text);
+                    }
+                    break;
+                case 5:
+                    if (criterio_txt_combobox1.Text != "")
+                    {
+                        criterios_introducidos.Add(criterio_txt_combobox5.Text);
+                    }
+                    else if (criterio_txt_combobox1_desplegable.Text != "")
+                    {
+                        criterios_introducidos.Add(criterio_txt_combobox5_desplegable.Text);
+                    }
+                    break;
+                case 6:
+                    if (criterio_txt_combobox1.Text != "")
+                    {
+                        criterios_introducidos.Add(criterio_txt_combobox6.Text);
+                    }
+                    else if (criterio_txt_combobox1_desplegable.Text != "")
+                    {
+                        criterios_introducidos.Add(criterio_txt_combobox6_desplegable.Text);
+                    }
+                    break;
+                case 7:
+                    if (criterio_txt_combobox1.Text != "")
+                    {
+                        criterios_introducidos.Add(criterio_txt_combobox7.Text);
+                    }
+                    else if (criterio_txt_combobox1_desplegable.Text != "")
+                    {
+                        criterios_introducidos.Add(criterio_txt_combobox7_desplegable.Text);
+                    }
+                    break;
+
+            }
+            if (criterios_seleccionados.Count == 1)
             {
                 if (criterio_txt_combobox1.Text != "")
                 {
                     criterios_introducidos.Add(criterio_txt_combobox1.Text);
-                    criterio_txt_combobox1.Text = "";
                 }
-                else if (criterio_txt_combobox2.Text != "")
+                else if (criterio_txt_combobox1_desplegable.Text != "")
                 {
-                    criterios_introducidos.Add(criterio_txt_combobox2.Text);
-                    criterio_txt_combobox2.Text = "";
+                    criterios_introducidos.Add(criterio_txt_combobox1_desplegable.Text);
                 }
-                else if (criterio_txt_combobox3.Text != "")
-                {
-                    criterios_introducidos.Add(criterio_txt_combobox3.Text);
-                    criterio_txt_combobox3.Text = "";
-                }
-                else if (criterio_txt_combobox4.Text != "")
-                {
-                    criterios_introducidos.Add(criterio_txt_combobox4.Text);
-                    criterio_txt_combobox4.Text = "";
-                }
-                else if (criterio_txt_combobox5.Text != "")
-                {
-                    criterios_introducidos.Add(criterio_txt_combobox5.Text);
-                    criterio_txt_combobox5.Text = "";
-                }
-                else if (criterio_txt_combobox6.Text != "")
-                {
-                    criterios_introducidos.Add(criterio_txt_combobox6.Text);
-                    criterio_txt_combobox6.Text = "";
-                }
-                else if (criterio_txt_combobox7.Text != "")
-                {
-                    criterios_introducidos.Add(criterio_txt_combobox7.Text);
-                    criterio_txt_combobox7.Text = "";
-                }
-                else if (criterio_txt_combobox8.Text != "")
-                {
-                    criterios_introducidos.Add(criterio_txt_combobox8.Text);
-                    criterio_txt_combobox8.Text = "";
-                }
-               
             }
-            //criterios_introducidos.Add(criterio_txt_combobox1_desplegable.Text);
-            //criterios_introducidos.Add(criterio_txt_combobox1.Text);
-            if (checkBox_busqueda_OR.Checked==false && checkBox_busqueda_AND.Checked == false)
+            if (criterio_txt_combobox8.Text != "")
             {
-                checkBox_busqueda_OR.Checked = true;
-
+                criterios_introducidos.Add(criterio_txt_combobox8.Text);
             }
+            else if (criterio_txt_combobox8_desplegable.Text != "")
+            {
+                criterios_introducidos.Add(criterio_txt_combobox8_desplegable.Text);
+            }
+
             Proyecto_Forms.ALAINID.Activarlistacanciones();
             Proyecto_Forms.ALAINID.Activarlistacantantes();
             Proyecto_Forms.ALAINID.Partirlistacompositores();
@@ -691,20 +810,36 @@ namespace ALAINID_DEFINITIVO
             Proyecto_Forms.ALAINID.Partirlistadirectores();
             Proyecto_Forms.ALAINID.Partirlistaactores();
             int numero = criterios_seleccionados.Count();
-            if (checkBox_busqueda_AND.Checked == true)
-            {   
-                lista_canciones_filtradas = Proyecto_Forms.ALAINID.Buqueda_multiple_cancionesand(criterios_seleccionados, criterios_introducidos);
-                lista_videos_filtrados = Proyecto_Forms.ALAINID.Buqueda_multiple_videos_and(criterios_seleccionados, criterios_introducidos);
+            List<string> criterios_seleccionadosvideos = new List<string>();
+            List<string> criterios_introducidosvideos = new List<string>();
+            foreach (string crit in criterios_seleccionados)
+            {
+                criterios_seleccionadosvideos.Add(crit);
             }
-        
+            foreach (string crit in criterios_introducidos)
+            {
+                criterios_introducidosvideos.Add(crit);
+            }
+            if (checkBox_busqueda_AND.Checked == true)
+            {
+                lista_canciones_filtradas = Proyecto_Forms.ALAINID.Buqueda_multiple_cancionesand(criterios_seleccionados, criterios_introducidos);
+                if (criterios_seleccionados != null)
+                {
+                    lista_videos_filtrados = Proyecto_Forms.ALAINID.Buqueda_multiple_videos_and(criterios_seleccionadosvideos, criterios_introducidosvideos);
+                }
+            }
+
             if (checkBox_busqueda_OR.Checked == true)
             {
                 lista_canciones_filtradas = Proyecto_Forms.ALAINID.Buqueda_multiple_canciones(criterios_seleccionados, criterios_introducidos);
-                lista_videos_filtrados = Proyecto_Forms.ALAINID.Buqueda_multiple_videos_or(criterios_seleccionados, criterios_introducidos);
+                if (criterios_seleccionados != null)
+                {
+                    lista_videos_filtrados = Proyecto_Forms.ALAINID.Buqueda_multiple_videos_or(criterios_seleccionadosvideos, criterios_introducidosvideos);
+                }
             }
-
             panel_resultados_busqueda_multiple.Visible = true;
             panel_resultados_busqueda_multiple.Dock = DockStyle.Fill;
+            
             foreach(Song canc in lista_canciones_filtradas)
             {
                 int n = tabla_resultados_busqueda_multiple.Rows.Add();
@@ -721,6 +856,35 @@ namespace ALAINID_DEFINITIVO
                 tabla_resultados_busqueda_multiple.Rows[n].Cells[2].Value = "Video";
 
             }
+            criterio_txt_combobox1_desplegable.Items.Clear();criterio_txt_combobox2_desplegable.Items.Clear();
+            criterio_txt_combobox3_desplegable.Items.Clear();criterio_txt_combobox4_desplegable.Items.Clear();
+            criterio_txt_combobox5_desplegable.Items.Clear();criterio_txt_combobox6_desplegable.Items.Clear();
+            criterio_txt_combobox7_desplegable.Items.Clear();criterio_txt_combobox8_desplegable.Items.Clear();
+            criterio_txt_combobox2.Enabled = false;criterio_txt_combobox3.Enabled = false;criterio_txt_combobox4.Enabled = false;
+            criterio_txt_combobox5.Enabled = false;criterio_txt_combobox6.Enabled = false;criterio_txt_combobox7.Enabled = false;
+            criterio_txt_combobox8.Enabled = false;
+            criterio_txt_combobox1_desplegable.Visible = false;criterio_txt_combobox2_desplegable.Visible = false;criterio_txt_combobox3_desplegable.Visible = false;
+            criterio_txt_combobox4_desplegable.Visible = false;criterio_txt_combobox5_desplegable.Visible = false;criterio_txt_combobox6_desplegable.Visible = false;
+            criterio_txt_combobox7_desplegable.Visible = false;criterio_txt_combobox8_desplegable.Visible = false;
+            comboBox1_criterio.Enabled = true;
+            comboBox1_criterio.Items.Clear();comboBox2_criterio.Items.Clear();comboBox3_criterio.Items.Clear();comboBox4_criterio.Items.Clear();
+            comboBox5_criterio.Items.Clear();comboBox6_criterio.Items.Clear();comboBox7_criterio.Items.Clear();comboBox8_criterio.Items.Clear();
+            criterio_txt_combobox1.Text = ""; criterio_txt_combobox2.Text = ""; criterio_txt_combobox3.Text = ""; criterio_txt_combobox4.Text = "";
+            criterio_txt_combobox5.Text = ""; criterio_txt_combobox6.Text = ""; criterio_txt_combobox7.Text = ""; criterio_txt_combobox8.Text = "";
+            criterio_txt_combobox1_desplegable.Text = ""; criterio_txt_combobox2_desplegable.Text = ""; criterio_txt_combobox3_desplegable.Text = "";
+            criterio_txt_combobox4_desplegable.Text = ""; criterio_txt_combobox5_desplegable.Text = ""; criterio_txt_combobox6_desplegable.Text = "";
+            criterio_txt_combobox7_desplegable.Text = ""; criterio_txt_combobox8_desplegable.Text = "";
+            criterios.Clear();
+            
+            foreach (string criterio in Proyecto_Forms.ALAINID.lista_criterios_filtro2)
+            {
+                criterios.Add(criterio);
+            }
+            foreach (string criterio in criterios)
+            {
+                comboBox1_criterio.Items.Add(criterio);
+            }
+
         }
 
         private void criterio_txt_combobox8_TextChanged(object sender, EventArgs e)
@@ -730,11 +894,190 @@ namespace ALAINID_DEFINITIVO
 
         private void comboBox8_criterio_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
-            
+            if (comboBox8_criterio.Text == "Genero Cancion")
+            {
+                desplegable = 0;
+                criterio_txt_combobox8_desplegable.Visible = true;
+                criterio_txt_combobox8_desplegable.Items.Clear();
+                criterio_txt_combobox8_desplegable.Items.Add("Rock");
+                criterio_txt_combobox8_desplegable.Items.Add("Country");
+                criterio_txt_combobox8_desplegable.Items.Add("K-Pop");
+                criterio_txt_combobox8_desplegable.Items.Add("Electrónica");
+                criterio_txt_combobox8_desplegable.Items.Add("Heavy Metal");
+                criterio_txt_combobox8_desplegable.Items.Add("House");
+                criterio_txt_combobox8_desplegable.Items.Add("Disco");
+                criterio_txt_combobox8_desplegable.Items.Add("Urban");
+                criterio_txt_combobox8_desplegable.Items.Add("Folklorica");
+                criterio_txt_combobox8_desplegable.Items.Add("Hip Hop");
+                criterio_txt_combobox8_desplegable.Items.Add("Pop");
+                criterio_txt_combobox8_desplegable.Items.Add("Jazz");
+                criterio_txt_combobox8_desplegable.Items.Add("Indie Rock");
+                criterio_txt_combobox8_desplegable.Items.Add("Punk");
+                criterio_txt_combobox8_desplegable.Items.Add("Otra");
+
+            }
+            if (comboBox8_criterio.Text == "Disquera")
+            {
+
+                criterio_txt_combobox8_desplegable.Visible = true;
+                criterio_txt_combobox8_desplegable.Items.Clear();
+                criterio_txt_combobox8_desplegable.Items.Add("Sony Music");
+                criterio_txt_combobox8_desplegable.Items.Add("Universal Music");
+                criterio_txt_combobox8_desplegable.Items.Add("YG Entertainment");
+                criterio_txt_combobox8_desplegable.Items.Add("SM Entretainment");
+                criterio_txt_combobox8_desplegable.Items.Add("Otra");
+
+            }
+            if (comboBox8_criterio.Text == "Sexo del Artista")
+            {
+
+                criterio_txt_combobox8_desplegable.Visible = true;
+                criterio_txt_combobox8_desplegable.Items.Clear();
+                criterio_txt_combobox8_desplegable.Items.Add("Femenino");
+                criterio_txt_combobox8_desplegable.Items.Add("Masculino");
+                criterio_txt_combobox8_desplegable.Items.Add("Otra");
+
+            }
+            if (comboBox8_criterio.Text == "Edad del Artista")
+            {
+
+                criterio_txt_combobox8_desplegable.Visible = true;
+                criterio_txt_combobox8_desplegable.Items.Clear();
+                criterio_txt_combobox8_desplegable.Items.Add("Menores de 25 años");
+                criterio_txt_combobox8_desplegable.Items.Add("De 25 a 40 años");
+                criterio_txt_combobox8_desplegable.Items.Add("De 40 a 60 años");
+                criterio_txt_combobox8_desplegable.Items.Add("Mayores de 60");
+
+            }
+
+            if (comboBox8_criterio.Text == "Categoria Pelicula")
+            {
+                desplegable = 3;
+                criterio_txt_combobox8_desplegable.Visible = true;
+                criterio_txt_combobox8_desplegable.Items.Clear();
+                criterio_txt_combobox8_desplegable.Items.Add("Infantil (0 - 7 años)");
+                criterio_txt_combobox8_desplegable.Items.Add("Infantil-Juvenil (7 - 16 años)");
+                criterio_txt_combobox8_desplegable.Items.Add("Adolecente (16 - 18 años)");
+                criterio_txt_combobox8_desplegable.Items.Add("Adulto (18+ años)");
+
+            }
+            if (comboBox8_criterio.Text == "Genero Video")
+            {
+                desplegable = 3;
+                criterio_txt_combobox8_desplegable.Visible = true;
+                criterio_txt_combobox8_desplegable.Items.Clear();
+                criterio_txt_combobox8_desplegable.Items.Add("Terror");
+                criterio_txt_combobox8_desplegable.Items.Add("Crimen");
+                criterio_txt_combobox8_desplegable.Items.Add("Accion");
+                criterio_txt_combobox8_desplegable.Items.Add("Comedia");
+                criterio_txt_combobox8_desplegable.Items.Add("Musical");
+                criterio_txt_combobox8_desplegable.Items.Add("Drama");
+                criterio_txt_combobox8_desplegable.Items.Add("Ciencia Ficcion");
+                criterio_txt_combobox8_desplegable.Items.Add("Otra");
+
+            }
+            if (comboBox8_criterio.Text == "Film Studio")
+            {
+                desplegable = 3;
+                criterio_txt_combobox8_desplegable.Visible = true;
+                criterio_txt_combobox8_desplegable.Items.Clear();
+                criterio_txt_combobox8_desplegable.Items.Add("Universal Studio Pictures");
+                criterio_txt_combobox8_desplegable.Items.Add("Sony Pictures");
+                criterio_txt_combobox8_desplegable.Items.Add("YG Entertainment Pictures");
+                criterio_txt_combobox8_desplegable.Items.Add("SM Entretainment Pictures");
+                criterio_txt_combobox8_desplegable.Items.Add("Warner Bros Pictures");
+                criterio_txt_combobox8_desplegable.Items.Add("Otra");
+            }
+            if (comboBox8_criterio.Text == "Cantante")
+            {
+                desplegable = 1;
+                criterio_txt_combobox8_desplegable.Visible = false;
+
+            }
+            if (comboBox8_criterio.Text == "Compositor")
+            {
+                desplegable = 1;
+                criterio_txt_combobox8_desplegable.Visible = false;
+
+
+            }
+            if (comboBox8_criterio.Text == "Director")
+            {
+                desplegable = 4;
+                criterio_txt_combobox8_desplegable.Visible = false;
+
+
+            }
+            if (comboBox8_criterio.Text == "Actor")
+            {
+                desplegable = 4;
+                criterio_txt_combobox8_desplegable.Visible = false;
+
+
+            }
+            if (comboBox8_criterio.Text == "Album")
+            {
+                desplegable = 1;
+                criterio_txt_combobox8_desplegable.Visible = false;
+
+
+            }
+            if (comboBox8_criterio.Text == "Evaluacion")
+            {
+                desplegable = 6;
+                criterio_txt_combobox8_desplegable.Visible = false;
+
+
+            }
+            if (comboBox8_criterio.Text == "Calidad/Resolucion")
+            {
+                desplegable = 5;
+                criterio_txt_combobox8_desplegable.Visible = true;
+                criterio_txt_combobox8_desplegable.Items.Clear();
+                criterio_txt_combobox8_desplegable.Items.Add("96 kbps");
+                criterio_txt_combobox8_desplegable.Items.Add("128 kbps");
+                criterio_txt_combobox8_desplegable.Items.Add("160 kbps");
+                criterio_txt_combobox8_desplegable.Items.Add("256 kbps");
+                criterio_txt_combobox8_desplegable.Items.Add("320 kbps");
+                criterio_txt_combobox8_desplegable.Items.Add("144p");
+                criterio_txt_combobox8_desplegable.Items.Add("240p");
+                criterio_txt_combobox8_desplegable.Items.Add("360p");
+                criterio_txt_combobox8_desplegable.Items.Add("480p");
+                criterio_txt_combobox8_desplegable.Items.Add("720p");
+            }
+            if (comboBox8_criterio.Text == "Nombre Cancion")
+            {
+                desplegable = 1;
+                criterio_txt_combobox8_desplegable.Visible = false;
+
+
+
+            }
+            if (comboBox8_criterio.Text == "Nombre Pelicula")
+            {
+                desplegable = 4;
+                criterio_txt_combobox8_desplegable.Visible = false;
+
+
+            }
+            if (comboBox8_criterio.Text == "Año de Publicacion")
+            {
+                desplegable = 6;
+                criterio_txt_combobox8_desplegable.Visible = false;
+
+            }
+            criterios.Remove(comboBox8_criterio.Text);
+            criterios_seleccionados.Add(comboBox8_criterio.Text);
+            comboBox8_criterio.Enabled = false;
             criterio_txt_combobox8.Enabled = true;
-
-
+            if (criterio_txt_combobox7.Text != "")
+            {
+                criterios_introducidos.Add(criterio_txt_combobox7.Text);
+            }
+            else if (criterio_txt_combobox7_desplegable.Text != "")
+            {
+                criterios_introducidos.Add(criterio_txt_combobox7_desplegable.Text);
+            }
         }
 
         private void criterio_txt_combobox7_TextChanged(object sender, EventArgs e)
@@ -744,7 +1087,179 @@ namespace ALAINID_DEFINITIVO
 
         private void comboBox7_criterio_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
+            if (comboBox7_criterio.Text == "Genero Cancion")
+            {
+                desplegable = 0;
+                criterio_txt_combobox7_desplegable.Visible = true;
+                criterio_txt_combobox7_desplegable.Items.Clear();
+                criterio_txt_combobox7_desplegable.Items.Add("Rock");
+                criterio_txt_combobox7_desplegable.Items.Add("Country");
+                criterio_txt_combobox7_desplegable.Items.Add("K-Pop");
+                criterio_txt_combobox7_desplegable.Items.Add("Electrónica");
+                criterio_txt_combobox7_desplegable.Items.Add("Heavy Metal");
+                criterio_txt_combobox7_desplegable.Items.Add("House");
+                criterio_txt_combobox7_desplegable.Items.Add("Disco");
+                criterio_txt_combobox7_desplegable.Items.Add("Urban");
+                criterio_txt_combobox7_desplegable.Items.Add("Folklorica");
+                criterio_txt_combobox7_desplegable.Items.Add("Hip Hop");
+                criterio_txt_combobox7_desplegable.Items.Add("Pop");
+                criterio_txt_combobox7_desplegable.Items.Add("Jazz");
+                criterio_txt_combobox7_desplegable.Items.Add("Indie Rock");
+                criterio_txt_combobox7_desplegable.Items.Add("Punk");
+                criterio_txt_combobox7_desplegable.Items.Add("Otra");
+
+            }
+            if (comboBox7_criterio.Text == "Disquera")
+            {
+
+                criterio_txt_combobox7_desplegable.Visible = true;
+                criterio_txt_combobox7_desplegable.Items.Clear();
+                criterio_txt_combobox7_desplegable.Items.Add("Sony Music");
+                criterio_txt_combobox7_desplegable.Items.Add("Universal Music");
+                criterio_txt_combobox7_desplegable.Items.Add("YG Entertainment");
+                criterio_txt_combobox7_desplegable.Items.Add("SM Entretainment");
+                criterio_txt_combobox7_desplegable.Items.Add("Otra");
+
+            }
+            if (comboBox7_criterio.Text == "Sexo del Artista")
+            {
+
+                criterio_txt_combobox7_desplegable.Visible = true;
+                criterio_txt_combobox7_desplegable.Items.Clear();
+                criterio_txt_combobox7_desplegable.Items.Add("Femenino");
+                criterio_txt_combobox7_desplegable.Items.Add("Masculino");
+                criterio_txt_combobox7_desplegable.Items.Add("Otra");
+
+            }
+            if (comboBox7_criterio.Text == "Edad del Artista")
+            {
+
+                criterio_txt_combobox7_desplegable.Visible = true;
+                criterio_txt_combobox7_desplegable.Items.Clear();
+                criterio_txt_combobox7_desplegable.Items.Add("Menores de 25 años");
+                criterio_txt_combobox7_desplegable.Items.Add("De 25 a 40 años");
+                criterio_txt_combobox7_desplegable.Items.Add("De 40 a 60 años");
+                criterio_txt_combobox7_desplegable.Items.Add("Mayores de 60");
+
+            }
+
+            if (comboBox7_criterio.Text == "Categoria Pelicula")
+            {
+                desplegable = 3;
+                criterio_txt_combobox7_desplegable.Visible = true;
+                criterio_txt_combobox7_desplegable.Items.Clear();
+                criterio_txt_combobox7_desplegable.Items.Add("Infantil (0 - 7 años)");
+                criterio_txt_combobox7_desplegable.Items.Add("Infantil-Juvenil (7 - 16 años)");
+                criterio_txt_combobox7_desplegable.Items.Add("Adolecente (16 - 18 años)");
+                criterio_txt_combobox7_desplegable.Items.Add("Adulto (18+ años)");
+
+            }
+            if (comboBox7_criterio.Text == "Genero Video")
+            {
+                desplegable = 3;
+                criterio_txt_combobox7_desplegable.Visible = true;
+                criterio_txt_combobox7_desplegable.Items.Clear();
+                criterio_txt_combobox7_desplegable.Items.Add("Terror");
+                criterio_txt_combobox7_desplegable.Items.Add("Crimen");
+                criterio_txt_combobox7_desplegable.Items.Add("Accion");
+                criterio_txt_combobox7_desplegable.Items.Add("Comedia");
+                criterio_txt_combobox7_desplegable.Items.Add("Musical");
+                criterio_txt_combobox7_desplegable.Items.Add("Drama");
+                criterio_txt_combobox7_desplegable.Items.Add("Ciencia Ficcion");
+                criterio_txt_combobox7_desplegable.Items.Add("Otra");
+
+            }
+            if (comboBox7_criterio.Text == "Film Studio")
+            {
+                desplegable = 3;
+                criterio_txt_combobox7_desplegable.Visible = true;
+                criterio_txt_combobox7_desplegable.Items.Clear();
+                criterio_txt_combobox7_desplegable.Items.Add("Universal Studio Pictures");
+                criterio_txt_combobox7_desplegable.Items.Add("Sony Pictures");
+                criterio_txt_combobox7_desplegable.Items.Add("YG Entertainment Pictures");
+                criterio_txt_combobox7_desplegable.Items.Add("SM Entretainment Pictures");
+                criterio_txt_combobox7_desplegable.Items.Add("Warner Bros Pictures");
+                criterio_txt_combobox7_desplegable.Items.Add("Otra");
+            }
+            if (comboBox7_criterio.Text == "Cantante")
+            {
+                desplegable = 1;
+                criterio_txt_combobox7_desplegable.Visible = false;
+
+            }
+            if (comboBox7_criterio.Text == "Compositor")
+            {
+                desplegable = 1;
+                criterio_txt_combobox7_desplegable.Visible = false;
+
+
+            }
+            if (comboBox7_criterio.Text == "Director")
+            {
+                desplegable = 4;
+                criterio_txt_combobox7_desplegable.Visible = false;
+
+
+            }
+            if (comboBox7_criterio.Text == "Actor")
+            {
+                desplegable = 4;
+                criterio_txt_combobox7_desplegable.Visible = false;
+
+
+            }
+            if (comboBox7_criterio.Text == "Album")
+            {
+                desplegable = 1;
+                criterio_txt_combobox7_desplegable.Visible = false;
+
+
+            }
+            if (comboBox7_criterio.Text == "Evaluacion")
+            {
+                desplegable = 6;
+                criterio_txt_combobox7_desplegable.Visible = false;
+
+
+            }
+            if (comboBox7_criterio.Text == "Calidad/Resolucion")
+            {
+                desplegable = 5;
+                criterio_txt_combobox7_desplegable.Visible = true;
+                criterio_txt_combobox7_desplegable.Items.Clear();
+                criterio_txt_combobox7_desplegable.Items.Add("96 kbps");
+                criterio_txt_combobox7_desplegable.Items.Add("128 kbps");
+                criterio_txt_combobox7_desplegable.Items.Add("160 kbps");
+                criterio_txt_combobox7_desplegable.Items.Add("256 kbps");
+                criterio_txt_combobox7_desplegable.Items.Add("320 kbps");
+                criterio_txt_combobox7_desplegable.Items.Add("144p");
+                criterio_txt_combobox7_desplegable.Items.Add("240p");
+                criterio_txt_combobox7_desplegable.Items.Add("360p");
+                criterio_txt_combobox7_desplegable.Items.Add("480p");
+                criterio_txt_combobox7_desplegable.Items.Add("720p");
+            }
+            if (comboBox7_criterio.Text == "Nombre Cancion")
+            {
+                desplegable = 1;
+                criterio_txt_combobox7_desplegable.Visible = false;
+
+
+
+            }
+            if (comboBox7_criterio.Text == "Nombre Pelicula")
+            {
+                desplegable = 4;
+                criterio_txt_combobox7_desplegable.Visible = false;
+
+
+            }
+            if (comboBox7_criterio.Text == "Año de Publicacion")
+            {
+                desplegable = 6;
+                criterio_txt_combobox7_desplegable.Visible = false;
+
+            }
             criterios.Remove(comboBox7_criterio.Text);
             criterios_seleccionados.Add(comboBox7_criterio.Text);
             foreach (string criterio in criterios)
@@ -754,7 +1269,14 @@ namespace ALAINID_DEFINITIVO
             comboBox8_criterio.Enabled = true;
             comboBox7_criterio.Enabled = false;
             criterio_txt_combobox7.Enabled = true;
-
+            if (criterio_txt_combobox6.Text != "")
+            {
+                criterios_introducidos.Add(criterio_txt_combobox6.Text);
+            }
+            else if (criterio_txt_combobox6_desplegable.Text != "")
+            {
+                criterios_introducidos.Add(criterio_txt_combobox6_desplegable.Text);
+            }
         }
         private void criterio_txt_combobox6_TextChanged(object sender, EventArgs e)
         {
@@ -762,7 +1284,178 @@ namespace ALAINID_DEFINITIVO
         }
         private void comboBox6_criterio_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
+            if (comboBox6_criterio.Text == "Genero Cancion")
+            {
+                desplegable = 0;
+                criterio_txt_combobox6_desplegable.Visible = true;
+                criterio_txt_combobox6_desplegable.Items.Clear();
+                criterio_txt_combobox6_desplegable.Items.Add("Rock");
+                criterio_txt_combobox6_desplegable.Items.Add("Country");
+                criterio_txt_combobox6_desplegable.Items.Add("K-Pop");
+                criterio_txt_combobox6_desplegable.Items.Add("Electrónica");
+                criterio_txt_combobox6_desplegable.Items.Add("Heavy Metal");
+                criterio_txt_combobox6_desplegable.Items.Add("House");
+                criterio_txt_combobox6_desplegable.Items.Add("Disco");
+                criterio_txt_combobox6_desplegable.Items.Add("Urban");
+                criterio_txt_combobox6_desplegable.Items.Add("Folklorica");
+                criterio_txt_combobox6_desplegable.Items.Add("Hip Hop");
+                criterio_txt_combobox6_desplegable.Items.Add("Pop");
+                criterio_txt_combobox6_desplegable.Items.Add("Jazz");
+                criterio_txt_combobox6_desplegable.Items.Add("Indie Rock");
+                criterio_txt_combobox6_desplegable.Items.Add("Punk");
+                criterio_txt_combobox6_desplegable.Items.Add("Otra");
+
+            }
+            if (comboBox6_criterio.Text == "Disquera")
+            {
+
+                criterio_txt_combobox6_desplegable.Visible = true;
+                criterio_txt_combobox6_desplegable.Items.Clear();
+                criterio_txt_combobox6_desplegable.Items.Add("Sony Music");
+                criterio_txt_combobox6_desplegable.Items.Add("Universal Music");
+                criterio_txt_combobox6_desplegable.Items.Add("YG Entertainment");
+                criterio_txt_combobox6_desplegable.Items.Add("SM Entretainment");
+                criterio_txt_combobox6_desplegable.Items.Add("Otra");
+
+            }
+            if (comboBox6_criterio.Text == "Sexo del Artista")
+            {
+
+                criterio_txt_combobox6_desplegable.Visible = true;
+                criterio_txt_combobox6_desplegable.Items.Clear();
+                criterio_txt_combobox6_desplegable.Items.Add("Femenino");
+                criterio_txt_combobox6_desplegable.Items.Add("Masculino");
+                criterio_txt_combobox6_desplegable.Items.Add("Otra");
+
+            }
+            if (comboBox6_criterio.Text == "Edad del Artista")
+            {
+
+                criterio_txt_combobox6_desplegable.Visible = true;
+                criterio_txt_combobox6_desplegable.Items.Clear();
+                criterio_txt_combobox6_desplegable.Items.Add("Menores de 25 años");
+                criterio_txt_combobox6_desplegable.Items.Add("De 25 a 40 años");
+                criterio_txt_combobox6_desplegable.Items.Add("De 40 a 60 años");
+                criterio_txt_combobox6_desplegable.Items.Add("Mayores de 60");
+
+            }
+
+            if (comboBox6_criterio.Text == "Categoria Pelicula")
+            {
+                desplegable = 3;
+                criterio_txt_combobox6_desplegable.Visible = true;
+                criterio_txt_combobox6_desplegable.Items.Clear();
+                criterio_txt_combobox6_desplegable.Items.Add("Infantil (0 - 7 años)");
+                criterio_txt_combobox6_desplegable.Items.Add("Infantil-Juvenil (7 - 16 años)");
+                criterio_txt_combobox6_desplegable.Items.Add("Adolecente (16 - 18 años)");
+                criterio_txt_combobox6_desplegable.Items.Add("Adulto (18+ años)");
+
+            }
+            if (comboBox6_criterio.Text == "Genero Video")
+            {
+                desplegable = 3;
+                criterio_txt_combobox6_desplegable.Visible = true;
+                criterio_txt_combobox6_desplegable.Items.Clear();
+                criterio_txt_combobox6_desplegable.Items.Add("Terror");
+                criterio_txt_combobox6_desplegable.Items.Add("Crimen");
+                criterio_txt_combobox6_desplegable.Items.Add("Accion");
+                criterio_txt_combobox6_desplegable.Items.Add("Comedia");
+                criterio_txt_combobox6_desplegable.Items.Add("Musical");
+                criterio_txt_combobox6_desplegable.Items.Add("Drama");
+                criterio_txt_combobox6_desplegable.Items.Add("Ciencia Ficcion");
+                criterio_txt_combobox6_desplegable.Items.Add("Otra");
+
+            }
+            if (comboBox6_criterio.Text == "Film Studio")
+            {
+                desplegable = 3;
+                criterio_txt_combobox6_desplegable.Visible = true;
+                criterio_txt_combobox6_desplegable.Items.Clear();
+                criterio_txt_combobox6_desplegable.Items.Add("Universal Studio Pictures");
+                criterio_txt_combobox6_desplegable.Items.Add("Sony Pictures");
+                criterio_txt_combobox6_desplegable.Items.Add("YG Entertainment Pictures");
+                criterio_txt_combobox6_desplegable.Items.Add("SM Entretainment Pictures");
+                criterio_txt_combobox6_desplegable.Items.Add("Warner Bros Pictures");
+                criterio_txt_combobox6_desplegable.Items.Add("Otra");
+            }
+            if (comboBox6_criterio.Text == "Cantante")
+            {
+                desplegable = 1;
+                criterio_txt_combobox6_desplegable.Visible = false;
+
+            }
+            if (comboBox6_criterio.Text == "Compositor")
+            {
+                desplegable = 1;
+                criterio_txt_combobox6_desplegable.Visible = false;
+
+
+            }
+            if (comboBox6_criterio.Text == "Director")
+            {
+                desplegable = 4;
+                criterio_txt_combobox6_desplegable.Visible = false;
+
+
+            }
+            if (comboBox6_criterio.Text == "Actor")
+            {
+                desplegable = 4;
+                criterio_txt_combobox6_desplegable.Visible = false;
+
+
+            }
+            if (comboBox6_criterio.Text == "Album")
+            {
+                desplegable = 1;
+                criterio_txt_combobox6_desplegable.Visible = false;
+
+
+            }
+            if (comboBox6_criterio.Text == "Evaluacion")
+            {
+                desplegable = 6;
+                criterio_txt_combobox6_desplegable.Visible = false;
+
+
+            }
+            if (comboBox6_criterio.Text == "Calidad/Resolucion")
+            {
+                desplegable = 5;
+                criterio_txt_combobox6_desplegable.Visible = true;
+                criterio_txt_combobox6_desplegable.Items.Clear();
+                criterio_txt_combobox6_desplegable.Items.Add("96 kbps");
+                criterio_txt_combobox6_desplegable.Items.Add("128 kbps");
+                criterio_txt_combobox6_desplegable.Items.Add("160 kbps");
+                criterio_txt_combobox6_desplegable.Items.Add("256 kbps");
+                criterio_txt_combobox6_desplegable.Items.Add("320 kbps");
+                criterio_txt_combobox6_desplegable.Items.Add("144p");
+                criterio_txt_combobox6_desplegable.Items.Add("240p");
+                criterio_txt_combobox6_desplegable.Items.Add("360p");
+                criterio_txt_combobox6_desplegable.Items.Add("480p");
+                criterio_txt_combobox6_desplegable.Items.Add("720p");
+            }
+            if (comboBox6_criterio.Text == "Nombre Cancion")
+            {
+                desplegable = 1;
+                criterio_txt_combobox6_desplegable.Visible = false;
+
+
+
+            }
+            if (comboBox6_criterio.Text == "Nombre Pelicula")
+            {
+                desplegable = 4;
+                criterio_txt_combobox6_desplegable.Visible = false;
+
+
+            }
+            if (comboBox6_criterio.Text == "Año de Publicacion")
+            {
+                desplegable = 6;
+                criterio_txt_combobox6_desplegable.Visible = false;
+
+            }
             criterios.Remove(comboBox6_criterio.Text);
             criterios_seleccionados.Add(comboBox6_criterio.Text);
             foreach (string criterio in criterios)
@@ -772,7 +1465,14 @@ namespace ALAINID_DEFINITIVO
             comboBox7_criterio.Enabled = true;
             comboBox6_criterio.Enabled = false;
             criterio_txt_combobox6.Enabled = true;
-
+            if (criterio_txt_combobox5.Text != "")
+            {
+                criterios_introducidos.Add(criterio_txt_combobox5.Text);
+            }
+            else if (criterio_txt_combobox5_desplegable.Text != "")
+            {
+                criterios_introducidos.Add(criterio_txt_combobox5_desplegable.Text);
+            }
         }
         private void criterio_txt_combobox5_TextChanged(object sender, EventArgs e)
         {
@@ -780,7 +1480,179 @@ namespace ALAINID_DEFINITIVO
         }
         private void comboBox5_criterio_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
+            if (comboBox5_criterio.Text == "Genero Cancion")
+            {
+                desplegable = 0;
+                criterio_txt_combobox5_desplegable.Visible = true;
+                criterio_txt_combobox5_desplegable.Items.Clear();
+                criterio_txt_combobox5_desplegable.Items.Add("Rock");
+                criterio_txt_combobox5_desplegable.Items.Add("Country");
+                criterio_txt_combobox5_desplegable.Items.Add("K-Pop");
+                criterio_txt_combobox5_desplegable.Items.Add("Electrónica");
+                criterio_txt_combobox5_desplegable.Items.Add("Heavy Metal");
+                criterio_txt_combobox5_desplegable.Items.Add("House");
+                criterio_txt_combobox5_desplegable.Items.Add("Disco");
+                criterio_txt_combobox5_desplegable.Items.Add("Urban");
+                criterio_txt_combobox5_desplegable.Items.Add("Folklorica");
+                criterio_txt_combobox5_desplegable.Items.Add("Hip Hop");
+                criterio_txt_combobox5_desplegable.Items.Add("Pop");
+                criterio_txt_combobox5_desplegable.Items.Add("Jazz");
+                criterio_txt_combobox5_desplegable.Items.Add("Indie Rock");
+                criterio_txt_combobox5_desplegable.Items.Add("Punk");
+                criterio_txt_combobox5_desplegable.Items.Add("Otra");
+
+            }
+            if (comboBox5_criterio.Text == "Disquera")
+            {
+
+                criterio_txt_combobox5_desplegable.Visible = true;
+                criterio_txt_combobox5_desplegable.Items.Clear();
+                criterio_txt_combobox5_desplegable.Items.Add("Sony Music");
+                criterio_txt_combobox5_desplegable.Items.Add("Universal Music");
+                criterio_txt_combobox5_desplegable.Items.Add("YG Entertainment");
+                criterio_txt_combobox5_desplegable.Items.Add("SM Entretainment");
+                criterio_txt_combobox5_desplegable.Items.Add("Otra");
+
+            }
+            if (comboBox5_criterio.Text == "Sexo del Artista")
+            {
+
+                criterio_txt_combobox5_desplegable.Visible = true;
+                criterio_txt_combobox5_desplegable.Items.Clear();
+                criterio_txt_combobox5_desplegable.Items.Add("Femenino");
+                criterio_txt_combobox5_desplegable.Items.Add("Masculino");
+                criterio_txt_combobox5_desplegable.Items.Add("Otra");
+
+            }
+            if (comboBox5_criterio.Text == "Edad del Artista")
+            {
+
+                criterio_txt_combobox5_desplegable.Visible = true;
+                criterio_txt_combobox5_desplegable.Items.Clear();
+                criterio_txt_combobox5_desplegable.Items.Add("Menores de 25 años");
+                criterio_txt_combobox5_desplegable.Items.Add("De 25 a 40 años");
+                criterio_txt_combobox5_desplegable.Items.Add("De 40 a 60 años");
+                criterio_txt_combobox5_desplegable.Items.Add("Mayores de 60");
+
+            }
+
+            if (comboBox5_criterio.Text == "Categoria Pelicula")
+            {
+                desplegable = 3;
+                criterio_txt_combobox5_desplegable.Visible = true;
+                criterio_txt_combobox5_desplegable.Items.Clear();
+                criterio_txt_combobox5_desplegable.Items.Add("Infantil (0 - 7 años)");
+                criterio_txt_combobox5_desplegable.Items.Add("Infantil-Juvenil (7 - 16 años)");
+                criterio_txt_combobox5_desplegable.Items.Add("Adolecente (16 - 18 años)");
+                criterio_txt_combobox5_desplegable.Items.Add("Adulto (18+ años)");
+
+            }
+            if (comboBox5_criterio.Text == "Genero Video")
+            {
+                desplegable = 3;
+                criterio_txt_combobox5_desplegable.Visible = true;
+                criterio_txt_combobox5_desplegable.Items.Clear();
+                criterio_txt_combobox5_desplegable.Items.Add("Terror");
+                criterio_txt_combobox5_desplegable.Items.Add("Crimen");
+                criterio_txt_combobox5_desplegable.Items.Add("Accion");
+                criterio_txt_combobox5_desplegable.Items.Add("Comedia");
+                criterio_txt_combobox5_desplegable.Items.Add("Musical");
+                criterio_txt_combobox5_desplegable.Items.Add("Drama");
+                criterio_txt_combobox5_desplegable.Items.Add("Ciencia Ficcion");
+                criterio_txt_combobox5_desplegable.Items.Add("Otra");
+
+            }
+            if (comboBox5_criterio.Text == "Film Studio")
+            {
+                desplegable = 3;
+                criterio_txt_combobox5_desplegable.Visible = true;
+                criterio_txt_combobox5_desplegable.Items.Clear();
+                criterio_txt_combobox5_desplegable.Items.Add("Universal Studio Pictures");
+                criterio_txt_combobox5_desplegable.Items.Add("Sony Pictures");
+                criterio_txt_combobox5_desplegable.Items.Add("YG Entertainment Pictures");
+                criterio_txt_combobox5_desplegable.Items.Add("SM Entretainment Pictures");
+                criterio_txt_combobox5_desplegable.Items.Add("Warner Bros Pictures");
+                criterio_txt_combobox5_desplegable.Items.Add("Otra");
+            }
+            if (comboBox5_criterio.Text == "Cantante")
+            {
+                desplegable = 1;
+                criterio_txt_combobox5_desplegable.Visible = false;
+
+            }
+            if (comboBox5_criterio.Text == "Compositor")
+            {
+                desplegable = 1;
+                criterio_txt_combobox5_desplegable.Visible = false;
+
+
+            }
+            if (comboBox5_criterio.Text == "Director")
+            {
+                desplegable = 4;
+                criterio_txt_combobox5_desplegable.Visible = false;
+
+
+            }
+            if (comboBox5_criterio.Text == "Actor")
+            {
+                desplegable = 4;
+                criterio_txt_combobox5_desplegable.Visible = false;
+
+
+            }
+            if (comboBox5_criterio.Text == "Album")
+            {
+                desplegable = 1;
+                criterio_txt_combobox5_desplegable.Visible = false;
+
+
+            }
+            if (comboBox5_criterio.Text == "Evaluacion")
+            {
+                desplegable = 6;
+                criterio_txt_combobox5_desplegable.Visible = false;
+
+
+            }
+            if (comboBox5_criterio.Text == "Calidad/Resolucion")
+            {
+                desplegable = 5;
+                criterio_txt_combobox5_desplegable.Visible = true;
+                criterio_txt_combobox5_desplegable.Items.Clear();
+                criterio_txt_combobox5_desplegable.Items.Add("96 kbps");
+                criterio_txt_combobox5_desplegable.Items.Add("128 kbps");
+                criterio_txt_combobox5_desplegable.Items.Add("160 kbps");
+                criterio_txt_combobox5_desplegable.Items.Add("256 kbps");
+                criterio_txt_combobox5_desplegable.Items.Add("320 kbps");
+                criterio_txt_combobox5_desplegable.Items.Add("144p");
+                criterio_txt_combobox5_desplegable.Items.Add("240p");
+                criterio_txt_combobox5_desplegable.Items.Add("360p");
+                criterio_txt_combobox5_desplegable.Items.Add("480p");
+                criterio_txt_combobox5_desplegable.Items.Add("720p");
+            }
+            if (comboBox5_criterio.Text == "Nombre Cancion")
+            {
+                desplegable = 1;
+                criterio_txt_combobox5_desplegable.Visible = false;
+
+
+
+            }
+            if (comboBox5_criterio.Text == "Nombre Pelicula")
+            {
+                desplegable = 4;
+                criterio_txt_combobox5_desplegable.Visible = false;
+
+
+            }
+            if (comboBox5_criterio.Text == "Año de Publicacion")
+            {
+                desplegable = 6;
+                criterio_txt_combobox5_desplegable.Visible = false;
+
+            }
             criterios.Remove(comboBox5_criterio.Text);
             criterios_seleccionados.Add(comboBox5_criterio.Text);
             foreach (string criterio in criterios)
@@ -790,7 +1662,14 @@ namespace ALAINID_DEFINITIVO
             comboBox6_criterio.Enabled = true;
             comboBox5_criterio.Enabled = false;
             criterio_txt_combobox5.Enabled = true;
-
+            if (criterio_txt_combobox4.Text != "")
+            {
+                criterios_introducidos.Add(criterio_txt_combobox4.Text);
+            }
+            else if (criterio_txt_combobox4_desplegable.Text != "")
+            {
+                criterios_introducidos.Add(criterio_txt_combobox4_desplegable.Text);
+            }
         }
 
         private void criterio_txt_combobox4_TextChanged(object sender, EventArgs e)
@@ -800,7 +1679,178 @@ namespace ALAINID_DEFINITIVO
 
         private void comboBox4_criterio_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            if (comboBox4_criterio.Text == "Genero Cancion")
+            {
+                desplegable = 0;
+                criterio_txt_combobox4_desplegable.Visible = true;
+                criterio_txt_combobox4_desplegable.Items.Clear();
+                criterio_txt_combobox4_desplegable.Items.Add("Rock");
+                criterio_txt_combobox4_desplegable.Items.Add("Country");
+                criterio_txt_combobox4_desplegable.Items.Add("K-Pop");
+                criterio_txt_combobox4_desplegable.Items.Add("Electrónica");
+                criterio_txt_combobox4_desplegable.Items.Add("Heavy Metal");
+                criterio_txt_combobox4_desplegable.Items.Add("House");
+                criterio_txt_combobox4_desplegable.Items.Add("Disco");
+                criterio_txt_combobox4_desplegable.Items.Add("Urban");
+                criterio_txt_combobox4_desplegable.Items.Add("Folklorica");
+                criterio_txt_combobox4_desplegable.Items.Add("Hip Hop");
+                criterio_txt_combobox4_desplegable.Items.Add("Pop");
+                criterio_txt_combobox4_desplegable.Items.Add("Jazz");
+                criterio_txt_combobox4_desplegable.Items.Add("Indie Rock");
+                criterio_txt_combobox4_desplegable.Items.Add("Punk");
+                criterio_txt_combobox4_desplegable.Items.Add("Otra");
+
+            }
+            if (comboBox4_criterio.Text == "Disquera")
+            {
+
+                criterio_txt_combobox4_desplegable.Visible = true;
+                criterio_txt_combobox4_desplegable.Items.Clear();
+                criterio_txt_combobox4_desplegable.Items.Add("Sony Music");
+                criterio_txt_combobox4_desplegable.Items.Add("Universal Music");
+                criterio_txt_combobox4_desplegable.Items.Add("YG Entertainment");
+                criterio_txt_combobox4_desplegable.Items.Add("SM Entretainment");
+                criterio_txt_combobox4_desplegable.Items.Add("Otra");
+
+            }
+            if (comboBox4_criterio.Text == "Sexo del Artista")
+            {
+
+                criterio_txt_combobox4_desplegable.Visible = true;
+                criterio_txt_combobox4_desplegable.Items.Clear();
+                criterio_txt_combobox4_desplegable.Items.Add("Femenino");
+                criterio_txt_combobox4_desplegable.Items.Add("Masculino");
+                criterio_txt_combobox4_desplegable.Items.Add("Otra");
+
+            }
+            if (comboBox4_criterio.Text == "Edad del Artista")
+            {
+
+                criterio_txt_combobox4_desplegable.Visible = true;
+                criterio_txt_combobox4_desplegable.Items.Clear();
+                criterio_txt_combobox4_desplegable.Items.Add("Menores de 25 años");
+                criterio_txt_combobox4_desplegable.Items.Add("De 25 a 40 años");
+                criterio_txt_combobox4_desplegable.Items.Add("De 40 a 60 años");
+                criterio_txt_combobox4_desplegable.Items.Add("Mayores de 60");
+
+            }
+
+            if (comboBox4_criterio.Text == "Categoria Pelicula")
+            {
+                desplegable = 3;
+                criterio_txt_combobox4_desplegable.Visible = true;
+                criterio_txt_combobox4_desplegable.Items.Clear();
+                criterio_txt_combobox4_desplegable.Items.Add("Infantil (0 - 7 años)");
+                criterio_txt_combobox4_desplegable.Items.Add("Infantil-Juvenil (7 - 16 años)");
+                criterio_txt_combobox4_desplegable.Items.Add("Adolecente (16 - 18 años)");
+                criterio_txt_combobox4_desplegable.Items.Add("Adulto (18+ años)");
+
+            }
+            if (comboBox4_criterio.Text == "Genero Video")
+            {
+                desplegable = 3;
+                criterio_txt_combobox4_desplegable.Visible = true;
+                criterio_txt_combobox4_desplegable.Items.Clear();
+                criterio_txt_combobox4_desplegable.Items.Add("Terror");
+                criterio_txt_combobox4_desplegable.Items.Add("Crimen");
+                criterio_txt_combobox4_desplegable.Items.Add("Accion");
+                criterio_txt_combobox4_desplegable.Items.Add("Comedia");
+                criterio_txt_combobox4_desplegable.Items.Add("Musical");
+                criterio_txt_combobox4_desplegable.Items.Add("Drama");
+                criterio_txt_combobox4_desplegable.Items.Add("Ciencia Ficcion");
+                criterio_txt_combobox4_desplegable.Items.Add("Otra");
+
+            }
+            if (comboBox4_criterio.Text == "Film Studio")
+            {
+                desplegable = 3;
+                criterio_txt_combobox4_desplegable.Visible = true;
+                criterio_txt_combobox4_desplegable.Items.Clear();
+                criterio_txt_combobox4_desplegable.Items.Add("Universal Studio Pictures");
+                criterio_txt_combobox4_desplegable.Items.Add("Sony Pictures");
+                criterio_txt_combobox4_desplegable.Items.Add("YG Entertainment Pictures");
+                criterio_txt_combobox4_desplegable.Items.Add("SM Entretainment Pictures");
+                criterio_txt_combobox4_desplegable.Items.Add("Warner Bros Pictures");
+                criterio_txt_combobox4_desplegable.Items.Add("Otra");
+            }
+            if (comboBox4_criterio.Text == "Cantante")
+            {
+                desplegable = 1;
+                criterio_txt_combobox4_desplegable.Visible = false;
+
+            }
+            if (comboBox4_criterio.Text == "Compositor")
+            {
+                desplegable = 1;
+                criterio_txt_combobox4_desplegable.Visible = false;
+
+
+            }
+            if (comboBox4_criterio.Text == "Director")
+            {
+                desplegable = 4;
+                criterio_txt_combobox4_desplegable.Visible = false;
+
+
+            }
+            if (comboBox4_criterio.Text == "Actor")
+            {
+                desplegable = 4;
+                criterio_txt_combobox4_desplegable.Visible = false;
+
+
+            }
+            if (comboBox4_criterio.Text == "Album")
+            {
+                desplegable = 1;
+                criterio_txt_combobox4_desplegable.Visible = false;
+
+
+            }
+            if (comboBox4_criterio.Text == "Evaluacion")
+            {
+                desplegable = 6;
+                criterio_txt_combobox4_desplegable.Visible = false;
+
+
+            }
+            if (comboBox4_criterio.Text == "Calidad/Resolucion")
+            {
+                desplegable = 5;
+                criterio_txt_combobox4_desplegable.Visible = true;
+                criterio_txt_combobox4_desplegable.Items.Clear();
+                criterio_txt_combobox4_desplegable.Items.Add("96 kbps");
+                criterio_txt_combobox4_desplegable.Items.Add("128 kbps");
+                criterio_txt_combobox4_desplegable.Items.Add("160 kbps");
+                criterio_txt_combobox4_desplegable.Items.Add("256 kbps");
+                criterio_txt_combobox4_desplegable.Items.Add("320 kbps");
+                criterio_txt_combobox4_desplegable.Items.Add("144p");
+                criterio_txt_combobox4_desplegable.Items.Add("240p");
+                criterio_txt_combobox4_desplegable.Items.Add("360p");
+                criterio_txt_combobox4_desplegable.Items.Add("480p");
+                criterio_txt_combobox4_desplegable.Items.Add("720p");
+            }
+            if (comboBox4_criterio.Text == "Nombre Cancion")
+            {
+                desplegable = 1;
+                criterio_txt_combobox4_desplegable.Visible = false;
+
+
+
+            }
+            if (comboBox4_criterio.Text == "Nombre Pelicula")
+            {
+                desplegable = 4;
+                criterio_txt_combobox4_desplegable.Visible = false;
+
+
+            }
+            if (comboBox4_criterio.Text == "Año de Publicacion")
+            {
+                desplegable = 6;
+                criterio_txt_combobox4_desplegable.Visible = false;
+
+            }
             criterios.Remove(comboBox4_criterio.Text);
             criterios_seleccionados.Add(comboBox4_criterio.Text);
             foreach (string criterio in criterios)
@@ -810,7 +1860,14 @@ namespace ALAINID_DEFINITIVO
             comboBox5_criterio.Enabled = true;
             comboBox4_criterio.Enabled = false;
             criterio_txt_combobox4.Enabled = true;
-
+            if (criterio_txt_combobox3.Text != "")
+            {
+                criterios_introducidos.Add(criterio_txt_combobox3.Text);
+            }
+            else if (criterio_txt_combobox3_desplegable.Text != "")
+            {
+                criterios_introducidos.Add(criterio_txt_combobox3_desplegable.Text);
+            }
         }
 
         private void criterio_txt_combobox3_TextChanged(object sender, EventArgs e)
@@ -820,7 +1877,179 @@ namespace ALAINID_DEFINITIVO
 
         private void comboBox3_criterio_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
+            if (comboBox3_criterio.Text == "Genero Cancion")
+            {
+                desplegable = 0;
+                criterio_txt_combobox3_desplegable.Visible = true;
+                criterio_txt_combobox3_desplegable.Items.Clear();
+                criterio_txt_combobox3_desplegable.Items.Add("Rock");
+                criterio_txt_combobox3_desplegable.Items.Add("Country");
+                criterio_txt_combobox3_desplegable.Items.Add("K-Pop");
+                criterio_txt_combobox3_desplegable.Items.Add("Electrónica");
+                criterio_txt_combobox3_desplegable.Items.Add("Heavy Metal");
+                criterio_txt_combobox3_desplegable.Items.Add("House");
+                criterio_txt_combobox3_desplegable.Items.Add("Disco");
+                criterio_txt_combobox3_desplegable.Items.Add("Urban");
+                criterio_txt_combobox3_desplegable.Items.Add("Folklorica");
+                criterio_txt_combobox3_desplegable.Items.Add("Hip Hop");
+                criterio_txt_combobox3_desplegable.Items.Add("Pop");
+                criterio_txt_combobox3_desplegable.Items.Add("Jazz");
+                criterio_txt_combobox3_desplegable.Items.Add("Indie Rock");
+                criterio_txt_combobox3_desplegable.Items.Add("Punk");
+                criterio_txt_combobox3_desplegable.Items.Add("Otra");
+
+            }
+            if (comboBox3_criterio.Text == "Disquera")
+            {
+
+                criterio_txt_combobox3_desplegable.Visible = true;
+                criterio_txt_combobox3_desplegable.Items.Clear();
+                criterio_txt_combobox3_desplegable.Items.Add("Sony Music");
+                criterio_txt_combobox3_desplegable.Items.Add("Universal Music");
+                criterio_txt_combobox3_desplegable.Items.Add("YG Entertainment");
+                criterio_txt_combobox3_desplegable.Items.Add("SM Entretainment");
+                criterio_txt_combobox3_desplegable.Items.Add("Otra");
+
+            }
+            if (comboBox3_criterio.Text == "Sexo del Artista")
+            {
+
+                criterio_txt_combobox3_desplegable.Visible = true;
+                criterio_txt_combobox3_desplegable.Items.Clear();
+                criterio_txt_combobox3_desplegable.Items.Add("Femenino");
+                criterio_txt_combobox3_desplegable.Items.Add("Masculino");
+                criterio_txt_combobox3_desplegable.Items.Add("Otra");
+
+            }
+            if (comboBox3_criterio.Text == "Edad del Artista")
+            {
+
+                criterio_txt_combobox3_desplegable.Visible = true;
+                criterio_txt_combobox3_desplegable.Items.Clear();
+                criterio_txt_combobox3_desplegable.Items.Add("Menores de 25 años");
+                criterio_txt_combobox3_desplegable.Items.Add("De 25 a 40 años");
+                criterio_txt_combobox3_desplegable.Items.Add("De 40 a 60 años");
+                criterio_txt_combobox3_desplegable.Items.Add("Mayores de 60");
+
+            }
+
+            if (comboBox3_criterio.Text == "Categoria Pelicula")
+            {
+                desplegable = 3;
+                criterio_txt_combobox3_desplegable.Visible = true;
+                criterio_txt_combobox3_desplegable.Items.Clear();
+                criterio_txt_combobox3_desplegable.Items.Add("Infantil (0 - 7 años)");
+                criterio_txt_combobox3_desplegable.Items.Add("Infantil-Juvenil (7 - 16 años)");
+                criterio_txt_combobox3_desplegable.Items.Add("Adolecente (16 - 18 años)");
+                criterio_txt_combobox3_desplegable.Items.Add("Adulto (18+ años)");
+
+            }
+            if (comboBox3_criterio.Text == "Genero Video")
+            {
+                desplegable = 3;
+                criterio_txt_combobox3_desplegable.Visible = true;
+                criterio_txt_combobox3_desplegable.Items.Clear();
+                criterio_txt_combobox3_desplegable.Items.Add("Terror");
+                criterio_txt_combobox3_desplegable.Items.Add("Crimen");
+                criterio_txt_combobox3_desplegable.Items.Add("Accion");
+                criterio_txt_combobox3_desplegable.Items.Add("Comedia");
+                criterio_txt_combobox3_desplegable.Items.Add("Musical");
+                criterio_txt_combobox3_desplegable.Items.Add("Drama");
+                criterio_txt_combobox3_desplegable.Items.Add("Ciencia Ficcion");
+                criterio_txt_combobox3_desplegable.Items.Add("Otra");
+
+            }
+            if (comboBox3_criterio.Text == "Film Studio")
+            {
+                desplegable = 3;
+                criterio_txt_combobox3_desplegable.Visible = true;
+                criterio_txt_combobox3_desplegable.Items.Clear();
+                criterio_txt_combobox3_desplegable.Items.Add("Universal Studio Pictures");
+                criterio_txt_combobox3_desplegable.Items.Add("Sony Pictures");
+                criterio_txt_combobox3_desplegable.Items.Add("YG Entertainment Pictures");
+                criterio_txt_combobox3_desplegable.Items.Add("SM Entretainment Pictures");
+                criterio_txt_combobox3_desplegable.Items.Add("Warner Bros Pictures");
+                criterio_txt_combobox3_desplegable.Items.Add("Otra");
+            }
+            if (comboBox3_criterio.Text == "Cantante")
+            {
+                desplegable = 1;
+                criterio_txt_combobox3_desplegable.Visible = false;
+
+            }
+            if (comboBox3_criterio.Text == "Compositor")
+            {
+                desplegable = 1;
+                criterio_txt_combobox3_desplegable.Visible = false;
+
+
+            }
+            if (comboBox3_criterio.Text == "Director")
+            {
+                desplegable = 4;
+                criterio_txt_combobox3_desplegable.Visible = false;
+
+
+            }
+            if (comboBox3_criterio.Text == "Actor")
+            {
+                desplegable = 4;
+                criterio_txt_combobox3_desplegable.Visible = false;
+
+
+            }
+            if (comboBox3_criterio.Text == "Album")
+            {
+                desplegable = 1;
+                criterio_txt_combobox3_desplegable.Visible = false;
+
+
+            }
+            if (comboBox3_criterio.Text == "Evaluacion")
+            {
+                desplegable = 6;
+                criterio_txt_combobox3_desplegable.Visible = false;
+
+
+            }
+            if (comboBox3_criterio.Text == "Calidad/Resolucion")
+            {
+                desplegable = 5;
+                criterio_txt_combobox3_desplegable.Visible = true;
+                criterio_txt_combobox3_desplegable.Items.Clear();
+                criterio_txt_combobox3_desplegable.Items.Add("96 kbps");
+                criterio_txt_combobox3_desplegable.Items.Add("128 kbps");
+                criterio_txt_combobox3_desplegable.Items.Add("160 kbps");
+                criterio_txt_combobox3_desplegable.Items.Add("256 kbps");
+                criterio_txt_combobox3_desplegable.Items.Add("320 kbps");
+                criterio_txt_combobox3_desplegable.Items.Add("144p");
+                criterio_txt_combobox3_desplegable.Items.Add("240p");
+                criterio_txt_combobox3_desplegable.Items.Add("360p");
+                criterio_txt_combobox3_desplegable.Items.Add("480p");
+                criterio_txt_combobox3_desplegable.Items.Add("720p");
+            }
+            if (comboBox3_criterio.Text == "Nombre Cancion")
+            {
+                desplegable = 1;
+                criterio_txt_combobox3_desplegable.Visible = false;
+
+
+
+            }
+            if (comboBox3_criterio.Text == "Nombre Pelicula")
+            {
+                desplegable = 4;
+                criterio_txt_combobox3_desplegable.Visible = false;
+
+
+            }
+            if (comboBox3_criterio.Text == "Año de Publicacion")
+            {
+                desplegable = 6;
+                criterio_txt_combobox3_desplegable.Visible = false;
+
+            }
             criterios.Remove(comboBox3_criterio.Text);
             criterios_seleccionados.Add(comboBox3_criterio.Text);
             foreach (string criterio in criterios)
@@ -830,7 +2059,14 @@ namespace ALAINID_DEFINITIVO
             comboBox4_criterio.Enabled = true;
             comboBox3_criterio.Enabled = false;
             criterio_txt_combobox3.Enabled = true;
-
+            if (criterio_txt_combobox2.Text != "")
+            {
+                criterios_introducidos.Add(criterio_txt_combobox2.Text);
+            }
+            else if (criterio_txt_combobox2_desplegable.Text != "")
+            {
+                criterios_introducidos.Add(criterio_txt_combobox2_desplegable.Text);
+            }
         }
 
         private void criterio_txt_combobox2_TextChanged(object sender, EventArgs e)
@@ -887,104 +2123,114 @@ namespace ALAINID_DEFINITIVO
             if (comboBox2_criterio.Text == "Edad del Artista")
             {
 
-                criterio_txt_combobox1_desplegable.Visible = true;
-                criterio_txt_combobox1_desplegable.Items.Clear();
-                criterio_txt_combobox1_desplegable.Items.Add("Menores de 25 años");
-                criterio_txt_combobox1_desplegable.Items.Add("De 25 a 40 años");
-                criterio_txt_combobox1_desplegable.Items.Add("De 40 a 60 años");
-                criterio_txt_combobox1_desplegable.Items.Add("Mayores de 60");
+                criterio_txt_combobox2_desplegable.Visible = true;
+                criterio_txt_combobox2_desplegable.Items.Clear();
+                criterio_txt_combobox2_desplegable.Items.Add("Menores de 25 años");
+                criterio_txt_combobox2_desplegable.Items.Add("De 25 a 40 años");
+                criterio_txt_combobox2_desplegable.Items.Add("De 40 a 60 años");
+                criterio_txt_combobox2_desplegable.Items.Add("Mayores de 60");
 
             }
 
             if (comboBox2_criterio.Text == "Categoria Pelicula")
             {
                 desplegable = 3;
-                criterio_txt_combobox1_desplegable.Visible = true;
-                criterio_txt_combobox1_desplegable.Items.Clear();
-                criterio_txt_combobox1_desplegable.Items.Add("Infantil (0 - 7 años)");
-                criterio_txt_combobox1_desplegable.Items.Add("Infantil-Juvenil (7 - 16 años)");
-                criterio_txt_combobox1_desplegable.Items.Add("Adolecente (16 - 18 años)");
-                criterio_txt_combobox1_desplegable.Items.Add("Adulto (18+ años)");
+                criterio_txt_combobox2_desplegable.Visible = true;
+                criterio_txt_combobox2_desplegable.Items.Clear();
+                criterio_txt_combobox2_desplegable.Items.Add("Infantil (0 - 7 años)");
+                criterio_txt_combobox2_desplegable.Items.Add("Infantil-Juvenil (7 - 16 años)");
+                criterio_txt_combobox2_desplegable.Items.Add("Adolecente (16 - 18 años)");
+                criterio_txt_combobox2_desplegable.Items.Add("Adulto (18+ años)");
 
             }
             if (comboBox2_criterio.Text == "Genero Video")
             {
                 desplegable = 3;
-                criterio_txt_combobox1_desplegable.Visible = true;
-                criterio_txt_combobox1_desplegable.Items.Clear();
-                criterio_txt_combobox1_desplegable.Items.Add("Terror");
-                criterio_txt_combobox1_desplegable.Items.Add("Crimen");
-                criterio_txt_combobox1_desplegable.Items.Add("Accion");
-                criterio_txt_combobox1_desplegable.Items.Add("Comedia");
-                criterio_txt_combobox1_desplegable.Items.Add("Musical");
-                criterio_txt_combobox1_desplegable.Items.Add("Drama");
-                criterio_txt_combobox1_desplegable.Items.Add("Ciencia Ficcion");
-                criterio_txt_combobox1_desplegable.Items.Add("Otra");
+                criterio_txt_combobox2_desplegable.Visible = true;
+                criterio_txt_combobox2_desplegable.Items.Clear();
+                criterio_txt_combobox2_desplegable.Items.Add("Terror");
+                criterio_txt_combobox2_desplegable.Items.Add("Crimen");
+                criterio_txt_combobox2_desplegable.Items.Add("Accion");
+                criterio_txt_combobox2_desplegable.Items.Add("Comedia");
+                criterio_txt_combobox2_desplegable.Items.Add("Musical");
+                criterio_txt_combobox2_desplegable.Items.Add("Drama");
+                criterio_txt_combobox2_desplegable.Items.Add("Ciencia Ficcion");
+                criterio_txt_combobox2_desplegable.Items.Add("Otra");
 
             }
             if (comboBox2_criterio.Text == "Film Studio")
             {
                 desplegable = 3;
-                criterio_txt_combobox1_desplegable.Visible = true;
-                criterio_txt_combobox1_desplegable.Items.Clear();
-                criterio_txt_combobox1_desplegable.Items.Add("Universal Studio Pictures");
-                criterio_txt_combobox1_desplegable.Items.Add("Sony Pictures");
-                criterio_txt_combobox1_desplegable.Items.Add("YG Entertainment Pictures");
-                criterio_txt_combobox1_desplegable.Items.Add("SM Entretainment Pictures");
-                criterio_txt_combobox1_desplegable.Items.Add("Warner Bros Pictures");
-                criterio_txt_combobox1_desplegable.Items.Add("Otra");
+                criterio_txt_combobox2_desplegable.Visible = true;
+                criterio_txt_combobox2_desplegable.Items.Clear();
+                criterio_txt_combobox2_desplegable.Items.Add("Universal Studio Pictures");
+                criterio_txt_combobox2_desplegable.Items.Add("Sony Pictures");
+                criterio_txt_combobox2_desplegable.Items.Add("YG Entertainment Pictures");
+                criterio_txt_combobox2_desplegable.Items.Add("SM Entretainment Pictures");
+                criterio_txt_combobox2_desplegable.Items.Add("Warner Bros Pictures");
+                criterio_txt_combobox2_desplegable.Items.Add("Otra");
             }
             if (comboBox2_criterio.Text == "Cantante")
             {
                 desplegable = 1;
-                criterio_txt_combobox1_desplegable.Visible = false;
+                criterio_txt_combobox2_desplegable.Visible = false;
 
             }
             if (comboBox2_criterio.Text == "Compositor")
             {
                 desplegable = 1;
-                criterio_txt_combobox1_desplegable.Visible = false;
+                criterio_txt_combobox2_desplegable.Visible = false;
 
 
             }
             if (comboBox2_criterio.Text == "Director")
             {
                 desplegable = 4;
-                criterio_txt_combobox1_desplegable.Visible = false;
+                criterio_txt_combobox2_desplegable.Visible = false;
 
 
             }
             if (comboBox2_criterio.Text == "Actor")
             {
                 desplegable = 4;
-                criterio_txt_combobox1_desplegable.Visible = false;
+                criterio_txt_combobox2_desplegable.Visible = false;
 
 
             }
             if (comboBox2_criterio.Text == "Album")
             {
                 desplegable = 1;
-                criterio_txt_combobox1_desplegable.Visible = false;
+                criterio_txt_combobox2_desplegable.Visible = false;
 
 
             }
             if (comboBox2_criterio.Text == "Evaluacion")
             {
                 desplegable = 6;
-                criterio_txt_combobox1_desplegable.Visible = false;
+                criterio_txt_combobox2_desplegable.Visible = false;
 
 
             }
             if (comboBox2_criterio.Text == "Calidad/Resolucion")
             {
                 desplegable = 5;
-                criterio_txt_combobox1_desplegable.Visible = false;
-
+                criterio_txt_combobox2_desplegable.Visible = true;
+                criterio_txt_combobox2_desplegable.Items.Clear();
+                criterio_txt_combobox2_desplegable.Items.Add("96 kbps");
+                criterio_txt_combobox2_desplegable.Items.Add("128 kbps");
+                criterio_txt_combobox2_desplegable.Items.Add("160 kbps");
+                criterio_txt_combobox2_desplegable.Items.Add("256 kbps");
+                criterio_txt_combobox2_desplegable.Items.Add("320 kbps");
+                criterio_txt_combobox2_desplegable.Items.Add("144p");
+                criterio_txt_combobox2_desplegable.Items.Add("240p");
+                criterio_txt_combobox2_desplegable.Items.Add("360p");
+                criterio_txt_combobox2_desplegable.Items.Add("480p");
+                criterio_txt_combobox2_desplegable.Items.Add("720p");
             }
             if (comboBox2_criterio.Text == "Nombre Cancion")
             {
                 desplegable = 1;
-                criterio_txt_combobox1_desplegable.Visible = false;
+                criterio_txt_combobox2_desplegable.Visible = false;
 
 
 
@@ -992,14 +2238,14 @@ namespace ALAINID_DEFINITIVO
             if (comboBox2_criterio.Text == "Nombre Pelicula")
             {
                 desplegable = 4;
-                criterio_txt_combobox1_desplegable.Visible = false;
+                criterio_txt_combobox2_desplegable.Visible = false;
 
 
             }
             if (comboBox2_criterio.Text == "Año de Publicacion")
             {
                 desplegable = 6;
-                criterio_txt_combobox1_desplegable.Visible = false;
+                criterio_txt_combobox2_desplegable.Visible = false;
 
             }
             criterios.Remove(comboBox2_criterio.Text);
@@ -1011,7 +2257,14 @@ namespace ALAINID_DEFINITIVO
             comboBox3_criterio.Enabled = true;
             comboBox2_criterio.Enabled = false;
             criterio_txt_combobox2.Enabled = true;
-
+            if (criterio_txt_combobox1.Text != "")
+            {
+                criterios_introducidos.Add(criterio_txt_combobox1.Text);
+            }
+            else if (criterio_txt_combobox1_desplegable.Text != "")
+            {
+                criterios_introducidos.Add(criterio_txt_combobox1_desplegable.Text);
+            }
         }
 
         private void criterio_txt_combobox1_TextChanged(object sender, EventArgs e)
@@ -1159,8 +2412,18 @@ namespace ALAINID_DEFINITIVO
             if (comboBox1_criterio.Text == "Calidad/Resolucion")
             {
                 desplegable = 5;
-                criterio_txt_combobox1_desplegable.Visible = false;
-
+                criterio_txt_combobox1_desplegable.Visible = true;
+                criterio_txt_combobox1_desplegable.Items.Clear();
+                criterio_txt_combobox1_desplegable.Items.Add("96 kbps");
+                criterio_txt_combobox1_desplegable.Items.Add("128 kbps");
+                criterio_txt_combobox1_desplegable.Items.Add("160 kbps");
+                criterio_txt_combobox1_desplegable.Items.Add("256 kbps");
+                criterio_txt_combobox1_desplegable.Items.Add("320 kbps");
+                criterio_txt_combobox1_desplegable.Items.Add("144p");
+                criterio_txt_combobox1_desplegable.Items.Add("240p");
+                criterio_txt_combobox1_desplegable.Items.Add("360p");
+                criterio_txt_combobox1_desplegable.Items.Add("480p");
+                criterio_txt_combobox1_desplegable.Items.Add("720p");
             }
             if (comboBox1_criterio.Text == "Nombre Cancion")
             {
@@ -1198,7 +2461,37 @@ namespace ALAINID_DEFINITIVO
         private void button3_Click(object sender, EventArgs e)
         {
             //botonatras_busquedamultiple
+            tabla_resultados_busqueda_multiple.Rows.Clear();
             panel_busqueda_multiple.Visible = false;
+            criterio_txt_combobox1_desplegable.Items.Clear(); criterio_txt_combobox2_desplegable.Items.Clear();
+            criterio_txt_combobox3_desplegable.Items.Clear(); criterio_txt_combobox4_desplegable.Items.Clear();
+            criterio_txt_combobox5_desplegable.Items.Clear(); criterio_txt_combobox6_desplegable.Items.Clear();
+            criterio_txt_combobox7_desplegable.Items.Clear(); criterio_txt_combobox8_desplegable.Items.Clear();
+            criterio_txt_combobox2.Enabled = false; criterio_txt_combobox3.Enabled = false; criterio_txt_combobox4.Enabled = false;
+            criterio_txt_combobox5.Enabled = false; criterio_txt_combobox6.Enabled = false; criterio_txt_combobox7.Enabled = false;
+            criterio_txt_combobox8.Enabled = false;
+            criterio_txt_combobox1_desplegable.Visible = false; criterio_txt_combobox2_desplegable.Visible = false; criterio_txt_combobox3_desplegable.Visible = false;
+            criterio_txt_combobox4_desplegable.Visible = false; criterio_txt_combobox5_desplegable.Visible = false; criterio_txt_combobox6_desplegable.Visible = false;
+            criterio_txt_combobox7_desplegable.Visible = false; criterio_txt_combobox8_desplegable.Visible = false;
+            comboBox1_criterio.Enabled = true;
+            comboBox1_criterio.Items.Clear(); comboBox2_criterio.Items.Clear(); comboBox3_criterio.Items.Clear(); comboBox4_criterio.Items.Clear();
+            comboBox5_criterio.Items.Clear(); comboBox6_criterio.Items.Clear(); comboBox7_criterio.Items.Clear(); comboBox8_criterio.Items.Clear();
+            criterio_txt_combobox1.Text = ""; criterio_txt_combobox2.Text = ""; criterio_txt_combobox3.Text = ""; criterio_txt_combobox4.Text = "";
+            criterio_txt_combobox5.Text = ""; criterio_txt_combobox6.Text = ""; criterio_txt_combobox7.Text = ""; criterio_txt_combobox8.Text = "";
+            criterio_txt_combobox1_desplegable.Text = ""; criterio_txt_combobox2_desplegable.Text = ""; criterio_txt_combobox3_desplegable.Text = "";
+            criterio_txt_combobox4_desplegable.Text = ""; criterio_txt_combobox5_desplegable.Text = ""; criterio_txt_combobox6_desplegable.Text = "";
+            criterio_txt_combobox7_desplegable.Text = ""; criterio_txt_combobox8_desplegable.Text = "";
+            comboBox1_criterio.Text = ""; comboBox2_criterio.Text = ""; comboBox3_criterio.Text = ""; comboBox4_criterio.Text = "";
+            comboBox5_criterio.Text = ""; comboBox6_criterio.Text = ""; comboBox7_criterio.Text = ""; comboBox8_criterio.Text = "";
+            criterios.Clear();
+            foreach (string criterio in Proyecto_Forms.ALAINID.lista_criterios_filtro2)
+            {
+                criterios.Add(criterio);
+            }
+            foreach (string criterio in criterios)
+            {
+                comboBox1_criterio.Items.Add(criterio);
+            }
         }
 
         private void busquedasimple_criterio_text_SelectedValueChanged(object sender, EventArgs e)
@@ -1216,6 +2509,9 @@ namespace ALAINID_DEFINITIVO
             Proyecto_Forms.ALAINID.Activarlistacantantes();
             Proyecto_Forms.ALAINID.Partirlistacompositores();
             Proyecto_Forms.ALAINID.Partirlistaalbumes();
+            Proyecto_Forms.ALAINID.Activarlistavideos();
+            Proyecto_Forms.ALAINID.Partirlistadirectores();
+            Proyecto_Forms.ALAINID.Partirlistaactores();
             int fila = e.RowIndex;
             int col = e.ColumnIndex;
             nombre_cancion_video_actual = datagratview_busquedasimple.Rows[fila].Cells[0].Value.ToString();
@@ -1227,6 +2523,14 @@ namespace ALAINID_DEFINITIVO
             {
                 if ((s.Nombrecancion.ToLower() == nombre.ToLower()) && (s.Cantante.Name.ToLower() == nombrea.ToLower()))
                 {
+                    cantante_cancion_reproductor.Text = s.Cantante.Name;
+                    nombrecancion_cancion_reproductor.Text = s.Nombrecancion;
+                    compositor_cancion_reproductor.Text = s.Compositor.Name;
+                    album_cancion_reproductor.Text = s.Album;
+                    calificacion_cancion_reproductor.Text = s.Calificacionpromedio.ToString();
+                    genero_cancion_reproductor.Text = s.Genero;
+                    reproducciones_cancion_reproductor.Text = s.Reproducciones.ToString();
+
                     panel_cancion_seleccionada_busqueda_simple.Visible = true;
                     panel_cancion_seleccionada_busqueda_simple.Dock = DockStyle.Fill;
                     panel_busqueda_simple.Visible = false;
@@ -1239,6 +2543,16 @@ namespace ALAINID_DEFINITIVO
             {
                 if ((v.Nombre_video.ToLower() == nombre.ToLower()) && (v.Director.Name.ToLower() == nombrea.ToLower()))
                 {
+                    textBox_Nombre_Director.Text = v.Director.Name;
+                    foreach(Artista actor in v.Actores)
+                    {
+                        int n = tabla_nombre_actores_reprod_video.Rows.Add();
+                        tabla_nombre_actores_reprod_video.Rows[n].Cells[0].Value = actor.Name;
+                    }
+                    textBox_Calificacion.Text = v.Calificacion_promedio.ToString();
+                    textBox_Año_Grabacion.Text = v.Anio_publicacion.ToString();
+                    textBox_Reproducciones.Text = v.Reproduccion.ToString();
+
                     panel_video_seleccionado.Visible = true;
                     panel_video_seleccionado.Dock = DockStyle.Fill;
                     panel_busqueda_simple.Visible = false;
@@ -1250,11 +2564,7 @@ namespace ALAINID_DEFINITIVO
 
             
         }
-        
-        
-
-        
-
+       
         private void axWindowsMediaPlayer2_Enter(object sender, EventArgs e)
         {
 
@@ -1266,10 +2576,17 @@ namespace ALAINID_DEFINITIVO
         }
 
         private void button2_Click(object sender, EventArgs e)
-        {
+        {// atras panel reproducir cancion
             panel_cancion_seleccionada_busqueda_simple.Visible = false;
-            panel_busqueda_simple.Visible = true;
-
+            panel_busqueda_multiple.Visible = false;
+            panel_busqueda_simple.Visible = false;
+            cantante_cancion_reproductor.Text = "";
+            nombrecancion_cancion_reproductor.Text = "";
+            compositor_cancion_reproductor.Text = "";
+            album_cancion_reproductor.Text = "";
+            calificacion_cancion_reproductor.Text = "";
+            genero_cancion_reproductor.Text = "";
+            reproducciones_cancion_reproductor.Text = "";
         }
 
         private void playToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1294,10 +2611,6 @@ namespace ALAINID_DEFINITIVO
             axWindowsMediaPlayer2.Ctlcontrols.previous();
 
         }
-
-
-
-
         //Panel reproductor video
         private void panel_video_seleccionado_Paint(object sender, PaintEventArgs e)
         {
@@ -1325,8 +2638,15 @@ namespace ALAINID_DEFINITIVO
         }
 
         private void btn_Atrás_Click(object sender, EventArgs e)
-        {
+        {//atras de reproducir video
             panel_video_seleccionado.Visible = false;
+            panel_busqueda_multiple.Visible = false;
+            panel_busqueda_simple.Visible = false;
+            textBox_Nombre_Director.Text = "";
+            tabla_nombre_actores_reprod_video.Rows.Clear();
+            textBox_Calificacion.Text = "";
+            textBox_Año_Grabacion.Text = "";
+            textBox_Reproducciones.Text = "";
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -1398,17 +2718,39 @@ namespace ALAINID_DEFINITIVO
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {
-
+        {//btn crear play list
+            if (comboBox_tipo_archivo_plylist.Text== "Video")
+            {
+                PlaylistVideo playlistVideo = new PlaylistVideo(nombreplaylist_text_playlist.Text);
+                Program.usuario_activo.Lista_playlistvideousuario_.Add(playlistVideo);
+            }
+            if (comboBox_tipo_archivo_plylist.Text == "Cancion")
+            {
+                PlaylistSong playlistSong = new PlaylistSong(nombreplaylist_text_playlist.Text);
+                Program.usuario_activo.Lista_playlistusuario_.Add(playlistSong);
+            }
+            tabla_playlist.Rows.Clear();
+            foreach (PlaylistSong plys in Program.usuario_activo.Lista_playlistusuario_)
+            {
+                int n = tabla_playlist.Rows.Add();
+                tabla_playlist.Rows[n].Cells[0].Value = plys.NombrePlaylist;
+                tabla_playlist.Rows[n].Cells[1].Value = plys.Listplay.Count();
+                tabla_playlist.Rows[n].Cells[1].Value = "Canciones";
+            }
+            foreach (PlaylistVideo plyv in Program.usuario_activo.Lista_playlistvideousuario_)
+            {
+                int n = tabla_playlist.Rows.Add();
+                tabla_playlist.Rows[n].Cells[0].Value = plyv.NombrePlaylist;
+                tabla_playlist.Rows[n].Cells[1].Value = plyv.Listplayvideo.Count();
+                tabla_playlist.Rows[n].Cells[1].Value = "Videos";
+            }
         }
+        
 
         private void panel_favoritos_menu_Paint(object sender, PaintEventArgs e)
         {
 
         }
-
-        
-
         private void checkBox_busqueda_AND_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox_busqueda_AND.Checked == true)
@@ -1500,6 +2842,367 @@ namespace ALAINID_DEFINITIVO
         private void atras_resultados_busqueda_multiple_Click(object sender, EventArgs e)
         {
             panel_resultados_busqueda_multiple.Visible = false;
+            tabla_resultados_busqueda_multiple.Rows.Clear();
+            criterio_txt_combobox1_desplegable.Items.Clear(); criterio_txt_combobox2_desplegable.Items.Clear();
+            criterio_txt_combobox3_desplegable.Items.Clear(); criterio_txt_combobox4_desplegable.Items.Clear();
+            criterio_txt_combobox5_desplegable.Items.Clear(); criterio_txt_combobox6_desplegable.Items.Clear();
+            criterio_txt_combobox7_desplegable.Items.Clear(); criterio_txt_combobox8_desplegable.Items.Clear();
+            criterio_txt_combobox2.Enabled = false; criterio_txt_combobox3.Enabled = false; criterio_txt_combobox4.Enabled = false;
+            criterio_txt_combobox5.Enabled = false; criterio_txt_combobox6.Enabled = false; criterio_txt_combobox7.Enabled = false;
+            criterio_txt_combobox8.Enabled = false;
+            criterio_txt_combobox1_desplegable.Visible = false; criterio_txt_combobox2_desplegable.Visible = false; criterio_txt_combobox3_desplegable.Visible = false;
+            criterio_txt_combobox4_desplegable.Visible = false; criterio_txt_combobox5_desplegable.Visible = false; criterio_txt_combobox6_desplegable.Visible = false;
+            criterio_txt_combobox7_desplegable.Visible = false; criterio_txt_combobox8_desplegable.Visible = false;
+            comboBox1_criterio.Enabled = true;
+            comboBox1_criterio.Items.Clear(); comboBox2_criterio.Items.Clear(); comboBox3_criterio.Items.Clear(); comboBox4_criterio.Items.Clear();
+            comboBox5_criterio.Items.Clear(); comboBox6_criterio.Items.Clear(); comboBox7_criterio.Items.Clear(); comboBox8_criterio.Items.Clear();
+            comboBox1_criterio.Text = ""; comboBox2_criterio.Text = ""; comboBox3_criterio.Text = ""; comboBox4_criterio.Text = "";
+            comboBox5_criterio.Text = ""; comboBox6_criterio.Text = ""; comboBox7_criterio.Text = ""; comboBox8_criterio.Text = "";
+            criterio_txt_combobox1.Text = ""; criterio_txt_combobox2.Text = ""; criterio_txt_combobox3.Text = ""; criterio_txt_combobox4.Text = "";
+            criterio_txt_combobox5.Text = ""; criterio_txt_combobox6.Text = ""; criterio_txt_combobox7.Text = ""; criterio_txt_combobox8.Text = "";
+            criterio_txt_combobox1_desplegable.Text = ""; criterio_txt_combobox2_desplegable.Text = ""; criterio_txt_combobox3_desplegable.Text = "";
+            criterio_txt_combobox4_desplegable.Text = ""; criterio_txt_combobox5_desplegable.Text = ""; criterio_txt_combobox6_desplegable.Text = "";
+            criterio_txt_combobox7_desplegable.Text = ""; criterio_txt_combobox8_desplegable.Text = "";
+            criterios.Clear();
+
+            foreach (string criterio in Proyecto_Forms.ALAINID.lista_criterios_filtro2)
+            {
+                criterios.Add(criterio);
+            }
+            foreach (string criterio in criterios)
+            {
+                comboBox1_criterio.Items.Add(criterio);
+            }
+        }
+
+        private void tabla_resultados_busqueda_multiple_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {//doble click en resultado busqueda multiple
+            Proyecto_Forms.ALAINID.Activarlistacanciones();
+            Proyecto_Forms.ALAINID.Activarlistacantantes();
+            Proyecto_Forms.ALAINID.Partirlistacompositores();
+            Proyecto_Forms.ALAINID.Partirlistaalbumes();
+            Proyecto_Forms.ALAINID.Activarlistavideos();
+            Proyecto_Forms.ALAINID.Partirlistadirectores();
+            Proyecto_Forms.ALAINID.Partirlistaactores();
+            int fila = e.RowIndex;
+            int col = e.ColumnIndex;
+            nombre_cancion_video_actual = tabla_resultados_busqueda_multiple.Rows[fila].Cells[0].Value.ToString();
+            string nombre = nombre_cancion_video_actual;
+            nombre_cantante_director_actual = tabla_resultados_busqueda_multiple.Rows[fila].Cells[1].Value.ToString();
+            string nombrea = nombre_cantante_director_actual;
+
+            foreach (Song s in Proyecto_Forms.ALAINID.todas_las_canciones)
+            {
+                if ((s.Nombrecancion.ToLower() == nombre.ToLower()) && (s.Cantante.Name.ToLower() == nombrea.ToLower()))
+                {
+                    cantante_cancion_reproductor.Text = s.Cantante.Name;
+                    nombrecancion_cancion_reproductor.Text = s.Nombrecancion;
+                    compositor_cancion_reproductor.Text = s.Compositor.Name;
+                    album_cancion_reproductor.Text = s.Album;
+                    calificacion_cancion_reproductor.Text = s.Calificacionpromedio.ToString();
+                    genero_cancion_reproductor.Text = s.Genero;
+                    reproducciones_cancion_reproductor.Text = s.Reproducciones.ToString();
+
+                    panel_cancion_seleccionada_busqueda_simple.Visible = true;
+                    panel_cancion_seleccionada_busqueda_simple.Dock = DockStyle.Fill;
+                    panel_busqueda_multiple.Visible = false;
+                    ruta = s.Nombrearchivo;
+                    cancionbuscada = s;
+                    axWindowsMediaPlayer2.URL = ruta;
+                }
+            }
+            foreach (Video v in Proyecto_Forms.ALAINID.todos_los_videos)
+            {
+                if ((v.Nombre_video.ToLower() == nombre.ToLower()) && (v.Director.Name.ToLower() == nombrea.ToLower()))
+                {
+                    textBox_Nombre_Director.Text = v.Director.Name;
+                    foreach (Artista actor in v.Actores)
+                    {
+                        int n = tabla_nombre_actores_reprod_video.Rows.Add();
+                        tabla_nombre_actores_reprod_video.Rows[n].Cells[0].Value = actor.Name;
+                    }
+                    textBox_Calificacion.Text = v.Calificacion_promedio.ToString();
+                    textBox_Año_Grabacion.Text = v.Anio_publicacion.ToString();
+                    textBox_Reproducciones.Text = v.Reproduccion.ToString();
+
+                    panel_video_seleccionado.Visible = true;
+                    panel_video_seleccionado.Dock = DockStyle.Fill;
+                    panel_busqueda_multiple.Visible = false;
+                    ruta = v.Nombrearchivovideo;
+                    videobuscado = v;
+                    axWindowsMediaPlayerVideo.URL = ruta;
+                }
+            }
+        }
+
+        private void panel_resultados_busqueda_multiple_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
+        public List<Artista> artistas_busqueda_social = new List<Artista>();
+        public List<User> usuarios_busqueda_social = new List<User>();
+
+        private void btn_buscar_en_social_Click(object sender, EventArgs e)
+        {
+            
+            foreach(Artista actor in Proyecto_Forms.ALAINID.lista_actores)
+            {
+                var q = palabra_clave_buscar_social.Text.Any(w => actor.Name.Contains(w));
+                var q1= palabra_clave_buscar_social.Text.Any(w => actor.Nacionality.Contains(w));
+                int esta = 0;
+                if (q == true || q1 == true)
+                {
+                    foreach (Artista artista in artistas_busqueda_social)
+                    {
+                        if (actor.Name == artista.Name)
+                        {
+                            esta = 1;
+                        }
+                    }
+                    if (esta == 0)
+                    {
+                        artistas_busqueda_social.Add(actor);
+                    }
+                }
+            }
+            foreach (Artista director in Proyecto_Forms.ALAINID.lista_directores)
+            {
+                var q = palabra_clave_buscar_social.Text.Any(w => director.Name.Contains(w));
+                var q1 = palabra_clave_buscar_social.Text.Any(w => director.Nacionality.Contains(w));
+                int esta = 0;
+                if (q == true || q1 == true)
+                {
+                    foreach (Artista artista in artistas_busqueda_social)
+                    {
+                        if (director.Name == artista.Name)
+                        {
+                            esta = 1;
+                        }
+                    }
+                    if (esta == 0)
+                    {
+                        artistas_busqueda_social.Add(director);
+                    }
+                }
+            }
+            foreach (Artista cantante in Proyecto_Forms.ALAINID.lista_cantantes)
+            {
+                var q = palabra_clave_buscar_social.Text.Any(w => cantante.Name.Contains(w));
+                var q1 = palabra_clave_buscar_social.Text.Any(w => cantante.Nacionality.Contains(w));
+                int esta = 0;
+                if (q == true || q1 == true)
+                {
+                    foreach (Artista artista in artistas_busqueda_social)
+                    {
+                        if (cantante.Name == artista.Name)
+                        {
+                            esta = 1;
+                        }
+                    }
+                    if (esta == 0)
+                    {
+                        artistas_busqueda_social.Add(cantante);
+                    }
+                }
+            }
+            foreach (Artista compositor in Proyecto_Forms.ALAINID.lista_compositores)
+            {
+                var q = palabra_clave_buscar_social.Text.Any(w => compositor.Name.Contains(w));
+                var q1 = palabra_clave_buscar_social.Text.Any(w => compositor.Nacionality.Contains(w));
+                int esta = 0;
+                if (q == true || q1 == true)
+                {
+                    foreach (Artista artista in artistas_busqueda_social)
+                    {
+                        if (compositor.Name == artista.Name)
+                        {
+                            esta = 1;
+                        }
+                    }
+                    if (esta==0)
+                    {
+                        artistas_busqueda_social.Add(compositor);
+                    }
+                }
+            }
+
+            foreach(User user in Proyecto_Forms.ALAINID.listausuarios)
+            {
+                var q = palabra_clave_buscar_social.Text.Any(w => user.Email_.Contains(w));
+                var q1 = palabra_clave_buscar_social.Text.Any(w => user.Nombreusuario.Contains(w));
+                var q2 = palabra_clave_buscar_social.Text.Any(w => user.Nombre_.Contains(w));
+                if (q == true || q1 == true)
+                {
+                   
+                    usuarios_busqueda_social.Add(user);
+                }
+            }
+            foreach(Artista artista in artistas_busqueda_social)
+            {
+                int n = tabla_resultados_busqueda_social.Rows.Add();
+                tabla_resultados_busqueda_social.Rows[n].Cells[0].Value = artista.Name;
+                tabla_resultados_busqueda_social.Rows[n].Cells[1].Value = "Artista";
+            }
+            foreach (User user in usuarios_busqueda_social)
+            {
+                int n = tabla_resultados_busqueda_social.Rows.Add();
+                tabla_resultados_busqueda_social.Rows[n].Cells[0].Value = user.Email_;
+                tabla_resultados_busqueda_social.Rows[n].Cells[1].Value = "Usuario";
+            }
+
+        }
+        public string email_persona_seguir_social;
+        public string tipo_persona_seguir_social;
+
+        private void tabla_resultados_busqueda_social_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {//doble click en ver usuario para seguir social
+            Proyecto_Forms.ALAINID.Activarlistacanciones();
+            Proyecto_Forms.ALAINID.Activarlistacantantes();
+            Proyecto_Forms.ALAINID.Partirlistacompositores();
+            Proyecto_Forms.ALAINID.Partirlistaalbumes();
+            Proyecto_Forms.ALAINID.Activarlistavideos();
+            Proyecto_Forms.ALAINID.Partirlistadirectores();
+            Proyecto_Forms.ALAINID.Partirlistaactores();
+            int fila = e.RowIndex;
+            email_persona_seguir_social = tabla_resultados_busqueda_social.Rows[fila].Cells[0].Value.ToString();
+            tipo_persona_seguir_social = tabla_resultados_busqueda_social.Rows[fila].Cells[1].Value.ToString();
+            
+            if (tipo_persona_seguir_social == "Usuario")
+            {
+                panel_ver_usuario_busqueda_social.Visible = true;
+                panel_ver_usuario_busqueda_social.Dock = DockStyle.Fill;
+                foreach (User user in Proyecto_Forms.ALAINID.listausuarios)
+                {
+                    if (user.Email_== email_persona_seguir_social)
+                    {
+                        social_nombre_user_busqueda.Text = user.Nombre_;
+                        social_email_user_busqueda.Text = user.Email_;
+                        social_usuario_user_busqueda.Text = user.Nombreusuario;
+
+                    }
+                }
+                
+            }
+            if (tipo_persona_seguir_social== "Artista")
+            {
+                foreach (Artista act in Proyecto_Forms.ALAINID.lista_actores)
+                {
+                    if (act.Name == email_persona_seguir_social)
+                    {
+                        social_edad_artista.Text = act.Age.ToString();
+                        social_naconalidad_artista.Text = act.Nacionality;
+                        social_nombre_artista.Text = act.Name;
+                        social_sexo_artista.Text = act.Sexo;
+                        social_tipo_artista.Text = "Actor: ";
+                    }
+                }
+                foreach (Artista dir in Proyecto_Forms.ALAINID.lista_directores)
+                {
+                    if (dir.Name == email_persona_seguir_social)
+                    {
+                        social_edad_artista.Text = dir.Age.ToString();
+                        social_naconalidad_artista.Text = dir.Nacionality;
+                        social_nombre_artista.Text = dir.Name;
+                        social_sexo_artista.Text = dir.Sexo;
+                        social_tipo_artista.Text = "Director: ";
+                    }
+                }
+                foreach (Artista comp in Proyecto_Forms.ALAINID.lista_compositores)
+                {
+                    if (comp.Name == email_persona_seguir_social)
+                    {
+                        social_edad_artista.Text = comp.Age.ToString();
+                        social_naconalidad_artista.Text = comp.Nacionality;
+                        social_nombre_artista.Text = comp.Name;
+                        social_sexo_artista.Text = comp.Sexo;
+                        social_tipo_artista.Text = "Compositor: ";
+                    }
+                }
+            }
+            foreach (Artista cant in Proyecto_Forms.ALAINID.lista_cantantes)
+                {
+                    if (cant.Name == email_persona_seguir_social)
+                    {
+                        social_edad_artista.Text = cant.Age.ToString();
+                        social_naconalidad_artista.Text = cant.Nacionality;
+                        social_nombre_artista.Text = cant.Name;
+                        social_sexo_artista.Text = cant.Sexo;
+                        social_tipo_artista.Text = "Cantante: ";
+                    }
+                }
+                
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {//atras ver usuario busqueda social
+            panel_ver_usuario_busqueda_social.Visible = false;
+        }
+        private void btn_seguir_usuario_Click(object sender, EventArgs e)
+        {
+            foreach (User user in Proyecto_Forms.ALAINID.listausuarios)
+            {
+                if (user.Email_ == social_email_user_busqueda.Text)
+                {
+                    Program.usuario_activo.Usuarios_seguidos_.Add(user);
+                    MessageBox.Show("Usuario Seguido Exitosamente", "Seguir", MessageBoxButtons.OK, MessageBoxIcon.None);
+
+                }
+            }
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {// atras ver artista
+            panel_ver_artista_busqueda_social.Visible = false;
+        }
+
+        private void btn_seguir_artista_Click(object sender, EventArgs e)
+        {
+            foreach (Artista act in Proyecto_Forms.ALAINID.lista_actores)
+            {
+                if (act.Name == social_email_user_busqueda.Text)
+                {
+                    Program.usuario_activo.Artistas_seguidos_.Add(act);
+                    MessageBox.Show("Actor Seguido Exitosamente", "Seguir", MessageBoxButtons.OK, MessageBoxIcon.None);
+
+                }
+
+            }
+            foreach (Artista dir in Proyecto_Forms.ALAINID.lista_directores)
+            {
+                if (dir.Name == social_email_user_busqueda.Text)
+                {
+                    Program.usuario_activo.Artistas_seguidos_.Add(dir);
+                    MessageBox.Show("Director Seguido Exitosamente", "Seguir", MessageBoxButtons.OK, MessageBoxIcon.None);
+
+                }
+
+            }
+            foreach (Artista comp in Proyecto_Forms.ALAINID.lista_compositores)
+            {
+                if (comp.Name == social_email_user_busqueda.Text)
+                {
+                    Program.usuario_activo.Artistas_seguidos_.Add(comp);
+                    MessageBox.Show("Compositor Seguido Exitosamente", "Seguir", MessageBoxButtons.OK, MessageBoxIcon.None);
+
+                }
+
+            }
+            foreach (Artista cant in Proyecto_Forms.ALAINID.lista_cantantes)
+            {
+                if (cant.Name == social_email_user_busqueda.Text)
+                {
+                    Program.usuario_activo.Artistas_seguidos_.Add(cant);
+                    MessageBox.Show("Cantante Seguido Exitosamente", "Seguir", MessageBoxButtons.OK, MessageBoxIcon.None);
+
+                }
+
+            }
+
         }
     }
 }

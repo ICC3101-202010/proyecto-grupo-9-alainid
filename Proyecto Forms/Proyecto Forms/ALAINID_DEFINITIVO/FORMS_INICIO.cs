@@ -48,25 +48,41 @@ namespace ALAINID_DEFINITIVO
         {
             try
             {
-                User u1 = new User(nombre_completo_text_de_registrarse.Text, nombre_usuario_text_de_registrarse.Text, mail_text_de_registrarse.Text, pass_text_de_registrarse.Text);
-                Proyecto_Forms.ALAINID.Activarlista();
-                Proyecto_Forms.ALAINID.Agregarusuarioalalista(u1);
-                nombre_completo_text_de_registrarse.Text = "";
-                nombre_usuario_text_de_registrarse.Text = "";
-                mail_text_de_registrarse.Text = "";
-                pass_text_de_registrarse.Text = "";
-                panel1_registrarse.Visible = false;
-                
+                if (Proyecto_Forms.ALAINID.comprobar_mail(mail_text_de_registrarse.Text))
+                {
+                    User u1 = new User(nombre_completo_text_de_registrarse.Text, nombre_usuario_text_de_registrarse.Text, mail_text_de_registrarse.Text, pass_text_de_registrarse.Text);
+                    Proyecto_Forms.ALAINID.Activarlista();
+                    Proyecto_Forms.ALAINID.Agregarusuarioalalista(u1);
+                    nombre_completo_text_de_registrarse.Text = "";
+                    nombre_usuario_text_de_registrarse.Text = "";
+                    mail_text_de_registrarse.Text = "";
+                    pass_text_de_registrarse.Text = "";
+                    panel1_registrarse.Visible = false;
+                }
+                else
+                {
+                    MessageBox.Show("El Mail ingresado no es valido o no cumple con el formato de un correo", "Mail Invalido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+
             }
             catch
             {
-                User u1 = new User(nombre_completo_text_de_registrarse.Text, nombre_usuario_text_de_registrarse.Text, mail_text_de_registrarse.Text, pass_text_de_registrarse.Text);
-                Proyecto_Forms.ALAINID.Agregarusuarioalalista(u1);
-                panel1_registrarse.Visible = false;
-                nombre_completo_text_de_registrarse.Text = "";
-                nombre_usuario_text_de_registrarse.Text = "";
-                mail_text_de_registrarse.Text = "";
-                pass_text_de_registrarse.Text = "";
+                if (Proyecto_Forms.ALAINID.comprobar_mail(mail_text_de_registrarse.Text))
+                {
+                    User u1 = new User(nombre_completo_text_de_registrarse.Text, nombre_usuario_text_de_registrarse.Text, mail_text_de_registrarse.Text, pass_text_de_registrarse.Text);
+                    Proyecto_Forms.ALAINID.Agregarusuarioalalista(u1);
+                    nombre_completo_text_de_registrarse.Text = "";
+                    nombre_usuario_text_de_registrarse.Text = "";
+                    mail_text_de_registrarse.Text = "";
+                    pass_text_de_registrarse.Text = "";
+                    panel1_registrarse.Visible = false;
+                }
+                else
+                {
+                    MessageBox.Show("El Mail ingresado no es valido o no cumple con el formato de un correo", "Mail Invalido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
             }
         }
 
@@ -127,7 +143,7 @@ namespace ALAINID_DEFINITIVO
                     MessageBox.Show("Usuario Invalido", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 }
             }
-            else
+            else if ((nombre_completo_txt_inicio_sesion.Text == "") && (pass_txt_inicio_sesion.Text == "202023"))
             {
                 FORMS_ADMIN fORMS_ADMIN = new FORMS_ADMIN();
                 fORMS_ADMIN.Show();//evento
@@ -136,6 +152,12 @@ namespace ALAINID_DEFINITIVO
                 nombre_completo_txt_inicio_sesion.Text = "";
                 pass_txt_inicio_sesion.Text = "";
             }
+            else
+            {
+                MessageBox.Show("Ingrese sus Datos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+
+            }
+
         }
 
         private void nombre_completo_txt_inicio_sesion_TextChanged(object sender, EventArgs e)

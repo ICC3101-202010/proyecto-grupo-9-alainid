@@ -547,7 +547,7 @@
             this.ruta_archivo_cancion_txt_subir_cancion.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.ruta_archivo_cancion_txt_subir_cancion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ruta_archivo_cancion_txt_subir_cancion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ruta_archivo_cancion_txt_subir_cancion.Location = new System.Drawing.Point(41, 463);
+            this.ruta_archivo_cancion_txt_subir_cancion.Location = new System.Drawing.Point(40, 474);
             this.ruta_archivo_cancion_txt_subir_cancion.Margin = new System.Windows.Forms.Padding(2);
             this.ruta_archivo_cancion_txt_subir_cancion.Name = "ruta_archivo_cancion_txt_subir_cancion";
             this.ruta_archivo_cancion_txt_subir_cancion.Size = new System.Drawing.Size(635, 14);

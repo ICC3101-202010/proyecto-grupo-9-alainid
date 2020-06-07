@@ -142,7 +142,7 @@ namespace ALAINID_DEFINITIVO
 
         private void btn_subir_cancion_admin_Click(object sender, EventArgs e)
         {
-
+            try { 
             Artista cantante = new Artista(nombrecantante_txt_agregar_admin.Text, int.Parse(edadcantante_txt_agregar_admin.Text), sexocantante_txt_agregar_admin.Text, nacionalidadcantante_txt_agregar_admin.Text);
             Artista compositor = new Artista(nombrecompositor_txt_agregar_admin.Text, int.Parse(edadcompositor_txt_agregar_admin.Text), sexocompositor_txt_agregar_admin.Text, nacionalidad_txt_agregar_admin.Text);
             Proyecto_Forms.ALAINID.Activarlistacanciones();
@@ -166,7 +166,12 @@ namespace ALAINID_DEFINITIVO
             ruta_cancion = "";
             ruta_archivo_cancion_txt_subir_cancion.Text = "";
             checkBox_repetir_cantante_como_compositor .Checked = false;
+            }
+            catch
+            {
+                MessageBox.Show("Debe Ingresar Todos los Datos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Stop);
 
+            }
         }
         private void checkBox_repetir_cantante_como_compositor_CheckedChanged(object sender, EventArgs e)
         {
@@ -277,6 +282,7 @@ namespace ALAINID_DEFINITIVO
         public string ruta_video;
         private void btn_importar_video_agregar_video_admin_Click(object sender, EventArgs e)
         {
+
             if (openfile_subirvideo_admin.ShowDialog() == DialogResult.OK)
             {
                 archivo_video_importar_video.Text = openfile_subirvideo_admin.FileName;
@@ -294,44 +300,54 @@ namespace ALAINID_DEFINITIVO
             Proyecto_Forms.ALAINID.Activarlistavideos();
             Proyecto_Forms.ALAINID.Partirlistadirectores();
             Proyecto_Forms.ALAINID.Partirlistaactores();
-            Artista director = new Artista(nombredirector_agregar_video_admin.Text, int.Parse(edaddirector_agregar_video_admin.Text), sexodirector_agregar_video_admin.Text, nacionalidaddirector_agregar_video_admin.Text);
-            List<Artista> actores = new List<Artista>();
-            int existe = 0;
-            for (int i = 0; i < tabla_agregar_actores_en_video.Rows.Count-1; i++)
+            try
             {
-                string nombre_act = tabla_agregar_actores_en_video.Rows[i].Cells[0].Value.ToString();
-                string edad_actor = tabla_agregar_actores_en_video.Rows[i].Cells[1].Value.ToString();
-                string sexo_actor = tabla_agregar_actores_en_video.Rows[i].Cells[2].Value.ToString();
-                string naci_actor = tabla_agregar_actores_en_video.Rows[i].Cells[3].Value.ToString();
-                Artista actor = new Artista(nombre_act, int.Parse(edad_actor), sexo_actor, naci_actor);
-
-                foreach (Artista act in Proyecto_Forms.ALAINID.lista_actores)
+                Artista director = new Artista(nombredirector_agregar_video_admin.Text, int.Parse(edaddirector_agregar_video_admin.Text), sexodirector_agregar_video_admin.Text, nacionalidaddirector_agregar_video_admin.Text); 
+            
+                List<Artista> actores = new List<Artista>();
+                int existe = 0;
+                for (int i = 0; i < tabla_agregar_actores_en_video.Rows.Count-1; i++)
                 {
-                    if (act.Name.ToLower() == nombre_act.ToLower() && act.Nacionality.ToLower() == naci_actor.ToLower())
+                    string nombre_act = tabla_agregar_actores_en_video.Rows[i].Cells[0].Value.ToString();
+                    string edad_actor = tabla_agregar_actores_en_video.Rows[i].Cells[1].Value.ToString();
+                    string sexo_actor = tabla_agregar_actores_en_video.Rows[i].Cells[2].Value.ToString();
+                    string naci_actor = tabla_agregar_actores_en_video.Rows[i].Cells[3].Value.ToString();
+                    Artista actor = new Artista(nombre_act, int.Parse(edad_actor), sexo_actor, naci_actor);
+
+                    foreach (Artista act in Proyecto_Forms.ALAINID.lista_actores)
                     {
-                        existe = 1;
-                        actores.Add(act);
+                        if (act.Name.ToLower() == nombre_act.ToLower() && act.Nacionality.ToLower() == naci_actor.ToLower())
+                        {
+                            existe = 1;
+                            actores.Add(act);
+                        }
+                    }
+                    if (existe != 1)
+                    {
+                        actores.Add(actor);
+                        Proyecto_Forms.ALAINID.lista_actores.Add(actor);
                     }
                 }
-                if (existe != 1)
-                {
-                    actores.Add(actor);
-                    Proyecto_Forms.ALAINID.lista_actores.Add(actor);
-                }
-            }
 
-            a.Subir_video(actores, nombrevideo_agregar_video_admin.Text, categoriavideo_agregar_video_admin.Text, director, generovideo_agregar_video_admin.Text, aniopubvideo_agregar_video_admin.Text, filmstudiovideo_agregar_video_admin.Text, ruta_video);
-            archivo_video_importar_video.Text = "";
-            nombrevideo_agregar_video_admin.Text = "";
-            categoriavideo_agregar_video_admin.Text = "";
-            generovideo_agregar_video_admin.Text = "";
-            aniopubvideo_agregar_video_admin.Text = "";
-            filmstudiovideo_agregar_video_admin.Text = "";
-            nombredirector_agregar_video_admin.Text = "";
-            edaddirector_agregar_video_admin.Text = "";
-            sexodirector_agregar_video_admin.Text = "";
-            nacionalidaddirector_agregar_video_admin.Text = "";
-            ruta_video = "";
+                a.Subir_video(actores, nombrevideo_agregar_video_admin.Text, categoriavideo_agregar_video_admin.Text, director, generovideo_agregar_video_admin.Text, aniopubvideo_agregar_video_admin.Text, filmstudiovideo_agregar_video_admin.Text, ruta_video);
+                MessageBox.Show("VIDEO SUBIDO EXITOSAMENTE", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.None);
+                archivo_video_importar_video.Text = "";
+                nombrevideo_agregar_video_admin.Text = "";
+                categoriavideo_agregar_video_admin.Text = "";
+                generovideo_agregar_video_admin.Text = "";
+                aniopubvideo_agregar_video_admin.Text = "";
+                filmstudiovideo_agregar_video_admin.Text = "";
+                nombredirector_agregar_video_admin.Text = "";
+                edaddirector_agregar_video_admin.Text = "";
+                sexodirector_agregar_video_admin.Text = "";
+                nacionalidaddirector_agregar_video_admin.Text = "";
+                ruta_video = "";
+            }
+            catch
+            {
+                MessageBox.Show("Debe Ingresar Todos los Datos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+
+            }
         }
 
         private void videosToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -531,6 +547,7 @@ namespace ALAINID_DEFINITIVO
         }
         private void btn_editar_usuarios_admin_Click(object sender, EventArgs e)
         {
+            try { 
             int fil = tabla_usuarios_admin.RowCount;
             int col = tabla_usuarios_admin.ColumnCount;
             tabla_usuarios_admin.ReadOnly = false;
@@ -543,6 +560,12 @@ namespace ALAINID_DEFINITIVO
                         tabla_usuarios_admin.Rows[i].Cells[ii].ReadOnly = false;
                     }
                 }
+            }
+            }
+            catch
+            {
+                MessageBox.Show("Debe Ingresar Todos los Datos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+
             }
         }
         private void btn_guardar_usuarios_admin_Click(object sender, EventArgs e)
@@ -561,6 +584,7 @@ namespace ALAINID_DEFINITIVO
             {
                 Program.usuario_activo.Nombreusuario = nombredeusuario_txt_perfil_usuario.Text;
             }*/
+            try { 
             if (f != -1)
             {
                 switch (c)
@@ -631,6 +655,12 @@ namespace ALAINID_DEFINITIVO
                         tabla_usuarios_admin.Rows[i].Cells[ii].ReadOnly = true;
                     }
                 }
+            }
+            }
+            catch
+            {
+                MessageBox.Show("Debe Ingresar Todos los Datos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+
             }
         }
 
@@ -797,6 +827,7 @@ namespace ALAINID_DEFINITIVO
 
         private void btn_subir_cancion_karaoke_Click(object sender, EventArgs e)
         {
+            try { 
             Artista cantante = new Artista(nombrecantante_text_cancion_karaoke.Text, int.Parse(edadcantante_text_cancion_karaoke.Text), sexocantante_text_cancion_karaoke.Text, nacioncompositor_text_cancion_karaoke.Text);
             Artista compositor = new Artista(nombrecompositor_text_cancion_karaoke.Text, int.Parse(edadcompositor_text_cancion_karaoke.Text), sexocompositor_text_cancion_karaoke.Text, nacioncompositor_text_cancion_karaoke.Text);
             //Proyecto_Forms.ALAINID.Activarlistacanciones();
@@ -804,6 +835,7 @@ namespace ALAINID_DEFINITIVO
             //Proyecto_Forms.ALAINID.Partirlistacompositores();
             //Proyecto_Forms.ALAINID.Partirlistaalbumes();
             a.AgregarSongKaraoke(nombre_text_cancion_karaoke.Text, cantante, genero_text_cancion_karaoke.Text, compositor, aniopublicacion_text_cancion_karaoke.Text, Disquera_text_cancion_karaoke.Text, album_text_cancion_karaoke.Text, ruta_cancion_karaoke);
+            MessageBox.Show("CANCION KARAOKE SUBIDA EXITOSAMENTE", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.None);
             archivo_text_cancion_karaoke.Text = "";
             nombrecantante_text_cancion_karaoke.Text = "";
             edadcantante_text_cancion_karaoke.Text = "";
@@ -820,6 +852,12 @@ namespace ALAINID_DEFINITIVO
             album_text_cancion_karaoke.Text = "";
             ruta_cancion_karaoke = "";
             checkBox_repetir_cantante_como_compositor.Checked = false;
+            }
+            catch
+            {
+                MessageBox.Show("Debe Ingresar Todos los Datos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+
+            }
         }
 
         public string ruta_cancion_karaoke;

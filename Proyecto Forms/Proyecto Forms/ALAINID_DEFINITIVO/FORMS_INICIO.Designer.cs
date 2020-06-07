@@ -135,9 +135,9 @@
             this.panel1_registrarse.Controls.Add(this.mail_text_de_registrarse);
             this.panel1_registrarse.Controls.Add(this.label1);
             this.panel1_registrarse.Controls.Add(this.btn_registrar_de_registrarse);
-            this.panel1_registrarse.Location = new System.Drawing.Point(556, 183);
+            this.panel1_registrarse.Location = new System.Drawing.Point(562, 183);
             this.panel1_registrarse.Name = "panel1_registrarse";
-            this.panel1_registrarse.Size = new System.Drawing.Size(51, 33);
+            this.panel1_registrarse.Size = new System.Drawing.Size(28, 37);
             this.panel1_registrarse.TabIndex = 19;
             this.panel1_registrarse.Visible = false;
             this.panel1_registrarse.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_registrarse_Paint);
@@ -208,43 +208,43 @@
             // 
             // pass_text_de_registrarse
             // 
-            this.pass_text_de_registrarse.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pass_text_de_registrarse.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pass_text_de_registrarse.Location = new System.Drawing.Point(302, 367);
             this.pass_text_de_registrarse.Margin = new System.Windows.Forms.Padding(2);
             this.pass_text_de_registrarse.Name = "pass_text_de_registrarse";
             this.pass_text_de_registrarse.PasswordChar = '*';
-            this.pass_text_de_registrarse.Size = new System.Drawing.Size(258, 38);
+            this.pass_text_de_registrarse.Size = new System.Drawing.Size(258, 31);
             this.pass_text_de_registrarse.TabIndex = 22;
             this.pass_text_de_registrarse.UseSystemPasswordChar = true;
             this.pass_text_de_registrarse.TextChanged += new System.EventHandler(this.pass_text_de_registrarse_TextChanged);
             // 
             // nombre_completo_text_de_registrarse
             // 
-            this.nombre_completo_text_de_registrarse.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nombre_completo_text_de_registrarse.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nombre_completo_text_de_registrarse.Location = new System.Drawing.Point(302, 292);
             this.nombre_completo_text_de_registrarse.Margin = new System.Windows.Forms.Padding(2);
             this.nombre_completo_text_de_registrarse.Name = "nombre_completo_text_de_registrarse";
-            this.nombre_completo_text_de_registrarse.Size = new System.Drawing.Size(258, 38);
+            this.nombre_completo_text_de_registrarse.Size = new System.Drawing.Size(258, 31);
             this.nombre_completo_text_de_registrarse.TabIndex = 21;
             this.nombre_completo_text_de_registrarse.TextChanged += new System.EventHandler(this.nombre_completo_text_de_registrarse_TextChanged);
             // 
             // nombre_usuario_text_de_registrarse
             // 
-            this.nombre_usuario_text_de_registrarse.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nombre_usuario_text_de_registrarse.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nombre_usuario_text_de_registrarse.Location = new System.Drawing.Point(302, 219);
             this.nombre_usuario_text_de_registrarse.Margin = new System.Windows.Forms.Padding(2);
             this.nombre_usuario_text_de_registrarse.Name = "nombre_usuario_text_de_registrarse";
-            this.nombre_usuario_text_de_registrarse.Size = new System.Drawing.Size(258, 38);
+            this.nombre_usuario_text_de_registrarse.Size = new System.Drawing.Size(258, 31);
             this.nombre_usuario_text_de_registrarse.TabIndex = 20;
             this.nombre_usuario_text_de_registrarse.TextChanged += new System.EventHandler(this.nombre_usuario_text_de_registrarse_TextChanged);
             // 
             // mail_text_de_registrarse
             // 
-            this.mail_text_de_registrarse.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mail_text_de_registrarse.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mail_text_de_registrarse.Location = new System.Drawing.Point(302, 149);
             this.mail_text_de_registrarse.Margin = new System.Windows.Forms.Padding(2);
             this.mail_text_de_registrarse.Name = "mail_text_de_registrarse";
-            this.mail_text_de_registrarse.Size = new System.Drawing.Size(258, 38);
+            this.mail_text_de_registrarse.Size = new System.Drawing.Size(258, 31);
             this.mail_text_de_registrarse.TabIndex = 19;
             this.mail_text_de_registrarse.TextChanged += new System.EventHandler(this.mail_text_de_registrarse_TextChanged);
             // 
@@ -357,23 +357,23 @@
             // 
             // pass_txt_inicio_sesion
             // 
-            this.pass_txt_inicio_sesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pass_txt_inicio_sesion.Location = new System.Drawing.Point(367, 235);
+            this.pass_txt_inicio_sesion.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pass_txt_inicio_sesion.Location = new System.Drawing.Point(395, 241);
             this.pass_txt_inicio_sesion.Margin = new System.Windows.Forms.Padding(2);
             this.pass_txt_inicio_sesion.Name = "pass_txt_inicio_sesion";
             this.pass_txt_inicio_sesion.PasswordChar = '*';
-            this.pass_txt_inicio_sesion.Size = new System.Drawing.Size(335, 38);
+            this.pass_txt_inicio_sesion.Size = new System.Drawing.Size(291, 31);
             this.pass_txt_inicio_sesion.TabIndex = 12;
             this.pass_txt_inicio_sesion.UseSystemPasswordChar = true;
             this.pass_txt_inicio_sesion.TextChanged += new System.EventHandler(this.pass_txt_inicio_sesion_TextChanged);
             // 
             // nombre_completo_txt_inicio_sesion
             // 
-            this.nombre_completo_txt_inicio_sesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nombre_completo_txt_inicio_sesion.Location = new System.Drawing.Point(367, 148);
+            this.nombre_completo_txt_inicio_sesion.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nombre_completo_txt_inicio_sesion.Location = new System.Drawing.Point(395, 164);
             this.nombre_completo_txt_inicio_sesion.Margin = new System.Windows.Forms.Padding(2);
             this.nombre_completo_txt_inicio_sesion.Name = "nombre_completo_txt_inicio_sesion";
-            this.nombre_completo_txt_inicio_sesion.Size = new System.Drawing.Size(335, 38);
+            this.nombre_completo_txt_inicio_sesion.Size = new System.Drawing.Size(291, 31);
             this.nombre_completo_txt_inicio_sesion.TabIndex = 11;
             this.nombre_completo_txt_inicio_sesion.TextChanged += new System.EventHandler(this.nombre_completo_txt_inicio_sesion_TextChanged);
             // 

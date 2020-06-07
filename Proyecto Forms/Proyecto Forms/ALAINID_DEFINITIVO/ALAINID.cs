@@ -12,6 +12,7 @@ using System.Drawing;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ALAINID_DEFINITIVO;
+using System.Text.RegularExpressions;
 
 namespace Proyecto_Forms
 {
@@ -57,6 +58,69 @@ namespace Proyecto_Forms
         //===============================================TODO LO QUE ES SERIALIZATION================================================================
 
 
+        public static bool comprobar_mail(String email)
+        {
+            String expresion;
+            expresion = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
+            if (Regex.IsMatch(email, expresion))
+            {
+                if (Regex.Replace(email, expresion, String.Empty).Length == 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public static void Activar_todo()// implementa todos los metodos de activas o partir de una
+        {
+            Activarlista();
+            Partirlistaalbumes();
+            Activarlistacanciones();
+            Activarlistacantantes();
+            Partirlistacompositores();
+            Partirlistadirectores();
+            Activarlistavideos();
+            activark();
+            Partirkaraoke();
+            Partir();
+            Partirlistaactores();
+        }
+        public static void Almacenar_todo() // imoplementa todos los metodos de almacenamiento de una
+        {
+            AlmacenarCompositores(lista_compositores);
+            AlmacenarDirectores(lista_directores);
+            AlmacenarActores(lista_actores);
+            AlmacenarAlbum(todos_los_albumes);
+            AlmacenarCanciones(todas_las_canciones);
+            AlmacenarVideos(todos_los_videos);
+            AlmacenarCantante(lista_cantantes);
+            Almacenar(listausuarios);
+            AlmacenarKaraoke(todas_las_cancioneskaraoke);
+        }
+        public static void Cargar_todo()  // implementa todos los metodos de cargar de una
+        {
+            CargarCompositores();
+            CargarDirectores();
+            CargarActores();
+            CargarAlbum();
+            CargarCancion();
+            CargarVideos();
+            CargarCantantes();
+            Cargar();
+            CargarKaraoke();
+        } 
+
+        /// todo lo que es partir partiendo parti con gubbins
+
+
         public static void Activarlistacantantes()
         {
             lista_cantantes = CargarCantantes();
@@ -73,7 +137,6 @@ namespace Proyecto_Forms
         {
             AlmacenarCanciones(todas_las_canciones);
         }
-
         public static void Activarlista()
         {
             listausuarios = Cargar();
@@ -87,6 +150,28 @@ namespace Proyecto_Forms
         {
             todos_los_videos = CargarVideos();
         }
+        public static void Partirlistacompositores()
+        {
+            lista_compositores = CargarCompositores();
+        }
+        public static void Partirlistadirectores()
+        {
+            lista_directores = CargarDirectores();
+        }
+        public static void Partirlistaactores()
+        {
+            lista_actores = CargarActores();
+        }
+        public static void Partirlistaalbumes()
+        {
+            todos_los_albumes = CargarAlbum();
+        }
+        
+
+
+
+        //todo lo que es almacenar almacenando almacenamos con gubbins
+
         public static void AlmacenarCompositores(List<Artista> u)      //Serializamos
         {
             IFormatter formatter5 = new BinaryFormatter();
@@ -94,6 +179,66 @@ namespace Proyecto_Forms
             formatter5.Serialize(stream5, u);
             stream5.Close();
         }
+        public static void AlmacenarDirectores(List<Artista> u)      //Serializamos
+        {
+            IFormatter formatter5 = new BinaryFormatter();
+            Stream stream5 = new FileStream("Directores.bin", FileMode.OpenOrCreate, FileAccess.Write, FileShare.None);
+            formatter5.Serialize(stream5, u);
+            stream5.Close();
+        }
+        public static void AlmacenarActores(List<Artista> u)      //Serializamos
+        {
+            IFormatter formatter5 = new BinaryFormatter();
+            Stream stream5 = new FileStream("Actores.bin", FileMode.OpenOrCreate, FileAccess.Write, FileShare.None);
+            formatter5.Serialize(stream5, u);
+            stream5.Close();
+        }
+        public static void AlmacenarAlbum(List<PlaylistSong> u)      //Serializamos
+        {
+            IFormatter formatter5 = new BinaryFormatter();
+            Stream stream5 = new FileStream("Albums.bin", FileMode.OpenOrCreate, FileAccess.Write, FileShare.None);
+            formatter5.Serialize(stream5, u);
+            stream5.Close();
+        }
+        static void AlmacenarCanciones(List<Song> s)      //Serializamos
+        {
+            IFormatter formatter3 = new BinaryFormatter();
+            Stream stream3 = new FileStream("Canciones.bin", FileMode.OpenOrCreate, FileAccess.Write, FileShare.None);
+            formatter3.Serialize(stream3, s);
+            stream3.Close();
+        }
+        public static void AlmacenarVideos(List<Video> u)      //Serializamos
+        {
+            IFormatter formatter5 = new BinaryFormatter();
+            Stream stream5 = new FileStream("Videos.bin", FileMode.OpenOrCreate, FileAccess.Write, FileShare.None);
+            formatter5.Serialize(stream5, u);
+            stream5.Close();
+        }
+        public static void AlmacenarCantante(List<Artista> a)      //Serializamos
+        {
+            IFormatter formatter7 = new BinaryFormatter();
+            Stream stream7 = new FileStream("Cantantes.bin", FileMode.OpenOrCreate, FileAccess.Write, FileShare.None);
+            formatter7.Serialize(stream7, a);
+            stream7.Close();
+        }
+        public static void Almacenar(List<User> u)      //Serializamos
+        {
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream("Usuarios2.bin", FileMode.OpenOrCreate, FileAccess.Write, FileShare.None);
+            formatter.Serialize(stream, u);
+            stream.Close();
+        }
+        public static void AlmacenarKaraoke(List<Song> k)      //Serializamos
+        {
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream("Cancioneskaraoke.bin", FileMode.OpenOrCreate, FileAccess.Write, FileShare.None);
+            formatter.Serialize(stream, k);
+            stream.Close();
+        }
+
+
+
+        // todo lo que es cargar con gubbins
         public static List<Artista> CargarCompositores()
         {
             IFormatter formatter6 = new BinaryFormatter();
@@ -110,17 +255,6 @@ namespace Proyecto_Forms
                 stream6.Close();
                 return v;
             }
-        }
-        public static void Partirlistacompositores()
-        {
-            lista_compositores = CargarCompositores();
-        }
-        public static void AlmacenarDirectores(List<Artista> u)      //Serializamos
-        {
-            IFormatter formatter5 = new BinaryFormatter();
-            Stream stream5 = new FileStream("Directores.bin", FileMode.OpenOrCreate, FileAccess.Write, FileShare.None);
-            formatter5.Serialize(stream5, u);
-            stream5.Close();
         }
         public static List<Artista> CargarDirectores()
         {
@@ -140,17 +274,6 @@ namespace Proyecto_Forms
                 return v;
             }
         }
-        public static void Partirlistadirectores()
-        {
-            lista_directores = CargarDirectores();
-        }
-        public static void AlmacenarActores(List<Artista> u)      //Serializamos
-        {
-            IFormatter formatter5 = new BinaryFormatter();
-            Stream stream5 = new FileStream("Actores.bin", FileMode.OpenOrCreate, FileAccess.Write, FileShare.None);
-            formatter5.Serialize(stream5, u);
-            stream5.Close();
-        }
         public static List<Artista> CargarActores()
         {
             IFormatter formatter6 = new BinaryFormatter();
@@ -169,17 +292,6 @@ namespace Proyecto_Forms
                 return v;
             }
         }
-        public static void Partirlistaactores()
-        {
-            lista_actores = CargarActores();
-        }
-        public static void AlmacenarAlbum(List<PlaylistSong> u)      //Serializamos
-        {
-            IFormatter formatter5 = new BinaryFormatter();
-            Stream stream5 = new FileStream("Albums.bin", FileMode.OpenOrCreate, FileAccess.Write, FileShare.None);
-            formatter5.Serialize(stream5, u);
-            stream5.Close();
-        }
         public static List<PlaylistSong> CargarAlbum()
         {
             IFormatter formatter6 = new BinaryFormatter();
@@ -197,17 +309,6 @@ namespace Proyecto_Forms
                 stream6.Close();
                 return v;
             }
-        }
-        public static void Partirlistaalbumes()
-        {
-            todos_los_albumes = CargarAlbum();
-        }
-        static void AlmacenarCanciones(List<Song> s)      //Serializamos
-        {
-            IFormatter formatter3 = new BinaryFormatter();
-            Stream stream3 = new FileStream("Canciones.bin", FileMode.OpenOrCreate, FileAccess.Write, FileShare.None);
-            formatter3.Serialize(stream3, s);
-            stream3.Close();
         }
         static List<Song> CargarCancion()
         {
@@ -229,14 +330,6 @@ namespace Proyecto_Forms
                 return s2;
             }
         }
-
-        public static void AlmacenarVideos(List<Video> u)      //Serializamos
-        {
-            IFormatter formatter5 = new BinaryFormatter();
-            Stream stream5 = new FileStream("Videos.bin", FileMode.OpenOrCreate, FileAccess.Write, FileShare.None);
-            formatter5.Serialize(stream5, u);
-            stream5.Close();
-        }
         public static List<Video> CargarVideos()
         {
             IFormatter formatter6 = new BinaryFormatter();
@@ -255,14 +348,6 @@ namespace Proyecto_Forms
                 return v;
             }
         }
-        //======================================================BINARIOCANTANTES=====================================================================================0000
-        public static void AlmacenarCantante(List<Artista> a)      //Serializamos
-        {
-            IFormatter formatter7 = new BinaryFormatter();
-            Stream stream7 = new FileStream("Cantantes.bin", FileMode.OpenOrCreate, FileAccess.Write, FileShare.None);
-            formatter7.Serialize(stream7, a);
-            stream7.Close();
-        }
         public static List<Artista> CargarCantantes()
         {
             IFormatter formatter8 = new BinaryFormatter();
@@ -280,14 +365,6 @@ namespace Proyecto_Forms
                 return ar;
             }
         }
-
-        public static void Almacenar(List<User> u)      //Serializamos
-        {
-            IFormatter formatter = new BinaryFormatter();
-            Stream stream = new FileStream("Usuarios2.bin", FileMode.OpenOrCreate, FileAccess.Write, FileShare.None);
-            formatter.Serialize(stream, u);
-            stream.Close();
-        }
         public static List<User> Cargar()
         {
             IFormatter formatter2 = new BinaryFormatter();
@@ -304,13 +381,6 @@ namespace Proyecto_Forms
                 stream2.Close();
                 return p;
             }
-        }
-        public static void AlmacenarKaraoke(List<Song> k)      //Serializamos
-        {
-            IFormatter formatter = new BinaryFormatter();
-            Stream stream = new FileStream("Cancioneskaraoke.bin", FileMode.OpenOrCreate, FileAccess.Write, FileShare.None);
-            formatter.Serialize(stream, k);
-            stream.Close();
         }
         public static List<Song> CargarKaraoke()
         {
@@ -330,6 +400,8 @@ namespace Proyecto_Forms
                 return k3;
             }
         }
+        
+        
         //===============================================HASTA AQUI ES TODO LO QUE ES SERIALIZATION================================================================
         //===============================================HASTA AQUI ES TODO LO QUE ES SERIALIZATION================================================================
         //===============================================HASTA AQUI ES TODO LO QUE ES SERIALIZATION================================================================
@@ -2340,7 +2412,6 @@ namespace Proyecto_Forms
         // METODOS FILTROS VIDEO=============================================================================
 
         public static List<string> lista_criterios_filtro2v = new List<string>();         
-        public static List<string> lista_criterios_filtro3v = new List<string>();           
         public static List<Video> lista_canciones_filtromiltiplev = new List<Video>();           
         public static List<Artista> lista_artistas_filtromiltiplev = new List<Artista>();          
         public static List<Video> lista_filtrandov = new List<Video>();          
@@ -2680,7 +2751,6 @@ namespace Proyecto_Forms
         {
             lista_canciones_filtromiltiplev.Clear();
             lista_artistas_filtromiltiplev.Clear();
-            lista_criterios_filtro3v.Clear();
             foreach (Video caca in todos_los_videos)
             {
                 lista_canciones_filtromiltiplev.Add(caca);
@@ -2693,16 +2763,8 @@ namespace Proyecto_Forms
             {
                 lista_artistas_filtromiltiplev.Add(comcom);
             }
-            foreach (string cricri in lista_criterios_filtro2v)
-            {
-                lista_criterios_filtro3v.Add(cricri);
-            }
+            
             canciones_filtradasv.Clear();            
-            Console.WriteLine("Usted selecciono buscar por:");
-            foreach (string c in criterios_seleccionados)
-            {
-                Console.WriteLine(" - " + c);
-            }
             foreach (string crit in criterios_seleccionados)
             {
                 List<string> criterio2 = new List<string>();
@@ -2741,7 +2803,6 @@ namespace Proyecto_Forms
         {
             lista_canciones_filtromiltiplev.Clear();
             lista_artistas_filtromiltiplev.Clear();
-            lista_criterios_filtro3v.Clear();
             foreach (Video caca in todos_los_videos)
             {
                 lista_canciones_filtromiltiplev.Add(caca);
@@ -2754,10 +2815,7 @@ namespace Proyecto_Forms
             {
                 lista_artistas_filtromiltiplev.Add(comcom);
             }
-            foreach (string cricri in lista_criterios_filtro2v)
-            {
-                lista_criterios_filtro3v.Add(cricri);
-            }
+           
             canciones_filtradasv.Clear();
             lista_filtrando2.Clear();
             foreach (Video ss in Filtroporcriteriovideo(criterios_seleccionados[0], criterios_ingresados[0]))
@@ -2778,12 +2836,6 @@ namespace Proyecto_Forms
                     canciones_filtradasv.Add(ss);
                 }
                 count2++;
-            }
-            if (lista_filtrada_finalv.Count == 0)
-            {
-                Console.WriteLine("");
-
-
             }
             int si;
             foreach (Video ccc in canciones_filtradasv)
@@ -2809,7 +2861,6 @@ namespace Proyecto_Forms
 
         // METODOS DE FILTROS CANCIONES=============================================================
         public static List<string> lista_criterios_filtro2 = new List<string>();
-        public static List<string> lista_criterios_filtro3 = new List<string>();
         public static List<Song> lista_canciones_filtromiltiple = new List<Song>();
         public static List<Artista> lista_artistas_filtromiltiple = new List<Artista>();
         public static List<Song> lista_filtrando = new List<Song>();
@@ -3030,7 +3081,6 @@ namespace Proyecto_Forms
         {
             lista_canciones_filtromiltiple.Clear();
             lista_artistas_filtromiltiple.Clear();
-            lista_criterios_filtro3.Clear();
             foreach (Song caca in todas_las_canciones)
             {
                 lista_canciones_filtromiltiple.Add(caca);
@@ -3042,10 +3092,6 @@ namespace Proyecto_Forms
             foreach (Artista comcom in lista_compositores)
             {
                 lista_artistas_filtromiltiple.Add(comcom);
-            }
-            foreach (String cricri in lista_criterios_filtro2)
-            {
-                lista_criterios_filtro3.Add(cricri);
             }
             canciones_filtradas.Clear();
             lista_filtrando2.Clear();
@@ -3097,7 +3143,6 @@ namespace Proyecto_Forms
         {
             lista_canciones_filtromiltiple.Clear();
             lista_artistas_filtromiltiple.Clear();
-            lista_criterios_filtro3.Clear();
             foreach (Song caca in todas_las_canciones)
             {
                 lista_canciones_filtromiltiple.Add(caca);
@@ -3110,44 +3155,62 @@ namespace Proyecto_Forms
             {
                 lista_artistas_filtromiltiple.Add(comcom);
             }
-            foreach (String cricri in lista_criterios_filtro2)
-            {
-                lista_criterios_filtro3.Add(cricri);
-            }
             canciones_filtradas.Clear();
-
-            foreach (String crit in criterios_seleccionados)
+            List<string> s2 = new List<string>();//revisar esta lista
+            s2.Clear();
+            int i = 1;
+            while (i <= criterios_seleccionados.Count())
             {
-                List<string> criterio2 = new List<string>();
-                foreach (string palabra in criterio)
+                s2.Clear();
+                foreach (string select in criterios_seleccionados)
                 {
-                    criterio2.Add(palabra);
+                    
+                    s2.Add(select);
                 }
-                foreach (string c in criterio2)
+                foreach (String crit in s2)
                 {
-                    lista_filtrando2.Clear();
-                    foreach (Song ss in CancionesPorCriterio(crit, c))
+
+                    List<string> criterio2 = new List<string>();
+                    criterio2.Clear();
+                    foreach (string palabra in criterio)
                     {
-                        lista_filtrando2.Add(ss);
+                        criterio2.Add(palabra);
+                        
                     }
-                    foreach (Song ccc in lista_filtrando2)
+                    foreach (string c in criterio2)
                     {
-                        int si = 0;
-                        foreach (Song canc in canciones_filtradas)
+                        lista_filtrando2.Clear();
+                        foreach (Song ss in CancionesPorCriterio(crit, c))
                         {
-                            if (ccc.Nombrecancion == canc.Nombrecancion)
-                            {
-                                si++;
-                            }
+                            lista_filtrando2.Add(ss);
                         }
-                        if (si == 0)
-                        {
-                            canciones_filtradas.Add(ccc);
-                        }
+                        criterios_seleccionados.Remove(crit);
+                        criterio.Remove(c);
+                        break;
                     }
                     break;
                 }
+                i++;
             }
+
+            foreach (Song ccc in lista_filtrando2)
+            {
+                int si = 0;
+                foreach (Song canc in canciones_filtradas)
+                {
+                    if (ccc.Nombrecancion == canc.Nombrecancion)
+                    {
+                        si++;
+                    }
+                }
+                if (si == 0)
+                {
+                    canciones_filtradas.Add(ccc);
+                }
+            }
+            
+                
+            
             return canciones_filtradas;
         }
 
