@@ -69,17 +69,18 @@ namespace Proyecto_Forms
 
         public static void Activar_todo()// implementa todos los metodos de activas o partir de una
         {
-            Activarlista();
-            Partirlistaalbumes();
-            Activarlistacanciones();
-            Activarlistacantantes();
-            Partirlistacompositores();
-            Partirlistadirectores();
-            Activarlistavideos();
-            activark();
-            Partirlistaactores();
-            
+            todos_los_albumes = CargarAlbum();
+            lista_actores = CargarActores();
+            lista_directores = CargarDirectores();
+            lista_compositores = CargarCompositores();
+            todos_los_videos = CargarVideos();
+            todas_las_canciones = CargarCancion();
+            listausuarios = Cargar();
+            todas_las_cancioneskaraoke = CargarKaraoke();
+            lista_cantantes = CargarCantantes();
         }
+
+    
         public static void Almacenar_todo() // imoplementa todos los metodos de almacenamiento de una
         {
             AlmacenarCompositores(lista_compositores);
@@ -91,8 +92,7 @@ namespace Proyecto_Forms
             AlmacenarCantante(lista_cantantes);
             Almacenar(listausuarios);
             AlmacenarKaraoke(todas_las_cancioneskaraoke);
-            Partir();
-            Partirkaraoke();
+            
         }
 
 
@@ -299,12 +299,10 @@ namespace Proyecto_Forms
             {
                 List<Song> s2 = (List<Song>)formatter4.Deserialize(stream4);
                 stream4.Close();
-
                 return s2;
             }
             catch
             {
-                //Console.WriteLine("El archivo Canciones.bin no existe");
                 List<Song> s2 = new List<Song>();
                 Thread.Sleep(5000);
                 stream4.Close();
@@ -496,7 +494,7 @@ namespace Proyecto_Forms
        
         
 
-        public static string Agregarcancionaply(string email, string posicion, Song cancion)
+        public static string Agregarcancionaply(string email, string nombreply, Song cancion)
         {
             string info = "No se pudo agregar la cancion a la playlist";
             string funko = "";
@@ -504,10 +502,12 @@ namespace Proyecto_Forms
             {
                 if (listausuarios[j].Email_ == email)
                 {
-                    if (listausuarios[j].Lista_playlistusuario_.Count > int.Parse(posicion) - 1)
+                    foreach(PlaylistSong ply in listausuarios[j].Lista_playlistusuario_)
+                    if (ply.NombrePlaylist==nombreply)
                     {
-                        listausuarios[j].Lista_playlistusuario_[int.Parse(posicion) - 1].Listplay.Add(cancion);
+                        ply.Listplay.Add(cancion);
                         Almacenar(listausuarios);
+                        
                         funko = "si";
                     }
 
@@ -515,11 +515,11 @@ namespace Proyecto_Forms
             }
             if (funko == "si")
             {
-                info = "Cancion correctamente agregada a la playlist";
+                MessageBox.Show("Cancion agregada a playlist de forma exitosa", "Seguir", MessageBoxButtons.OK, MessageBoxIcon.None);
             }
             return info;
         }
-        public static string Agregarvideoaply(string email, string posicion, Video video)
+        public static string Agregarvideoaply(string email, string nombreply, Video video)
         {
             string info = "No se pudo agregar el video a la playlist";
             string funko = "";
@@ -527,18 +527,24 @@ namespace Proyecto_Forms
             {
                 if (listausuarios[j].Email_ == email)
                 {
-                    if (listausuarios[j].Lista_playlistvideousuario_.Count > int.Parse(posicion) - 1)
-                    {
-                        listausuarios[j].Lista_playlistvideousuario_[int.Parse(posicion) - 1].Listplayvideo.Add(video);
-                        Almacenar(listausuarios);
-                        funko = "si";
-                    }
+                    foreach (PlaylistVideo ply in listausuarios[j].Lista_playlistvideousuario_)
+                        if (ply.NombrePlaylist == nombreply)
+                        {
+                            ply.Listplayvideo.Add(video);
+                            Almacenar(listausuarios);
+                            funko = "si";
+                        }
                 }
             }
             if (funko == "si")
             {
-                info = "Video correctamente agregado a la playlist";
+                MessageBox.Show("Video agregado a playlist de forma exitosa", "Seguir", MessageBoxButtons.OK, MessageBoxIcon.None);
             }
+            else
+            {
+                MessageBox.Show("Por favor eleccione una playlist valida", "Seguir", MessageBoxButtons.OK, MessageBoxIcon.None);
+            }
+               
             return info;
         }
         public static string VerinformacionPlaylist(string email, string nombreply)
@@ -1308,7 +1314,7 @@ namespace Proyecto_Forms
             }
             return false;
         }
-        //=======================PREMIUM======================================================================================================0
+        //=======================PREMIUM======================================================================0
         public static bool VolversePremium(string email, string contrasena)
         {
             string funko = "correcto";
@@ -1926,8 +1932,12 @@ namespace Proyecto_Forms
                     {
                         total += todas_las_canciones[i].Todas_las_calificaciones[j];
                     }
-                    todas_las_canciones[i].Calificacionpromedio = total / todas_las_canciones[i].Todas_las_calificaciones.Count;
-                    AlmacenarCanciones(todas_las_canciones);
+                    if (todas_las_canciones[i].Todas_las_calificaciones.Count != 0)
+                    {
+                        todas_las_canciones[i].Calificacionpromedio = total / todas_las_canciones[i].Todas_las_calificaciones.Count;
+                        AlmacenarCanciones(todas_las_canciones);
+                    }
+                   
                 }
             }
         }
@@ -1942,8 +1952,11 @@ namespace Proyecto_Forms
                     {
                         total += todos_los_videos[i].Todas_las_calificaciones[j];
                     }
-                    todos_los_videos[i].Calificacion_promedio = total / todos_los_videos[i].Todas_las_calificaciones.Count;
-                    AlmacenarVideos(todos_los_videos);
+                    if (todos_los_videos[i].Todas_las_calificaciones.Count != 0)
+                    {
+                        todos_los_videos[i].Calificacion_promedio = total / todos_los_videos[i].Todas_las_calificaciones.Count;
+                        AlmacenarVideos(todos_los_videos);
+                    }
                 }
             }
         }
