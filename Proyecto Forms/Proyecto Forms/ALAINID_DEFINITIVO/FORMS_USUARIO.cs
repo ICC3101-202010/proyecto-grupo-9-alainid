@@ -124,37 +124,44 @@ namespace ALAINID_DEFINITIVO
         private void btnSocial_Click(object sender, EventArgs e)
         {
             Proyecto_Forms.ALAINID.Activar_todo();
-
+            tabla_resultados_busqueda_social.Rows.Clear();
             panel_social_menu.Visible = true;
             panel_social_menu.Dock = DockStyle.Fill;
-            foreach(User user in usuarios_busqueda_social)
+            Proyecto_Forms.ALAINID.Activar_todo();
+            tabla_seguidos_social.Rows.Clear();
+            tabla_seguidores_social.Rows.Clear();
+            foreach (User user1 in Proyecto_Forms.ALAINID.listausuarios)
             {
-                int n = tabla_seguidos_social.Rows.Add();
-                tabla_seguidos_social.Rows[n].Cells[0].Value = user.Nombre_;
-                tabla_seguidos_social.Rows[n].Cells[1].Value = "Usuario";
-                
-            }
-            foreach (Artista art in artistas_busqueda_social)
-            {
-                int n = tabla_seguidos_social.Rows.Add();
-                tabla_seguidos_social.Rows[n].Cells[0].Value = art.Name;
-                tabla_seguidos_social.Rows[n].Cells[1].Value = "Artista";
-
-            }
-            foreach(User user1 in Proyecto_Forms.ALAINID.listausuarios)
-            {
-                foreach(User seguido in user1.Usuarios_seguidos_)
+                if (user1.Email_ == Program.usuario_activo.Email_)
                 {
-                    if (seguido.Email_ == Program.usuario_activo.Email_)
+                    foreach(User u in user1.Usuarios_seguidos_)
                     {
-                        int n = tabla_seguidores_social.Rows.Add();
-                        tabla_seguidores_social.Rows[n].Cells[0].Value = user1.Nombre_;
-                        tabla_seguidores_social.Rows[n].Cells[1].Value = "Usuario";
+                        int n = tabla_seguidos_social.Rows.Add();
+                        tabla_seguidos_social.Rows[n].Cells[0].Value = u.Nombre_;
+                        tabla_seguidos_social.Rows[n].Cells[1].Value = "Usuario";
                         
+                    }
+                    foreach (Artista art in user1.Artistas_seguidos_)
+                    {
+                        int n = tabla_seguidos_social.Rows.Add();
+                        tabla_seguidos_social.Rows[n].Cells[0].Value = art.Name;
+                        tabla_seguidos_social.Rows[n].Cells[1].Value = "Artista";
+
                     }
                 }
             }
-
+            foreach (User user in Proyecto_Forms.ALAINID.listausuarios)
+            {
+                foreach (User u in user.Usuarios_seguidos_)
+                {
+                    if (u.Email_== Program.usuario_activo.Email_)
+                    {
+                        int n = tabla_seguidores_social.Rows.Add();
+                        tabla_seguidores_social.Rows[n].Cells[0].Value = user.Nombre_;
+                        tabla_seguidores_social.Rows[n].Cells[1].Value = "Usuario";
+                    }
+                }
+            }
         }
         private void btnPerfil_Click(object sender, EventArgs e)
         {
@@ -2642,11 +2649,12 @@ namespace ALAINID_DEFINITIVO
         }
         private void btn_atras_social_Click(object sender, EventArgs e)
         {
-            panel_social_menu.Visible = false;
             tabla_seguidores_social.Rows.Clear();
             tabla_seguidos_social.Rows.Clear();
             tabla_resultados_busqueda_social.Rows.Clear();
             palabra_clave_buscar_social.Text = "";
+            panel_social_menu.Visible = false;
+            
         }
         private void btn_atras_karaoke_Click(object sender, EventArgs e)
         {
@@ -2923,126 +2931,130 @@ namespace ALAINID_DEFINITIVO
         private void btn_buscar_en_social_Click(object sender, EventArgs e)
         {
             tabla_resultados_busqueda_social.Rows.Clear();
-            foreach(Artista actor in Proyecto_Forms.ALAINID.lista_actores)
+            artistas_busqueda_social.Clear();
+            usuarios_busqueda_social.Clear();
+            if (palabra_clave_buscar_social.Text != "")
             {
-                var q = palabra_clave_buscar_social.Text.Any(w => actor.Name.Contains(w));
-                var q1= palabra_clave_buscar_social.Text.Any(w => actor.Nacionality.Contains(w));
-                int esta = 0;
-                if (q == true || q1 == true)
+                foreach (Artista actor in Proyecto_Forms.ALAINID.lista_actores)
                 {
-                    foreach (Artista artista in artistas_busqueda_social)
+                    var q = false;
+                    q = actor.Name.ToLower().StartsWith(palabra_clave_buscar_social.Text.ToLower());
+                    int esta = 0;
+                    if (q == true)
                     {
-                        if (actor.Name == artista.Name)
+                        foreach (Artista artista in artistas_busqueda_social)
                         {
-                            esta = 1;
+                            if (actor.Name == artista.Name)
+                            {
+                                esta = 1;
+                            }
+                        }
+                        if (esta == 0)
+                        {
+                            artistas_busqueda_social.Add(actor);
                         }
                     }
-                    if (esta == 0)
-                    {
-                        artistas_busqueda_social.Add(actor);
-                    }
                 }
-            }
-            foreach (Artista director in Proyecto_Forms.ALAINID.lista_directores)
-            {
-                var q = palabra_clave_buscar_social.Text.Any(w => director.Name.Contains(w));
-                var q1 = palabra_clave_buscar_social.Text.Any(w => director.Nacionality.Contains(w));
-                int esta = 0;
-                if (q == true || q1 == true)
+                foreach (Artista director in Proyecto_Forms.ALAINID.lista_directores)
                 {
-                    foreach (Artista artista in artistas_busqueda_social)
+                    var q = false;
+                    q = director.Name.ToLower().StartsWith(palabra_clave_buscar_social.Text.ToLower());
+                    int esta = 0;
+                    if (q == true)
                     {
-                        if (director.Name == artista.Name)
+                        foreach (Artista artista in artistas_busqueda_social)
                         {
-                            esta = 1;
+                            if (director.Name == artista.Name)
+                            {
+                                esta = 1;
+                            }
+                        }
+                        if (esta == 0)
+                        {
+                            artistas_busqueda_social.Add(director);
                         }
                     }
-                    if (esta == 0)
-                    {
-                        artistas_busqueda_social.Add(director);
-                    }
                 }
-            }
-            foreach (Artista cantante in Proyecto_Forms.ALAINID.lista_cantantes)
-            {
-                var q = palabra_clave_buscar_social.Text.Any(w => cantante.Name.Contains(w));
-                var q1 = palabra_clave_buscar_social.Text.Any(w => cantante.Nacionality.Contains(w));
-                int esta = 0;
-                if (q == true || q1 == true)
+                foreach (Artista cantante in Proyecto_Forms.ALAINID.lista_cantantes)
                 {
-                    foreach (Artista artista in artistas_busqueda_social)
+                    var q = false;
+                    q = cantante.Name.ToLower().StartsWith(palabra_clave_buscar_social.Text.ToLower());
+                    int esta = 0;
+                    if (q == true)
                     {
-                        if (cantante.Name == artista.Name)
+                        foreach (Artista artista in artistas_busqueda_social)
                         {
-                            esta = 1;
+                            if (cantante.Name == artista.Name)
+                            {
+                                esta = 1;
+                            }
+                        }
+                        if (esta == 0)
+                        {
+                            artistas_busqueda_social.Add(cantante);
                         }
                     }
-                    if (esta == 0)
-                    {
-                        artistas_busqueda_social.Add(cantante);
-                    }
                 }
-            }
-            foreach (Artista compositor in Proyecto_Forms.ALAINID.lista_compositores)
-            {
-                var q = palabra_clave_buscar_social.Text.Any(w => compositor.Name.Contains(w));
-                var q1 = palabra_clave_buscar_social.Text.Any(w => compositor.Nacionality.Contains(w));
-                int esta = 0;
-                if (q == true || q1 == true)
+                foreach (Artista compositor in Proyecto_Forms.ALAINID.lista_compositores)
                 {
-                    foreach (Artista artista in artistas_busqueda_social)
+                    var q = false;
+                    q = compositor.Name.ToLower().StartsWith(palabra_clave_buscar_social.Text.ToLower());
+                    int esta = 0;
+                    if (q == true)
                     {
-                        if (compositor.Name == artista.Name)
+                        foreach (Artista artista in artistas_busqueda_social)
                         {
-                            esta = 1;
+                            if (compositor.Name == artista.Name)
+                            {
+                                esta = 1;
+                            }
+                        }
+                        if (esta == 0)
+                        {
+                            artistas_busqueda_social.Add(compositor);
                         }
                     }
-                    if (esta==0)
-                    {
-                        artistas_busqueda_social.Add(compositor);
-                    }
                 }
-            }
 
-            foreach(User user in Proyecto_Forms.ALAINID.listausuarios)
-            {
-                var q = palabra_clave_buscar_social.Text.Any(w => user.Email_.Contains(w));
-                var q1 = palabra_clave_buscar_social.Text.Any(w => user.Nombreusuario.Contains(w));
-                var q2 = palabra_clave_buscar_social.Text.Any(w => user.Nombre_.Contains(w));
-                if (q == true || q1 == true)
+                foreach (User user in Proyecto_Forms.ALAINID.listausuarios)
                 {
-                   
-                    usuarios_busqueda_social.Add(user);
+                    var q = false;
+                    q = user.Nombre_.ToLower().StartsWith(palabra_clave_buscar_social.Text.ToLower());
+                    if (q == true && user.Email_ != Program.usuario_activo.Email_)
+                    {
+                        usuarios_busqueda_social.Add(user);
+                    }
+                }
+                tabla_resultados_busqueda_social.Rows.Clear();
+                foreach (Artista artista in artistas_busqueda_social)
+                {
+                    int n = tabla_resultados_busqueda_social.Rows.Add();
+                    tabla_resultados_busqueda_social.Rows[n].Cells[0].Value = artista.Name;
+                    tabla_resultados_busqueda_social.Rows[n].Cells[1].Value = "Artista";
+                }
+                foreach (User user in usuarios_busqueda_social)
+                {
+                    int n = tabla_resultados_busqueda_social.Rows.Add();
+                    tabla_resultados_busqueda_social.Rows[n].Cells[0].Value = user.Email_;
+                    tabla_resultados_busqueda_social.Rows[n].Cells[1].Value = "Usuario";
                 }
             }
-            foreach(Artista artista in artistas_busqueda_social)
-            {
-                int n = tabla_resultados_busqueda_social.Rows.Add();
-                tabla_resultados_busqueda_social.Rows[n].Cells[0].Value = artista.Name;
-                tabla_resultados_busqueda_social.Rows[n].Cells[1].Value = "Artista";
-            }
-            foreach (User user in usuarios_busqueda_social)
-            {
-                int n = tabla_resultados_busqueda_social.Rows.Add();
-                tabla_resultados_busqueda_social.Rows[n].Cells[0].Value = user.Email_;
-                tabla_resultados_busqueda_social.Rows[n].Cells[1].Value = "Usuario";
-            }
-
         }
-        private void tabla_resultados_busqueda_social_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+
+        private void tabla_resultados_busqueda_social_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {//doble click en ver usuario para seguir social
             Proyecto_Forms.ALAINID.Activar_todo();
             int fila = e.RowIndex;
             email_persona_seguir_social = tabla_resultados_busqueda_social.Rows[fila].Cells[0].Value.ToString();
             tipo_persona_seguir_social = tabla_resultados_busqueda_social.Rows[fila].Cells[1].Value.ToString();
-            
+
             if (tipo_persona_seguir_social == "Usuario")
             {
                 panel_ver_usuario_busqueda_social.Visible = true;
                 panel_ver_usuario_busqueda_social.Dock = DockStyle.Fill;
                 foreach (User user in Proyecto_Forms.ALAINID.listausuarios)
                 {
-                    if (user.Email_== email_persona_seguir_social)
+                    if (user.Email_.ToLower() == email_persona_seguir_social.ToLower())
                     {
                         social_nombre_user_busqueda.Text = user.Nombre_;
                         social_email_user_busqueda.Text = user.Email_;
@@ -3050,13 +3062,13 @@ namespace ALAINID_DEFINITIVO
 
                     }
                 }
-                
+
             }
-            if (tipo_persona_seguir_social== "Artista")
+            if (tipo_persona_seguir_social == "Artista")
             {
                 foreach (Artista act in Proyecto_Forms.ALAINID.lista_actores)
                 {
-                    if (act.Name == email_persona_seguir_social)
+                    if (act.Name.ToLower() == email_persona_seguir_social.ToLower())
                     {
                         social_edad_artista.Text = act.Age.ToString();
                         social_naconalidad_artista.Text = act.Nacionality;
@@ -3067,7 +3079,7 @@ namespace ALAINID_DEFINITIVO
                 }
                 foreach (Artista dir in Proyecto_Forms.ALAINID.lista_directores)
                 {
-                    if (dir.Name == email_persona_seguir_social)
+                    if (dir.Name.ToLower() == email_persona_seguir_social.ToLower())
                     {
                         social_edad_artista.Text = dir.Age.ToString();
                         social_naconalidad_artista.Text = dir.Nacionality;
@@ -3078,7 +3090,7 @@ namespace ALAINID_DEFINITIVO
                 }
                 foreach (Artista comp in Proyecto_Forms.ALAINID.lista_compositores)
                 {
-                    if (comp.Name == email_persona_seguir_social)
+                    if (comp.Name.ToLower() == email_persona_seguir_social.ToLower())
                     {
                         social_edad_artista.Text = comp.Age.ToString();
                         social_naconalidad_artista.Text = comp.Nacionality;
@@ -3089,17 +3101,21 @@ namespace ALAINID_DEFINITIVO
                 }
             }
             foreach (Artista cant in Proyecto_Forms.ALAINID.lista_cantantes)
+            {
+                if (cant.Name.ToLower() == email_persona_seguir_social.ToLower())
                 {
-                    if (cant.Name == email_persona_seguir_social)
-                    {
-                        social_edad_artista.Text = cant.Age.ToString();
-                        social_naconalidad_artista.Text = cant.Nacionality;
-                        social_nombre_artista.Text = cant.Name;
-                        social_sexo_artista.Text = cant.Sexo;
-                        social_tipo_artista.Text = "Cantante: ";
-                    }
+                    social_edad_artista.Text = cant.Age.ToString();
+                    social_naconalidad_artista.Text = cant.Nacionality;
+                    social_nombre_artista.Text = cant.Name;
+                    social_sexo_artista.Text = cant.Sexo;
+                    social_tipo_artista.Text = "Cantante: ";
                 }
-                
+            }
+
+
+        }
+        private void tabla_resultados_busqueda_social_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
         }
         private void button1_Click_1(object sender, EventArgs e)
         {//atras ver usuario busqueda social
@@ -3392,5 +3408,7 @@ namespace ALAINID_DEFINITIVO
         {
 
         }
+
+       
     }
 }

@@ -293,6 +293,18 @@ namespace ALAINID_DEFINITIVO
         private void btn_atras_de_agregar_video_admin_Click(object sender, EventArgs e)
         {
             panel_agregar_video_admin.Visible = false;
+            archivo_video_importar_video.Text = "";
+            nombrevideo_agregar_video_admin.Text = "";
+            categoriavideo_agregar_video_admin.Text = "";
+            generovideo_agregar_video_admin.Text = "";
+            aniopubvideo_agregar_video_admin.Text = "";
+            filmstudiovideo_agregar_video_admin.Text = "";
+            nombredirector_agregar_video_admin.Text = "";
+            edaddirector_agregar_video_admin.Text = "";
+            sexodirector_agregar_video_admin.Text = "";
+            nacionalidaddirector_agregar_video_admin.Text = "";
+            tabla_agregar_actores_en_video.Rows.Clear();
+            ruta_video = "";
         }
 
         private void btn_subir_video_de_agregar_video_admin_Click(object sender, EventArgs e)
@@ -341,6 +353,7 @@ namespace ALAINID_DEFINITIVO
                 edaddirector_agregar_video_admin.Text = "";
                 sexodirector_agregar_video_admin.Text = "";
                 nacionalidaddirector_agregar_video_admin.Text = "";
+                tabla_agregar_actores_en_video.Rows.Clear();
                 ruta_video = "";
             }
             catch

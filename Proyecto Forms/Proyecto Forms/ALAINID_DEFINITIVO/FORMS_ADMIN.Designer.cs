@@ -33,7 +33,7 @@
             System.Windows.Forms.Label label51;
             System.Windows.Forms.Label label52;
             System.Windows.Forms.Label label53;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.aDMINToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cerrarSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -89,7 +89,6 @@
             this.nombre_cancion_txt_agregar_cancion = new System.Windows.Forms.TextBox();
             this.panel_agregar_video_admin = new System.Windows.Forms.Panel();
             this.archivo_video_importar_video = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
             this.tabla_agregar_actores_en_video = new System.Windows.Forms.DataGridView();
             this.nombre_actor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.edad_actor = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -534,10 +533,9 @@
             this.panel_agregar_cancion_admin.Controls.Add(this.label3);
             this.panel_agregar_cancion_admin.Controls.Add(this.label1);
             this.panel_agregar_cancion_admin.Controls.Add(this.nombre_cancion_txt_agregar_cancion);
-            this.panel_agregar_cancion_admin.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_agregar_cancion_admin.Location = new System.Drawing.Point(0, 24);
+            this.panel_agregar_cancion_admin.Location = new System.Drawing.Point(410, 327);
             this.panel_agregar_cancion_admin.Name = "panel_agregar_cancion_admin";
-            this.panel_agregar_cancion_admin.Size = new System.Drawing.Size(910, 525);
+            this.panel_agregar_cancion_admin.Size = new System.Drawing.Size(27, 27);
             this.panel_agregar_cancion_admin.TabIndex = 24;
             this.panel_agregar_cancion_admin.Visible = false;
             this.panel_agregar_cancion_admin.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_agregar_cancion_admin_Paint);
@@ -958,7 +956,6 @@
             // panel_agregar_video_admin
             // 
             this.panel_agregar_video_admin.Controls.Add(this.archivo_video_importar_video);
-            this.panel_agregar_video_admin.Controls.Add(this.label28);
             this.panel_agregar_video_admin.Controls.Add(this.tabla_agregar_actores_en_video);
             this.panel_agregar_video_admin.Controls.Add(this.categoriavideo_agregar_video_admin);
             this.panel_agregar_video_admin.Controls.Add(this.btn_atras_de_agregar_video_admin);
@@ -983,10 +980,11 @@
             this.panel_agregar_video_admin.Controls.Add(this.label30);
             this.panel_agregar_video_admin.Controls.Add(this.label31);
             this.panel_agregar_video_admin.Controls.Add(this.nombrevideo_agregar_video_admin);
+            this.panel_agregar_video_admin.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_agregar_video_admin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.panel_agregar_video_admin.Location = new System.Drawing.Point(792, 327);
+            this.panel_agregar_video_admin.Location = new System.Drawing.Point(0, 24);
             this.panel_agregar_video_admin.Name = "panel_agregar_video_admin";
-            this.panel_agregar_video_admin.Size = new System.Drawing.Size(80, 26);
+            this.panel_agregar_video_admin.Size = new System.Drawing.Size(910, 525);
             this.panel_agregar_video_admin.TabIndex = 63;
             this.panel_agregar_video_admin.Visible = false;
             this.panel_agregar_video_admin.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_agregar_video_admin_Paint);
@@ -995,26 +993,14 @@
             // 
             this.archivo_video_importar_video.AutoSize = true;
             this.archivo_video_importar_video.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.archivo_video_importar_video.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.archivo_video_importar_video.ForeColor = System.Drawing.Color.White;
-            this.archivo_video_importar_video.Location = new System.Drawing.Point(211, 386);
+            this.archivo_video_importar_video.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.archivo_video_importar_video.ForeColor = System.Drawing.Color.Black;
+            this.archivo_video_importar_video.Location = new System.Drawing.Point(59, 475);
             this.archivo_video_importar_video.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.archivo_video_importar_video.Name = "archivo_video_importar_video";
-            this.archivo_video_importar_video.Size = new System.Drawing.Size(0, 26);
+            this.archivo_video_importar_video.Size = new System.Drawing.Size(105, 20);
             this.archivo_video_importar_video.TabIndex = 97;
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.label28.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.ForeColor = System.Drawing.Color.Black;
-            this.label28.Location = new System.Drawing.Point(51, 474);
-            this.label28.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(105, 20);
-            this.label28.TabIndex = 96;
-            this.label28.Text = "Archivo Video";
+            this.archivo_video_importar_video.Text = "Archivo Video";
             // 
             // tabla_agregar_actores_en_video
             // 
@@ -1025,7 +1011,7 @@
             this.edad_actor,
             this.sexo_actor,
             this.nacion_actor});
-            this.tabla_agregar_actores_en_video.Location = new System.Drawing.Point(65, 334);
+            this.tabla_agregar_actores_en_video.Location = new System.Drawing.Point(63, 339);
             this.tabla_agregar_actores_en_video.Name = "tabla_agregar_actores_en_video";
             this.tabla_agregar_actores_en_video.RowHeadersVisible = false;
             this.tabla_agregar_actores_en_video.RowHeadersWidth = 51;
@@ -1401,8 +1387,8 @@
             // colum_usuario
             // 
             this.colum_usuario.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.colum_usuario.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colum_usuario.DefaultCellStyle = dataGridViewCellStyle2;
             this.colum_usuario.HeaderText = "Usuario";
             this.colum_usuario.MinimumWidth = 6;
             this.colum_usuario.Name = "colum_usuario";
@@ -2294,9 +2280,9 @@
             this.panel_agregar_cancion_karaoke.Controls.Add(this.label55);
             this.panel_agregar_cancion_karaoke.Controls.Add(this.label56);
             this.panel_agregar_cancion_karaoke.Controls.Add(this.nombre_text_cancion_karaoke);
-            this.panel_agregar_cancion_karaoke.Location = new System.Drawing.Point(360, 425);
+            this.panel_agregar_cancion_karaoke.Location = new System.Drawing.Point(410, 430);
             this.panel_agregar_cancion_karaoke.Name = "panel_agregar_cancion_karaoke";
-            this.panel_agregar_cancion_karaoke.Size = new System.Drawing.Size(80, 32);
+            this.panel_agregar_cancion_karaoke.Size = new System.Drawing.Size(30, 27);
             this.panel_agregar_cancion_karaoke.TabIndex = 132;
             this.panel_agregar_cancion_karaoke.Visible = false;
             // 
@@ -2721,13 +2707,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.ClientSize = new System.Drawing.Size(910, 549);
+            this.Controls.Add(this.panel_agregar_video_admin);
             this.Controls.Add(this.panel_agregar_cancion_admin);
             this.Controls.Add(this.panel_agregar_cancion_karaoke);
             this.Controls.Add(this.panel_ver_canciones_karaoke);
             this.Controls.Add(this.panel_ver_artistas);
             this.Controls.Add(this.panel_ver_canciones_admin);
             this.Controls.Add(this.panel_ver_videos_admin);
-            this.Controls.Add(this.panel_agregar_video_admin);
             this.Controls.Add(this.panel_ver_usuarios_admin);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btn_ver_usuarios_admin);
@@ -2872,7 +2858,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colum_privacidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn colum_suscripcion;
         private System.Windows.Forms.Label archivo_video_importar_video;
-        private System.Windows.Forms.Label label28;
         private System.Windows.Forms.DataGridView tabla_agregar_actores_en_video;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre_actor;
         private System.Windows.Forms.DataGridViewTextBoxColumn edad_actor;

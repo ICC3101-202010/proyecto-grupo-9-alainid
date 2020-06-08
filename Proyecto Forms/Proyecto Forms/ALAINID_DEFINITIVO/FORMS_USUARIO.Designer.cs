@@ -985,8 +985,10 @@
             this.contraseñapremiumtextbox.Font = new System.Drawing.Font("MV Boli", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.contraseñapremiumtextbox.Location = new System.Drawing.Point(328, 271);
             this.contraseñapremiumtextbox.Name = "contraseñapremiumtextbox";
+            this.contraseñapremiumtextbox.PasswordChar = '*';
             this.contraseñapremiumtextbox.Size = new System.Drawing.Size(376, 41);
             this.contraseñapremiumtextbox.TabIndex = 40;
+            this.contraseñapremiumtextbox.UseSystemPasswordChar = true;
             this.contraseñapremiumtextbox.TextChanged += new System.EventHandler(this.contraseñapremiumtextbox_TextChanged);
             // 
             // label8
@@ -1035,10 +1037,9 @@
             this.panel_buscar.Controls.Add(this.btn_atras_de_inicio_sesion);
             this.panel_buscar.Controls.Add(this.btn_busqueda_simple);
             this.panel_buscar.Controls.Add(this.btn_busqueda_multiple);
-            this.panel_buscar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_buscar.Location = new System.Drawing.Point(0, 24);
+            this.panel_buscar.Location = new System.Drawing.Point(451, 188);
             this.panel_buscar.Name = "panel_buscar";
-            this.panel_buscar.Size = new System.Drawing.Size(946, 488);
+            this.panel_buscar.Size = new System.Drawing.Size(27, 29);
             this.panel_buscar.TabIndex = 53;
             this.panel_buscar.Visible = false;
             // 
@@ -1070,11 +1071,10 @@
             this.panel_video_seleccionado.Controls.Add(this.btnAgregar_A_Playlist);
             this.panel_video_seleccionado.Controls.Add(this.btnAgregar_A_Favoritos);
             this.panel_video_seleccionado.Controls.Add(this.axWindowsMediaPlayerVideo);
-            this.panel_video_seleccionado.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_video_seleccionado.Location = new System.Drawing.Point(0, 0);
+            this.panel_video_seleccionado.Location = new System.Drawing.Point(580, 432);
             this.panel_video_seleccionado.Margin = new System.Windows.Forms.Padding(2);
             this.panel_video_seleccionado.Name = "panel_video_seleccionado";
-            this.panel_video_seleccionado.Size = new System.Drawing.Size(946, 488);
+            this.panel_video_seleccionado.Size = new System.Drawing.Size(35, 34);
             this.panel_video_seleccionado.TabIndex = 127;
             this.panel_video_seleccionado.Visible = false;
             this.panel_video_seleccionado.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_video_seleccionado_Paint);
@@ -3052,9 +3052,10 @@
             this.panel_social_menu.Controls.Add(this.palabra_clave_buscar_social);
             this.panel_social_menu.Controls.Add(this.label37);
             this.panel_social_menu.Controls.Add(this.btn_atras_social);
-            this.panel_social_menu.Location = new System.Drawing.Point(465, 376);
+            this.panel_social_menu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_social_menu.Location = new System.Drawing.Point(0, 24);
             this.panel_social_menu.Name = "panel_social_menu";
-            this.panel_social_menu.Size = new System.Drawing.Size(17, 23);
+            this.panel_social_menu.Size = new System.Drawing.Size(946, 488);
             this.panel_social_menu.TabIndex = 0;
             this.panel_social_menu.Visible = false;
             // 
@@ -3439,6 +3440,7 @@
             this.tabla_resultados_busqueda_social.Size = new System.Drawing.Size(300, 204);
             this.tabla_resultados_busqueda_social.TabIndex = 151;
             this.tabla_resultados_busqueda_social.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabla_resultados_busqueda_social_CellContentDoubleClick);
+            this.tabla_resultados_busqueda_social.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabla_resultados_busqueda_social_CellDoubleClick);
             // 
             // dataGridViewTextBoxColumn11
             // 
@@ -3930,13 +3932,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(946, 512);
-            this.Controls.Add(this.panel_buscar);
             this.Controls.Add(this.panel_social_menu);
+            this.Controls.Add(this.Panel_premium);
+            this.Controls.Add(this.panel_buscar);
             this.Controls.Add(this.panel_playlist_usuario);
             this.Controls.Add(this.panel_favoritos_menu);
             this.Controls.Add(this.panel_perfil_de_usuario);
             this.Controls.Add(this.panel_historial_menu);
-            this.Controls.Add(this.Panel_premium);
             this.Controls.Add(this.panel_listainteligente_menu);
             this.Controls.Add(this.panel_descargas_menu);
             this.Controls.Add(this.panel_karaoke_menu);
