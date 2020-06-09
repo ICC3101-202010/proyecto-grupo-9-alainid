@@ -345,6 +345,9 @@
             this.label64 = new System.Windows.Forms.Label();
             this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
             this.donde_quedaste_nombre = new System.Windows.Forms.Label();
+            this.archivosALaColaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reproduccirColaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.limpiarColaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel_perfil_de_usuario.SuspendLayout();
             this.Panel_premium.SuspendLayout();
@@ -399,7 +402,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aLAINIDToolStripMenuItem,
             this.verToolStripMenuItem,
-            this.reproducciónToolStripMenuItem});
+            this.reproducciónToolStripMenuItem,
+            this.archivosALaColaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
@@ -516,35 +520,35 @@
             // playToolStripMenuItem
             // 
             this.playToolStripMenuItem.Name = "playToolStripMenuItem";
-            this.playToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.playToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.playToolStripMenuItem.Text = "Play";
             this.playToolStripMenuItem.Click += new System.EventHandler(this.playToolStripMenuItem_Click);
             // 
             // stopToolStripMenuItem
             // 
             this.stopToolStripMenuItem.Name = "stopToolStripMenuItem";
-            this.stopToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.stopToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.stopToolStripMenuItem.Text = "Stop";
             this.stopToolStripMenuItem.Click += new System.EventHandler(this.stopToolStripMenuItem_Click);
             // 
             // pausaToolStripMenuItem
             // 
             this.pausaToolStripMenuItem.Name = "pausaToolStripMenuItem";
-            this.pausaToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.pausaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.pausaToolStripMenuItem.Text = "Pausa";
             this.pausaToolStripMenuItem.Click += new System.EventHandler(this.pausaToolStripMenuItem_Click);
             // 
             // nextToolStripMenuItem
             // 
             this.nextToolStripMenuItem.Name = "nextToolStripMenuItem";
-            this.nextToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.nextToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.nextToolStripMenuItem.Text = "Next";
             this.nextToolStripMenuItem.Click += new System.EventHandler(this.nextToolStripMenuItem_Click);
             // 
             // previousToolStripMenuItem
             // 
             this.previousToolStripMenuItem.Name = "previousToolStripMenuItem";
-            this.previousToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.previousToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.previousToolStripMenuItem.Text = "Previous";
             this.previousToolStripMenuItem.Click += new System.EventHandler(this.previousToolStripMenuItem_Click);
             // 
@@ -1429,7 +1433,7 @@
             this.axWindowsMediaPlayerVideo.Location = new System.Drawing.Point(191, 77);
             this.axWindowsMediaPlayerVideo.Margin = new System.Windows.Forms.Padding(2);
             this.axWindowsMediaPlayerVideo.Name = "axWindowsMediaPlayerVideo";
-            //this.axWindowsMediaPlayerVideo.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayerVideo.OcxState")));
+            this.axWindowsMediaPlayerVideo.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayerVideo.OcxState")));
             this.axWindowsMediaPlayerVideo.Size = new System.Drawing.Size(567, 377);
             this.axWindowsMediaPlayerVideo.TabIndex = 0;
             // 
@@ -1721,7 +1725,7 @@
             this.axWindowsMediaPlayer2.Enabled = true;
             this.axWindowsMediaPlayer2.Location = new System.Drawing.Point(3, 383);
             this.axWindowsMediaPlayer2.Name = "axWindowsMediaPlayer2";
-            //this.axWindowsMediaPlayer2.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer2.OcxState")));
+            this.axWindowsMediaPlayer2.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer2.OcxState")));
             this.axWindowsMediaPlayer2.Size = new System.Drawing.Size(940, 93);
             this.axWindowsMediaPlayer2.TabIndex = 145;
             this.axWindowsMediaPlayer2.Enter += new System.EventHandler(this.axWindowsMediaPlayer2_Enter);
@@ -2943,10 +2947,9 @@
             this.panel_karaoke_menu.Controls.Add(this.tabla_canciones_karaoke);
             this.panel_karaoke_menu.Controls.Add(this.label40);
             this.panel_karaoke_menu.Controls.Add(this.btn_atras_karaoke);
-            this.panel_karaoke_menu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_karaoke_menu.Location = new System.Drawing.Point(0, 24);
+            this.panel_karaoke_menu.Location = new System.Drawing.Point(842, 192);
             this.panel_karaoke_menu.Name = "panel_karaoke_menu";
-            this.panel_karaoke_menu.Size = new System.Drawing.Size(946, 488);
+            this.panel_karaoke_menu.Size = new System.Drawing.Size(25, 23);
             this.panel_karaoke_menu.TabIndex = 0;
             this.panel_karaoke_menu.Visible = false;
             // 
@@ -2961,10 +2964,9 @@
             this.panel_rep_karaoke.Controls.Add(this.label76);
             this.panel_rep_karaoke.Controls.Add(this.nombrecantante_karaoke);
             this.panel_rep_karaoke.Controls.Add(this.axWindowsMediaPlayer3);
-            this.panel_rep_karaoke.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_rep_karaoke.Location = new System.Drawing.Point(0, 0);
+            this.panel_rep_karaoke.Location = new System.Drawing.Point(813, 123);
             this.panel_rep_karaoke.Name = "panel_rep_karaoke";
-            this.panel_rep_karaoke.Size = new System.Drawing.Size(946, 488);
+            this.panel_rep_karaoke.Size = new System.Drawing.Size(30, 13);
             this.panel_rep_karaoke.TabIndex = 142;
             this.panel_rep_karaoke.Visible = false;
             // 
@@ -3071,7 +3073,7 @@
             this.axWindowsMediaPlayer3.Location = new System.Drawing.Point(15, 77);
             this.axWindowsMediaPlayer3.Margin = new System.Windows.Forms.Padding(2);
             this.axWindowsMediaPlayer3.Name = "axWindowsMediaPlayer3";
-            //this.axWindowsMediaPlayer3.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer3.OcxState")));
+            this.axWindowsMediaPlayer3.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer3.OcxState")));
             this.axWindowsMediaPlayer3.Size = new System.Drawing.Size(920, 400);
             this.axWindowsMediaPlayer3.TabIndex = 31;
             // 
@@ -4326,6 +4328,27 @@
             this.donde_quedaste_nombre.TabIndex = 58;
             this.donde_quedaste_nombre.Text = "nombre";
             // 
+            // archivosALaColaToolStripMenuItem
+            // 
+            this.archivosALaColaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.reproduccirColaToolStripMenuItem,
+            this.limpiarColaToolStripMenuItem});
+            this.archivosALaColaToolStripMenuItem.Name = "archivosALaColaToolStripMenuItem";
+            this.archivosALaColaToolStripMenuItem.Size = new System.Drawing.Size(113, 20);
+            this.archivosALaColaToolStripMenuItem.Text = "Archivos a la Cola";
+            // 
+            // reproduccirColaToolStripMenuItem
+            // 
+            this.reproduccirColaToolStripMenuItem.Name = "reproduccirColaToolStripMenuItem";
+            this.reproduccirColaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.reproduccirColaToolStripMenuItem.Text = "Reproduccir Cola";
+            // 
+            // limpiarColaToolStripMenuItem
+            // 
+            this.limpiarColaToolStripMenuItem.Name = "limpiarColaToolStripMenuItem";
+            this.limpiarColaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.limpiarColaToolStripMenuItem.Text = "Limpiar Cola";
+            // 
             // ALAINID
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -4760,5 +4783,8 @@
         private System.Windows.Forms.Label label76;
         private System.Windows.Forms.TextBox nombrecantante_karaoke;
         private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer3;
+        private System.Windows.Forms.ToolStripMenuItem archivosALaColaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reproduccirColaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem limpiarColaToolStripMenuItem;
     }
 }
