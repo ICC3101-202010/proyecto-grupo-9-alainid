@@ -18,6 +18,7 @@ namespace Proyecto_Forms
 {
     public static class ALAINID
     {
+        
         public static List<User> listausuarios = new List<User>();          // TODOS LOS USUARIOS DE ALAINID
         public static List<Song> todas_las_canciones = new List<Song>();      // TODAS LAS CANCIONES EN ALAINID
         public static List<Video> todos_los_videos = new List<Video>();         // TODOS LOS VIDEOS DE ALAINID
@@ -75,9 +76,10 @@ namespace Proyecto_Forms
             lista_compositores = CargarCompositores();
             todos_los_videos = CargarVideos();
             todas_las_canciones = CargarCancion();
-            listausuarios = Cargar();
+            
             todas_las_cancioneskaraoke = CargarKaraoke();
             lista_cantantes = CargarCantantes();
+            listausuarios = Cargar();
         }
 
     

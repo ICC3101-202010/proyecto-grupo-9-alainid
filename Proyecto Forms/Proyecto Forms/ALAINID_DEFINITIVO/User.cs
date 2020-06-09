@@ -8,6 +8,7 @@ namespace Proyecto_Forms
     [Serializable]
     public class User
     {
+        private string dondequedaste;
         private string nombreUsuario;
         private string email_;
         private string password_;
@@ -46,12 +47,7 @@ namespace Proyecto_Forms
         public List<User> Usuarios_seguidos_ { get => usuarios_seguidos_; set => usuarios_seguidos_ = value; }
         public List<Song> Lista_inteligente { get => lista_inteligente; set => lista_inteligente = value; }
         public List<Artista> Artistas_seguidos_ { get => artistas_seguidos_; set => artistas_seguidos_ = value; }
-
-
-
-
-
-
+        public string Dondequedaste { get => dondequedaste; set => dondequedaste = value; }
 
         public User(string _nombre_, string _nomusuario_, string _email_, string _password_)
         {
