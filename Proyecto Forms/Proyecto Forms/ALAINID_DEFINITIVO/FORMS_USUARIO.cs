@@ -35,6 +35,8 @@ namespace ALAINID_DEFINITIVO
                     {
                         btnKaraoke.Enabled = true;
                         btnHistorial.Enabled = true;
+                        btnDescargas.Enabled = true;
+
                     }
                 }
             }
@@ -231,6 +233,31 @@ namespace ALAINID_DEFINITIVO
 
             panel_descargas_menu.Visible = true;
             panel_descargas_menu.Dock = DockStyle.Fill;
+            foreach( User user in Proyecto_Forms.ALAINID.listausuarios)
+            {
+                if (user.Email_ == Program.usuario_activo.Email_)
+                {
+                    if (user.Descargas_.Count() == 0)
+                    {
+                        MessageBox.Show("Aun no tiene Canciones Descargadas", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    }
+                    else
+                    {
+                        foreach (Song descarga in user.Descargas_)
+                        {
+                            int n = tabla_canciones_descargadas.Rows.Add();
+                            tabla_canciones_descargadas.Rows[n].Cells[0].Value = descarga.Nombrecancion;
+                            tabla_canciones_descargadas.Rows[n].Cells[1].Value = descarga.Cantante.Name;
+                            tabla_canciones_descargadas.Rows[n].Cells[2].Value = descarga.Compositor.Name;
+                            tabla_canciones_descargadas.Rows[n].Cells[3].Value = descarga.Album;
+
+                        }
+                    }
+                }
+            }
+            
+
         }
         private void BtnListaInteligente_Click(object sender, EventArgs e)
         {
@@ -358,11 +385,14 @@ namespace ALAINID_DEFINITIVO
                         {
                             btnKaraoke.Enabled = true;
                             btnHistorial.Enabled = true;
+                            btnDescargas.Enabled = true;
                         }
                         if (user.Premium_ == "no premium")
                         {
                             btnKaraoke.Enabled = false;
                             btnHistorial.Enabled = false;
+                            btnDescargas.Enabled = false;
+
                         }
                     }
                     
@@ -3390,39 +3420,45 @@ namespace ALAINID_DEFINITIVO
             {
                 if (user.Email_ == Program.usuario_activo.Email_)
                 {
-                    foreach (PlaylistSong ps in user.Lista_playlistusuario_)
+                    if (tabla_playlist.Rows[fila].Cells[2].Value.ToString() == "Canciones")
                     {
-                        if (ps.NombrePlaylist == tabla_playlist.Rows[fila].Cells[0].Value.ToString())
+                        foreach (PlaylistSong ps in user.Lista_playlistusuario_)
                         {
-                            if (ps.Listplay == null)
+                            if (ps.NombrePlaylist == tabla_playlist.Rows[fila].Cells[0].Value.ToString())
                             {
-                                MessageBox.Show("PlayList Sin Canciones", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.None);
-                            }
-                            foreach (Song song in ps.Listplay)
-                            {
-                                panel_ver_una_playlist.Visible = true;
-                                panel_ver_una_playlist.Dock = DockStyle.Fill;
-                                int n = tabla_ver_playlist.Rows.Add();
-                                tabla_ver_playlist.Rows[n].Cells[0].Value = song.Nombrecancion;
-                                tabla_ver_playlist.Rows[n].Cells[1].Value = song.Cantante.Name;
-                                
+                                if (ps.Listplay.Count() == 0)
+                                {
+                                    MessageBox.Show("PlayList Sin Canciones", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.None);
+                                }
+                                foreach (Song song in ps.Listplay)
+                                {
+                                    panel_ver_una_playlist.Visible = true;
+                                    panel_ver_una_playlist.Dock = DockStyle.Fill;
+                                    int n = tabla_ver_playlist.Rows.Add();
+                                    tabla_ver_playlist.Rows[n].Cells[0].Value = song.Nombrecancion;
+                                    tabla_ver_playlist.Rows[n].Cells[1].Value = song.Cantante.Name;
+
+                                }
                             }
                         }
                     }
-                    foreach (PlaylistVideo pv in user.Lista_playlistvideousuario_)
+                    if (tabla_playlist.Rows[fila].Cells[2].Value.ToString() == "Videos")
                     {
-                        if (pv.NombrePlaylist == tabla_playlist.Rows[fila].Cells[0].Value.ToString())
+                        foreach (PlaylistVideo pv in user.Lista_playlistvideousuario_)
                         {
-                            if (pv.Listplayvideo == null)
+                            if (pv.NombrePlaylist == tabla_playlist.Rows[fila].Cells[0].Value.ToString())
                             {
-                                MessageBox.Show("PlayList Sin Videos", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.None);
-                            }
-                            foreach (Video video in pv.Listplayvideo)
-                            {
-                                panel_ver_una_playlist.Visible = true;
-                                int n = tabla_ver_playlist.Rows.Add();
-                                tabla_ver_playlist.Rows[n].Cells[0].Value = video.Nombre_video;
-                                tabla_ver_playlist.Rows[n].Cells[1].Value = video.Director.Name;
+                                if (pv.Listplayvideo.Count() == 0)
+                                {
+                                    MessageBox.Show("PlayList Sin Videos", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.None);
+                                }
+                                foreach (Video video in pv.Listplayvideo)
+                                {
+                                    panel_ver_una_playlist.Visible = true;
+                                    int n = tabla_ver_playlist.Rows.Add();
+                                    tabla_ver_playlist.Rows[n].Cells[0].Value = video.Nombre_video;
+                                    tabla_ver_playlist.Rows[n].Cells[1].Value = video.Director.Name;
+                                }
                             }
                         }
                     }
@@ -3446,12 +3482,14 @@ namespace ALAINID_DEFINITIVO
         }
         private void tabla_ver_playlist_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            int no = 0;
             Proyecto_Forms.ALAINID.Activar_todo();
             int fila = e.RowIndex;
-            foreach(Song song in Proyecto_Forms.ALAINID.todas_las_canciones)
+            foreach (Song song in Proyecto_Forms.ALAINID.todas_las_canciones)
             {
-                if (song.Nombrecancion.ToLower() == tabla_ver_playlist.Rows[fila].Cells[0].Value.ToString().ToLower() && song.Cantante.Name.ToLower()== tabla_ver_playlist.Rows[fila].Cells[1].Value.ToString().ToLower())
+                if (song.Nombrecancion.ToLower() == tabla_ver_playlist.Rows[fila].Cells[0].Value.ToString().ToLower() && song.Cantante.Name.ToLower() == tabla_ver_playlist.Rows[fila].Cells[1].Value.ToString().ToLower())
                 {
+                    no= 1;
                     cantante_cancion_reproductor.Text = song.Cantante.Name;
                     nombrecancion_cancion_reproductor.Text = song.Nombrecancion;
                     compositor_cancion_reproductor.Text = song.Compositor.Name;
@@ -3460,7 +3498,7 @@ namespace ALAINID_DEFINITIVO
                     genero_cancion_reproductor.Text = song.Genero;
                     reproducciones_cancion_reproductor.Text = song.Reproducciones.ToString();
 
-                    
+
                     panel_ver_una_playlist.Visible = false;
                     panel_playlist_usuario.Visible = false;
                     panel_buscar.Visible = true;
@@ -3471,16 +3509,15 @@ namespace ALAINID_DEFINITIVO
                     ruta = song.Nombrearchivo;
                     axWindowsMediaPlayer2.URL = ruta;
 
-                }
-                else
-                {
-                    MessageBox.Show("Lo sentimo, estamos teniendo problemas con algunor archivos, no es posible Reproducir esta cancion por ahora. Intente mas tarde", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
+                } 
             }
+            
+            
             foreach (Video video in Proyecto_Forms.ALAINID.todos_los_videos)
             {
                 if ((video.Nombre_video.ToLower() == tabla_ver_playlist.Rows[fila].Cells[0].Value.ToString().ToLower()) && (video.Director.Name.ToLower() == tabla_ver_playlist.Rows[fila].Cells[1].Value.ToString().ToLower()))
                 {
+                    no = 1;
                     textBox_Nombre_Director.Text = video.Director.Name;
                     foreach (Artista actor in video.Actores)
                     {
@@ -3501,7 +3538,10 @@ namespace ALAINID_DEFINITIVO
                     axWindowsMediaPlayerVideo.URL = ruta;
                 }
             }
-
+            if (no == 0)
+            {
+                MessageBox.Show("Lo sentimo, estamos teniendo problemas con algunor archivos, no es posible Reproducir esta cancion por ahora. Intente mas tarde", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
 
 
         }
@@ -3967,7 +4007,13 @@ namespace ALAINID_DEFINITIVO
 
         private void btn_descargar_cancion_Click(object sender, EventArgs e)
         {
+            Proyecto_Forms.ALAINID.Agregaradescargas(Program.usuario_activo.Email_, cancionbuscada);
+        }
 
+        private void btn_aplicar_criterios_smartlist_Click(object sender, EventArgs e)
+        {
+            //comboBox_criterio_smart_list
+            //valor_criterio_smartlist
         }
     }
 }

@@ -1684,34 +1684,36 @@ namespace Proyecto_Forms
 
         public static void Agregaradescargas(string email, Song s)
         {
-            string funka = "";
-            for (int i = 0; i < listausuarios.Count; i++)
+            Activar_todo();
+            int esta = 0;
+            foreach (User user in Proyecto_Forms.ALAINID.listausuarios)
             {
-                if (listausuarios[i].Email_ == email)
+                if (email.ToLower() == user.Email_.ToLower())
                 {
-                    if (listausuarios[i].Premium_ == "premium")
+                    if (user.Premium_ == "premium")
                     {
-                        listausuarios[i].Descargas_.Add(s);
-                        Almacenar(listausuarios);
-                        funka += "si";
+                        foreach (Song song in user.Descargas_)
+                        {
+                            if (s.Nombrecancion == song.Nombrecancion && s.Cantante.Name == song.Cantante.Name)
+                            {
+                                esta = 1;
+                                MessageBox.Show("LA CANCION YA ESTA EN TUS DESCARGAS", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.None);
+
+                            }
+                        }
+                        if (esta == 0)
+                        {
+                            user.Descargas_.Add(s);
+                            Almacenar(listausuarios);
+                            MessageBox.Show("CANCION AGREGADA CORRECTAMENTE A DESCARGAS", "FELICIDADES", MessageBoxButtons.OK, MessageBoxIcon.None);
+                        }
                     }
                     else
                     {
-                        Console.WriteLine("Debes ser premium para poder descargar canciones");
-                        Thread.Sleep(2000);
+                        MessageBox.Show("DEBES SER PREMIUM PARA DESCARGAR CANCIONES", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.None);
                     }
 
                 }
-            }
-            if (funka != "")
-            {
-                Console.WriteLine("CANCION DESCARGADA Y AGREGADA A LA LISTA DESCARGAS");
-                Thread.Sleep(2000);
-            }
-            else
-            {
-                Console.WriteLine("LA CANCION NO SE DESCARGÓ");
-                Thread.Sleep(2000);
             }
         }
         public static bool Aumentarreproduccion(string nombrecancion, int reproduccion)

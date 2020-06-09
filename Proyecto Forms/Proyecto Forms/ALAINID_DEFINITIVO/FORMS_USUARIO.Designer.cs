@@ -127,6 +127,7 @@
             this.btnAgregar_A_Favoritos = new System.Windows.Forms.Button();
             this.axWindowsMediaPlayerVideo = new AxWMPLib.AxWindowsMediaPlayer();
             this.panel_cancion_seleccionada_busqueda_simple = new System.Windows.Forms.Panel();
+            this.btn_descargar_cancion = new System.Windows.Forms.Button();
             this.btn_limpiar_cola_cancion = new System.Windows.Forms.Button();
             this.btn_atras_rep_cancion_en_smartlist = new System.Windows.Forms.Button();
             this.btn_atras_rep_cancion_en_favoritos = new System.Windows.Forms.Button();
@@ -215,21 +216,12 @@
             this.btn_busqueda_multiple = new System.Windows.Forms.Button();
             this.ruta_cancion_reproducir = new System.Windows.Forms.OpenFileDialog();
             this.panel_listainteligente_menu = new System.Windows.Forms.Panel();
-            this.comboBox14 = new System.Windows.Forms.ComboBox();
-            this.label47 = new System.Windows.Forms.Label();
             this.label48 = new System.Windows.Forms.Label();
-            this.comboBox15 = new System.Windows.Forms.ComboBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.button9 = new System.Windows.Forms.Button();
+            this.valor_criterio_smartlist = new System.Windows.Forms.TextBox();
+            this.btn_aplicar_criterios_smartlist = new System.Windows.Forms.Button();
             this.label49 = new System.Windows.Forms.Label();
             this.btn_atras_listainteligente_menu = new System.Windows.Forms.Button();
             this.panel_descargas_menu = new System.Windows.Forms.Panel();
-            this.comboBox12 = new System.Windows.Forms.ComboBox();
-            this.label44 = new System.Windows.Forms.Label();
-            this.label45 = new System.Windows.Forms.Label();
-            this.comboBox13 = new System.Windows.Forms.ComboBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.button8 = new System.Windows.Forms.Button();
             this.label46 = new System.Windows.Forms.Label();
             this.btn_atras_descargas = new System.Windows.Forms.Button();
             this.panel_historial_menu = new System.Windows.Forms.Panel();
@@ -355,7 +347,18 @@
             this.label64 = new System.Windows.Forms.Label();
             this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
             this.donde_quedaste_nombre = new System.Windows.Forms.Label();
-            this.btn_descargar_cancion = new System.Windows.Forms.Button();
+            this.tabla_canciones_descargadas = new System.Windows.Forms.DataGridView();
+            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantante = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Album = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comboBox_criterio_smart_list = new System.Windows.Forms.ComboBox();
+            this.tabla_canciones_smartlist = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label38 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.panel_perfil_de_usuario.SuspendLayout();
             this.Panel_premium.SuspendLayout();
@@ -402,6 +405,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.tabla_ver_playlist)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabla_playlist)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabla_canciones_descargadas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabla_canciones_smartlist)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -748,7 +753,8 @@
             // 
             // btnDescargas
             // 
-            this.btnDescargas.BackColor = System.Drawing.Color.Maroon;
+            this.btnDescargas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnDescargas.Enabled = false;
             this.btnDescargas.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDescargas.Location = new System.Drawing.Point(595, 313);
             this.btnDescargas.Margin = new System.Windows.Forms.Padding(2);
@@ -1083,7 +1089,6 @@
             this.contraseñapremiumtextbox.Font = new System.Drawing.Font("MV Boli", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.contraseñapremiumtextbox.Location = new System.Drawing.Point(328, 271);
             this.contraseñapremiumtextbox.Name = "contraseñapremiumtextbox";
-            this.contraseñapremiumtextbox.PasswordChar = '*';
             this.contraseñapremiumtextbox.Size = new System.Drawing.Size(376, 41);
             this.contraseñapremiumtextbox.TabIndex = 40;
             this.contraseñapremiumtextbox.UseSystemPasswordChar = true;
@@ -1564,6 +1569,19 @@
             this.panel_cancion_seleccionada_busqueda_simple.TabIndex = 126;
             this.panel_cancion_seleccionada_busqueda_simple.Visible = false;
             this.panel_cancion_seleccionada_busqueda_simple.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_cancion_seleccionada_busqueda_simple_Paint);
+            // 
+            // btn_descargar_cancion
+            // 
+            this.btn_descargar_cancion.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_descargar_cancion.ForeColor = System.Drawing.Color.Black;
+            this.btn_descargar_cancion.Location = new System.Drawing.Point(722, 313);
+            this.btn_descargar_cancion.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_descargar_cancion.Name = "btn_descargar_cancion";
+            this.btn_descargar_cancion.Size = new System.Drawing.Size(203, 40);
+            this.btn_descargar_cancion.TabIndex = 166;
+            this.btn_descargar_cancion.Text = "Descargar Cancion";
+            this.btn_descargar_cancion.UseVisualStyleBackColor = true;
+            this.btn_descargar_cancion.Click += new System.EventHandler(this.btn_descargar_cancion_Click);
             // 
             // btn_limpiar_cola_cancion
             // 
@@ -2670,43 +2688,20 @@
             // 
             // panel_listainteligente_menu
             // 
-            this.panel_listainteligente_menu.Controls.Add(this.comboBox14);
-            this.panel_listainteligente_menu.Controls.Add(this.label47);
+            this.panel_listainteligente_menu.Controls.Add(this.label38);
+            this.panel_listainteligente_menu.Controls.Add(this.tabla_canciones_smartlist);
             this.panel_listainteligente_menu.Controls.Add(this.label48);
-            this.panel_listainteligente_menu.Controls.Add(this.comboBox15);
-            this.panel_listainteligente_menu.Controls.Add(this.textBox9);
-            this.panel_listainteligente_menu.Controls.Add(this.button9);
+            this.panel_listainteligente_menu.Controls.Add(this.comboBox_criterio_smart_list);
+            this.panel_listainteligente_menu.Controls.Add(this.valor_criterio_smartlist);
+            this.panel_listainteligente_menu.Controls.Add(this.btn_aplicar_criterios_smartlist);
             this.panel_listainteligente_menu.Controls.Add(this.label49);
             this.panel_listainteligente_menu.Controls.Add(this.btn_atras_listainteligente_menu);
-            this.panel_listainteligente_menu.Location = new System.Drawing.Point(837, 378);
+            this.panel_listainteligente_menu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_listainteligente_menu.Location = new System.Drawing.Point(0, 24);
             this.panel_listainteligente_menu.Name = "panel_listainteligente_menu";
-            this.panel_listainteligente_menu.Size = new System.Drawing.Size(32, 26);
+            this.panel_listainteligente_menu.Size = new System.Drawing.Size(946, 488);
             this.panel_listainteligente_menu.TabIndex = 54;
             this.panel_listainteligente_menu.Visible = false;
-            // 
-            // comboBox14
-            // 
-            this.comboBox14.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.comboBox14.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox14.FormattingEnabled = true;
-            this.comboBox14.Location = new System.Drawing.Point(346, 170);
-            this.comboBox14.Name = "comboBox14";
-            this.comboBox14.Size = new System.Drawing.Size(346, 37);
-            this.comboBox14.TabIndex = 141;
-            // 
-            // label47
-            // 
-            this.label47.AutoSize = true;
-            this.label47.BackColor = System.Drawing.Color.Black;
-            this.label47.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label47.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label47.ForeColor = System.Drawing.Color.White;
-            this.label47.Location = new System.Drawing.Point(25, 164);
-            this.label47.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(99, 40);
-            this.label47.TabIndex = 140;
-            this.label47.Text = "NOSE";
             // 
             // label48
             // 
@@ -2718,58 +2713,31 @@
             this.label48.Location = new System.Drawing.Point(25, 107);
             this.label48.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(99, 40);
+            this.label48.Size = new System.Drawing.Size(119, 40);
             this.label48.TabIndex = 139;
-            this.label48.Text = "NOSE";
+            this.label48.Text = "Criterio";
             // 
-            // comboBox15
+            // valor_criterio_smartlist
             // 
-            this.comboBox15.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.comboBox15.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox15.FormattingEnabled = true;
-            this.comboBox15.Items.AddRange(new object[] {
-            "Nombre Cancion",
-            "Nombre Pelicula",
-            "Genero Cancion",
-            "Genero Video",
-            "Categoria Pelicula",
-            "Cantante",
-            "Compositor",
-            "Director",
-            "Actor",
-            "Album",
-            "Disquera",
-            "Film Studio",
-            "Año de Publicacion",
-            "Edad del Artista",
-            "Sexo del Artista",
-            "Evaluacion",
-            "Calidad/Resolucion"});
-            this.comboBox15.Location = new System.Drawing.Point(346, 111);
-            this.comboBox15.Name = "comboBox15";
-            this.comboBox15.Size = new System.Drawing.Size(346, 37);
-            this.comboBox15.TabIndex = 138;
+            this.valor_criterio_smartlist.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.valor_criterio_smartlist.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.valor_criterio_smartlist.Location = new System.Drawing.Point(447, 111);
+            this.valor_criterio_smartlist.Margin = new System.Windows.Forms.Padding(2);
+            this.valor_criterio_smartlist.Name = "valor_criterio_smartlist";
+            this.valor_criterio_smartlist.Size = new System.Drawing.Size(262, 37);
+            this.valor_criterio_smartlist.TabIndex = 137;
             // 
-            // textBox9
+            // btn_aplicar_criterios_smartlist
             // 
-            this.textBox9.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.textBox9.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(346, 170);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(346, 37);
-            this.textBox9.TabIndex = 137;
-            // 
-            // button9
-            // 
-            this.button9.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Location = new System.Drawing.Point(735, 121);
-            this.button9.Margin = new System.Windows.Forms.Padding(2);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(158, 59);
-            this.button9.TabIndex = 136;
-            this.button9.Text = "Buscar";
-            this.button9.UseVisualStyleBackColor = true;
+            this.btn_aplicar_criterios_smartlist.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_aplicar_criterios_smartlist.Location = new System.Drawing.Point(771, 110);
+            this.btn_aplicar_criterios_smartlist.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_aplicar_criterios_smartlist.Name = "btn_aplicar_criterios_smartlist";
+            this.btn_aplicar_criterios_smartlist.Size = new System.Drawing.Size(148, 37);
+            this.btn_aplicar_criterios_smartlist.TabIndex = 136;
+            this.btn_aplicar_criterios_smartlist.Text = "Aplicar";
+            this.btn_aplicar_criterios_smartlist.UseVisualStyleBackColor = true;
+            this.btn_aplicar_criterios_smartlist.Click += new System.EventHandler(this.btn_aplicar_criterios_smartlist_Click);
             // 
             // label49
             // 
@@ -2788,7 +2756,7 @@
             // btn_atras_listainteligente_menu
             // 
             this.btn_atras_listainteligente_menu.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_atras_listainteligente_menu.Location = new System.Drawing.Point(840, 24);
+            this.btn_atras_listainteligente_menu.Location = new System.Drawing.Point(850, 24);
             this.btn_atras_listainteligente_menu.Margin = new System.Windows.Forms.Padding(2);
             this.btn_atras_listainteligente_menu.Name = "btn_atras_listainteligente_menu";
             this.btn_atras_listainteligente_menu.Size = new System.Drawing.Size(71, 35);
@@ -2799,12 +2767,7 @@
             // 
             // panel_descargas_menu
             // 
-            this.panel_descargas_menu.Controls.Add(this.comboBox12);
-            this.panel_descargas_menu.Controls.Add(this.label44);
-            this.panel_descargas_menu.Controls.Add(this.label45);
-            this.panel_descargas_menu.Controls.Add(this.comboBox13);
-            this.panel_descargas_menu.Controls.Add(this.textBox8);
-            this.panel_descargas_menu.Controls.Add(this.button8);
+            this.panel_descargas_menu.Controls.Add(this.tabla_canciones_descargadas);
             this.panel_descargas_menu.Controls.Add(this.label46);
             this.panel_descargas_menu.Controls.Add(this.btn_atras_descargas);
             this.panel_descargas_menu.Location = new System.Drawing.Point(842, 313);
@@ -2812,93 +2775,6 @@
             this.panel_descargas_menu.Size = new System.Drawing.Size(30, 21);
             this.panel_descargas_menu.TabIndex = 0;
             this.panel_descargas_menu.Visible = false;
-            // 
-            // comboBox12
-            // 
-            this.comboBox12.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.comboBox12.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox12.FormattingEnabled = true;
-            this.comboBox12.Location = new System.Drawing.Point(356, 170);
-            this.comboBox12.Name = "comboBox12";
-            this.comboBox12.Size = new System.Drawing.Size(346, 37);
-            this.comboBox12.TabIndex = 141;
-            // 
-            // label44
-            // 
-            this.label44.AutoSize = true;
-            this.label44.BackColor = System.Drawing.Color.Black;
-            this.label44.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label44.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label44.ForeColor = System.Drawing.Color.White;
-            this.label44.Location = new System.Drawing.Point(35, 164);
-            this.label44.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(99, 40);
-            this.label44.TabIndex = 140;
-            this.label44.Text = "NOSE";
-            // 
-            // label45
-            // 
-            this.label45.AutoSize = true;
-            this.label45.BackColor = System.Drawing.Color.Black;
-            this.label45.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label45.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label45.ForeColor = System.Drawing.Color.White;
-            this.label45.Location = new System.Drawing.Point(35, 107);
-            this.label45.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(99, 40);
-            this.label45.TabIndex = 139;
-            this.label45.Text = "NOSE";
-            // 
-            // comboBox13
-            // 
-            this.comboBox13.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.comboBox13.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox13.FormattingEnabled = true;
-            this.comboBox13.Items.AddRange(new object[] {
-            "Nombre Cancion",
-            "Nombre Pelicula",
-            "Genero Cancion",
-            "Genero Video",
-            "Categoria Pelicula",
-            "Cantante",
-            "Compositor",
-            "Director",
-            "Actor",
-            "Album",
-            "Disquera",
-            "Film Studio",
-            "Año de Publicacion",
-            "Edad del Artista",
-            "Sexo del Artista",
-            "Evaluacion",
-            "Calidad/Resolucion"});
-            this.comboBox13.Location = new System.Drawing.Point(356, 111);
-            this.comboBox13.Name = "comboBox13";
-            this.comboBox13.Size = new System.Drawing.Size(346, 37);
-            this.comboBox13.TabIndex = 138;
-            // 
-            // textBox8
-            // 
-            this.textBox8.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.textBox8.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(356, 170);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(346, 37);
-            this.textBox8.TabIndex = 137;
-            // 
-            // button8
-            // 
-            this.button8.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(745, 121);
-            this.button8.Margin = new System.Windows.Forms.Padding(2);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(158, 59);
-            this.button8.TabIndex = 136;
-            this.button8.Text = "Buscar";
-            this.button8.UseVisualStyleBackColor = true;
             // 
             // label46
             // 
@@ -4134,9 +4010,9 @@
             this.panel_playlist_usuario.Controls.Add(this.btn_crear_playplist);
             this.panel_playlist_usuario.Controls.Add(this.label29);
             this.panel_playlist_usuario.Controls.Add(this.button2);
-            this.panel_playlist_usuario.Location = new System.Drawing.Point(543, 255);
+            this.panel_playlist_usuario.Location = new System.Drawing.Point(540, 252);
             this.panel_playlist_usuario.Name = "panel_playlist_usuario";
-            this.panel_playlist_usuario.Size = new System.Drawing.Size(19, 16);
+            this.panel_playlist_usuario.Size = new System.Drawing.Size(30, 23);
             this.panel_playlist_usuario.TabIndex = 0;
             this.panel_playlist_usuario.Visible = false;
             this.panel_playlist_usuario.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_playlist_usuario_Paint);
@@ -4148,9 +4024,9 @@
             this.panel_ver_una_playlist.Controls.Add(this.verplaylist_nombre_playlist);
             this.panel_ver_una_playlist.Controls.Add(this.label61);
             this.panel_ver_una_playlist.Controls.Add(this.btn_atras_ver_playlist);
-            this.panel_ver_una_playlist.Location = new System.Drawing.Point(225, 205);
+            this.panel_ver_una_playlist.Location = new System.Drawing.Point(240, 210);
             this.panel_ver_una_playlist.Name = "panel_ver_una_playlist";
-            this.panel_ver_una_playlist.Size = new System.Drawing.Size(33, 24);
+            this.panel_ver_una_playlist.Size = new System.Drawing.Size(30, 23);
             this.panel_ver_una_playlist.TabIndex = 136;
             this.panel_ver_una_playlist.Visible = false;
             // 
@@ -4286,6 +4162,7 @@
             this.tabla_playlist.Location = new System.Drawing.Point(12, 205);
             this.tabla_playlist.Name = "tabla_playlist";
             this.tabla_playlist.ReadOnly = true;
+            this.tabla_playlist.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.tabla_playlist.RowHeadersVisible = false;
             this.tabla_playlist.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.tabla_playlist.Size = new System.Drawing.Size(922, 271);
@@ -4419,18 +4296,133 @@
             this.donde_quedaste_nombre.TabIndex = 58;
             this.donde_quedaste_nombre.Text = "nombre";
             // 
-            // btn_descargar_cancion
+            // tabla_canciones_descargadas
             // 
-            this.btn_descargar_cancion.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_descargar_cancion.ForeColor = System.Drawing.Color.Black;
-            this.btn_descargar_cancion.Location = new System.Drawing.Point(722, 313);
-            this.btn_descargar_cancion.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_descargar_cancion.Name = "btn_descargar_cancion";
-            this.btn_descargar_cancion.Size = new System.Drawing.Size(203, 40);
-            this.btn_descargar_cancion.TabIndex = 166;
-            this.btn_descargar_cancion.Text = "Descargar Cancion";
-            this.btn_descargar_cancion.UseVisualStyleBackColor = true;
-            this.btn_descargar_cancion.Click += new System.EventHandler(this.btn_descargar_cancion_Click);
+            this.tabla_canciones_descargadas.AllowUserToAddRows = false;
+            this.tabla_canciones_descargadas.AllowUserToDeleteRows = false;
+            this.tabla_canciones_descargadas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.tabla_canciones_descargadas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tabla_canciones_descargadas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column14,
+            this.Cantante,
+            this.Column15,
+            this.Album});
+            this.tabla_canciones_descargadas.Location = new System.Drawing.Point(17, 90);
+            this.tabla_canciones_descargadas.Name = "tabla_canciones_descargadas";
+            this.tabla_canciones_descargadas.ReadOnly = true;
+            this.tabla_canciones_descargadas.RowHeadersVisible = false;
+            this.tabla_canciones_descargadas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.tabla_canciones_descargadas.Size = new System.Drawing.Size(910, 387);
+            this.tabla_canciones_descargadas.TabIndex = 136;
+            // 
+            // Column14
+            // 
+            this.Column14.HeaderText = "Nombre";
+            this.Column14.Name = "Column14";
+            this.Column14.ReadOnly = true;
+            // 
+            // Cantante
+            // 
+            this.Cantante.HeaderText = "Cantante";
+            this.Cantante.Name = "Cantante";
+            this.Cantante.ReadOnly = true;
+            // 
+            // Column15
+            // 
+            this.Column15.HeaderText = "Compositor";
+            this.Column15.Name = "Column15";
+            this.Column15.ReadOnly = true;
+            // 
+            // Album
+            // 
+            this.Album.HeaderText = "Album";
+            this.Album.Name = "Album";
+            this.Album.ReadOnly = true;
+            // 
+            // comboBox_criterio_smart_list
+            // 
+            this.comboBox_criterio_smart_list.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.comboBox_criterio_smart_list.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox_criterio_smart_list.FormattingEnabled = true;
+            this.comboBox_criterio_smart_list.Items.AddRange(new object[] {
+            "Nombre Cancion",
+            "Nombre Pelicula",
+            "Genero Cancion",
+            "Genero Video",
+            "Categoria Pelicula",
+            "Cantante",
+            "Compositor",
+            "Director",
+            "Actor",
+            "Album",
+            "Disquera",
+            "Film Studio",
+            "Año de Publicacion",
+            "Edad del Artista",
+            "Sexo del Artista",
+            "Evaluacion",
+            "Calidad/Resolucion"});
+            this.comboBox_criterio_smart_list.Location = new System.Drawing.Point(161, 110);
+            this.comboBox_criterio_smart_list.Name = "comboBox_criterio_smart_list";
+            this.comboBox_criterio_smart_list.Size = new System.Drawing.Size(262, 37);
+            this.comboBox_criterio_smart_list.TabIndex = 138;
+            // 
+            // tabla_canciones_smartlist
+            // 
+            this.tabla_canciones_smartlist.AllowUserToAddRows = false;
+            this.tabla_canciones_smartlist.AllowUserToDeleteRows = false;
+            this.tabla_canciones_smartlist.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.tabla_canciones_smartlist.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tabla_canciones_smartlist.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn14,
+            this.dataGridViewTextBoxColumn15,
+            this.dataGridViewTextBoxColumn16,
+            this.dataGridViewTextBoxColumn17});
+            this.tabla_canciones_smartlist.Location = new System.Drawing.Point(25, 164);
+            this.tabla_canciones_smartlist.Name = "tabla_canciones_smartlist";
+            this.tabla_canciones_smartlist.ReadOnly = true;
+            this.tabla_canciones_smartlist.RowHeadersVisible = false;
+            this.tabla_canciones_smartlist.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.tabla_canciones_smartlist.Size = new System.Drawing.Size(900, 312);
+            this.tabla_canciones_smartlist.TabIndex = 140;
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.HeaderText = "Nombre";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridViewTextBoxColumn14.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.HeaderText = "Cantante";
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            this.dataGridViewTextBoxColumn15.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            this.dataGridViewTextBoxColumn16.HeaderText = "Compositor";
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            this.dataGridViewTextBoxColumn16.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn17
+            // 
+            this.dataGridViewTextBoxColumn17.HeaderText = "Album";
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            this.dataGridViewTextBoxColumn17.ReadOnly = true;
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.BackColor = System.Drawing.Color.Black;
+            this.label38.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label38.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label38.ForeColor = System.Drawing.Color.Chocolate;
+            this.label38.Location = new System.Drawing.Point(494, 14);
+            this.label38.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(91, 21);
+            this.label38.TabIndex = 141;
+            this.label38.Text = "Version Beta";
             // 
             // ALAINID
             // 
@@ -4438,16 +4430,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(946, 512);
-            this.Controls.Add(this.panel_buscar);
-            this.Controls.Add(this.panel_karaoke_menu);
-            this.Controls.Add(this.panel_playlist_usuario);
-            this.Controls.Add(this.panel_favoritos_menu);
-            this.Controls.Add(this.panel_social_menu);
-            this.Controls.Add(this.Panel_premium);
-            this.Controls.Add(this.panel_perfil_de_usuario);
-            this.Controls.Add(this.panel_historial_menu);
             this.Controls.Add(this.panel_listainteligente_menu);
             this.Controls.Add(this.panel_descargas_menu);
+            this.Controls.Add(this.panel_playlist_usuario);
+            this.Controls.Add(this.Panel_premium);
+            this.Controls.Add(this.panel_buscar);
+            this.Controls.Add(this.panel_karaoke_menu);
+            this.Controls.Add(this.panel_favoritos_menu);
+            this.Controls.Add(this.panel_social_menu);
+            this.Controls.Add(this.panel_perfil_de_usuario);
+            this.Controls.Add(this.panel_historial_menu);
             this.Controls.Add(this.BtnListaInteligente);
             this.Controls.Add(this.btnDescargas);
             this.Controls.Add(this.btnHistorial);
@@ -4537,6 +4529,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.tabla_ver_playlist)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabla_playlist)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabla_canciones_descargadas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabla_canciones_smartlist)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -4711,20 +4705,11 @@
         private System.Windows.Forms.Button btn_borrar_historial;
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.Button btn_atras_historial;
-        private System.Windows.Forms.ComboBox comboBox12;
-        private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.Label label45;
-        private System.Windows.Forms.ComboBox comboBox13;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Label label46;
         private System.Windows.Forms.Button btn_atras_descargas;
-        private System.Windows.Forms.ComboBox comboBox14;
-        private System.Windows.Forms.Label label47;
         private System.Windows.Forms.Label label48;
-        private System.Windows.Forms.ComboBox comboBox15;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.TextBox valor_criterio_smartlist;
+        private System.Windows.Forms.Button btn_aplicar_criterios_smartlist;
         private System.Windows.Forms.Label label49;
         private System.Windows.Forms.Button btn_atras_listainteligente_menu;
         private System.Windows.Forms.Label label50;
@@ -4877,5 +4862,17 @@
         private System.Windows.Forms.ToolStripMenuItem videoToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem cancionToolStripMenuItem2;
         private System.Windows.Forms.Button btn_descargar_cancion;
+        private System.Windows.Forms.DataGridView tabla_canciones_descargadas;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cantante;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Album;
+        private System.Windows.Forms.ComboBox comboBox_criterio_smart_list;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.DataGridView tabla_canciones_smartlist;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
     }
 }
