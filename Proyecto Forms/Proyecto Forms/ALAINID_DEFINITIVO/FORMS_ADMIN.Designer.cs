@@ -980,11 +980,10 @@
             this.panel_agregar_video_admin.Controls.Add(this.label30);
             this.panel_agregar_video_admin.Controls.Add(this.label31);
             this.panel_agregar_video_admin.Controls.Add(this.nombrevideo_agregar_video_admin);
-            this.panel_agregar_video_admin.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_agregar_video_admin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.panel_agregar_video_admin.Location = new System.Drawing.Point(0, 24);
+            this.panel_agregar_video_admin.Location = new System.Drawing.Point(831, 335);
             this.panel_agregar_video_admin.Name = "panel_agregar_video_admin";
-            this.panel_agregar_video_admin.Size = new System.Drawing.Size(910, 525);
+            this.panel_agregar_video_admin.Size = new System.Drawing.Size(27, 19);
             this.panel_agregar_video_admin.TabIndex = 63;
             this.panel_agregar_video_admin.Visible = false;
             this.panel_agregar_video_admin.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_agregar_video_admin_Paint);
@@ -2280,9 +2279,10 @@
             this.panel_agregar_cancion_karaoke.Controls.Add(this.label55);
             this.panel_agregar_cancion_karaoke.Controls.Add(this.label56);
             this.panel_agregar_cancion_karaoke.Controls.Add(this.nombre_text_cancion_karaoke);
-            this.panel_agregar_cancion_karaoke.Location = new System.Drawing.Point(410, 430);
+            this.panel_agregar_cancion_karaoke.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_agregar_cancion_karaoke.Location = new System.Drawing.Point(0, 24);
             this.panel_agregar_cancion_karaoke.Name = "panel_agregar_cancion_karaoke";
-            this.panel_agregar_cancion_karaoke.Size = new System.Drawing.Size(30, 27);
+            this.panel_agregar_cancion_karaoke.Size = new System.Drawing.Size(910, 525);
             this.panel_agregar_cancion_karaoke.TabIndex = 132;
             this.panel_agregar_cancion_karaoke.Visible = false;
             // 
@@ -2707,9 +2707,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.ClientSize = new System.Drawing.Size(910, 549);
+            this.Controls.Add(this.panel_agregar_cancion_karaoke);
             this.Controls.Add(this.panel_agregar_video_admin);
             this.Controls.Add(this.panel_agregar_cancion_admin);
-            this.Controls.Add(this.panel_agregar_cancion_karaoke);
             this.Controls.Add(this.panel_ver_canciones_karaoke);
             this.Controls.Add(this.panel_ver_artistas);
             this.Controls.Add(this.panel_ver_canciones_admin);

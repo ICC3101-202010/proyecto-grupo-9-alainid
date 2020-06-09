@@ -103,17 +103,17 @@ namespace Proyecto_Forms
             {
                 if (si == s)
                 {
-                    Console.WriteLine("esta cancion ya existe en ALAINID");
-                    Thread.Sleep(2000);
+                    MessageBox.Show("Esta cancion ya existe en ALAINID", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.None);
+                
+                    
                     return false;
                 }
             }
             ALAINID.todas_las_cancioneskaraoke.Add(s);
             ALAINID.Partirkaraoke();
-            Console.WriteLine("================");
-            Console.WriteLine("Canción agregada exitosamente A CANTAAR!");
-            Console.WriteLine("================");
-            Thread.Sleep(2000);
+            MessageBox.Show("Canción agregada exitosamente", "Felicidades", MessageBoxButtons.OK, MessageBoxIcon.None);
+
+            
             return true;
         }
     }

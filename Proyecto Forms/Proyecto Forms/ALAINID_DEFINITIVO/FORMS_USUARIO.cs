@@ -27,7 +27,7 @@ namespace ALAINID_DEFINITIVO
             lista_cri_videos.Add("Genero Video"); lista_cri_videos.Add("Director"); lista_cri_videos.Add("Film Studio");
 
             InitializeComponent();
-            foreach(User user in Proyecto_Forms.ALAINID.listausuarios)
+            foreach (User user in Proyecto_Forms.ALAINID.listausuarios)
             {
                 if (user.Email_ == Program.usuario_activo.Email_)
                 {
@@ -38,8 +38,10 @@ namespace ALAINID_DEFINITIVO
                     }
                 }
             }
-        }
 
+            playlistcola = axWindowsMediaPlayer2.playlistCollection.newPlaylist("playlistcola");
+        }
+        
         public string dondequedaste;
         public int desplegable;
         public string ruta;
@@ -58,6 +60,7 @@ namespace ALAINID_DEFINITIVO
         public List<Video> lista_videos_filtrados = new List<Video>();
         public Song cancionbuscada;
         public Video videobuscado;
+        WMPLib.IWMPPlaylist playlistcola;
 
         private void stopToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -200,6 +203,15 @@ namespace ALAINID_DEFINITIVO
 
             panel_karaoke_menu.Visible = true;
             panel_karaoke_menu.Dock = DockStyle.Fill;
+            foreach(Song karaoke in Proyecto_Forms.ALAINID.todas_las_cancioneskaraoke)
+            {
+                int n = tabla_canciones_karaoke.Rows.Add();
+                tabla_canciones_karaoke.Rows[n].Cells[0].Value = karaoke.Nombrecancion;
+                tabla_canciones_karaoke.Rows[n].Cells[1].Value = karaoke.Cantante.Name;
+                tabla_canciones_karaoke.Rows[n].Cells[2].Value = karaoke.Compositor.Name;
+
+            }
+            
         }
         private void btnHistorial_Click(object sender, EventArgs e)
         {
@@ -327,13 +339,15 @@ namespace ALAINID_DEFINITIVO
         }
         private void btn_premium_listo_Click(object sender, EventArgs e)
         {
-            Proyecto_Forms.ALAINID.VolversePremium(emialpremiumtextbox.Text, contraseñapremiumtextbox.Text);
+            int es = 0;
             foreach(User user in Proyecto_Forms.ALAINID.listausuarios)
             {
                 if (Program.usuario_activo.Email_ == user.Email_)
                 {
+                   
                     if (emialpremiumtextbox.Text== user.Email_)
                     {
+                        es = 1;
                         Proyecto_Forms.ALAINID.VolversePremium(emialpremiumtextbox.Text, contraseñapremiumtextbox.Text);
                         if (user.Premium_ == "premium")
                         {
@@ -348,11 +362,12 @@ namespace ALAINID_DEFINITIVO
                     }
                     
                 }
-                else
-                {
-                    MessageBox.Show("EL CORREO INGRESADO NO CORRESPONDE A ESTA CUENTA", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.None);
+               
+            }
+            if(es==0)
+            {
+                MessageBox.Show("EL CORREO INGRESADO NO CORRESPONDE A ESTA CUENTA", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.None);
 
-                }
             }
         }
         private void contraseñapremiumtextbox_TextChanged(object sender, EventArgs e)
@@ -887,6 +902,8 @@ namespace ALAINID_DEFINITIVO
                 tabla_resultados_busqueda_multiple.Rows[n].Cells[2].Value = "Video";
 
             }
+            lista_videos_filtrados.Clear();
+            lista_canciones_filtradas.Clear();
             criterio_txt_combobox1_desplegable.Items.Clear();criterio_txt_combobox2_desplegable.Items.Clear();
             criterio_txt_combobox3_desplegable.Items.Clear();criterio_txt_combobox4_desplegable.Items.Clear();
             criterio_txt_combobox5_desplegable.Items.Clear();criterio_txt_combobox6_desplegable.Items.Clear();
@@ -2558,6 +2575,8 @@ namespace ALAINID_DEFINITIVO
                                 select_playlist_cancion_reproductor.Items.Add(ply.NombrePlaylist);
                             }
                             axWindowsMediaPlayer2.URL = ruta;
+                            
+                            
                         }
                     }
                     foreach (Video v in Proyecto_Forms.ALAINID.todos_los_videos)
@@ -2652,7 +2671,14 @@ namespace ALAINID_DEFINITIVO
             Proyecto_Forms.ALAINID.Agregarvideoaply(Program.usuario_activo.Email_,listaplaylist.Text, videobuscado);
         }
         private void btnAgregar_A_Cola_Click(object sender, EventArgs e)
-        {
+        {//agregar a la cola video
+            WMPLib.IWMPMedia media;
+            media = axWindowsMediaPlayer2.newMedia(cancionbuscada.Nombrearchivo);
+            playlistcola.appendItem(media);
+            MessageBox.Show("Cancion Agregada Exitosamente a la Cola", "Exito", MessageBoxButtons.OK, MessageBoxIcon.None);
+
+
+
 
         }
         private void btnCalificar_Click(object sender, EventArgs e)
@@ -2843,7 +2869,15 @@ namespace ALAINID_DEFINITIVO
             }
         }
         private void btn_agregar_a_la_cola_cancion_reproductor_Click(object sender, EventArgs e)
-        {
+        {//este es agregar  a la cola cancion
+
+            WMPLib.IWMPMedia media;
+            media = axWindowsMediaPlayer2.newMedia(cancionbuscada.Nombrearchivo);
+            playlistcola.appendItem(media);
+            MessageBox.Show("Cancion Agregada Exitosamente a la Cola", "Exito", MessageBoxButtons.OK, MessageBoxIcon.None);
+            axWindowsMediaPlayer2.currentPlaylist = playlistcola;
+            axWindowsMediaPlayer2.Ctlcontrols.play();
+
 
         }
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -2907,7 +2941,7 @@ namespace ALAINID_DEFINITIVO
             criterio_txt_combobox4_desplegable.Text = ""; criterio_txt_combobox5_desplegable.Text = ""; criterio_txt_combobox6_desplegable.Text = "";
             criterio_txt_combobox7_desplegable.Text = ""; criterio_txt_combobox8_desplegable.Text = "";
             criterios.Clear();
-
+            tabla_resultados_busqueda_multiple.Rows.Clear();
             foreach (string criterio in Proyecto_Forms.ALAINID.lista_criterios_filtro2)
             {
                 criterios.Add(criterio);
@@ -2951,6 +2985,7 @@ namespace ALAINID_DEFINITIVO
                     ruta = s.Nombrearchivo;
                     cancionbuscada = s;
                     axWindowsMediaPlayer2.URL = ruta;
+                    
                 }
             }
             foreach (Video v in Proyecto_Forms.ALAINID.todos_los_videos)
@@ -2985,9 +3020,9 @@ namespace ALAINID_DEFINITIVO
         }
         private void btn_buscar_en_social_Click(object sender, EventArgs e)
         {
-            tabla_resultados_busqueda_social.Rows.Clear();
             artistas_busqueda_social.Clear();
             usuarios_busqueda_social.Clear();
+            Proyecto_Forms.ALAINID.Activar_todo();
             if (palabra_clave_buscar_social.Text != "")
             {
                 foreach (Artista actor in Proyecto_Forms.ALAINID.lista_actores)
@@ -3090,7 +3125,7 @@ namespace ALAINID_DEFINITIVO
                 foreach (User user in usuarios_busqueda_social)
                 {
                     int n = tabla_resultados_busqueda_social.Rows.Add();
-                    tabla_resultados_busqueda_social.Rows[n].Cells[0].Value = user.Email_;
+                    tabla_resultados_busqueda_social.Rows[n].Cells[0].Value = user.Nombre_;
                     tabla_resultados_busqueda_social.Rows[n].Cells[1].Value = "Usuario";
                 }
             }
@@ -3110,7 +3145,7 @@ namespace ALAINID_DEFINITIVO
                 panel_ver_usuario_busqueda_social.Dock = DockStyle.Fill;
                 foreach (User user in Proyecto_Forms.ALAINID.listausuarios)
                 {
-                    if (user.Email_.ToLower() == email_persona_seguir_social.ToLower())
+                    if (user.Nombre_.ToLower() == email_persona_seguir_social.ToLower())
                     {
                         social_nombre_user_busqueda.Text = user.Nombre_;
                         social_email_user_busqueda.Text = user.Email_;
@@ -3122,6 +3157,9 @@ namespace ALAINID_DEFINITIVO
             }
             if (tipo_persona_seguir_social == "Artista")
             {
+                panel_ver_artista_busqueda_social.Visible = true;
+                panel_ver_artista_busqueda_social.Dock = DockStyle.Fill;
+
                 foreach (Artista act in Proyecto_Forms.ALAINID.lista_actores)
                 {
                     if (act.Name.ToLower() == email_persona_seguir_social.ToLower())
@@ -3196,6 +3234,42 @@ namespace ALAINID_DEFINITIVO
                     Proyecto_Forms.ALAINID.Almacenar_todo();
                 }
             }
+            Proyecto_Forms.ALAINID.Activar_todo();
+           
+            tabla_seguidos_social.Rows.Clear();
+            tabla_seguidores_social.Rows.Clear();
+            foreach (User user1 in Proyecto_Forms.ALAINID.listausuarios)
+            {
+                if (user1.Email_ == Program.usuario_activo.Email_)
+                {
+                    foreach (User u in user1.Usuarios_seguidos_)
+                    {
+                        int n = tabla_seguidos_social.Rows.Add();
+                        tabla_seguidos_social.Rows[n].Cells[0].Value = u.Nombre_;
+                        tabla_seguidos_social.Rows[n].Cells[1].Value = "Usuario";
+
+                    }
+                    foreach (Artista art in user1.Artistas_seguidos_)
+                    {
+                        int n = tabla_seguidos_social.Rows.Add();
+                        tabla_seguidos_social.Rows[n].Cells[0].Value = art.Name;
+                        tabla_seguidos_social.Rows[n].Cells[1].Value = "Artista";
+
+                    }
+                }
+            }
+            foreach (User user in Proyecto_Forms.ALAINID.listausuarios)
+            {
+                foreach (User u in user.Usuarios_seguidos_)
+                {
+                    if (u.Email_ == Program.usuario_activo.Email_)
+                    {
+                        int n = tabla_seguidores_social.Rows.Add();
+                        tabla_seguidores_social.Rows[n].Cells[0].Value = user.Nombre_;
+                        tabla_seguidores_social.Rows[n].Cells[1].Value = "Usuario";
+                    }
+                }
+            }
         }
         private void button5_Click_1(object sender, EventArgs e)
         {// atras ver artista
@@ -3203,16 +3277,23 @@ namespace ALAINID_DEFINITIVO
         }
         private void btn_seguir_artista_Click(object sender, EventArgs e)
         {
+            int existe = 0;
+            Proyecto_Forms.ALAINID.Activar_todo();
+            
+            tabla_seguidos_social.Rows.Clear();
+            tabla_seguidores_social.Rows.Clear();
+            
             foreach (User user1 in Proyecto_Forms.ALAINID.listausuarios)
             {
                 if (user1.Email_ == Program.usuario_activo.Email_)
                 {
-                    Proyecto_Forms.ALAINID.Activar_todo();
+                    
                     foreach (Artista act in Proyecto_Forms.ALAINID.lista_actores)
                     {
-                        if (act.Name == social_email_user_busqueda.Text)
+                        if (act.Name == social_nombre_artista.Text)
                         {
                             user1.Artistas_seguidos_.Add(act);
+                            Proyecto_Forms.ALAINID.Almacenar_todo();
                             MessageBox.Show("Actor Seguido Exitosamente", "Seguir", MessageBoxButtons.OK, MessageBoxIcon.None);
 
                         }
@@ -3220,38 +3301,81 @@ namespace ALAINID_DEFINITIVO
                     }
                     foreach (Artista dir in Proyecto_Forms.ALAINID.lista_directores)
                     {
-                        if (dir.Name == social_email_user_busqueda.Text)
+                        if (dir.Name == social_nombre_artista.Text)
                         {
                             user1.Artistas_seguidos_.Add(dir);
+                            Proyecto_Forms.ALAINID.Almacenar_todo();
                             MessageBox.Show("Director Seguido Exitosamente", "Seguir", MessageBoxButtons.OK, MessageBoxIcon.None);
-
-                        }
-
-                    }
-                    foreach (Artista comp in Proyecto_Forms.ALAINID.lista_compositores)
-                    {
-                        if (comp.Name == social_email_user_busqueda.Text)
-                        {
-                            user1.Artistas_seguidos_.Add(comp);
-                            MessageBox.Show("Compositor Seguido Exitosamente", "Seguir", MessageBoxButtons.OK, MessageBoxIcon.None);
 
                         }
 
                     }
                     foreach (Artista cant in Proyecto_Forms.ALAINID.lista_cantantes)
                     {
-                        if (cant.Name == social_email_user_busqueda.Text)
+                        
+                        if (cant.Name == social_nombre_artista.Text)
                         {
+                            existe = 1;
                             user1.Artistas_seguidos_.Add(cant);
+                            Proyecto_Forms.ALAINID.Almacenar_todo();
                             MessageBox.Show("Cantante Seguido Exitosamente", "Seguir", MessageBoxButtons.OK, MessageBoxIcon.None);
 
                         }
 
                     }
-                    Proyecto_Forms.ALAINID.Almacenar_todo();
+                    if (existe == 0)
+                    {
+                        foreach (Artista comp in Proyecto_Forms.ALAINID.lista_compositores)
+                        {
+
+                            if (comp.Name == social_nombre_artista.Text)
+                            {
+
+                                user1.Artistas_seguidos_.Add(comp);
+                                Proyecto_Forms.ALAINID.Almacenar_todo();
+                                MessageBox.Show("Compositor Seguido Exitosamente", "Seguir", MessageBoxButtons.OK, MessageBoxIcon.None);
+
+                            }
+
+                        }
+                    }
+                   
+                    
+                    
                 }
             }
+            foreach (User user1 in Proyecto_Forms.ALAINID.listausuarios)
+            {
+                if (user1.Email_ == Program.usuario_activo.Email_)
+                {
+                    foreach (User u in user1.Usuarios_seguidos_)
+                    {
+                        int n = tabla_seguidos_social.Rows.Add();
+                        tabla_seguidos_social.Rows[n].Cells[0].Value = u.Nombre_;
+                        tabla_seguidos_social.Rows[n].Cells[1].Value = "Usuario";
 
+                    }
+                    foreach (Artista art in user1.Artistas_seguidos_)
+                    {
+                        int n = tabla_seguidos_social.Rows.Add();
+                        tabla_seguidos_social.Rows[n].Cells[0].Value = art.Name;
+                        tabla_seguidos_social.Rows[n].Cells[1].Value = "Artista";
+
+                    }
+                }
+            }
+            foreach (User user in Proyecto_Forms.ALAINID.listausuarios)
+            {
+                foreach (User u in user.Usuarios_seguidos_)
+                {
+                    if (u.Email_ == Program.usuario_activo.Email_)
+                    {
+                        int n = tabla_seguidores_social.Rows.Add();
+                        tabla_seguidores_social.Rows[n].Cells[0].Value = user.Nombre_;
+                        tabla_seguidores_social.Rows[n].Cells[1].Value = "Usuario";
+                    }
+                }
+            }
         }
 
         private void tabla_playlist_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -3272,9 +3396,12 @@ namespace ALAINID_DEFINITIVO
                             }
                             foreach (Song song in ps.Listplay)
                             {
+                                panel_ver_una_playlist.Visible = true;
+                                panel_ver_una_playlist.Dock = DockStyle.Fill;
                                 int n = tabla_ver_playlist.Rows.Add();
                                 tabla_ver_playlist.Rows[n].Cells[0].Value = song.Nombrecancion;
                                 tabla_ver_playlist.Rows[n].Cells[1].Value = song.Cantante.Name;
+                                
                             }
                         }
                     }
@@ -3288,6 +3415,7 @@ namespace ALAINID_DEFINITIVO
                             }
                             foreach (Video video in pv.Listplayvideo)
                             {
+                                panel_ver_una_playlist.Visible = true;
                                 int n = tabla_ver_playlist.Rows.Add();
                                 tabla_ver_playlist.Rows[n].Cells[0].Value = video.Nombre_video;
                                 tabla_ver_playlist.Rows[n].Cells[1].Value = video.Director.Name;
@@ -3332,6 +3460,8 @@ namespace ALAINID_DEFINITIVO
                     panel_ver_una_playlist.Visible = false;
                     panel_playlist_usuario.Visible = false;
                     panel_buscar.Visible = true;
+                    panel_buscar.Dock = DockStyle.Fill;
+
                     panel_cancion_seleccionada_busqueda_simple.Visible = true;
                     panel_cancion_seleccionada_busqueda_simple.Dock = DockStyle.Fill;
                     ruta = song.Nombrearchivo;
@@ -3360,6 +3490,7 @@ namespace ALAINID_DEFINITIVO
                     panel_ver_una_playlist.Visible = false;
                     panel_playlist_usuario.Visible = false;
                     panel_buscar.Visible = true;
+                    panel_buscar.Dock = DockStyle.Fill;
                     panel_video_seleccionado.Visible = true;
                     panel_video_seleccionado.Dock = DockStyle.Fill;
                     ruta = video.Nombrearchivovideo;
@@ -3384,12 +3515,14 @@ namespace ALAINID_DEFINITIVO
             calificacion_cancion_reproductor.Text = "";
             genero_cancion_reproductor.Text = "";
             reproducciones_cancion_reproductor.Text = "";
+            btn_atras_cancion_reproductor.Visible = true;
+            btn_atras_rep_cancion_en_smartlist.Visible = false;
+
+
         }
         private void btn_atras_rep_cancion_en_favoritos_Click(object sender, EventArgs e)
         {
             panel_cancion_seleccionada_busqueda_simple.Visible = false;
-            panel_busqueda_multiple.Visible = false;
-            panel_busqueda_simple.Visible = false;
             panel_buscar.Visible = false;
             panel_favoritos_menu.Visible = true;
             cantante_cancion_reproductor.Text = "";
@@ -3399,6 +3532,12 @@ namespace ALAINID_DEFINITIVO
             calificacion_cancion_reproductor.Text = "";
             genero_cancion_reproductor.Text = "";
             reproducciones_cancion_reproductor.Text = "";
+            tabla_favoritos_canciones.Rows.Clear();
+            tabla_favoritos_videos.Rows.Clear();
+            btn_atras_rep_cancion_en_favoritos.Visible = false;
+            btn_atras_cancion_reproductor.Visible = true;
+
+
         }
         private void btn_atras_rep_cancion_en_playlist_Click(object sender, EventArgs e)
         {
@@ -3415,12 +3554,17 @@ namespace ALAINID_DEFINITIVO
             calificacion_cancion_reproductor.Text = "";
             genero_cancion_reproductor.Text = "";
             reproducciones_cancion_reproductor.Text = "";
+            tabla_ver_playlist.Rows.Clear();
+
+            btn_atras_rep_cancion_en_playlist.Visible = false;
+            btn_atras_cancion_reproductor.Visible = true;
+
+
         }
         private void btn_atras_rep_video_playlist_Click(object sender, EventArgs e)
         {
             panel_video_seleccionado.Visible = false;
-            panel_busqueda_multiple.Visible = false;
-            panel_busqueda_simple.Visible = false;
+            
             panel_buscar.Visible = false;
             panel_playlist_usuario.Visible = true;
             panel_ver_una_playlist.Visible = true;
@@ -3429,18 +3573,22 @@ namespace ALAINID_DEFINITIVO
             textBox_Calificacion.Text = "";
             textBox_Año_Grabacion.Text = "";
             textBox_Reproducciones.Text = "";
+            btn_atras_rep_video_playlist.Visible = false;
+            btn_atras_cancion_reproductor.Visible = true;
         }
         private void btn_atras_rep_video_favoritos_Click(object sender, EventArgs e)
         {
             panel_video_seleccionado.Visible = false;
-            panel_busqueda_multiple.Visible = false;
-            panel_busqueda_simple.Visible = false;
+            panel_buscar.Visible = false;
             panel_favoritos_menu.Visible = true;
             textBox_Nombre_Director.Text = "";
             tabla_nombre_actores_reprod_video.Rows.Clear();
             textBox_Calificacion.Text = "";
             textBox_Año_Grabacion.Text = "";
             textBox_Reproducciones.Text = "";
+            btn_atras_rep_video_favoritos.Visible = false;
+            btn_atras_cancion_reproductor.Visible = true;
+
         }
         private void btn_atras_rep_video_smartlist_Click(object sender, EventArgs e)
         {
@@ -3453,6 +3601,9 @@ namespace ALAINID_DEFINITIVO
             textBox_Calificacion.Text = "";
             textBox_Año_Grabacion.Text = "";
             textBox_Reproducciones.Text = "";
+            btn_atras_rep_video_smartlist.Visible = false;
+            btn_atras_cancion_reproductor.Visible = true;
+
         }
 
         private void calificacion_cancion_ValueChanged(object sender, EventArgs e)
@@ -3473,6 +3624,282 @@ namespace ALAINID_DEFINITIVO
         private void axWindowsMediaPlayer1_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void tabla_seguidos_social_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {// click para ver perfil de seguidos
+            Proyecto_Forms.ALAINID.Activar_todo();
+            foreach (User user in Proyecto_Forms.ALAINID.listausuarios)
+            {
+                if (user.Nombre_ == Program.usuario_activo.Email_)
+                {
+                    int fila = e.RowIndex;
+                    if (tabla_seguidores_social.Rows[fila].Cells[1].Value.ToString().ToLower() == "Artista")
+                    {
+                        foreach (Artista art in user.Artistas_seguidos_)
+                        {
+                            if(art.Name.ToLower() == tabla_seguidores_social.Rows[fila].Cells[0].Value.ToString().ToLower())
+                            {
+                                panel_ver_artista_seguido.Visible = true;
+                                nombre_artista_seguido.Text = art.Name;
+                                edadartista_seguido.Text = art.Age.ToString();
+                                nacionartista_seguido.Text = art.Nacionality;
+                                sexoartista_seguido.Text = art.Sexo;
+                            }
+                        }
+                    }
+                    if (tabla_seguidores_social.Rows[fila].Cells[1].Value.ToString().ToLower() == "Usuario")
+                    {
+                        foreach (User user1 in user.Usuarios_seguidos_)
+                        {
+                            if (user1.Email_.ToLower() == tabla_seguidores_social.Rows[fila].Cells[0].Value.ToString().ToLower())
+                            {
+                                nombreusuario_usuario_seguido.Text = user1.Nombreusuario;
+                                emailusuario_seguido.Text = user1.Email_;
+                                nombre_usuario_seguidos.Text = user1.Nombre_;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        private void tabla_seguidores_social_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {//click para ver perfil de seguidores
+
+        }
+
+        private void btn_atras_seguidos_Click(object sender, EventArgs e)
+        {
+            panel_ver_artista_seguido.Visible = false;
+        }
+
+        private void btn_atras_ver_usuario_seguido_Click(object sender, EventArgs e)
+        {
+            panel_ver_usuario_seguido.Visible = false;
+        }
+
+        private void editarFavoritosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void descargasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            panel_descargas_menu.Visible = true;
+            panel_descargas_menu.Dock = DockStyle.Fill;
+        }
+
+        private void socialToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            panel_social_menu.Visible = true;
+            panel_social_menu.Dock = DockStyle.Fill;
+
+        }
+
+        private void karaokeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            panel_karaoke_menu.Visible = true;
+            panel_karaoke_menu.Dock = DockStyle.Fill;
+
+        }
+
+        private void favoritosCancionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            panel_favoritos_menu.Visible = true;
+            panel_favoritos_menu.Dock = DockStyle.Fill;
+
+        }
+
+        private void historialToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            panel_historial_menu.Visible = true;
+            panel_historial_menu.Dock = DockStyle.Fill;
+
+        }
+
+        private void playlistToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            panel_playlist_usuario.Visible = true;
+            panel_playlist_usuario.Dock = DockStyle.Fill;
+
+        }
+
+        private void smartListToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            panel_listainteligente_menu.Visible = true;
+            panel_listainteligente_menu.Dock = DockStyle.Fill;
+            
+
+        }
+
+        private void perfilDeUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            panel_perfil_de_usuario.Visible = true;
+            panel_perfil_de_usuario.Dock = DockStyle.Fill;
+
+        }
+
+        private void btn_limpiar_cola_video_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_limpiar_cola_cancion_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabla_ver_playlist_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {//click cancion en playlist
+            Proyecto_Forms.ALAINID.Activar_todo();
+            btn_atras_rep_cancion_en_playlist.Visible = true;
+            btn_atras_cancion_reproductor.Visible = false;
+            panel_ver_una_playlist.Visible = false;
+            panel_playlist_usuario.Visible = false;
+           
+            int fila = e.RowIndex;
+            if (tabla_ver_playlist.Rows[fila].Cells[1].Value.ToString() == "Cancion")
+            {
+                foreach (Song song in Proyecto_Forms.ALAINID.todas_las_canciones)
+                {
+                    if (song.Nombrecancion.ToLower() == tabla_ver_playlist.Rows[fila].Cells[0].Value.ToString().ToLower())
+                    {
+                        cantante_cancion_reproductor.Text = song.Cantante.Name;
+                        nombrecancion_cancion_reproductor.Text = song.Nombrecancion;
+                        compositor_cancion_reproductor.Text = song.Compositor.Name;
+                        album_cancion_reproductor.Text = song.Album;
+                        calificacion_cancion_reproductor.Text = song.Calificacionpromedio.ToString();
+                        genero_cancion_reproductor.Text = song.Genero;
+                        reproducciones_cancion_reproductor.Text = song.Reproducciones.ToString();
+                        axWindowsMediaPlayer2.URL = song.Nombrearchivo;
+                        panel_buscar.Visible = true;
+                        panel_buscar.Dock = DockStyle.Fill;
+                        panel_cancion_seleccionada_busqueda_simple.Visible = true;
+                        panel_cancion_seleccionada_busqueda_simple.Dock = DockStyle.Fill;
+                    }
+                }
+            }
+            if (tabla_ver_playlist.Rows[fila].Cells[1].Value.ToString() == "Video")
+            {
+                foreach (Video v in Proyecto_Forms.ALAINID.todos_los_videos)
+                {
+                    if (v.Nombre_video.ToLower() == tabla_ver_playlist.Rows[fila].Cells[0].Value.ToString().ToLower())
+                    {
+                        Proyecto_Forms.ALAINID.Sacarpromediocalificacionvideo(v.Nombrearchivovideo);
+                        textBox_Nombre_Director.Text = v.Director.Name;
+                        foreach (Artista actor in v.Actores)
+                        {
+                            int n = tabla_nombre_actores_reprod_video.Rows.Add();
+                            tabla_nombre_actores_reprod_video.Rows[n].Cells[0].Value = actor.Name;
+                        }
+                        textBox_Calificacion.Text = v.Calificacion_promedio.ToString();
+                        textBox_Año_Grabacion.Text = v.Anio_publicacion.ToString();
+                        textBox_Reproducciones.Text = v.Reproduccion.ToString();
+
+                        axWindowsMediaPlayerVideo.URL = v.Nombrearchivovideo;
+                        panel_buscar.Visible = true;
+                        panel_buscar.Dock = DockStyle.Fill;
+                        panel_video_seleccionado.Visible = true;
+                        panel_video_seleccionado.Dock = DockStyle.Fill;
+                    }
+                }
+            }
+
+        }
+
+        private void tabla_favoritos_canciones_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //cualquier wea
+        }
+
+        private void tabla_favoritos_videos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {//doble click reprod video en favoritos
+
+            Proyecto_Forms.ALAINID.Activar_todo();
+            btn_atras_rep_cancion_en_favoritos.Visible = true;
+            btn_atras_cancion_reproductor.Visible = false;
+
+            panel_favoritos_menu.Visible = false;
+            
+
+            int fila = e.RowIndex;
+            foreach (Video v in Proyecto_Forms.ALAINID.todos_los_videos)
+            {
+                if (v.Nombre_video.ToLower() == tabla_favoritos_videos.Rows[fila].Cells[0].Value.ToString().ToLower())
+                {
+                    Proyecto_Forms.ALAINID.Sacarpromediocalificacionvideo(v.Nombrearchivovideo);
+                    textBox_Nombre_Director.Text = v.Director.Name;
+                    foreach (Artista actor in v.Actores)
+                    {
+                        int n = tabla_nombre_actores_reprod_video.Rows.Add();
+                        tabla_nombre_actores_reprod_video.Rows[n].Cells[0].Value = actor.Name;
+                    }
+                    textBox_Calificacion.Text = v.Calificacion_promedio.ToString();
+                    textBox_Año_Grabacion.Text = v.Anio_publicacion.ToString();
+                    textBox_Reproducciones.Text = v.Reproduccion.ToString();
+
+                    axWindowsMediaPlayerVideo.URL = v.Nombrearchivovideo;
+                    panel_buscar.Visible = true;
+                    panel_buscar.Dock = DockStyle.Fill;
+                    panel_video_seleccionado.Visible = true;
+                    panel_video_seleccionado.Dock = DockStyle.Fill;
+                }
+            }
+        }
+
+        private void tabla_favoritos_canciones_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Proyecto_Forms.ALAINID.Activar_todo();
+            btn_atras_rep_cancion_en_favoritos.Visible = true;
+            btn_atras_cancion_reproductor.Visible = false;
+            panel_favoritos_menu.Visible = false;
+            
+            int fila = e.RowIndex;
+            
+            foreach (Song song in Proyecto_Forms.ALAINID.todas_las_canciones)
+            {
+                if (song.Nombrecancion.ToLower() == tabla_favoritos_canciones.Rows[fila].Cells[0].Value.ToString().ToLower())
+                {
+                    cantante_cancion_reproductor.Text = song.Cantante.Name;
+                    nombrecancion_cancion_reproductor.Text = song.Nombrecancion;
+                    compositor_cancion_reproductor.Text = song.Compositor.Name;
+                    album_cancion_reproductor.Text = song.Album;
+                    calificacion_cancion_reproductor.Text = song.Calificacionpromedio.ToString();
+                    genero_cancion_reproductor.Text = song.Genero;
+                    reproducciones_cancion_reproductor.Text = song.Reproducciones.ToString();
+                    axWindowsMediaPlayer2.URL = song.Nombrearchivo;
+                    panel_buscar.Visible = true;
+                    panel_buscar.Dock = DockStyle.Fill;
+                    panel_cancion_seleccionada_busqueda_simple.Visible = true;
+                    panel_cancion_seleccionada_busqueda_simple.Dock = DockStyle.Fill;
+                }
+            }
+            
+        }
+
+        private void tabla_canciones_karaoke_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            panel_rep_karaoke.Visible = true;
+            panel_rep_karaoke.Dock = DockStyle.Fill;
+            int fila = e.RowIndex;
+
+            nombrecantante_karaoke.Text = tabla_canciones_karaoke.Rows[fila].Cells[1].Value.ToString();
+            foreach(Song ka in Proyecto_Forms.ALAINID.todas_las_cancioneskaraoke)
+            {
+                if (tabla_canciones_karaoke.Rows[fila].Cells[0].Value.ToString() == ka.Nombrecancion)
+                {
+                    axWindowsMediaPlayer3.URL = ka.Nombrearchivo;
+                }
+            }
+            
+
+
+        }
+
+        private void btn_atras_rep_karaoke_Click(object sender, EventArgs e)
+        {
+            panel_rep_karaoke.Visible = false;
         }
     }
 }

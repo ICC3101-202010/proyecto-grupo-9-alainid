@@ -18,7 +18,7 @@ namespace Proyecto_Forms
 {
     public static class ALAINID
     {
-        
+       
         public static List<User> listausuarios = new List<User>();          // TODOS LOS USUARIOS DE ALAINID
         public static List<Song> todas_las_canciones = new List<Song>();      // TODAS LAS CANCIONES EN ALAINID
         public static List<Video> todos_los_videos = new List<Video>();         // TODOS LOS VIDEOS DE ALAINID
@@ -76,10 +76,10 @@ namespace Proyecto_Forms
             lista_compositores = CargarCompositores();
             todos_los_videos = CargarVideos();
             todas_las_canciones = CargarCancion();
-            
+            listausuarios = Cargar();
             todas_las_cancioneskaraoke = CargarKaraoke();
             lista_cantantes = CargarCantantes();
-            listausuarios = Cargar();
+            
         }
 
     
@@ -156,63 +156,63 @@ namespace Proyecto_Forms
         public static void AlmacenarCompositores(List<Artista> u)      //Serializamos
         {
             IFormatter formatter5 = new BinaryFormatter();
-            Stream stream5 = new FileStream("Compositores.bin", FileMode.OpenOrCreate, FileAccess.Write, FileShare.None);
+            Stream stream5 = new FileStream("../../Compositores.bin", FileMode.OpenOrCreate, FileAccess.Write, FileShare.None);
             formatter5.Serialize(stream5, u);
             stream5.Close();
         }
         public static void AlmacenarDirectores(List<Artista> u)      //Serializamos
         {
             IFormatter formatter5 = new BinaryFormatter();
-            Stream stream5 = new FileStream("Directores.bin", FileMode.OpenOrCreate, FileAccess.Write, FileShare.None);
+            Stream stream5 = new FileStream("../../Directores.bin", FileMode.OpenOrCreate, FileAccess.Write, FileShare.None);
             formatter5.Serialize(stream5, u);
             stream5.Close();
         }
         public static void AlmacenarActores(List<Artista> u)      //Serializamos
         {
             IFormatter formatter5 = new BinaryFormatter();
-            Stream stream5 = new FileStream("Actores.bin", FileMode.OpenOrCreate, FileAccess.Write, FileShare.None);
+            Stream stream5 = new FileStream("../../Actores.bin", FileMode.OpenOrCreate, FileAccess.Write, FileShare.None);
             formatter5.Serialize(stream5, u);
             stream5.Close();
         }
         public static void AlmacenarAlbum(List<PlaylistSong> u)      //Serializamos
         {
             IFormatter formatter5 = new BinaryFormatter();
-            Stream stream5 = new FileStream("Albums.bin", FileMode.OpenOrCreate, FileAccess.Write, FileShare.None);
+            Stream stream5 = new FileStream("../../Albums.bin", FileMode.OpenOrCreate, FileAccess.Write, FileShare.None);
             formatter5.Serialize(stream5, u);
             stream5.Close();
         }
         public static void AlmacenarCanciones(List<Song> s)      //Serializamos
         {
             IFormatter formatter3 = new BinaryFormatter();
-            Stream stream3 = new FileStream("Canciones.bin", FileMode.OpenOrCreate, FileAccess.Write, FileShare.None);
+            Stream stream3 = new FileStream("../../Canciones.bin", FileMode.OpenOrCreate, FileAccess.Write, FileShare.None);
             formatter3.Serialize(stream3, s);
             stream3.Close();
         }
         public static void AlmacenarVideos(List<Video> u)      //Serializamos
         {
             IFormatter formatter5 = new BinaryFormatter();
-            Stream stream5 = new FileStream("Videos.bin", FileMode.OpenOrCreate, FileAccess.Write, FileShare.None);
+            Stream stream5 = new FileStream("../../Videos.bin", FileMode.OpenOrCreate, FileAccess.Write, FileShare.None);
             formatter5.Serialize(stream5, u);
             stream5.Close();
         }
         public static void AlmacenarCantante(List<Artista> a)      //Serializamos
         {
             IFormatter formatter7 = new BinaryFormatter();
-            Stream stream7 = new FileStream("Cantantes.bin", FileMode.OpenOrCreate, FileAccess.Write, FileShare.None);
+            Stream stream7 = new FileStream("../../Cantantes.bin", FileMode.OpenOrCreate, FileAccess.Write, FileShare.None);
             formatter7.Serialize(stream7, a);
             stream7.Close();
         }
         public static void Almacenar(List<User> u)      //Serializamos
         {
             IFormatter formatter = new BinaryFormatter();
-            Stream stream = new FileStream("Usuarios2.bin", FileMode.OpenOrCreate, FileAccess.Write, FileShare.None);
+            Stream stream = new FileStream("../../Usuarios2.bin", FileMode.OpenOrCreate, FileAccess.Write, FileShare.None);
             formatter.Serialize(stream, u);
             stream.Close();
         }
         public static void AlmacenarKaraoke(List<Song> k)      //Serializamos
         {
             IFormatter formatter = new BinaryFormatter();
-            Stream stream = new FileStream("Cancioneskaraoke.bin", FileMode.OpenOrCreate, FileAccess.Write, FileShare.None);
+            Stream stream = new FileStream("../../Cancioneskaraoke.bin", FileMode.OpenOrCreate, FileAccess.Write, FileShare.None);
             formatter.Serialize(stream, k);
             stream.Close();
         }
@@ -225,7 +225,7 @@ namespace Proyecto_Forms
         public static List<Artista> CargarCompositores()
         {
             IFormatter formatter6 = new BinaryFormatter();
-            Stream stream6 = new FileStream("Compositores.bin", FileMode.OpenOrCreate, FileAccess.Read, FileShare.Read);
+            Stream stream6 = new FileStream("../../Compositores.bin", FileMode.OpenOrCreate, FileAccess.Read, FileShare.Read);
             try
             {
                 List<Artista> v = (List<Artista>)formatter6.Deserialize(stream6);
@@ -242,7 +242,7 @@ namespace Proyecto_Forms
         public static List<Artista> CargarDirectores()
         {
             IFormatter formatter6 = new BinaryFormatter();
-            Stream stream6 = new FileStream("Directores.bin", FileMode.OpenOrCreate, FileAccess.Read, FileShare.Read);
+            Stream stream6 = new FileStream("../../Directores.bin", FileMode.OpenOrCreate, FileAccess.Read, FileShare.Read);
 
             try
             {
@@ -260,7 +260,7 @@ namespace Proyecto_Forms
         public static List<Artista> CargarActores()
         {
             IFormatter formatter6 = new BinaryFormatter();
-            Stream stream6 = new FileStream("Actores.bin", FileMode.OpenOrCreate, FileAccess.Read, FileShare.Read);
+            Stream stream6 = new FileStream("../../Actores.bin", FileMode.OpenOrCreate, FileAccess.Read, FileShare.Read);
 
             try
             {
@@ -278,7 +278,7 @@ namespace Proyecto_Forms
         public static List<PlaylistSong> CargarAlbum()
         {
             IFormatter formatter6 = new BinaryFormatter();
-            Stream stream6 = new FileStream("Albums.bin", FileMode.OpenOrCreate, FileAccess.Read, FileShare.Read);
+            Stream stream6 = new FileStream("../../Albums.bin", FileMode.OpenOrCreate, FileAccess.Read, FileShare.Read);
 
             try
             {
@@ -296,7 +296,7 @@ namespace Proyecto_Forms
         static List<Song> CargarCancion()
         {
             IFormatter formatter4 = new BinaryFormatter();
-            Stream stream4 = new FileStream("Canciones.bin", FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.None);
+            Stream stream4 = new FileStream("../../Canciones.bin", FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.None);
             try
             {
                 List<Song> s2 = (List<Song>)formatter4.Deserialize(stream4);
@@ -314,7 +314,7 @@ namespace Proyecto_Forms
         public static List<Video> CargarVideos()
         {
             IFormatter formatter6 = new BinaryFormatter();
-            Stream stream6 = new FileStream("Videos.bin", FileMode.OpenOrCreate, FileAccess.Read, FileShare.Read);
+            Stream stream6 = new FileStream("../../Videos.bin", FileMode.OpenOrCreate, FileAccess.Read, FileShare.Read);
 
             try
             {
@@ -332,7 +332,7 @@ namespace Proyecto_Forms
         public static List<Artista> CargarCantantes()
         {
             IFormatter formatter8 = new BinaryFormatter();
-            Stream stream8 = new FileStream("Cantantes.bin", FileMode.OpenOrCreate, FileAccess.Read, FileShare.Read);
+            Stream stream8 = new FileStream("../../Cantantes.bin", FileMode.OpenOrCreate, FileAccess.Read, FileShare.Read);
             try
             {
                 List<Artista> ar = (List<Artista>)formatter8.Deserialize(stream8);
@@ -349,7 +349,7 @@ namespace Proyecto_Forms
         public static List<User> Cargar()
         {
             IFormatter formatter2 = new BinaryFormatter();
-            Stream stream2 = new FileStream("Usuarios2.bin", FileMode.OpenOrCreate, FileAccess.Read, FileShare.Read);
+            Stream stream2 = new FileStream("../../Usuarios2.bin", FileMode.OpenOrCreate, FileAccess.Read, FileShare.Read);
             try
             {
                 List<User> p = (List<User>)formatter2.Deserialize(stream2);
@@ -366,7 +366,7 @@ namespace Proyecto_Forms
         public static List<Song> CargarKaraoke()
         {
             IFormatter formatter2 = new BinaryFormatter();
-            Stream stream2 = new FileStream("Cancioneskaraoke.bin", FileMode.OpenOrCreate, FileAccess.Read, FileShare.Read);
+            Stream stream2 = new FileStream("../../Cancioneskaraoke.bin", FileMode.OpenOrCreate, FileAccess.Read, FileShare.Read);
 
             try
             {
@@ -1375,38 +1375,53 @@ namespace Proyecto_Forms
 
         public static void Agregar_a_favoritos(string email, Song s)
         {
-            string funka = "";
-            for (int i = 0; i < listausuarios.Count; i++)
+            Activar_todo();
+            int esta = 0;
+            foreach(User user in Proyecto_Forms.ALAINID.listausuarios)
             {
-                if (listausuarios[i].Email_ == email)
+                if(email.ToLower() == user.Email_.ToLower())
                 {
-                    listausuarios[i].Favorite_songs_.Add(s);
-                    Almacenar(listausuarios);
-                    funka += "si";
+                    foreach(Song song in user.Favorite_songs_)
+                    {
+                        if(s.Nombrecancion==song.Nombrecancion && s.Cantante.Name== song.Cantante.Name)
+                        {
+                            esta = 1;
+                            MessageBox.Show("LA CANCION YA ESTA EN TUS FAVORITOS", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.None);
 
+                        }
+                    }
+                    if (esta == 0)
+                    {
+                        user.Favorite_songs_.Add(s);
+                        Almacenar(listausuarios);
+                        MessageBox.Show("CANCION AGREGADA CORRECTAMENTE A FAVORITOS", "FELICIDADES", MessageBoxButtons.OK, MessageBoxIcon.None);
+                    }
                 }
-            }
-            if (funka != "")
-            {
-                Console.WriteLine("CANCION AGREGADA CORRECTAMENTE A FAVORITOS");
-                Thread.Sleep(2000);
-            }
-            else
-            {
-                Console.WriteLine("LA CANCION NO PUDO AGREGARSE A FAVORITOS");
-                Thread.Sleep(2000);
             }
         }
         public static void Agregar_video_a_favoritos(string email, Video s)
         {
-            string funka = "";
-            for (int i = 0; i < listausuarios.Count; i++)
+            Activar_todo();
+            int esta = 0;
+            foreach (User user in Proyecto_Forms.ALAINID.listausuarios)
             {
-                if (listausuarios[i].Email_ == email)
+                if (email.ToLower() == user.Email_.ToLower())
                 {
-                    listausuarios[i].Favorite_videos_.Add(s);
-                    Almacenar(listausuarios);
-                    funka += "si";
+                    foreach (Video video in user.Favorite_videos_)
+                    {
+                        if (s.Nombre_video == video.Nombre_video && s.Director.Name == video.Director.Name)
+                        {
+                            esta = 1;
+                            MessageBox.Show("EL VIDEO YA ESTA EN TUS FAVORITOS", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.None);
+
+                        }
+                    }
+                    if (esta == 0)
+                    {
+                        user.Favorite_videos_.Add(s);
+                        Almacenar(listausuarios);
+                        MessageBox.Show("VIDEO AGREGADO CORRECTAMENTE A FAVORITOS", "FELICIDADES", MessageBoxButtons.OK, MessageBoxIcon.None);
+                    }
                 }
             }
         }
@@ -2147,13 +2162,6 @@ namespace Proyecto_Forms
             }
             return info;
         }
-
-
-
-        
-        
-        
-        
         
         // METODOS FILTROS VIDEO=============================================================================
         // METODOS FILTROS VIDEO=============================================================================
@@ -2197,7 +2205,7 @@ namespace Proyecto_Forms
             }
             foreach (Video canc in interna1)
             {
-                if (canc.Film_studio.ToLower() == _valor)
+                if (canc.Film_studio.ToLower() == _valor.ToLower())
                 {
                     listafiltradav.Add(canc);
                     lista_canciones_filtromiltiplev.Remove(canc);
@@ -2235,7 +2243,7 @@ namespace Proyecto_Forms
             }
             foreach (Video ca in interna5)
             {
-                if (ca.Calidad.ToLower() == _valor)
+                if (ca.Calidad.ToLower() == _valor.ToLower())
                 {
                     listafiltradav.Add(ca);
                     lista_canciones_filtromiltiplev.Remove(ca);
@@ -2249,7 +2257,7 @@ namespace Proyecto_Forms
         {
             foreach (Artista art in lista_actores)
             {
-                if (art.Name.ToLower() == _valor)
+                if (art.Name.ToLower() == _valor.ToLower())
                 {
                     foreach (Video can in art.Lista_peliculas)
                     {
@@ -2263,7 +2271,7 @@ namespace Proyecto_Forms
         {
             foreach (Artista art in lista_directores)
             {
-                if (art.Name.ToLower() == _valor)
+                if (art.Name.ToLower() == _valor.ToLower())
                 {
                     foreach (Video can in art.Lista_peliculas)
                     {
@@ -2277,7 +2285,7 @@ namespace Proyecto_Forms
         {
             foreach (Video canc in todos_los_videos)
             {
-                if (canc.Nombre_video.ToLower() == _valor)
+                if (canc.Nombre_video.ToLower() == _valor.ToLower())
                 {
                     listafiltradav.Add(canc);
                 }
@@ -2289,7 +2297,7 @@ namespace Proyecto_Forms
             foreach (Video canc in todos_los_videos)
             {
                 string cat = canc.Categoria.ToLower();
-                if (cat == _valor)
+                if (cat.ToLower() == _valor.ToLower())
                 {
                     listafiltradav.Add(canc);
                 }
@@ -2318,7 +2326,7 @@ namespace Proyecto_Forms
                         {
                             foreach (Video canc in interna4)
                             {
-                                if (canc.Director.Name == can.Name)
+                                if (canc.Director.Name.ToLower() == can.Name.ToLower())
                                 {
                                     listafiltradav.Add(canc);
                                     lista_canciones_filtromiltiplev.Remove(canc);
@@ -2336,7 +2344,7 @@ namespace Proyecto_Forms
                         {
                             foreach (Video canc in interna4)
                             {
-                                if (canc.Director.Name == can.Name)
+                                if (canc.Director.Name.ToLower() == can.Name.ToLower())
                                 {
                                     listafiltradav.Add(canc);
                                     lista_canciones_filtromiltiplev.Remove(canc);
@@ -2353,7 +2361,7 @@ namespace Proyecto_Forms
                         {
                             foreach (Video canc in interna4)
                             {
-                                if (canc.Director.Name == can.Name)
+                                if (canc.Director.Name.ToLower() == can.Name.ToLower())
                                 {
                                     listafiltradav.Add(canc);
                                     lista_canciones_filtromiltiplev.Remove(canc);
@@ -2370,7 +2378,7 @@ namespace Proyecto_Forms
                         {
                             foreach (Video canc in interna4)
                             {
-                                if (canc.Director.Name == can.Name)
+                                if (canc.Director.Name.ToLower() == can.Name.ToLower())
                                 {
                                     listafiltradav.Add(canc);
                                     lista_canciones_filtromiltiplev.Remove(canc);
@@ -2535,7 +2543,7 @@ namespace Proyecto_Forms
                         int si = 0;
                         foreach (Video canc in canciones_filtradasv)
                         {
-                            if (ccc.Nombre_video == canc.Nombre_video)
+                            if (ccc.Nombre_video.ToLower() == canc.Nombre_video.ToLower())
                             {
                                 si++;
                             }
@@ -2552,6 +2560,7 @@ namespace Proyecto_Forms
         }
         public static List<Video> Buqueda_multiple_videos_and(List<string> criterios_seleccionados, List<string> criterios_ingresados)
         {
+            lista_filtrada_finalv.Clear();
             lista_canciones_filtromiltiplev.Clear();
             lista_artistas_filtromiltiplev.Clear();
             foreach (Video caca in todos_los_videos)
@@ -2595,7 +2604,7 @@ namespace Proyecto_Forms
                 foreach (Video canc in lista_filtrada_finalv)
                 {
 
-                    if ((ccc.Nombre_video == canc.Nombre_video) && (ccc.Director.Name == canc.Director.Name))
+                    if ((ccc.Nombre_video.ToLower() == canc.Nombre_video.ToLower()) && (ccc.Director.Name.ToLower() == canc.Director.Name.ToLower()))
                     {
                         si++;
                     }
@@ -2848,6 +2857,7 @@ namespace Proyecto_Forms
         //================================================================================================
         public static List<Song> Buqueda_multiple_cancionesand(List<string> criterios_seleccionados, List<string> criterio)
         {
+            lista_filtrada_final.Clear();
             lista_canciones_filtromiltiple.Clear();
             lista_artistas_filtromiltiple.Clear();
             foreach (Song caca in todas_las_canciones)
@@ -2896,7 +2906,7 @@ namespace Proyecto_Forms
                 foreach (Song canc in lista_filtrada_final)
                 {
 
-                    if ((ccc.Nombrecancion == canc.Nombrecancion) && (ccc.Cantante.Name == canc.Cantante.Name))
+                    if ((ccc.Nombrecancion.ToLower() == canc.Nombrecancion.ToLower()) && (ccc.Cantante.Name.ToLower() == canc.Cantante.Name.ToLower()))
                     {
                         si++;
                     }
@@ -2967,7 +2977,7 @@ namespace Proyecto_Forms
                 int si = 0;
                 foreach (Song canc in canciones_filtradas)
                 {
-                    if (ccc.Nombrecancion == canc.Nombrecancion)
+                    if (ccc.Nombrecancion.ToLower() == canc.Nombrecancion.ToLower())
                     {
                         si++;
                     }
