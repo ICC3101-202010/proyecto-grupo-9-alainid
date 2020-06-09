@@ -44,10 +44,20 @@
             this.smartListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reproducciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.playToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.videoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cancionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pausaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nextToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.videoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.cancionToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.previousToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.videoToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.cancionToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.archivosALaColaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reproduccirColaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.limpiarColaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reproduccirColaVideosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.limpiarColaVideosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label3 = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnPlaylist = new System.Windows.Forms.Button();
@@ -345,9 +355,7 @@
             this.label64 = new System.Windows.Forms.Label();
             this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
             this.donde_quedaste_nombre = new System.Windows.Forms.Label();
-            this.archivosALaColaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reproduccirColaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.limpiarColaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btn_descargar_cancion = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.panel_perfil_de_usuario.SuspendLayout();
             this.Panel_premium.SuspendLayout();
@@ -510,7 +518,6 @@
             this.reproducciónToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.playToolStripMenuItem,
             this.stopToolStripMenuItem,
-            this.pausaToolStripMenuItem,
             this.nextToolStripMenuItem,
             this.previousToolStripMenuItem});
             this.reproducciónToolStripMenuItem.Name = "reproducciónToolStripMenuItem";
@@ -519,38 +526,121 @@
             // 
             // playToolStripMenuItem
             // 
+            this.playToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.videoToolStripMenuItem,
+            this.cancionToolStripMenuItem});
             this.playToolStripMenuItem.Name = "playToolStripMenuItem";
-            this.playToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.playToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.playToolStripMenuItem.Text = "Play";
             this.playToolStripMenuItem.Click += new System.EventHandler(this.playToolStripMenuItem_Click);
+            // 
+            // videoToolStripMenuItem
+            // 
+            this.videoToolStripMenuItem.Name = "videoToolStripMenuItem";
+            this.videoToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.videoToolStripMenuItem.Text = "Video";
+            this.videoToolStripMenuItem.Click += new System.EventHandler(this.videoToolStripMenuItem_Click);
+            // 
+            // cancionToolStripMenuItem
+            // 
+            this.cancionToolStripMenuItem.Name = "cancionToolStripMenuItem";
+            this.cancionToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.cancionToolStripMenuItem.Text = "Cancion";
+            this.cancionToolStripMenuItem.Click += new System.EventHandler(this.cancionToolStripMenuItem_Click);
             // 
             // stopToolStripMenuItem
             // 
             this.stopToolStripMenuItem.Name = "stopToolStripMenuItem";
-            this.stopToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.stopToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.stopToolStripMenuItem.Text = "Stop";
             this.stopToolStripMenuItem.Click += new System.EventHandler(this.stopToolStripMenuItem_Click);
             // 
-            // pausaToolStripMenuItem
-            // 
-            this.pausaToolStripMenuItem.Name = "pausaToolStripMenuItem";
-            this.pausaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.pausaToolStripMenuItem.Text = "Pausa";
-            this.pausaToolStripMenuItem.Click += new System.EventHandler(this.pausaToolStripMenuItem_Click);
-            // 
             // nextToolStripMenuItem
             // 
+            this.nextToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.videoToolStripMenuItem1,
+            this.cancionToolStripMenuItem1});
             this.nextToolStripMenuItem.Name = "nextToolStripMenuItem";
-            this.nextToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nextToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.nextToolStripMenuItem.Text = "Next";
             this.nextToolStripMenuItem.Click += new System.EventHandler(this.nextToolStripMenuItem_Click);
             // 
+            // videoToolStripMenuItem1
+            // 
+            this.videoToolStripMenuItem1.Name = "videoToolStripMenuItem1";
+            this.videoToolStripMenuItem1.Size = new System.Drawing.Size(118, 22);
+            this.videoToolStripMenuItem1.Text = "Video";
+            this.videoToolStripMenuItem1.Click += new System.EventHandler(this.videoToolStripMenuItem1_Click);
+            // 
+            // cancionToolStripMenuItem1
+            // 
+            this.cancionToolStripMenuItem1.Name = "cancionToolStripMenuItem1";
+            this.cancionToolStripMenuItem1.Size = new System.Drawing.Size(118, 22);
+            this.cancionToolStripMenuItem1.Text = "Cancion";
+            this.cancionToolStripMenuItem1.Click += new System.EventHandler(this.cancionToolStripMenuItem1_Click);
+            // 
             // previousToolStripMenuItem
             // 
+            this.previousToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.videoToolStripMenuItem2,
+            this.cancionToolStripMenuItem2});
             this.previousToolStripMenuItem.Name = "previousToolStripMenuItem";
-            this.previousToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.previousToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.previousToolStripMenuItem.Text = "Previous";
             this.previousToolStripMenuItem.Click += new System.EventHandler(this.previousToolStripMenuItem_Click);
+            // 
+            // videoToolStripMenuItem2
+            // 
+            this.videoToolStripMenuItem2.Name = "videoToolStripMenuItem2";
+            this.videoToolStripMenuItem2.Size = new System.Drawing.Size(118, 22);
+            this.videoToolStripMenuItem2.Text = "Video";
+            this.videoToolStripMenuItem2.Click += new System.EventHandler(this.videoToolStripMenuItem2_Click);
+            // 
+            // cancionToolStripMenuItem2
+            // 
+            this.cancionToolStripMenuItem2.Name = "cancionToolStripMenuItem2";
+            this.cancionToolStripMenuItem2.Size = new System.Drawing.Size(118, 22);
+            this.cancionToolStripMenuItem2.Text = "Cancion";
+            this.cancionToolStripMenuItem2.Click += new System.EventHandler(this.cancionToolStripMenuItem2_Click);
+            // 
+            // archivosALaColaToolStripMenuItem
+            // 
+            this.archivosALaColaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.reproduccirColaToolStripMenuItem,
+            this.limpiarColaToolStripMenuItem,
+            this.reproduccirColaVideosToolStripMenuItem,
+            this.limpiarColaVideosToolStripMenuItem});
+            this.archivosALaColaToolStripMenuItem.Name = "archivosALaColaToolStripMenuItem";
+            this.archivosALaColaToolStripMenuItem.Size = new System.Drawing.Size(113, 20);
+            this.archivosALaColaToolStripMenuItem.Text = "Archivos a la Cola";
+            // 
+            // reproduccirColaToolStripMenuItem
+            // 
+            this.reproduccirColaToolStripMenuItem.Name = "reproduccirColaToolStripMenuItem";
+            this.reproduccirColaToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
+            this.reproduccirColaToolStripMenuItem.Text = "Reproduccir Cola Canciones";
+            this.reproduccirColaToolStripMenuItem.Click += new System.EventHandler(this.reproduccirColaToolStripMenuItem_Click);
+            // 
+            // limpiarColaToolStripMenuItem
+            // 
+            this.limpiarColaToolStripMenuItem.Name = "limpiarColaToolStripMenuItem";
+            this.limpiarColaToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
+            this.limpiarColaToolStripMenuItem.Text = "Limpiar Cola Canciones";
+            this.limpiarColaToolStripMenuItem.Click += new System.EventHandler(this.limpiarColaToolStripMenuItem_Click);
+            // 
+            // reproduccirColaVideosToolStripMenuItem
+            // 
+            this.reproduccirColaVideosToolStripMenuItem.Name = "reproduccirColaVideosToolStripMenuItem";
+            this.reproduccirColaVideosToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
+            this.reproduccirColaVideosToolStripMenuItem.Text = "Reproduccir Cola Videos";
+            this.reproduccirColaVideosToolStripMenuItem.Click += new System.EventHandler(this.reproduccirColaVideosToolStripMenuItem_Click);
+            // 
+            // limpiarColaVideosToolStripMenuItem
+            // 
+            this.limpiarColaVideosToolStripMenuItem.Name = "limpiarColaVideosToolStripMenuItem";
+            this.limpiarColaVideosToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
+            this.limpiarColaVideosToolStripMenuItem.Text = "Limpiar Cola Videos";
+            this.limpiarColaVideosToolStripMenuItem.Click += new System.EventHandler(this.limpiarColaVideosToolStripMenuItem_Click);
             // 
             // label3
             // 
@@ -1047,7 +1137,7 @@
             this.panel_buscar.Controls.Add(this.btn_busqueda_multiple);
             this.panel_buscar.Location = new System.Drawing.Point(540, 192);
             this.panel_buscar.Name = "panel_buscar";
-            this.panel_buscar.Size = new System.Drawing.Size(25, 23);
+            this.panel_buscar.Size = new System.Drawing.Size(22, 22);
             this.panel_buscar.TabIndex = 53;
             this.panel_buscar.Visible = false;
             // 
@@ -1080,7 +1170,7 @@
             this.panel_video_seleccionado.Controls.Add(this.btnAgregar_A_Playlist);
             this.panel_video_seleccionado.Controls.Add(this.btnAgregar_A_Favoritos);
             this.panel_video_seleccionado.Controls.Add(this.axWindowsMediaPlayerVideo);
-            this.panel_video_seleccionado.Location = new System.Drawing.Point(869, 424);
+            this.panel_video_seleccionado.Location = new System.Drawing.Point(837, 437);
             this.panel_video_seleccionado.Margin = new System.Windows.Forms.Padding(2);
             this.panel_video_seleccionado.Name = "panel_video_seleccionado";
             this.panel_video_seleccionado.Size = new System.Drawing.Size(36, 27);
@@ -1439,6 +1529,7 @@
             // 
             // panel_cancion_seleccionada_busqueda_simple
             // 
+            this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.btn_descargar_cancion);
             this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.btn_limpiar_cola_cancion);
             this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.btn_atras_rep_cancion_en_smartlist);
             this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.btn_atras_rep_cancion_en_favoritos);
@@ -1467,9 +1558,9 @@
             this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.label16);
             this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.label15);
             this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.btn_atras_cancion_reproductor);
-            this.panel_cancion_seleccionada_busqueda_simple.Location = new System.Drawing.Point(748, 441);
+            this.panel_cancion_seleccionada_busqueda_simple.Location = new System.Drawing.Point(776, 437);
             this.panel_cancion_seleccionada_busqueda_simple.Name = "panel_cancion_seleccionada_busqueda_simple";
-            this.panel_cancion_seleccionada_busqueda_simple.Size = new System.Drawing.Size(30, 27);
+            this.panel_cancion_seleccionada_busqueda_simple.Size = new System.Drawing.Size(40, 31);
             this.panel_cancion_seleccionada_busqueda_simple.TabIndex = 126;
             this.panel_cancion_seleccionada_busqueda_simple.Visible = false;
             this.panel_cancion_seleccionada_busqueda_simple.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_cancion_seleccionada_busqueda_simple_Paint);
@@ -1478,7 +1569,7 @@
             // 
             this.btn_limpiar_cola_cancion.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_limpiar_cola_cancion.ForeColor = System.Drawing.Color.Black;
-            this.btn_limpiar_cola_cancion.Location = new System.Drawing.Point(842, 357);
+            this.btn_limpiar_cola_cancion.Location = new System.Drawing.Point(837, 279);
             this.btn_limpiar_cola_cancion.Margin = new System.Windows.Forms.Padding(2);
             this.btn_limpiar_cola_cancion.Name = "btn_limpiar_cola_cancion";
             this.btn_limpiar_cola_cancion.Size = new System.Drawing.Size(88, 24);
@@ -1538,7 +1629,7 @@
             this.tabla_canciones_cola_cancion_reproductor.Name = "tabla_canciones_cola_cancion_reproductor";
             this.tabla_canciones_cola_cancion_reproductor.ReadOnly = true;
             this.tabla_canciones_cola_cancion_reproductor.RowHeadersVisible = false;
-            this.tabla_canciones_cola_cancion_reproductor.Size = new System.Drawing.Size(203, 212);
+            this.tabla_canciones_cola_cancion_reproductor.Size = new System.Drawing.Size(203, 135);
             this.tabla_canciones_cola_cancion_reproductor.TabIndex = 161;
             this.tabla_canciones_cola_cancion_reproductor.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             // 
@@ -2947,7 +3038,7 @@
             this.panel_karaoke_menu.Controls.Add(this.tabla_canciones_karaoke);
             this.panel_karaoke_menu.Controls.Add(this.label40);
             this.panel_karaoke_menu.Controls.Add(this.btn_atras_karaoke);
-            this.panel_karaoke_menu.Location = new System.Drawing.Point(842, 192);
+            this.panel_karaoke_menu.Location = new System.Drawing.Point(844, 192);
             this.panel_karaoke_menu.Name = "panel_karaoke_menu";
             this.panel_karaoke_menu.Size = new System.Drawing.Size(25, 23);
             this.panel_karaoke_menu.TabIndex = 0;
@@ -4328,26 +4419,18 @@
             this.donde_quedaste_nombre.TabIndex = 58;
             this.donde_quedaste_nombre.Text = "nombre";
             // 
-            // archivosALaColaToolStripMenuItem
+            // btn_descargar_cancion
             // 
-            this.archivosALaColaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.reproduccirColaToolStripMenuItem,
-            this.limpiarColaToolStripMenuItem});
-            this.archivosALaColaToolStripMenuItem.Name = "archivosALaColaToolStripMenuItem";
-            this.archivosALaColaToolStripMenuItem.Size = new System.Drawing.Size(113, 20);
-            this.archivosALaColaToolStripMenuItem.Text = "Archivos a la Cola";
-            // 
-            // reproduccirColaToolStripMenuItem
-            // 
-            this.reproduccirColaToolStripMenuItem.Name = "reproduccirColaToolStripMenuItem";
-            this.reproduccirColaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.reproduccirColaToolStripMenuItem.Text = "Reproduccir Cola";
-            // 
-            // limpiarColaToolStripMenuItem
-            // 
-            this.limpiarColaToolStripMenuItem.Name = "limpiarColaToolStripMenuItem";
-            this.limpiarColaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.limpiarColaToolStripMenuItem.Text = "Limpiar Cola";
+            this.btn_descargar_cancion.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_descargar_cancion.ForeColor = System.Drawing.Color.Black;
+            this.btn_descargar_cancion.Location = new System.Drawing.Point(722, 313);
+            this.btn_descargar_cancion.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_descargar_cancion.Name = "btn_descargar_cancion";
+            this.btn_descargar_cancion.Size = new System.Drawing.Size(203, 40);
+            this.btn_descargar_cancion.TabIndex = 166;
+            this.btn_descargar_cancion.Text = "Descargar Cancion";
+            this.btn_descargar_cancion.UseVisualStyleBackColor = true;
+            this.btn_descargar_cancion.Click += new System.EventHandler(this.btn_descargar_cancion_Click);
             // 
             // ALAINID
             // 
@@ -4355,8 +4438,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(946, 512);
-            this.Controls.Add(this.panel_karaoke_menu);
             this.Controls.Add(this.panel_buscar);
+            this.Controls.Add(this.panel_karaoke_menu);
             this.Controls.Add(this.panel_playlist_usuario);
             this.Controls.Add(this.panel_favoritos_menu);
             this.Controls.Add(this.panel_social_menu);
@@ -4472,7 +4555,6 @@
         private System.Windows.Forms.ToolStripMenuItem favoritosCancionesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem playToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem stopToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem pausaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nextToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem previousToolStripMenuItem;
         private System.Windows.Forms.Label label3;
@@ -4786,5 +4868,14 @@
         private System.Windows.Forms.ToolStripMenuItem archivosALaColaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reproduccirColaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem limpiarColaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reproduccirColaVideosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem limpiarColaVideosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem videoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cancionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem videoToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem cancionToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem videoToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem cancionToolStripMenuItem2;
+        private System.Windows.Forms.Button btn_descargar_cancion;
     }
 }

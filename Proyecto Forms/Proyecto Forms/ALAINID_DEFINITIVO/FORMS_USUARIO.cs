@@ -40,6 +40,7 @@ namespace ALAINID_DEFINITIVO
             }
 
             playlistcola = axWindowsMediaPlayer2.playlistCollection.newPlaylist("playlistcola");
+            playlistcolavideos= axWindowsMediaPlayerVideo.playlistCollection.newPlaylist("playlistcolavideos");
         }
         
         public string dondequedaste;
@@ -61,10 +62,14 @@ namespace ALAINID_DEFINITIVO
         public Song cancionbuscada;
         public Video videobuscado;
         WMPLib.IWMPPlaylist playlistcola;
+        WMPLib.IWMPPlaylist playlistcolavideos;
+
 
         private void stopToolStripMenuItem_Click(object sender, EventArgs e)
         {
             axWindowsMediaPlayer2.Ctlcontrols.stop();
+            axWindowsMediaPlayer1.Ctlcontrols.stop();
+            axWindowsMediaPlayerVideo.Ctlcontrols.stop();
         }
         private void cerrarSesionToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -2639,7 +2644,7 @@ namespace ALAINID_DEFINITIVO
         }
         private void playToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            axWindowsMediaPlayer2.Ctlcontrols.play();
+           
 
         }
         private void pausaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -2649,7 +2654,7 @@ namespace ALAINID_DEFINITIVO
         }
         private void nextToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            axWindowsMediaPlayer2.Ctlcontrols.next();
+            
         }
         private void previousToolStripMenuItem_Click(object sender, EventArgs e) 
         {
@@ -2673,9 +2678,9 @@ namespace ALAINID_DEFINITIVO
         private void btnAgregar_A_Cola_Click(object sender, EventArgs e)
         {//agregar a la cola video
             WMPLib.IWMPMedia media;
-            media = axWindowsMediaPlayer2.newMedia(cancionbuscada.Nombrearchivo);
-            playlistcola.appendItem(media);
-            MessageBox.Show("Cancion Agregada Exitosamente a la Cola", "Exito", MessageBoxButtons.OK, MessageBoxIcon.None);
+            media = axWindowsMediaPlayer1.newMedia(videobuscado.Nombrearchivovideo);
+            playlistcolavideos.appendItem(media);
+            MessageBox.Show("Video Agregado Exitosamente a la Cola", "Exito", MessageBoxButtons.OK, MessageBoxIcon.None);
 
 
 
@@ -2875,8 +2880,7 @@ namespace ALAINID_DEFINITIVO
             media = axWindowsMediaPlayer2.newMedia(cancionbuscada.Nombrearchivo);
             playlistcola.appendItem(media);
             MessageBox.Show("Cancion Agregada Exitosamente a la Cola", "Exito", MessageBoxButtons.OK, MessageBoxIcon.None);
-            axWindowsMediaPlayer2.currentPlaylist = playlistcola;
-            axWindowsMediaPlayer2.Ctlcontrols.play();
+            
 
 
         }
@@ -3742,12 +3746,16 @@ namespace ALAINID_DEFINITIVO
 
         private void btn_limpiar_cola_video_Click(object sender, EventArgs e)
         {
-
+            playlistcolavideos.clear();
+            axWindowsMediaPlayer1.Ctlcontrols.stop();
+            MessageBox.Show("COLA LIMPIADA", "", MessageBoxButtons.OK, MessageBoxIcon.None);
         }
 
         private void btn_limpiar_cola_cancion_Click(object sender, EventArgs e)
         {
-
+            playlistcola.clear();
+            axWindowsMediaPlayer2.Ctlcontrols.stop();
+            MessageBox.Show("COLA LIMPIADA", "", MessageBoxButtons.OK, MessageBoxIcon.None);
         }
 
         private void tabla_ver_playlist_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -3892,14 +3900,74 @@ namespace ALAINID_DEFINITIVO
                     axWindowsMediaPlayer3.URL = ka.Nombrearchivo;
                 }
             }
-            
-
-
         }
 
         private void btn_atras_rep_karaoke_Click(object sender, EventArgs e)
         {
             panel_rep_karaoke.Visible = false;
+        }
+
+        private void reproduccirColaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            axWindowsMediaPlayer2.currentPlaylist = playlistcola;
+            axWindowsMediaPlayer2.Ctlcontrols.play();
+        }
+
+        private void limpiarColaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            playlistcola.clear();
+            axWindowsMediaPlayer2.Ctlcontrols.stop();
+            MessageBox.Show("COLA LIMPIADA", "", MessageBoxButtons.OK, MessageBoxIcon.None);
+        }
+
+        private void reproduccirColaVideosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            axWindowsMediaPlayer1.currentPlaylist = playlistcolavideos;
+            axWindowsMediaPlayer1.Ctlcontrols.play();
+            axWindowsMediaPlayerVideo.Ctlcontrols.stop();
+        }
+
+        private void limpiarColaVideosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            playlistcolavideos.clear();
+            axWindowsMediaPlayer1.Ctlcontrols.stop();
+            MessageBox.Show("COLA LIMPIADA", "", MessageBoxButtons.OK, MessageBoxIcon.None);
+
+        }
+
+        private void videoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            axWindowsMediaPlayer1.Ctlcontrols.play();
+        }
+
+        private void cancionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            axWindowsMediaPlayer2.Ctlcontrols.play();
+        }
+
+        private void videoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            axWindowsMediaPlayer1.Ctlcontrols.next();
+        }
+
+        private void cancionToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            axWindowsMediaPlayer2.Ctlcontrols.next();
+        }
+
+        private void videoToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            axWindowsMediaPlayer1.Ctlcontrols.previous();
+        }
+
+        private void cancionToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            axWindowsMediaPlayer2.Ctlcontrols.previous();
+        }
+
+        private void btn_descargar_cancion_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
