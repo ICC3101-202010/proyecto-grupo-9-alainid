@@ -1441,20 +1441,7 @@ namespace Proyecto_Forms
             }
             return false;
         }
-        public static bool Aumentarreproduccionvideo(string nombrevideo, int reproduccion)
-        {
-
-            for (int i = 0; i < todas_las_canciones.Count; i++)
-            {
-                if (todos_los_videos[i].Nombre_video == nombrevideo)
-                {
-                    todos_los_videos[i].Reproduccion += 0;
-                    AlmacenarVideos(todos_los_videos);
-                    return true;
-                }
-            }
-            return false;
-        }
+        
         public static string Nombrereproducirply(string email, string nombreply, int posicion)
         {
             string info = "No hay info";
@@ -1827,7 +1814,38 @@ namespace Proyecto_Forms
             //========================================================================================================================================
         }
         */
-       public static void Agregarcancionahistorial(string email, Song s)
+
+        public static void Aumentarreproduccionvideo(Video v)
+        {
+
+            Activar_todo();
+            foreach (Video video in Proyecto_Forms.ALAINID.todos_los_videos)
+            {
+                if (video.Nombre_video == v.Nombre_video)
+                {
+                    video.Reproduccion += 1;
+                    AlmacenarVideos(todos_los_videos);
+                }
+
+            }
+        }
+        public static void Aumentarreproduccion(Song s)
+        {
+            Activar_todo();
+            foreach (Song song in Proyecto_Forms.ALAINID.todas_las_canciones)
+            {
+                if (song.Nombrecancion == s.Nombrecancion)
+                {
+                    song.Reproducciones += 1;
+                    AlmacenarCanciones(todas_las_canciones);
+                }
+
+            }
+        }
+
+
+
+        public static void Agregarcancionahistorial(string email, Song s)
         {
             Activar_todo();
             int esta = 0;
