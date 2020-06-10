@@ -265,6 +265,29 @@ namespace ALAINID_DEFINITIVO
 
             panel_listainteligente_menu.Visible = true;
             panel_listainteligente_menu.Dock = DockStyle.Fill;
+            foreach (User user in Proyecto_Forms.ALAINID.listausuarios)
+            {
+                if (user.Email_ == Program.usuario_activo.Email_)
+                {
+                    if (user.Lista_inteligente.Count() == 0)
+                    {
+                        MessageBox.Show("Aun no tiene Canciones en su SMARTLIST", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    }
+                    else
+                    {
+                        foreach (Song smartsong in user.Lista_inteligente)
+                        {
+                            int n = tabla_canciones_smartlist.Rows.Add();
+                            tabla_canciones_smartlist.Rows[n].Cells[0].Value = smartsong.Nombrecancion;
+                            tabla_canciones_smartlist.Rows[n].Cells[1].Value = smartsong.Cantante.Name;
+                            tabla_canciones_smartlist.Rows[n].Cells[2].Value = smartsong.Compositor.Name;
+                            tabla_canciones_smartlist.Rows[n].Cells[3].Value = smartsong.Album;
+
+                        }
+                    }
+                }
+            }
         }
         private void btnAtras_Click(object sender, EventArgs e)
         {
@@ -2598,7 +2621,7 @@ namespace ALAINID_DEFINITIVO
                             calificacion_cancion_reproductor.Text = s.Calificacionpromedio.ToString();
                             genero_cancion_reproductor.Text = s.Genero;
                             reproducciones_cancion_reproductor.Text = s.Reproducciones.ToString();
-
+                            btn_atras_cancion_reproductor.Visible = true;
                             panel_cancion_seleccionada_busqueda_simple.Visible = true;
                             panel_cancion_seleccionada_busqueda_simple.Dock = DockStyle.Fill;
                             panel_busqueda_simple.Visible = false;
@@ -2610,6 +2633,7 @@ namespace ALAINID_DEFINITIVO
                                 select_playlist_cancion_reproductor.Items.Add(ply.NombrePlaylist);
                             }
                             axWindowsMediaPlayer2.URL = ruta;
+                            axWindowsMediaPlayerVideo.Ctlcontrols.stop();
                             
                             
                         }
@@ -2629,7 +2653,7 @@ namespace ALAINID_DEFINITIVO
                             textBox_Calificacion.Text = v.Calificacion_promedio.ToString();
                             textBox_Año_Grabacion.Text = v.Anio_publicacion.ToString();
                             textBox_Reproducciones.Text = v.Reproduccion.ToString();
-
+                            btn_atras_rep_video_playlist.Visible = true;
                             panel_video_seleccionado.Visible = true;
                             panel_video_seleccionado.Dock = DockStyle.Fill;
                             panel_busqueda_simple.Visible = false;
@@ -2643,6 +2667,7 @@ namespace ALAINID_DEFINITIVO
                             }
 
                             axWindowsMediaPlayerVideo.URL = ruta;
+                            axWindowsMediaPlayer2.Ctlcontrols.stop();
                         }
                     }
                 }
@@ -2662,8 +2687,6 @@ namespace ALAINID_DEFINITIVO
         private void button2_Click(object sender, EventArgs e) // atras panel reproducir cancion
         {
             panel_cancion_seleccionada_busqueda_simple.Visible = false;
-            panel_busqueda_multiple.Visible = false;
-            panel_busqueda_simple.Visible = false;
             cantante_cancion_reproductor.Text = "";
             nombrecancion_cancion_reproductor.Text = "";
             compositor_cancion_reproductor.Text = "";
@@ -2671,6 +2694,7 @@ namespace ALAINID_DEFINITIVO
             calificacion_cancion_reproductor.Text = "";
             genero_cancion_reproductor.Text = "";
             reproducciones_cancion_reproductor.Text = "";
+            btn_atras_cancion_reproductor.Visible = false;
         }
         private void playToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -2772,6 +2796,7 @@ namespace ALAINID_DEFINITIVO
         private void btn_atras_karaoke_Click(object sender, EventArgs e)
         {
             panel_karaoke_menu.Visible = false;
+            tabla_canciones_karaoke.Rows.Clear();
         }
         private void btn_atras_historial_Click(object sender, EventArgs e)
         {
@@ -2780,6 +2805,7 @@ namespace ALAINID_DEFINITIVO
         private void btn_atras_descargas_Click(object sender, EventArgs e)
         {
             panel_descargas_menu.Visible = false;
+            tabla_canciones_descargadas.Rows.Clear();
         }
         private void btn_atras_listainteligente_menu_Click(object sender, EventArgs e)
         {
@@ -3019,7 +3045,8 @@ namespace ALAINID_DEFINITIVO
                     ruta = s.Nombrearchivo;
                     cancionbuscada = s;
                     axWindowsMediaPlayer2.URL = ruta;
-                    
+                    axWindowsMediaPlayerVideo.Ctlcontrols.stop();
+
                 }
             }
             foreach (Video v in Proyecto_Forms.ALAINID.todos_los_videos)
@@ -3042,6 +3069,7 @@ namespace ALAINID_DEFINITIVO
                     ruta = v.Nombrearchivovideo;
                     videobuscado = v;
                     axWindowsMediaPlayerVideo.URL = ruta;
+                    axWindowsMediaPlayer2.Ctlcontrols.stop();
                 }
             }
         }
@@ -3480,8 +3508,13 @@ namespace ALAINID_DEFINITIVO
             tabla_ver_playlist.Rows.Clear();
             verplaylist_nombre_playlist.Text = "";
         }
+        private void tabla_ver_playlist_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+        }
+
         private void tabla_ver_playlist_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            
             int no = 0;
             Proyecto_Forms.ALAINID.Activar_todo();
             int fila = e.RowIndex;
@@ -3497,17 +3530,16 @@ namespace ALAINID_DEFINITIVO
                     calificacion_cancion_reproductor.Text = song.Calificacionpromedio.ToString();
                     genero_cancion_reproductor.Text = song.Genero;
                     reproducciones_cancion_reproductor.Text = song.Reproducciones.ToString();
-
-
                     panel_ver_una_playlist.Visible = false;
                     panel_playlist_usuario.Visible = false;
                     panel_buscar.Visible = true;
                     panel_buscar.Dock = DockStyle.Fill;
-
                     panel_cancion_seleccionada_busqueda_simple.Visible = true;
                     panel_cancion_seleccionada_busqueda_simple.Dock = DockStyle.Fill;
+                    btn_atras_rep_cancion_en_playlist.Visible = true;
                     ruta = song.Nombrearchivo;
                     axWindowsMediaPlayer2.URL = ruta;
+                    axWindowsMediaPlayerVideo.Ctlcontrols.stop();
 
                 } 
             }
@@ -3527,22 +3559,23 @@ namespace ALAINID_DEFINITIVO
                     textBox_Calificacion.Text = video.Calificacion_promedio.ToString();
                     textBox_Año_Grabacion.Text = video.Anio_publicacion.ToString();
                     textBox_Reproducciones.Text = video.Reproduccion.ToString();
-
                     panel_ver_una_playlist.Visible = false;
                     panel_playlist_usuario.Visible = false;
                     panel_buscar.Visible = true;
                     panel_buscar.Dock = DockStyle.Fill;
                     panel_video_seleccionado.Visible = true;
                     panel_video_seleccionado.Dock = DockStyle.Fill;
+                    btn_atras_rep_video_playlis.Visible = true;
                     ruta = video.Nombrearchivovideo;
                     axWindowsMediaPlayerVideo.URL = ruta;
+                    axWindowsMediaPlayer2.Ctlcontrols.stop();
                 }
             }
             if (no == 0)
             {
                 MessageBox.Show("Lo sentimo, estamos teniendo problemas con algunor archivos, no es posible Reproducir esta cancion por ahora. Intente mas tarde", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-
+            
 
         }
         private void btn_atras_rep_cancion_en_smartlist_Click(object sender, EventArgs e)
@@ -3559,7 +3592,6 @@ namespace ALAINID_DEFINITIVO
             calificacion_cancion_reproductor.Text = "";
             genero_cancion_reproductor.Text = "";
             reproducciones_cancion_reproductor.Text = "";
-            btn_atras_cancion_reproductor.Visible = true;
             btn_atras_rep_cancion_en_smartlist.Visible = false;
 
 
@@ -3576,11 +3608,7 @@ namespace ALAINID_DEFINITIVO
             calificacion_cancion_reproductor.Text = "";
             genero_cancion_reproductor.Text = "";
             reproducciones_cancion_reproductor.Text = "";
-            tabla_favoritos_canciones.Rows.Clear();
-            tabla_favoritos_videos.Rows.Clear();
             btn_atras_rep_cancion_en_favoritos.Visible = false;
-            btn_atras_cancion_reproductor.Visible = true;
-
 
         }
         private void btn_atras_rep_cancion_en_playlist_Click(object sender, EventArgs e)
@@ -3598,27 +3626,20 @@ namespace ALAINID_DEFINITIVO
             calificacion_cancion_reproductor.Text = "";
             genero_cancion_reproductor.Text = "";
             reproducciones_cancion_reproductor.Text = "";
-            tabla_ver_playlist.Rows.Clear();
 
             btn_atras_rep_cancion_en_playlist.Visible = false;
-            btn_atras_cancion_reproductor.Visible = true;
 
 
         }
         private void btn_atras_rep_video_playlist_Click(object sender, EventArgs e)
         {
             panel_video_seleccionado.Visible = false;
-            
-            panel_buscar.Visible = false;
-            panel_playlist_usuario.Visible = true;
-            panel_ver_una_playlist.Visible = true;
             textBox_Nombre_Director.Text = "";
             tabla_nombre_actores_reprod_video.Rows.Clear();
             textBox_Calificacion.Text = "";
             textBox_Año_Grabacion.Text = "";
             textBox_Reproducciones.Text = "";
             btn_atras_rep_video_playlist.Visible = false;
-            btn_atras_cancion_reproductor.Visible = true;
         }
         private void btn_atras_rep_video_favoritos_Click(object sender, EventArgs e)
         {
@@ -3630,7 +3651,7 @@ namespace ALAINID_DEFINITIVO
             textBox_Calificacion.Text = "";
             textBox_Año_Grabacion.Text = "";
             textBox_Reproducciones.Text = "";
-            btn_atras_rep_video_favoritos.Visible = false;
+            btn_atras_rep_video_favorito.Visible = false;
             btn_atras_cancion_reproductor.Visible = true;
 
         }
@@ -3645,7 +3666,7 @@ namespace ALAINID_DEFINITIVO
             textBox_Calificacion.Text = "";
             textBox_Año_Grabacion.Text = "";
             textBox_Reproducciones.Text = "";
-            btn_atras_rep_video_smartlist.Visible = false;
+            btn_atras_rep_video_smart.Visible = false;
             btn_atras_cancion_reproductor.Visible = true;
 
         }
@@ -3798,63 +3819,7 @@ namespace ALAINID_DEFINITIVO
             MessageBox.Show("COLA LIMPIADA", "", MessageBoxButtons.OK, MessageBoxIcon.None);
         }
 
-        private void tabla_ver_playlist_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {//click cancion en playlist
-            Proyecto_Forms.ALAINID.Activar_todo();
-            btn_atras_rep_cancion_en_playlist.Visible = true;
-            btn_atras_cancion_reproductor.Visible = false;
-            panel_ver_una_playlist.Visible = false;
-            panel_playlist_usuario.Visible = false;
-           
-            int fila = e.RowIndex;
-            if (tabla_ver_playlist.Rows[fila].Cells[1].Value.ToString() == "Cancion")
-            {
-                foreach (Song song in Proyecto_Forms.ALAINID.todas_las_canciones)
-                {
-                    if (song.Nombrecancion.ToLower() == tabla_ver_playlist.Rows[fila].Cells[0].Value.ToString().ToLower())
-                    {
-                        cantante_cancion_reproductor.Text = song.Cantante.Name;
-                        nombrecancion_cancion_reproductor.Text = song.Nombrecancion;
-                        compositor_cancion_reproductor.Text = song.Compositor.Name;
-                        album_cancion_reproductor.Text = song.Album;
-                        calificacion_cancion_reproductor.Text = song.Calificacionpromedio.ToString();
-                        genero_cancion_reproductor.Text = song.Genero;
-                        reproducciones_cancion_reproductor.Text = song.Reproducciones.ToString();
-                        axWindowsMediaPlayer2.URL = song.Nombrearchivo;
-                        panel_buscar.Visible = true;
-                        panel_buscar.Dock = DockStyle.Fill;
-                        panel_cancion_seleccionada_busqueda_simple.Visible = true;
-                        panel_cancion_seleccionada_busqueda_simple.Dock = DockStyle.Fill;
-                    }
-                }
-            }
-            if (tabla_ver_playlist.Rows[fila].Cells[1].Value.ToString() == "Video")
-            {
-                foreach (Video v in Proyecto_Forms.ALAINID.todos_los_videos)
-                {
-                    if (v.Nombre_video.ToLower() == tabla_ver_playlist.Rows[fila].Cells[0].Value.ToString().ToLower())
-                    {
-                        Proyecto_Forms.ALAINID.Sacarpromediocalificacionvideo(v.Nombrearchivovideo);
-                        textBox_Nombre_Director.Text = v.Director.Name;
-                        foreach (Artista actor in v.Actores)
-                        {
-                            int n = tabla_nombre_actores_reprod_video.Rows.Add();
-                            tabla_nombre_actores_reprod_video.Rows[n].Cells[0].Value = actor.Name;
-                        }
-                        textBox_Calificacion.Text = v.Calificacion_promedio.ToString();
-                        textBox_Año_Grabacion.Text = v.Anio_publicacion.ToString();
-                        textBox_Reproducciones.Text = v.Reproduccion.ToString();
-
-                        axWindowsMediaPlayerVideo.URL = v.Nombrearchivovideo;
-                        panel_buscar.Visible = true;
-                        panel_buscar.Dock = DockStyle.Fill;
-                        panel_video_seleccionado.Visible = true;
-                        panel_video_seleccionado.Dock = DockStyle.Fill;
-                    }
-                }
-            }
-
-        }
+       
 
         private void tabla_favoritos_canciones_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -3865,8 +3830,7 @@ namespace ALAINID_DEFINITIVO
         {//doble click reprod video en favoritos
 
             Proyecto_Forms.ALAINID.Activar_todo();
-            btn_atras_rep_cancion_en_favoritos.Visible = true;
-            btn_atras_cancion_reproductor.Visible = false;
+            btn_atras_rep_video_favorito.Visible = true;
 
             panel_favoritos_menu.Visible = false;
             
@@ -3888,6 +3852,7 @@ namespace ALAINID_DEFINITIVO
                     textBox_Reproducciones.Text = v.Reproduccion.ToString();
 
                     axWindowsMediaPlayerVideo.URL = v.Nombrearchivovideo;
+                    axWindowsMediaPlayer2.Ctlcontrols.stop();
                     panel_buscar.Visible = true;
                     panel_buscar.Dock = DockStyle.Fill;
                     panel_video_seleccionado.Visible = true;
@@ -3900,7 +3865,6 @@ namespace ALAINID_DEFINITIVO
         {
             Proyecto_Forms.ALAINID.Activar_todo();
             btn_atras_rep_cancion_en_favoritos.Visible = true;
-            btn_atras_cancion_reproductor.Visible = false;
             panel_favoritos_menu.Visible = false;
             
             int fila = e.RowIndex;
@@ -3917,6 +3881,7 @@ namespace ALAINID_DEFINITIVO
                     genero_cancion_reproductor.Text = song.Genero;
                     reproducciones_cancion_reproductor.Text = song.Reproducciones.ToString();
                     axWindowsMediaPlayer2.URL = song.Nombrearchivo;
+                    axWindowsMediaPlayerVideo.Ctlcontrols.stop();
                     panel_buscar.Visible = true;
                     panel_buscar.Dock = DockStyle.Fill;
                     panel_cancion_seleccionada_busqueda_simple.Visible = true;
@@ -3937,6 +3902,7 @@ namespace ALAINID_DEFINITIVO
             {
                 if (tabla_canciones_karaoke.Rows[fila].Cells[0].Value.ToString() == ka.Nombrecancion)
                 {
+                    nombrevideo_karaoke.Text = ka.Nombrecancion;
                     axWindowsMediaPlayer3.URL = ka.Nombrearchivo;
                 }
             }
@@ -4009,11 +3975,219 @@ namespace ALAINID_DEFINITIVO
         {
             Proyecto_Forms.ALAINID.Agregaradescargas(Program.usuario_activo.Email_, cancionbuscada);
         }
-
+        int desplegable3 = 0;
         private void btn_aplicar_criterios_smartlist_Click(object sender, EventArgs e)
         {
-            //comboBox_criterio_smart_list
+            Proyecto_Forms.ALAINID.Activar_todo();
+            if (desplegable3 == 0)
+            {
+                Proyecto_Forms.ALAINID.Cambiarvalorcriterio(Program.usuario_activo.Email_, valor_criterio_smartlist_desplegable.Text);
+            }
+            if (desplegable3 == 1)
+            {
+                Proyecto_Forms.ALAINID.Cambiarvalorcriterio(Program.usuario_activo.Email_, valor_criterio_smartlist.Text);
+            }
+
+            //comboBox_criterio_smart_list.Text
             //valor_criterio_smartlist
+            //valor_criterio_smartlist_desplegable
+        }
+
+        private void btn_atras_rep_cancion_en_busqmultiple_Click(object sender, EventArgs e)
+        {
+            panel_cancion_seleccionada_busqueda_simple.Visible = false;
+            cantante_cancion_reproductor.Text = "";
+            nombrecancion_cancion_reproductor.Text = "";
+            compositor_cancion_reproductor.Text = "";
+            album_cancion_reproductor.Text = "";
+            calificacion_cancion_reproductor.Text = "";
+            genero_cancion_reproductor.Text = "";
+            reproducciones_cancion_reproductor.Text = "";
+            btn_atras_rep_cancion_en_busqmultiple.Visible = false;
+        }
+
+        private void btn_atras_rep_video_smart_Click(object sender, EventArgs e)
+        {
+            panel_video_seleccionado.Visible = false;
+            panel_busqueda_multiple.Visible = false;
+            panel_busqueda_simple.Visible = false;
+            panel_listainteligente_menu.Visible = true;
+            textBox_Nombre_Director.Text = "";
+            tabla_nombre_actores_reprod_video.Rows.Clear();
+            textBox_Calificacion.Text = "";
+            textBox_Año_Grabacion.Text = "";
+            textBox_Reproducciones.Text = "";
+            btn_atras_rep_video_smart.Visible = false;
+        }
+
+        private void btn_atras_rep_video_favorito_Click(object sender, EventArgs e)
+        {
+            panel_video_seleccionado.Visible = false;
+            panel_buscar.Visible = false;
+            panel_favoritos_menu.Visible = true;
+            textBox_Nombre_Director.Text = "";
+            textBox_Calificacion.Text = "";
+            textBox_Año_Grabacion.Text = "";
+            textBox_Reproducciones.Text = "";
+            btn_atras_rep_video_favorito.Visible = false;
+        }
+
+        private void btn_atras_rep_video_playlis_Click(object sender, EventArgs e)
+        {
+            panel_video_seleccionado.Visible = false;
+
+            panel_buscar.Visible = false;
+            panel_playlist_usuario.Visible = true;
+            panel_ver_una_playlist.Visible = true;
+            textBox_Nombre_Director.Text = "";
+            tabla_nombre_actores_reprod_video.Rows.Clear();
+            textBox_Calificacion.Text = "";
+            textBox_Año_Grabacion.Text = "";
+            textBox_Reproducciones.Text = "";
+            btn_atras_rep_video_playlist.Visible = false;
+        }
+
+        private void btn_atras_rep_video_busqmultiple_Click(object sender, EventArgs e)
+        {
+            panel_video_seleccionado.Visible = false;
+            textBox_Nombre_Director.Text = "";
+            tabla_nombre_actores_reprod_video.Rows.Clear();
+            textBox_Calificacion.Text = "";
+            textBox_Año_Grabacion.Text = "";
+            textBox_Reproducciones.Text = "";
+            btn_atras_rep_video_busqmultiple.Visible = false;
+        }
+
+        private void tabla_canciones_smartlist_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            btn_atras_rep_video_smart.Visible = true;
+
+
+        }
+
+        private void tabla_canciones_descargadas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Proyecto_Forms.ALAINID.Activar_todo();
+            btn_atras_rep_cancion_en_descargas.Visible = true;
+            panel_descargas_menu.Visible = false;
+
+            int fila = e.RowIndex;
+
+            foreach (Song song in Proyecto_Forms.ALAINID.todas_las_canciones)
+            {
+                if (song.Nombrecancion.ToLower() == tabla_canciones_descargadas.Rows[fila].Cells[0].Value.ToString().ToLower())
+                {
+                    cantante_cancion_reproductor.Text = song.Cantante.Name;
+                    nombrecancion_cancion_reproductor.Text = song.Nombrecancion;
+                    compositor_cancion_reproductor.Text = song.Compositor.Name;
+                    album_cancion_reproductor.Text = song.Album;
+                    calificacion_cancion_reproductor.Text = song.Calificacionpromedio.ToString();
+                    genero_cancion_reproductor.Text = song.Genero;
+                    reproducciones_cancion_reproductor.Text = song.Reproducciones.ToString();
+                    axWindowsMediaPlayer2.URL = song.Nombrearchivo;
+                    axWindowsMediaPlayerVideo.Ctlcontrols.stop();
+                    panel_buscar.Visible = true;
+                    panel_buscar.Dock = DockStyle.Fill;
+                    panel_cancion_seleccionada_busqueda_simple.Visible = true;
+                    panel_cancion_seleccionada_busqueda_simple.Dock = DockStyle.Fill;
+                }
+            }
+        }
+
+        private void btn_atras_rep_cancion_en_descargas_Click(object sender, EventArgs e)
+        {
+            panel_cancion_seleccionada_busqueda_simple.Visible = false;
+            panel_busqueda_multiple.Visible = false;
+            panel_busqueda_simple.Visible = false;
+            panel_buscar.Visible = false;
+            panel_listainteligente_menu.Visible = true;
+            cantante_cancion_reproductor.Text = "";
+            nombrecancion_cancion_reproductor.Text = "";
+            compositor_cancion_reproductor.Text = "";
+            album_cancion_reproductor.Text = "";
+            calificacion_cancion_reproductor.Text = "";
+            genero_cancion_reproductor.Text = "";
+            reproducciones_cancion_reproductor.Text = "";
+            btn_atras_rep_cancion_en_descargas.Visible = false;
+        }
+
+        private void comboBox_criterio_smart_list_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox_criterio_smart_list.Text == "Genero Cancion")
+            {
+                desplegable3 = 0;
+                valor_criterio_smartlist_desplegable.Visible = true;
+                valor_criterio_smartlist_desplegable.Items.Clear();
+                valor_criterio_smartlist_desplegable.Items.Add("Rock");
+                valor_criterio_smartlist_desplegable.Items.Add("Country");
+                valor_criterio_smartlist_desplegable.Items.Add("K-Pop");
+                valor_criterio_smartlist_desplegable.Items.Add("Electrónica");
+                valor_criterio_smartlist_desplegable.Items.Add("Heavy Metal");
+                valor_criterio_smartlist_desplegable.Items.Add("House");
+                valor_criterio_smartlist_desplegable.Items.Add("Disco");
+                valor_criterio_smartlist_desplegable.Items.Add("Urban");
+                valor_criterio_smartlist_desplegable.Items.Add("Folklorica");
+                valor_criterio_smartlist_desplegable.Items.Add("Hip Hop");
+                valor_criterio_smartlist_desplegable.Items.Add("Pop");
+                valor_criterio_smartlist_desplegable.Items.Add("Jazz");
+                valor_criterio_smartlist_desplegable.Items.Add("Indie Rock");
+                valor_criterio_smartlist_desplegable.Items.Add("Punk");
+                valor_criterio_smartlist_desplegable.Items.Add("Otra");
+
+            }
+            if (comboBox_criterio_smart_list.Text == "Disquera")
+            {
+                desplegable3 = 0;
+                valor_criterio_smartlist_desplegable.Visible = true;
+                valor_criterio_smartlist_desplegable.Items.Clear();
+                valor_criterio_smartlist_desplegable.Items.Add("Sony Music");
+                valor_criterio_smartlist_desplegable.Items.Add("Universal Music");
+                valor_criterio_smartlist_desplegable.Items.Add("YG Entertainment");
+                valor_criterio_smartlist_desplegable.Items.Add("SM Entretainment");
+                valor_criterio_smartlist_desplegable.Items.Add("Otra");
+
+            }
+
+            if (comboBox_criterio_smart_list.Text == "Cantante")
+            {
+                desplegable3 = 1;
+                valor_criterio_smartlist_desplegable.Visible = false;
+
+
+
+
+            }
+            if (comboBox_criterio_smart_list.Text == "Compositor")
+            {
+                desplegable3 = 1;
+                valor_criterio_smartlist_desplegable.Visible = false;
+
+
+            }
+
+
+            if (comboBox_criterio_smart_list.Text == "Album")
+            {
+                desplegable3 = 1;
+                valor_criterio_smartlist_desplegable.Visible = false;
+
+
+            }
+
+            if (comboBox_criterio_smart_list.Text == "Nombre Cancion")
+            {
+                desplegable3 = 1;
+                valor_criterio_smartlist_desplegable.Visible = false;
+
+
+
+            }
+
+            if (comboBox_criterio_smart_list.Text == "Año de Publicacion")
+            {
+                desplegable3 = 1;
+                valor_criterio_smartlist_desplegable.Visible = false;
+            }
         }
     }
 }

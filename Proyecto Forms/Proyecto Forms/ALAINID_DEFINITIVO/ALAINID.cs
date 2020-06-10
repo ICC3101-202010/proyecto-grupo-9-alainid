@@ -1979,62 +1979,31 @@ namespace Proyecto_Forms
                 }
             }
         }
-        public static void VerCancionesKaraoke(List<Song> lista)
+        
+        public static void Cambiarvalorcriterio(string email, string valorcriterio)
         {
+            Activar_todo();
 
-            if (lista.Count == 0)
+            foreach (User user in Proyecto_Forms.ALAINID.listausuarios)
             {
-                //Console.WriteLine("No hay canciones agregadas aún");
-            }
+                if (email.ToLower() == user.Email_.ToLower())
+                {
+                    user.Lista_inteligente.Clear();
+                    user.Valorcriterio_ = valorcriterio;
+                    MessageBox.Show("CRITERIO ACTUALIZADO, DESDE AHORA EN ADELANTE LAS CANCIONES QUE SE AGREGEN CON ESE CRITERIO SE AGREGARAN A TU LISTA", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.None);
+                    Almacenar(listausuarios);
 
-            else
-            {
-                for (int i = 0; i < lista.Count; i++)
-                {
-                    //Console.WriteLine(lista[i].InformacioncancionKaraoke());
                 }
-            }
-        }
-        public static bool Cambiarvalorcriterio(string email, string contrasena, string valorcriterio)
-        {
-            string funko = "correcto";
-            for (int i = 0; i < listausuarios.Count; i++)
-            {
-                if (listausuarios[i].Email_ == email)
-                {
-                    if (listausuarios[i].Password_ == contrasena)
-                    {
-                        listausuarios[i].Valorcriterio_ = valorcriterio;
-                        Almacenar(listausuarios);
-                        funko = "correcto";
-                    }
-                    else
-                    {
-                        funko = "noup";
-                    }
-                    break;
-                }
-                else
-                {
-                    funko = "noup";
-                }
-            }
-            if (funko == "correcto")
-            {
-                return true;
-            }
-            else
-            {
-                return false;
             }
         }
         public static void Agregarcancioneslistainteligente(Song s)
         {
-            for (int i = 0; i < listausuarios.Count; i++)
+            foreach (User user in Proyecto_Forms.ALAINID.listausuarios)
             {
-                if (listausuarios[i].Valorcriterio_ == s.Nombrecancion)
+
+                if (user.Valorcriterio_.ToLower() == s.Nombrecancion.ToLower())
                 {
-                    listausuarios[i].Lista_inteligente.Add(s);
+                    user.Lista_inteligente.Add(s);
                     Almacenar(listausuarios);
 
 
@@ -2043,49 +2012,49 @@ namespace Proyecto_Forms
                 {
                     if (c == s.Cantante)
                     {
-                        if (listausuarios[i].Valorcriterio_ == c.Name)
+                        if (user.Valorcriterio_.ToLower() == c.Name.ToLower())
                         {
-                            listausuarios[i].Lista_inteligente.Add(s);
+                            user.Lista_inteligente.Add(s);
 
                             Almacenar(listausuarios);
                         }
                     }
                 }
-                if (listausuarios[i].Valorcriterio_ == s.Genero)
+                if (user.Valorcriterio_.ToLower() == s.Genero.ToLower())
                 {
-                    listausuarios[i].Lista_inteligente.Add(s);
+                    user.Lista_inteligente.Add(s);
                     Almacenar(listausuarios);
                 }
                 foreach (Artista c in lista_compositores)
                 {
                     if (c == s.Compositor)
                     {
-                        if (listausuarios[i].Valorcriterio_ == c.Name)
+                        if (user.Valorcriterio_.ToLower() == c.Name.ToLower())
                         {
-                            listausuarios[i].Lista_inteligente.Add(s);
+                            user.Lista_inteligente.Add(s);
                             Almacenar(listausuarios);
                         }
                     }
                 }
 
-                if (listausuarios[i].Valorcriterio_ == s.Anopublicacion)
+                if (user.Valorcriterio_ == s.Anopublicacion)
                 {
-                    listausuarios[i].Lista_inteligente.Add(s);
+                    user.Lista_inteligente.Add(s);
                     Almacenar(listausuarios);
                 }
-                if (listausuarios[i].Valorcriterio_ == s.Disquera)
+                if (user.Valorcriterio_.ToLower() == s.Disquera.ToLower())
                 {
-                    listausuarios[i].Lista_inteligente.Add(s);
+                    user.Lista_inteligente.Add(s);
                     Almacenar(listausuarios);
                 }
-                if (listausuarios[i].Valorcriterio_ == s.Album)
+                if (user.Valorcriterio_.ToLower() == s.Album.ToLower())
                 {
-                    listausuarios[i].Lista_inteligente.Add(s);
+                    user.Lista_inteligente.Add(s);
                     Almacenar(listausuarios);
                 }
                 else
                 {
-                    //Console.WriteLine("NO SE AGREGÓ A NINGUNA LISTA INTELIGENTE");
+
                 }
 
 

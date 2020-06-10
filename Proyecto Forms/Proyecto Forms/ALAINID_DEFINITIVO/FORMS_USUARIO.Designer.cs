@@ -96,37 +96,9 @@
             this.mailpremiumlabel = new System.Windows.Forms.Label();
             this.emialpremiumtextbox = new System.Windows.Forms.TextBox();
             this.panel_buscar = new System.Windows.Forms.Panel();
-            this.panel_video_seleccionado = new System.Windows.Forms.Panel();
-            this.btn_limpiar_cola_video = new System.Windows.Forms.Button();
-            this.label57 = new System.Windows.Forms.Label();
-            this.btn_atras_rep_video_playlist = new System.Windows.Forms.Button();
-            this.btn_atras_rep_video_favoritos = new System.Windows.Forms.Button();
-            this.btn_atras_rep_video_smartlist = new System.Windows.Forms.Button();
-            this.tabla_nombre_actores_reprod_video = new System.Windows.Forms.DataGridView();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre_video = new System.Windows.Forms.Label();
-            this.btn_Atrás = new System.Windows.Forms.Button();
-            this.label28 = new System.Windows.Forms.Label();
-            this.textBox_Reproducciones = new System.Windows.Forms.TextBox();
-            this.label26 = new System.Windows.Forms.Label();
-            this.textBox_Año_Grabacion = new System.Windows.Forms.TextBox();
-            this.label27 = new System.Windows.Forms.Label();
-            this.textBox_Calificacion = new System.Windows.Forms.TextBox();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.textBox_Nombre_Director = new System.Windows.Forms.TextBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.listaplaylist = new System.Windows.Forms.ComboBox();
-            this.calificacion_video = new System.Windows.Forms.NumericUpDown();
-            this.btn_calificar_video = new System.Windows.Forms.Button();
-            this.btnAgregar_A_Cola = new System.Windows.Forms.Button();
-            this.btnAgregar_A_Playlist = new System.Windows.Forms.Button();
-            this.btnAgregar_A_Favoritos = new System.Windows.Forms.Button();
-            this.axWindowsMediaPlayerVideo = new AxWMPLib.AxWindowsMediaPlayer();
             this.panel_cancion_seleccionada_busqueda_simple = new System.Windows.Forms.Panel();
+            this.btn_atras_rep_cancion_en_descargas = new System.Windows.Forms.Button();
+            this.btn_atras_rep_cancion_en_busqmultiple = new System.Windows.Forms.Button();
             this.btn_descargar_cancion = new System.Windows.Forms.Button();
             this.btn_limpiar_cola_cancion = new System.Windows.Forms.Button();
             this.btn_atras_rep_cancion_en_smartlist = new System.Windows.Forms.Button();
@@ -157,6 +129,50 @@
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.btn_atras_cancion_reproductor = new System.Windows.Forms.Button();
+            this.panel_video_seleccionado = new System.Windows.Forms.Panel();
+            this.btn_atras_rep_video_busqmultiple = new System.Windows.Forms.Button();
+            this.btn_atras_rep_video_playlis = new System.Windows.Forms.Button();
+            this.btn_atras_rep_video_favorito = new System.Windows.Forms.Button();
+            this.btn_atras_rep_video_smart = new System.Windows.Forms.Button();
+            this.btn_limpiar_cola_video = new System.Windows.Forms.Button();
+            this.label57 = new System.Windows.Forms.Label();
+            this.btn_atras_rep_video_playlist = new System.Windows.Forms.Button();
+            this.tabla_nombre_actores_reprod_video = new System.Windows.Forms.DataGridView();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre_video = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.textBox_Reproducciones = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.textBox_Año_Grabacion = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.textBox_Calificacion = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.textBox_Nombre_Director = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.listaplaylist = new System.Windows.Forms.ComboBox();
+            this.calificacion_video = new System.Windows.Forms.NumericUpDown();
+            this.btn_calificar_video = new System.Windows.Forms.Button();
+            this.btnAgregar_A_Cola = new System.Windows.Forms.Button();
+            this.btnAgregar_A_Playlist = new System.Windows.Forms.Button();
+            this.btnAgregar_A_Favoritos = new System.Windows.Forms.Button();
+            this.axWindowsMediaPlayerVideo = new AxWMPLib.AxWindowsMediaPlayer();
+            this.panel_busqueda_simple = new System.Windows.Forms.Panel();
+            this.busquedasimple_valor_criterio_desplegable = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.busquedasimple_criterio_text = new System.Windows.Forms.ComboBox();
+            this.busaquedasimple_valor_criterio_text = new System.Windows.Forms.TextBox();
+            this.btn_buscar_busqueda_simple = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.btn_atras_busquedasimple = new System.Windows.Forms.Button();
+            this.datagratview_busquedasimple = new System.Windows.Forms.DataGridView();
+            this.colum_nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colum_artista = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel_busqueda_multiple = new System.Windows.Forms.Panel();
             this.panel_resultados_busqueda_multiple = new System.Windows.Forms.Panel();
             this.label51 = new System.Windows.Forms.Label();
@@ -198,30 +214,30 @@
             this.comboBox1_criterio = new System.Windows.Forms.ComboBox();
             this.criterio_txt_combobox1_desplegable = new System.Windows.Forms.ComboBox();
             this.criterio_txt_combobox1 = new System.Windows.Forms.TextBox();
-            this.panel_busqueda_simple = new System.Windows.Forms.Panel();
-            this.busquedasimple_valor_criterio_desplegable = new System.Windows.Forms.ComboBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.busquedasimple_criterio_text = new System.Windows.Forms.ComboBox();
-            this.busaquedasimple_valor_criterio_text = new System.Windows.Forms.TextBox();
-            this.btn_buscar_busqueda_simple = new System.Windows.Forms.Button();
-            this.label12 = new System.Windows.Forms.Label();
-            this.btn_atras_busquedasimple = new System.Windows.Forms.Button();
-            this.datagratview_busquedasimple = new System.Windows.Forms.DataGridView();
-            this.colum_nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colum_artista = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_atras_de_inicio_sesion = new System.Windows.Forms.Button();
             this.btn_busqueda_simple = new System.Windows.Forms.Button();
             this.btn_busqueda_multiple = new System.Windows.Forms.Button();
             this.ruta_cancion_reproducir = new System.Windows.Forms.OpenFileDialog();
             this.panel_listainteligente_menu = new System.Windows.Forms.Panel();
+            this.valor_criterio_smartlist_desplegable = new System.Windows.Forms.ComboBox();
+            this.label38 = new System.Windows.Forms.Label();
+            this.tabla_canciones_smartlist = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label48 = new System.Windows.Forms.Label();
+            this.comboBox_criterio_smart_list = new System.Windows.Forms.ComboBox();
             this.valor_criterio_smartlist = new System.Windows.Forms.TextBox();
             this.btn_aplicar_criterios_smartlist = new System.Windows.Forms.Button();
             this.label49 = new System.Windows.Forms.Label();
             this.btn_atras_listainteligente_menu = new System.Windows.Forms.Button();
             this.panel_descargas_menu = new System.Windows.Forms.Panel();
+            this.tabla_canciones_descargadas = new System.Windows.Forms.DataGridView();
+            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantante = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Album = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label46 = new System.Windows.Forms.Label();
             this.btn_atras_descargas = new System.Windows.Forms.Button();
             this.panel_historial_menu = new System.Windows.Forms.Panel();
@@ -238,10 +254,7 @@
             this.panel_rep_karaoke = new System.Windows.Forms.Panel();
             this.label66 = new System.Windows.Forms.Label();
             this.btn_atras_rep_karaoke = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
             this.nombrevideo_karaoke = new System.Windows.Forms.Label();
-            this.button12 = new System.Windows.Forms.Button();
             this.label76 = new System.Windows.Forms.Label();
             this.nombrecantante_karaoke = new System.Windows.Forms.TextBox();
             this.axWindowsMediaPlayer3 = new AxWMPLib.AxWindowsMediaPlayer();
@@ -249,8 +262,9 @@
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label40 = new System.Windows.Forms.Label();
             this.btn_atras_karaoke = new System.Windows.Forms.Button();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
             this.panel_social_menu = new System.Windows.Forms.Panel();
             this.panel_ver_artista_busqueda_social = new System.Windows.Forms.Panel();
             this.social_naconalidad_artista = new System.Windows.Forms.Label();
@@ -347,38 +361,28 @@
             this.label64 = new System.Windows.Forms.Label();
             this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
             this.donde_quedaste_nombre = new System.Windows.Forms.Label();
-            this.tabla_canciones_descargadas = new System.Windows.Forms.DataGridView();
-            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantante = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Album = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.comboBox_criterio_smart_list = new System.Windows.Forms.ComboBox();
-            this.tabla_canciones_smartlist = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label38 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.panel_perfil_de_usuario.SuspendLayout();
             this.Panel_premium.SuspendLayout();
             this.panel_buscar.SuspendLayout();
+            this.panel_cancion_seleccionada_busqueda_simple.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tabla_canciones_cola_cancion_reproductor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.calificacion_cancion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer2)).BeginInit();
             this.panel_video_seleccionado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabla_nombre_actores_reprod_video)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.calificacion_video)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayerVideo)).BeginInit();
-            this.panel_cancion_seleccionada_busqueda_simple.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tabla_canciones_cola_cancion_reproductor)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.calificacion_cancion)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer2)).BeginInit();
+            this.panel_busqueda_simple.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.datagratview_busquedasimple)).BeginInit();
             this.panel_busqueda_multiple.SuspendLayout();
             this.panel_resultados_busqueda_multiple.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabla_resultados_busqueda_multiple)).BeginInit();
-            this.panel_busqueda_simple.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.datagratview_busquedasimple)).BeginInit();
             this.panel_listainteligente_menu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tabla_canciones_smartlist)).BeginInit();
             this.panel_descargas_menu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tabla_canciones_descargadas)).BeginInit();
             this.panel_historial_menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabla_historial_video)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabla_historial_canciones)).BeginInit();
@@ -405,8 +409,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.tabla_ver_playlist)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabla_playlist)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tabla_canciones_descargadas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tabla_canciones_smartlist)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -1133,30 +1135,457 @@
             // 
             // panel_buscar
             // 
-            this.panel_buscar.Controls.Add(this.panel_video_seleccionado);
             this.panel_buscar.Controls.Add(this.panel_cancion_seleccionada_busqueda_simple);
-            this.panel_buscar.Controls.Add(this.panel_busqueda_multiple);
+            this.panel_buscar.Controls.Add(this.panel_video_seleccionado);
             this.panel_buscar.Controls.Add(this.panel_busqueda_simple);
+            this.panel_buscar.Controls.Add(this.panel_busqueda_multiple);
             this.panel_buscar.Controls.Add(this.btn_atras_de_inicio_sesion);
             this.panel_buscar.Controls.Add(this.btn_busqueda_simple);
             this.panel_buscar.Controls.Add(this.btn_busqueda_multiple);
-            this.panel_buscar.Location = new System.Drawing.Point(540, 192);
+            this.panel_buscar.Location = new System.Drawing.Point(530, 188);
             this.panel_buscar.Name = "panel_buscar";
-            this.panel_buscar.Size = new System.Drawing.Size(22, 22);
+            this.panel_buscar.Size = new System.Drawing.Size(36, 21);
             this.panel_buscar.TabIndex = 53;
             this.panel_buscar.Visible = false;
             // 
+            // panel_cancion_seleccionada_busqueda_simple
+            // 
+            this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.btn_atras_rep_cancion_en_descargas);
+            this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.btn_atras_rep_cancion_en_busqmultiple);
+            this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.btn_descargar_cancion);
+            this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.btn_limpiar_cola_cancion);
+            this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.btn_atras_rep_cancion_en_smartlist);
+            this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.btn_atras_rep_cancion_en_favoritos);
+            this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.btn_atras_rep_cancion_en_playlist);
+            this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.tabla_canciones_cola_cancion_reproductor);
+            this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.label30);
+            this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.label31);
+            this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.select_playlist_cancion_reproductor);
+            this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.calificacion_cancion);
+            this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.btn_calificar_cancion_reproductor);
+            this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.btn_agregar_a_la_cola_cancion_reproductor);
+            this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.btn_agregar_a_ply);
+            this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.btn_agregar_a_favoritos_cancion_reproductor);
+            this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.cantante_cancion_reproductor);
+            this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.compositor_cancion_reproductor);
+            this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.album_cancion_reproductor);
+            this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.genero_cancion_reproductor);
+            this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.calificacion_cancion_reproductor);
+            this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.reproducciones_cancion_reproductor);
+            this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.nombrecancion_cancion_reproductor);
+            this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.axWindowsMediaPlayer2);
+            this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.label20);
+            this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.label19);
+            this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.label18);
+            this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.label2);
+            this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.label16);
+            this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.label15);
+            this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.btn_atras_cancion_reproductor);
+            this.panel_cancion_seleccionada_busqueda_simple.Location = new System.Drawing.Point(762, 443);
+            this.panel_cancion_seleccionada_busqueda_simple.Name = "panel_cancion_seleccionada_busqueda_simple";
+            this.panel_cancion_seleccionada_busqueda_simple.Size = new System.Drawing.Size(20, 28);
+            this.panel_cancion_seleccionada_busqueda_simple.TabIndex = 126;
+            this.panel_cancion_seleccionada_busqueda_simple.Visible = false;
+            this.panel_cancion_seleccionada_busqueda_simple.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_cancion_seleccionada_busqueda_simple_Paint);
+            // 
+            // btn_atras_rep_cancion_en_descargas
+            // 
+            this.btn_atras_rep_cancion_en_descargas.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_atras_rep_cancion_en_descargas.Location = new System.Drawing.Point(179, 10);
+            this.btn_atras_rep_cancion_en_descargas.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_atras_rep_cancion_en_descargas.Name = "btn_atras_rep_cancion_en_descargas";
+            this.btn_atras_rep_cancion_en_descargas.Size = new System.Drawing.Size(71, 66);
+            this.btn_atras_rep_cancion_en_descargas.TabIndex = 168;
+            this.btn_atras_rep_cancion_en_descargas.Text = "Atras de smartlist";
+            this.btn_atras_rep_cancion_en_descargas.UseVisualStyleBackColor = true;
+            this.btn_atras_rep_cancion_en_descargas.Visible = false;
+            this.btn_atras_rep_cancion_en_descargas.Click += new System.EventHandler(this.btn_atras_rep_cancion_en_descargas_Click);
+            // 
+            // btn_atras_rep_cancion_en_busqmultiple
+            // 
+            this.btn_atras_rep_cancion_en_busqmultiple.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_atras_rep_cancion_en_busqmultiple.Location = new System.Drawing.Point(554, 10);
+            this.btn_atras_rep_cancion_en_busqmultiple.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_atras_rep_cancion_en_busqmultiple.Name = "btn_atras_rep_cancion_en_busqmultiple";
+            this.btn_atras_rep_cancion_en_busqmultiple.Size = new System.Drawing.Size(71, 66);
+            this.btn_atras_rep_cancion_en_busqmultiple.TabIndex = 167;
+            this.btn_atras_rep_cancion_en_busqmultiple.Text = "Atras multipl";
+            this.btn_atras_rep_cancion_en_busqmultiple.UseVisualStyleBackColor = true;
+            this.btn_atras_rep_cancion_en_busqmultiple.Visible = false;
+            this.btn_atras_rep_cancion_en_busqmultiple.Click += new System.EventHandler(this.btn_atras_rep_cancion_en_busqmultiple_Click);
+            // 
+            // btn_descargar_cancion
+            // 
+            this.btn_descargar_cancion.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_descargar_cancion.ForeColor = System.Drawing.Color.Black;
+            this.btn_descargar_cancion.Location = new System.Drawing.Point(722, 313);
+            this.btn_descargar_cancion.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_descargar_cancion.Name = "btn_descargar_cancion";
+            this.btn_descargar_cancion.Size = new System.Drawing.Size(203, 40);
+            this.btn_descargar_cancion.TabIndex = 166;
+            this.btn_descargar_cancion.Text = "Descargar Cancion";
+            this.btn_descargar_cancion.UseVisualStyleBackColor = true;
+            this.btn_descargar_cancion.Click += new System.EventHandler(this.btn_descargar_cancion_Click);
+            // 
+            // btn_limpiar_cola_cancion
+            // 
+            this.btn_limpiar_cola_cancion.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_limpiar_cola_cancion.ForeColor = System.Drawing.Color.Black;
+            this.btn_limpiar_cola_cancion.Location = new System.Drawing.Point(837, 279);
+            this.btn_limpiar_cola_cancion.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_limpiar_cola_cancion.Name = "btn_limpiar_cola_cancion";
+            this.btn_limpiar_cola_cancion.Size = new System.Drawing.Size(88, 24);
+            this.btn_limpiar_cola_cancion.TabIndex = 165;
+            this.btn_limpiar_cola_cancion.Text = "Limpiar";
+            this.btn_limpiar_cola_cancion.UseVisualStyleBackColor = true;
+            this.btn_limpiar_cola_cancion.Click += new System.EventHandler(this.btn_limpiar_cola_cancion_Click);
+            // 
+            // btn_atras_rep_cancion_en_smartlist
+            // 
+            this.btn_atras_rep_cancion_en_smartlist.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_atras_rep_cancion_en_smartlist.Location = new System.Drawing.Point(705, 12);
+            this.btn_atras_rep_cancion_en_smartlist.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_atras_rep_cancion_en_smartlist.Name = "btn_atras_rep_cancion_en_smartlist";
+            this.btn_atras_rep_cancion_en_smartlist.Size = new System.Drawing.Size(71, 66);
+            this.btn_atras_rep_cancion_en_smartlist.TabIndex = 164;
+            this.btn_atras_rep_cancion_en_smartlist.Text = "Atras de smartlist";
+            this.btn_atras_rep_cancion_en_smartlist.UseVisualStyleBackColor = true;
+            this.btn_atras_rep_cancion_en_smartlist.Visible = false;
+            this.btn_atras_rep_cancion_en_smartlist.Click += new System.EventHandler(this.btn_atras_rep_cancion_en_smartlist_Click);
+            // 
+            // btn_atras_rep_cancion_en_favoritos
+            // 
+            this.btn_atras_rep_cancion_en_favoritos.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_atras_rep_cancion_en_favoritos.Location = new System.Drawing.Point(629, 10);
+            this.btn_atras_rep_cancion_en_favoritos.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_atras_rep_cancion_en_favoritos.Name = "btn_atras_rep_cancion_en_favoritos";
+            this.btn_atras_rep_cancion_en_favoritos.Size = new System.Drawing.Size(71, 68);
+            this.btn_atras_rep_cancion_en_favoritos.TabIndex = 163;
+            this.btn_atras_rep_cancion_en_favoritos.Text = "Atras de fav";
+            this.btn_atras_rep_cancion_en_favoritos.UseVisualStyleBackColor = true;
+            this.btn_atras_rep_cancion_en_favoritos.Visible = false;
+            this.btn_atras_rep_cancion_en_favoritos.Click += new System.EventHandler(this.btn_atras_rep_cancion_en_favoritos_Click);
+            // 
+            // btn_atras_rep_cancion_en_playlist
+            // 
+            this.btn_atras_rep_cancion_en_playlist.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_atras_rep_cancion_en_playlist.Location = new System.Drawing.Point(779, 12);
+            this.btn_atras_rep_cancion_en_playlist.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_atras_rep_cancion_en_playlist.Name = "btn_atras_rep_cancion_en_playlist";
+            this.btn_atras_rep_cancion_en_playlist.Size = new System.Drawing.Size(71, 66);
+            this.btn_atras_rep_cancion_en_playlist.TabIndex = 162;
+            this.btn_atras_rep_cancion_en_playlist.Text = "Atras de playlist";
+            this.btn_atras_rep_cancion_en_playlist.UseVisualStyleBackColor = true;
+            this.btn_atras_rep_cancion_en_playlist.Visible = false;
+            this.btn_atras_rep_cancion_en_playlist.Click += new System.EventHandler(this.btn_atras_rep_cancion_en_playlist_Click);
+            // 
+            // tabla_canciones_cola_cancion_reproductor
+            // 
+            this.tabla_canciones_cola_cancion_reproductor.AllowUserToAddRows = false;
+            this.tabla_canciones_cola_cancion_reproductor.AllowUserToDeleteRows = false;
+            this.tabla_canciones_cola_cancion_reproductor.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.tabla_canciones_cola_cancion_reproductor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tabla_canciones_cola_cancion_reproductor.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1});
+            this.tabla_canciones_cola_cancion_reproductor.Location = new System.Drawing.Point(722, 141);
+            this.tabla_canciones_cola_cancion_reproductor.Name = "tabla_canciones_cola_cancion_reproductor";
+            this.tabla_canciones_cola_cancion_reproductor.ReadOnly = true;
+            this.tabla_canciones_cola_cancion_reproductor.RowHeadersVisible = false;
+            this.tabla_canciones_cola_cancion_reproductor.Size = new System.Drawing.Size(203, 135);
+            this.tabla_canciones_cola_cancion_reproductor.TabIndex = 161;
+            this.tabla_canciones_cola_cancion_reproductor.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Cancion";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.ForeColor = System.Drawing.Color.Tomato;
+            this.label30.Location = new System.Drawing.Point(456, 84);
+            this.label30.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(160, 23);
+            this.label30.TabIndex = 160;
+            this.label30.Text = "Seleccionar playlist:";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.ForeColor = System.Drawing.Color.Tomato;
+            this.label31.Location = new System.Drawing.Point(456, 220);
+            this.label31.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(189, 23);
+            this.label31.TabIndex = 159;
+            this.label31.Text = "Seleccionar calificación:";
+            // 
+            // select_playlist_cancion_reproductor
+            // 
+            this.select_playlist_cancion_reproductor.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.select_playlist_cancion_reproductor.ForeColor = System.Drawing.Color.Black;
+            this.select_playlist_cancion_reproductor.FormattingEnabled = true;
+            this.select_playlist_cancion_reproductor.Location = new System.Drawing.Point(454, 119);
+            this.select_playlist_cancion_reproductor.Margin = new System.Windows.Forms.Padding(2);
+            this.select_playlist_cancion_reproductor.Name = "select_playlist_cancion_reproductor";
+            this.select_playlist_cancion_reproductor.Size = new System.Drawing.Size(203, 31);
+            this.select_playlist_cancion_reproductor.TabIndex = 158;
+            this.select_playlist_cancion_reproductor.SelectedIndexChanged += new System.EventHandler(this.select_playlist_cancion_reproductor_SelectedIndexChanged);
+            // 
+            // calificacion_cancion
+            // 
+            this.calificacion_cancion.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.calificacion_cancion.ForeColor = System.Drawing.Color.Black;
+            this.calificacion_cancion.Location = new System.Drawing.Point(454, 255);
+            this.calificacion_cancion.Margin = new System.Windows.Forms.Padding(2);
+            this.calificacion_cancion.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.calificacion_cancion.Name = "calificacion_cancion";
+            this.calificacion_cancion.Size = new System.Drawing.Size(45, 30);
+            this.calificacion_cancion.TabIndex = 157;
+            this.calificacion_cancion.ValueChanged += new System.EventHandler(this.calificacion_cancion_ValueChanged);
+            // 
+            // btn_calificar_cancion_reproductor
+            // 
+            this.btn_calificar_cancion_reproductor.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_calificar_cancion_reproductor.ForeColor = System.Drawing.Color.Black;
+            this.btn_calificar_cancion_reproductor.Location = new System.Drawing.Point(511, 256);
+            this.btn_calificar_cancion_reproductor.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_calificar_cancion_reproductor.Name = "btn_calificar_cancion_reproductor";
+            this.btn_calificar_cancion_reproductor.Size = new System.Drawing.Size(146, 31);
+            this.btn_calificar_cancion_reproductor.TabIndex = 156;
+            this.btn_calificar_cancion_reproductor.Text = "Calificar";
+            this.btn_calificar_cancion_reproductor.UseVisualStyleBackColor = true;
+            this.btn_calificar_cancion_reproductor.Click += new System.EventHandler(this.btn_calificar_cancion_reproductor_Click);
+            // 
+            // btn_agregar_a_la_cola_cancion_reproductor
+            // 
+            this.btn_agregar_a_la_cola_cancion_reproductor.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_agregar_a_la_cola_cancion_reproductor.ForeColor = System.Drawing.Color.Black;
+            this.btn_agregar_a_la_cola_cancion_reproductor.Location = new System.Drawing.Point(722, 92);
+            this.btn_agregar_a_la_cola_cancion_reproductor.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_agregar_a_la_cola_cancion_reproductor.Name = "btn_agregar_a_la_cola_cancion_reproductor";
+            this.btn_agregar_a_la_cola_cancion_reproductor.Size = new System.Drawing.Size(203, 30);
+            this.btn_agregar_a_la_cola_cancion_reproductor.TabIndex = 155;
+            this.btn_agregar_a_la_cola_cancion_reproductor.Text = "Agregar a cola";
+            this.btn_agregar_a_la_cola_cancion_reproductor.UseVisualStyleBackColor = true;
+            this.btn_agregar_a_la_cola_cancion_reproductor.Click += new System.EventHandler(this.btn_agregar_a_la_cola_cancion_reproductor_Click);
+            // 
+            // btn_agregar_a_ply
+            // 
+            this.btn_agregar_a_ply.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_agregar_a_ply.ForeColor = System.Drawing.Color.Black;
+            this.btn_agregar_a_ply.Location = new System.Drawing.Point(454, 162);
+            this.btn_agregar_a_ply.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_agregar_a_ply.Name = "btn_agregar_a_ply";
+            this.btn_agregar_a_ply.Size = new System.Drawing.Size(203, 30);
+            this.btn_agregar_a_ply.TabIndex = 154;
+            this.btn_agregar_a_ply.Text = "Agregar a PlayList";
+            this.btn_agregar_a_ply.UseVisualStyleBackColor = true;
+            this.btn_agregar_a_ply.Click += new System.EventHandler(this.btn_agregar_a_ply_Click);
+            // 
+            // btn_agregar_a_favoritos_cancion_reproductor
+            // 
+            this.btn_agregar_a_favoritos_cancion_reproductor.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_agregar_a_favoritos_cancion_reproductor.ForeColor = System.Drawing.Color.Black;
+            this.btn_agregar_a_favoritos_cancion_reproductor.Location = new System.Drawing.Point(454, 313);
+            this.btn_agregar_a_favoritos_cancion_reproductor.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_agregar_a_favoritos_cancion_reproductor.Name = "btn_agregar_a_favoritos_cancion_reproductor";
+            this.btn_agregar_a_favoritos_cancion_reproductor.Size = new System.Drawing.Size(203, 40);
+            this.btn_agregar_a_favoritos_cancion_reproductor.TabIndex = 153;
+            this.btn_agregar_a_favoritos_cancion_reproductor.Text = "Agregar a favoritos";
+            this.btn_agregar_a_favoritos_cancion_reproductor.UseVisualStyleBackColor = true;
+            this.btn_agregar_a_favoritos_cancion_reproductor.Click += new System.EventHandler(this.btn_agregar_a_favoritos_cancion_reproductor_Click);
+            // 
+            // cantante_cancion_reproductor
+            // 
+            this.cantante_cancion_reproductor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cantante_cancion_reproductor.Location = new System.Drawing.Point(195, 82);
+            this.cantante_cancion_reproductor.Name = "cantante_cancion_reproductor";
+            this.cantante_cancion_reproductor.ReadOnly = true;
+            this.cantante_cancion_reproductor.Size = new System.Drawing.Size(197, 26);
+            this.cantante_cancion_reproductor.TabIndex = 152;
+            this.cantante_cancion_reproductor.TextChanged += new System.EventHandler(this.cantante_cancion_reproductor_TextChanged);
+            // 
+            // compositor_cancion_reproductor
+            // 
+            this.compositor_cancion_reproductor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.compositor_cancion_reproductor.Location = new System.Drawing.Point(196, 132);
+            this.compositor_cancion_reproductor.Name = "compositor_cancion_reproductor";
+            this.compositor_cancion_reproductor.ReadOnly = true;
+            this.compositor_cancion_reproductor.Size = new System.Drawing.Size(197, 26);
+            this.compositor_cancion_reproductor.TabIndex = 151;
+            // 
+            // album_cancion_reproductor
+            // 
+            this.album_cancion_reproductor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.album_cancion_reproductor.Location = new System.Drawing.Point(196, 182);
+            this.album_cancion_reproductor.Name = "album_cancion_reproductor";
+            this.album_cancion_reproductor.ReadOnly = true;
+            this.album_cancion_reproductor.Size = new System.Drawing.Size(197, 26);
+            this.album_cancion_reproductor.TabIndex = 150;
+            // 
+            // genero_cancion_reproductor
+            // 
+            this.genero_cancion_reproductor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.genero_cancion_reproductor.Location = new System.Drawing.Point(196, 230);
+            this.genero_cancion_reproductor.Name = "genero_cancion_reproductor";
+            this.genero_cancion_reproductor.ReadOnly = true;
+            this.genero_cancion_reproductor.Size = new System.Drawing.Size(197, 26);
+            this.genero_cancion_reproductor.TabIndex = 149;
+            // 
+            // calificacion_cancion_reproductor
+            // 
+            this.calificacion_cancion_reproductor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.calificacion_cancion_reproductor.Location = new System.Drawing.Point(196, 280);
+            this.calificacion_cancion_reproductor.Name = "calificacion_cancion_reproductor";
+            this.calificacion_cancion_reproductor.ReadOnly = true;
+            this.calificacion_cancion_reproductor.Size = new System.Drawing.Size(197, 26);
+            this.calificacion_cancion_reproductor.TabIndex = 148;
+            // 
+            // reproducciones_cancion_reproductor
+            // 
+            this.reproducciones_cancion_reproductor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reproducciones_cancion_reproductor.Location = new System.Drawing.Point(196, 333);
+            this.reproducciones_cancion_reproductor.Name = "reproducciones_cancion_reproductor";
+            this.reproducciones_cancion_reproductor.ReadOnly = true;
+            this.reproducciones_cancion_reproductor.Size = new System.Drawing.Size(197, 26);
+            this.reproducciones_cancion_reproductor.TabIndex = 147;
+            // 
+            // nombrecancion_cancion_reproductor
+            // 
+            this.nombrecancion_cancion_reproductor.AutoSize = true;
+            this.nombrecancion_cancion_reproductor.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.nombrecancion_cancion_reproductor.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nombrecancion_cancion_reproductor.ForeColor = System.Drawing.Color.DarkKhaki;
+            this.nombrecancion_cancion_reproductor.Location = new System.Drawing.Point(315, 15);
+            this.nombrecancion_cancion_reproductor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.nombrecancion_cancion_reproductor.Name = "nombrecancion_cancion_reproductor";
+            this.nombrecancion_cancion_reproductor.Size = new System.Drawing.Size(261, 45);
+            this.nombrecancion_cancion_reproductor.TabIndex = 146;
+            this.nombrecancion_cancion_reproductor.Text = "Nombre Cancion";
+            // 
+            // axWindowsMediaPlayer2
+            // 
+            this.axWindowsMediaPlayer2.Enabled = true;
+            this.axWindowsMediaPlayer2.Location = new System.Drawing.Point(3, 383);
+            this.axWindowsMediaPlayer2.Name = "axWindowsMediaPlayer2";
+            //this.axWindowsMediaPlayer2.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer2.OcxState")));
+            this.axWindowsMediaPlayer2.Size = new System.Drawing.Size(940, 93);
+            this.axWindowsMediaPlayer2.TabIndex = 145;
+            this.axWindowsMediaPlayer2.Enter += new System.EventHandler(this.axWindowsMediaPlayer2_Enter);
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.BackColor = System.Drawing.Color.Black;
+            this.label20.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.Tomato;
+            this.label20.Location = new System.Drawing.Point(18, 222);
+            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(83, 30);
+            this.label20.TabIndex = 136;
+            this.label20.Text = "Genero";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.BackColor = System.Drawing.Color.Black;
+            this.label19.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.Tomato;
+            this.label19.Location = new System.Drawing.Point(18, 331);
+            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(165, 30);
+            this.label19.TabIndex = 135;
+            this.label19.Text = "Reproducciones";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.Black;
+            this.label18.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.Tomato;
+            this.label18.Location = new System.Drawing.Point(18, 177);
+            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(73, 30);
+            this.label18.TabIndex = 134;
+            this.label18.Text = "Album";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Black;
+            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Tomato;
+            this.label2.Location = new System.Drawing.Point(18, 276);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(129, 30);
+            this.label2.TabIndex = 133;
+            this.label2.Text = "Calificacion";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.Black;
+            this.label16.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.Tomato;
+            this.label16.Location = new System.Drawing.Point(18, 128);
+            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(122, 30);
+            this.label16.TabIndex = 132;
+            this.label16.Text = "Compositor";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.Black;
+            this.label15.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.Tomato;
+            this.label15.Location = new System.Drawing.Point(18, 78);
+            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(104, 30);
+            this.label15.TabIndex = 130;
+            this.label15.Text = "Cantante";
+            // 
+            // btn_atras_cancion_reproductor
+            // 
+            this.btn_atras_cancion_reproductor.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_atras_cancion_reproductor.Location = new System.Drawing.Point(856, 12);
+            this.btn_atras_cancion_reproductor.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_atras_cancion_reproductor.Name = "btn_atras_cancion_reproductor";
+            this.btn_atras_cancion_reproductor.Size = new System.Drawing.Size(71, 66);
+            this.btn_atras_cancion_reproductor.TabIndex = 126;
+            this.btn_atras_cancion_reproductor.Text = "Atras original";
+            this.btn_atras_cancion_reproductor.UseVisualStyleBackColor = true;
+            this.btn_atras_cancion_reproductor.Visible = false;
+            this.btn_atras_cancion_reproductor.Click += new System.EventHandler(this.button2_Click);
+            // 
             // panel_video_seleccionado
             // 
+            this.panel_video_seleccionado.Controls.Add(this.btn_atras_rep_video_busqmultiple);
+            this.panel_video_seleccionado.Controls.Add(this.btn_atras_rep_video_playlis);
+            this.panel_video_seleccionado.Controls.Add(this.btn_atras_rep_video_favorito);
+            this.panel_video_seleccionado.Controls.Add(this.btn_atras_rep_video_smart);
             this.panel_video_seleccionado.Controls.Add(this.btn_limpiar_cola_video);
             this.panel_video_seleccionado.Controls.Add(this.label57);
             this.panel_video_seleccionado.Controls.Add(this.btn_atras_rep_video_playlist);
-            this.panel_video_seleccionado.Controls.Add(this.btn_atras_rep_video_favoritos);
-            this.panel_video_seleccionado.Controls.Add(this.btn_atras_rep_video_smartlist);
             this.panel_video_seleccionado.Controls.Add(this.tabla_nombre_actores_reprod_video);
             this.panel_video_seleccionado.Controls.Add(this.dataGridView1);
             this.panel_video_seleccionado.Controls.Add(this.nombre_video);
-            this.panel_video_seleccionado.Controls.Add(this.btn_Atrás);
             this.panel_video_seleccionado.Controls.Add(this.label28);
             this.panel_video_seleccionado.Controls.Add(this.textBox_Reproducciones);
             this.panel_video_seleccionado.Controls.Add(this.label26);
@@ -1175,13 +1604,65 @@
             this.panel_video_seleccionado.Controls.Add(this.btnAgregar_A_Playlist);
             this.panel_video_seleccionado.Controls.Add(this.btnAgregar_A_Favoritos);
             this.panel_video_seleccionado.Controls.Add(this.axWindowsMediaPlayerVideo);
-            this.panel_video_seleccionado.Location = new System.Drawing.Point(837, 437);
+            this.panel_video_seleccionado.Location = new System.Drawing.Point(828, 427);
             this.panel_video_seleccionado.Margin = new System.Windows.Forms.Padding(2);
             this.panel_video_seleccionado.Name = "panel_video_seleccionado";
-            this.panel_video_seleccionado.Size = new System.Drawing.Size(36, 27);
+            this.panel_video_seleccionado.Size = new System.Drawing.Size(36, 28);
             this.panel_video_seleccionado.TabIndex = 127;
             this.panel_video_seleccionado.Visible = false;
             this.panel_video_seleccionado.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_video_seleccionado_Paint);
+            // 
+            // btn_atras_rep_video_busqmultiple
+            // 
+            this.btn_atras_rep_video_busqmultiple.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_atras_rep_video_busqmultiple.Location = new System.Drawing.Point(557, 10);
+            this.btn_atras_rep_video_busqmultiple.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_atras_rep_video_busqmultiple.Name = "btn_atras_rep_video_busqmultiple";
+            this.btn_atras_rep_video_busqmultiple.Size = new System.Drawing.Size(72, 62);
+            this.btn_atras_rep_video_busqmultiple.TabIndex = 36;
+            this.btn_atras_rep_video_busqmultiple.Text = "Atrás multip";
+            this.btn_atras_rep_video_busqmultiple.UseVisualStyleBackColor = true;
+            this.btn_atras_rep_video_busqmultiple.Visible = false;
+            this.btn_atras_rep_video_busqmultiple.Click += new System.EventHandler(this.btn_atras_rep_video_busqmultiple_Click);
+            // 
+            // btn_atras_rep_video_playlis
+            // 
+            this.btn_atras_rep_video_playlis.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_atras_rep_video_playlis.Location = new System.Drawing.Point(634, 10);
+            this.btn_atras_rep_video_playlis.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_atras_rep_video_playlis.Name = "btn_atras_rep_video_playlis";
+            this.btn_atras_rep_video_playlis.Size = new System.Drawing.Size(72, 62);
+            this.btn_atras_rep_video_playlis.TabIndex = 35;
+            this.btn_atras_rep_video_playlis.Text = "Atrás playlist";
+            this.btn_atras_rep_video_playlis.UseVisualStyleBackColor = true;
+            this.btn_atras_rep_video_playlis.Visible = false;
+            this.btn_atras_rep_video_playlis.Click += new System.EventHandler(this.btn_atras_rep_video_playlis_Click);
+            // 
+            // btn_atras_rep_video_favorito
+            // 
+            this.btn_atras_rep_video_favorito.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_atras_rep_video_favorito.Location = new System.Drawing.Point(710, 12);
+            this.btn_atras_rep_video_favorito.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_atras_rep_video_favorito.Name = "btn_atras_rep_video_favorito";
+            this.btn_atras_rep_video_favorito.Size = new System.Drawing.Size(72, 63);
+            this.btn_atras_rep_video_favorito.TabIndex = 34;
+            this.btn_atras_rep_video_favorito.Text = "Atrás fav";
+            this.btn_atras_rep_video_favorito.UseVisualStyleBackColor = true;
+            this.btn_atras_rep_video_favorito.Visible = false;
+            this.btn_atras_rep_video_favorito.Click += new System.EventHandler(this.btn_atras_rep_video_favorito_Click);
+            // 
+            // btn_atras_rep_video_smart
+            // 
+            this.btn_atras_rep_video_smart.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_atras_rep_video_smart.Location = new System.Drawing.Point(793, 12);
+            this.btn_atras_rep_video_smart.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_atras_rep_video_smart.Name = "btn_atras_rep_video_smart";
+            this.btn_atras_rep_video_smart.Size = new System.Drawing.Size(72, 64);
+            this.btn_atras_rep_video_smart.TabIndex = 33;
+            this.btn_atras_rep_video_smart.Text = "Atrás smartlist";
+            this.btn_atras_rep_video_smart.UseVisualStyleBackColor = true;
+            this.btn_atras_rep_video_smart.Visible = false;
+            this.btn_atras_rep_video_smart.Click += new System.EventHandler(this.btn_atras_rep_video_smart_Click);
             // 
             // btn_limpiar_cola_video
             // 
@@ -1212,41 +1693,15 @@
             // btn_atras_rep_video_playlist
             // 
             this.btn_atras_rep_video_playlist.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_atras_rep_video_playlist.Location = new System.Drawing.Point(861, 12);
+            this.btn_atras_rep_video_playlist.Location = new System.Drawing.Point(869, 13);
             this.btn_atras_rep_video_playlist.Margin = new System.Windows.Forms.Padding(2);
             this.btn_atras_rep_video_playlist.Name = "btn_atras_rep_video_playlist";
-            this.btn_atras_rep_video_playlist.Size = new System.Drawing.Size(72, 31);
+            this.btn_atras_rep_video_playlist.Size = new System.Drawing.Size(72, 60);
             this.btn_atras_rep_video_playlist.TabIndex = 28;
-            this.btn_atras_rep_video_playlist.Text = "Atrás";
+            this.btn_atras_rep_video_playlist.Text = "Atrás origin";
             this.btn_atras_rep_video_playlist.UseVisualStyleBackColor = true;
             this.btn_atras_rep_video_playlist.Visible = false;
             this.btn_atras_rep_video_playlist.Click += new System.EventHandler(this.btn_atras_rep_video_playlist_Click);
-            // 
-            // btn_atras_rep_video_favoritos
-            // 
-            this.btn_atras_rep_video_favoritos.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_atras_rep_video_favoritos.Location = new System.Drawing.Point(861, 12);
-            this.btn_atras_rep_video_favoritos.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_atras_rep_video_favoritos.Name = "btn_atras_rep_video_favoritos";
-            this.btn_atras_rep_video_favoritos.Size = new System.Drawing.Size(72, 31);
-            this.btn_atras_rep_video_favoritos.TabIndex = 27;
-            this.btn_atras_rep_video_favoritos.Text = "Atrás";
-            this.btn_atras_rep_video_favoritos.UseVisualStyleBackColor = true;
-            this.btn_atras_rep_video_favoritos.Visible = false;
-            this.btn_atras_rep_video_favoritos.Click += new System.EventHandler(this.btn_atras_rep_video_favoritos_Click);
-            // 
-            // btn_atras_rep_video_smartlist
-            // 
-            this.btn_atras_rep_video_smartlist.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_atras_rep_video_smartlist.Location = new System.Drawing.Point(861, 12);
-            this.btn_atras_rep_video_smartlist.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_atras_rep_video_smartlist.Name = "btn_atras_rep_video_smartlist";
-            this.btn_atras_rep_video_smartlist.Size = new System.Drawing.Size(72, 31);
-            this.btn_atras_rep_video_smartlist.TabIndex = 26;
-            this.btn_atras_rep_video_smartlist.Text = "Atrás";
-            this.btn_atras_rep_video_smartlist.UseVisualStyleBackColor = true;
-            this.btn_atras_rep_video_smartlist.Visible = false;
-            this.btn_atras_rep_video_smartlist.Click += new System.EventHandler(this.btn_atras_rep_video_smartlist_Click);
             // 
             // tabla_nombre_actores_reprod_video
             // 
@@ -1302,18 +1757,6 @@
             this.nombre_video.Size = new System.Drawing.Size(234, 45);
             this.nombre_video.TabIndex = 23;
             this.nombre_video.Text = "Nombre Video";
-            // 
-            // btn_Atrás
-            // 
-            this.btn_Atrás.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Atrás.Location = new System.Drawing.Point(861, 12);
-            this.btn_Atrás.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_Atrás.Name = "btn_Atrás";
-            this.btn_Atrás.Size = new System.Drawing.Size(72, 31);
-            this.btn_Atrás.TabIndex = 21;
-            this.btn_Atrás.Text = "Atrás";
-            this.btn_Atrás.UseVisualStyleBackColor = true;
-            this.btn_Atrás.Click += new System.EventHandler(this.btn_Atrás_Click);
             // 
             // label28
             // 
@@ -1528,406 +1971,197 @@
             this.axWindowsMediaPlayerVideo.Location = new System.Drawing.Point(191, 77);
             this.axWindowsMediaPlayerVideo.Margin = new System.Windows.Forms.Padding(2);
             this.axWindowsMediaPlayerVideo.Name = "axWindowsMediaPlayerVideo";
-            this.axWindowsMediaPlayerVideo.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayerVideo.OcxState")));
+            //this.axWindowsMediaPlayerVideo.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayerVideo.OcxState")));
             this.axWindowsMediaPlayerVideo.Size = new System.Drawing.Size(567, 377);
             this.axWindowsMediaPlayerVideo.TabIndex = 0;
             // 
-            // panel_cancion_seleccionada_busqueda_simple
+            // panel_busqueda_simple
             // 
-            this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.btn_descargar_cancion);
-            this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.btn_limpiar_cola_cancion);
-            this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.btn_atras_rep_cancion_en_smartlist);
-            this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.btn_atras_rep_cancion_en_favoritos);
-            this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.btn_atras_rep_cancion_en_playlist);
-            this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.tabla_canciones_cola_cancion_reproductor);
-            this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.label30);
-            this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.label31);
-            this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.select_playlist_cancion_reproductor);
-            this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.calificacion_cancion);
-            this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.btn_calificar_cancion_reproductor);
-            this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.btn_agregar_a_la_cola_cancion_reproductor);
-            this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.btn_agregar_a_ply);
-            this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.btn_agregar_a_favoritos_cancion_reproductor);
-            this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.cantante_cancion_reproductor);
-            this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.compositor_cancion_reproductor);
-            this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.album_cancion_reproductor);
-            this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.genero_cancion_reproductor);
-            this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.calificacion_cancion_reproductor);
-            this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.reproducciones_cancion_reproductor);
-            this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.nombrecancion_cancion_reproductor);
-            this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.axWindowsMediaPlayer2);
-            this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.label20);
-            this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.label19);
-            this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.label18);
-            this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.label2);
-            this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.label16);
-            this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.label15);
-            this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.btn_atras_cancion_reproductor);
-            this.panel_cancion_seleccionada_busqueda_simple.Location = new System.Drawing.Point(776, 437);
-            this.panel_cancion_seleccionada_busqueda_simple.Name = "panel_cancion_seleccionada_busqueda_simple";
-            this.panel_cancion_seleccionada_busqueda_simple.Size = new System.Drawing.Size(40, 31);
-            this.panel_cancion_seleccionada_busqueda_simple.TabIndex = 126;
-            this.panel_cancion_seleccionada_busqueda_simple.Visible = false;
-            this.panel_cancion_seleccionada_busqueda_simple.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_cancion_seleccionada_busqueda_simple_Paint);
+            this.panel_busqueda_simple.Controls.Add(this.busquedasimple_valor_criterio_desplegable);
+            this.panel_busqueda_simple.Controls.Add(this.label13);
+            this.panel_busqueda_simple.Controls.Add(this.label14);
+            this.panel_busqueda_simple.Controls.Add(this.textBox2);
+            this.panel_busqueda_simple.Controls.Add(this.busquedasimple_criterio_text);
+            this.panel_busqueda_simple.Controls.Add(this.busaquedasimple_valor_criterio_text);
+            this.panel_busqueda_simple.Controls.Add(this.btn_buscar_busqueda_simple);
+            this.panel_busqueda_simple.Controls.Add(this.label12);
+            this.panel_busqueda_simple.Controls.Add(this.btn_atras_busquedasimple);
+            this.panel_busqueda_simple.Controls.Add(this.datagratview_busquedasimple);
+            this.panel_busqueda_simple.Location = new System.Drawing.Point(406, 74);
+            this.panel_busqueda_simple.Name = "panel_busqueda_simple";
+            this.panel_busqueda_simple.Size = new System.Drawing.Size(25, 23);
+            this.panel_busqueda_simple.TabIndex = 76;
+            this.panel_busqueda_simple.Visible = false;
             // 
-            // btn_descargar_cancion
+            // busquedasimple_valor_criterio_desplegable
             // 
-            this.btn_descargar_cancion.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_descargar_cancion.ForeColor = System.Drawing.Color.Black;
-            this.btn_descargar_cancion.Location = new System.Drawing.Point(722, 313);
-            this.btn_descargar_cancion.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_descargar_cancion.Name = "btn_descargar_cancion";
-            this.btn_descargar_cancion.Size = new System.Drawing.Size(203, 40);
-            this.btn_descargar_cancion.TabIndex = 166;
-            this.btn_descargar_cancion.Text = "Descargar Cancion";
-            this.btn_descargar_cancion.UseVisualStyleBackColor = true;
-            this.btn_descargar_cancion.Click += new System.EventHandler(this.btn_descargar_cancion_Click);
+            this.busquedasimple_valor_criterio_desplegable.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.busquedasimple_valor_criterio_desplegable.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.busquedasimple_valor_criterio_desplegable.FormattingEnabled = true;
+            this.busquedasimple_valor_criterio_desplegable.Location = new System.Drawing.Point(360, 160);
+            this.busquedasimple_valor_criterio_desplegable.Name = "busquedasimple_valor_criterio_desplegable";
+            this.busquedasimple_valor_criterio_desplegable.Size = new System.Drawing.Size(346, 37);
+            this.busquedasimple_valor_criterio_desplegable.TabIndex = 125;
+            this.busquedasimple_valor_criterio_desplegable.SelectedIndexChanged += new System.EventHandler(this.busquedasimple_valor_criterio_desplegable_SelectedIndexChanged);
             // 
-            // btn_limpiar_cola_cancion
+            // label13
             // 
-            this.btn_limpiar_cola_cancion.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_limpiar_cola_cancion.ForeColor = System.Drawing.Color.Black;
-            this.btn_limpiar_cola_cancion.Location = new System.Drawing.Point(837, 279);
-            this.btn_limpiar_cola_cancion.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_limpiar_cola_cancion.Name = "btn_limpiar_cola_cancion";
-            this.btn_limpiar_cola_cancion.Size = new System.Drawing.Size(88, 24);
-            this.btn_limpiar_cola_cancion.TabIndex = 165;
-            this.btn_limpiar_cola_cancion.Text = "Limpiar";
-            this.btn_limpiar_cola_cancion.UseVisualStyleBackColor = true;
-            this.btn_limpiar_cola_cancion.Click += new System.EventHandler(this.btn_limpiar_cola_cancion_Click);
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Black;
+            this.label13.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label13.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(39, 154);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(184, 40);
+            this.label13.TabIndex = 124;
+            this.label13.Text = "Palabra Clave";
             // 
-            // btn_atras_rep_cancion_en_smartlist
+            // label14
             // 
-            this.btn_atras_rep_cancion_en_smartlist.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_atras_rep_cancion_en_smartlist.Location = new System.Drawing.Point(854, 12);
-            this.btn_atras_rep_cancion_en_smartlist.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_atras_rep_cancion_en_smartlist.Name = "btn_atras_rep_cancion_en_smartlist";
-            this.btn_atras_rep_cancion_en_smartlist.Size = new System.Drawing.Size(71, 35);
-            this.btn_atras_rep_cancion_en_smartlist.TabIndex = 164;
-            this.btn_atras_rep_cancion_en_smartlist.Text = "Atras";
-            this.btn_atras_rep_cancion_en_smartlist.UseVisualStyleBackColor = true;
-            this.btn_atras_rep_cancion_en_smartlist.Visible = false;
-            this.btn_atras_rep_cancion_en_smartlist.Click += new System.EventHandler(this.btn_atras_rep_cancion_en_smartlist_Click);
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Black;
+            this.label14.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label14.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(39, 97);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(283, 40);
+            this.label14.TabIndex = 123;
+            this.label14.Text = "Criterio de Busqueda";
             // 
-            // btn_atras_rep_cancion_en_favoritos
+            // textBox2
             // 
-            this.btn_atras_rep_cancion_en_favoritos.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_atras_rep_cancion_en_favoritos.Location = new System.Drawing.Point(854, 12);
-            this.btn_atras_rep_cancion_en_favoritos.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_atras_rep_cancion_en_favoritos.Name = "btn_atras_rep_cancion_en_favoritos";
-            this.btn_atras_rep_cancion_en_favoritos.Size = new System.Drawing.Size(71, 35);
-            this.btn_atras_rep_cancion_en_favoritos.TabIndex = 163;
-            this.btn_atras_rep_cancion_en_favoritos.Text = "Atras";
-            this.btn_atras_rep_cancion_en_favoritos.UseVisualStyleBackColor = true;
-            this.btn_atras_rep_cancion_en_favoritos.Visible = false;
-            this.btn_atras_rep_cancion_en_favoritos.Click += new System.EventHandler(this.btn_atras_rep_cancion_en_favoritos_Click);
+            this.textBox2.BackColor = System.Drawing.Color.Maroon;
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Font = new System.Drawing.Font("Arial", 1.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(26, 208);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(900, 3);
+            this.textBox2.TabIndex = 120;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // btn_atras_rep_cancion_en_playlist
+            // busquedasimple_criterio_text
             // 
-            this.btn_atras_rep_cancion_en_playlist.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_atras_rep_cancion_en_playlist.Location = new System.Drawing.Point(854, 12);
-            this.btn_atras_rep_cancion_en_playlist.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_atras_rep_cancion_en_playlist.Name = "btn_atras_rep_cancion_en_playlist";
-            this.btn_atras_rep_cancion_en_playlist.Size = new System.Drawing.Size(71, 35);
-            this.btn_atras_rep_cancion_en_playlist.TabIndex = 162;
-            this.btn_atras_rep_cancion_en_playlist.Text = "Atras";
-            this.btn_atras_rep_cancion_en_playlist.UseVisualStyleBackColor = true;
-            this.btn_atras_rep_cancion_en_playlist.Visible = false;
-            this.btn_atras_rep_cancion_en_playlist.Click += new System.EventHandler(this.btn_atras_rep_cancion_en_playlist_Click);
+            this.busquedasimple_criterio_text.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.busquedasimple_criterio_text.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.busquedasimple_criterio_text.FormattingEnabled = true;
+            this.busquedasimple_criterio_text.Items.AddRange(new object[] {
+            "Nombre Cancion",
+            "Nombre Pelicula",
+            "Genero Cancion",
+            "Genero Video",
+            "Categoria Pelicula",
+            "Cantante",
+            "Compositor",
+            "Director",
+            "Actor",
+            "Album",
+            "Disquera",
+            "Film Studio",
+            "Año de Publicacion",
+            "Edad del Artista",
+            "Sexo del Artista",
+            "Evaluacion",
+            "Calidad/Resolucion"});
+            this.busquedasimple_criterio_text.Location = new System.Drawing.Point(360, 101);
+            this.busquedasimple_criterio_text.Name = "busquedasimple_criterio_text";
+            this.busquedasimple_criterio_text.Size = new System.Drawing.Size(346, 37);
+            this.busquedasimple_criterio_text.TabIndex = 117;
+            this.busquedasimple_criterio_text.SelectedIndexChanged += new System.EventHandler(this.busquedasimple_criterio_text_SelectedIndexChanged);
+            this.busquedasimple_criterio_text.SelectedValueChanged += new System.EventHandler(this.busquedasimple_criterio_text_SelectedValueChanged);
             // 
-            // tabla_canciones_cola_cancion_reproductor
+            // busaquedasimple_valor_criterio_text
             // 
-            this.tabla_canciones_cola_cancion_reproductor.AllowUserToAddRows = false;
-            this.tabla_canciones_cola_cancion_reproductor.AllowUserToDeleteRows = false;
-            this.tabla_canciones_cola_cancion_reproductor.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.tabla_canciones_cola_cancion_reproductor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tabla_canciones_cola_cancion_reproductor.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1});
-            this.tabla_canciones_cola_cancion_reproductor.Location = new System.Drawing.Point(722, 141);
-            this.tabla_canciones_cola_cancion_reproductor.Name = "tabla_canciones_cola_cancion_reproductor";
-            this.tabla_canciones_cola_cancion_reproductor.ReadOnly = true;
-            this.tabla_canciones_cola_cancion_reproductor.RowHeadersVisible = false;
-            this.tabla_canciones_cola_cancion_reproductor.Size = new System.Drawing.Size(203, 135);
-            this.tabla_canciones_cola_cancion_reproductor.TabIndex = 161;
-            this.tabla_canciones_cola_cancion_reproductor.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
+            this.busaquedasimple_valor_criterio_text.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.busaquedasimple_valor_criterio_text.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.busaquedasimple_valor_criterio_text.Location = new System.Drawing.Point(360, 160);
+            this.busaquedasimple_valor_criterio_text.Margin = new System.Windows.Forms.Padding(2);
+            this.busaquedasimple_valor_criterio_text.Name = "busaquedasimple_valor_criterio_text";
+            this.busaquedasimple_valor_criterio_text.Size = new System.Drawing.Size(346, 37);
+            this.busaquedasimple_valor_criterio_text.TabIndex = 116;
+            this.busaquedasimple_valor_criterio_text.TextChanged += new System.EventHandler(this.busaquedasimple_valor_criterio_text_TextChanged);
             // 
-            // Column1
+            // btn_buscar_busqueda_simple
             // 
-            this.Column1.HeaderText = "Cancion";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
+            this.btn_buscar_busqueda_simple.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_buscar_busqueda_simple.Location = new System.Drawing.Point(749, 111);
+            this.btn_buscar_busqueda_simple.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_buscar_busqueda_simple.Name = "btn_buscar_busqueda_simple";
+            this.btn_buscar_busqueda_simple.Size = new System.Drawing.Size(158, 59);
+            this.btn_buscar_busqueda_simple.TabIndex = 115;
+            this.btn_buscar_busqueda_simple.Text = "Buscar";
+            this.btn_buscar_busqueda_simple.UseVisualStyleBackColor = true;
+            this.btn_buscar_busqueda_simple.Click += new System.EventHandler(this.btn_buscar_busqueda_simple_Click);
             // 
-            // label30
+            // label12
             // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.ForeColor = System.Drawing.Color.Tomato;
-            this.label30.Location = new System.Drawing.Point(456, 84);
-            this.label30.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(160, 23);
-            this.label30.TabIndex = 160;
-            this.label30.Text = "Seleccionar playlist:";
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Maroon;
+            this.label12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label12.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(344, 15);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(278, 47);
+            this.label12.TabIndex = 102;
+            this.label12.Text = "Busqueda Simple";
             // 
-            // label31
+            // btn_atras_busquedasimple
             // 
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.ForeColor = System.Drawing.Color.Tomato;
-            this.label31.Location = new System.Drawing.Point(456, 220);
-            this.label31.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(189, 23);
-            this.label31.TabIndex = 159;
-            this.label31.Text = "Seleccionar calificación:";
+            this.btn_atras_busquedasimple.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_atras_busquedasimple.Location = new System.Drawing.Point(854, 14);
+            this.btn_atras_busquedasimple.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_atras_busquedasimple.Name = "btn_atras_busquedasimple";
+            this.btn_atras_busquedasimple.Size = new System.Drawing.Size(71, 35);
+            this.btn_atras_busquedasimple.TabIndex = 74;
+            this.btn_atras_busquedasimple.Text = "Atras";
+            this.btn_atras_busquedasimple.UseVisualStyleBackColor = true;
+            this.btn_atras_busquedasimple.Click += new System.EventHandler(this.btn_atras_busquedasimple_Click);
             // 
-            // select_playlist_cancion_reproductor
+            // datagratview_busquedasimple
             // 
-            this.select_playlist_cancion_reproductor.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.select_playlist_cancion_reproductor.ForeColor = System.Drawing.Color.Black;
-            this.select_playlist_cancion_reproductor.FormattingEnabled = true;
-            this.select_playlist_cancion_reproductor.Location = new System.Drawing.Point(454, 119);
-            this.select_playlist_cancion_reproductor.Margin = new System.Windows.Forms.Padding(2);
-            this.select_playlist_cancion_reproductor.Name = "select_playlist_cancion_reproductor";
-            this.select_playlist_cancion_reproductor.Size = new System.Drawing.Size(203, 31);
-            this.select_playlist_cancion_reproductor.TabIndex = 158;
-            this.select_playlist_cancion_reproductor.SelectedIndexChanged += new System.EventHandler(this.select_playlist_cancion_reproductor_SelectedIndexChanged);
+            this.datagratview_busquedasimple.AllowUserToAddRows = false;
+            this.datagratview_busquedasimple.AllowUserToDeleteRows = false;
+            this.datagratview_busquedasimple.AllowUserToResizeColumns = false;
+            this.datagratview_busquedasimple.AllowUserToResizeRows = false;
+            this.datagratview_busquedasimple.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.datagratview_busquedasimple.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.datagratview_busquedasimple.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.datagratview_busquedasimple.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colum_nombre,
+            this.colum_artista});
+            this.datagratview_busquedasimple.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.datagratview_busquedasimple.Location = new System.Drawing.Point(26, 216);
+            this.datagratview_busquedasimple.MultiSelect = false;
+            this.datagratview_busquedasimple.Name = "datagratview_busquedasimple";
+            this.datagratview_busquedasimple.ReadOnly = true;
+            this.datagratview_busquedasimple.RowHeadersVisible = false;
+            this.datagratview_busquedasimple.RowHeadersWidth = 51;
+            this.datagratview_busquedasimple.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.datagratview_busquedasimple.Size = new System.Drawing.Size(899, 266);
+            this.datagratview_busquedasimple.TabIndex = 121;
+            this.datagratview_busquedasimple.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.datagratview_busquedasimple.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagratview_busquedasimple_CellContentDoubleClick);
+            this.datagratview_busquedasimple.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagratview_busquedasimple_CellDoubleClick);
             // 
-            // calificacion_cancion
+            // colum_nombre
             // 
-            this.calificacion_cancion.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.calificacion_cancion.ForeColor = System.Drawing.Color.Black;
-            this.calificacion_cancion.Location = new System.Drawing.Point(454, 255);
-            this.calificacion_cancion.Margin = new System.Windows.Forms.Padding(2);
-            this.calificacion_cancion.Maximum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.calificacion_cancion.Name = "calificacion_cancion";
-            this.calificacion_cancion.Size = new System.Drawing.Size(45, 30);
-            this.calificacion_cancion.TabIndex = 157;
-            this.calificacion_cancion.ValueChanged += new System.EventHandler(this.calificacion_cancion_ValueChanged);
+            this.colum_nombre.HeaderText = "Nombre";
+            this.colum_nombre.MinimumWidth = 6;
+            this.colum_nombre.Name = "colum_nombre";
+            this.colum_nombre.ReadOnly = true;
             // 
-            // btn_calificar_cancion_reproductor
+            // colum_artista
             // 
-            this.btn_calificar_cancion_reproductor.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_calificar_cancion_reproductor.ForeColor = System.Drawing.Color.Black;
-            this.btn_calificar_cancion_reproductor.Location = new System.Drawing.Point(511, 256);
-            this.btn_calificar_cancion_reproductor.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_calificar_cancion_reproductor.Name = "btn_calificar_cancion_reproductor";
-            this.btn_calificar_cancion_reproductor.Size = new System.Drawing.Size(146, 31);
-            this.btn_calificar_cancion_reproductor.TabIndex = 156;
-            this.btn_calificar_cancion_reproductor.Text = "Calificar";
-            this.btn_calificar_cancion_reproductor.UseVisualStyleBackColor = true;
-            this.btn_calificar_cancion_reproductor.Click += new System.EventHandler(this.btn_calificar_cancion_reproductor_Click);
-            // 
-            // btn_agregar_a_la_cola_cancion_reproductor
-            // 
-            this.btn_agregar_a_la_cola_cancion_reproductor.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_agregar_a_la_cola_cancion_reproductor.ForeColor = System.Drawing.Color.Black;
-            this.btn_agregar_a_la_cola_cancion_reproductor.Location = new System.Drawing.Point(722, 92);
-            this.btn_agregar_a_la_cola_cancion_reproductor.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_agregar_a_la_cola_cancion_reproductor.Name = "btn_agregar_a_la_cola_cancion_reproductor";
-            this.btn_agregar_a_la_cola_cancion_reproductor.Size = new System.Drawing.Size(203, 30);
-            this.btn_agregar_a_la_cola_cancion_reproductor.TabIndex = 155;
-            this.btn_agregar_a_la_cola_cancion_reproductor.Text = "Agregar a cola";
-            this.btn_agregar_a_la_cola_cancion_reproductor.UseVisualStyleBackColor = true;
-            this.btn_agregar_a_la_cola_cancion_reproductor.Click += new System.EventHandler(this.btn_agregar_a_la_cola_cancion_reproductor_Click);
-            // 
-            // btn_agregar_a_ply
-            // 
-            this.btn_agregar_a_ply.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_agregar_a_ply.ForeColor = System.Drawing.Color.Black;
-            this.btn_agregar_a_ply.Location = new System.Drawing.Point(454, 162);
-            this.btn_agregar_a_ply.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_agregar_a_ply.Name = "btn_agregar_a_ply";
-            this.btn_agregar_a_ply.Size = new System.Drawing.Size(203, 30);
-            this.btn_agregar_a_ply.TabIndex = 154;
-            this.btn_agregar_a_ply.Text = "Agregar a PlayList";
-            this.btn_agregar_a_ply.UseVisualStyleBackColor = true;
-            this.btn_agregar_a_ply.Click += new System.EventHandler(this.btn_agregar_a_ply_Click);
-            // 
-            // btn_agregar_a_favoritos_cancion_reproductor
-            // 
-            this.btn_agregar_a_favoritos_cancion_reproductor.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_agregar_a_favoritos_cancion_reproductor.ForeColor = System.Drawing.Color.Black;
-            this.btn_agregar_a_favoritos_cancion_reproductor.Location = new System.Drawing.Point(454, 313);
-            this.btn_agregar_a_favoritos_cancion_reproductor.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_agregar_a_favoritos_cancion_reproductor.Name = "btn_agregar_a_favoritos_cancion_reproductor";
-            this.btn_agregar_a_favoritos_cancion_reproductor.Size = new System.Drawing.Size(203, 40);
-            this.btn_agregar_a_favoritos_cancion_reproductor.TabIndex = 153;
-            this.btn_agregar_a_favoritos_cancion_reproductor.Text = "Agregar a favoritos";
-            this.btn_agregar_a_favoritos_cancion_reproductor.UseVisualStyleBackColor = true;
-            this.btn_agregar_a_favoritos_cancion_reproductor.Click += new System.EventHandler(this.btn_agregar_a_favoritos_cancion_reproductor_Click);
-            // 
-            // cantante_cancion_reproductor
-            // 
-            this.cantante_cancion_reproductor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cantante_cancion_reproductor.Location = new System.Drawing.Point(195, 82);
-            this.cantante_cancion_reproductor.Name = "cantante_cancion_reproductor";
-            this.cantante_cancion_reproductor.ReadOnly = true;
-            this.cantante_cancion_reproductor.Size = new System.Drawing.Size(197, 26);
-            this.cantante_cancion_reproductor.TabIndex = 152;
-            this.cantante_cancion_reproductor.TextChanged += new System.EventHandler(this.cantante_cancion_reproductor_TextChanged);
-            // 
-            // compositor_cancion_reproductor
-            // 
-            this.compositor_cancion_reproductor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.compositor_cancion_reproductor.Location = new System.Drawing.Point(196, 132);
-            this.compositor_cancion_reproductor.Name = "compositor_cancion_reproductor";
-            this.compositor_cancion_reproductor.ReadOnly = true;
-            this.compositor_cancion_reproductor.Size = new System.Drawing.Size(197, 26);
-            this.compositor_cancion_reproductor.TabIndex = 151;
-            // 
-            // album_cancion_reproductor
-            // 
-            this.album_cancion_reproductor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.album_cancion_reproductor.Location = new System.Drawing.Point(196, 182);
-            this.album_cancion_reproductor.Name = "album_cancion_reproductor";
-            this.album_cancion_reproductor.ReadOnly = true;
-            this.album_cancion_reproductor.Size = new System.Drawing.Size(197, 26);
-            this.album_cancion_reproductor.TabIndex = 150;
-            // 
-            // genero_cancion_reproductor
-            // 
-            this.genero_cancion_reproductor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.genero_cancion_reproductor.Location = new System.Drawing.Point(196, 230);
-            this.genero_cancion_reproductor.Name = "genero_cancion_reproductor";
-            this.genero_cancion_reproductor.ReadOnly = true;
-            this.genero_cancion_reproductor.Size = new System.Drawing.Size(197, 26);
-            this.genero_cancion_reproductor.TabIndex = 149;
-            // 
-            // calificacion_cancion_reproductor
-            // 
-            this.calificacion_cancion_reproductor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.calificacion_cancion_reproductor.Location = new System.Drawing.Point(196, 280);
-            this.calificacion_cancion_reproductor.Name = "calificacion_cancion_reproductor";
-            this.calificacion_cancion_reproductor.ReadOnly = true;
-            this.calificacion_cancion_reproductor.Size = new System.Drawing.Size(197, 26);
-            this.calificacion_cancion_reproductor.TabIndex = 148;
-            // 
-            // reproducciones_cancion_reproductor
-            // 
-            this.reproducciones_cancion_reproductor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reproducciones_cancion_reproductor.Location = new System.Drawing.Point(196, 333);
-            this.reproducciones_cancion_reproductor.Name = "reproducciones_cancion_reproductor";
-            this.reproducciones_cancion_reproductor.ReadOnly = true;
-            this.reproducciones_cancion_reproductor.Size = new System.Drawing.Size(197, 26);
-            this.reproducciones_cancion_reproductor.TabIndex = 147;
-            // 
-            // nombrecancion_cancion_reproductor
-            // 
-            this.nombrecancion_cancion_reproductor.AutoSize = true;
-            this.nombrecancion_cancion_reproductor.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.nombrecancion_cancion_reproductor.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nombrecancion_cancion_reproductor.ForeColor = System.Drawing.Color.DarkKhaki;
-            this.nombrecancion_cancion_reproductor.Location = new System.Drawing.Point(315, 15);
-            this.nombrecancion_cancion_reproductor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.nombrecancion_cancion_reproductor.Name = "nombrecancion_cancion_reproductor";
-            this.nombrecancion_cancion_reproductor.Size = new System.Drawing.Size(261, 45);
-            this.nombrecancion_cancion_reproductor.TabIndex = 146;
-            this.nombrecancion_cancion_reproductor.Text = "Nombre Cancion";
-            // 
-            // axWindowsMediaPlayer2
-            // 
-            this.axWindowsMediaPlayer2.Enabled = true;
-            this.axWindowsMediaPlayer2.Location = new System.Drawing.Point(3, 383);
-            this.axWindowsMediaPlayer2.Name = "axWindowsMediaPlayer2";
-            this.axWindowsMediaPlayer2.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer2.OcxState")));
-            this.axWindowsMediaPlayer2.Size = new System.Drawing.Size(940, 93);
-            this.axWindowsMediaPlayer2.TabIndex = 145;
-            this.axWindowsMediaPlayer2.Enter += new System.EventHandler(this.axWindowsMediaPlayer2_Enter);
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.BackColor = System.Drawing.Color.Black;
-            this.label20.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.Tomato;
-            this.label20.Location = new System.Drawing.Point(18, 222);
-            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(83, 30);
-            this.label20.TabIndex = 136;
-            this.label20.Text = "Genero";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.BackColor = System.Drawing.Color.Black;
-            this.label19.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.Tomato;
-            this.label19.Location = new System.Drawing.Point(18, 331);
-            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(165, 30);
-            this.label19.TabIndex = 135;
-            this.label19.Text = "Reproducciones";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.BackColor = System.Drawing.Color.Black;
-            this.label18.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.Tomato;
-            this.label18.Location = new System.Drawing.Point(18, 177);
-            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(73, 30);
-            this.label18.TabIndex = 134;
-            this.label18.Text = "Album";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Black;
-            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Tomato;
-            this.label2.Location = new System.Drawing.Point(18, 276);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(129, 30);
-            this.label2.TabIndex = 133;
-            this.label2.Text = "Calificacion";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.Black;
-            this.label16.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.Tomato;
-            this.label16.Location = new System.Drawing.Point(18, 128);
-            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(122, 30);
-            this.label16.TabIndex = 132;
-            this.label16.Text = "Compositor";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Black;
-            this.label15.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.Tomato;
-            this.label15.Location = new System.Drawing.Point(18, 78);
-            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(104, 30);
-            this.label15.TabIndex = 130;
-            this.label15.Text = "Cantante";
-            // 
-            // btn_atras_cancion_reproductor
-            // 
-            this.btn_atras_cancion_reproductor.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_atras_cancion_reproductor.Location = new System.Drawing.Point(854, 12);
-            this.btn_atras_cancion_reproductor.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_atras_cancion_reproductor.Name = "btn_atras_cancion_reproductor";
-            this.btn_atras_cancion_reproductor.Size = new System.Drawing.Size(71, 35);
-            this.btn_atras_cancion_reproductor.TabIndex = 126;
-            this.btn_atras_cancion_reproductor.Text = "Atras";
-            this.btn_atras_cancion_reproductor.UseVisualStyleBackColor = true;
-            this.btn_atras_cancion_reproductor.Click += new System.EventHandler(this.button2_Click);
+            this.colum_artista.HeaderText = "Artista";
+            this.colum_artista.MinimumWidth = 6;
+            this.colum_artista.Name = "colum_artista";
+            this.colum_artista.ReadOnly = true;
             // 
             // panel_busqueda_multiple
             // 
@@ -2455,194 +2689,6 @@
             this.criterio_txt_combobox1.TabIndex = 75;
             this.criterio_txt_combobox1.TextChanged += new System.EventHandler(this.criterio_txt_combobox1_TextChanged);
             // 
-            // panel_busqueda_simple
-            // 
-            this.panel_busqueda_simple.Controls.Add(this.busquedasimple_valor_criterio_desplegable);
-            this.panel_busqueda_simple.Controls.Add(this.label13);
-            this.panel_busqueda_simple.Controls.Add(this.label14);
-            this.panel_busqueda_simple.Controls.Add(this.textBox2);
-            this.panel_busqueda_simple.Controls.Add(this.busquedasimple_criterio_text);
-            this.panel_busqueda_simple.Controls.Add(this.busaquedasimple_valor_criterio_text);
-            this.panel_busqueda_simple.Controls.Add(this.btn_buscar_busqueda_simple);
-            this.panel_busqueda_simple.Controls.Add(this.label12);
-            this.panel_busqueda_simple.Controls.Add(this.btn_atras_busquedasimple);
-            this.panel_busqueda_simple.Controls.Add(this.datagratview_busquedasimple);
-            this.panel_busqueda_simple.Location = new System.Drawing.Point(406, 74);
-            this.panel_busqueda_simple.Name = "panel_busqueda_simple";
-            this.panel_busqueda_simple.Size = new System.Drawing.Size(25, 23);
-            this.panel_busqueda_simple.TabIndex = 76;
-            this.panel_busqueda_simple.Visible = false;
-            // 
-            // busquedasimple_valor_criterio_desplegable
-            // 
-            this.busquedasimple_valor_criterio_desplegable.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.busquedasimple_valor_criterio_desplegable.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.busquedasimple_valor_criterio_desplegable.FormattingEnabled = true;
-            this.busquedasimple_valor_criterio_desplegable.Location = new System.Drawing.Point(360, 160);
-            this.busquedasimple_valor_criterio_desplegable.Name = "busquedasimple_valor_criterio_desplegable";
-            this.busquedasimple_valor_criterio_desplegable.Size = new System.Drawing.Size(346, 37);
-            this.busquedasimple_valor_criterio_desplegable.TabIndex = 125;
-            this.busquedasimple_valor_criterio_desplegable.SelectedIndexChanged += new System.EventHandler(this.busquedasimple_valor_criterio_desplegable_SelectedIndexChanged);
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Black;
-            this.label13.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label13.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(39, 154);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(184, 40);
-            this.label13.TabIndex = 124;
-            this.label13.Text = "Palabra Clave";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Black;
-            this.label14.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label14.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(39, 97);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(283, 40);
-            this.label14.TabIndex = 123;
-            this.label14.Text = "Criterio de Busqueda";
-            // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.Color.Maroon;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Arial", 1.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(26, 208);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(900, 3);
-            this.textBox2.TabIndex = 120;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            // 
-            // busquedasimple_criterio_text
-            // 
-            this.busquedasimple_criterio_text.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.busquedasimple_criterio_text.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.busquedasimple_criterio_text.FormattingEnabled = true;
-            this.busquedasimple_criterio_text.Items.AddRange(new object[] {
-            "Nombre Cancion",
-            "Nombre Pelicula",
-            "Genero Cancion",
-            "Genero Video",
-            "Categoria Pelicula",
-            "Cantante",
-            "Compositor",
-            "Director",
-            "Actor",
-            "Album",
-            "Disquera",
-            "Film Studio",
-            "Año de Publicacion",
-            "Edad del Artista",
-            "Sexo del Artista",
-            "Evaluacion",
-            "Calidad/Resolucion"});
-            this.busquedasimple_criterio_text.Location = new System.Drawing.Point(360, 101);
-            this.busquedasimple_criterio_text.Name = "busquedasimple_criterio_text";
-            this.busquedasimple_criterio_text.Size = new System.Drawing.Size(346, 37);
-            this.busquedasimple_criterio_text.TabIndex = 117;
-            this.busquedasimple_criterio_text.SelectedIndexChanged += new System.EventHandler(this.busquedasimple_criterio_text_SelectedIndexChanged);
-            this.busquedasimple_criterio_text.SelectedValueChanged += new System.EventHandler(this.busquedasimple_criterio_text_SelectedValueChanged);
-            // 
-            // busaquedasimple_valor_criterio_text
-            // 
-            this.busaquedasimple_valor_criterio_text.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.busaquedasimple_valor_criterio_text.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.busaquedasimple_valor_criterio_text.Location = new System.Drawing.Point(360, 160);
-            this.busaquedasimple_valor_criterio_text.Margin = new System.Windows.Forms.Padding(2);
-            this.busaquedasimple_valor_criterio_text.Name = "busaquedasimple_valor_criterio_text";
-            this.busaquedasimple_valor_criterio_text.Size = new System.Drawing.Size(346, 37);
-            this.busaquedasimple_valor_criterio_text.TabIndex = 116;
-            this.busaquedasimple_valor_criterio_text.TextChanged += new System.EventHandler(this.busaquedasimple_valor_criterio_text_TextChanged);
-            // 
-            // btn_buscar_busqueda_simple
-            // 
-            this.btn_buscar_busqueda_simple.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_buscar_busqueda_simple.Location = new System.Drawing.Point(749, 111);
-            this.btn_buscar_busqueda_simple.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_buscar_busqueda_simple.Name = "btn_buscar_busqueda_simple";
-            this.btn_buscar_busqueda_simple.Size = new System.Drawing.Size(158, 59);
-            this.btn_buscar_busqueda_simple.TabIndex = 115;
-            this.btn_buscar_busqueda_simple.Text = "Buscar";
-            this.btn_buscar_busqueda_simple.UseVisualStyleBackColor = true;
-            this.btn_buscar_busqueda_simple.Click += new System.EventHandler(this.btn_buscar_busqueda_simple_Click);
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Maroon;
-            this.label12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label12.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(344, 15);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(278, 47);
-            this.label12.TabIndex = 102;
-            this.label12.Text = "Busqueda Simple";
-            // 
-            // btn_atras_busquedasimple
-            // 
-            this.btn_atras_busquedasimple.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_atras_busquedasimple.Location = new System.Drawing.Point(854, 14);
-            this.btn_atras_busquedasimple.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_atras_busquedasimple.Name = "btn_atras_busquedasimple";
-            this.btn_atras_busquedasimple.Size = new System.Drawing.Size(71, 35);
-            this.btn_atras_busquedasimple.TabIndex = 74;
-            this.btn_atras_busquedasimple.Text = "Atras";
-            this.btn_atras_busquedasimple.UseVisualStyleBackColor = true;
-            this.btn_atras_busquedasimple.Click += new System.EventHandler(this.btn_atras_busquedasimple_Click);
-            // 
-            // datagratview_busquedasimple
-            // 
-            this.datagratview_busquedasimple.AllowUserToAddRows = false;
-            this.datagratview_busquedasimple.AllowUserToDeleteRows = false;
-            this.datagratview_busquedasimple.AllowUserToResizeColumns = false;
-            this.datagratview_busquedasimple.AllowUserToResizeRows = false;
-            this.datagratview_busquedasimple.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.datagratview_busquedasimple.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.datagratview_busquedasimple.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.datagratview_busquedasimple.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colum_nombre,
-            this.colum_artista});
-            this.datagratview_busquedasimple.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.datagratview_busquedasimple.Location = new System.Drawing.Point(26, 216);
-            this.datagratview_busquedasimple.MultiSelect = false;
-            this.datagratview_busquedasimple.Name = "datagratview_busquedasimple";
-            this.datagratview_busquedasimple.ReadOnly = true;
-            this.datagratview_busquedasimple.RowHeadersVisible = false;
-            this.datagratview_busquedasimple.RowHeadersWidth = 51;
-            this.datagratview_busquedasimple.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.datagratview_busquedasimple.Size = new System.Drawing.Size(899, 266);
-            this.datagratview_busquedasimple.TabIndex = 121;
-            this.datagratview_busquedasimple.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            this.datagratview_busquedasimple.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagratview_busquedasimple_CellContentDoubleClick);
-            this.datagratview_busquedasimple.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagratview_busquedasimple_CellDoubleClick);
-            // 
-            // colum_nombre
-            // 
-            this.colum_nombre.HeaderText = "Nombre";
-            this.colum_nombre.MinimumWidth = 6;
-            this.colum_nombre.Name = "colum_nombre";
-            this.colum_nombre.ReadOnly = true;
-            // 
-            // colum_artista
-            // 
-            this.colum_artista.HeaderText = "Artista";
-            this.colum_artista.MinimumWidth = 6;
-            this.colum_artista.Name = "colum_artista";
-            this.colum_artista.ReadOnly = true;
-            // 
             // btn_atras_de_inicio_sesion
             // 
             this.btn_atras_de_inicio_sesion.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2688,6 +2734,7 @@
             // 
             // panel_listainteligente_menu
             // 
+            this.panel_listainteligente_menu.Controls.Add(this.valor_criterio_smartlist_desplegable);
             this.panel_listainteligente_menu.Controls.Add(this.label38);
             this.panel_listainteligente_menu.Controls.Add(this.tabla_canciones_smartlist);
             this.panel_listainteligente_menu.Controls.Add(this.label48);
@@ -2696,12 +2743,97 @@
             this.panel_listainteligente_menu.Controls.Add(this.btn_aplicar_criterios_smartlist);
             this.panel_listainteligente_menu.Controls.Add(this.label49);
             this.panel_listainteligente_menu.Controls.Add(this.btn_atras_listainteligente_menu);
-            this.panel_listainteligente_menu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_listainteligente_menu.Location = new System.Drawing.Point(0, 24);
+            this.panel_listainteligente_menu.Location = new System.Drawing.Point(840, 379);
             this.panel_listainteligente_menu.Name = "panel_listainteligente_menu";
-            this.panel_listainteligente_menu.Size = new System.Drawing.Size(946, 488);
+            this.panel_listainteligente_menu.Size = new System.Drawing.Size(20, 16);
             this.panel_listainteligente_menu.TabIndex = 54;
             this.panel_listainteligente_menu.Visible = false;
+            // 
+            // valor_criterio_smartlist_desplegable
+            // 
+            this.valor_criterio_smartlist_desplegable.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.valor_criterio_smartlist_desplegable.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.valor_criterio_smartlist_desplegable.FormattingEnabled = true;
+            this.valor_criterio_smartlist_desplegable.Items.AddRange(new object[] {
+            "Nombre Cancion",
+            "Nombre Pelicula",
+            "Genero Cancion",
+            "Genero Video",
+            "Categoria Pelicula",
+            "Cantante",
+            "Compositor",
+            "Director",
+            "Actor",
+            "Album",
+            "Disquera",
+            "Film Studio",
+            "Año de Publicacion",
+            "Edad del Artista",
+            "Sexo del Artista",
+            "Evaluacion",
+            "Calidad/Resolucion"});
+            this.valor_criterio_smartlist_desplegable.Location = new System.Drawing.Point(447, 111);
+            this.valor_criterio_smartlist_desplegable.Name = "valor_criterio_smartlist_desplegable";
+            this.valor_criterio_smartlist_desplegable.Size = new System.Drawing.Size(262, 37);
+            this.valor_criterio_smartlist_desplegable.TabIndex = 142;
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.BackColor = System.Drawing.Color.Black;
+            this.label38.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label38.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label38.ForeColor = System.Drawing.Color.Chocolate;
+            this.label38.Location = new System.Drawing.Point(494, 14);
+            this.label38.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(91, 21);
+            this.label38.TabIndex = 141;
+            this.label38.Text = "Version Beta";
+            // 
+            // tabla_canciones_smartlist
+            // 
+            this.tabla_canciones_smartlist.AllowUserToAddRows = false;
+            this.tabla_canciones_smartlist.AllowUserToDeleteRows = false;
+            this.tabla_canciones_smartlist.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.tabla_canciones_smartlist.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tabla_canciones_smartlist.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn14,
+            this.dataGridViewTextBoxColumn15,
+            this.dataGridViewTextBoxColumn16,
+            this.dataGridViewTextBoxColumn17});
+            this.tabla_canciones_smartlist.Location = new System.Drawing.Point(25, 164);
+            this.tabla_canciones_smartlist.Name = "tabla_canciones_smartlist";
+            this.tabla_canciones_smartlist.ReadOnly = true;
+            this.tabla_canciones_smartlist.RowHeadersVisible = false;
+            this.tabla_canciones_smartlist.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.tabla_canciones_smartlist.Size = new System.Drawing.Size(900, 312);
+            this.tabla_canciones_smartlist.TabIndex = 140;
+            this.tabla_canciones_smartlist.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabla_canciones_smartlist_CellDoubleClick);
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.HeaderText = "Nombre";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridViewTextBoxColumn14.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.HeaderText = "Cantante";
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            this.dataGridViewTextBoxColumn15.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            this.dataGridViewTextBoxColumn16.HeaderText = "Compositor";
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            this.dataGridViewTextBoxColumn16.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn17
+            // 
+            this.dataGridViewTextBoxColumn17.HeaderText = "Album";
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            this.dataGridViewTextBoxColumn17.ReadOnly = true;
             // 
             // label48
             // 
@@ -2716,6 +2848,25 @@
             this.label48.Size = new System.Drawing.Size(119, 40);
             this.label48.TabIndex = 139;
             this.label48.Text = "Criterio";
+            // 
+            // comboBox_criterio_smart_list
+            // 
+            this.comboBox_criterio_smart_list.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.comboBox_criterio_smart_list.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox_criterio_smart_list.FormattingEnabled = true;
+            this.comboBox_criterio_smart_list.Items.AddRange(new object[] {
+            "Nombre Cancion",
+            "Genero Cancion",
+            "Cantante",
+            "Compositor",
+            "Album",
+            "Disquera",
+            "Año de Publicacion"});
+            this.comboBox_criterio_smart_list.Location = new System.Drawing.Point(161, 110);
+            this.comboBox_criterio_smart_list.Name = "comboBox_criterio_smart_list";
+            this.comboBox_criterio_smart_list.Size = new System.Drawing.Size(262, 37);
+            this.comboBox_criterio_smart_list.TabIndex = 138;
+            this.comboBox_criterio_smart_list.SelectedIndexChanged += new System.EventHandler(this.comboBox_criterio_smart_list_SelectedIndexChanged);
             // 
             // valor_criterio_smartlist
             // 
@@ -2770,16 +2921,60 @@
             this.panel_descargas_menu.Controls.Add(this.tabla_canciones_descargadas);
             this.panel_descargas_menu.Controls.Add(this.label46);
             this.panel_descargas_menu.Controls.Add(this.btn_atras_descargas);
-            this.panel_descargas_menu.Location = new System.Drawing.Point(842, 313);
+            this.panel_descargas_menu.Location = new System.Drawing.Point(840, 320);
             this.panel_descargas_menu.Name = "panel_descargas_menu";
-            this.panel_descargas_menu.Size = new System.Drawing.Size(30, 21);
+            this.panel_descargas_menu.Size = new System.Drawing.Size(27, 22);
             this.panel_descargas_menu.TabIndex = 0;
             this.panel_descargas_menu.Visible = false;
+            // 
+            // tabla_canciones_descargadas
+            // 
+            this.tabla_canciones_descargadas.AllowUserToAddRows = false;
+            this.tabla_canciones_descargadas.AllowUserToDeleteRows = false;
+            this.tabla_canciones_descargadas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.tabla_canciones_descargadas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tabla_canciones_descargadas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column14,
+            this.Cantante,
+            this.Column15,
+            this.Album});
+            this.tabla_canciones_descargadas.Location = new System.Drawing.Point(17, 90);
+            this.tabla_canciones_descargadas.Name = "tabla_canciones_descargadas";
+            this.tabla_canciones_descargadas.ReadOnly = true;
+            this.tabla_canciones_descargadas.RowHeadersVisible = false;
+            this.tabla_canciones_descargadas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.tabla_canciones_descargadas.Size = new System.Drawing.Size(910, 387);
+            this.tabla_canciones_descargadas.TabIndex = 136;
+            this.tabla_canciones_descargadas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabla_canciones_descargadas_CellDoubleClick);
+            // 
+            // Column14
+            // 
+            this.Column14.HeaderText = "Nombre";
+            this.Column14.Name = "Column14";
+            this.Column14.ReadOnly = true;
+            // 
+            // Cantante
+            // 
+            this.Cantante.HeaderText = "Cantante";
+            this.Cantante.Name = "Cantante";
+            this.Cantante.ReadOnly = true;
+            // 
+            // Column15
+            // 
+            this.Column15.HeaderText = "Compositor";
+            this.Column15.Name = "Column15";
+            this.Column15.ReadOnly = true;
+            // 
+            // Album
+            // 
+            this.Album.HeaderText = "Album";
+            this.Album.Name = "Album";
+            this.Album.ReadOnly = true;
             // 
             // label46
             // 
             this.label46.AutoSize = true;
-            this.label46.BackColor = System.Drawing.Color.Maroon;
+            this.label46.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.label46.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label46.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label46.ForeColor = System.Drawing.Color.White;
@@ -2912,11 +3107,12 @@
             // 
             this.panel_karaoke_menu.Controls.Add(this.panel_rep_karaoke);
             this.panel_karaoke_menu.Controls.Add(this.tabla_canciones_karaoke);
-            this.panel_karaoke_menu.Controls.Add(this.label40);
             this.panel_karaoke_menu.Controls.Add(this.btn_atras_karaoke);
-            this.panel_karaoke_menu.Location = new System.Drawing.Point(844, 192);
+            this.panel_karaoke_menu.Controls.Add(this.label39);
+            this.panel_karaoke_menu.Controls.Add(this.label40);
+            this.panel_karaoke_menu.Location = new System.Drawing.Point(840, 188);
             this.panel_karaoke_menu.Name = "panel_karaoke_menu";
-            this.panel_karaoke_menu.Size = new System.Drawing.Size(25, 23);
+            this.panel_karaoke_menu.Size = new System.Drawing.Size(27, 21);
             this.panel_karaoke_menu.TabIndex = 0;
             this.panel_karaoke_menu.Visible = false;
             // 
@@ -2924,18 +3120,14 @@
             // 
             this.panel_rep_karaoke.Controls.Add(this.label66);
             this.panel_rep_karaoke.Controls.Add(this.btn_atras_rep_karaoke);
-            this.panel_rep_karaoke.Controls.Add(this.button10);
-            this.panel_rep_karaoke.Controls.Add(this.button11);
             this.panel_rep_karaoke.Controls.Add(this.nombrevideo_karaoke);
-            this.panel_rep_karaoke.Controls.Add(this.button12);
             this.panel_rep_karaoke.Controls.Add(this.label76);
             this.panel_rep_karaoke.Controls.Add(this.nombrecantante_karaoke);
             this.panel_rep_karaoke.Controls.Add(this.axWindowsMediaPlayer3);
-            this.panel_rep_karaoke.Location = new System.Drawing.Point(813, 123);
+            this.panel_rep_karaoke.Location = new System.Drawing.Point(727, 40);
             this.panel_rep_karaoke.Name = "panel_rep_karaoke";
             this.panel_rep_karaoke.Size = new System.Drawing.Size(30, 13);
             this.panel_rep_karaoke.TabIndex = 142;
-            this.panel_rep_karaoke.Visible = false;
             // 
             // label66
             // 
@@ -2953,39 +3145,14 @@
             // btn_atras_rep_karaoke
             // 
             this.btn_atras_rep_karaoke.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_atras_rep_karaoke.Location = new System.Drawing.Point(858, 14);
+            this.btn_atras_rep_karaoke.Location = new System.Drawing.Point(859, 15);
             this.btn_atras_rep_karaoke.Margin = new System.Windows.Forms.Padding(2);
             this.btn_atras_rep_karaoke.Name = "btn_atras_rep_karaoke";
             this.btn_atras_rep_karaoke.Size = new System.Drawing.Size(72, 31);
             this.btn_atras_rep_karaoke.TabIndex = 55;
             this.btn_atras_rep_karaoke.Text = "Atrás";
             this.btn_atras_rep_karaoke.UseVisualStyleBackColor = true;
-            this.btn_atras_rep_karaoke.Visible = false;
             this.btn_atras_rep_karaoke.Click += new System.EventHandler(this.btn_atras_rep_karaoke_Click);
-            // 
-            // button10
-            // 
-            this.button10.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.Location = new System.Drawing.Point(858, 14);
-            this.button10.Margin = new System.Windows.Forms.Padding(2);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(72, 31);
-            this.button10.TabIndex = 54;
-            this.button10.Text = "Atrás";
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Visible = false;
-            // 
-            // button11
-            // 
-            this.button11.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.Location = new System.Drawing.Point(858, 14);
-            this.button11.Margin = new System.Windows.Forms.Padding(2);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(72, 31);
-            this.button11.TabIndex = 53;
-            this.button11.Text = "Atrás";
-            this.button11.UseVisualStyleBackColor = true;
-            this.button11.Visible = false;
             // 
             // nombrevideo_karaoke
             // 
@@ -2999,17 +3166,6 @@
             this.nombrevideo_karaoke.Size = new System.Drawing.Size(234, 45);
             this.nombrevideo_karaoke.TabIndex = 50;
             this.nombrevideo_karaoke.Text = "Nombre Video";
-            // 
-            // button12
-            // 
-            this.button12.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button12.Location = new System.Drawing.Point(858, 14);
-            this.button12.Margin = new System.Windows.Forms.Padding(2);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(72, 31);
-            this.button12.TabIndex = 49;
-            this.button12.Text = "Atrás";
-            this.button12.UseVisualStyleBackColor = true;
             // 
             // label76
             // 
@@ -3040,7 +3196,7 @@
             this.axWindowsMediaPlayer3.Location = new System.Drawing.Point(15, 77);
             this.axWindowsMediaPlayer3.Margin = new System.Windows.Forms.Padding(2);
             this.axWindowsMediaPlayer3.Name = "axWindowsMediaPlayer3";
-            this.axWindowsMediaPlayer3.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer3.OcxState")));
+            //this.axWindowsMediaPlayer3.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer3.OcxState")));
             this.axWindowsMediaPlayer3.Size = new System.Drawing.Size(920, 400);
             this.axWindowsMediaPlayer3.TabIndex = 31;
             // 
@@ -3081,6 +3237,32 @@
             this.Column13.Name = "Column13";
             this.Column13.ReadOnly = true;
             // 
+            // btn_atras_karaoke
+            // 
+            this.btn_atras_karaoke.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_atras_karaoke.Location = new System.Drawing.Point(852, 27);
+            this.btn_atras_karaoke.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_atras_karaoke.Name = "btn_atras_karaoke";
+            this.btn_atras_karaoke.Size = new System.Drawing.Size(71, 35);
+            this.btn_atras_karaoke.TabIndex = 134;
+            this.btn_atras_karaoke.Text = "Atras";
+            this.btn_atras_karaoke.UseVisualStyleBackColor = true;
+            this.btn_atras_karaoke.Click += new System.EventHandler(this.btn_atras_karaoke_Click);
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.BackColor = System.Drawing.Color.Black;
+            this.label39.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label39.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.ForeColor = System.Drawing.Color.Red;
+            this.label39.Location = new System.Drawing.Point(471, 15);
+            this.label39.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(91, 21);
+            this.label39.TabIndex = 144;
+            this.label39.Text = "Version Beta";
+            // 
             // label40
             // 
             this.label40.AutoSize = true;
@@ -3094,18 +3276,6 @@
             this.label40.Size = new System.Drawing.Size(174, 47);
             this.label40.TabIndex = 135;
             this.label40.Text = "KARAOKE";
-            // 
-            // btn_atras_karaoke
-            // 
-            this.btn_atras_karaoke.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_atras_karaoke.Location = new System.Drawing.Point(852, 27);
-            this.btn_atras_karaoke.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_atras_karaoke.Name = "btn_atras_karaoke";
-            this.btn_atras_karaoke.Size = new System.Drawing.Size(71, 35);
-            this.btn_atras_karaoke.TabIndex = 134;
-            this.btn_atras_karaoke.Text = "Atras";
-            this.btn_atras_karaoke.UseVisualStyleBackColor = true;
-            this.btn_atras_karaoke.Click += new System.EventHandler(this.btn_atras_karaoke_Click);
             // 
             // panel_social_menu
             // 
@@ -4010,9 +4180,9 @@
             this.panel_playlist_usuario.Controls.Add(this.btn_crear_playplist);
             this.panel_playlist_usuario.Controls.Add(this.label29);
             this.panel_playlist_usuario.Controls.Add(this.button2);
-            this.panel_playlist_usuario.Location = new System.Drawing.Point(540, 252);
+            this.panel_playlist_usuario.Location = new System.Drawing.Point(548, 257);
             this.panel_playlist_usuario.Name = "panel_playlist_usuario";
-            this.panel_playlist_usuario.Size = new System.Drawing.Size(30, 23);
+            this.panel_playlist_usuario.Size = new System.Drawing.Size(19, 18);
             this.panel_playlist_usuario.TabIndex = 0;
             this.panel_playlist_usuario.Visible = false;
             this.panel_playlist_usuario.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_playlist_usuario_Paint);
@@ -4024,9 +4194,9 @@
             this.panel_ver_una_playlist.Controls.Add(this.verplaylist_nombre_playlist);
             this.panel_ver_una_playlist.Controls.Add(this.label61);
             this.panel_ver_una_playlist.Controls.Add(this.btn_atras_ver_playlist);
-            this.panel_ver_una_playlist.Location = new System.Drawing.Point(240, 210);
+            this.panel_ver_una_playlist.Location = new System.Drawing.Point(514, 210);
             this.panel_ver_una_playlist.Name = "panel_ver_una_playlist";
-            this.panel_ver_una_playlist.Size = new System.Drawing.Size(30, 23);
+            this.panel_ver_una_playlist.Size = new System.Drawing.Size(36, 30);
             this.panel_ver_una_playlist.TabIndex = 136;
             this.panel_ver_una_playlist.Visible = false;
             // 
@@ -4279,7 +4449,7 @@
             this.axWindowsMediaPlayer1.Enabled = true;
             this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(15, 247);
             this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
-            this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
+            //this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
             this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(263, 193);
             this.axWindowsMediaPlayer1.TabIndex = 57;
             this.axWindowsMediaPlayer1.Enter += new System.EventHandler(this.axWindowsMediaPlayer1_Enter);
@@ -4296,134 +4466,6 @@
             this.donde_quedaste_nombre.TabIndex = 58;
             this.donde_quedaste_nombre.Text = "nombre";
             // 
-            // tabla_canciones_descargadas
-            // 
-            this.tabla_canciones_descargadas.AllowUserToAddRows = false;
-            this.tabla_canciones_descargadas.AllowUserToDeleteRows = false;
-            this.tabla_canciones_descargadas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.tabla_canciones_descargadas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tabla_canciones_descargadas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column14,
-            this.Cantante,
-            this.Column15,
-            this.Album});
-            this.tabla_canciones_descargadas.Location = new System.Drawing.Point(17, 90);
-            this.tabla_canciones_descargadas.Name = "tabla_canciones_descargadas";
-            this.tabla_canciones_descargadas.ReadOnly = true;
-            this.tabla_canciones_descargadas.RowHeadersVisible = false;
-            this.tabla_canciones_descargadas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.tabla_canciones_descargadas.Size = new System.Drawing.Size(910, 387);
-            this.tabla_canciones_descargadas.TabIndex = 136;
-            // 
-            // Column14
-            // 
-            this.Column14.HeaderText = "Nombre";
-            this.Column14.Name = "Column14";
-            this.Column14.ReadOnly = true;
-            // 
-            // Cantante
-            // 
-            this.Cantante.HeaderText = "Cantante";
-            this.Cantante.Name = "Cantante";
-            this.Cantante.ReadOnly = true;
-            // 
-            // Column15
-            // 
-            this.Column15.HeaderText = "Compositor";
-            this.Column15.Name = "Column15";
-            this.Column15.ReadOnly = true;
-            // 
-            // Album
-            // 
-            this.Album.HeaderText = "Album";
-            this.Album.Name = "Album";
-            this.Album.ReadOnly = true;
-            // 
-            // comboBox_criterio_smart_list
-            // 
-            this.comboBox_criterio_smart_list.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.comboBox_criterio_smart_list.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox_criterio_smart_list.FormattingEnabled = true;
-            this.comboBox_criterio_smart_list.Items.AddRange(new object[] {
-            "Nombre Cancion",
-            "Nombre Pelicula",
-            "Genero Cancion",
-            "Genero Video",
-            "Categoria Pelicula",
-            "Cantante",
-            "Compositor",
-            "Director",
-            "Actor",
-            "Album",
-            "Disquera",
-            "Film Studio",
-            "Año de Publicacion",
-            "Edad del Artista",
-            "Sexo del Artista",
-            "Evaluacion",
-            "Calidad/Resolucion"});
-            this.comboBox_criterio_smart_list.Location = new System.Drawing.Point(161, 110);
-            this.comboBox_criterio_smart_list.Name = "comboBox_criterio_smart_list";
-            this.comboBox_criterio_smart_list.Size = new System.Drawing.Size(262, 37);
-            this.comboBox_criterio_smart_list.TabIndex = 138;
-            // 
-            // tabla_canciones_smartlist
-            // 
-            this.tabla_canciones_smartlist.AllowUserToAddRows = false;
-            this.tabla_canciones_smartlist.AllowUserToDeleteRows = false;
-            this.tabla_canciones_smartlist.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.tabla_canciones_smartlist.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tabla_canciones_smartlist.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn14,
-            this.dataGridViewTextBoxColumn15,
-            this.dataGridViewTextBoxColumn16,
-            this.dataGridViewTextBoxColumn17});
-            this.tabla_canciones_smartlist.Location = new System.Drawing.Point(25, 164);
-            this.tabla_canciones_smartlist.Name = "tabla_canciones_smartlist";
-            this.tabla_canciones_smartlist.ReadOnly = true;
-            this.tabla_canciones_smartlist.RowHeadersVisible = false;
-            this.tabla_canciones_smartlist.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.tabla_canciones_smartlist.Size = new System.Drawing.Size(900, 312);
-            this.tabla_canciones_smartlist.TabIndex = 140;
-            // 
-            // dataGridViewTextBoxColumn14
-            // 
-            this.dataGridViewTextBoxColumn14.HeaderText = "Nombre";
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            this.dataGridViewTextBoxColumn14.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn15
-            // 
-            this.dataGridViewTextBoxColumn15.HeaderText = "Cantante";
-            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
-            this.dataGridViewTextBoxColumn15.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn16
-            // 
-            this.dataGridViewTextBoxColumn16.HeaderText = "Compositor";
-            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
-            this.dataGridViewTextBoxColumn16.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn17
-            // 
-            this.dataGridViewTextBoxColumn17.HeaderText = "Album";
-            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
-            this.dataGridViewTextBoxColumn17.ReadOnly = true;
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.BackColor = System.Drawing.Color.Black;
-            this.label38.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label38.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label38.ForeColor = System.Drawing.Color.Chocolate;
-            this.label38.Location = new System.Drawing.Point(494, 14);
-            this.label38.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(91, 21);
-            this.label38.TabIndex = 141;
-            this.label38.Text = "Version Beta";
-            // 
             // ALAINID
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -4432,14 +4474,14 @@
             this.ClientSize = new System.Drawing.Size(946, 512);
             this.Controls.Add(this.panel_listainteligente_menu);
             this.Controls.Add(this.panel_descargas_menu);
-            this.Controls.Add(this.panel_playlist_usuario);
-            this.Controls.Add(this.Panel_premium);
             this.Controls.Add(this.panel_buscar);
             this.Controls.Add(this.panel_karaoke_menu);
             this.Controls.Add(this.panel_favoritos_menu);
+            this.Controls.Add(this.panel_playlist_usuario);
+            this.Controls.Add(this.panel_historial_menu);
+            this.Controls.Add(this.Panel_premium);
             this.Controls.Add(this.panel_social_menu);
             this.Controls.Add(this.panel_perfil_de_usuario);
-            this.Controls.Add(this.panel_historial_menu);
             this.Controls.Add(this.BtnListaInteligente);
             this.Controls.Add(this.btnDescargas);
             this.Controls.Add(this.btnHistorial);
@@ -4469,29 +4511,31 @@
             this.Panel_premium.ResumeLayout(false);
             this.Panel_premium.PerformLayout();
             this.panel_buscar.ResumeLayout(false);
+            this.panel_cancion_seleccionada_busqueda_simple.ResumeLayout(false);
+            this.panel_cancion_seleccionada_busqueda_simple.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tabla_canciones_cola_cancion_reproductor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.calificacion_cancion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer2)).EndInit();
             this.panel_video_seleccionado.ResumeLayout(false);
             this.panel_video_seleccionado.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabla_nombre_actores_reprod_video)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.calificacion_video)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayerVideo)).EndInit();
-            this.panel_cancion_seleccionada_busqueda_simple.ResumeLayout(false);
-            this.panel_cancion_seleccionada_busqueda_simple.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tabla_canciones_cola_cancion_reproductor)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.calificacion_cancion)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer2)).EndInit();
+            this.panel_busqueda_simple.ResumeLayout(false);
+            this.panel_busqueda_simple.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.datagratview_busquedasimple)).EndInit();
             this.panel_busqueda_multiple.ResumeLayout(false);
             this.panel_busqueda_multiple.PerformLayout();
             this.panel_resultados_busqueda_multiple.ResumeLayout(false);
             this.panel_resultados_busqueda_multiple.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabla_resultados_busqueda_multiple)).EndInit();
-            this.panel_busqueda_simple.ResumeLayout(false);
-            this.panel_busqueda_simple.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.datagratview_busquedasimple)).EndInit();
             this.panel_listainteligente_menu.ResumeLayout(false);
             this.panel_listainteligente_menu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tabla_canciones_smartlist)).EndInit();
             this.panel_descargas_menu.ResumeLayout(false);
             this.panel_descargas_menu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tabla_canciones_descargadas)).EndInit();
             this.panel_historial_menu.ResumeLayout(false);
             this.panel_historial_menu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabla_historial_video)).EndInit();
@@ -4529,8 +4573,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.tabla_ver_playlist)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabla_playlist)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tabla_canciones_descargadas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tabla_canciones_smartlist)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -4655,7 +4697,6 @@
         private System.Windows.Forms.TextBox textBox_Año_Grabacion;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.TextBox textBox_Calificacion;
-        private System.Windows.Forms.Button btn_Atrás;
         private System.Windows.Forms.Label nombrecancion_cancion_reproductor;
         private System.Windows.Forms.Label nombre_video;
         private System.Windows.Forms.TextBox cantante_cancion_reproductor;
@@ -4807,8 +4848,6 @@
         private System.Windows.Forms.Button btn_atras_rep_cancion_en_favoritos;
         private System.Windows.Forms.Button btn_atras_rep_cancion_en_playlist;
         private System.Windows.Forms.Button btn_atras_rep_video_playlist;
-        private System.Windows.Forms.Button btn_atras_rep_video_favoritos;
-        private System.Windows.Forms.Button btn_atras_rep_video_smartlist;
         private System.Windows.Forms.Label label57;
         private System.Windows.Forms.Label label64;
         private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
@@ -4843,10 +4882,7 @@
         private System.Windows.Forms.Panel panel_rep_karaoke;
         private System.Windows.Forms.Label label66;
         private System.Windows.Forms.Button btn_atras_rep_karaoke;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Label nombrevideo_karaoke;
-        private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Label label76;
         private System.Windows.Forms.TextBox nombrecantante_karaoke;
         private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer3;
@@ -4874,5 +4910,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.ComboBox valor_criterio_smartlist_desplegable;
+        private System.Windows.Forms.Button btn_atras_rep_video_busqmultiple;
+        private System.Windows.Forms.Button btn_atras_rep_video_playlis;
+        private System.Windows.Forms.Button btn_atras_rep_video_favorito;
+        private System.Windows.Forms.Button btn_atras_rep_video_smart;
+        private System.Windows.Forms.Button btn_atras_rep_cancion_en_busqmultiple;
+        private System.Windows.Forms.Button btn_atras_rep_cancion_en_descargas;
     }
 }
