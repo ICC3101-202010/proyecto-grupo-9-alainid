@@ -1827,31 +1827,33 @@ namespace Proyecto_Forms
             //========================================================================================================================================
         }
         */
-        public static void Agregarcancionahistorial(string email, String archivo)
+       public static void Agregarcancionahistorial(string email, Song s)
         {
-            for (int i = 0; i < listausuarios.Count; i++)
+            Activar_todo();
+            int esta = 0;
+            foreach (User user in Proyecto_Forms.ALAINID.listausuarios)
             {
-                if (listausuarios[i].Email_ == email)
+                if (email.ToLower() == user.Email_.ToLower())
                 {
-                    for (int j = 0; j < todas_las_canciones.Count; j++)
-                        if (todas_las_canciones[j].Nombrearchivo == archivo)
-                        {
-                            listausuarios[i].Historial_canciones_.Add(todas_las_canciones[j]);
-                        }
+
+                    user.Historial_canciones_.Add(s);
+                    Almacenar(listausuarios);
+                   
                 }
             }
         }
-        public static void Agregarvideoahistorial(string email, string archivo)
+        public static void Agregarvideoahistorial(string email, Video v)
         {
-            for (int i = 0; i < listausuarios.Count; i++)
+            Activar_todo();
+            int esta = 0;
+            foreach (User user in Proyecto_Forms.ALAINID.listausuarios)
             {
-                if (listausuarios[i].Email_ == email)
+                if (email.ToLower() == user.Email_.ToLower())
                 {
-                    for (int j = 0; j < todos_los_videos.Count; j++)
-                        if (todos_los_videos[j].Nombrearchivovideo == archivo)
-                        {
-                            listausuarios[i].Historial_videos_.Add(todos_los_videos[j]);
-                        }
+
+                    user.Historial_videos_.Add(v);
+                    Almacenar(listausuarios);
+
                 }
             }
         }

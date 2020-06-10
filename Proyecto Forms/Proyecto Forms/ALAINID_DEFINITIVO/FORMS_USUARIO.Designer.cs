@@ -1142,9 +1142,10 @@
             this.panel_buscar.Controls.Add(this.btn_atras_de_inicio_sesion);
             this.panel_buscar.Controls.Add(this.btn_busqueda_simple);
             this.panel_buscar.Controls.Add(this.btn_busqueda_multiple);
-            this.panel_buscar.Location = new System.Drawing.Point(530, 188);
+            this.panel_buscar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_buscar.Location = new System.Drawing.Point(0, 24);
             this.panel_buscar.Name = "panel_buscar";
-            this.panel_buscar.Size = new System.Drawing.Size(36, 21);
+            this.panel_buscar.Size = new System.Drawing.Size(946, 488);
             this.panel_buscar.TabIndex = 53;
             this.panel_buscar.Visible = false;
             // 
@@ -1181,9 +1182,10 @@
             this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.label16);
             this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.label15);
             this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.btn_atras_cancion_reproductor);
-            this.panel_cancion_seleccionada_busqueda_simple.Location = new System.Drawing.Point(762, 443);
+            this.panel_cancion_seleccionada_busqueda_simple.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_cancion_seleccionada_busqueda_simple.Location = new System.Drawing.Point(0, 0);
             this.panel_cancion_seleccionada_busqueda_simple.Name = "panel_cancion_seleccionada_busqueda_simple";
-            this.panel_cancion_seleccionada_busqueda_simple.Size = new System.Drawing.Size(20, 28);
+            this.panel_cancion_seleccionada_busqueda_simple.Size = new System.Drawing.Size(946, 488);
             this.panel_cancion_seleccionada_busqueda_simple.TabIndex = 126;
             this.panel_cancion_seleccionada_busqueda_simple.Visible = false;
             this.panel_cancion_seleccionada_busqueda_simple.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_cancion_seleccionada_busqueda_simple_Paint);
@@ -1191,7 +1193,7 @@
             // btn_atras_rep_cancion_en_descargas
             // 
             this.btn_atras_rep_cancion_en_descargas.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_atras_rep_cancion_en_descargas.Location = new System.Drawing.Point(179, 10);
+            this.btn_atras_rep_cancion_en_descargas.Location = new System.Drawing.Point(259, 10);
             this.btn_atras_rep_cancion_en_descargas.Margin = new System.Windows.Forms.Padding(2);
             this.btn_atras_rep_cancion_en_descargas.Name = "btn_atras_rep_cancion_en_descargas";
             this.btn_atras_rep_cancion_en_descargas.Size = new System.Drawing.Size(71, 66);
@@ -3004,9 +3006,9 @@
             this.panel_historial_menu.Controls.Add(this.btn_borrar_historial);
             this.panel_historial_menu.Controls.Add(this.label43);
             this.panel_historial_menu.Controls.Add(this.btn_atras_historial);
-            this.panel_historial_menu.Location = new System.Drawing.Point(851, 255);
+            this.panel_historial_menu.Location = new System.Drawing.Point(840, 257);
             this.panel_historial_menu.Name = "panel_historial_menu";
-            this.panel_historial_menu.Size = new System.Drawing.Size(16, 26);
+            this.panel_historial_menu.Size = new System.Drawing.Size(27, 16);
             this.panel_historial_menu.TabIndex = 0;
             this.panel_historial_menu.Visible = false;
             // 
@@ -3025,6 +3027,7 @@
             this.tabla_historial_video.RowHeadersVisible = false;
             this.tabla_historial_video.Size = new System.Drawing.Size(450, 390);
             this.tabla_historial_video.TabIndex = 145;
+            this.tabla_historial_video.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabla_historial_video_CellDoubleClick);
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -3053,6 +3056,7 @@
             this.tabla_historial_canciones.RowHeadersVisible = false;
             this.tabla_historial_canciones.Size = new System.Drawing.Size(463, 390);
             this.tabla_historial_canciones.TabIndex = 144;
+            this.tabla_historial_canciones.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabla_historial_canciones_CellDoubleClick);
             // 
             // dataGridViewTextBoxColumn5
             // 
@@ -3076,6 +3080,7 @@
             this.btn_borrar_historial.TabIndex = 136;
             this.btn_borrar_historial.Text = "Borrar Historial";
             this.btn_borrar_historial.UseVisualStyleBackColor = true;
+            this.btn_borrar_historial.Click += new System.EventHandler(this.btn_borrar_historial_Click);
             // 
             // label43
             // 
@@ -4472,13 +4477,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(946, 512);
+            this.Controls.Add(this.panel_buscar);
+            this.Controls.Add(this.panel_historial_menu);
             this.Controls.Add(this.panel_listainteligente_menu);
             this.Controls.Add(this.panel_descargas_menu);
-            this.Controls.Add(this.panel_buscar);
             this.Controls.Add(this.panel_karaoke_menu);
             this.Controls.Add(this.panel_favoritos_menu);
             this.Controls.Add(this.panel_playlist_usuario);
-            this.Controls.Add(this.panel_historial_menu);
             this.Controls.Add(this.Panel_premium);
             this.Controls.Add(this.panel_social_menu);
             this.Controls.Add(this.panel_perfil_de_usuario);
