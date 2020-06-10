@@ -2651,6 +2651,7 @@ namespace ALAINID_DEFINITIVO
                             ruta = s.Nombrearchivo;
                             cancionbuscada = s;
                             Proyecto_Forms.ALAINID.Agregarcancionahistorial(user.Email_, s);
+                            Proyecto_Forms.ALAINID.Aumentarreproduccion(s);
                             select_playlist_cancion_reproductor.Items.Clear();
                             foreach (PlaylistSong ply in user.Lista_playlistusuario_)
                             {
@@ -2685,6 +2686,7 @@ namespace ALAINID_DEFINITIVO
                             ruta = v.Nombrearchivovideo;
                             videobuscado = v;
                             Proyecto_Forms.ALAINID.Agregarvideoahistorial(user.Email_, v);
+                            Proyecto_Forms.ALAINID.Aumentarreproduccionvideo(v);
                             listaplaylist.Items.Clear();
                             foreach (PlaylistVideo ply in user.Lista_playlistvideousuario_)
                             {
@@ -3580,6 +3582,7 @@ namespace ALAINID_DEFINITIVO
                     axWindowsMediaPlayerVideo.Ctlcontrols.stop();
                     axWindowsMediaPlayer3.Ctlcontrols.stop();
                     Proyecto_Forms.ALAINID.Agregarcancionahistorial(Program.usuario_activo.Email_, song);
+                    Proyecto_Forms.ALAINID.Aumentarreproduccion(song);
 
                 }
             }
@@ -3611,6 +3614,7 @@ namespace ALAINID_DEFINITIVO
                     axWindowsMediaPlayer2.Ctlcontrols.stop();
                     axWindowsMediaPlayer3.Ctlcontrols.stop();
                     Proyecto_Forms.ALAINID.Agregarvideoahistorial(Program.usuario_activo.Email_, video);
+                    Proyecto_Forms.ALAINID.Aumentarreproduccionvideo(video);
                 }
             }
             if (no == 0)
@@ -4043,6 +4047,7 @@ namespace ALAINID_DEFINITIVO
                     panel_video_seleccionado.Visible = true;
                     panel_video_seleccionado.Dock = DockStyle.Fill;
                     Proyecto_Forms.ALAINID.Agregarvideoahistorial(Program.usuario_activo.Email_, v);
+                    Proyecto_Forms.ALAINID.Aumentarreproduccionvideo(v);
                 }
             }
         }
@@ -4074,6 +4079,7 @@ namespace ALAINID_DEFINITIVO
                     panel_cancion_seleccionada_busqueda_simple.Visible = true;
                     panel_cancion_seleccionada_busqueda_simple.Dock = DockStyle.Fill;
                     Proyecto_Forms.ALAINID.Agregarcancionahistorial(Program.usuario_activo.Email_, song);
+                    Proyecto_Forms.ALAINID.Aumentarreproduccion(song);
                 }
             }
 
@@ -4278,6 +4284,7 @@ namespace ALAINID_DEFINITIVO
                     panel_cancion_seleccionada_busqueda_simple.Visible = true;
                     panel_cancion_seleccionada_busqueda_simple.Dock = DockStyle.Fill;
                     Proyecto_Forms.ALAINID.Agregarcancionahistorial(Program.usuario_activo.Email_, song);
+                    Proyecto_Forms.ALAINID.Aumentarreproduccion(song);
                 }
             }
 
@@ -4309,6 +4316,7 @@ namespace ALAINID_DEFINITIVO
                     panel_cancion_seleccionada_busqueda_simple.Visible = true;
                     panel_cancion_seleccionada_busqueda_simple.Dock = DockStyle.Fill;
                     Proyecto_Forms.ALAINID.Agregarcancionahistorial(Program.usuario_activo.Email_, song);
+                    Proyecto_Forms.ALAINID.Aumentarreproduccion(song);
                 }
             }
         }
@@ -4436,6 +4444,7 @@ namespace ALAINID_DEFINITIVO
                     panel_cancion_seleccionada_busqueda_simple.Visible = true;
                     panel_cancion_seleccionada_busqueda_simple.Dock = DockStyle.Fill;
                     Proyecto_Forms.ALAINID.Agregarcancionahistorial(Program.usuario_activo.Email_, song);
+                    Proyecto_Forms.ALAINID.Aumentarreproduccion(song);
                 }
             }
         }
@@ -4447,26 +4456,38 @@ namespace ALAINID_DEFINITIVO
 
             int fila = e.RowIndex;
 
-            foreach (Song song in Proyecto_Forms.ALAINID.todas_las_canciones)
+            foreach (Video v in Proyecto_Forms.ALAINID.todos_los_videos)
             {
-                if (song.Nombrecancion.ToLower() == tabla_historial_video.Rows[fila].Cells[0].Value.ToString().ToLower())
+                if (v.Nombre_video.ToLower() == tabla_historial_video.Rows[fila].Cells[0].Value.ToString().ToLower())
                 {
-                    cantante_cancion_reproductor.Text = song.Cantante.Name;
-                    nombrecancion_cancion_reproductor.Text = song.Nombrecancion;
-                    compositor_cancion_reproductor.Text = song.Compositor.Name;
-                    album_cancion_reproductor.Text = song.Album;
-                    calificacion_cancion_reproductor.Text = song.Calificacionpromedio.ToString();
-                    genero_cancion_reproductor.Text = song.Genero;
-                    reproducciones_cancion_reproductor.Text = song.Reproducciones.ToString();
-                    axWindowsMediaPlayer2.URL = song.Nombrearchivo;
-                    axWindowsMediaPlayerVideo.Ctlcontrols.stop();
-                    btn_atras_rep_video_en_historial.Visible = true;
+                    textBox_Nombre_Director.Text = v.Director.Name;
+                    foreach (Artista actor in v.Actores)
+                    {
+                        int n = tabla_nombre_actores_reprod_video.Rows.Add();
+                        tabla_nombre_actores_reprod_video.Rows[n].Cells[0].Value = actor.Name;
+                    }
+                    textBox_Calificacion.Text = v.Calificacion_promedio.ToString();
+                    textBox_Año_Grabacion.Text = v.Anio_publicacion.ToString();
+                    textBox_Reproducciones.Text = v.Reproduccion.ToString();
+
                     panel_historial_menu.Visible = false;
                     panel_buscar.Visible = true;
-                    panel_buscar.Dock = DockStyle.Fill;
-                    panel_cancion_seleccionada_busqueda_simple.Visible = true;
-                    panel_cancion_seleccionada_busqueda_simple.Dock = DockStyle.Fill;
-                    Proyecto_Forms.ALAINID.Agregarcancionahistorial(Program.usuario_activo.Email_, song);
+                    panel_video_seleccionado.Dock = DockStyle.Fill;
+                    
+                    panel_video_seleccionado.Visible = true;
+                    panel_video_seleccionado.Dock = DockStyle.Fill;
+                    btn_atras_rep_video_busqmultiple.Visible = true;
+
+                    
+
+                    ruta = v.Nombrearchivovideo;
+                    Proyecto_Forms.ALAINID.Agregarvideoahistorial(Program.usuario_activo.Email_, v);
+                    Proyecto_Forms.ALAINID.Aumentarreproduccionvideo(v);
+
+                    videobuscado = v;
+                    axWindowsMediaPlayerVideo.URL = ruta;
+                    axWindowsMediaPlayer2.Ctlcontrols.stop();
+                    axWindowsMediaPlayer3.Ctlcontrols.stop();
                 }
             }
         }

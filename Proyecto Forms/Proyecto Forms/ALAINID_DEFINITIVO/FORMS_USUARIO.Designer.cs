@@ -2057,7 +2057,7 @@
             this.axWindowsMediaPlayerVideo.Location = new System.Drawing.Point(191, 77);
             this.axWindowsMediaPlayerVideo.Margin = new System.Windows.Forms.Padding(2);
             this.axWindowsMediaPlayerVideo.Name = "axWindowsMediaPlayerVideo";
-            this.axWindowsMediaPlayerVideo.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayerVideo.OcxState")));
+      //      this.axWindowsMediaPlayerVideo.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayerVideo.OcxState")));
             this.axWindowsMediaPlayerVideo.Size = new System.Drawing.Size(567, 377);
             this.axWindowsMediaPlayerVideo.TabIndex = 0;
             // 
@@ -2404,7 +2404,7 @@
             this.axWindowsMediaPlayer2.Enabled = true;
             this.axWindowsMediaPlayer2.Location = new System.Drawing.Point(3, 383);
             this.axWindowsMediaPlayer2.Name = "axWindowsMediaPlayer2";
-            this.axWindowsMediaPlayer2.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer2.OcxState")));
+       //     this.axWindowsMediaPlayer2.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer2.OcxState")));
             this.axWindowsMediaPlayer2.Size = new System.Drawing.Size(940, 93);
             this.axWindowsMediaPlayer2.TabIndex = 145;
             this.axWindowsMediaPlayer2.Enter += new System.EventHandler(this.axWindowsMediaPlayer2_Enter);
@@ -3003,9 +3003,10 @@
             this.panel_historial_menu.Controls.Add(this.btn_borrar_historial);
             this.panel_historial_menu.Controls.Add(this.label43);
             this.panel_historial_menu.Controls.Add(this.btn_atras_historial);
-            this.panel_historial_menu.Location = new System.Drawing.Point(840, 257);
+            this.panel_historial_menu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_historial_menu.Location = new System.Drawing.Point(0, 24);
             this.panel_historial_menu.Name = "panel_historial_menu";
-            this.panel_historial_menu.Size = new System.Drawing.Size(27, 16);
+            this.panel_historial_menu.Size = new System.Drawing.Size(946, 488);
             this.panel_historial_menu.TabIndex = 0;
             this.panel_historial_menu.Visible = false;
             // 
@@ -3022,6 +3023,7 @@
             this.tabla_historial_video.Name = "tabla_historial_video";
             this.tabla_historial_video.ReadOnly = true;
             this.tabla_historial_video.RowHeadersVisible = false;
+            this.tabla_historial_video.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.tabla_historial_video.Size = new System.Drawing.Size(450, 390);
             this.tabla_historial_video.TabIndex = 145;
             this.tabla_historial_video.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabla_historial_video_CellDoubleClick);
@@ -3051,6 +3053,7 @@
             this.tabla_historial_canciones.Name = "tabla_historial_canciones";
             this.tabla_historial_canciones.ReadOnly = true;
             this.tabla_historial_canciones.RowHeadersVisible = false;
+            this.tabla_historial_canciones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.tabla_historial_canciones.Size = new System.Drawing.Size(463, 390);
             this.tabla_historial_canciones.TabIndex = 144;
             this.tabla_historial_canciones.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabla_historial_canciones_CellDoubleClick);
@@ -3198,7 +3201,7 @@
             this.axWindowsMediaPlayer3.Location = new System.Drawing.Point(15, 77);
             this.axWindowsMediaPlayer3.Margin = new System.Windows.Forms.Padding(2);
             this.axWindowsMediaPlayer3.Name = "axWindowsMediaPlayer3";
-            this.axWindowsMediaPlayer3.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer3.OcxState")));
+        //    this.axWindowsMediaPlayer3.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer3.OcxState")));
             this.axWindowsMediaPlayer3.Size = new System.Drawing.Size(920, 400);
             this.axWindowsMediaPlayer3.TabIndex = 31;
             // 
@@ -4439,7 +4442,7 @@
             this.axWindowsMediaPlayer1.Enabled = true;
             this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(15, 247);
             this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
-            this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
+       //     this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
             this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(263, 193);
             this.axWindowsMediaPlayer1.TabIndex = 57;
             this.axWindowsMediaPlayer1.Enter += new System.EventHandler(this.axWindowsMediaPlayer1_Enter);
@@ -4450,9 +4453,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(946, 512);
+            this.Controls.Add(this.panel_historial_menu);
             this.Controls.Add(this.panel_buscar);
             this.Controls.Add(this.panel_favoritos_menu);
-            this.Controls.Add(this.panel_historial_menu);
             this.Controls.Add(this.panel_listainteligente_menu);
             this.Controls.Add(this.panel_descargas_menu);
             this.Controls.Add(this.panel_karaoke_menu);
