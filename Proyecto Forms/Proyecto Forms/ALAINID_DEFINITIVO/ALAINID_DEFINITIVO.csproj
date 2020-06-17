@@ -67,8 +67,6 @@
     <Compile Include="FORMS_USUARIO.Designer.cs">
       <DependentUpon>FORMS_USUARIO.cs</DependentUpon>
     </Compile>
-    <Compile Include="Input_Output.cs" />
-    <Compile Include="Player.cs" />
     <Compile Include="PlaylistSong.cs" />
     <Compile Include="Playlistvideo.cs" />
     <Compile Include="Program.cs" />
@@ -95,6 +93,7 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_CurrentPlaylistItemAvailableEvent.datasource" />
     <None Include="Properties\DataSources\Proyecto_Forms.ALAINID.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

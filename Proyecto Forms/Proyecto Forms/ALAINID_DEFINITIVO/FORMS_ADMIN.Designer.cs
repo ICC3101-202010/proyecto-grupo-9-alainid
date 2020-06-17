@@ -533,9 +533,9 @@
             this.panel_agregar_cancion_admin.Controls.Add(this.label3);
             this.panel_agregar_cancion_admin.Controls.Add(this.label1);
             this.panel_agregar_cancion_admin.Controls.Add(this.nombre_cancion_txt_agregar_cancion);
-            this.panel_agregar_cancion_admin.Location = new System.Drawing.Point(410, 327);
+            this.panel_agregar_cancion_admin.Location = new System.Drawing.Point(420, 333);
             this.panel_agregar_cancion_admin.Name = "panel_agregar_cancion_admin";
-            this.panel_agregar_cancion_admin.Size = new System.Drawing.Size(27, 27);
+            this.panel_agregar_cancion_admin.Size = new System.Drawing.Size(29, 21);
             this.panel_agregar_cancion_admin.TabIndex = 24;
             this.panel_agregar_cancion_admin.Visible = false;
             this.panel_agregar_cancion_admin.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_agregar_cancion_admin_Paint);
@@ -649,7 +649,8 @@
             this.sexocompositor_txt_agregar_admin.FormattingEnabled = true;
             this.sexocompositor_txt_agregar_admin.Items.AddRange(new object[] {
             "Masculino",
-            "Femenino"});
+            "Femenino",
+            "Otro"});
             this.sexocompositor_txt_agregar_admin.Location = new System.Drawing.Point(435, 189);
             this.sexocompositor_txt_agregar_admin.Name = "sexocompositor_txt_agregar_admin";
             this.sexocompositor_txt_agregar_admin.Size = new System.Drawing.Size(180, 21);
@@ -661,7 +662,8 @@
             this.sexocantante_txt_agregar_admin.FormattingEnabled = true;
             this.sexocantante_txt_agregar_admin.Items.AddRange(new object[] {
             "Masculino",
-            "Femenino"});
+            "Femenino",
+            "Otro"});
             this.sexocantante_txt_agregar_admin.Location = new System.Drawing.Point(435, 93);
             this.sexocantante_txt_agregar_admin.Name = "sexocantante_txt_agregar_admin";
             this.sexocantante_txt_agregar_admin.Size = new System.Drawing.Size(180, 21);
@@ -1133,7 +1135,8 @@
             this.sexodirector_agregar_video_admin.FormattingEnabled = true;
             this.sexodirector_agregar_video_admin.Items.AddRange(new object[] {
             "Masculino",
-            "Femenino"});
+            "Femenino",
+            "Otro"});
             this.sexodirector_agregar_video_admin.Location = new System.Drawing.Point(498, 93);
             this.sexodirector_agregar_video_admin.Name = "sexodirector_agregar_video_admin";
             this.sexodirector_agregar_video_admin.Size = new System.Drawing.Size(172, 21);
@@ -1344,15 +1347,17 @@
             this.panel_ver_usuarios_admin.Controls.Add(this.btn_editar_usuarios_admin);
             this.panel_ver_usuarios_admin.Controls.Add(this.label26);
             this.panel_ver_usuarios_admin.Controls.Add(this.btn_atras_de_ver_usuarios_admin);
-            this.panel_ver_usuarios_admin.Location = new System.Drawing.Point(792, 430);
+            this.panel_ver_usuarios_admin.Location = new System.Drawing.Point(792, 425);
             this.panel_ver_usuarios_admin.Name = "panel_ver_usuarios_admin";
-            this.panel_ver_usuarios_admin.Size = new System.Drawing.Size(80, 35);
+            this.panel_ver_usuarios_admin.Size = new System.Drawing.Size(118, 40);
             this.panel_ver_usuarios_admin.TabIndex = 96;
             this.panel_ver_usuarios_admin.Visible = false;
             this.panel_ver_usuarios_admin.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_ver_usuarios_admin_Paint);
             // 
             // tabla_usuarios_admin
             // 
+            this.tabla_usuarios_admin.AllowUserToAddRows = false;
+            this.tabla_usuarios_admin.AllowUserToDeleteRows = false;
             this.tabla_usuarios_admin.AllowUserToResizeColumns = false;
             this.tabla_usuarios_admin.AllowUserToResizeRows = false;
             this.tabla_usuarios_admin.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -1370,7 +1375,8 @@
             this.colum_suscripcion});
             this.tabla_usuarios_admin.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tabla_usuarios_admin.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.tabla_usuarios_admin.Location = new System.Drawing.Point(0, -403);
+            this.tabla_usuarios_admin.Location = new System.Drawing.Point(0, -398);
+            this.tabla_usuarios_admin.MultiSelect = false;
             this.tabla_usuarios_admin.Name = "tabla_usuarios_admin";
             this.tabla_usuarios_admin.ReadOnly = true;
             this.tabla_usuarios_admin.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -1378,7 +1384,7 @@
             this.tabla_usuarios_admin.RowHeadersVisible = false;
             this.tabla_usuarios_admin.RowHeadersWidth = 51;
             this.tabla_usuarios_admin.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.tabla_usuarios_admin.Size = new System.Drawing.Size(80, 438);
+            this.tabla_usuarios_admin.Size = new System.Drawing.Size(118, 438);
             this.tabla_usuarios_admin.TabIndex = 97;
             this.tabla_usuarios_admin.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabla_usuarios_admin_CellClick);
             this.tabla_usuarios_admin.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabla_usuarios_admin_CellContentClick);
@@ -1446,12 +1452,12 @@
             // btn_editar_usuarios_admin
             // 
             this.btn_editar_usuarios_admin.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_editar_usuarios_admin.Location = new System.Drawing.Point(614, 16);
+            this.btn_editar_usuarios_admin.Location = new System.Drawing.Point(564, 16);
             this.btn_editar_usuarios_admin.Margin = new System.Windows.Forms.Padding(2);
             this.btn_editar_usuarios_admin.Name = "btn_editar_usuarios_admin";
-            this.btn_editar_usuarios_admin.Size = new System.Drawing.Size(71, 33);
+            this.btn_editar_usuarios_admin.Size = new System.Drawing.Size(121, 33);
             this.btn_editar_usuarios_admin.TabIndex = 98;
-            this.btn_editar_usuarios_admin.Text = "Editar";
+            this.btn_editar_usuarios_admin.Text = "Editar Usuario";
             this.btn_editar_usuarios_admin.UseVisualStyleBackColor = true;
             this.btn_editar_usuarios_admin.Click += new System.EventHandler(this.btn_editar_usuarios_admin_Click);
             // 
@@ -2279,10 +2285,9 @@
             this.panel_agregar_cancion_karaoke.Controls.Add(this.label55);
             this.panel_agregar_cancion_karaoke.Controls.Add(this.label56);
             this.panel_agregar_cancion_karaoke.Controls.Add(this.nombre_text_cancion_karaoke);
-            this.panel_agregar_cancion_karaoke.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_agregar_cancion_karaoke.Location = new System.Drawing.Point(0, 24);
+            this.panel_agregar_cancion_karaoke.Location = new System.Drawing.Point(410, 430);
             this.panel_agregar_cancion_karaoke.Name = "panel_agregar_cancion_karaoke";
-            this.panel_agregar_cancion_karaoke.Size = new System.Drawing.Size(910, 525);
+            this.panel_agregar_cancion_karaoke.Size = new System.Drawing.Size(36, 29);
             this.panel_agregar_cancion_karaoke.TabIndex = 132;
             this.panel_agregar_cancion_karaoke.Visible = false;
             // 
@@ -2392,7 +2397,8 @@
             this.sexocompositor_text_cancion_karaoke.FormattingEnabled = true;
             this.sexocompositor_text_cancion_karaoke.Items.AddRange(new object[] {
             "Masculino",
-            "Femenino"});
+            "Femenino",
+            "Otro"});
             this.sexocompositor_text_cancion_karaoke.Location = new System.Drawing.Point(436, 185);
             this.sexocompositor_text_cancion_karaoke.Name = "sexocompositor_text_cancion_karaoke";
             this.sexocompositor_text_cancion_karaoke.Size = new System.Drawing.Size(180, 21);
@@ -2403,7 +2409,8 @@
             this.sexocantante_text_cancion_karaoke.FormattingEnabled = true;
             this.sexocantante_text_cancion_karaoke.Items.AddRange(new object[] {
             "Masculino",
-            "Femenino"});
+            "Femenino",
+            "Otro"});
             this.sexocantante_text_cancion_karaoke.Location = new System.Drawing.Point(436, 89);
             this.sexocantante_text_cancion_karaoke.Name = "sexocantante_text_cancion_karaoke";
             this.sexocantante_text_cancion_karaoke.Size = new System.Drawing.Size(180, 21);
@@ -2707,14 +2714,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.ClientSize = new System.Drawing.Size(910, 549);
-            this.Controls.Add(this.panel_agregar_cancion_karaoke);
-            this.Controls.Add(this.panel_agregar_video_admin);
+            this.Controls.Add(this.panel_ver_usuarios_admin);
             this.Controls.Add(this.panel_agregar_cancion_admin);
-            this.Controls.Add(this.panel_ver_canciones_karaoke);
             this.Controls.Add(this.panel_ver_artistas);
+            this.Controls.Add(this.panel_agregar_video_admin);
+            this.Controls.Add(this.panel_agregar_cancion_karaoke);
+            this.Controls.Add(this.panel_ver_canciones_karaoke);
             this.Controls.Add(this.panel_ver_canciones_admin);
             this.Controls.Add(this.panel_ver_videos_admin);
-            this.Controls.Add(this.panel_ver_usuarios_admin);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btn_ver_usuarios_admin);
             this.Controls.Add(this.btn_agregar_cancion_karaoke_admin);
@@ -2851,12 +2858,6 @@
         private System.Windows.Forms.Button btn_editar_usuarios_admin;
         private System.Windows.Forms.Button btn_guardar_usuarios_admin;
         public System.Windows.Forms.DataGridView tabla_usuarios_admin;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colum_usuario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colum_nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colum_mail;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colum_pass;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colum_privacidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colum_suscripcion;
         private System.Windows.Forms.Label archivo_video_importar_video;
         private System.Windows.Forms.DataGridView tabla_agregar_actores_en_video;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre_actor;
@@ -2976,5 +2977,11 @@
         private System.Windows.Forms.TextBox nombre_text_cancion_karaoke;
         private System.Windows.Forms.Button btn_subir_cancion_karaoke;
         private System.Windows.Forms.OpenFileDialog openfile_subircancion_karaoke_admin;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colum_usuario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colum_nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colum_mail;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colum_pass;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colum_privacidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colum_suscripcion;
     }
 }

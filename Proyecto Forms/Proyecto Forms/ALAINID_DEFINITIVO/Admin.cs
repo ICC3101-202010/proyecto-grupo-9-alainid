@@ -9,12 +9,16 @@ namespace Proyecto_Forms
 {
     class Admin
     {
+
         public bool AgregarSong(string nombrecan, Artista cantante, string genero, Artista compositor, string anopublicacion, string disquera, string album,string nombrearchivo)
         {
             bool ver1, ver2, ver3;
             FileInfo fileInfo = new FileInfo(nombrearchivo);
             float tamano = fileInfo.Length / 1000000;
+            
             Song s = new Song(tamano, nombrecan, cantante, genero, compositor, anopublicacion, disquera, album,nombrearchivo);
+            s.Tipoarchivo = fileInfo.Extension;
+            
             ver1 = ALAINID.Verificar_existencia_cantante(ref cantante);
             ver2 = ALAINID.Verificar_existencia_compositor(ref compositor);
             ver3 = ALAINID.Verificar_exisitencia_Album(album, ref cantante);

@@ -282,10 +282,9 @@
             this.panel2_inicio_sesion.Controls.Add(this.label7);
             this.panel2_inicio_sesion.Controls.Add(this.pass_txt_inicio_sesion);
             this.panel2_inicio_sesion.Controls.Add(this.nombre_completo_txt_inicio_sesion);
-            this.panel2_inicio_sesion.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2_inicio_sesion.Location = new System.Drawing.Point(0, 0);
+            this.panel2_inicio_sesion.Location = new System.Drawing.Point(562, 294);
             this.panel2_inicio_sesion.Name = "panel2_inicio_sesion";
-            this.panel2_inicio_sesion.Size = new System.Drawing.Size(800, 450);
+            this.panel2_inicio_sesion.Size = new System.Drawing.Size(14, 13);
             this.panel2_inicio_sesion.TabIndex = 28;
             this.panel2_inicio_sesion.Visible = false;
             this.panel2_inicio_sesion.Resize += new System.EventHandler(this.panel2_inicio_sesion_Resize);
@@ -383,8 +382,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.panel2_inicio_sesion);
             this.Controls.Add(this.panel1_registrarse);
+            this.Controls.Add(this.panel2_inicio_sesion);
             this.Controls.Add(this.label_todo_lo_que_necesitas);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.btn_primero_Salir);

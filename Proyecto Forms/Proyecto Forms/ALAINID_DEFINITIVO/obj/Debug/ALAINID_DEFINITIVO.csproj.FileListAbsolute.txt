@@ -63,3 +63,35 @@ C:\Users\juanc\3D Objects\proyecto-grupo-9-alainid-master\Proyecto Forms\Proyect
 C:\Users\juanc\3D Objects\proyecto-grupo-9-alainid-master\Proyecto Forms\Proyecto Forms\ALAINID_DEFINITIVO\obj\Debug\ALAINID_DEFINITIVO.csproj.CoreCompileInputs.cache
 C:\Users\juanc\3D Objects\proyecto-grupo-9-alainid-master\Proyecto Forms\Proyecto Forms\ALAINID_DEFINITIVO\obj\Debug\ALAINID_DEFINITIVO.exe
 C:\Users\juanc\3D Objects\proyecto-grupo-9-alainid-master\Proyecto Forms\Proyecto Forms\ALAINID_DEFINITIVO\obj\Debug\ALAINID_DEFINITIVO.pdb
+C:\Users\Admin\Desktop\DEFINITIVO 2.0\proyecto-grupo-9-alainid-master\Proyecto Forms\Proyecto Forms\ALAINID_DEFINITIVO\bin\Debug\ALAINID_DEFINITIVO.exe.config
+C:\Users\Admin\Desktop\DEFINITIVO 2.0\proyecto-grupo-9-alainid-master\Proyecto Forms\Proyecto Forms\ALAINID_DEFINITIVO\bin\Debug\ALAINID_DEFINITIVO.exe
+C:\Users\Admin\Desktop\DEFINITIVO 2.0\proyecto-grupo-9-alainid-master\Proyecto Forms\Proyecto Forms\ALAINID_DEFINITIVO\bin\Debug\ALAINID_DEFINITIVO.pdb
+C:\Users\Admin\Desktop\DEFINITIVO 2.0\proyecto-grupo-9-alainid-master\Proyecto Forms\Proyecto Forms\ALAINID_DEFINITIVO\bin\Debug\Interop.WMPLib.dll
+C:\Users\Admin\Desktop\DEFINITIVO 2.0\proyecto-grupo-9-alainid-master\Proyecto Forms\Proyecto Forms\ALAINID_DEFINITIVO\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Admin\Desktop\DEFINITIVO 2.0\proyecto-grupo-9-alainid-master\Proyecto Forms\Proyecto Forms\ALAINID_DEFINITIVO\obj\Debug\ALAINID_DEFINITIVO.csprojAssemblyReference.cache
+C:\Users\Admin\Desktop\DEFINITIVO 2.0\proyecto-grupo-9-alainid-master\Proyecto Forms\Proyecto Forms\ALAINID_DEFINITIVO\obj\Debug\Interop.WMPLib.dll
+C:\Users\Admin\Desktop\DEFINITIVO 2.0\proyecto-grupo-9-alainid-master\Proyecto Forms\Proyecto Forms\ALAINID_DEFINITIVO\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Admin\Desktop\DEFINITIVO 2.0\proyecto-grupo-9-alainid-master\Proyecto Forms\Proyecto Forms\ALAINID_DEFINITIVO\obj\Debug\ALAINID_DEFINITIVO.csproj.ResolveComReference.cache
+C:\Users\Admin\Desktop\DEFINITIVO 2.0\proyecto-grupo-9-alainid-master\Proyecto Forms\Proyecto Forms\ALAINID_DEFINITIVO\obj\Debug\ALAINID_DEFINITIVO.FORMS_ADMIN.resources
+C:\Users\Admin\Desktop\DEFINITIVO 2.0\proyecto-grupo-9-alainid-master\Proyecto Forms\Proyecto Forms\ALAINID_DEFINITIVO\obj\Debug\ALAINID_DEFINITIVO.FORMS_INICIO.resources
+C:\Users\Admin\Desktop\DEFINITIVO 2.0\proyecto-grupo-9-alainid-master\Proyecto Forms\Proyecto Forms\ALAINID_DEFINITIVO\obj\Debug\ALAINID_DEFINITIVO.Properties.Resources.resources
+C:\Users\Admin\Desktop\DEFINITIVO 2.0\proyecto-grupo-9-alainid-master\Proyecto Forms\Proyecto Forms\ALAINID_DEFINITIVO\obj\Debug\ALAINID_DEFINITIVO.csproj.GenerateResource.cache
+C:\Users\Admin\Desktop\DEFINITIVO 2.0\proyecto-grupo-9-alainid-master\Proyecto Forms\Proyecto Forms\ALAINID_DEFINITIVO\obj\Debug\ALAINID_DEFINITIVO.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\DEFINITIVO 2.0\proyecto-grupo-9-alainid-master\Proyecto Forms\Proyecto Forms\ALAINID_DEFINITIVO\obj\Debug\ALAINID_DEFINITIVO.exe
+C:\Users\Admin\Desktop\DEFINITIVO 2.0\proyecto-grupo-9-alainid-master\Proyecto Forms\Proyecto Forms\ALAINID_DEFINITIVO\obj\Debug\ALAINID_DEFINITIVO.pdb
+C:\Users\Admin\Desktop\proyecto-grupo-9-alainid-master\Proyecto Forms\Proyecto Forms\ALAINID_DEFINITIVO\bin\Debug\ALAINID_DEFINITIVO.exe.config
+C:\Users\Admin\Desktop\proyecto-grupo-9-alainid-master\Proyecto Forms\Proyecto Forms\ALAINID_DEFINITIVO\bin\Debug\ALAINID_DEFINITIVO.exe
+C:\Users\Admin\Desktop\proyecto-grupo-9-alainid-master\Proyecto Forms\Proyecto Forms\ALAINID_DEFINITIVO\bin\Debug\ALAINID_DEFINITIVO.pdb
+C:\Users\Admin\Desktop\proyecto-grupo-9-alainid-master\Proyecto Forms\Proyecto Forms\ALAINID_DEFINITIVO\bin\Debug\Interop.WMPLib.dll
+C:\Users\Admin\Desktop\proyecto-grupo-9-alainid-master\Proyecto Forms\Proyecto Forms\ALAINID_DEFINITIVO\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Admin\Desktop\proyecto-grupo-9-alainid-master\Proyecto Forms\Proyecto Forms\ALAINID_DEFINITIVO\obj\Debug\ALAINID_DEFINITIVO.csprojAssemblyReference.cache
+C:\Users\Admin\Desktop\proyecto-grupo-9-alainid-master\Proyecto Forms\Proyecto Forms\ALAINID_DEFINITIVO\obj\Debug\Interop.WMPLib.dll
+C:\Users\Admin\Desktop\proyecto-grupo-9-alainid-master\Proyecto Forms\Proyecto Forms\ALAINID_DEFINITIVO\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Admin\Desktop\proyecto-grupo-9-alainid-master\Proyecto Forms\Proyecto Forms\ALAINID_DEFINITIVO\obj\Debug\ALAINID_DEFINITIVO.csproj.ResolveComReference.cache
+C:\Users\Admin\Desktop\proyecto-grupo-9-alainid-master\Proyecto Forms\Proyecto Forms\ALAINID_DEFINITIVO\obj\Debug\ALAINID_DEFINITIVO.FORMS_ADMIN.resources
+C:\Users\Admin\Desktop\proyecto-grupo-9-alainid-master\Proyecto Forms\Proyecto Forms\ALAINID_DEFINITIVO\obj\Debug\ALAINID_DEFINITIVO.FORMS_INICIO.resources
+C:\Users\Admin\Desktop\proyecto-grupo-9-alainid-master\Proyecto Forms\Proyecto Forms\ALAINID_DEFINITIVO\obj\Debug\ALAINID_DEFINITIVO.Properties.Resources.resources
+C:\Users\Admin\Desktop\proyecto-grupo-9-alainid-master\Proyecto Forms\Proyecto Forms\ALAINID_DEFINITIVO\obj\Debug\ALAINID_DEFINITIVO.csproj.GenerateResource.cache
+C:\Users\Admin\Desktop\proyecto-grupo-9-alainid-master\Proyecto Forms\Proyecto Forms\ALAINID_DEFINITIVO\obj\Debug\ALAINID_DEFINITIVO.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\proyecto-grupo-9-alainid-master\Proyecto Forms\Proyecto Forms\ALAINID_DEFINITIVO\obj\Debug\ALAINID_DEFINITIVO.exe
+C:\Users\Admin\Desktop\proyecto-grupo-9-alainid-master\Proyecto Forms\Proyecto Forms\ALAINID_DEFINITIVO\obj\Debug\ALAINID_DEFINITIVO.pdb

@@ -15,7 +15,8 @@ namespace ALAINID_DEFINITIVO
     {
         public FORMS_INICIO()
         {
-            InitializeComponent();
+            InitializeComponent();            
+
         }
         private void label10_Click(object sender, EventArgs e)
         {
@@ -28,12 +29,18 @@ namespace ALAINID_DEFINITIVO
 
         private void btn_ingresar_a_Registrarse_Click(object sender, EventArgs e)
         {
+            nombre_completo_text_de_registrarse.Text = "";
+            nombre_usuario_text_de_registrarse.Text = "";
+            mail_text_de_registrarse.Text = "";
+            pass_text_de_registrarse.Text = "";
             panel1_registrarse.Visible = true;
             panel1_registrarse.Dock = DockStyle.Fill;
         }
 
         private void btn_ingresar_a_Iniciarsesion_Click(object sender, EventArgs e)
         {
+            nombre_completo_txt_inicio_sesion.Text = "";
+            pass_txt_inicio_sesion.Text = "";
             panel2_inicio_sesion.Visible = true;
             panel2_inicio_sesion.Dock = DockStyle.Fill;
 
@@ -114,6 +121,8 @@ namespace ALAINID_DEFINITIVO
         private void btn_atras_de_inicio_sesion_Click(object sender, EventArgs e)
         {
             panel2_inicio_sesion.Visible = false;
+            nombre_completo_txt_inicio_sesion.Text = "";
+            pass_txt_inicio_sesion.Text = "";
         }
 
         private void btn_ingresar_inicio_sesion_Click(object sender, EventArgs e)
