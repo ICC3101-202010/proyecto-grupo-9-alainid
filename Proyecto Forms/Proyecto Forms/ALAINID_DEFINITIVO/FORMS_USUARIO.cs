@@ -37,6 +37,8 @@ namespace ALAINID_DEFINITIVO
                         btnKaraoke.Enabled = true;
                         btnHistorial.Enabled = true;
                         btnDescargas.Enabled = true;
+                        logo_premium.Visible = true;
+                        logo_pobre.Visible = false;
 
                     }
                 }
@@ -448,13 +450,15 @@ namespace ALAINID_DEFINITIVO
                             btnKaraoke.Enabled = true;
                             btnHistorial.Enabled = true;
                             btnDescargas.Enabled = true;
+                            logo_premium.Visible = true;
+                            logo_pobre.Visible = false;
                         }
                         if (user.Premium_ == "no premium")
                         {
                             btnKaraoke.Enabled = false;
                             btnHistorial.Enabled = false;
                             btnDescargas.Enabled = false;
-
+                            logo_premium.Visible = false;
                         }
                     }
 
@@ -568,7 +572,7 @@ namespace ALAINID_DEFINITIVO
         }
         private void btn_atras_de_inicio_sesion_Click(object sender, EventArgs e)
         {
-            panel_buscar.Visible = false;
+           panel_buscar.Visible = false;
         }
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
@@ -2608,14 +2612,14 @@ namespace ALAINID_DEFINITIVO
                         {
                             //Proyecto_Forms.ALAINID.Activar_todo();
                             Proyecto_Forms.ALAINID.Sacarpromediocalificacioncancion(s.Nombrearchivo);
-                            cantante_cancion_reproductor.Text = s.Cantante.Name;
-                            nombrecancion_cancion_reproductor.Text = s.Nombrecancion;
-                            compositor_cancion_reproductor.Text = s.Compositor.Name;
-                            album_cancion_reproductor.Text = s.Album;
-                            calificacion_cancion_reproductor.Text = s.Calificacionpromedio.ToString();
-                            genero_cancion_reproductor.Text = s.Genero;
+                            cantante_cancion_reproductor.Text = s.Cantante.Name.ToLower();
+                            nombrecancion_cancion_reproductor.Text = s.Nombrecancion.ToLower();
+                            compositor_cancion_reproductor.Text = s.Compositor.Name.ToLower();
+                            album_cancion_reproductor.Text = s.Album.ToLower();
+                            calificacion_cancion_reproductor.Text = s.Calificacionpromedio.ToString().ToLower();
+                            genero_cancion_reproductor.Text = s.Genero.ToLower();
                             Proyecto_Forms.ALAINID.Aumentarreproduccion(s);
-                            reproducciones_cancion_reproductor.Text = s.Reproducciones.ToString();
+                            reproducciones_cancion_reproductor.Text = s.Reproducciones.ToString().ToLower();
                             btn_atras_cancion_reproductor.Visible = true;
                             panel_cancion_seleccionada_busqueda_simple.Visible = true;
                             panel_cancion_seleccionada_busqueda_simple.Dock = DockStyle.Fill;
@@ -2627,7 +2631,7 @@ namespace ALAINID_DEFINITIVO
                             select_playlist_cancion_reproductor.Items.Clear();
                             foreach (PlaylistSong ply in user.Lista_playlistusuario_)
                             {
-                                select_playlist_cancion_reproductor.Items.Add(ply.NombrePlaylist);
+                                select_playlist_cancion_reproductor.Items.Add(ply.NombrePlaylist.ToLower());
                             }
                             axWindowsMediaPlayer2.URL = ruta;
                             axWindowsMediaPlayerVideo.Ctlcontrols.stop();
@@ -2642,12 +2646,12 @@ namespace ALAINID_DEFINITIVO
                         {
                             //Proyecto_Forms.ALAINID.Activar_todo();
                             Proyecto_Forms.ALAINID.Sacarpromediocalificacionvideo(v.Nombrearchivovideo);
-                            nombre_video.Text = v.Nombre_video;
-                            textBox_Nombre_Director.Text = v.Director.Name;
+                            nombre_video.Text = v.Nombre_video.ToLower();
+                            textBox_Nombre_Director.Text = v.Director.Name.ToLower();
                             foreach (Artista actor in v.Actores)
                             {
                                 int n = tabla_nombre_actores_reprod_video.Rows.Add();
-                                tabla_nombre_actores_reprod_video.Rows[n].Cells[0].Value = actor.Name;
+                                tabla_nombre_actores_reprod_video.Rows[n].Cells[0].Value = actor.Name.ToLower();
                             }
                             textBox_Calificacion.Text = v.Calificacion_promedio.ToString();
                             textBox_Año_Grabacion.Text = v.Anio_publicacion.ToString();
@@ -2663,7 +2667,7 @@ namespace ALAINID_DEFINITIVO
                             listaplaylist.Items.Clear();
                             foreach (PlaylistVideo ply in user.Lista_playlistvideousuario_)
                             {
-                                listaplaylist.Items.Add(ply.NombrePlaylist);
+                                listaplaylist.Items.Add(ply.NombrePlaylist.ToLower());
                             }
 
                             axWindowsMediaPlayerVideo.URL = ruta;
@@ -3066,12 +3070,12 @@ namespace ALAINID_DEFINITIVO
             {
                 if ((s.Nombrecancion.ToLower() == nombre.ToLower()) && (s.Cantante.Name.ToLower() == nombrea.ToLower()))
                 {
-                    cantante_cancion_reproductor.Text = s.Cantante.Name;
-                    nombrecancion_cancion_reproductor.Text = s.Nombrecancion;
-                    compositor_cancion_reproductor.Text = s.Compositor.Name;
-                    album_cancion_reproductor.Text = s.Album;
+                    cantante_cancion_reproductor.Text = s.Cantante.Name.ToLower();
+                    nombrecancion_cancion_reproductor.Text = s.Nombrecancion.ToLower();
+                    compositor_cancion_reproductor.Text = s.Compositor.Name.ToLower();
+                    album_cancion_reproductor.Text = s.Album.ToLower();
                     calificacion_cancion_reproductor.Text = s.Calificacionpromedio.ToString();
-                    genero_cancion_reproductor.Text = s.Genero;
+                    genero_cancion_reproductor.Text = s.Genero.ToLower();
                     Proyecto_Forms.ALAINID.Aumentarreproduccion(s);
                     reproducciones_cancion_reproductor.Text = s.Reproducciones.ToString();
 
@@ -3094,12 +3098,12 @@ namespace ALAINID_DEFINITIVO
             {
                 if ((v.Nombre_video.ToLower() == nombre.ToLower()) && (v.Director.Name.ToLower() == nombrea.ToLower()))
                 {
-                    nombre_video.Text = v.Nombre_video;
-                    textBox_Nombre_Director.Text = v.Director.Name;
+                    nombre_video.Text = v.Nombre_video.ToLower();
+                    textBox_Nombre_Director.Text = v.Director.Name.ToLower();
                     foreach (Artista actor in v.Actores)
                     {
                         int n = tabla_nombre_actores_reprod_video.Rows.Add();
-                        tabla_nombre_actores_reprod_video.Rows[n].Cells[0].Value = actor.Name;
+                        tabla_nombre_actores_reprod_video.Rows[n].Cells[0].Value = actor.Name.ToLower();
                     }
                     textBox_Calificacion.Text = v.Calificacion_promedio.ToString();
                     textBox_Año_Grabacion.Text = v.Anio_publicacion.ToString();
@@ -3259,9 +3263,9 @@ namespace ALAINID_DEFINITIVO
                 {
                     if (user.Nombre_.ToLower() == email_persona_seguir_social.ToLower())
                     {
-                        social_nombre_user_busqueda.Text = user.Nombre_;
-                        social_email_user_busqueda.Text = user.Email_;
-                        social_usuario_user_busqueda.Text = user.Nombreusuario;
+                        social_nombre_user_busqueda.Text = user.Nombre_.ToLower();
+                        social_email_user_busqueda.Text = user.Email_.ToLower();
+                        social_usuario_user_busqueda.Text = user.Nombreusuario.ToLower();
 
                     }
                 }
@@ -3277,10 +3281,10 @@ namespace ALAINID_DEFINITIVO
                     if (act.Name.ToLower() == email_persona_seguir_social.ToLower())
                     {
                         social_edad_artista.Text = act.Age.ToString();
-                        social_naconalidad_artista.Text = act.Nacionality;
-                        social_nombre_artista.Text = act.Name;
-                        social_sexo_artista.Text = act.Sexo;
-                        social_tipo_artista.Text = "Actor: ";
+                        social_naconalidad_artista.Text = act.Nacionality.ToLower();
+                        social_nombre_artista.Text = act.Name.ToLower();
+                        social_sexo_artista.Text = act.Sexo.ToLower();
+                        social_tipo_artista.Text = "actor: ";
                     }
                 }
                 foreach (Artista dir in Proyecto_Forms.ALAINID.lista_directores)
@@ -3288,10 +3292,10 @@ namespace ALAINID_DEFINITIVO
                     if (dir.Name.ToLower() == email_persona_seguir_social.ToLower())
                     {
                         social_edad_artista.Text = dir.Age.ToString();
-                        social_naconalidad_artista.Text = dir.Nacionality;
-                        social_nombre_artista.Text = dir.Name;
-                        social_sexo_artista.Text = dir.Sexo;
-                        social_tipo_artista.Text = "Director: ";
+                        social_naconalidad_artista.Text = dir.Nacionality.ToLower();
+                        social_nombre_artista.Text = dir.Name.ToLower();
+                        social_sexo_artista.Text = dir.Sexo.ToLower();
+                        social_tipo_artista.Text = "director: ";
                     }
                 }
                 foreach (Artista comp in Proyecto_Forms.ALAINID.lista_compositores)
@@ -3299,10 +3303,10 @@ namespace ALAINID_DEFINITIVO
                     if (comp.Name.ToLower() == email_persona_seguir_social.ToLower())
                     {
                         social_edad_artista.Text = comp.Age.ToString();
-                        social_naconalidad_artista.Text = comp.Nacionality;
-                        social_nombre_artista.Text = comp.Name;
-                        social_sexo_artista.Text = comp.Sexo;
-                        social_tipo_artista.Text = "Compositor: ";
+                        social_naconalidad_artista.Text = comp.Nacionality.ToLower();
+                        social_nombre_artista.Text = comp.Name.ToLower();
+                        social_sexo_artista.Text = comp.Sexo.ToLower();
+                        social_tipo_artista.Text = "compositor: ";
                     }
                 }
             }
@@ -3311,10 +3315,10 @@ namespace ALAINID_DEFINITIVO
                 if (cant.Name.ToLower() == email_persona_seguir_social.ToLower())
                 {
                     social_edad_artista.Text = cant.Age.ToString();
-                    social_naconalidad_artista.Text = cant.Nacionality;
-                    social_nombre_artista.Text = cant.Name;
-                    social_sexo_artista.Text = cant.Sexo;
-                    social_tipo_artista.Text = "Cantante: ";
+                    social_naconalidad_artista.Text = cant.Nacionality.ToLower();
+                    social_nombre_artista.Text = cant.Name.ToLower();
+                    social_sexo_artista.Text = cant.Sexo.ToLower();
+                    social_tipo_artista.Text = "cantante: ";
                 }
             }
 
@@ -3574,12 +3578,12 @@ namespace ALAINID_DEFINITIVO
                 if (song.Nombrecancion.ToLower() == tabla_ver_playlist.Rows[fila].Cells[0].Value.ToString().ToLower() && song.Cantante.Name.ToLower() == tabla_ver_playlist.Rows[fila].Cells[1].Value.ToString().ToLower())
                 {
                     no = 1;
-                    cantante_cancion_reproductor.Text = song.Cantante.Name;
-                    nombrecancion_cancion_reproductor.Text = song.Nombrecancion;
-                    compositor_cancion_reproductor.Text = song.Compositor.Name;
-                    album_cancion_reproductor.Text = song.Album;
+                    cantante_cancion_reproductor.Text = song.Cantante.Name.ToLower();
+                    nombrecancion_cancion_reproductor.Text = song.Nombrecancion.ToLower();
+                    compositor_cancion_reproductor.Text = song.Compositor.Name.ToLower();
+                    album_cancion_reproductor.Text = song.Album.ToLower();
                     calificacion_cancion_reproductor.Text = song.Calificacionpromedio.ToString();
-                    genero_cancion_reproductor.Text = song.Genero;
+                    genero_cancion_reproductor.Text = song.Genero.ToLower();
                     Proyecto_Forms.ALAINID.Aumentarreproduccion(song);
                     reproducciones_cancion_reproductor.Text = song.Reproducciones.ToString();
                     panel_ver_una_playlist.Visible = false;
@@ -3606,12 +3610,12 @@ namespace ALAINID_DEFINITIVO
                 if ((video.Nombre_video.ToLower() == tabla_ver_playlist.Rows[fila].Cells[0].Value.ToString().ToLower()) && (video.Director.Name.ToLower() == tabla_ver_playlist.Rows[fila].Cells[1].Value.ToString().ToLower()))
                 {
                     no = 1;
-                    nombre_video.Text = video.Nombre_video;
-                    textBox_Nombre_Director.Text = video.Director.Name;
+                    nombre_video.Text = video.Nombre_video.ToLower();
+                    textBox_Nombre_Director.Text = video.Director.Name.ToLower();
                     foreach (Artista actor in video.Actores)
                     {
                         int n = tabla_nombre_actores_reprod_video.Rows.Add();
-                        tabla_nombre_actores_reprod_video.Rows[n].Cells[0].Value = actor.Name;
+                        tabla_nombre_actores_reprod_video.Rows[n].Cells[0].Value = actor.Name.ToLower();
                     }
                     textBox_Calificacion.Text = video.Calificacion_promedio.ToString();
                     textBox_Año_Grabacion.Text = video.Anio_publicacion.ToString();
@@ -3771,10 +3775,10 @@ namespace ALAINID_DEFINITIVO
                             if (art.Name.ToLower() == tabla_seguidores_social.Rows[fila].Cells[0].Value.ToString().ToLower())
                             {
                                 panel_ver_artista_seguido.Visible = true;
-                                nombre_artista_seguido.Text = art.Name;
+                                nombre_artista_seguido.Text = art.Name.ToLower();
                                 edadartista_seguido.Text = art.Age.ToString();
-                                nacionartista_seguido.Text = art.Nacionality;
-                                sexoartista_seguido.Text = art.Sexo;
+                                nacionartista_seguido.Text = art.Nacionality.ToLower();
+                                sexoartista_seguido.Text = art.Sexo.ToLower();
                             }
                         }
                     }
@@ -3784,9 +3788,9 @@ namespace ALAINID_DEFINITIVO
                         {
                             if (user1.Email_.ToLower() == tabla_seguidores_social.Rows[fila].Cells[0].Value.ToString().ToLower())
                             {
-                                nombreusuario_usuario_seguido.Text = user1.Nombreusuario;
-                                emailusuario_seguido.Text = user1.Email_;
-                                nombre_usuario_seguidos.Text = user1.Nombre_;
+                                nombreusuario_usuario_seguido.Text = user1.Nombreusuario.ToLower();
+                                emailusuario_seguido.Text = user1.Email_.ToLower();
+                                nombre_usuario_seguidos.Text = user1.Nombre_.ToLower();
                             }
                         }
                     }
@@ -4154,8 +4158,8 @@ namespace ALAINID_DEFINITIVO
                 if (v.Nombre_video.ToLower() == tabla_favoritos_videos.Rows[fila].Cells[0].Value.ToString().ToLower())
                 {
                     Proyecto_Forms.ALAINID.Sacarpromediocalificacionvideo(v.Nombrearchivovideo);
-                    nombre_video.Text = v.Nombre_video;
-                    textBox_Nombre_Director.Text = v.Director.Name;
+                    nombre_video.Text = v.Nombre_video.ToLower();
+                    textBox_Nombre_Director.Text = v.Director.Name.ToLower();
                     foreach (Artista actor in v.Actores)
                     {
                         int n = tabla_nombre_actores_reprod_video.Rows.Add();
@@ -4192,12 +4196,12 @@ namespace ALAINID_DEFINITIVO
             {
                 if (song.Nombrecancion.ToLower() == tabla_favoritos_canciones.Rows[fila].Cells[0].Value.ToString().ToLower())
                 {
-                    cantante_cancion_reproductor.Text = song.Cantante.Name;
-                    nombrecancion_cancion_reproductor.Text = song.Nombrecancion;
-                    compositor_cancion_reproductor.Text = song.Compositor.Name;
-                    album_cancion_reproductor.Text = song.Album;
+                    cantante_cancion_reproductor.Text = song.Cantante.Name.ToLower();
+                    nombrecancion_cancion_reproductor.Text = song.Nombrecancion.ToLower();
+                    compositor_cancion_reproductor.Text = song.Compositor.Name.ToLower();
+                    album_cancion_reproductor.Text = song.Album.ToLower();
                     calificacion_cancion_reproductor.Text = song.Calificacionpromedio.ToString();
-                    genero_cancion_reproductor.Text = song.Genero;
+                    genero_cancion_reproductor.Text = song.Genero.ToLower();
                     Proyecto_Forms.ALAINID.Aumentarreproduccion(song);
                     reproducciones_cancion_reproductor.Text = song.Reproducciones.ToString();
                     axWindowsMediaPlayer2.URL = song.Nombrearchivo;
@@ -4225,7 +4229,7 @@ namespace ALAINID_DEFINITIVO
             {
                 if (tabla_canciones_karaoke.Rows[fila].Cells[0].Value.ToString() == ka.Nombrecancion)
                 {
-                    nombrevideo_karaoke.Text = ka.Nombrecancion;
+                    nombrevideo_karaoke.Text = ka.Nombrecancion.ToLower();
                     axWindowsMediaPlayer3.URL = ka.Nombrearchivo;
                     axWindowsMediaPlayer2.Ctlcontrols.stop();
                     axWindowsMediaPlayerVideo.Ctlcontrols.stop();
@@ -4403,12 +4407,12 @@ namespace ALAINID_DEFINITIVO
             {
                 if (song.Nombrecancion.ToLower() == tabla_canciones_smartlist.Rows[fila].Cells[0].Value.ToString().ToLower())
                 {
-                    cantante_cancion_reproductor.Text = song.Cantante.Name;
-                    nombrecancion_cancion_reproductor.Text = song.Nombrecancion;
-                    compositor_cancion_reproductor.Text = song.Compositor.Name;
-                    album_cancion_reproductor.Text = song.Album;
+                    cantante_cancion_reproductor.Text = song.Cantante.Name.ToLower();
+                    nombrecancion_cancion_reproductor.Text = song.Nombrecancion.ToLower();
+                    compositor_cancion_reproductor.Text = song.Compositor.Name.ToLower();
+                    album_cancion_reproductor.Text = song.Album.ToLower();
                     calificacion_cancion_reproductor.Text = song.Calificacionpromedio.ToString();
-                    genero_cancion_reproductor.Text = song.Genero;
+                    genero_cancion_reproductor.Text = song.Genero.ToLower();
                     Proyecto_Forms.ALAINID.Aumentarreproduccion(song);
                     reproducciones_cancion_reproductor.Text = song.Reproducciones.ToString();
                     axWindowsMediaPlayer2.URL = song.Nombrearchivo;
@@ -4565,12 +4569,12 @@ namespace ALAINID_DEFINITIVO
             {
                 if (song.Nombrecancion.ToLower() == tabla_historial_canciones.Rows[fila].Cells[0].Value.ToString().ToLower())
                 {
-                    cantante_cancion_reproductor.Text = song.Cantante.Name;
-                    nombrecancion_cancion_reproductor.Text = song.Nombrecancion;
-                    compositor_cancion_reproductor.Text = song.Compositor.Name;
-                    album_cancion_reproductor.Text = song.Album;
+                    cantante_cancion_reproductor.Text = song.Cantante.Name.ToLower();
+                    nombrecancion_cancion_reproductor.Text = song.Nombrecancion.ToLower();
+                    compositor_cancion_reproductor.Text = song.Compositor.Name.ToLower();
+                    album_cancion_reproductor.Text = song.Album.ToLower();
                     calificacion_cancion_reproductor.Text = song.Calificacionpromedio.ToString();
-                    genero_cancion_reproductor.Text = song.Genero;
+                    genero_cancion_reproductor.Text = song.Genero.ToLower();
                     Proyecto_Forms.ALAINID.Aumentarreproduccion(song);
                     reproducciones_cancion_reproductor.Text = song.Reproducciones.ToString();
                     axWindowsMediaPlayer2.URL = song.Nombrearchivo;
@@ -4598,8 +4602,8 @@ namespace ALAINID_DEFINITIVO
             {
                 if (v.Nombre_video.ToLower() == tabla_historial_video.Rows[fila].Cells[0].Value.ToString().ToLower())
                 {
-                    nombre_video.Text = v.Nombre_video;
-                    textBox_Nombre_Director.Text = v.Director.Name;
+                    nombre_video.Text = v.Nombre_video.ToLower();
+                    textBox_Nombre_Director.Text = v.Director.Name.ToLower();
                     foreach (Artista actor in v.Actores)
                     {
                         int n = tabla_nombre_actores_reprod_video.Rows.Add();
@@ -4688,6 +4692,21 @@ namespace ALAINID_DEFINITIVO
         }
 
         private void panel_historial_menu_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label44_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabla_favoritos_videos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void valor_criterio_smartlist_desplegable_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

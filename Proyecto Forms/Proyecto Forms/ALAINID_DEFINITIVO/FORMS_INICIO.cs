@@ -191,18 +191,7 @@ namespace ALAINID_DEFINITIVO
 
         private void FORMS_INICIO_Resize(object sender, EventArgs e)
         {
-            label10.Left = this.Width - 940;
-            label10.Top = this.Height - 750;
-            label_todo_lo_que_necesitas.Left = this.Width - 920;
-            label_todo_lo_que_necesitas.Top = this.Height - 635;
-            btn_ingresar_a_Iniciarsesion.Left = this.Width - 900;
-            btn_ingresar_a_Iniciarsesion.Top = this.Height -420;
-
-            btn_ingresar_a_Registrarse.Left = this.Width -900;
-            btn_ingresar_a_Registrarse.Top = this.Height-520 ;
-
-            btn_primero_Salir.Left = this.Width -900;
-            btn_primero_Salir.Top = this.Height- 320;
+            
 
 
         }

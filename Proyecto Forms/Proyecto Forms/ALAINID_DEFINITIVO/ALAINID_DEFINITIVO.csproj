@@ -127,5 +127,134 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\users.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\favorites.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\star.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\network_find.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\music2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\history.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wizard.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\taskbar_32x32-32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cuenta-privilegiada.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cuenta-privilegiada %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cuenta-privilegiada %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cuenta-privilegiada %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cuenta-privilegiada %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apagar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logoalainid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logoalainid1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logoalainid2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logoalainid21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alainidpremium.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logoalainid2_chico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alainidplus_chico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\atras_btn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\atras_btn1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logoalainid2_chico1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alainidplus_chico1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_premnium.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_premium_bueno.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icono_favoritos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icono_favoritos1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icono_playlist.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icono_descargas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icono_buscar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icono_playlist1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icono_favoritos2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icono_social.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icono_perfil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icono_karaoke.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icono_historial.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icono_descargas1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icono_smart.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -48,7 +48,6 @@
             this.cancionesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.videosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.cancionesKaraokeToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.label2 = new System.Windows.Forms.Label();
             this.btn_agregar_cancion_admin = new System.Windows.Forms.Button();
             this.btn_agregar_video_admin = new System.Windows.Forms.Button();
             this.btn_agregar_cancion_karaoke_admin = new System.Windows.Forms.Button();
@@ -243,6 +242,8 @@
             this.label56 = new System.Windows.Forms.Label();
             this.nombre_text_cancion_karaoke = new System.Windows.Forms.TextBox();
             this.openfile_subircancion_karaoke_admin = new System.Windows.Forms.OpenFileDialog();
+            this.label2 = new System.Windows.Forms.Label();
+            this.logo_pobre = new System.Windows.Forms.PictureBox();
             this.aLAINIDBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.aLAINIDBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.aLAINIDBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -268,6 +269,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.tabla_ver_compositores_admin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabla_ver_cantantes_admin)).BeginInit();
             this.panel_agregar_cancion_karaoke.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logo_pobre)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aLAINIDBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aLAINIDBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aLAINIDBindingSource1)).BeginInit();
@@ -276,50 +278,50 @@
             // label54
             // 
             label54.AutoSize = true;
-            label54.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label54.ForeColor = System.Drawing.Color.Maroon;
-            label54.Location = new System.Drawing.Point(11, 396);
+            label54.Font = new System.Drawing.Font("Old Growth", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label54.ForeColor = System.Drawing.Color.Snow;
+            label54.Location = new System.Drawing.Point(11, 408);
             label54.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label54.Name = "label54";
-            label54.Size = new System.Drawing.Size(92, 23);
+            label54.Size = new System.Drawing.Size(139, 20);
             label54.TabIndex = 135;
-            label54.Text = "Directores";
+            label54.Text = "directores";
             // 
             // label51
             // 
             label51.AutoSize = true;
-            label51.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label51.ForeColor = System.Drawing.Color.Maroon;
-            label51.Location = new System.Drawing.Point(11, 260);
+            label51.Font = new System.Drawing.Font("Old Growth", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label51.ForeColor = System.Drawing.Color.Snow;
+            label51.Location = new System.Drawing.Point(11, 280);
             label51.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label51.Name = "label51";
-            label51.Size = new System.Drawing.Size(71, 23);
+            label51.Size = new System.Drawing.Size(106, 20);
             label51.TabIndex = 136;
-            label51.Text = "Actores";
+            label51.Text = "actores";
             // 
             // label52
             // 
             label52.AutoSize = true;
-            label52.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label52.ForeColor = System.Drawing.Color.Maroon;
-            label52.Location = new System.Drawing.Point(11, 137);
+            label52.Font = new System.Drawing.Font("Old Growth", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label52.ForeColor = System.Drawing.Color.White;
+            label52.Location = new System.Drawing.Point(11, 157);
             label52.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label52.Name = "label52";
-            label52.Size = new System.Drawing.Size(110, 23);
+            label52.Size = new System.Drawing.Size(167, 20);
             label52.TabIndex = 137;
-            label52.Text = "Compositores";
+            label52.Text = "compositores";
             // 
             // label53
             // 
             label53.AutoSize = true;
-            label53.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label53.ForeColor = System.Drawing.Color.Maroon;
-            label53.Location = new System.Drawing.Point(11, 25);
+            label53.Font = new System.Drawing.Font("Old Growth", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label53.ForeColor = System.Drawing.Color.White;
+            label53.Location = new System.Drawing.Point(11, 45);
             label53.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label53.Name = "label53";
-            label53.Size = new System.Drawing.Size(87, 23);
+            label53.Size = new System.Drawing.Size(134, 20);
             label53.TabIndex = 138;
-            label53.Text = "Cantantes";
+            label53.Text = "cantantes";
             // 
             // menuStrip1
             // 
@@ -437,65 +439,56 @@
             this.cancionesKaraokeToolStripMenuItem1.Text = "Canciones Karaoke";
             this.cancionesKaraokeToolStripMenuItem1.Click += new System.EventHandler(this.cancionesKaraokeToolStripMenuItem1_Click);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(0, 24);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(884, 52);
-            this.label2.TabIndex = 19;
-            this.label2.Text = "BIENVENIDO ADMINISTRADOR DE ALAINID";
-            // 
             // btn_agregar_cancion_admin
             // 
-            this.btn_agregar_cancion_admin.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_agregar_cancion_admin.BackColor = System.Drawing.Color.DimGray;
+            this.btn_agregar_cancion_admin.Font = new System.Drawing.Font("Old Growth", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_agregar_cancion_admin.Location = new System.Drawing.Point(39, 323);
             this.btn_agregar_cancion_admin.Margin = new System.Windows.Forms.Padding(2);
             this.btn_agregar_cancion_admin.Name = "btn_agregar_cancion_admin";
             this.btn_agregar_cancion_admin.Size = new System.Drawing.Size(410, 90);
             this.btn_agregar_cancion_admin.TabIndex = 20;
-            this.btn_agregar_cancion_admin.Text = "AGREGAR CANCION";
-            this.btn_agregar_cancion_admin.UseVisualStyleBackColor = true;
+            this.btn_agregar_cancion_admin.Text = "agRegaR caNcIoN";
+            this.btn_agregar_cancion_admin.UseVisualStyleBackColor = false;
             this.btn_agregar_cancion_admin.Click += new System.EventHandler(this.btn_agregar_cancion_admin_Click);
             // 
             // btn_agregar_video_admin
             // 
-            this.btn_agregar_video_admin.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_agregar_video_admin.BackColor = System.Drawing.Color.DimGray;
+            this.btn_agregar_video_admin.Font = new System.Drawing.Font("Old Growth", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_agregar_video_admin.Location = new System.Drawing.Point(469, 323);
             this.btn_agregar_video_admin.Margin = new System.Windows.Forms.Padding(2);
             this.btn_agregar_video_admin.Name = "btn_agregar_video_admin";
             this.btn_agregar_video_admin.Size = new System.Drawing.Size(410, 90);
             this.btn_agregar_video_admin.TabIndex = 21;
-            this.btn_agregar_video_admin.Text = "AGREGAR VIDEO";
-            this.btn_agregar_video_admin.UseVisualStyleBackColor = true;
+            this.btn_agregar_video_admin.Text = "agRegaR VIdeo";
+            this.btn_agregar_video_admin.UseVisualStyleBackColor = false;
             this.btn_agregar_video_admin.Click += new System.EventHandler(this.btn_agregar_video_admin_Click);
             // 
             // btn_agregar_cancion_karaoke_admin
             // 
-            this.btn_agregar_cancion_karaoke_admin.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_agregar_cancion_karaoke_admin.BackColor = System.Drawing.Color.DimGray;
+            this.btn_agregar_cancion_karaoke_admin.Font = new System.Drawing.Font("Old Growth", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_agregar_cancion_karaoke_admin.Location = new System.Drawing.Point(39, 425);
             this.btn_agregar_cancion_karaoke_admin.Margin = new System.Windows.Forms.Padding(2);
             this.btn_agregar_cancion_karaoke_admin.Name = "btn_agregar_cancion_karaoke_admin";
             this.btn_agregar_cancion_karaoke_admin.Size = new System.Drawing.Size(410, 90);
             this.btn_agregar_cancion_karaoke_admin.TabIndex = 22;
-            this.btn_agregar_cancion_karaoke_admin.Text = "AGREGAR CANCION KARAOKE";
-            this.btn_agregar_cancion_karaoke_admin.UseVisualStyleBackColor = true;
+            this.btn_agregar_cancion_karaoke_admin.Text = "agRegaR caNcIoN kaRaoke";
+            this.btn_agregar_cancion_karaoke_admin.UseVisualStyleBackColor = false;
             this.btn_agregar_cancion_karaoke_admin.Click += new System.EventHandler(this.btn_agregar_cancion_karaoke_admin_Click);
             // 
             // btn_ver_usuarios_admin
             // 
-            this.btn_ver_usuarios_admin.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ver_usuarios_admin.BackColor = System.Drawing.Color.DimGray;
+            this.btn_ver_usuarios_admin.Font = new System.Drawing.Font("Old Growth", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ver_usuarios_admin.Location = new System.Drawing.Point(469, 425);
             this.btn_ver_usuarios_admin.Margin = new System.Windows.Forms.Padding(2);
             this.btn_ver_usuarios_admin.Name = "btn_ver_usuarios_admin";
             this.btn_ver_usuarios_admin.Size = new System.Drawing.Size(410, 90);
             this.btn_ver_usuarios_admin.TabIndex = 23;
-            this.btn_ver_usuarios_admin.Text = "VER USUARIOS";
-            this.btn_ver_usuarios_admin.UseVisualStyleBackColor = true;
+            this.btn_ver_usuarios_admin.Text = "VeR UsUaRIos";
+            this.btn_ver_usuarios_admin.UseVisualStyleBackColor = false;
             this.btn_ver_usuarios_admin.Click += new System.EventHandler(this.btn_ver_usuarios_admin_Click);
             // 
             // panel_agregar_cancion_admin
@@ -533,7 +526,7 @@
             this.panel_agregar_cancion_admin.Controls.Add(this.label3);
             this.panel_agregar_cancion_admin.Controls.Add(this.label1);
             this.panel_agregar_cancion_admin.Controls.Add(this.nombre_cancion_txt_agregar_cancion);
-            this.panel_agregar_cancion_admin.Location = new System.Drawing.Point(420, 333);
+            this.panel_agregar_cancion_admin.Location = new System.Drawing.Point(394, 333);
             this.panel_agregar_cancion_admin.Name = "panel_agregar_cancion_admin";
             this.panel_agregar_cancion_admin.Size = new System.Drawing.Size(29, 21);
             this.panel_agregar_cancion_admin.TabIndex = 24;
@@ -542,7 +535,7 @@
             // 
             // ruta_archivo_cancion_txt_subir_cancion
             // 
-            this.ruta_archivo_cancion_txt_subir_cancion.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.ruta_archivo_cancion_txt_subir_cancion.BackColor = System.Drawing.Color.OliveDrab;
             this.ruta_archivo_cancion_txt_subir_cancion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ruta_archivo_cancion_txt_subir_cancion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ruta_archivo_cancion_txt_subir_cancion.Location = new System.Drawing.Point(40, 474);
@@ -568,18 +561,22 @@
             // 
             // btn_atras_de_agregar_cancion_admin
             // 
+            this.btn_atras_de_agregar_cancion_admin.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(75)))), ((int)(((byte)(9)))));
+            this.btn_atras_de_agregar_cancion_admin.FlatAppearance.BorderSize = 0;
+            this.btn_atras_de_agregar_cancion_admin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_atras_de_agregar_cancion_admin.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_atras_de_agregar_cancion_admin.Image = global::ALAINID_DEFINITIVO.Properties.Resources.atras_btn1;
             this.btn_atras_de_agregar_cancion_admin.Location = new System.Drawing.Point(823, 16);
             this.btn_atras_de_agregar_cancion_admin.Margin = new System.Windows.Forms.Padding(2);
             this.btn_atras_de_agregar_cancion_admin.Name = "btn_atras_de_agregar_cancion_admin";
             this.btn_atras_de_agregar_cancion_admin.Size = new System.Drawing.Size(71, 33);
             this.btn_atras_de_agregar_cancion_admin.TabIndex = 62;
-            this.btn_atras_de_agregar_cancion_admin.Text = "Atras";
             this.btn_atras_de_agregar_cancion_admin.UseVisualStyleBackColor = true;
             this.btn_atras_de_agregar_cancion_admin.Click += new System.EventHandler(this.btn_atras_de_agregar_cancion_admin_Click);
             // 
             // btn_subir_cancion_admin
             // 
+            this.btn_subir_cancion_admin.BackColor = System.Drawing.Color.DarkGray;
             this.btn_subir_cancion_admin.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_subir_cancion_admin.Location = new System.Drawing.Point(680, 108);
             this.btn_subir_cancion_admin.Margin = new System.Windows.Forms.Padding(2);
@@ -587,11 +584,12 @@
             this.btn_subir_cancion_admin.Size = new System.Drawing.Size(185, 265);
             this.btn_subir_cancion_admin.TabIndex = 61;
             this.btn_subir_cancion_admin.Text = "Subir Cancion";
-            this.btn_subir_cancion_admin.UseVisualStyleBackColor = true;
+            this.btn_subir_cancion_admin.UseVisualStyleBackColor = false;
             this.btn_subir_cancion_admin.Click += new System.EventHandler(this.btn_subir_cancion_admin_Click);
             // 
             // btn_importar_cancion_admin
             // 
+            this.btn_importar_cancion_admin.BackColor = System.Drawing.Color.DarkGray;
             this.btn_importar_cancion_admin.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_importar_cancion_admin.Location = new System.Drawing.Point(680, 424);
             this.btn_importar_cancion_admin.Margin = new System.Windows.Forms.Padding(2);
@@ -599,7 +597,7 @@
             this.btn_importar_cancion_admin.Size = new System.Drawing.Size(185, 75);
             this.btn_importar_cancion_admin.TabIndex = 60;
             this.btn_importar_cancion_admin.Text = "Importar Archivo cancion";
-            this.btn_importar_cancion_admin.UseVisualStyleBackColor = true;
+            this.btn_importar_cancion_admin.UseVisualStyleBackColor = false;
             this.btn_importar_cancion_admin.Click += new System.EventHandler(this.btn_importar_cancion_admin_Click);
             // 
             // comboBox4
@@ -673,7 +671,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.label16.BackColor = System.Drawing.Color.OliveDrab;
             this.label16.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.White;
             this.label16.Location = new System.Drawing.Point(60, 384);
@@ -696,7 +694,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.label15.BackColor = System.Drawing.Color.OliveDrab;
             this.label15.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.White;
             this.label15.Location = new System.Drawing.Point(62, 347);
@@ -709,7 +707,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.label14.BackColor = System.Drawing.Color.OliveDrab;
             this.label14.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.White;
             this.label14.Location = new System.Drawing.Point(64, 308);
@@ -732,7 +730,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.label13.BackColor = System.Drawing.Color.OliveDrab;
             this.label13.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.White;
             this.label13.Location = new System.Drawing.Point(64, 267);
@@ -765,7 +763,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.label8.BackColor = System.Drawing.Color.OliveDrab;
             this.label8.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(336, 217);
@@ -778,7 +776,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.label9.BackColor = System.Drawing.Color.OliveDrab;
             this.label9.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
             this.label9.Location = new System.Drawing.Point(64, 190);
@@ -791,7 +789,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.label10.BackColor = System.Drawing.Color.OliveDrab;
             this.label10.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(64, 218);
@@ -804,7 +802,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.label11.BackColor = System.Drawing.Color.OliveDrab;
             this.label11.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
             this.label11.Location = new System.Drawing.Point(336, 189);
@@ -827,7 +825,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.label12.BackColor = System.Drawing.Color.OliveDrab;
             this.label12.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.White;
             this.label12.Location = new System.Drawing.Point(37, 162);
@@ -860,7 +858,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.label7.BackColor = System.Drawing.Color.OliveDrab;
             this.label7.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(336, 124);
@@ -873,7 +871,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.label6.BackColor = System.Drawing.Color.OliveDrab;
             this.label6.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(64, 97);
@@ -886,7 +884,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.label5.BackColor = System.Drawing.Color.OliveDrab;
             this.label5.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(64, 125);
@@ -899,7 +897,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.label4.BackColor = System.Drawing.Color.OliveDrab;
             this.label4.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(336, 96);
@@ -922,7 +920,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.label3.BackColor = System.Drawing.Color.OliveDrab;
             this.label3.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(37, 73);
@@ -935,7 +933,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.label1.BackColor = System.Drawing.Color.OliveDrab;
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(62, 32);
@@ -993,7 +991,7 @@
             // archivo_video_importar_video
             // 
             this.archivo_video_importar_video.AutoSize = true;
-            this.archivo_video_importar_video.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.archivo_video_importar_video.BackColor = System.Drawing.Color.OliveDrab;
             this.archivo_video_importar_video.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.archivo_video_importar_video.ForeColor = System.Drawing.Color.Black;
             this.archivo_video_importar_video.Location = new System.Drawing.Point(59, 475);
@@ -1060,30 +1058,35 @@
             // 
             // btn_atras_de_agregar_video_admin
             // 
+            this.btn_atras_de_agregar_video_admin.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(75)))), ((int)(((byte)(9)))));
+            this.btn_atras_de_agregar_video_admin.FlatAppearance.BorderSize = 0;
+            this.btn_atras_de_agregar_video_admin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_atras_de_agregar_video_admin.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_atras_de_agregar_video_admin.Image = global::ALAINID_DEFINITIVO.Properties.Resources.atras_btn1;
             this.btn_atras_de_agregar_video_admin.Location = new System.Drawing.Point(823, 16);
             this.btn_atras_de_agregar_video_admin.Margin = new System.Windows.Forms.Padding(2);
             this.btn_atras_de_agregar_video_admin.Name = "btn_atras_de_agregar_video_admin";
             this.btn_atras_de_agregar_video_admin.Size = new System.Drawing.Size(71, 33);
             this.btn_atras_de_agregar_video_admin.TabIndex = 93;
-            this.btn_atras_de_agregar_video_admin.Text = "Atras";
             this.btn_atras_de_agregar_video_admin.UseVisualStyleBackColor = true;
             this.btn_atras_de_agregar_video_admin.Click += new System.EventHandler(this.btn_atras_de_agregar_video_admin_Click);
             // 
             // btn_subir_video_de_agregar_video_admin
             // 
+            this.btn_subir_video_de_agregar_video_admin.BackColor = System.Drawing.Color.DarkGray;
             this.btn_subir_video_de_agregar_video_admin.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_subir_video_de_agregar_video_admin.Location = new System.Drawing.Point(712, 108);
+            this.btn_subir_video_de_agregar_video_admin.Location = new System.Drawing.Point(712, 71);
             this.btn_subir_video_de_agregar_video_admin.Margin = new System.Windows.Forms.Padding(2);
             this.btn_subir_video_de_agregar_video_admin.Name = "btn_subir_video_de_agregar_video_admin";
-            this.btn_subir_video_de_agregar_video_admin.Size = new System.Drawing.Size(180, 224);
+            this.btn_subir_video_de_agregar_video_admin.Size = new System.Drawing.Size(180, 287);
             this.btn_subir_video_de_agregar_video_admin.TabIndex = 92;
             this.btn_subir_video_de_agregar_video_admin.Text = "Subir Video";
-            this.btn_subir_video_de_agregar_video_admin.UseVisualStyleBackColor = true;
+            this.btn_subir_video_de_agregar_video_admin.UseVisualStyleBackColor = false;
             this.btn_subir_video_de_agregar_video_admin.Click += new System.EventHandler(this.btn_subir_video_de_agregar_video_admin_Click);
             // 
             // btn_importar_video_agregar_video_admin
             // 
+            this.btn_importar_video_agregar_video_admin.BackColor = System.Drawing.Color.DarkGray;
             this.btn_importar_video_agregar_video_admin.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_importar_video_agregar_video_admin.Location = new System.Drawing.Point(712, 422);
             this.btn_importar_video_agregar_video_admin.Margin = new System.Windows.Forms.Padding(2);
@@ -1091,7 +1094,7 @@
             this.btn_importar_video_agregar_video_admin.Size = new System.Drawing.Size(180, 85);
             this.btn_importar_video_agregar_video_admin.TabIndex = 91;
             this.btn_importar_video_agregar_video_admin.Text = "Importar Archivo Video";
-            this.btn_importar_video_agregar_video_admin.UseVisualStyleBackColor = true;
+            this.btn_importar_video_agregar_video_admin.UseVisualStyleBackColor = false;
             this.btn_importar_video_agregar_video_admin.Click += new System.EventHandler(this.btn_importar_video_agregar_video_admin_Click);
             // 
             // filmstudiovideo_agregar_video_admin
@@ -1146,7 +1149,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.label17.BackColor = System.Drawing.Color.OliveDrab;
             this.label17.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.White;
             this.label17.Location = new System.Drawing.Point(58, 268);
@@ -1170,7 +1173,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.label18.BackColor = System.Drawing.Color.OliveDrab;
             this.label18.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.White;
             this.label18.Location = new System.Drawing.Point(60, 229);
@@ -1184,7 +1187,7 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.label19.BackColor = System.Drawing.Color.OliveDrab;
             this.label19.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.White;
             this.label19.Location = new System.Drawing.Point(61, 193);
@@ -1198,7 +1201,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.label20.BackColor = System.Drawing.Color.OliveDrab;
             this.label20.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.White;
             this.label20.Location = new System.Drawing.Point(61, 153);
@@ -1232,7 +1235,7 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.label21.BackColor = System.Drawing.Color.OliveDrab;
             this.label21.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.White;
             this.label21.Location = new System.Drawing.Point(398, 121);
@@ -1245,7 +1248,7 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.label22.BackColor = System.Drawing.Color.OliveDrab;
             this.label22.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.Color.White;
             this.label22.Location = new System.Drawing.Point(126, 95);
@@ -1258,7 +1261,7 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.label23.BackColor = System.Drawing.Color.OliveDrab;
             this.label23.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.ForeColor = System.Drawing.Color.White;
             this.label23.Location = new System.Drawing.Point(126, 123);
@@ -1271,7 +1274,7 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.label24.BackColor = System.Drawing.Color.OliveDrab;
             this.label24.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.Color.White;
             this.label24.Location = new System.Drawing.Point(398, 93);
@@ -1294,7 +1297,7 @@
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.label25.BackColor = System.Drawing.Color.OliveDrab;
             this.label25.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label25.ForeColor = System.Drawing.Color.White;
             this.label25.Location = new System.Drawing.Point(71, 68);
@@ -1307,7 +1310,7 @@
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.label30.BackColor = System.Drawing.Color.OliveDrab;
             this.label30.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label30.ForeColor = System.Drawing.Color.White;
             this.label30.Location = new System.Drawing.Point(62, 308);
@@ -1320,7 +1323,7 @@
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.label31.BackColor = System.Drawing.Color.OliveDrab;
             this.label31.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label31.ForeColor = System.Drawing.Color.White;
             this.label31.Location = new System.Drawing.Point(69, 32);
@@ -1347,9 +1350,9 @@
             this.panel_ver_usuarios_admin.Controls.Add(this.btn_editar_usuarios_admin);
             this.panel_ver_usuarios_admin.Controls.Add(this.label26);
             this.panel_ver_usuarios_admin.Controls.Add(this.btn_atras_de_ver_usuarios_admin);
-            this.panel_ver_usuarios_admin.Location = new System.Drawing.Point(792, 425);
+            this.panel_ver_usuarios_admin.Location = new System.Drawing.Point(866, 428);
             this.panel_ver_usuarios_admin.Name = "panel_ver_usuarios_admin";
-            this.panel_ver_usuarios_admin.Size = new System.Drawing.Size(118, 40);
+            this.panel_ver_usuarios_admin.Size = new System.Drawing.Size(32, 29);
             this.panel_ver_usuarios_admin.TabIndex = 96;
             this.panel_ver_usuarios_admin.Visible = false;
             this.panel_ver_usuarios_admin.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_ver_usuarios_admin_Paint);
@@ -1375,7 +1378,7 @@
             this.colum_suscripcion});
             this.tabla_usuarios_admin.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tabla_usuarios_admin.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.tabla_usuarios_admin.Location = new System.Drawing.Point(0, -398);
+            this.tabla_usuarios_admin.Location = new System.Drawing.Point(0, -409);
             this.tabla_usuarios_admin.MultiSelect = false;
             this.tabla_usuarios_admin.Name = "tabla_usuarios_admin";
             this.tabla_usuarios_admin.ReadOnly = true;
@@ -1384,7 +1387,7 @@
             this.tabla_usuarios_admin.RowHeadersVisible = false;
             this.tabla_usuarios_admin.RowHeadersWidth = 51;
             this.tabla_usuarios_admin.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.tabla_usuarios_admin.Size = new System.Drawing.Size(118, 438);
+            this.tabla_usuarios_admin.Size = new System.Drawing.Size(32, 438);
             this.tabla_usuarios_admin.TabIndex = 97;
             this.tabla_usuarios_admin.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabla_usuarios_admin_CellClick);
             this.tabla_usuarios_admin.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabla_usuarios_admin_CellContentClick);
@@ -1439,49 +1442,55 @@
             // 
             // btn_guardar_usuarios_admin
             // 
-            this.btn_guardar_usuarios_admin.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_guardar_usuarios_admin.Location = new System.Drawing.Point(697, 16);
+            this.btn_guardar_usuarios_admin.BackColor = System.Drawing.Color.DarkGray;
+            this.btn_guardar_usuarios_admin.Font = new System.Drawing.Font("Old Growth", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_guardar_usuarios_admin.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_guardar_usuarios_admin.Location = new System.Drawing.Point(659, 18);
             this.btn_guardar_usuarios_admin.Margin = new System.Windows.Forms.Padding(2);
             this.btn_guardar_usuarios_admin.Name = "btn_guardar_usuarios_admin";
-            this.btn_guardar_usuarios_admin.Size = new System.Drawing.Size(71, 33);
+            this.btn_guardar_usuarios_admin.Size = new System.Drawing.Size(104, 33);
             this.btn_guardar_usuarios_admin.TabIndex = 99;
-            this.btn_guardar_usuarios_admin.Text = "Guardar";
-            this.btn_guardar_usuarios_admin.UseVisualStyleBackColor = true;
+            this.btn_guardar_usuarios_admin.Text = "guardar";
+            this.btn_guardar_usuarios_admin.UseVisualStyleBackColor = false;
             this.btn_guardar_usuarios_admin.Click += new System.EventHandler(this.btn_guardar_usuarios_admin_Click);
             // 
             // btn_editar_usuarios_admin
             // 
-            this.btn_editar_usuarios_admin.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_editar_usuarios_admin.Location = new System.Drawing.Point(564, 16);
+            this.btn_editar_usuarios_admin.BackColor = System.Drawing.Color.DarkGray;
+            this.btn_editar_usuarios_admin.Font = new System.Drawing.Font("Old Growth", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_editar_usuarios_admin.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_editar_usuarios_admin.Location = new System.Drawing.Point(489, 18);
             this.btn_editar_usuarios_admin.Margin = new System.Windows.Forms.Padding(2);
             this.btn_editar_usuarios_admin.Name = "btn_editar_usuarios_admin";
-            this.btn_editar_usuarios_admin.Size = new System.Drawing.Size(121, 33);
+            this.btn_editar_usuarios_admin.Size = new System.Drawing.Size(156, 33);
             this.btn_editar_usuarios_admin.TabIndex = 98;
-            this.btn_editar_usuarios_admin.Text = "Editar Usuario";
-            this.btn_editar_usuarios_admin.UseVisualStyleBackColor = true;
+            this.btn_editar_usuarios_admin.Text = "editar Usuario";
+            this.btn_editar_usuarios_admin.UseVisualStyleBackColor = false;
             this.btn_editar_usuarios_admin.Click += new System.EventHandler(this.btn_editar_usuarios_admin_Click);
             // 
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Comic Sans MS", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Font = new System.Drawing.Font("Old Growth", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.ForeColor = System.Drawing.Color.White;
-            this.label26.Location = new System.Drawing.Point(83, 15);
+            this.label26.Location = new System.Drawing.Point(32, 16);
             this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(384, 45);
+            this.label26.Size = new System.Drawing.Size(291, 44);
             this.label26.TabIndex = 29;
-            this.label26.Text = "USUARIOS EN LA APP";
+            this.label26.Text = "UsUaRIos ";
             // 
             // btn_atras_de_ver_usuarios_admin
             // 
+            this.btn_atras_de_ver_usuarios_admin.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(75)))), ((int)(((byte)(9)))));
+            this.btn_atras_de_ver_usuarios_admin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_atras_de_ver_usuarios_admin.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_atras_de_ver_usuarios_admin.Image = global::ALAINID_DEFINITIVO.Properties.Resources.atras_btn1;
             this.btn_atras_de_ver_usuarios_admin.Location = new System.Drawing.Point(812, 16);
             this.btn_atras_de_ver_usuarios_admin.Margin = new System.Windows.Forms.Padding(2);
             this.btn_atras_de_ver_usuarios_admin.Name = "btn_atras_de_ver_usuarios_admin";
             this.btn_atras_de_ver_usuarios_admin.Size = new System.Drawing.Size(71, 33);
             this.btn_atras_de_ver_usuarios_admin.TabIndex = 28;
-            this.btn_atras_de_ver_usuarios_admin.Text = "Atras";
             this.btn_atras_de_ver_usuarios_admin.UseVisualStyleBackColor = true;
             this.btn_atras_de_ver_usuarios_admin.Click += new System.EventHandler(this.btn_atras_de_ver_usuarios_admin_Click);
             // 
@@ -1510,30 +1519,36 @@
             // 
             // button2
             // 
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(75)))), ((int)(((byte)(9)))));
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Image = global::ALAINID_DEFINITIVO.Properties.Resources.atras_btn1;
             this.button2.Location = new System.Drawing.Point(825, 15);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(71, 35);
             this.button2.TabIndex = 127;
-            this.button2.Text = "Atras";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label43
             // 
             this.label43.AutoSize = true;
-            this.label43.Font = new System.Drawing.Font("Comic Sans MS", 23.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label43.BackColor = System.Drawing.Color.Gray;
+            this.label43.Font = new System.Drawing.Font("Old Growth", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label43.ForeColor = System.Drawing.Color.White;
-            this.label43.Location = new System.Drawing.Point(365, 20);
+            this.label43.Location = new System.Drawing.Point(333, 15);
             this.label43.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(116, 44);
+            this.label43.Size = new System.Drawing.Size(206, 48);
             this.label43.TabIndex = 20;
             this.label43.Text = "Videos";
             // 
             // tabla_ver_videos_admin
             // 
+            this.tabla_ver_videos_admin.AllowUserToAddRows = false;
+            this.tabla_ver_videos_admin.AllowUserToDeleteRows = false;
             this.tabla_ver_videos_admin.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.tabla_ver_videos_admin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tabla_ver_videos_admin.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -1666,6 +1681,8 @@
             // 
             // tabla_ver_canciones_admin
             // 
+            this.tabla_ver_canciones_admin.AllowUserToAddRows = false;
+            this.tabla_ver_canciones_admin.AllowUserToDeleteRows = false;
             this.tabla_ver_canciones_admin.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.tabla_ver_canciones_admin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tabla_ver_canciones_admin.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -1796,27 +1813,31 @@
             // 
             // button1
             // 
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(75)))), ((int)(((byte)(9)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = global::ALAINID_DEFINITIVO.Properties.Resources.atras_btn1;
             this.button1.Location = new System.Drawing.Point(823, 20);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(71, 35);
             this.button1.TabIndex = 129;
-            this.button1.Text = "Atras";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // label44
             // 
             this.label44.AutoSize = true;
-            this.label44.Font = new System.Drawing.Font("Comic Sans MS", 23.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label44.BackColor = System.Drawing.Color.Gray;
+            this.label44.Font = new System.Drawing.Font("Old Growth", 23.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label44.ForeColor = System.Drawing.Color.White;
-            this.label44.Location = new System.Drawing.Point(351, 16);
+            this.label44.Location = new System.Drawing.Point(326, 20);
             this.label44.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(161, 44);
+            this.label44.Size = new System.Drawing.Size(292, 47);
             this.label44.TabIndex = 128;
-            this.label44.Text = "Canciones";
+            this.label44.Text = "canciones";
             this.label44.Click += new System.EventHandler(this.label44_Click);
             // 
             // panel_ver_canciones_karaoke
@@ -1962,27 +1983,31 @@
             // 
             // button3
             // 
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(75)))), ((int)(((byte)(9)))));
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Image = global::ALAINID_DEFINITIVO.Properties.Resources.atras_btn1;
             this.button3.Location = new System.Drawing.Point(825, 14);
             this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(71, 35);
             this.button3.TabIndex = 129;
-            this.button3.Text = "Atras";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label45
             // 
             this.label45.AutoSize = true;
-            this.label45.Font = new System.Drawing.Font("Comic Sans MS", 23.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label45.BackColor = System.Drawing.Color.Gray;
+            this.label45.Font = new System.Drawing.Font("Old Growth", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label45.ForeColor = System.Drawing.Color.White;
-            this.label45.Location = new System.Drawing.Point(286, 14);
+            this.label45.Location = new System.Drawing.Point(217, 14);
             this.label45.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(292, 44);
+            this.label45.Size = new System.Drawing.Size(506, 44);
             this.label45.TabIndex = 128;
-            this.label45.Text = "Canciones Karaoke";
+            this.label45.Text = "canciones Karaoke";
             // 
             // panel_ver_artistas
             // 
@@ -2008,27 +2033,31 @@
             // 
             // button4
             // 
+            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(75)))), ((int)(((byte)(9)))));
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Image = global::ALAINID_DEFINITIVO.Properties.Resources.atras_btn1;
             this.button4.Location = new System.Drawing.Point(835, 6);
             this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(67, 32);
             this.button4.TabIndex = 131;
-            this.button4.Text = "Atras";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // label46
             // 
             this.label46.AutoSize = true;
-            this.label46.Font = new System.Drawing.Font("Comic Sans MS", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label46.BackColor = System.Drawing.Color.DimGray;
+            this.label46.Font = new System.Drawing.Font("Old Growth", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label46.ForeColor = System.Drawing.Color.White;
-            this.label46.Location = new System.Drawing.Point(348, 2);
+            this.label46.Location = new System.Drawing.Point(348, 3);
             this.label46.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(133, 41);
+            this.label46.Size = new System.Drawing.Size(249, 44);
             this.label46.TabIndex = 130;
-            this.label46.Text = "Artistas";
+            this.label46.Text = "artistas";
             // 
             // tabla_ver_directores_admin
             // 
@@ -2039,12 +2068,12 @@
             this.dataGridViewTextBoxColumn24,
             this.dataGridViewTextBoxColumn25,
             this.dataGridViewTextBoxColumn26});
-            this.tabla_ver_directores_admin.Location = new System.Drawing.Point(-1, 423);
+            this.tabla_ver_directores_admin.Location = new System.Drawing.Point(-1, 434);
             this.tabla_ver_directores_admin.Name = "tabla_ver_directores_admin";
             this.tabla_ver_directores_admin.ReadOnly = true;
             this.tabla_ver_directores_admin.RowHeadersVisible = false;
             this.tabla_ver_directores_admin.RowHeadersWidth = 51;
-            this.tabla_ver_directores_admin.Size = new System.Drawing.Size(911, 102);
+            this.tabla_ver_directores_admin.Size = new System.Drawing.Size(911, 91);
             this.tabla_ver_directores_admin.TabIndex = 96;
             // 
             // dataGridViewTextBoxColumn23
@@ -2084,12 +2113,12 @@
             this.dataGridViewTextBoxColumn20,
             this.dataGridViewTextBoxColumn21,
             this.dataGridViewTextBoxColumn22});
-            this.tabla_ver_actores_admin.Location = new System.Drawing.Point(0, 288);
+            this.tabla_ver_actores_admin.Location = new System.Drawing.Point(0, 308);
             this.tabla_ver_actores_admin.Name = "tabla_ver_actores_admin";
             this.tabla_ver_actores_admin.ReadOnly = true;
             this.tabla_ver_actores_admin.RowHeadersVisible = false;
             this.tabla_ver_actores_admin.RowHeadersWidth = 51;
-            this.tabla_ver_actores_admin.Size = new System.Drawing.Size(910, 104);
+            this.tabla_ver_actores_admin.Size = new System.Drawing.Size(910, 91);
             this.tabla_ver_actores_admin.TabIndex = 95;
             // 
             // dataGridViewTextBoxColumn19
@@ -2129,7 +2158,7 @@
             this.dataGridViewTextBoxColumn16,
             this.dataGridViewTextBoxColumn17,
             this.dataGridViewTextBoxColumn18});
-            this.tabla_ver_compositores_admin.Location = new System.Drawing.Point(1, 163);
+            this.tabla_ver_compositores_admin.Location = new System.Drawing.Point(1, 183);
             this.tabla_ver_compositores_admin.Name = "tabla_ver_compositores_admin";
             this.tabla_ver_compositores_admin.ReadOnly = true;
             this.tabla_ver_compositores_admin.RowHeadersVisible = false;
@@ -2174,7 +2203,7 @@
             this.Column19,
             this.Column26,
             this.Column27});
-            this.tabla_ver_cantantes_admin.Location = new System.Drawing.Point(1, 53);
+            this.tabla_ver_cantantes_admin.Location = new System.Drawing.Point(1, 73);
             this.tabla_ver_cantantes_admin.Name = "tabla_ver_cantantes_admin";
             this.tabla_ver_cantantes_admin.ReadOnly = true;
             this.tabla_ver_cantantes_admin.RowHeadersVisible = false;
@@ -2285,7 +2314,7 @@
             this.panel_agregar_cancion_karaoke.Controls.Add(this.label55);
             this.panel_agregar_cancion_karaoke.Controls.Add(this.label56);
             this.panel_agregar_cancion_karaoke.Controls.Add(this.nombre_text_cancion_karaoke);
-            this.panel_agregar_cancion_karaoke.Location = new System.Drawing.Point(410, 430);
+            this.panel_agregar_cancion_karaoke.Location = new System.Drawing.Point(387, 430);
             this.panel_agregar_cancion_karaoke.Name = "panel_agregar_cancion_karaoke";
             this.panel_agregar_cancion_karaoke.Size = new System.Drawing.Size(36, 29);
             this.panel_agregar_cancion_karaoke.TabIndex = 132;
@@ -2293,6 +2322,7 @@
             // 
             // btn_subir_cancion_karaoke
             // 
+            this.btn_subir_cancion_karaoke.BackColor = System.Drawing.Color.DarkGray;
             this.btn_subir_cancion_karaoke.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_subir_cancion_karaoke.Location = new System.Drawing.Point(680, 104);
             this.btn_subir_cancion_karaoke.Margin = new System.Windows.Forms.Padding(2);
@@ -2300,12 +2330,12 @@
             this.btn_subir_cancion_karaoke.Size = new System.Drawing.Size(185, 276);
             this.btn_subir_cancion_karaoke.TabIndex = 65;
             this.btn_subir_cancion_karaoke.Text = "Subir Cancion";
-            this.btn_subir_cancion_karaoke.UseVisualStyleBackColor = true;
+            this.btn_subir_cancion_karaoke.UseVisualStyleBackColor = false;
             this.btn_subir_cancion_karaoke.Click += new System.EventHandler(this.btn_subir_cancion_karaoke_Click);
             // 
             // archivo_text_cancion_karaoke
             // 
-            this.archivo_text_cancion_karaoke.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.archivo_text_cancion_karaoke.BackColor = System.Drawing.Color.OliveDrab;
             this.archivo_text_cancion_karaoke.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.archivo_text_cancion_karaoke.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.archivo_text_cancion_karaoke.Location = new System.Drawing.Point(41, 463);
@@ -2330,18 +2360,22 @@
             // 
             // btn_atras_agregar_cancion_karaoke
             // 
+            this.btn_atras_agregar_cancion_karaoke.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(75)))), ((int)(((byte)(9)))));
+            this.btn_atras_agregar_cancion_karaoke.FlatAppearance.BorderSize = 0;
+            this.btn_atras_agregar_cancion_karaoke.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_atras_agregar_cancion_karaoke.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_atras_agregar_cancion_karaoke.Image = global::ALAINID_DEFINITIVO.Properties.Resources.atras_btn1;
             this.btn_atras_agregar_cancion_karaoke.Location = new System.Drawing.Point(823, 16);
             this.btn_atras_agregar_cancion_karaoke.Margin = new System.Windows.Forms.Padding(2);
             this.btn_atras_agregar_cancion_karaoke.Name = "btn_atras_agregar_cancion_karaoke";
             this.btn_atras_agregar_cancion_karaoke.Size = new System.Drawing.Size(71, 33);
             this.btn_atras_agregar_cancion_karaoke.TabIndex = 62;
-            this.btn_atras_agregar_cancion_karaoke.Text = "Atras";
             this.btn_atras_agregar_cancion_karaoke.UseVisualStyleBackColor = true;
             this.btn_atras_agregar_cancion_karaoke.Click += new System.EventHandler(this.btn_atras_agregar_cancion_karaoke_Click);
             // 
             // btn_importar_archivo_cancion_karaoke
             // 
+            this.btn_importar_archivo_cancion_karaoke.BackColor = System.Drawing.Color.DarkGray;
             this.btn_importar_archivo_cancion_karaoke.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_importar_archivo_cancion_karaoke.Location = new System.Drawing.Point(680, 419);
             this.btn_importar_archivo_cancion_karaoke.Margin = new System.Windows.Forms.Padding(2);
@@ -2349,7 +2383,7 @@
             this.btn_importar_archivo_cancion_karaoke.Size = new System.Drawing.Size(185, 75);
             this.btn_importar_archivo_cancion_karaoke.TabIndex = 60;
             this.btn_importar_archivo_cancion_karaoke.Text = "Importar Archivo cancion";
-            this.btn_importar_archivo_cancion_karaoke.UseVisualStyleBackColor = true;
+            this.btn_importar_archivo_cancion_karaoke.UseVisualStyleBackColor = false;
             this.btn_importar_archivo_cancion_karaoke.Click += new System.EventHandler(this.btn_importar_archivo_cancion_karaoke_Click);
             // 
             // Disquera_text_cancion_karaoke
@@ -2419,7 +2453,7 @@
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.label27.BackColor = System.Drawing.Color.OliveDrab;
             this.label27.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label27.ForeColor = System.Drawing.Color.White;
             this.label27.Location = new System.Drawing.Point(26, 380);
@@ -2441,7 +2475,7 @@
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.label29.BackColor = System.Drawing.Color.OliveDrab;
             this.label29.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label29.ForeColor = System.Drawing.Color.White;
             this.label29.Location = new System.Drawing.Point(28, 343);
@@ -2454,7 +2488,7 @@
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.label32.BackColor = System.Drawing.Color.OliveDrab;
             this.label32.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label32.ForeColor = System.Drawing.Color.White;
             this.label32.Location = new System.Drawing.Point(30, 304);
@@ -2476,7 +2510,7 @@
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.label33.BackColor = System.Drawing.Color.OliveDrab;
             this.label33.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label33.ForeColor = System.Drawing.Color.White;
             this.label33.Location = new System.Drawing.Point(30, 263);
@@ -2507,7 +2541,7 @@
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.label34.BackColor = System.Drawing.Color.OliveDrab;
             this.label34.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label34.ForeColor = System.Drawing.Color.White;
             this.label34.Location = new System.Drawing.Point(337, 213);
@@ -2520,7 +2554,7 @@
             // label35
             // 
             this.label35.AutoSize = true;
-            this.label35.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.label35.BackColor = System.Drawing.Color.OliveDrab;
             this.label35.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label35.ForeColor = System.Drawing.Color.White;
             this.label35.Location = new System.Drawing.Point(65, 186);
@@ -2533,7 +2567,7 @@
             // label36
             // 
             this.label36.AutoSize = true;
-            this.label36.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.label36.BackColor = System.Drawing.Color.OliveDrab;
             this.label36.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label36.ForeColor = System.Drawing.Color.White;
             this.label36.Location = new System.Drawing.Point(65, 214);
@@ -2546,7 +2580,7 @@
             // label37
             // 
             this.label37.AutoSize = true;
-            this.label37.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.label37.BackColor = System.Drawing.Color.OliveDrab;
             this.label37.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label37.ForeColor = System.Drawing.Color.White;
             this.label37.Location = new System.Drawing.Point(337, 185);
@@ -2568,7 +2602,7 @@
             // label38
             // 
             this.label38.AutoSize = true;
-            this.label38.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.label38.BackColor = System.Drawing.Color.OliveDrab;
             this.label38.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label38.ForeColor = System.Drawing.Color.White;
             this.label38.Location = new System.Drawing.Point(38, 158);
@@ -2599,7 +2633,7 @@
             // label39
             // 
             this.label39.AutoSize = true;
-            this.label39.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.label39.BackColor = System.Drawing.Color.OliveDrab;
             this.label39.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label39.ForeColor = System.Drawing.Color.White;
             this.label39.Location = new System.Drawing.Point(337, 120);
@@ -2612,7 +2646,7 @@
             // label40
             // 
             this.label40.AutoSize = true;
-            this.label40.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.label40.BackColor = System.Drawing.Color.OliveDrab;
             this.label40.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label40.ForeColor = System.Drawing.Color.White;
             this.label40.Location = new System.Drawing.Point(65, 93);
@@ -2625,7 +2659,7 @@
             // label41
             // 
             this.label41.AutoSize = true;
-            this.label41.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.label41.BackColor = System.Drawing.Color.OliveDrab;
             this.label41.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label41.ForeColor = System.Drawing.Color.White;
             this.label41.Location = new System.Drawing.Point(65, 121);
@@ -2638,7 +2672,7 @@
             // label42
             // 
             this.label42.AutoSize = true;
-            this.label42.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.label42.BackColor = System.Drawing.Color.OliveDrab;
             this.label42.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label42.ForeColor = System.Drawing.Color.White;
             this.label42.Location = new System.Drawing.Point(337, 92);
@@ -2660,7 +2694,7 @@
             // label55
             // 
             this.label55.AutoSize = true;
-            this.label55.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.label55.BackColor = System.Drawing.Color.OliveDrab;
             this.label55.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label55.ForeColor = System.Drawing.Color.White;
             this.label55.Location = new System.Drawing.Point(38, 69);
@@ -2673,7 +2707,7 @@
             // label56
             // 
             this.label56.AutoSize = true;
-            this.label56.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.label56.BackColor = System.Drawing.Color.OliveDrab;
             this.label56.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label56.ForeColor = System.Drawing.Color.White;
             this.label56.Location = new System.Drawing.Point(30, 28);
@@ -2696,6 +2730,25 @@
             // 
             this.openfile_subircancion_karaoke_admin.FileName = "openFileDialog1";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Old Growth", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(-6, 33);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(924, 60);
+            this.label2.TabIndex = 133;
+            this.label2.Text = "bienvenido administrador";
+            // 
+            // logo_pobre
+            // 
+            this.logo_pobre.Image = global::ALAINID_DEFINITIVO.Properties.Resources.logoalainid2_chico1;
+            this.logo_pobre.Location = new System.Drawing.Point(191, 136);
+            this.logo_pobre.Name = "logo_pobre";
+            this.logo_pobre.Size = new System.Drawing.Size(558, 129);
+            this.logo_pobre.TabIndex = 134;
+            this.logo_pobre.TabStop = false;
+            // 
             // aLAINIDBindingSource2
             // 
             this.aLAINIDBindingSource2.DataSource = typeof(Proyecto_Forms.ALAINID);
@@ -2712,22 +2765,23 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(75)))), ((int)(((byte)(9)))));
             this.ClientSize = new System.Drawing.Size(910, 549);
-            this.Controls.Add(this.panel_ver_usuarios_admin);
-            this.Controls.Add(this.panel_agregar_cancion_admin);
-            this.Controls.Add(this.panel_ver_artistas);
-            this.Controls.Add(this.panel_agregar_video_admin);
-            this.Controls.Add(this.panel_agregar_cancion_karaoke);
             this.Controls.Add(this.panel_ver_canciones_karaoke);
             this.Controls.Add(this.panel_ver_canciones_admin);
             this.Controls.Add(this.panel_ver_videos_admin);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.panel_ver_artistas);
+            this.Controls.Add(this.panel_ver_usuarios_admin);
+            this.Controls.Add(this.panel_agregar_video_admin);
+            this.Controls.Add(this.panel_agregar_cancion_karaoke);
+            this.Controls.Add(this.panel_agregar_cancion_admin);
             this.Controls.Add(this.btn_ver_usuarios_admin);
             this.Controls.Add(this.btn_agregar_cancion_karaoke_admin);
             this.Controls.Add(this.btn_agregar_video_admin);
             this.Controls.Add(this.btn_agregar_cancion_admin);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.logo_pobre);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FORMS_ADMIN";
@@ -2761,6 +2815,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.tabla_ver_cantantes_admin)).EndInit();
             this.panel_agregar_cancion_karaoke.ResumeLayout(false);
             this.panel_agregar_cancion_karaoke.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logo_pobre)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aLAINIDBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aLAINIDBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aLAINIDBindingSource1)).EndInit();
@@ -2784,7 +2839,6 @@
         private System.Windows.Forms.ToolStripMenuItem cancionesToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem videosToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem cancionesKaraokeToolStripMenuItem1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btn_agregar_cancion_admin;
         private System.Windows.Forms.Button btn_agregar_video_admin;
         private System.Windows.Forms.Button btn_agregar_cancion_karaoke_admin;
@@ -2983,5 +3037,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colum_pass;
         private System.Windows.Forms.DataGridViewTextBoxColumn colum_privacidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn colum_suscripcion;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox logo_pobre;
     }
 }
