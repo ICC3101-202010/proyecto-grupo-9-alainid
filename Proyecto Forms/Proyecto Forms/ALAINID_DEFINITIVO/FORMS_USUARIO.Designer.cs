@@ -124,20 +124,8 @@
             this.comboBox1_criterio = new System.Windows.Forms.ComboBox();
             this.criterio_txt_combobox1_desplegable = new System.Windows.Forms.ComboBox();
             this.criterio_txt_combobox1 = new System.Windows.Forms.TextBox();
-            this.panel_busqueda_simple = new System.Windows.Forms.Panel();
-            this.busquedasimple_valor_criterio_desplegable = new System.Windows.Forms.ComboBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.busquedasimple_criterio_text = new System.Windows.Forms.ComboBox();
-            this.busaquedasimple_valor_criterio_text = new System.Windows.Forms.TextBox();
-            this.btn_buscar_busqueda_simple = new System.Windows.Forms.Button();
-            this.label12 = new System.Windows.Forms.Label();
-            this.btn_atras_busquedasimple = new System.Windows.Forms.Button();
-            this.datagratview_busquedasimple = new System.Windows.Forms.DataGridView();
-            this.colum_nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colum_artista = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel_cancion_seleccionada_busqueda_simple = new System.Windows.Forms.Panel();
+            this.btn_atras_rep_cancion_seguido = new System.Windows.Forms.Button();
             this.btn_atras_rep_cancion_en_historial = new System.Windows.Forms.Button();
             this.btn_atras_rep_cancion_en_descargas = new System.Windows.Forms.Button();
             this.btn_atras_rep_cancion_en_busqmultiple = new System.Windows.Forms.Button();
@@ -170,8 +158,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.btn_atras_cancion_reproductor = new System.Windows.Forms.Button();
             this.panel_video_seleccionado = new System.Windows.Forms.Panel();
+            this.btn_atras_rep_video_seguido = new System.Windows.Forms.Button();
             this.btn_atras_rep_video_en_historial = new System.Windows.Forms.Button();
             this.btn_atras_rep_video_busqmultiple = new System.Windows.Forms.Button();
             this.btn_atras_rep_video_playlis = new System.Windows.Forms.Button();
@@ -203,6 +191,19 @@
             this.btnAgregar_A_Playlist = new System.Windows.Forms.Button();
             this.btnAgregar_A_Favoritos = new System.Windows.Forms.Button();
             this.axWindowsMediaPlayerVideo = new AxWMPLib.AxWindowsMediaPlayer();
+            this.panel_busqueda_simple = new System.Windows.Forms.Panel();
+            this.busquedasimple_valor_criterio_desplegable = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.busquedasimple_criterio_text = new System.Windows.Forms.ComboBox();
+            this.busaquedasimple_valor_criterio_text = new System.Windows.Forms.TextBox();
+            this.btn_buscar_busqueda_simple = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.btn_atras_busquedasimple = new System.Windows.Forms.Button();
+            this.datagratview_busquedasimple = new System.Windows.Forms.DataGridView();
+            this.colum_nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colum_artista = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_atras_de_inicio_sesion = new System.Windows.Forms.Button();
             this.btn_busqueda_simple = new System.Windows.Forms.Button();
             this.btn_busqueda_multiple = new System.Windows.Forms.Button();
@@ -255,6 +256,38 @@
             this.label39 = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
             this.panel_social_menu = new System.Windows.Forms.Panel();
+            this.panel_ver_usuario_busqueda_social = new System.Windows.Forms.Panel();
+            this.panel_canciones_playlistsong_seguido = new System.Windows.Forms.Panel();
+            this.tabla_canciones_playlist = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre_2020 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
+            this.panel_videos_playlistsong_seguido = new System.Windows.Forms.Panel();
+            this.tabla_videos_pls = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label64 = new System.Windows.Forms.Label();
+            this.label69 = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
+            this.playlistvideos_usuario_seguido = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label9 = new System.Windows.Forms.Label();
+            this.playlistcanciones_usuario_seguido = new System.Windows.Forms.DataGridView();
+            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label60 = new System.Windows.Forms.Label();
+            this.btn_seguir_usuario = new System.Windows.Forms.Button();
+            this.social_email_user_busqueda = new System.Windows.Forms.Label();
+            this.social_usuario_user_busqueda = new System.Windows.Forms.Label();
+            this.label59 = new System.Windows.Forms.Label();
+            this.label58 = new System.Windows.Forms.Label();
+            this.social_nombre_user_busqueda = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel_ver_usuario_seguido = new System.Windows.Forms.Panel();
             this.label74 = new System.Windows.Forms.Label();
             this.btn_dejarde_seguir_usuario_seguido = new System.Windows.Forms.Button();
@@ -285,15 +318,6 @@
             this.label63 = new System.Windows.Forms.Label();
             this.social_nombre_artista = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
-            this.panel_ver_usuario_busqueda_social = new System.Windows.Forms.Panel();
-            this.label60 = new System.Windows.Forms.Label();
-            this.btn_seguir_usuario = new System.Windows.Forms.Button();
-            this.social_email_user_busqueda = new System.Windows.Forms.Label();
-            this.social_usuario_user_busqueda = new System.Windows.Forms.Label();
-            this.label59 = new System.Windows.Forms.Label();
-            this.label58 = new System.Windows.Forms.Label();
-            this.social_nombre_user_busqueda = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
@@ -364,6 +388,7 @@
             this.logo_pobre = new System.Windows.Forms.PictureBox();
             this.logo_premium = new System.Windows.Forms.PictureBox();
             this.wMPOCXEventsCurrentPlaylistItemAvailableEventBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btn_atras_cancion_reproductor = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.panel_perfil_de_usuario.SuspendLayout();
             this.Panel_premium.SuspendLayout();
@@ -372,8 +397,6 @@
             this.panel_busqueda_multiple.SuspendLayout();
             this.panel_resultados_busqueda_multiple.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabla_resultados_busqueda_multiple)).BeginInit();
-            this.panel_busqueda_simple.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.datagratview_busquedasimple)).BeginInit();
             this.panel_cancion_seleccionada_busqueda_simple.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabla_canciones_cola_cancion_reproductor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.calificacion_cancion)).BeginInit();
@@ -383,6 +406,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.tabla_cola_video)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.calificacion_video)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayerVideo)).BeginInit();
+            this.panel_busqueda_simple.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.datagratview_busquedasimple)).BeginInit();
             this.panel_listainteligente_menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabla_canciones_smartlist)).BeginInit();
             this.panel_descargas_menu.SuspendLayout();
@@ -395,10 +420,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabla_canciones_karaoke)).BeginInit();
             this.panel_social_menu.SuspendLayout();
+            this.panel_ver_usuario_busqueda_social.SuspendLayout();
+            this.panel_canciones_playlistsong_seguido.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tabla_canciones_playlist)).BeginInit();
+            this.panel_videos_playlistsong_seguido.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tabla_videos_pls)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playlistvideos_usuario_seguido)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playlistcanciones_usuario_seguido)).BeginInit();
             this.panel_ver_usuario_seguido.SuspendLayout();
             this.panel_ver_artista_seguido.SuspendLayout();
             this.panel_ver_artista_busqueda_social.SuspendLayout();
-            this.panel_ver_usuario_busqueda_social.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
@@ -649,10 +680,9 @@
             this.panel_perfil_de_usuario.Controls.Add(this.label6);
             this.panel_perfil_de_usuario.Controls.Add(this.btn_atras_de_registrarse);
             this.panel_perfil_de_usuario.Controls.Add(this.btn_editar_perfil_usuario);
-            this.panel_perfil_de_usuario.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_perfil_de_usuario.Location = new System.Drawing.Point(0, 24);
+            this.panel_perfil_de_usuario.Location = new System.Drawing.Point(542, 440);
             this.panel_perfil_de_usuario.Name = "panel_perfil_de_usuario";
-            this.panel_perfil_de_usuario.Size = new System.Drawing.Size(946, 488);
+            this.panel_perfil_de_usuario.Size = new System.Drawing.Size(17, 21);
             this.panel_perfil_de_usuario.TabIndex = 50;
             this.panel_perfil_de_usuario.Visible = false;
             this.panel_perfil_de_usuario.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_perfil_de_usuario_Paint);
@@ -960,16 +990,17 @@
             // panel_buscar
             // 
             this.panel_buscar.Controls.Add(this.panel_busqueda_multiple);
-            this.panel_buscar.Controls.Add(this.panel_busqueda_simple);
             this.panel_buscar.Controls.Add(this.panel_cancion_seleccionada_busqueda_simple);
             this.panel_buscar.Controls.Add(this.panel_video_seleccionado);
+            this.panel_buscar.Controls.Add(this.panel_busqueda_simple);
             this.panel_buscar.Controls.Add(this.btn_atras_de_inicio_sesion);
             this.panel_buscar.Controls.Add(this.btn_busqueda_simple);
             this.panel_buscar.Controls.Add(this.btn_busqueda_multiple);
+            this.panel_buscar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_buscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(11)))), ((int)(((byte)(11)))));
-            this.panel_buscar.Location = new System.Drawing.Point(542, 195);
+            this.panel_buscar.Location = new System.Drawing.Point(0, 24);
             this.panel_buscar.Name = "panel_buscar";
-            this.panel_buscar.Size = new System.Drawing.Size(26, 20);
+            this.panel_buscar.Size = new System.Drawing.Size(946, 488);
             this.panel_buscar.TabIndex = 53;
             this.panel_buscar.Visible = false;
             this.panel_buscar.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_buscar_Paint);
@@ -1009,9 +1040,10 @@
             this.panel_busqueda_multiple.Controls.Add(this.comboBox1_criterio);
             this.panel_busqueda_multiple.Controls.Add(this.criterio_txt_combobox1_desplegable);
             this.panel_busqueda_multiple.Controls.Add(this.criterio_txt_combobox1);
-            this.panel_busqueda_multiple.Location = new System.Drawing.Point(727, 63);
+            this.panel_busqueda_multiple.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_busqueda_multiple.Location = new System.Drawing.Point(0, 0);
             this.panel_busqueda_multiple.Name = "panel_busqueda_multiple";
-            this.panel_busqueda_multiple.Size = new System.Drawing.Size(30, 23);
+            this.panel_busqueda_multiple.Size = new System.Drawing.Size(946, 488);
             this.panel_busqueda_multiple.TabIndex = 75;
             this.panel_busqueda_multiple.Visible = false;
             // 
@@ -1504,193 +1536,9 @@
             this.criterio_txt_combobox1.TabIndex = 75;
             this.criterio_txt_combobox1.TextChanged += new System.EventHandler(this.criterio_txt_combobox1_TextChanged);
             // 
-            // panel_busqueda_simple
-            // 
-            this.panel_busqueda_simple.Controls.Add(this.busquedasimple_valor_criterio_desplegable);
-            this.panel_busqueda_simple.Controls.Add(this.label13);
-            this.panel_busqueda_simple.Controls.Add(this.label14);
-            this.panel_busqueda_simple.Controls.Add(this.textBox2);
-            this.panel_busqueda_simple.Controls.Add(this.busquedasimple_criterio_text);
-            this.panel_busqueda_simple.Controls.Add(this.busaquedasimple_valor_criterio_text);
-            this.panel_busqueda_simple.Controls.Add(this.btn_buscar_busqueda_simple);
-            this.panel_busqueda_simple.Controls.Add(this.label12);
-            this.panel_busqueda_simple.Controls.Add(this.btn_atras_busquedasimple);
-            this.panel_busqueda_simple.Controls.Add(this.datagratview_busquedasimple);
-            this.panel_busqueda_simple.Location = new System.Drawing.Point(396, 74);
-            this.panel_busqueda_simple.Name = "panel_busqueda_simple";
-            this.panel_busqueda_simple.Size = new System.Drawing.Size(27, 26);
-            this.panel_busqueda_simple.TabIndex = 76;
-            this.panel_busqueda_simple.Visible = false;
-            // 
-            // busquedasimple_valor_criterio_desplegable
-            // 
-            this.busquedasimple_valor_criterio_desplegable.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.busquedasimple_valor_criterio_desplegable.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.busquedasimple_valor_criterio_desplegable.FormattingEnabled = true;
-            this.busquedasimple_valor_criterio_desplegable.Location = new System.Drawing.Point(446, 153);
-            this.busquedasimple_valor_criterio_desplegable.Name = "busquedasimple_valor_criterio_desplegable";
-            this.busquedasimple_valor_criterio_desplegable.Size = new System.Drawing.Size(272, 28);
-            this.busquedasimple_valor_criterio_desplegable.TabIndex = 125;
-            this.busquedasimple_valor_criterio_desplegable.SelectedIndexChanged += new System.EventHandler(this.busquedasimple_valor_criterio_desplegable_SelectedIndexChanged);
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Black;
-            this.label13.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label13.Font = new System.Drawing.Font("Old Growth", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(39, 154);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(255, 31);
-            this.label13.TabIndex = 124;
-            this.label13.Text = "palabra clave";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Black;
-            this.label14.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label14.Font = new System.Drawing.Font("Old Growth", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(39, 97);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(365, 31);
-            this.label14.TabIndex = 123;
-            this.label14.Text = "criterio de busqueda";
-            // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.Color.Maroon;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Arial", 1.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(26, 208);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(900, 3);
-            this.textBox2.TabIndex = 120;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            // 
-            // busquedasimple_criterio_text
-            // 
-            this.busquedasimple_criterio_text.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.busquedasimple_criterio_text.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.busquedasimple_criterio_text.FormattingEnabled = true;
-            this.busquedasimple_criterio_text.Items.AddRange(new object[] {
-            "Nombre Cancion/Video",
-            "Genero Cancion",
-            "Genero Video",
-            "Categoria Video",
-            "Artista",
-            "Album",
-            "Disquera",
-            "Film Studio",
-            "Año de Publicacion",
-            "Edad del Artista",
-            "Sexo del Artista",
-            "Evaluacion",
-            "Calidad/Resolucion"});
-            this.busquedasimple_criterio_text.Location = new System.Drawing.Point(446, 96);
-            this.busquedasimple_criterio_text.Name = "busquedasimple_criterio_text";
-            this.busquedasimple_criterio_text.Size = new System.Drawing.Size(272, 28);
-            this.busquedasimple_criterio_text.TabIndex = 117;
-            this.busquedasimple_criterio_text.SelectedIndexChanged += new System.EventHandler(this.busquedasimple_criterio_text_SelectedIndexChanged);
-            this.busquedasimple_criterio_text.SelectedValueChanged += new System.EventHandler(this.busquedasimple_criterio_text_SelectedValueChanged);
-            // 
-            // busaquedasimple_valor_criterio_text
-            // 
-            this.busaquedasimple_valor_criterio_text.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.busaquedasimple_valor_criterio_text.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.busaquedasimple_valor_criterio_text.Location = new System.Drawing.Point(446, 153);
-            this.busaquedasimple_valor_criterio_text.Margin = new System.Windows.Forms.Padding(2);
-            this.busaquedasimple_valor_criterio_text.Name = "busaquedasimple_valor_criterio_text";
-            this.busaquedasimple_valor_criterio_text.Size = new System.Drawing.Size(272, 26);
-            this.busaquedasimple_valor_criterio_text.TabIndex = 116;
-            this.busaquedasimple_valor_criterio_text.TextChanged += new System.EventHandler(this.busaquedasimple_valor_criterio_text_TextChanged);
-            // 
-            // btn_buscar_busqueda_simple
-            // 
-            this.btn_buscar_busqueda_simple.Font = new System.Drawing.Font("Old Growth", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_buscar_busqueda_simple.Location = new System.Drawing.Point(749, 111);
-            this.btn_buscar_busqueda_simple.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_buscar_busqueda_simple.Name = "btn_buscar_busqueda_simple";
-            this.btn_buscar_busqueda_simple.Size = new System.Drawing.Size(158, 59);
-            this.btn_buscar_busqueda_simple.TabIndex = 115;
-            this.btn_buscar_busqueda_simple.Text = "buscar";
-            this.btn_buscar_busqueda_simple.UseVisualStyleBackColor = true;
-            this.btn_buscar_busqueda_simple.Click += new System.EventHandler(this.btn_buscar_busqueda_simple_Click);
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Maroon;
-            this.label12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label12.Font = new System.Drawing.Font("Old Growth", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(344, 15);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(319, 34);
-            this.label12.TabIndex = 102;
-            this.label12.Text = "busqueda simple";
-            // 
-            // btn_atras_busquedasimple
-            // 
-            this.btn_atras_busquedasimple.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_atras_busquedasimple.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_atras_busquedasimple.Image = global::ALAINID_DEFINITIVO.Properties.Resources.atras_btn1;
-            this.btn_atras_busquedasimple.Location = new System.Drawing.Point(854, 14);
-            this.btn_atras_busquedasimple.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_atras_busquedasimple.Name = "btn_atras_busquedasimple";
-            this.btn_atras_busquedasimple.Size = new System.Drawing.Size(71, 35);
-            this.btn_atras_busquedasimple.TabIndex = 74;
-            this.btn_atras_busquedasimple.UseVisualStyleBackColor = true;
-            this.btn_atras_busquedasimple.Click += new System.EventHandler(this.btn_atras_busquedasimple_Click);
-            // 
-            // datagratview_busquedasimple
-            // 
-            this.datagratview_busquedasimple.AllowUserToAddRows = false;
-            this.datagratview_busquedasimple.AllowUserToDeleteRows = false;
-            this.datagratview_busquedasimple.AllowUserToResizeColumns = false;
-            this.datagratview_busquedasimple.AllowUserToResizeRows = false;
-            this.datagratview_busquedasimple.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.datagratview_busquedasimple.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.datagratview_busquedasimple.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.datagratview_busquedasimple.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colum_nombre,
-            this.colum_artista});
-            this.datagratview_busquedasimple.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.datagratview_busquedasimple.Location = new System.Drawing.Point(26, 216);
-            this.datagratview_busquedasimple.MultiSelect = false;
-            this.datagratview_busquedasimple.Name = "datagratview_busquedasimple";
-            this.datagratview_busquedasimple.ReadOnly = true;
-            this.datagratview_busquedasimple.RowHeadersVisible = false;
-            this.datagratview_busquedasimple.RowHeadersWidth = 51;
-            this.datagratview_busquedasimple.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.datagratview_busquedasimple.Size = new System.Drawing.Size(899, 266);
-            this.datagratview_busquedasimple.TabIndex = 121;
-            this.datagratview_busquedasimple.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            this.datagratview_busquedasimple.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagratview_busquedasimple_CellContentDoubleClick);
-            this.datagratview_busquedasimple.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagratview_busquedasimple_CellDoubleClick);
-            // 
-            // colum_nombre
-            // 
-            this.colum_nombre.HeaderText = "Nombre";
-            this.colum_nombre.MinimumWidth = 6;
-            this.colum_nombre.Name = "colum_nombre";
-            this.colum_nombre.ReadOnly = true;
-            // 
-            // colum_artista
-            // 
-            this.colum_artista.HeaderText = "Artista";
-            this.colum_artista.MinimumWidth = 6;
-            this.colum_artista.Name = "colum_artista";
-            this.colum_artista.ReadOnly = true;
-            // 
             // panel_cancion_seleccionada_busqueda_simple
             // 
+            this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.btn_atras_rep_cancion_seguido);
             this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.btn_atras_rep_cancion_en_historial);
             this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.btn_atras_rep_cancion_en_descargas);
             this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.btn_atras_rep_cancion_en_busqmultiple);
@@ -1723,12 +1571,26 @@
             this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.label16);
             this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.label15);
             this.panel_cancion_seleccionada_busqueda_simple.Controls.Add(this.btn_atras_cancion_reproductor);
-            this.panel_cancion_seleccionada_busqueda_simple.Location = new System.Drawing.Point(845, 425);
+            this.panel_cancion_seleccionada_busqueda_simple.Location = new System.Drawing.Point(850, 434);
             this.panel_cancion_seleccionada_busqueda_simple.Name = "panel_cancion_seleccionada_busqueda_simple";
-            this.panel_cancion_seleccionada_busqueda_simple.Size = new System.Drawing.Size(20, 14);
+            this.panel_cancion_seleccionada_busqueda_simple.Size = new System.Drawing.Size(34, 23);
             this.panel_cancion_seleccionada_busqueda_simple.TabIndex = 126;
             this.panel_cancion_seleccionada_busqueda_simple.Visible = false;
             this.panel_cancion_seleccionada_busqueda_simple.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_cancion_seleccionada_busqueda_simple_Paint);
+            // 
+            // btn_atras_rep_cancion_seguido
+            // 
+            this.btn_atras_rep_cancion_seguido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_atras_rep_cancion_seguido.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_atras_rep_cancion_seguido.Image = global::ALAINID_DEFINITIVO.Properties.Resources.atras_btn1;
+            this.btn_atras_rep_cancion_seguido.Location = new System.Drawing.Point(856, 12);
+            this.btn_atras_rep_cancion_seguido.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_atras_rep_cancion_seguido.Name = "btn_atras_rep_cancion_seguido";
+            this.btn_atras_rep_cancion_seguido.Size = new System.Drawing.Size(71, 35);
+            this.btn_atras_rep_cancion_seguido.TabIndex = 170;
+            this.btn_atras_rep_cancion_seguido.UseVisualStyleBackColor = true;
+            this.btn_atras_rep_cancion_seguido.Visible = false;
+            this.btn_atras_rep_cancion_seguido.Click += new System.EventHandler(this.btn_atras_rep_cancion_seguido_Click);
             // 
             // btn_atras_rep_cancion_en_historial
             // 
@@ -1746,26 +1608,28 @@
             // 
             // btn_atras_rep_cancion_en_descargas
             // 
+            this.btn_atras_rep_cancion_en_descargas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_atras_rep_cancion_en_descargas.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_atras_rep_cancion_en_descargas.Image = global::ALAINID_DEFINITIVO.Properties.Resources.atras_btn1;
             this.btn_atras_rep_cancion_en_descargas.Location = new System.Drawing.Point(856, 12);
             this.btn_atras_rep_cancion_en_descargas.Margin = new System.Windows.Forms.Padding(2);
             this.btn_atras_rep_cancion_en_descargas.Name = "btn_atras_rep_cancion_en_descargas";
             this.btn_atras_rep_cancion_en_descargas.Size = new System.Drawing.Size(71, 35);
             this.btn_atras_rep_cancion_en_descargas.TabIndex = 168;
-            this.btn_atras_rep_cancion_en_descargas.Text = "Atras";
             this.btn_atras_rep_cancion_en_descargas.UseVisualStyleBackColor = true;
             this.btn_atras_rep_cancion_en_descargas.Visible = false;
             this.btn_atras_rep_cancion_en_descargas.Click += new System.EventHandler(this.btn_atras_rep_cancion_en_descargas_Click);
             // 
             // btn_atras_rep_cancion_en_busqmultiple
             // 
+            this.btn_atras_rep_cancion_en_busqmultiple.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_atras_rep_cancion_en_busqmultiple.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_atras_rep_cancion_en_busqmultiple.Image = global::ALAINID_DEFINITIVO.Properties.Resources.atras_btn1;
             this.btn_atras_rep_cancion_en_busqmultiple.Location = new System.Drawing.Point(856, 12);
             this.btn_atras_rep_cancion_en_busqmultiple.Margin = new System.Windows.Forms.Padding(2);
             this.btn_atras_rep_cancion_en_busqmultiple.Name = "btn_atras_rep_cancion_en_busqmultiple";
             this.btn_atras_rep_cancion_en_busqmultiple.Size = new System.Drawing.Size(71, 35);
             this.btn_atras_rep_cancion_en_busqmultiple.TabIndex = 167;
-            this.btn_atras_rep_cancion_en_busqmultiple.Text = "Atras";
             this.btn_atras_rep_cancion_en_busqmultiple.UseVisualStyleBackColor = true;
             this.btn_atras_rep_cancion_en_busqmultiple.Visible = false;
             this.btn_atras_rep_cancion_en_busqmultiple.Click += new System.EventHandler(this.btn_atras_rep_cancion_en_busqmultiple_Click);
@@ -1801,39 +1665,42 @@
             // 
             // btn_atras_rep_cancion_en_smartlist
             // 
+            this.btn_atras_rep_cancion_en_smartlist.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_atras_rep_cancion_en_smartlist.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_atras_rep_cancion_en_smartlist.Image = global::ALAINID_DEFINITIVO.Properties.Resources.atras_btn1;
             this.btn_atras_rep_cancion_en_smartlist.Location = new System.Drawing.Point(856, 12);
             this.btn_atras_rep_cancion_en_smartlist.Margin = new System.Windows.Forms.Padding(2);
             this.btn_atras_rep_cancion_en_smartlist.Name = "btn_atras_rep_cancion_en_smartlist";
             this.btn_atras_rep_cancion_en_smartlist.Size = new System.Drawing.Size(71, 35);
             this.btn_atras_rep_cancion_en_smartlist.TabIndex = 164;
-            this.btn_atras_rep_cancion_en_smartlist.Text = "Atras";
             this.btn_atras_rep_cancion_en_smartlist.UseVisualStyleBackColor = true;
             this.btn_atras_rep_cancion_en_smartlist.Visible = false;
             this.btn_atras_rep_cancion_en_smartlist.Click += new System.EventHandler(this.btn_atras_rep_cancion_en_smartlist_Click);
             // 
             // btn_atras_rep_cancion_en_favoritos
             // 
+            this.btn_atras_rep_cancion_en_favoritos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_atras_rep_cancion_en_favoritos.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_atras_rep_cancion_en_favoritos.Image = global::ALAINID_DEFINITIVO.Properties.Resources.atras_btn1;
             this.btn_atras_rep_cancion_en_favoritos.Location = new System.Drawing.Point(856, 12);
             this.btn_atras_rep_cancion_en_favoritos.Margin = new System.Windows.Forms.Padding(2);
             this.btn_atras_rep_cancion_en_favoritos.Name = "btn_atras_rep_cancion_en_favoritos";
             this.btn_atras_rep_cancion_en_favoritos.Size = new System.Drawing.Size(71, 35);
             this.btn_atras_rep_cancion_en_favoritos.TabIndex = 163;
-            this.btn_atras_rep_cancion_en_favoritos.Text = "Atras";
             this.btn_atras_rep_cancion_en_favoritos.UseVisualStyleBackColor = true;
             this.btn_atras_rep_cancion_en_favoritos.Visible = false;
             this.btn_atras_rep_cancion_en_favoritos.Click += new System.EventHandler(this.btn_atras_rep_cancion_en_favoritos_Click);
             // 
             // btn_atras_rep_cancion_en_playlist
             // 
+            this.btn_atras_rep_cancion_en_playlist.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_atras_rep_cancion_en_playlist.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_atras_rep_cancion_en_playlist.Image = global::ALAINID_DEFINITIVO.Properties.Resources.atras_btn1;
             this.btn_atras_rep_cancion_en_playlist.Location = new System.Drawing.Point(856, 12);
             this.btn_atras_rep_cancion_en_playlist.Margin = new System.Windows.Forms.Padding(2);
             this.btn_atras_rep_cancion_en_playlist.Name = "btn_atras_rep_cancion_en_playlist";
             this.btn_atras_rep_cancion_en_playlist.Size = new System.Drawing.Size(71, 35);
             this.btn_atras_rep_cancion_en_playlist.TabIndex = 162;
-            this.btn_atras_rep_cancion_en_playlist.Text = "Atras";
             this.btn_atras_rep_cancion_en_playlist.UseVisualStyleBackColor = true;
             this.btn_atras_rep_cancion_en_playlist.Visible = false;
             this.btn_atras_rep_cancion_en_playlist.Click += new System.EventHandler(this.btn_atras_rep_cancion_en_playlist_Click);
@@ -2043,7 +1910,7 @@
             this.axWindowsMediaPlayer2.Enabled = true;
             this.axWindowsMediaPlayer2.Location = new System.Drawing.Point(4, 383);
             this.axWindowsMediaPlayer2.Name = "axWindowsMediaPlayer2";
-            this.axWindowsMediaPlayer2.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer2.OcxState")));
+      //      this.axWindowsMediaPlayer2.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer2.OcxState")));
             this.axWindowsMediaPlayer2.Size = new System.Drawing.Size(935, 93);
             this.axWindowsMediaPlayer2.TabIndex = 145;
             this.axWindowsMediaPlayer2.Enter += new System.EventHandler(this.axWindowsMediaPlayer2_Enter);
@@ -2126,21 +1993,9 @@
             this.label15.TabIndex = 130;
             this.label15.Text = "cantante";
             // 
-            // btn_atras_cancion_reproductor
-            // 
-            this.btn_atras_cancion_reproductor.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_atras_cancion_reproductor.Location = new System.Drawing.Point(856, 12);
-            this.btn_atras_cancion_reproductor.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_atras_cancion_reproductor.Name = "btn_atras_cancion_reproductor";
-            this.btn_atras_cancion_reproductor.Size = new System.Drawing.Size(71, 35);
-            this.btn_atras_cancion_reproductor.TabIndex = 126;
-            this.btn_atras_cancion_reproductor.Text = "Atras";
-            this.btn_atras_cancion_reproductor.UseVisualStyleBackColor = true;
-            this.btn_atras_cancion_reproductor.Visible = false;
-            this.btn_atras_cancion_reproductor.Click += new System.EventHandler(this.button2_Click);
-            // 
             // panel_video_seleccionado
             // 
+            this.panel_video_seleccionado.Controls.Add(this.btn_atras_rep_video_seguido);
             this.panel_video_seleccionado.Controls.Add(this.btn_atras_rep_video_en_historial);
             this.panel_video_seleccionado.Controls.Add(this.btn_atras_rep_video_busqmultiple);
             this.panel_video_seleccionado.Controls.Add(this.btn_atras_rep_video_playlis);
@@ -2170,13 +2025,27 @@
             this.panel_video_seleccionado.Controls.Add(this.btnAgregar_A_Playlist);
             this.panel_video_seleccionado.Controls.Add(this.btnAgregar_A_Favoritos);
             this.panel_video_seleccionado.Controls.Add(this.axWindowsMediaPlayerVideo);
-            this.panel_video_seleccionado.Location = new System.Drawing.Point(898, 422);
+            this.panel_video_seleccionado.Location = new System.Drawing.Point(894, 436);
             this.panel_video_seleccionado.Margin = new System.Windows.Forms.Padding(2);
             this.panel_video_seleccionado.Name = "panel_video_seleccionado";
-            this.panel_video_seleccionado.Size = new System.Drawing.Size(27, 21);
+            this.panel_video_seleccionado.Size = new System.Drawing.Size(36, 21);
             this.panel_video_seleccionado.TabIndex = 127;
             this.panel_video_seleccionado.Visible = false;
             this.panel_video_seleccionado.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_video_seleccionado_Paint);
+            // 
+            // btn_atras_rep_video_seguido
+            // 
+            this.btn_atras_rep_video_seguido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_atras_rep_video_seguido.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_atras_rep_video_seguido.Image = global::ALAINID_DEFINITIVO.Properties.Resources.atras_btn1;
+            this.btn_atras_rep_video_seguido.Location = new System.Drawing.Point(740, 12);
+            this.btn_atras_rep_video_seguido.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_atras_rep_video_seguido.Name = "btn_atras_rep_video_seguido";
+            this.btn_atras_rep_video_seguido.Size = new System.Drawing.Size(71, 35);
+            this.btn_atras_rep_video_seguido.TabIndex = 38;
+            this.btn_atras_rep_video_seguido.UseVisualStyleBackColor = true;
+            this.btn_atras_rep_video_seguido.Visible = false;
+            this.btn_atras_rep_video_seguido.Click += new System.EventHandler(this.btn_atras_rep_video_seguido_Click);
             // 
             // btn_atras_rep_video_en_historial
             // 
@@ -2194,52 +2063,56 @@
             // 
             // btn_atras_rep_video_busqmultiple
             // 
+            this.btn_atras_rep_video_busqmultiple.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_atras_rep_video_busqmultiple.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_atras_rep_video_busqmultiple.Image = global::ALAINID_DEFINITIVO.Properties.Resources.atras_btn1;
             this.btn_atras_rep_video_busqmultiple.Location = new System.Drawing.Point(856, 12);
             this.btn_atras_rep_video_busqmultiple.Margin = new System.Windows.Forms.Padding(2);
             this.btn_atras_rep_video_busqmultiple.Name = "btn_atras_rep_video_busqmultiple";
             this.btn_atras_rep_video_busqmultiple.Size = new System.Drawing.Size(71, 35);
             this.btn_atras_rep_video_busqmultiple.TabIndex = 36;
-            this.btn_atras_rep_video_busqmultiple.Text = "Atras";
             this.btn_atras_rep_video_busqmultiple.UseVisualStyleBackColor = true;
             this.btn_atras_rep_video_busqmultiple.Visible = false;
             this.btn_atras_rep_video_busqmultiple.Click += new System.EventHandler(this.btn_atras_rep_video_busqmultiple_Click);
             // 
             // btn_atras_rep_video_playlis
             // 
+            this.btn_atras_rep_video_playlis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_atras_rep_video_playlis.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_atras_rep_video_playlis.Image = global::ALAINID_DEFINITIVO.Properties.Resources.atras_btn1;
             this.btn_atras_rep_video_playlis.Location = new System.Drawing.Point(856, 12);
             this.btn_atras_rep_video_playlis.Margin = new System.Windows.Forms.Padding(2);
             this.btn_atras_rep_video_playlis.Name = "btn_atras_rep_video_playlis";
             this.btn_atras_rep_video_playlis.Size = new System.Drawing.Size(71, 35);
             this.btn_atras_rep_video_playlis.TabIndex = 35;
-            this.btn_atras_rep_video_playlis.Text = "Atras";
             this.btn_atras_rep_video_playlis.UseVisualStyleBackColor = true;
             this.btn_atras_rep_video_playlis.Visible = false;
             this.btn_atras_rep_video_playlis.Click += new System.EventHandler(this.btn_atras_rep_video_playlis_Click);
             // 
             // btn_atras_rep_video_favorito
             // 
+            this.btn_atras_rep_video_favorito.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_atras_rep_video_favorito.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_atras_rep_video_favorito.Image = global::ALAINID_DEFINITIVO.Properties.Resources.atras_btn1;
             this.btn_atras_rep_video_favorito.Location = new System.Drawing.Point(856, 12);
             this.btn_atras_rep_video_favorito.Margin = new System.Windows.Forms.Padding(2);
             this.btn_atras_rep_video_favorito.Name = "btn_atras_rep_video_favorito";
             this.btn_atras_rep_video_favorito.Size = new System.Drawing.Size(71, 35);
             this.btn_atras_rep_video_favorito.TabIndex = 34;
-            this.btn_atras_rep_video_favorito.Text = "Atras";
             this.btn_atras_rep_video_favorito.UseVisualStyleBackColor = true;
             this.btn_atras_rep_video_favorito.Visible = false;
             this.btn_atras_rep_video_favorito.Click += new System.EventHandler(this.btn_atras_rep_video_favorito_Click);
             // 
             // btn_atras_rep_video_smart
             // 
+            this.btn_atras_rep_video_smart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_atras_rep_video_smart.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_atras_rep_video_smart.Image = global::ALAINID_DEFINITIVO.Properties.Resources.atras_btn1;
             this.btn_atras_rep_video_smart.Location = new System.Drawing.Point(856, 12);
             this.btn_atras_rep_video_smart.Margin = new System.Windows.Forms.Padding(2);
             this.btn_atras_rep_video_smart.Name = "btn_atras_rep_video_smart";
             this.btn_atras_rep_video_smart.Size = new System.Drawing.Size(71, 35);
             this.btn_atras_rep_video_smart.TabIndex = 33;
-            this.btn_atras_rep_video_smart.Text = "Atras";
             this.btn_atras_rep_video_smart.UseVisualStyleBackColor = true;
             this.btn_atras_rep_video_smart.Visible = false;
             this.btn_atras_rep_video_smart.Click += new System.EventHandler(this.btn_atras_rep_video_smart_Click);
@@ -2273,13 +2146,14 @@
             // 
             // btn_atras_rep_video_playlist
             // 
+            this.btn_atras_rep_video_playlist.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_atras_rep_video_playlist.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_atras_rep_video_playlist.Image = global::ALAINID_DEFINITIVO.Properties.Resources.atras_btn1;
             this.btn_atras_rep_video_playlist.Location = new System.Drawing.Point(856, 12);
             this.btn_atras_rep_video_playlist.Margin = new System.Windows.Forms.Padding(2);
             this.btn_atras_rep_video_playlist.Name = "btn_atras_rep_video_playlist";
             this.btn_atras_rep_video_playlist.Size = new System.Drawing.Size(71, 35);
             this.btn_atras_rep_video_playlist.TabIndex = 28;
-            this.btn_atras_rep_video_playlist.Text = "Atras";
             this.btn_atras_rep_video_playlist.UseVisualStyleBackColor = true;
             this.btn_atras_rep_video_playlist.Visible = false;
             this.btn_atras_rep_video_playlist.Click += new System.EventHandler(this.btn_atras_rep_video_playlist_Click);
@@ -2476,7 +2350,7 @@
             this.listaplaylist.Location = new System.Drawing.Point(763, 178);
             this.listaplaylist.Margin = new System.Windows.Forms.Padding(2);
             this.listaplaylist.Name = "listaplaylist";
-            this.listaplaylist.Size = new System.Drawing.Size(164, 31);
+            this.listaplaylist.Size = new System.Drawing.Size(172, 31);
             this.listaplaylist.TabIndex = 6;
             // 
             // calificacion_video
@@ -2560,9 +2434,194 @@
             this.axWindowsMediaPlayerVideo.Location = new System.Drawing.Point(191, 77);
             this.axWindowsMediaPlayerVideo.Margin = new System.Windows.Forms.Padding(2);
             this.axWindowsMediaPlayerVideo.Name = "axWindowsMediaPlayerVideo";
-            this.axWindowsMediaPlayerVideo.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayerVideo.OcxState")));
+       //     this.axWindowsMediaPlayerVideo.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayerVideo.OcxState")));
             this.axWindowsMediaPlayerVideo.Size = new System.Drawing.Size(561, 377);
             this.axWindowsMediaPlayerVideo.TabIndex = 0;
+            // 
+            // panel_busqueda_simple
+            // 
+            this.panel_busqueda_simple.Controls.Add(this.busquedasimple_valor_criterio_desplegable);
+            this.panel_busqueda_simple.Controls.Add(this.label13);
+            this.panel_busqueda_simple.Controls.Add(this.label14);
+            this.panel_busqueda_simple.Controls.Add(this.textBox2);
+            this.panel_busqueda_simple.Controls.Add(this.busquedasimple_criterio_text);
+            this.panel_busqueda_simple.Controls.Add(this.busaquedasimple_valor_criterio_text);
+            this.panel_busqueda_simple.Controls.Add(this.btn_buscar_busqueda_simple);
+            this.panel_busqueda_simple.Controls.Add(this.label12);
+            this.panel_busqueda_simple.Controls.Add(this.btn_atras_busquedasimple);
+            this.panel_busqueda_simple.Controls.Add(this.datagratview_busquedasimple);
+            this.panel_busqueda_simple.Location = new System.Drawing.Point(396, 74);
+            this.panel_busqueda_simple.Name = "panel_busqueda_simple";
+            this.panel_busqueda_simple.Size = new System.Drawing.Size(27, 26);
+            this.panel_busqueda_simple.TabIndex = 76;
+            this.panel_busqueda_simple.Visible = false;
+            // 
+            // busquedasimple_valor_criterio_desplegable
+            // 
+            this.busquedasimple_valor_criterio_desplegable.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.busquedasimple_valor_criterio_desplegable.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.busquedasimple_valor_criterio_desplegable.FormattingEnabled = true;
+            this.busquedasimple_valor_criterio_desplegable.Location = new System.Drawing.Point(446, 153);
+            this.busquedasimple_valor_criterio_desplegable.Name = "busquedasimple_valor_criterio_desplegable";
+            this.busquedasimple_valor_criterio_desplegable.Size = new System.Drawing.Size(272, 28);
+            this.busquedasimple_valor_criterio_desplegable.TabIndex = 125;
+            this.busquedasimple_valor_criterio_desplegable.SelectedIndexChanged += new System.EventHandler(this.busquedasimple_valor_criterio_desplegable_SelectedIndexChanged);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Black;
+            this.label13.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label13.Font = new System.Drawing.Font("Old Growth", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(39, 154);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(255, 31);
+            this.label13.TabIndex = 124;
+            this.label13.Text = "palabra clave";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Black;
+            this.label14.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label14.Font = new System.Drawing.Font("Old Growth", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(39, 97);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(365, 31);
+            this.label14.TabIndex = 123;
+            this.label14.Text = "criterio de busqueda";
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.Color.Maroon;
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Font = new System.Drawing.Font("Arial", 1.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(26, 208);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(900, 3);
+            this.textBox2.TabIndex = 120;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // busquedasimple_criterio_text
+            // 
+            this.busquedasimple_criterio_text.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.busquedasimple_criterio_text.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.busquedasimple_criterio_text.FormattingEnabled = true;
+            this.busquedasimple_criterio_text.Items.AddRange(new object[] {
+            "Nombre Cancion/Video",
+            "Genero Cancion",
+            "Genero Video",
+            "Categoria Video",
+            "Artista",
+            "Album",
+            "Disquera",
+            "Film Studio",
+            "Año de Publicacion",
+            "Edad del Artista",
+            "Sexo del Artista",
+            "Evaluacion",
+            "Calidad/Resolucion"});
+            this.busquedasimple_criterio_text.Location = new System.Drawing.Point(446, 96);
+            this.busquedasimple_criterio_text.Name = "busquedasimple_criterio_text";
+            this.busquedasimple_criterio_text.Size = new System.Drawing.Size(272, 28);
+            this.busquedasimple_criterio_text.TabIndex = 117;
+            this.busquedasimple_criterio_text.SelectedIndexChanged += new System.EventHandler(this.busquedasimple_criterio_text_SelectedIndexChanged);
+            this.busquedasimple_criterio_text.SelectedValueChanged += new System.EventHandler(this.busquedasimple_criterio_text_SelectedValueChanged);
+            // 
+            // busaquedasimple_valor_criterio_text
+            // 
+            this.busaquedasimple_valor_criterio_text.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.busaquedasimple_valor_criterio_text.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.busaquedasimple_valor_criterio_text.Location = new System.Drawing.Point(446, 153);
+            this.busaquedasimple_valor_criterio_text.Margin = new System.Windows.Forms.Padding(2);
+            this.busaquedasimple_valor_criterio_text.Name = "busaquedasimple_valor_criterio_text";
+            this.busaquedasimple_valor_criterio_text.Size = new System.Drawing.Size(272, 26);
+            this.busaquedasimple_valor_criterio_text.TabIndex = 116;
+            this.busaquedasimple_valor_criterio_text.TextChanged += new System.EventHandler(this.busaquedasimple_valor_criterio_text_TextChanged);
+            // 
+            // btn_buscar_busqueda_simple
+            // 
+            this.btn_buscar_busqueda_simple.Font = new System.Drawing.Font("Old Growth", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_buscar_busqueda_simple.Location = new System.Drawing.Point(749, 111);
+            this.btn_buscar_busqueda_simple.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_buscar_busqueda_simple.Name = "btn_buscar_busqueda_simple";
+            this.btn_buscar_busqueda_simple.Size = new System.Drawing.Size(158, 59);
+            this.btn_buscar_busqueda_simple.TabIndex = 115;
+            this.btn_buscar_busqueda_simple.Text = "buscar";
+            this.btn_buscar_busqueda_simple.UseVisualStyleBackColor = true;
+            this.btn_buscar_busqueda_simple.Click += new System.EventHandler(this.btn_buscar_busqueda_simple_Click);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Maroon;
+            this.label12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label12.Font = new System.Drawing.Font("Old Growth", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(344, 15);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(319, 34);
+            this.label12.TabIndex = 102;
+            this.label12.Text = "busqueda simple";
+            // 
+            // btn_atras_busquedasimple
+            // 
+            this.btn_atras_busquedasimple.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_atras_busquedasimple.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_atras_busquedasimple.Image = global::ALAINID_DEFINITIVO.Properties.Resources.atras_btn1;
+            this.btn_atras_busquedasimple.Location = new System.Drawing.Point(854, 14);
+            this.btn_atras_busquedasimple.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_atras_busquedasimple.Name = "btn_atras_busquedasimple";
+            this.btn_atras_busquedasimple.Size = new System.Drawing.Size(71, 35);
+            this.btn_atras_busquedasimple.TabIndex = 74;
+            this.btn_atras_busquedasimple.UseVisualStyleBackColor = true;
+            this.btn_atras_busquedasimple.Click += new System.EventHandler(this.btn_atras_busquedasimple_Click);
+            // 
+            // datagratview_busquedasimple
+            // 
+            this.datagratview_busquedasimple.AllowUserToAddRows = false;
+            this.datagratview_busquedasimple.AllowUserToDeleteRows = false;
+            this.datagratview_busquedasimple.AllowUserToResizeColumns = false;
+            this.datagratview_busquedasimple.AllowUserToResizeRows = false;
+            this.datagratview_busquedasimple.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.datagratview_busquedasimple.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.datagratview_busquedasimple.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.datagratview_busquedasimple.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colum_nombre,
+            this.colum_artista});
+            this.datagratview_busquedasimple.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.datagratview_busquedasimple.Location = new System.Drawing.Point(26, 216);
+            this.datagratview_busquedasimple.MultiSelect = false;
+            this.datagratview_busquedasimple.Name = "datagratview_busquedasimple";
+            this.datagratview_busquedasimple.ReadOnly = true;
+            this.datagratview_busquedasimple.RowHeadersVisible = false;
+            this.datagratview_busquedasimple.RowHeadersWidth = 51;
+            this.datagratview_busquedasimple.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.datagratview_busquedasimple.Size = new System.Drawing.Size(899, 266);
+            this.datagratview_busquedasimple.TabIndex = 121;
+            this.datagratview_busquedasimple.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.datagratview_busquedasimple.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagratview_busquedasimple_CellContentDoubleClick);
+            this.datagratview_busquedasimple.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagratview_busquedasimple_CellDoubleClick);
+            // 
+            // colum_nombre
+            // 
+            this.colum_nombre.HeaderText = "Nombre";
+            this.colum_nombre.MinimumWidth = 6;
+            this.colum_nombre.Name = "colum_nombre";
+            this.colum_nombre.ReadOnly = true;
+            // 
+            // colum_artista
+            // 
+            this.colum_artista.HeaderText = "Artista";
+            this.colum_artista.MinimumWidth = 6;
+            this.colum_artista.Name = "colum_artista";
+            this.colum_artista.ReadOnly = true;
             // 
             // btn_atras_de_inicio_sesion
             // 
@@ -3090,7 +3149,7 @@
             this.axWindowsMediaPlayer3.Location = new System.Drawing.Point(15, 77);
             this.axWindowsMediaPlayer3.Margin = new System.Windows.Forms.Padding(2);
             this.axWindowsMediaPlayer3.Name = "axWindowsMediaPlayer3";
-            this.axWindowsMediaPlayer3.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer3.OcxState")));
+      //      this.axWindowsMediaPlayer3.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer3.OcxState")));
             this.axWindowsMediaPlayer3.Size = new System.Drawing.Size(920, 400);
             this.axWindowsMediaPlayer3.TabIndex = 31;
             // 
@@ -3175,10 +3234,10 @@
             // 
             // panel_social_menu
             // 
+            this.panel_social_menu.Controls.Add(this.panel_ver_usuario_busqueda_social);
             this.panel_social_menu.Controls.Add(this.panel_ver_usuario_seguido);
             this.panel_social_menu.Controls.Add(this.panel_ver_artista_seguido);
             this.panel_social_menu.Controls.Add(this.panel_ver_artista_busqueda_social);
-            this.panel_social_menu.Controls.Add(this.panel_ver_usuario_busqueda_social);
             this.panel_social_menu.Controls.Add(this.dataGridView5);
             this.panel_social_menu.Controls.Add(this.dataGridView4);
             this.panel_social_menu.Controls.Add(this.dataGridView3);
@@ -3195,11 +3254,389 @@
             this.panel_social_menu.Controls.Add(this.palabra_clave_buscar_social);
             this.panel_social_menu.Controls.Add(this.label37);
             this.panel_social_menu.Controls.Add(this.btn_atras_social);
-            this.panel_social_menu.Location = new System.Drawing.Point(552, 381);
+            this.panel_social_menu.Location = new System.Drawing.Point(614, 342);
             this.panel_social_menu.Name = "panel_social_menu";
-            this.panel_social_menu.Size = new System.Drawing.Size(10, 19);
+            this.panel_social_menu.Size = new System.Drawing.Size(332, 170);
             this.panel_social_menu.TabIndex = 0;
             this.panel_social_menu.Visible = false;
+            // 
+            // panel_ver_usuario_busqueda_social
+            // 
+            this.panel_ver_usuario_busqueda_social.Controls.Add(this.panel_canciones_playlistsong_seguido);
+            this.panel_ver_usuario_busqueda_social.Controls.Add(this.panel_videos_playlistsong_seguido);
+            this.panel_ver_usuario_busqueda_social.Controls.Add(this.playlistvideos_usuario_seguido);
+            this.panel_ver_usuario_busqueda_social.Controls.Add(this.label9);
+            this.panel_ver_usuario_busqueda_social.Controls.Add(this.playlistcanciones_usuario_seguido);
+            this.panel_ver_usuario_busqueda_social.Controls.Add(this.label60);
+            this.panel_ver_usuario_busqueda_social.Controls.Add(this.btn_seguir_usuario);
+            this.panel_ver_usuario_busqueda_social.Controls.Add(this.social_email_user_busqueda);
+            this.panel_ver_usuario_busqueda_social.Controls.Add(this.social_usuario_user_busqueda);
+            this.panel_ver_usuario_busqueda_social.Controls.Add(this.label59);
+            this.panel_ver_usuario_busqueda_social.Controls.Add(this.label58);
+            this.panel_ver_usuario_busqueda_social.Controls.Add(this.social_nombre_user_busqueda);
+            this.panel_ver_usuario_busqueda_social.Controls.Add(this.button1);
+            this.panel_ver_usuario_busqueda_social.Location = new System.Drawing.Point(687, 314);
+            this.panel_ver_usuario_busqueda_social.Name = "panel_ver_usuario_busqueda_social";
+            this.panel_ver_usuario_busqueda_social.Size = new System.Drawing.Size(259, 174);
+            this.panel_ver_usuario_busqueda_social.TabIndex = 156;
+            this.panel_ver_usuario_busqueda_social.Visible = false;
+            this.panel_ver_usuario_busqueda_social.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_ver_usuario_busqueda_social_Paint);
+            // 
+            // panel_canciones_playlistsong_seguido
+            // 
+            this.panel_canciones_playlistsong_seguido.Controls.Add(this.tabla_canciones_playlist);
+            this.panel_canciones_playlistsong_seguido.Controls.Add(this.nombre_2020);
+            this.panel_canciones_playlistsong_seguido.Controls.Add(this.label47);
+            this.panel_canciones_playlistsong_seguido.Controls.Add(this.button4);
+            this.panel_canciones_playlistsong_seguido.Location = new System.Drawing.Point(862, 141);
+            this.panel_canciones_playlistsong_seguido.Name = "panel_canciones_playlistsong_seguido";
+            this.panel_canciones_playlistsong_seguido.Size = new System.Drawing.Size(35, 18);
+            this.panel_canciones_playlistsong_seguido.TabIndex = 156;
+            this.panel_canciones_playlistsong_seguido.Visible = false;
+            // 
+            // tabla_canciones_playlist
+            // 
+            this.tabla_canciones_playlist.AllowUserToAddRows = false;
+            this.tabla_canciones_playlist.AllowUserToDeleteRows = false;
+            this.tabla_canciones_playlist.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.tabla_canciones_playlist.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn22,
+            this.dataGridViewTextBoxColumn23,
+            this.Column20,
+            this.Column21});
+            this.tabla_canciones_playlist.Cursor = System.Windows.Forms.Cursors.Default;
+            this.tabla_canciones_playlist.Location = new System.Drawing.Point(12, 79);
+            this.tabla_canciones_playlist.Name = "tabla_canciones_playlist";
+            this.tabla_canciones_playlist.ReadOnly = true;
+            this.tabla_canciones_playlist.RowHeadersVisible = false;
+            this.tabla_canciones_playlist.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.tabla_canciones_playlist.Size = new System.Drawing.Size(927, 398);
+            this.tabla_canciones_playlist.TabIndex = 158;
+            this.tabla_canciones_playlist.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabla_canciones_playlist_CellDoubleClick);
+            // 
+            // dataGridViewTextBoxColumn22
+            // 
+            this.dataGridViewTextBoxColumn22.HeaderText = "Nombre Cancion";
+            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
+            this.dataGridViewTextBoxColumn22.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn23
+            // 
+            this.dataGridViewTextBoxColumn23.HeaderText = "Cantante";
+            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
+            this.dataGridViewTextBoxColumn23.ReadOnly = true;
+            // 
+            // Column20
+            // 
+            this.Column20.HeaderText = "Compositor";
+            this.Column20.Name = "Column20";
+            this.Column20.ReadOnly = true;
+            // 
+            // Column21
+            // 
+            this.Column21.HeaderText = "Album";
+            this.Column21.Name = "Column21";
+            this.Column21.ReadOnly = true;
+            // 
+            // nombre_2020
+            // 
+            this.nombre_2020.AutoSize = true;
+            this.nombre_2020.BackColor = System.Drawing.Color.Transparent;
+            this.nombre_2020.Font = new System.Drawing.Font("Old Growth", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nombre_2020.ForeColor = System.Drawing.Color.Transparent;
+            this.nombre_2020.Location = new System.Drawing.Point(266, 17);
+            this.nombre_2020.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.nombre_2020.Name = "nombre_2020";
+            this.nombre_2020.Size = new System.Drawing.Size(186, 41);
+            this.nombre_2020.TabIndex = 157;
+            this.nombre_2020.Text = "nombre";
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.BackColor = System.Drawing.Color.Transparent;
+            this.label47.Font = new System.Drawing.Font("Old Growth", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label47.ForeColor = System.Drawing.Color.Transparent;
+            this.label47.Location = new System.Drawing.Point(11, 11);
+            this.label47.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(161, 29);
+            this.label47.TabIndex = 156;
+            this.label47.Text = "playlist:";
+            // 
+            // button4
+            // 
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(11)))), ((int)(((byte)(11)))));
+            this.button4.Image = global::ALAINID_DEFINITIVO.Properties.Resources.atras_btn1;
+            this.button4.Location = new System.Drawing.Point(849, 17);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(71, 35);
+            this.button4.TabIndex = 154;
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // panel_videos_playlistsong_seguido
+            // 
+            this.panel_videos_playlistsong_seguido.Controls.Add(this.tabla_videos_pls);
+            this.panel_videos_playlistsong_seguido.Controls.Add(this.label64);
+            this.panel_videos_playlistsong_seguido.Controls.Add(this.label69);
+            this.panel_videos_playlistsong_seguido.Controls.Add(this.button6);
+            this.panel_videos_playlistsong_seguido.Location = new System.Drawing.Point(875, 322);
+            this.panel_videos_playlistsong_seguido.Name = "panel_videos_playlistsong_seguido";
+            this.panel_videos_playlistsong_seguido.Size = new System.Drawing.Size(40, 39);
+            this.panel_videos_playlistsong_seguido.TabIndex = 155;
+            this.panel_videos_playlistsong_seguido.Visible = false;
+            // 
+            // tabla_videos_pls
+            // 
+            this.tabla_videos_pls.AllowUserToAddRows = false;
+            this.tabla_videos_pls.AllowUserToDeleteRows = false;
+            this.tabla_videos_pls.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.tabla_videos_pls.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn20,
+            this.dataGridViewTextBoxColumn21});
+            this.tabla_videos_pls.Cursor = System.Windows.Forms.Cursors.Default;
+            this.tabla_videos_pls.Location = new System.Drawing.Point(10, 79);
+            this.tabla_videos_pls.Name = "tabla_videos_pls";
+            this.tabla_videos_pls.ReadOnly = true;
+            this.tabla_videos_pls.RowHeadersVisible = false;
+            this.tabla_videos_pls.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.tabla_videos_pls.Size = new System.Drawing.Size(927, 398);
+            this.tabla_videos_pls.TabIndex = 162;
+            this.tabla_videos_pls.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabla_videos_pls_CellDoubleClick);
+            // 
+            // dataGridViewTextBoxColumn20
+            // 
+            this.dataGridViewTextBoxColumn20.HeaderText = "Nombre Video";
+            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
+            this.dataGridViewTextBoxColumn20.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn21
+            // 
+            this.dataGridViewTextBoxColumn21.HeaderText = "Director";
+            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
+            this.dataGridViewTextBoxColumn21.ReadOnly = true;
+            // 
+            // label64
+            // 
+            this.label64.AutoSize = true;
+            this.label64.BackColor = System.Drawing.Color.Transparent;
+            this.label64.Font = new System.Drawing.Font("Old Growth", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label64.ForeColor = System.Drawing.Color.Transparent;
+            this.label64.Location = new System.Drawing.Point(264, 17);
+            this.label64.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label64.Name = "label64";
+            this.label64.Size = new System.Drawing.Size(186, 41);
+            this.label64.TabIndex = 161;
+            this.label64.Text = "nombre";
+            // 
+            // label69
+            // 
+            this.label69.AutoSize = true;
+            this.label69.BackColor = System.Drawing.Color.Transparent;
+            this.label69.Font = new System.Drawing.Font("Old Growth", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label69.ForeColor = System.Drawing.Color.Transparent;
+            this.label69.Location = new System.Drawing.Point(9, 11);
+            this.label69.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label69.Name = "label69";
+            this.label69.Size = new System.Drawing.Size(161, 29);
+            this.label69.TabIndex = 160;
+            this.label69.Text = "playlist:";
+            // 
+            // button6
+            // 
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(11)))), ((int)(((byte)(11)))));
+            this.button6.Image = global::ALAINID_DEFINITIVO.Properties.Resources.atras_btn1;
+            this.button6.Location = new System.Drawing.Point(847, 17);
+            this.button6.Margin = new System.Windows.Forms.Padding(2);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(71, 35);
+            this.button6.TabIndex = 159;
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // playlistvideos_usuario_seguido
+            // 
+            this.playlistvideos_usuario_seguido.AllowUserToAddRows = false;
+            this.playlistvideos_usuario_seguido.AllowUserToDeleteRows = false;
+            this.playlistvideos_usuario_seguido.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.playlistvideos_usuario_seguido.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn18,
+            this.dataGridViewTextBoxColumn19});
+            this.playlistvideos_usuario_seguido.Location = new System.Drawing.Point(415, 311);
+            this.playlistvideos_usuario_seguido.Name = "playlistvideos_usuario_seguido";
+            this.playlistvideos_usuario_seguido.ReadOnly = true;
+            this.playlistvideos_usuario_seguido.RowHeadersVisible = false;
+            this.playlistvideos_usuario_seguido.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.playlistvideos_usuario_seguido.Size = new System.Drawing.Size(527, 174);
+            this.playlistvideos_usuario_seguido.TabIndex = 154;
+            this.playlistvideos_usuario_seguido.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.playlistvideos_usuario_seguido_CellDoubleClick);
+            // 
+            // dataGridViewTextBoxColumn18
+            // 
+            this.dataGridViewTextBoxColumn18.HeaderText = "Nombre";
+            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            this.dataGridViewTextBoxColumn18.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn19
+            // 
+            this.dataGridViewTextBoxColumn19.HeaderText = "Cantidad Videos";
+            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            this.dataGridViewTextBoxColumn19.ReadOnly = true;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Old Growth", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Transparent;
+            this.label9.Location = new System.Drawing.Point(411, 108);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(161, 29);
+            this.label9.TabIndex = 153;
+            this.label9.Text = "playlist:";
+            // 
+            // playlistcanciones_usuario_seguido
+            // 
+            this.playlistcanciones_usuario_seguido.AllowUserToAddRows = false;
+            this.playlistcanciones_usuario_seguido.AllowUserToDeleteRows = false;
+            this.playlistcanciones_usuario_seguido.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.playlistcanciones_usuario_seguido.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column16,
+            this.Column17});
+            this.playlistcanciones_usuario_seguido.Cursor = System.Windows.Forms.Cursors.Default;
+            this.playlistcanciones_usuario_seguido.Location = new System.Drawing.Point(415, 137);
+            this.playlistcanciones_usuario_seguido.Name = "playlistcanciones_usuario_seguido";
+            this.playlistcanciones_usuario_seguido.ReadOnly = true;
+            this.playlistcanciones_usuario_seguido.RowHeadersVisible = false;
+            this.playlistcanciones_usuario_seguido.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.playlistcanciones_usuario_seguido.Size = new System.Drawing.Size(527, 174);
+            this.playlistcanciones_usuario_seguido.TabIndex = 152;
+            this.playlistcanciones_usuario_seguido.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.playlistcanciones_usuario_seguido_CellContentClick);
+            this.playlistcanciones_usuario_seguido.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.playlistcanciones_usuario_seguido_CellDoubleClick);
+            // 
+            // Column16
+            // 
+            this.Column16.HeaderText = "Nombre";
+            this.Column16.Name = "Column16";
+            this.Column16.ReadOnly = true;
+            // 
+            // Column17
+            // 
+            this.Column17.HeaderText = "Cantidad Canciones";
+            this.Column17.Name = "Column17";
+            this.Column17.ReadOnly = true;
+            // 
+            // label60
+            // 
+            this.label60.AutoSize = true;
+            this.label60.BackColor = System.Drawing.Color.Transparent;
+            this.label60.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label60.ForeColor = System.Drawing.Color.Transparent;
+            this.label60.Location = new System.Drawing.Point(7, 6);
+            this.label60.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(151, 35);
+            this.label60.TabIndex = 151;
+            this.label60.Text = "PERFIL DE:";
+            // 
+            // btn_seguir_usuario
+            // 
+            this.btn_seguir_usuario.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_seguir_usuario.Location = new System.Drawing.Point(54, 308);
+            this.btn_seguir_usuario.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_seguir_usuario.Name = "btn_seguir_usuario";
+            this.btn_seguir_usuario.Size = new System.Drawing.Size(261, 71);
+            this.btn_seguir_usuario.TabIndex = 150;
+            this.btn_seguir_usuario.Text = "Seguir Usuario";
+            this.btn_seguir_usuario.UseVisualStyleBackColor = true;
+            this.btn_seguir_usuario.Click += new System.EventHandler(this.btn_seguir_usuario_Click);
+            // 
+            // social_email_user_busqueda
+            // 
+            this.social_email_user_busqueda.AutoSize = true;
+            this.social_email_user_busqueda.BackColor = System.Drawing.Color.Transparent;
+            this.social_email_user_busqueda.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.social_email_user_busqueda.ForeColor = System.Drawing.Color.Transparent;
+            this.social_email_user_busqueda.Location = new System.Drawing.Point(154, 170);
+            this.social_email_user_busqueda.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.social_email_user_busqueda.Name = "social_email_user_busqueda";
+            this.social_email_user_busqueda.Size = new System.Drawing.Size(64, 28);
+            this.social_email_user_busqueda.TabIndex = 147;
+            this.social_email_user_busqueda.Text = "mail";
+            // 
+            // social_usuario_user_busqueda
+            // 
+            this.social_usuario_user_busqueda.AutoSize = true;
+            this.social_usuario_user_busqueda.BackColor = System.Drawing.Color.Transparent;
+            this.social_usuario_user_busqueda.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.social_usuario_user_busqueda.ForeColor = System.Drawing.Color.Transparent;
+            this.social_usuario_user_busqueda.Location = new System.Drawing.Point(154, 228);
+            this.social_usuario_user_busqueda.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.social_usuario_user_busqueda.Name = "social_usuario_user_busqueda";
+            this.social_usuario_user_busqueda.Size = new System.Drawing.Size(103, 28);
+            this.social_usuario_user_busqueda.TabIndex = 146;
+            this.social_usuario_user_busqueda.Text = "usuario";
+            // 
+            // label59
+            // 
+            this.label59.AutoSize = true;
+            this.label59.BackColor = System.Drawing.Color.Transparent;
+            this.label59.Font = new System.Drawing.Font("Comic Sans MS", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label59.ForeColor = System.Drawing.Color.Transparent;
+            this.label59.Location = new System.Drawing.Point(32, 163);
+            this.label59.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(86, 34);
+            this.label59.TabIndex = 145;
+            this.label59.Text = "Email:";
+            // 
+            // label58
+            // 
+            this.label58.AutoSize = true;
+            this.label58.BackColor = System.Drawing.Color.Transparent;
+            this.label58.Font = new System.Drawing.Font("Comic Sans MS", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label58.ForeColor = System.Drawing.Color.Transparent;
+            this.label58.Location = new System.Drawing.Point(32, 222);
+            this.label58.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(112, 34);
+            this.label58.TabIndex = 144;
+            this.label58.Text = "Usuario:";
+            // 
+            // social_nombre_user_busqueda
+            // 
+            this.social_nombre_user_busqueda.AutoSize = true;
+            this.social_nombre_user_busqueda.BackColor = System.Drawing.Color.Transparent;
+            this.social_nombre_user_busqueda.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.social_nombre_user_busqueda.Font = new System.Drawing.Font("Comic Sans MS", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.social_nombre_user_busqueda.ForeColor = System.Drawing.Color.Maroon;
+            this.social_nombre_user_busqueda.Location = new System.Drawing.Point(195, 15);
+            this.social_nombre_user_busqueda.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.social_nombre_user_busqueda.Name = "social_nombre_user_busqueda";
+            this.social_nombre_user_busqueda.Size = new System.Drawing.Size(196, 70);
+            this.social_nombre_user_busqueda.TabIndex = 137;
+            this.social_nombre_user_busqueda.Text = "nombre";
+            // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(11)))), ((int)(((byte)(11)))));
+            this.button1.Image = global::ALAINID_DEFINITIVO.Properties.Resources.atras_btn1;
+            this.button1.Location = new System.Drawing.Point(855, 20);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(71, 35);
+            this.button1.TabIndex = 136;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // panel_ver_usuario_seguido
             // 
@@ -3602,125 +4039,6 @@
             this.button5.TabIndex = 136;
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click_1);
-            // 
-            // panel_ver_usuario_busqueda_social
-            // 
-            this.panel_ver_usuario_busqueda_social.Controls.Add(this.label60);
-            this.panel_ver_usuario_busqueda_social.Controls.Add(this.btn_seguir_usuario);
-            this.panel_ver_usuario_busqueda_social.Controls.Add(this.social_email_user_busqueda);
-            this.panel_ver_usuario_busqueda_social.Controls.Add(this.social_usuario_user_busqueda);
-            this.panel_ver_usuario_busqueda_social.Controls.Add(this.label59);
-            this.panel_ver_usuario_busqueda_social.Controls.Add(this.label58);
-            this.panel_ver_usuario_busqueda_social.Controls.Add(this.social_nombre_user_busqueda);
-            this.panel_ver_usuario_busqueda_social.Controls.Add(this.button1);
-            this.panel_ver_usuario_busqueda_social.Location = new System.Drawing.Point(265, 141);
-            this.panel_ver_usuario_busqueda_social.Name = "panel_ver_usuario_busqueda_social";
-            this.panel_ver_usuario_busqueda_social.Size = new System.Drawing.Size(27, 17);
-            this.panel_ver_usuario_busqueda_social.TabIndex = 156;
-            this.panel_ver_usuario_busqueda_social.Visible = false;
-            // 
-            // label60
-            // 
-            this.label60.AutoSize = true;
-            this.label60.BackColor = System.Drawing.Color.Transparent;
-            this.label60.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label60.ForeColor = System.Drawing.Color.Transparent;
-            this.label60.Location = new System.Drawing.Point(7, 6);
-            this.label60.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(151, 35);
-            this.label60.TabIndex = 151;
-            this.label60.Text = "PERFIL DE:";
-            // 
-            // btn_seguir_usuario
-            // 
-            this.btn_seguir_usuario.Font = new System.Drawing.Font("Comic Sans MS", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_seguir_usuario.Location = new System.Drawing.Point(137, 316);
-            this.btn_seguir_usuario.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_seguir_usuario.Name = "btn_seguir_usuario";
-            this.btn_seguir_usuario.Size = new System.Drawing.Size(638, 110);
-            this.btn_seguir_usuario.TabIndex = 150;
-            this.btn_seguir_usuario.Text = "Seguir Usuario";
-            this.btn_seguir_usuario.UseVisualStyleBackColor = true;
-            this.btn_seguir_usuario.Click += new System.EventHandler(this.btn_seguir_usuario_Click);
-            // 
-            // social_email_user_busqueda
-            // 
-            this.social_email_user_busqueda.AutoSize = true;
-            this.social_email_user_busqueda.BackColor = System.Drawing.Color.Transparent;
-            this.social_email_user_busqueda.Font = new System.Drawing.Font("Consolas", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.social_email_user_busqueda.ForeColor = System.Drawing.Color.Transparent;
-            this.social_email_user_busqueda.Location = new System.Drawing.Point(421, 138);
-            this.social_email_user_busqueda.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.social_email_user_busqueda.Name = "social_email_user_busqueda";
-            this.social_email_user_busqueda.Size = new System.Drawing.Size(89, 37);
-            this.social_email_user_busqueda.TabIndex = 147;
-            this.social_email_user_busqueda.Text = "mail";
-            // 
-            // social_usuario_user_busqueda
-            // 
-            this.social_usuario_user_busqueda.AutoSize = true;
-            this.social_usuario_user_busqueda.BackColor = System.Drawing.Color.Transparent;
-            this.social_usuario_user_busqueda.Font = new System.Drawing.Font("Consolas", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.social_usuario_user_busqueda.ForeColor = System.Drawing.Color.Transparent;
-            this.social_usuario_user_busqueda.Location = new System.Drawing.Point(421, 223);
-            this.social_usuario_user_busqueda.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.social_usuario_user_busqueda.Name = "social_usuario_user_busqueda";
-            this.social_usuario_user_busqueda.Size = new System.Drawing.Size(143, 37);
-            this.social_usuario_user_busqueda.TabIndex = 146;
-            this.social_usuario_user_busqueda.Text = "usuario";
-            // 
-            // label59
-            // 
-            this.label59.AutoSize = true;
-            this.label59.BackColor = System.Drawing.Color.Transparent;
-            this.label59.Font = new System.Drawing.Font("Comic Sans MS", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label59.ForeColor = System.Drawing.Color.Transparent;
-            this.label59.Location = new System.Drawing.Point(26, 138);
-            this.label59.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(115, 45);
-            this.label59.TabIndex = 145;
-            this.label59.Text = "Email:";
-            // 
-            // label58
-            // 
-            this.label58.AutoSize = true;
-            this.label58.BackColor = System.Drawing.Color.Transparent;
-            this.label58.Font = new System.Drawing.Font("Comic Sans MS", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label58.ForeColor = System.Drawing.Color.Transparent;
-            this.label58.Location = new System.Drawing.Point(26, 224);
-            this.label58.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(335, 45);
-            this.label58.TabIndex = 144;
-            this.label58.Text = "Nombre de Usuario:";
-            // 
-            // social_nombre_user_busqueda
-            // 
-            this.social_nombre_user_busqueda.AutoSize = true;
-            this.social_nombre_user_busqueda.BackColor = System.Drawing.Color.Transparent;
-            this.social_nombre_user_busqueda.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.social_nombre_user_busqueda.Font = new System.Drawing.Font("Comic Sans MS", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.social_nombre_user_busqueda.ForeColor = System.Drawing.Color.Maroon;
-            this.social_nombre_user_busqueda.Location = new System.Drawing.Point(195, 15);
-            this.social_nombre_user_busqueda.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.social_nombre_user_busqueda.Name = "social_nombre_user_busqueda";
-            this.social_nombre_user_busqueda.Size = new System.Drawing.Size(196, 70);
-            this.social_nombre_user_busqueda.TabIndex = 137;
-            this.social_nombre_user_busqueda.Text = "nombre";
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(855, 20);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(71, 35);
-            this.button1.TabIndex = 136;
-            this.button1.Text = "Atras";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // dataGridView5
             // 
@@ -4336,7 +4654,7 @@
             this.axWindowsMediaPlayer1.Enabled = true;
             this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(15, 245);
             this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
-            this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
+    //        this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
             this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(265, 195);
             this.axWindowsMediaPlayer1.TabIndex = 57;
             this.axWindowsMediaPlayer1.Enter += new System.EventHandler(this.axWindowsMediaPlayer1_Enter);
@@ -4620,20 +4938,34 @@
             // 
             this.wMPOCXEventsCurrentPlaylistItemAvailableEventBindingSource.DataSource = typeof(AxWMPLib._WMPOCXEvents_CurrentPlaylistItemAvailableEvent);
             // 
+            // btn_atras_cancion_reproductor
+            // 
+            this.btn_atras_cancion_reproductor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_atras_cancion_reproductor.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_atras_cancion_reproductor.Image = global::ALAINID_DEFINITIVO.Properties.Resources.atras_btn1;
+            this.btn_atras_cancion_reproductor.Location = new System.Drawing.Point(856, 12);
+            this.btn_atras_cancion_reproductor.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_atras_cancion_reproductor.Name = "btn_atras_cancion_reproductor";
+            this.btn_atras_cancion_reproductor.Size = new System.Drawing.Size(71, 35);
+            this.btn_atras_cancion_reproductor.TabIndex = 126;
+            this.btn_atras_cancion_reproductor.UseVisualStyleBackColor = true;
+            this.btn_atras_cancion_reproductor.Visible = false;
+            this.btn_atras_cancion_reproductor.Click += new System.EventHandler(this.button2_Click);
+            // 
             // ALAINID
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(11)))), ((int)(((byte)(11)))));
             this.ClientSize = new System.Drawing.Size(946, 512);
+            this.Controls.Add(this.panel_buscar);
+            this.Controls.Add(this.panel_social_menu);
             this.Controls.Add(this.panel_perfil_de_usuario);
             this.Controls.Add(this.Panel_premium);
-            this.Controls.Add(this.panel_buscar);
             this.Controls.Add(this.panel_karaoke_menu);
             this.Controls.Add(this.panel_listainteligente_menu);
             this.Controls.Add(this.panel_descargas_menu);
             this.Controls.Add(this.panel_historial_menu);
-            this.Controls.Add(this.panel_social_menu);
             this.Controls.Add(this.panel_playlist_usuario);
             this.Controls.Add(this.panel_favoritos_menu);
             this.Controls.Add(this.label45);
@@ -4672,9 +5004,6 @@
             this.panel_resultados_busqueda_multiple.ResumeLayout(false);
             this.panel_resultados_busqueda_multiple.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabla_resultados_busqueda_multiple)).EndInit();
-            this.panel_busqueda_simple.ResumeLayout(false);
-            this.panel_busqueda_simple.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.datagratview_busquedasimple)).EndInit();
             this.panel_cancion_seleccionada_busqueda_simple.ResumeLayout(false);
             this.panel_cancion_seleccionada_busqueda_simple.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabla_canciones_cola_cancion_reproductor)).EndInit();
@@ -4686,6 +5015,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.tabla_cola_video)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.calificacion_video)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayerVideo)).EndInit();
+            this.panel_busqueda_simple.ResumeLayout(false);
+            this.panel_busqueda_simple.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.datagratview_busquedasimple)).EndInit();
             this.panel_listainteligente_menu.ResumeLayout(false);
             this.panel_listainteligente_menu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabla_canciones_smartlist)).EndInit();
@@ -4704,14 +5036,22 @@
             ((System.ComponentModel.ISupportInitialize)(this.tabla_canciones_karaoke)).EndInit();
             this.panel_social_menu.ResumeLayout(false);
             this.panel_social_menu.PerformLayout();
+            this.panel_ver_usuario_busqueda_social.ResumeLayout(false);
+            this.panel_ver_usuario_busqueda_social.PerformLayout();
+            this.panel_canciones_playlistsong_seguido.ResumeLayout(false);
+            this.panel_canciones_playlistsong_seguido.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tabla_canciones_playlist)).EndInit();
+            this.panel_videos_playlistsong_seguido.ResumeLayout(false);
+            this.panel_videos_playlistsong_seguido.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tabla_videos_pls)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playlistvideos_usuario_seguido)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playlistcanciones_usuario_seguido)).EndInit();
             this.panel_ver_usuario_seguido.ResumeLayout(false);
             this.panel_ver_usuario_seguido.PerformLayout();
             this.panel_ver_artista_seguido.ResumeLayout(false);
             this.panel_ver_artista_seguido.PerformLayout();
             this.panel_ver_artista_busqueda_social.ResumeLayout(false);
             this.panel_ver_artista_busqueda_social.PerformLayout();
-            this.panel_ver_usuario_busqueda_social.ResumeLayout(false);
-            this.panel_ver_usuario_busqueda_social.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
@@ -4823,7 +5163,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colum_artista;
         private System.Windows.Forms.ComboBox busquedasimple_valor_criterio_desplegable;
         private System.Windows.Forms.Panel panel_cancion_seleccionada_busqueda_simple;
-        private System.Windows.Forms.Button btn_atras_cancion_reproductor;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label16;
@@ -5078,5 +5417,31 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.DataGridView playlistcanciones_usuario_seguido;
+        private System.Windows.Forms.DataGridView playlistvideos_usuario_seguido;
+        private System.Windows.Forms.Panel panel_canciones_playlistsong_seguido;
+        private System.Windows.Forms.Label nombre_2020;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Panel panel_videos_playlistsong_seguido;
+        private System.Windows.Forms.DataGridView tabla_canciones_playlist;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column20;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column21;
+        private System.Windows.Forms.DataGridView tabla_videos_pls;
+        private System.Windows.Forms.Label label64;
+        private System.Windows.Forms.Label label69;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column17;
+        private System.Windows.Forms.Button btn_atras_rep_video_seguido;
+        private System.Windows.Forms.Button btn_atras_rep_cancion_seguido;
+        private System.Windows.Forms.Button btn_atras_cancion_reproductor;
     }
 }

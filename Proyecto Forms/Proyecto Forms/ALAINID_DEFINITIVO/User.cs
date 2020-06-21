@@ -22,7 +22,8 @@ namespace Proyecto_Forms
         private List<Song> favorite_songs_ = new List<Song>();        // LISTA FAVORITOS CANCIONES DE CADA USUARIO
         private List<Video> favorite_videos_ = new List<Video>();
         private List<Song> descargas_ = new List<Song>();
-        //private List<PlaylistSong> playlistcanciones_seguidas = new List<PlaylistSong>();
+        private List<PlaylistSong> playlistcanciones_seguidas = new List<PlaylistSong>();
+        private List<PlaylistVideo> playlistvideos_seguidas = new List<PlaylistVideo>();
         private List<User> usuarios_seguidos_ = new List<User>();
         private List<Artista> artistas_seguidos_ = new List<Artista>();
         private List<Song> historial_canciones_ = new List<Song>();
