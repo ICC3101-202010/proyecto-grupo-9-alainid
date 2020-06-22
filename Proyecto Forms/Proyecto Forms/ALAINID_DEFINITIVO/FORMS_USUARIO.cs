@@ -810,6 +810,9 @@ namespace ALAINID_DEFINITIVO
         public List<string> criterios_introducidosvideos = new List<string>();
         private void btn_buscar_busqueda_multiple_Click(object sender, EventArgs e)
         {
+            
+            Proyecto_Forms.ALAINID.listafiltrada.Clear();
+            Proyecto_Forms.ALAINID.listafiltrada2.Clear();
             Proyecto_Forms.ALAINID.Activar_todo();
 
             switch (criterios_seleccionados.Count())

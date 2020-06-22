@@ -2429,6 +2429,7 @@ namespace Proyecto_Forms
         
         public static List<Video> Videopornombrevideo(string _valor)
         {
+            listafiltradav.Clear();
             int esta = 0;
             if (_valor != "")
             {
@@ -2453,6 +2454,7 @@ namespace Proyecto_Forms
                     }
                 }
             }
+            
             return listafiltradav;
         }
         public static List<Video> Videoporcategoria(string _valor)
@@ -2622,19 +2624,17 @@ namespace Proyecto_Forms
                     break;
 
                 case "Artista":
-                    foreach (Video video in Videopornombre_artista(valor.ToLower()))
-                    {
-                        lista_filtrandov.Add(video);
-                    }
+                    lista_filtrandov = Videopornombre_artista(valor.ToLower());
+                    
                     break;
                 case "Categoria Video":
                     lista_filtrandov = Videoporcategoria(valor.ToLower());
                     break;
                 case "Nombre Cancion/Video":
-                    foreach (Video video in Videopornombrevideo(valor.ToLower()))
-                    {
-                        lista_filtrandov.Add(video);
-                    }
+                    lista_filtrandov = Videopornombrevideo(valor.ToLower());
+                    
+                            
+                    
                     break;
                 case "Año de Publicacion":
                     lista_filtrandov = Videosporaniopublicacion(valor.ToLower());
@@ -2765,45 +2765,59 @@ namespace Proyecto_Forms
             {
                 lista_filtrando2v.Add(ss);
             }
+            List<Video> gubbins_limpiando2 = new List<Video>();
+            gubbins_limpiando2 = Filtroporcriteriovideo(criterios_seleccionados[0], criterios_ingresados[0]);
+            string continuar = "si";
+            if (gubbins_limpiando2.Count == 0)
+            {
+                canciones_filtradasv.Clear();
+                continuar = "no";
+            }
+            
             foreach (Video ccc in lista_filtrando2v)
-            {
-                canciones_filtradasv.Add(ccc);
-            }
-            int count2 = 1;
-            while (count2 < criterios_seleccionados.Count)
-            {
-                lista_filtrando2v.Clear();
-                List<Video> gubbins_limpiando = new List<Video>();
-                gubbins_limpiando = Filtroporcriteriovideo(criterios_seleccionados[count2], criterios_ingresados[count2]);
-                if (gubbins_limpiando.Count() == 0)
                 {
-                    canciones_filtradasv.Clear();
-                    
+                    canciones_filtradasv.Add(ccc);
                 }
-                foreach (Video ss in gubbins_limpiando)
-                {
-                    canciones_filtradasv.Clear();
-                    canciones_filtradasv.Add(ss);
-                }
-                count2++;
-            }
-            int si;
-            foreach (Video ccc in canciones_filtradasv)
+            
+            if (continuar=="si")
             {
-                si = 0;
-                foreach (Video canc in lista_filtrada_finalv)
+                int count2 = 1;
+                while (count2 < criterios_seleccionados.Count)
                 {
-
-                    if ((ccc.Nombre_video.ToLower() == canc.Nombre_video.ToLower()) && (ccc.Director.Name.ToLower() == canc.Director.Name.ToLower()))
+                    lista_filtrando2v.Clear();
+                    List<Video> gubbins_limpiando = new List<Video>();
+                    gubbins_limpiando = Filtroporcriteriovideo(criterios_seleccionados[count2], criterios_ingresados[count2]);
+                    if (gubbins_limpiando.Count() == 0)
                     {
-                        si++;
+                        canciones_filtradasv.Clear();
+
+                    }
+                    foreach (Video ss in gubbins_limpiando)
+                    {
+                        canciones_filtradasv.Clear();
+                        canciones_filtradasv.Add(ss);
+                    }
+                    count2++;
+                }
+                int si;
+                foreach (Video ccc in canciones_filtradasv)
+                {
+                    si = 0;
+                    foreach (Video canc in lista_filtrada_finalv)
+                    {
+
+                        if ((ccc.Nombre_video.ToLower() == canc.Nombre_video.ToLower()) && (ccc.Director.Name.ToLower() == canc.Director.Name.ToLower()))
+                        {
+                            si++;
+                        }
+                    }
+                    if (si == 0)
+                    {
+                        lista_filtrada_finalv.Add(ccc);
                     }
                 }
-                if (si == 0)
-                {
-                    lista_filtrada_finalv.Add(ccc);
-                }
             }
+            
             return lista_filtrada_finalv;
         }
 
@@ -2872,7 +2886,7 @@ namespace Proyecto_Forms
         public static List<Song> CancionesPorCriterio(string _criterio, string _valor) // busqueda simple
         {
            
-            listafiltrada.Clear();
+            //listafiltrada.Clear();
             switch (_criterio)
             {
                 case "Genero Cancion":
@@ -3064,48 +3078,60 @@ namespace Proyecto_Forms
             }
             canciones_filtradas.Clear();
             lista_filtrando2.Clear();
-            foreach (Song ss in CancionesPorCriterio(criterios_seleccionados[0], criterio[0]))
+            List<Song> gubbins_limpiandola2 = new List<Song>();
+            gubbins_limpiandola2 = CancionesPorCriterio(criterios_seleccionados[0], criterio[0]);
+            foreach (Song ss in gubbins_limpiandola2)
             {
                 lista_filtrando2.Add(ss);
             }
-            foreach (Song ccc in lista_filtrando2)
+            string continuar = "si";
+            if (gubbins_limpiandola2.Count() == 0)
             {
-                canciones_filtradas.Add(ccc);
+                canciones_filtradas.Clear();
+                continuar = "no";
+                
             }
-            int count2 = 1;
-            
-            while (count2 < criterios_seleccionados.Count)
+            if (continuar == "si")
             {
-                lista_filtrando2.Clear();
-                List<Song> gubbins_limpiandola = new List<Song>();
-                gubbins_limpiandola = CancionesPorCriterio(criterios_seleccionados[count2], criterio[count2]);
-                if (gubbins_limpiandola.Count() == 0)
+                foreach (Song ccc in lista_filtrando2)
                 {
-                    canciones_filtradas.Clear();
+                    canciones_filtradas.Add(ccc);
                 }
-                foreach (Song ss in gubbins_limpiandola)
+                int count2 = 1;
+                
+                while (count2 < criterios_seleccionados.Count)
                 {
-                    canciones_filtradas.Clear();
-                    canciones_filtradas.Add(ss);
-                }
-                count2++;
-            }
-            
-            int si;
-            foreach (Song ccc in canciones_filtradas)
-            {
-                si = 0;
-                foreach (Song canc in lista_filtrada_final)
-                {
-
-                    if ((ccc.Nombrecancion.ToLower() == canc.Nombrecancion.ToLower()) && (ccc.Cantante.Name.ToLower() == canc.Cantante.Name.ToLower()))
+                    lista_filtrando2.Clear();
+                    List<Song> gubbins_limpiandola = new List<Song>();
+                    gubbins_limpiandola = CancionesPorCriterio(criterios_seleccionados[count2], criterio[count2]);
+                    if (gubbins_limpiandola.Count() == 0)
                     {
-                        si++;
+                        canciones_filtradas.Clear();
                     }
+                    foreach (Song ss in gubbins_limpiandola)
+                    {
+                        canciones_filtradas.Clear();
+                        canciones_filtradas.Add(ss);
+                    }
+                    count2++;
                 }
-                if (si == 0)
+
+                int si;
+                foreach (Song ccc in canciones_filtradas)
                 {
-                    lista_filtrada_final.Add(ccc);
+                    si = 0;
+                    foreach (Song canc in lista_filtrada_final)
+                    {
+
+                        if ((ccc.Nombrecancion.ToLower() == canc.Nombrecancion.ToLower()) && (ccc.Cantante.Name.ToLower() == canc.Cantante.Name.ToLower()))
+                        {
+                            si++;
+                        }
+                    }
+                    if (si == 0)
+                    {
+                        lista_filtrada_final.Add(ccc);
+                    }
                 }
             }
             return lista_filtrada_final;
@@ -3130,7 +3156,8 @@ namespace Proyecto_Forms
             List<string> s2 = new List<string>();//revisar esta lista
             s2.Clear();
             int i = 1;
-            while (i <= criterios_seleccionados.Count())
+            int num = criterios_seleccionados.Count();
+            while (i <= num)
             {
                 s2.Clear();
                 foreach (string select in criterios_seleccionados)
