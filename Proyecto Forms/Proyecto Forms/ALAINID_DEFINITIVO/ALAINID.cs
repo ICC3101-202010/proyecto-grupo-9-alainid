@@ -2885,8 +2885,12 @@ namespace Proyecto_Forms
         }
         public static List<Song> CancionesPorCriterio(string _criterio, string _valor) // busqueda simple
         {
-           
             //listafiltrada.Clear();
+            List<Song> vargas_buscando = new List<Song>();
+            foreach(Song song1 in listafiltrada)
+            {
+                vargas_buscando.Add(song1);
+            }
             switch (_criterio)
             {
                 case "Genero Cancion":
@@ -3058,6 +3062,186 @@ namespace Proyecto_Forms
             }
             return listafiltrada;
         }
+
+        public static List<Song> CancionesPorCriterioand(string _criterio, string _valor) // busqueda simple
+        {
+            //listafiltrada.Clear();
+            List<Song> vargas_buscando = new List<Song>();
+            foreach (Song song1 in listafiltrada)
+            {
+                vargas_buscando.Add(song1);
+            }
+            switch (_criterio)
+            {
+                case "Genero Cancion":
+                    foreach (Song can in todas_las_canciones)
+                    {
+                        if (can.Genero.ToLower() == _valor.ToLower())
+                        {
+                            listafiltrada.Add(can);
+                        }
+                    }
+                    break;
+                case "Artista":
+                    foreach (Song canc in Cancionespornombre_artista(_valor.ToLower()))
+                    {
+                        listafiltrada.Add(canc);
+                    }
+                    break;
+                case "Album":
+                    foreach (PlaylistSong alb in todos_los_albumes)
+                    {
+                        if (alb.NombrePlaylist.ToLower() == _valor.ToLower())
+                        {
+                            foreach (Song canc in todas_las_canciones)
+                            {
+                                if (canc.Album.ToLower() == alb.NombrePlaylist.ToLower())
+                                {
+                                    listafiltrada.Add(canc);
+                                }
+                            }
+
+                        }
+                    }
+
+                    break;
+                case "Nombre Cancion/Video":
+                    int esta = 0;
+                    if (_valor != "")
+                    {
+                        foreach (Song son in todas_las_canciones)
+                        {
+                            var q = false;
+                            q = son.Nombrecancion.ToLower().StartsWith(_valor.ToLower());
+                            if (q == true)
+                            {
+                                foreach (Song song in listafiltrada)
+                                {
+                                    if (song.Nombrearchivo == son.Nombrearchivo)
+                                    {
+                                        esta = 1;
+                                    }
+                                }
+                                if (esta == 0)
+                                {
+                                    listafiltrada.Add(son);
+                                }
+
+                            }
+                        }
+                    }
+                    break;
+                case "Disquera":
+                    foreach (Song canc in todas_las_canciones)
+                    {
+                        if (canc.Disquera.ToLower() == _valor.ToLower())
+                        {
+                            listafiltrada.Add(canc);
+                        }
+                    }
+                    break;
+
+                case "Año de Publicacion":
+                    foreach (Song canc in todas_las_canciones)
+                    {
+                        if (int.Parse(canc.Anopublicacion) == int.Parse(_valor))
+                        {
+                            listafiltrada.Add(canc);// ver 
+                        }
+                    }
+                    break;
+                case "Sexo del Artista":
+                    foreach (Artista art in lista_cantantes)
+                    {
+                        if (art.Sexo.ToLower() == _valor.ToLower())
+                        {
+                            foreach (Song canc in todas_las_canciones)
+                            {
+                                if (canc.Cantante.Name.ToLower() == art.Name.ToLower())
+                                {
+                                    listafiltrada.Add(canc);
+                                }
+                            }
+                        }
+
+                    }
+                    break;
+                case "Edad del Artista":
+                    switch (_valor)
+                    {
+                        case "Menores de 25 años":
+                            foreach (Artista can in lista_cantantes)
+                            {
+                                if (can.Age <= 25)
+                                {
+                                    foreach (Song canc in todas_las_canciones)
+                                    {
+                                        if (canc.Cantante.Name.ToLower() == can.Name.ToLower())
+                                        {
+                                            listafiltrada.Add(canc);
+                                        }
+                                    }
+                                }
+                            }
+
+                            break;
+                        case "De 25 a 40 años":
+                            foreach (Artista can in lista_cantantes)
+                            {
+                                if (can.Age > 25 && can.Age <= 40)
+                                {
+                                    foreach (Song canc in todas_las_canciones)
+                                    {
+                                        if (canc.Cantante.Name.ToLower() == can.Name.ToLower())
+                                        {
+                                            listafiltrada.Add(canc);
+                                        }
+                                    }
+                                }
+                            }
+                            break;
+                        case "De 40 a 60 años":
+                            foreach (Artista can in lista_cantantes)
+                            {
+                                if (can.Age > 40 && can.Age <= 60)
+                                {
+                                    foreach (Song canc in todas_las_canciones)
+                                    {
+                                        if (canc.Cantante.Name.ToLower() == can.Name.ToLower())
+                                        {
+                                            listafiltrada.Add(canc);
+                                        }
+                                    }
+                                }
+                            }
+                            break;
+                        case "Mayores de 60":
+                            foreach (Artista can in lista_cantantes)
+                            {
+                                if (can.Age > 60)
+                                {
+                                    foreach (Song canc in todas_las_canciones)
+                                    {
+                                        if (canc.Cantante.Name.ToLower() == can.Name.ToLower())
+                                        {
+                                            listafiltrada.Add(canc);
+                                        }
+                                    }
+                                }
+                            }
+                            break;
+                    }
+                    break;
+                case "Calidad/Resolucion":
+                    listafiltrada = Lista_por_calidad_cancion(_valor);
+                    break;
+                case "Evaluacion":
+                    listafiltrada = cancionporevaluacion(_valor);
+                    break;
+
+            }
+            return listafiltrada;
+        }
         //================================================================================================
         public static List<Song> Buqueda_multiple_cancionesand(List<string> criterios_seleccionados, List<string> criterio)
         {
@@ -3098,8 +3282,8 @@ namespace Proyecto_Forms
                     canciones_filtradas.Add(ccc);
                 }
                 int count2 = 1;
-                
-                while (count2 < criterios_seleccionados.Count)
+                int num = criterios_seleccionados.Count();
+                while (count2 < num)
                 {
                     lista_filtrando2.Clear();
                     List<Song> gubbins_limpiandola = new List<Song>();

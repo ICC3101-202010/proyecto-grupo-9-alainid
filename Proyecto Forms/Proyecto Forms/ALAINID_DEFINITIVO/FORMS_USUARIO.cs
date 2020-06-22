@@ -808,9 +808,10 @@ namespace ALAINID_DEFINITIVO
         }
         public List<string> criterios_seleccionadosvideos = new List<string>();
         public List<string> criterios_introducidosvideos = new List<string>();
+        
         private void btn_buscar_busqueda_multiple_Click(object sender, EventArgs e)
         {
-            
+            string encontro = "no";
             Proyecto_Forms.ALAINID.listafiltrada.Clear();
             Proyecto_Forms.ALAINID.listafiltrada2.Clear();
             Proyecto_Forms.ALAINID.Activar_todo();
@@ -917,8 +918,9 @@ namespace ALAINID_DEFINITIVO
             Proyecto_Forms.ALAINID.Partirlistadirectores();
             Proyecto_Forms.ALAINID.Partirlistaactores();
             int numero = criterios_seleccionados.Count();
-            
 
+            int video = 0;
+            int cancion = 0;
             foreach (string crit in criterios_seleccionados)
             {
                 criterios_seleccionadosvideos.Add(crit);
@@ -929,10 +931,28 @@ namespace ALAINID_DEFINITIVO
             }
             if (checkBox_busqueda_AND.Checked == true)
             {
-                lista_canciones_filtradas = Proyecto_Forms.ALAINID.Buqueda_multiple_cancionesand(criterios_seleccionados, criterios_introducidos);
-                if (criterios_seleccionados != null)
+                
+                foreach(String st in criterios_seleccionados)
                 {
-                    lista_videos_filtrados = Proyecto_Forms.ALAINID.Buqueda_multiple_videos_and(criterios_seleccionadosvideos, criterios_introducidosvideos);
+                    if (st=="Genero Video" || st=="Categoria Video" || st=="Film Studio")
+                    {
+                        video = 1;
+                    }
+                    if(st=="Genero Cancion" || st=="Disquera" || st == "Album")
+                    {
+                        cancion = 1;
+                    }
+                }
+                if (video == 0)
+                { 
+                    lista_canciones_filtradas = Proyecto_Forms.ALAINID.Buqueda_multiple_cancionesand(criterios_seleccionados, criterios_introducidos);
+                }
+                if (cancion == 0)
+                {
+                    if (criterios_seleccionados != null)
+                    {
+                        lista_videos_filtrados = Proyecto_Forms.ALAINID.Buqueda_multiple_videos_and(criterios_seleccionadosvideos, criterios_introducidosvideos);
+                    }
                 }
             }
 
