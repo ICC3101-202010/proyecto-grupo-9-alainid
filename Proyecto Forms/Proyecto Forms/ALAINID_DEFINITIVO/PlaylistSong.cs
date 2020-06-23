@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ALAINID_DEFINITIVO;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -9,12 +10,17 @@ namespace Proyecto_Forms
     {
         private string nombrePlaylist;
         private List<Song> listplay = new List<Song>();
+        private string creador;
+       
+
         public string NombrePlaylist { get => nombrePlaylist; set => nombrePlaylist = value; }
         public List<Song> Listplay { get => listplay; set => listplay = value; }
+        public string Creador { get => creador; set => creador = value; }
 
-        public PlaylistSong(string _nombrepl)
+        public PlaylistSong(string _nombrepl, string nombre)
         {
             this.NombrePlaylist = _nombrepl;
+            this.Creador= nombre;
         }
         public string InformationPLL()
         {

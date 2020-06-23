@@ -505,7 +505,7 @@ namespace Proyecto_Forms
                 if (listausuarios[j].Email_ == email)
                 {
                     foreach(PlaylistSong ply in listausuarios[j].Lista_playlistusuario_)
-                    if (ply.NombrePlaylist==nombreply)
+                    if (ply.NombrePlaylist.ToLower()==nombreply.ToLower())
                     {
                         ply.Listplay.Add(cancion);
                         Almacenar(listausuarios);
@@ -530,7 +530,7 @@ namespace Proyecto_Forms
                 if (listausuarios[j].Email_ == email)
                 {
                     foreach (PlaylistVideo ply in listausuarios[j].Lista_playlistvideousuario_)
-                        if (ply.NombrePlaylist == nombreply)
+                        if (ply.NombrePlaylist.ToLower() == nombreply.ToLower())
                         {
                             ply.Listplayvideo.Add(video);
                             Almacenar(listausuarios);
@@ -1285,7 +1285,7 @@ namespace Proyecto_Forms
             }
             if (existe != 1)
             {
-                PlaylistSong album = new PlaylistSong(nombre);
+                PlaylistSong album = new PlaylistSong(nombre, "admin");
                 todos_los_albumes.Add(album);
                 AlmacenarAlbum(todos_los_albumes);
             }
